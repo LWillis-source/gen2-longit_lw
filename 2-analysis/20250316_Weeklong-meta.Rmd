@@ -1,0 +1,474 @@
+---
+title: "Example Fig X Final"
+output: html_notebook
+---
+
+The following script includes analysis for XX.
+
+Beverly Fu
+
+```{r Standard Setup}
+# Configure directories, load libraries and base functions
+source(paste0(here::here(), "/0-config.R"))
+
+##### FIX THIS LATER ##### 
+sample_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT-Wk/LONGIT-Weeklong_SampleSheet_FINAL.xlsx"
+##### FIX THIS LATER ##### 
+
+directory = paste0(here(), "/3-figures/")
+kits <- read_excel(sample_file_path, sheet = 1)
+samples <- read_excel(sample_file_path, sheet = 2)
+panas <- read_excel(sample_file_path, sheet = 3)
+participants <- read_excel(paste0(here(), "/1-data/Capscan-weeklong-participants.xlsx"), sheet = 1)
+
+duplicate_samples <- c("Missing", "LS1741", "LS1789", "LS1805")
+
+samples <- samples %>%
+   mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva0", "Saliva1", "Saliva2", "Saliva3E", "Saliva3", "Saliva4E", "Saliva4", "Saliva5E", "Saliva5",  "Saliva6E", "Saliva6", "Saliva7", "Saliva8", "ExtraSaliva", "Capscan0", "Capscan1", "Capscan2", "Capscan3E", "Capscan3", "Capscan4E", "Capscan4", "Capscan5E",  "Capscan5", "Capscan6E", "Capscan6", "Capscan7", "Capscan8", "CapscanExtra1", "CapscanExtra2", "CapscanExtra3", "Stool0", "Stool1", "Stool2", "Stool3E", "Stool3", "Stool4E", "Stool4", "Stool5E", "Stool5", "Stool6E", "Stool6", "Stool7", "Stool8", "StoolExtra1", "StoolExtra2", "StoolExtra3"), ordered = TRUE)) %>%
+   mutate(Sample_origin2 = factor(Sample_origin2, levels = c("Saliva0", "Saliva1", "Saliva2", "SalivaE1", "Saliva3", "Saliva4", "Saliva5",  "SalivaE2", "Saliva6", "Saliva7", "Saliva8", "Cap0", "Cap1", "Cap2", "CapE1", "Cap3", "Cap4", "Cap5", "CapE2", "Cap6", "Cap7", "Cap8", "Stool0", "Stool1", "Stool2", "Stool3E", "Stool3", "Stool4E", "Stool4", "Stool5E", "Stool5", "Stool6E", "Stool6", "Stool7", "Stool8"), ordered = TRUE))
+```
+
+#######################################
+# Participant demographics
+#######################################
+
+```{r Partipant demographics}
+
+participants_counts <- participants %>%
+  group_by(Gender) %>%
+  summarise(
+    n_samples = n(),
+    .groups = "drop"
+  )
+
+g <- ggplot(participants_counts, aes(x = Gender, y = n_samples)) +
+     geom_bar(stat = "identity", fill = "Blue", color = "black", linewidth = 0.2) +
+     scale_y_continuous(breaks = c(0, 2, 4, 6, 8, 10, 12, 14)) +
+     theme(axis.ticks.x = element_blank()) +
+     labs(x = "Gender", y = "Count") +
+     theme_custom_text()
+
+ggsave(paste0(directory, "/Study-design/Weeklong-gender-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 1)
+
+participants_counts <- participants %>%
+  group_by(Race) %>%
+  summarise(
+    n_samples = n(),
+    .groups = "drop"
+  )
+
+g <- ggplot(participants_counts, aes(x = Race, y = n_samples)) +
+     geom_bar(stat = "identity", fill = "Blue", color = "black", linewidth = 0.2) +
+     scale_y_continuous(breaks = c(0, 2, 4, 6, 8, 10, 12, 14)) +
+     theme(axis.ticks.x = element_blank()) +
+     labs(x = "Race", y = "Count") +
+     theme_custom_text()
+
+ggsave(paste0(directory, "/Study-design/Weeklong-race-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+
+avg_age <- mean(participants$Age, na.rm = TRUE)
+
+g <- ggplot(participants, aes(x = Age)) +
+     geom_histogram(binwidth = 4, fill = "blue", color = "black", boundary = 0, linewidth = 0.2) +
+     geom_vline(xintercept = avg_age, color = "red", linetype = "dotted", linewidth = 1) +
+     scale_x_continuous(breaks = c(20, 25, 30, 35, 40, 45)) +
+     annotate("text", 
+              x = avg_age + 5, y = max(6),
+              label = paste("Avg:", round(avg_age, 1), "h"), 
+              color = "red", angle = 0, vjust = 0, size = 2) +
+     labs(x = "Age", y = "Count") +
+     theme(axis.ticks.x = element_blank()) +
+     theme_custom_text()
+
+ggsave(paste0(directory, "/Study-design/Weeklong-age-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+
+```
+
+#######################################
+# Number of samples
+#######################################
+
+```{r Summarize number of samples}
+
+output_dir <- file.path(directory, "Sample-collection", "Sample-breakdown")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+meta <- samples %>%
+    filter(!SEQ %in% c("NA", "N") 
+         & !is.na(SEQ)
+         & !Sample_ID %in% duplicate_samples
+         & Kit_ID != "Unknown")
+
+for (sid in unique(meta$Subject_ID)) {
+  
+  temp <- meta %>% filter(Subject_ID == sid) %>%
+    select(Subject_ID, Sample_ID, Kit_ID, Sample_origin2, Region, Collection_date, Collection_time, Transit_time_h, pH, Bristol_score, Frozen) %>%
+    arrange(Collection_date, Collection_time, Region)
+  
+  # print table to pdf nicely
+  gt(temp) %>%
+    tab_options(table.font.size = px(10)) %>% # fontsize
+    tab_style(style = cell_text(weight = "bold"), # bold headers
+              locations = cells_column_labels(everything())) %>%
+    cols_align(align = "left", columns = everything()) %>%
+    gtsave(paste0(directory, "/Sample-collection/Sample-breakdown/Sample-breakdown-", sid, ".pdf"))
+}
+
+output_dir <- file.path(directory, "Sample-collection", "Kit-breakdown")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+for (sid in unique(kits$Subject_ID)) {
+  
+  temp <- kits %>% filter(Subject_ID == sid) %>%
+    select(Kit_ID, Subject_ID, Timepoint, Ingestion_date, Ingestion_time, Saliva, Cap_R1, Stool) %>%
+    arrange(Timepoint)
+  
+  # print table to pdf nicely
+  gt(temp) %>%
+    tab_options(table.font.size = px(10)) %>% # fontsize
+    tab_style(style = cell_text(weight = "bold"), # bold headers
+              locations = cells_column_labels(everything())) %>%
+    cols_align(align = "left", columns = everything()) %>%
+    gtsave(paste0(directory, "/Sample-collection/Kit-breakdown/Kit-breakdown-", sid, ".pdf"))
+}
+
+meta_counts <- meta %>%
+  
+  # Count samples per region
+  group_by(Subject_ID, Region) %>%
+  summarise(n_samples = n(), .groups = "drop") %>%
+  mutate(Region_grouped = ifelse(Region %in% c("R1", "R2", "R3"), "Regions", Region)) %>%
+  group_by(Subject_ID, Region_grouped) %>%
+  summarise(n_samples = sum(n_samples), .groups = "drop") %>%
+  
+  # Add total_samples and unique_capscan as extra "regions"
+  group_by(Subject_ID) %>%
+  dplyr::bind_rows(
+    summarise(
+      ., 
+      Region_grouped = c("Total", "Devices"),
+      n_samples = c(
+        sum(n_samples),
+        n_distinct(meta$Capscan_ID[meta$Subject_ID == unique(Subject_ID) 
+                                      & !meta$Capscan_ID %in% c("NA", "Missing") & !is.na(meta$Capscan_ID)] )
+      )
+    )
+  ) %>%
+  ungroup() %>%
+  mutate(Region_grouped = factor(Region_grouped, levels = c("Stool", "Regions", "Devices", "Saliva", "Total")))
+
+g <- ggplot(meta_counts, aes(x = Subject_ID, y = Region_grouped, fill = n_samples)) +
+     geom_tile(color = "black") +
+     geom_text(aes(label = n_samples), color = "black", size = 2) +
+     scale_fill_gradient(low = "white", high = "blue") +
+     coord_fixed() + 
+     labs(title = "Samples per subject by region", x = "Subject ID", y = "Region", fill = "Count") +
+     theme_custom_text() +
+     theme(axis.text.x = element_text(),
+          panel.background = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.ticks.x = element_blank(),
+          legend.key.size = unit(0.4, "cm")) +
+      guides(fill = guide_colorbar(
+      ticks.colour = "black",
+      frame.colour = "black",
+      frame.linewidth = 0.2))
+
+ggsave(paste0(directory, "Sample-collection/Samples-summary.pdf"), plot = g, device = "pdf", height = 1.5, width = 6)
+
+
+capsule_counts <- meta %>%
+  filter(Region %in% c("R1", "R2", "R3")) %>%  # Only R1, R2, R3
+  filter(SEQ == "Y") %>%
+  group_by(Subject_ID, Sample_origin) %>%
+  summarise(
+    n_samples = sum(!SEQ %in% c("NA", "N")),  # count rows where SEQ is not "NA"
+    .groups = "drop"
+  )
+
+avg_regions <- round(mean(capsule_counts$n_samples, na.rm = TRUE), 2)
+
+counts <- capsule_counts %>%
+  count(n_samples)
+
+g <- ggplot(counts, aes(x = factor(n_samples), y = n)) +
+     geom_bar(stat = "identity", fill = "Blue", color = "black", linewidth = 0.2) +
+     theme(axis.ticks.x = element_blank()) +
+     labs(x = "Number of regions", y = "Count") +
+     theme(axis.ticks.x = element_blank()) +
+     theme_custom_text()
+
+ggsave(paste0(directory, "Sample-collection/Capsule-regions-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 1)
+
+```
+
+#######################################
+# Ingestion and collection timeline
+#######################################
+
+```{r Individual ingestion times}
+
+meta <- samples %>%
+    filter(Kit_ID != "Unknown")
+
+for (sid in unique(meta$Subject_ID)) {
+  # Filter and clean metadata for this subject
+  temp <- meta %>% 
+    filter(!is.na(Ingestion_date) & Ingestion_date != "NA") %>%
+    filter(Subject_ID == sid, grepl("Capscan", Sample_origin)) %>%
+    select(Subject_ID, Kit_ID, Capscan_ID, Sample_origin, Ingestion_date, Ingestion_time, Collection_date, Collection_time, Transit_time_h) %>%
+    distinct()
+  
+  # Handle missing collection dates/times
+  Latemp_date <- max(ymd(temp$Collection_date), na.rm = TRUE)
+  
+  meta_fixed <- temp %>%
+    mutate(
+      Collection_date = if_else(Collection_date == "NA", as.character(Latemp_date), Collection_date),
+      Collection_time = if_else(Collection_time == "NA", "23:59", Collection_time),
+      Ingestion_datetime  = ymd_hm(paste(Ingestion_date, Ingestion_time), tz = "UTC"),
+      Collection_datetime = ymd_hm(paste(Collection_date, Collection_time), tz = "UTC"),
+      Capscan_ID = toupper(trimws(Capscan_ID)),
+      # Compute center and width for geom_tile
+      x_center = Ingestion_datetime + (Collection_datetime - Ingestion_datetime) / 2,
+      x_width = as.numeric(difftime(Collection_datetime, Ingestion_datetime, units = "secs"))
+    )
+  
+  # Plot timeline
+  g <- ggplot(meta_fixed, aes(y = Sample_origin)) +
+    geom_tile(
+      aes(x = x_center, width = x_width, height = 0.8, alpha = if_else(Capscan_ID == "MISSING", 0.5, 1), linetype = if_else(Capscan_ID == "MISSING", "dashed", "solid")), fill = "#0000FF", color = "black") +
+    scale_alpha_identity() +
+    geom_text(aes(x = x_center, label = sprintf("%.2f", as.numeric(Transit_time_h))), color = "white", size = 2) +
+    scale_linetype_identity() +
+    scale_x_datetime(date_labels = "%m/%d", date_breaks = "1 day") +
+    labs(title = paste0("Subject ", sid), y = NULL, x = NULL) +
+    theme(axis.ticks.y = element_blank(),
+          axis.title.y = element_blank(),
+          axis.title = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          legend.position = "none"
+    ) +
+    theme_custom_text()
+  
+  ggsave(paste0(directory, "/Sample-collection/Timeline-breakdown/Timeline-breakdown-", sid, ".pdf"), plot = g, device = "pdf", height = 0.22*length(meta_fixed$Sample_origin) + 0.4, width = 4)
+  
+  if (sid == "20") {
+      ggsave(paste0(directory, "/Sample-collection/Timeline-breakdown/Timeline-breakdown-", sid, ".pdf"), plot = g, device = "pdf", height = 0.22*length(meta_fixed$Sample_origin) + 0.4, width = 5)
+  }
+}
+
+```
+
+```{r Summarize ingestion times}
+
+# Filter and clean metadata
+df2plot <- meta %>% 
+    filter(grepl("Capscan", Sample_origin)) %>%
+    filter(Transit_time_h != 0) %>%
+    select(Subject_ID, Kit_ID, Sample_origin, Capscan_ID, Transit_time_h) %>%
+    distinct()
+
+df2plot <- df2plot %>%
+  mutate(Transit_time_h = ifelse(is.na(Transit_time_h), 0, Transit_time_h)) %>%
+  mutate(Transit_time_h = as.numeric(Transit_time_h))
+
+avg_transit <- mean(df2plot$Transit_time_h, na.rm = TRUE)
+
+g <- ggplot(df2plot %>% filter(Transit_time_h > 0), aes(x = Transit_time_h)) +
+  geom_histogram(binwidth = 10, fill = "blue", color = "black", boundary = 0, linewidth = 0.2) +
+   geom_vline(xintercept = avg_transit, color = "red", linetype = "dotted", linewidth = 1) +
+  scale_x_continuous(breaks = c(0, 25, 50, 75, 100, 125, 150)) +
+  annotate(
+    "text", 
+    x = avg_transit + 25, y = max(40),
+    label = paste("Avg:", round(avg_transit, 1), "h"), 
+    color = "red", angle = 0, vjust = 0, size = 2
+  ) +
+  labs(x = "Transit time (h)", y = "Count") +
+  theme(axis.ticks.x = element_blank()) +
+  theme_custom_text()
+  
+ggsave(paste0(directory, "/Sample-collection/Transit-time-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+
+avg_transit_by_subject <- df2plot %>%
+  group_by(Subject_ID) %>%
+  summarise(avg_transit = mean(Transit_time_h, na.rm = TRUE)) %>%
+  ungroup()
+
+df2plot <- df2plot %>%
+  left_join(avg_transit_by_subject, by = "Subject_ID")
+
+g <- ggplot(df2plot, aes(x = Transit_time_h)) +
+  geom_histogram(binwidth = 10, fill = "blue", color = "black", boundary = 0, linewidth = 0.2) +
+  geom_vline(aes(xintercept = avg_transit), color = "red", linetype = "dotted", linewidth = 0.8) +
+  facet_wrap(~ Subject_ID, scales = "fixed", ncol = 5) +
+  labs(title = "Distribution of transit time", x = "Transit time (hours)", y = "Count") +
+  geom_text(data = avg_transit_by_subject,
+            aes(x = avg_transit + 45, y = 5, label = paste("Avg:", round(avg_transit, 1), "h")),
+            color = "red", angle = 0, vjust = 0, size = 2,
+            inherit.aes = FALSE) +  # important to use only the data in avg_transit_by_subject
+  theme_custom_text()
+
+ggsave(paste0(directory,"/Sample-collection/Transit-time-facet-distribution.pdf"), plot = g, device = "pdf", height = 5, width = 5)
+
+```
+
+#######################################
+# PANAS
+#######################################
+
+```{r PANAS}
+
+data_lf <- panas %>%
+    pivot_longer(cols = c(Positive_affect_score, Negative_affect_score), names_to = "Direction", values_to = "Affect_score", 
+                 values_drop_na = FALSE)
+
+data_lf <- data_lf %>%
+  mutate(Direction = gsub("_.*", "", Direction))
+
+data_lf <- data_lf %>%
+  mutate(Direction = recode(Direction,
+                            "Positive" = "P",
+                            "Negative" = "N"))
+
+g <- ggplot() + 
+     geom_tile(data = data_lf, aes(x = Direction, y = Subject_ID, fill = Affect_score),  color = "black", linewidth = 0.3) + 
+     facet_nested(cols = vars(Day), scales = "free_y", space = "free", drop=TRUE) +
+     scale_fill_gradient(low = "white", high = "blue") +
+     scale_x_discrete("Affect score, by day (negative & postiive)") +
+     theme(aspect.ratio = 1,
+           axis.ticks.y = element_blank(),
+           axis.ticks.x = element_blank(),
+           panel.background = element_blank(),
+           strip.text.y = element_text(angle = 0),
+           legend.text = element_text(size = 10),  # Legend text size
+           legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+           guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                           byrow = TRUE))  + # Fill the legend items by row
+     theme_custom_text()
+
+ggsave(paste0(directory, "PANAS/PANAS-summary.pdf"), plot = g, device = "pdf", width = 6, height = 5)
+
+data_lf <- panas %>%
+    pivot_longer(cols = c(Interested, Distressed, Excited, Upset, Strong, Guilty, Scared, Hostile, Enthusiastic, Proud, Irritable, Alert, Ashamed, Inspired, Nervous, Determined, Attentive, Jittery, Active, Afraid), names_to = "Parameter", values_to = "Score", 
+                 values_drop_na = FALSE)
+
+for (sid in unique(panas$Subject_ID)) {
+
+g <- ggplot() + 
+     geom_tile(data = data_lf %>% filter(Subject_ID == sid), aes(x = Parameter, y = Day, fill = Score),  color = "black", linewidth = 0.2) + 
+     facet_nested(cols = vars(Subject_ID), scales = "free_y", space = "free", drop = TRUE) +
+     scale_fill_gradient(low = "white", high = "blue", limits = c(1, 5)) +
+     scale_x_discrete("Parameter") +
+     theme(aspect.ratio = 1,
+           axis.ticks.y = element_blank(),
+           axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+           axis.ticks.x = element_blank(),
+           panel.background = element_blank(),
+           strip.text = element_text(angle = 0),
+           strip.text.y = element_text(angle = 0),
+           strip.text.x = element_text(angle = 0),
+           legend.text = element_text(size = 10),  # Legend text size
+           legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+           guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                           byrow = TRUE)) + # Fill the legend items by row
+      theme_custom_text()
+
+# Save composition figure
+ggsave(paste0(directory, "/PANAS/Components/PANAS-components-", sid, ".pdf"), plot = g, device = "pdf", width = 3, height = 2)
+}
+
+```
+
+#######################################
+# Bristol stool score
+#######################################
+
+```{r Summarize bristol stool score}
+
+stool <- samples %>%
+  filter(Sample_ID %in% kits$Stool) %>%
+  filter(!Sample_ID %in% duplicate_samples) #
+
+stool <- stool %>%
+  mutate(Sample_origin = str_remove(Sample_origin, "Stool"))
+
+stool_colors <- colorRampPalette(c("blue", "white", "red"))(7)
+
+
+g <- ggplot(stool, aes(x = Sample_origin, y = Subject_ID, fill = Bristol_score)) +
+  geom_tile(color = "black") +
+  scale_fill_manual(values = stool_colors, na.value = "black") +
+  coord_equal() +
+  labs(title = "Heatmap of Bristol Stool Scores", x = "Stool timepoint", y = "Subject ID", fill = "Bristol Score") +
+  theme(axis.ticks.y = element_blank(),
+        axis.ticks.x = element_blank(),
+        legend.key.size = unit(0.4, "cm")) +
+  theme_custom_text()
+
+ggsave(paste0(directory, "/Sample-collection/Bristol-stool-score-summary.pdf"), plot = g, device = "pdf", height = 4, width = 3)
+
+counts <- stool %>%
+  count(Bristol_score)
+
+avg_BSS <- round(mean(as.numeric(stool$Bristol_score), na.rm = TRUE), 2)
+
+g <- ggplot(counts %>% filter(Bristol_score != "NA"), aes(x = factor(Bristol_score), y = n)) +
+  geom_bar(stat = "identity", fill = "blue", color = "black", linewidth = 0.2) +
+  labs(x = "Bristol stool score", y = "Count") +
+  theme(axis.ticks.x = element_blank()) +
+  theme_custom_text()
+
+ggsave(paste0(directory,"/Sample-collection/Bristol-stool-score-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+```
+
+#######################################
+# pH
+#######################################
+
+```{r Summarize pH}
+
+capscan <- samples %>% filter(grepl("Capscan", Sample_origin) 
+                              & !SEQ %in% c("NA", "N") 
+                              & !is.na(SEQ)
+                              & !Sample_ID %in% duplicate_samples
+                              & Kit_ID != "Unknown")
+
+colors_pH = c("<5.5" = "#F4C2C2", "5.5" = "#d2c119", "5.8" = "#bdb016", "6" = "#b0a515", "6.2" = "#97971d", "6.4" = "#82881c", "6.6" = "#747a18", "6.8" = "#5c741e", "7" = "#4c681b", "7.6" = "#00473b", "NM" = "grey80")
+
+g <- ggplot(capscan, aes(x = Region, y = Subject_ID, fill = pH)) +
+  geom_tile(color = "black") +
+  scale_fill_manual(values = colors_pH) +
+  coord_equal() +
+  labs(title = "Heatmap of pH", x = "Stool timepoint", y = "Subject ID", fill = "pH") +
+  facet_grid(cols = vars(Sample_origin2)) +
+  theme(axis.ticks.y = element_blank(),
+        axis.ticks.x = element_blank(),
+        legend.key = element_rect(color = "black", linewidth = 0.2),  # black outline for legend bar
+        legend.key.size = unit(0.4, "cm")) +
+  theme_custom_text()
+
+ggsave(paste0(directory,"/Sample-collection/pH-summary.pdf"), plot = g, device = "pdf", height = 4, width = 8)
+
+
+counts <- capscan %>%
+  count(pH)
+
+g <- ggplot(counts, aes(x = factor(pH), y = n, fill = pH)) +
+     scale_fill_manual(values = colors_pH) +
+     geom_bar(stat = "identity", color = "black", linewidth = 0.2) +
+     labs(x = "pH", y = "Count") +
+     theme(legend.position = "none",
+           axis.ticks.x = element_blank()) +
+     theme_custom_text()
+      
+
+ggsave(paste0(directory,"/Sample-collection/pH-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2.5)
+
+```
+

@@ -1,0 +1,183 @@
+% !TEX options=--shell-escape
+\documentclass[10pt]{article}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate,xcolor}
+\usepackage{listings,minted}
+\usemintedstyle{perldoc}
+\usepackage{caption}
+\captionsetup[figure]{labelfont=bf} % Bolded "Figure X:"
+\usepackage[font={footnotesize}]{caption} % caption font is smaller
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=red,
+    filecolor=green,
+    linkcolor=blue,
+    urlcolor=blue
+}
+\definecolor{myGreen}{HTML}{008040} % green color
+
+\setlength\parindent{0pt} % no indentation
+
+\graphicspath{
+  {"/Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures"}
+  % {"/Users/bfu/Dropbox/Group_projects/Capsule-2024-HumanStudies/LongitudinalSampling/Weeklong/Figures/"}
+  % {"/Users/bfu/Dropbox/1_HuangLab/R/15_CZBSeqSub-2025-0577_NextSeq2000P2_LONGIT_Weeklong_2step_SILVA/Figures/Weeklong/"}
+  % {"/Users/bfu/Dropbox/1_HuangLab/R/15_CZBSeqSub-2025-0577_NextSeq2000P2_LONGIT_Weeklong_2step_SILVA/Figures/Weeklong/Composition/"}
+} % Sets default 
+
+\def\Name{Beverly Fu}  % Your name
+% \def\SubjectNo{21}
+\newcommand{\SubjectNoPad}{%
+  \ifnum\SubjectNo<10 0\SubjectNo\else \SubjectNo\fi
+}
+\title{Weeklong longitudinal study results for Subject \SubjectNo}
+\author{\Name}
+
+% Page setup
+\topmargin -0.5in % topmargin = 1in + \topmargin
+\textheight 9in
+\textwidth 6.5in
+\oddsidemargin 0in % left margin = 1in + oddsidemargin
+\footskip 1cm % pagenumber to text
+
+\begin{document}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\maketitle
+% \setcounter{section}{-1}
+
+\tableofcontents
+
+\newpage
+\section{Study overview}
+
+\subsection{Study setup}
+
+Throughout the study, the subject's small intestinal contents were non-invasively sampled 8 times across the week. An evening sampling procedure was used, in which CapScan devices were ingested 3 hours after dinner, and a paired saliva sample was collected during capsule ingestion. In subsequent bowel movements, the CapScan devices were retrieved from stool, and a paired stool sample was collected during capsule collection. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6.5in]{Study-design/Study-timeline.pdf}
+\caption{\textbf{Study timeline.} A test CapScan0 device was ingested on Thursday prior to the continuous weeklong study. A fresh sample was provided on Tuesday evening or Wednesday morning/afternoon. A subset of the subjects also participated in a concurrent exercise study and ingested two additional exercise capsules.}
+\label{TransitTime}
+\end{figure}
+
+Subjects reported various metadata, such as when capsules were ingested and collected, food consumed, mental health, and Bristol stool score.
+
+\newpage
+\section{General data summary}
+
+\subsection{Transit time}
+
+As each CapScan device is RFID chipped, we were able to calculate transit times based on each subject's record.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 2in]{Summary/Transit_time.pdf}
+\caption{\textbf{Summary transit time.} Histogram of transit times in hours of all CapScan devices ingested during the study. Missing devices default to a transit time of 0 h. The average transit time is denoted in red.}
+\label{AllTransit}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 4.8in]{Summary/Transit_time_subject.pdf}
+\caption{\textbf{Summary transit time broken down by individual.} Same data as in Figure \ref{AllTransit}, broken down by subject.}
+\label{IndividualTransit}
+\end{figure}
+
+\newpage
+\subsection{pH}
+
+When possible, the pH of each capsule was measured. Surprisingly, the pH of many samples was below the limit of detection of our pH strips. When we spot checked them, the pH were very low, suggesting that the capsules sampled within the stomach.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6.5in]{Summary/pH.pdf}
+\caption{\textbf{Summary pH.} Heatmap of all CapScan regions by subject, ordered by ingestion order. Samples with pHs presumably lower than 5.5 are marked in red. Capsules with missing regions are depicted in grey. CapE1 and CapE2 refer to the first and second exercise capsules, respectively.}
+\label{pH}
+\end{figure}
+
+\subsection{Bristol stool score}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 4in]{Summary/Bristol_stool_score.pdf}
+\caption{\textbf{Summary Bristol Stool score.} Heatmap of all Bristol Stool scores by subject, ordered by CapScan device.}
+\label{BSS}
+\end{figure}
+
+\subsection{Cell count}
+
+\subsection{PANAS}
+
+\subsection{alpha-diversity}
+
+\subsection{Principal coordinate analysis of microbial composition}
+
+\section{Subject specific data}
+
+\newpage
+\subsection{Capscan and tubes}
+
+\IfFileExists{Capsules/20250826_Capsule_Weeklong_S\SubjectNo.png}
+{\begin{figure}[H]
+\centering
+\includegraphics[width = 5.5in]{Capsules/20250826_Capsule_Weeklong_S\SubjectNo.png}
+\caption{\textbf{Sectioned CapScan devices.} All CapScan devices collected were cleaned and sectioned. The area closest to the white tip is the most proximal region collected while the area closest to the tape-labeled binder clip is the most distal region. We marked targeted sampling regions and took photos of the final samples collected in the tubes. Note that there is generally great variability in terms of the number of regions, colors, and consistencies.}
+\label{CapscanSamples}
+\end{figure}}{\vspace{1em} Participant \SubjectNo\ did not collect and capsules.}
+
+\newpage
+\subsection{Transit time timeline}
+
+As each CapScan device is RFID chipped, we were able to calculate transit times. Average transit times per subject can be found in Figure \ref{IndividualTransit}.
+
+\IfFileExists{Timeline/Subject\SubjectNoPad.pdf}
+{\begin{figure}[H]
+\centering
+\includegraphics[width = 6.5in]{Timeline/Subject\SubjectNoPad.pdf}
+\caption{\textbf{Individual CapScan ingestion and collection times.} Timeline of when each CapScan devices was in the subject's body throughout the study. The length of each blue bar represents the transit time in hours, which is indicated in white text. If a device was not found in the stool, it is depicted as a transparent bar.}
+\label{Timeline}
+\end{figure}}{\vspace{1em} Participant \SubjectNo\ did not provide ingestion and collection times.}
+
+\newpage
+\subsection{Cell imaging}
+
+During the weeklong study, subjects attempted to bring in a fresh paired capsule and stool sample that was kept refrigerated at 4 \textdegree C. We processed the samples per usual and prepared glycerol stocks and imaged them to look at overall cell densities and cell morphologies.
+
+\IfFileExists{Imaging/20250826_Weeklong_Imaging_Subj\SubjectNo.pdf}
+{\begin{figure}[H]
+\centering
+\includegraphics[width = 3.8in]{Imaging/20250826_Weeklong_Imaging_Subj\SubjectNo.pdf}
+\caption{\textbf{Imaging of fresh sample.} Example frames collected for each capsule region and stool sample. Any sample dilution is indicated. Phase contrast is depicted on the left while live/dead staining (indicated by green or red fluorescence, respectively) is depicted on the right.}
+\label{CellImaging}
+\end{figure}}{\vspace{1em} Participant \SubjectNo\ was unable to provide a fresh sample.}
+
+\newpage
+\subsection{Microbial composition}
+
+DADA2 against SILVA database, cutoff of 500 reads, done on NextSeq, downsampled to 25 K reads
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6.5in]{Saliva/Composition_saliva_\SubjectNoPad.pdf}
+\caption{\textbf{Microbial compositions of saliva samples.} Sorted by Collection time and collection date. Labeled with kit set.}
+\label{SalivaComposition}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6.5in]{Paired/Composition_cap_stool_\SubjectNoPad.pdf}
+\caption{\textbf{Microbial compositions of pairec capscan and stool samples.} Sorted by Collection time and collection date. Labeled with kit set.}
+\label{CapStoolComposition}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6.5in]{Composition/Composition_legend.pdf}
+\caption{\textbf{Legend for composition colors.} Family level taxonomic information.}
+\label{LegendComposition}
+\end{figure}
+
+\end{document}
