@@ -433,6 +433,8 @@ df2plot <- samdf %>%
   mutate(Shannon = replace_na(Shannon, 0)) %>%
   column_to_rownames("sample")
 
+df2plot <- set_ordered_factors(df2plot)
+
 g <- ggplot(df2plot, aes(x = Shannon, fill = Region)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
   scale_fill_manual(values = colors_origin) +
@@ -694,7 +696,7 @@ for (sid in unique(samdf$Subject_ID)) {
 ```
 
 #######################################
-# SharedASVs
+# Shared ASVs
 #######################################
 
 ```{r Shared number of ASVs}
@@ -969,6 +971,102 @@ ggsave(paste0(directory, "/Weeklong-Shared-ASVs/Abundance/All-subjects-", region
 }
 ```
 
+```{r Most prevalent ASVs 0p01}
+
+# Get ASVs detectable at >1% for each subject and sample type
+detectable_asvs <- ps %>%
+  subset_samples(total_reads > 10000) %>%
+  transform_sample_counts(function(x) x/sum(x)) %>%  # Convert to relative abundance
+  psmelt() %>%
+  filter(Abundance > cutoff_MT) %>%
+  group_by(Subject_ID, Sample_origin3, Feature) %>%
+  summarise(
+    n_samples_detected = n(),
+    Taxon = first(Taxon),  # Get taxonomy info
+    .groups = "drop"
+  )
+
+for (sample_origin in unique(samdf$Sample_origin3)) {
+
+  temp_complete <- detectable_asvs %>% 
+    filter(Sample_origin3 == sample_origin) %>%
+    complete(Subject_ID, nesting(Feature, Taxon), fill = list(n_samples_detected = 0))
+  
+  mat <- temp_complete %>%
+      mutate(feature_taxon = interaction(Feature, Taxon)) %>%
+      select(Subject_ID, feature_taxon, n_samples_detected) %>%
+      pivot_wider(names_from = Subject_ID, values_from = n_samples_detected, values_fill = 0) %>%
+      column_to_rownames("feature_taxon") %>%
+      as.matrix()
+  
+  # Create pheatmap
+    g <- pheatmap(mat,
+         color = c("black", colorRampPalette(c("white", "blue"))(99)),
+         cluster_rows = TRUE,
+         cluster_cols = TRUE,
+         clustering_distance_rows = "euclidean",
+         clustering_distance_cols = "euclidean",
+         clustering_method = "complete",
+         show_rownames = TRUE,
+         show_colnames = TRUE,
+         fontsize_row = 6,
+         fontsize_col = 6,
+         border_color = "black",
+         angle_col = 0, 
+         breaks = c(0, seq(0.01, max(mat), length.out = 99)))
+
+  ggsave(paste0(directory, "/Weeklong-Shared-ASVs/All-subjects-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 8, height = 0.1 * n_distinct(temp_complete$Feature) + 2)
+}
+
+# Calculate prevalence (number of subjects with each ASV)
+asv_prevalence <- detectable_asvs %>%
+  group_by(Sample_origin3, Feature, Taxon) %>%
+  summarise(
+    n_subjects = n_distinct(Subject_ID),
+    subjects_list = paste(sort(unique(Subject_ID)), collapse = ", "),
+    mean_samples_detected = mean(n_samples_detected),
+    total_samples = sum(n_samples_detected),
+    .groups = "drop"
+  ) %>%
+  arrange(Sample_origin3, desc(n_subjects), desc(mean_samples_detected))
+
+for (sample_origin in unique(samdf$Sample_origin3)) {
+  
+  # Get top 10 most prevalent features
+  top10_features <- asv_prevalence %>%
+    filter(Sample_origin3 == sample_origin) %>%
+    slice_max(n_subjects, n = 10, with_ties = FALSE) %>%
+    pull(Feature)
+
+  temp_complete <- detectable_asvs %>% 
+    filter(Sample_origin3 == sample_origin, Feature %in% top10_features) %>%
+    complete(Subject_ID, nesting(Feature, Taxon), fill = list(n_samples_detected = NA)) %>%
+    left_join(
+      asv_prevalence %>% 
+        filter(Sample_origin3 == sample_origin) %>%
+        select(Feature, Taxon, n_subjects) %>%
+        distinct(),
+      by = c("Feature", "Taxon")
+    )
+  
+   g <- ggplot(temp_complete) +
+       geom_tile(aes(x = Subject_ID, y = interaction(Feature, Taxon, n_subjects), fill = n_samples_detected),  color = "black") +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, NA)) +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(),
+             axis.ticks.x = element_blank(),
+             #aspect.ratio = 1,
+             legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
+             legend.ticks = element_line(color = "black")) + # Black ticks
+       theme_custom_text()
+  
+   ggsave(paste0(directory, "/Weeklong-Shared-ASVs/All-subjects-", sample_origin, "-top.pdf"), plot = g, device = "pdf", width = 6, height = 0.2 * n_distinct(temp_complete$Feature))
+}
+```
+
 #######################################
 # ASV fluctuations
 #######################################
@@ -1067,7 +1165,11 @@ for (sample_origin in unique(samdf$Sample_origin3)) {
 ```
 
 ```{r Calculate fluctuation variance}
+all_slopes <- data.frame()
 
+ASV_fluctuation <- ASV_fluctuation %>%
+    mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva", "Capscan", "Stool")))
+  
 for (sid in unique(samdf$Subject_ID)) {
   
   # Calculate slopes for each Sample_origin
@@ -1078,46 +1180,44 @@ for (sid in unique(samdf$Subject_ID)) {
       slope = coef(lm(log10(Variance) ~ log10(Mean)))[2],
       .groups = "drop"
     ) %>%
-    mutate(label = paste0("beta == ", round(slope, 2)))
-  
+    mutate(Subject = sid,
+           label = paste0("beta == ", round(slope, 2)))
+ 
+  all_slopes <- bind_rows(all_slopes, slopes)
+
   g <- ggplot(ASV_fluctuation %>% filter(Subject == sid), aes(x = Mean, y = Variance)) +
     geom_point(aes(fill = Color), size = 2, shape = 21) +
     geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed", linewidth = 0.2) +  # add best-fit line
     scale_y_log10(labels = trans_format("log10", math_format(10^.x))) +
     scale_x_log10(limits = c(1e-4, 1), labels = trans_format("log10", math_format(10^.x))) +
     facet_grid(cols = vars(Sample_origin)) +
-    geom_text(data = slopes, aes(x = 5e-4, y = 5e-2, label = label), 
+    geom_text(data = slopes, aes(x = 5e-4, y = 5e-3, label = label), 
               hjust = -0.1, vjust = 1.5, size = 3, inherit.aes = FALSE, color = "red", parse = TRUE) +
     scale_fill_identity() +
-    coord_fixed() +
     labs(
       title = "Scatterplot of mean vs variance of each feature's relative abundance",
       x = "Mean relative abundance",
       y = "Relative abundance variance"
     ) +
-    theme_custom_text()
+    theme_custom_text() +
+    theme(aspect.ratio = 1)
   
-  ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/Mean-vs-var-", sid, ".pdf"), plot = g, device = "pdf", width = 6, height = 3)
+  ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/Taylors-law/Mean-vs-var-", sid, ".pdf"), plot = g, device = "pdf", width = 6, height = 3)
 }
 
-# # OPTIONAL: figure out what feature is what
-# g <- ggplot(stool_fluctuation %>% filter(Subject == "Subj1" & Sample_origin == "saliva"), aes(x = Mean, y = Variance)) +
-#   geom_point(aes(fill = Color, color = ifelse(Feature == "feature_0095", "red", "black")), size = 4, shape = 21) +
-#   geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed", linewidth = 0.2) +  # add best-fit line
-#   scale_y_log10(labels = trans_format("log10", math_format(10^.x))) +
-#   scale_x_log10(limits = c(1e-4, 1), labels = trans_format("log10", math_format(10^.x))) +
-#   facet_grid(cols = vars(Subject)) +
-#   scale_fill_identity() +
-#   scale_color_identity() +
-#   labs(
-#     title = "Scatterplot of mean vs variance of each feature's relative abundance",
-#     x = "Mean relative abundance",
-#     y = "Relative abundance variance"
-#   ) +
-#   theme_custom_text()
+all_slopes <- all_slopes %>%
+  mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva", "Capscan", "Stool")))
 
-
-
+g <- ggplot(all_slopes, aes(y = Subject, x = Sample_origin, fill = slope)) +
+       geom_tile(color = "black") +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black") +
+       geom_text(aes(label = round(slope, 2)), size = 2) +
+       theme_custom_heatmap() +
+       theme_custom_text() +
+       theme(legend.frame = element_rect(color = "black", linewidth = 0.2),
+             legend.ticks = element_line(color = "black"))
+    
+    ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/Fluctuation-slopes-all-subjects.pdf"), plot = g, device = "pdf", width = 2.5, height = 4)
 
 ```
 

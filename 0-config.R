@@ -198,6 +198,16 @@ theme_custom_text <- function() {
   )
 }
 
+theme_custom_heatmap <- function() {
+  # Set default plotting method for heatmaps in ggplot2
+  theme(strip.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.x = element_text(),
+        axis.ticks.x = element_blank())
+}
+
 red_if_small_discrete <- function(values) {
   # make text red if total reads is less than 10 K
   sapply(values, function(v) {

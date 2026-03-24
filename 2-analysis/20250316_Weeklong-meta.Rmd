@@ -336,10 +336,11 @@ data_lf <- data_lf %>%
                             "Positive" = "P",
                             "Negative" = "N"))
 
-g <- ggplot() + 
-     geom_tile(data = data_lf, aes(x = Direction, y = Subject_ID, fill = Affect_score),  color = "black", linewidth = 0.3) + 
+g <- ggplot(data_lf, aes(x = Direction, y = Subject_ID, fill = Affect_score, label = Affect_score)) + 
+     geom_tile(color = "black", linewidth = 0.3) + 
      facet_nested(cols = vars(Day), scales = "free_y", space = "free", drop=TRUE) +
      scale_fill_gradient(low = "white", high = "blue") +
+     geom_text(size = 2) +
      scale_x_discrete("Affect score, by day (negative & postiive)") +
      theme(aspect.ratio = 1,
            axis.ticks.y = element_blank(),
@@ -347,9 +348,9 @@ g <- ggplot() +
            panel.background = element_blank(),
            strip.text.y = element_text(angle = 0),
            legend.text = element_text(size = 10),  # Legend text size
-           legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
-           guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
-                           byrow = TRUE))  + # Fill the legend items by row
+           legend.key.size = unit(0.4, "cm"),
+           legend.frame = element_rect(color = "black", linewidth = 0.2),
+           legend.ticks = element_line(color = "black")) +  # Size of the legend keys (symbol or color box) 
      theme_custom_text()
 
 ggsave(paste0(directory, "PANAS/PANAS-summary.pdf"), plot = g, device = "pdf", width = 6, height = 5)
@@ -360,8 +361,8 @@ data_lf <- panas %>%
 
 for (sid in unique(panas$Subject_ID)) {
 
-g <- ggplot() + 
-     geom_tile(data = data_lf %>% filter(Subject_ID == sid), aes(x = Parameter, y = Day, fill = Score),  color = "black", linewidth = 0.2) + 
+g <- ggplot(data_lf %>% filter(Subject_ID == sid), aes(x = Parameter, y = Day, fill = Score)) + 
+     geom_tile(color = "black", linewidth = 0.2) + 
      facet_nested(cols = vars(Subject_ID), scales = "free_y", space = "free", drop = TRUE) +
      scale_fill_gradient(low = "white", high = "blue", limits = c(1, 5)) +
      scale_x_discrete("Parameter") +
