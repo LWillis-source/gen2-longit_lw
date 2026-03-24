@@ -972,3 +972,153 @@ ggsave(paste0(directory, "/Weeklong-Shared-ASVs/Abundance/All-subjects-", region
 #######################################
 # ASV fluctuations
 #######################################
+
+```{r ASV fluctuations 0p01 cutoff plot features}
+
+# Make all folders
+for (sample_origin in unique(samdf$Sample_origin3)) {
+  for (sid in unique(samdf$Subject_ID)) {
+    dir.create(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/", sample_origin), 
+               recursive = TRUE, 
+               showWarnings = FALSE)
+  }
+}
+
+stringent_cutoff = cutoff_MT
+
+ASV_fluctuation <- data.frame(
+  Subject = character(),
+  Feature = character(),
+  Mean = numeric(),
+  Color = character(),
+  Variance = numeric(),
+  stringsAsFactors = FALSE
+)
+
+for (sample_origin in unique(samdf$Sample_origin3)) {
+  
+  for (sid in unique(samdf$Subject_ID)) {
+    
+    ps2plot <- ps %>% subset_samples(Subject_ID == sid 
+                                     & Sample_origin3 == sample_origin
+                                     & total_reads > 10000)
+    
+    stringent_taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > stringent_cutoff)
+    
+    ps2plot <- ps2plot %>% transform_sample_counts(function(x) x/sum(x)) # normalize (NO PRUNING)
+    ps2plot <- prune_taxa(stringent_taxa2keep$OTU, ps2plot)
+    
+    df2plot <- psmelt(ps2plot) # convert to long form
+    df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+    df2plot <- set_ordered_factors(df2plot) # set ordered factors
+    
+    # Plot all features in one figure
+    
+    g <- ggplot(df2plot, aes(x = interaction(Collection_time, Collection_date_reformat, Sample_ID), y = Abundance, group = Feature)) +
+      geom_line(color = "black", linewidth = 0.2) +
+      scale_fill_manual(values = kit_colors) +
+      scale_y_log10(limits = c(1e-7, 1), labels = trans_format("log10", math_format(10^.x))) +  # set y-axis limits
+      geom_point(aes(fill = Kit_set), size = 1, color = "black", shape = 21) +
+      facet_wrap(~Feature, ncol = 12) +
+      labs(x = "Collection time", y = "Abundance") +
+      theme(axis.title.x = element_blank(),
+            axis.text.x = element_text(angle = 90, hjust = 1),
+            axis.ticks.x = element_blank(),
+            legend.text = element_text(size = 10),  # Legend text size
+            legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box)
+      theme_custom_text() +
+      theme(axis.text.x = element_blank())
+    
+    ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/ASV-fluctuation-", sid, "-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 16, height = 8)
+    
+    # Individual features
+    for (otu in unique(stringent_taxa2keep$Feature)) {
+      df <- df2plot %>% filter(Feature == otu)
+      
+      g <- ggplot(df, aes(x = interaction(Collection_time, Collection_date_reformat, Sample_ID), y = Abundance, group = 1)) +
+        geom_line(color = "black", linewidth = 0.2) +
+        scale_fill_manual(values = kit_colors) +
+        scale_y_log10(limits = c(1e-7, 1), labels = trans_format("log10", math_format(10^.x))) +  # set y-axis limits
+        geom_point(aes(fill = Kit_set), size = 1, color = "black", shape = 21) +
+        labs(title = paste0(otu, ": ", unique(df$Taxon)), x = "Collection time", y = "Abundance") +
+        theme(axis.title.x = element_blank(),
+              axis.text.x = element_text(angle = 90, hjust = 1), 
+              axis.ticks.x = element_blank(),
+              legend.text = element_text(size = 10),  # Legend text size
+              legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+        theme_custom_text()
+      
+      ggsave(paste0(directory ,"/Weeklong-ASV-Fluctuation-0p01/", sid, "/", sample_origin, "/", sample_origin, "-", otu, ".pdf"), plot = g, device = "pdf", width = 0.3*n_distinct(df$Sample_ID), height = 2) 
+      # Create a row and append it
+      new_row <- data.frame(
+        Subject = sid,
+        Color = unique(df$Color),
+        Feature = otu,
+        Mean = mean(df$Abundance),
+        Variance = var(df$Abundance),
+        stringsAsFactors = FALSE,
+        Sample_origin = sample_origin
+      )
+      ASV_fluctuation <- rbind(ASV_fluctuation, new_row)
+    }
+  }
+}
+```
+
+```{r Calculate fluctuation variance}
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+  # Calculate slopes for each Sample_origin
+  slopes <- ASV_fluctuation %>%
+    filter(Subject == sid) %>%
+    group_by(Sample_origin) %>%
+    summarise(
+      slope = coef(lm(log10(Variance) ~ log10(Mean)))[2],
+      .groups = "drop"
+    ) %>%
+    mutate(label = paste0("beta == ", round(slope, 2)))
+  
+  g <- ggplot(ASV_fluctuation %>% filter(Subject == sid), aes(x = Mean, y = Variance)) +
+    geom_point(aes(fill = Color), size = 2, shape = 21) +
+    geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed", linewidth = 0.2) +  # add best-fit line
+    scale_y_log10(labels = trans_format("log10", math_format(10^.x))) +
+    scale_x_log10(limits = c(1e-4, 1), labels = trans_format("log10", math_format(10^.x))) +
+    facet_grid(cols = vars(Sample_origin)) +
+    geom_text(data = slopes, aes(x = 5e-4, y = 5e-2, label = label), 
+              hjust = -0.1, vjust = 1.5, size = 3, inherit.aes = FALSE, color = "red", parse = TRUE) +
+    scale_fill_identity() +
+    coord_fixed() +
+    labs(
+      title = "Scatterplot of mean vs variance of each feature's relative abundance",
+      x = "Mean relative abundance",
+      y = "Relative abundance variance"
+    ) +
+    theme_custom_text()
+  
+  ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/Mean-vs-var-", sid, ".pdf"), plot = g, device = "pdf", width = 6, height = 3)
+}
+
+# # OPTIONAL: figure out what feature is what
+# g <- ggplot(stool_fluctuation %>% filter(Subject == "Subj1" & Sample_origin == "saliva"), aes(x = Mean, y = Variance)) +
+#   geom_point(aes(fill = Color, color = ifelse(Feature == "feature_0095", "red", "black")), size = 4, shape = 21) +
+#   geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed", linewidth = 0.2) +  # add best-fit line
+#   scale_y_log10(labels = trans_format("log10", math_format(10^.x))) +
+#   scale_x_log10(limits = c(1e-4, 1), labels = trans_format("log10", math_format(10^.x))) +
+#   facet_grid(cols = vars(Subject)) +
+#   scale_fill_identity() +
+#   scale_color_identity() +
+#   labs(
+#     title = "Scatterplot of mean vs variance of each feature's relative abundance",
+#     x = "Mean relative abundance",
+#     y = "Relative abundance variance"
+#   ) +
+#   theme_custom_text()
+
+
+
+
+```
+
+
