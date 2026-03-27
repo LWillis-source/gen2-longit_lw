@@ -73,8 +73,8 @@ g <- ggplot(participants, aes(x = Age)) +
      geom_vline(xintercept = avg_age, color = "red", linetype = "dotted", linewidth = 1) +
      scale_x_continuous(breaks = c(20, 25, 30, 35, 40, 45)) +
      annotate("text", 
-              x = avg_age + 5, y = max(6),
-              label = paste("Avg:", round(avg_age, 1), "h"), 
+              x = avg_age + 7, y = max(6),
+              label = paste("Avg:", round(avg_age, 1), "years"), 
               color = "red", angle = 0, vjust = 0, size = 2) +
      labs(x = "Age", y = "Count") +
      theme(axis.ticks.x = element_blank()) +
@@ -406,23 +406,25 @@ g <- ggplot(stool, aes(x = Sample_origin, y = Subject_ID, fill = Bristol_score))
   geom_tile(color = "black") +
   scale_fill_manual(values = stool_colors, na.value = "black") +
   coord_equal() +
-  labs(title = "Heatmap of Bristol Stool Scores", x = "Stool timepoint", y = "Subject ID", fill = "Bristol Score") +
+  labs(title = "Heatmap of Bristol Stool Scores", x = "Collection timepoint", y = "Subject ID", fill = "Bristol Score") +
   theme(axis.ticks.y = element_blank(),
         axis.ticks.x = element_blank(),
         legend.key.size = unit(0.4, "cm")) +
   theme_custom_text()
 
-ggsave(paste0(directory, "/Sample-collection/Bristol-stool-score-summary.pdf"), plot = g, device = "pdf", height = 4, width = 3)
+ggsave(paste0(directory, "/Sample-collection/Bristol-stool-score-summary.pdf"), plot = g, device = "pdf", height = 4, width = 4)
 
 counts <- stool %>%
   count(Bristol_score)
 
 avg_BSS <- round(mean(as.numeric(stool$Bristol_score), na.rm = TRUE), 2)
 
-g <- ggplot(counts %>% filter(Bristol_score != "NA"), aes(x = factor(Bristol_score), y = n)) +
-  geom_bar(stat = "identity", fill = "blue", color = "black", linewidth = 0.2) +
+g <- ggplot(counts %>% filter(Bristol_score != "NA"), aes(x = factor(Bristol_score), y = n, fill = Bristol_score)) +
+  geom_bar(stat = "identity", color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = stool_colors, na.value = "black") +
   labs(x = "Bristol stool score", y = "Count") +
-  theme(axis.ticks.x = element_blank()) +
+  theme(axis.ticks.x = element_blank(),
+        legend.position = "none") +
   theme_custom_text()
 
 ggsave(paste0(directory,"/Sample-collection/Bristol-stool-score-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
@@ -446,7 +448,7 @@ g <- ggplot(capscan, aes(x = Region, y = Subject_ID, fill = pH)) +
   geom_tile(color = "black") +
   scale_fill_manual(values = colors_pH) +
   coord_equal() +
-  labs(title = "Heatmap of pH", x = "Stool timepoint", y = "Subject ID", fill = "pH") +
+  labs(title = "Heatmap of pH", x = "Collection timepoint", y = "Subject ID", fill = "pH") +
   facet_grid(cols = vars(Sample_origin2)) +
   theme(axis.ticks.y = element_blank(),
         axis.ticks.x = element_blank(),

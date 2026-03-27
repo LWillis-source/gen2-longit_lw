@@ -32,6 +32,9 @@ library(pheatmap)
 library(stringr)
 library(see)
 library(gt) # pdf tables
+library(ggdendro) # dendrograms
+library(compositions) #clr
+library(patchwork)
 
 ##########################
 # Include custom functions
@@ -236,6 +239,26 @@ red_if_small_discrete_cap <- function(values) {
       paste0("<span style='color:red;'>", v, "</span>")
     } else {
       v
+    }
+  })
+}
+
+red_if_small_discrete_reads_only <- function(values) {
+  # option when you want region and total reads
+  sapply(values, function(v) {
+    #v_num <- as.numeric(as.character(v))  # convert factor/char to number
+    
+    parts <- strsplit(as.character(v), "\\.")[[1]]
+    if (length(parts) > 1) {
+      v_num <- as.numeric(parts[1])  # get the part after the period
+    } else {
+      v_num <- NA
+    }
+    
+    if (!is.na(v_num) && v_num < 10000) {
+      paste0("<span style='color:red;'>", v_num, "</span>")
+    } else {
+      v_num
     }
   })
 }
