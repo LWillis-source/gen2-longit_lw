@@ -178,7 +178,7 @@ g <- ggplot(meta_counts, aes(x = Subject_ID, y = Region_grouped, fill = n_sample
       frame.colour = "black",
       frame.linewidth = 0.2))
 
-ggsave(paste0(directory, "Sample-collection/Samples-summary.pdf"), plot = g, device = "pdf", height = 1.5, width = 6)
+ggsave(paste0(directory, "Sample-collection/Samples-summary.pdf"), plot = g, device = "pdf", height = 1.5, width = 5)
 
 
 capsule_counts <- meta %>%

@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Study overview}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Study setup}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Subject demographics}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}General data}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Sample recovery}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Transit time}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}pH}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Bristol stool scale}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Emotional state}{8}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Alpha diversity}{9}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Principal coordinate analysis of microbial composition}{11}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Subject-specific data}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Capscan and tubes}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Transit time timeline}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Cell imaging}{14}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Microbial composition}{15}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}ASVs heatmap}{17}{subsection.3.5}%

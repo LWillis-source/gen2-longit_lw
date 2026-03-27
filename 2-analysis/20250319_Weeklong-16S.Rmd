@@ -386,6 +386,20 @@ for (sample_origin in unique(samdf$Sample_origin3)) {
     ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 20, height = 12)
 }
 
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(total_reads, Region, Kit_set)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_x_discrete(labels = red_if_small_discrete_reads_only) +
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         theme(legend.text = element_text(size = 5),  # Legend text size
+               legend.key.size = unit(0.2, "cm")) +
+         guides(fill = guide_legend(ncol = 3, byrow = FALSE)) + # Legend columns, fill legend items by column
+         labs(fill = "Family") + # Change legend label
+         theme_custom_text()
+        
+legend <- get_legend(g)
+
+ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-legend.pdf"), plot = legend, device = "pdf", width = 5, height = 2.5)
 ```
 
 ```{r Composition - capscan heirarchical clustering}
@@ -950,46 +964,47 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
            labs(title = d_metric,
                 x = paste0("PCo1 ", round(var_exp[1],2), "%"),
                 y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
-           coord_fixed(ratio = aspect_ratio)  # Force square axes
+           coord_fixed(ratio = aspect_ratio) + # Force square axes
+          theme(legend.position = "null")
       
-      ggsave(paste0(directory, "/Weeklong-PCoA/All/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 5, height = 4)
+      ggsave(paste0(directory, "/Weeklong-PCoA/All/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 3, height = 3)
       
-      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
-           scale_fill_manual(values = colors2plot) +
-           geom_path(data = lines_df, aes(group = Subject_ID), color = "gray60", linewidth = 0.6, lineend = "round") +
-           geom_point(stroke = 0.5, color = "black") +
-           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-           guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-           facet_wrap(~Subject_ID, ncol = 5) +
-           force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"),
-                           cols = unit(c(3, 3, 3, 3), "cm"),
-                           TRUE) +
-           labs(title = d_metric,
-                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
-                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
-           coord_fixed(ratio = aspect_ratio)  # Force square axes
-
-      ggsave(paste0(directory, "/Weeklong-PCoA/All/PCoA-", d_metric, "-all-kit-id.pdf"), plot = g, device = "pdf", width = 9, height = 7)
-      
-      for (sid in unique(samdf$Subject_ID)) {
-
-        g <- ggplot(ordination_data %>% filter(Subject_ID == sid), aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
-           scale_fill_manual(values = colors2plot) +
-           geom_path(data = lines_df %>% filter(Subject_ID == sid), aes(group = Subject_ID), color = "gray60", linewidth = 0.6, lineend = "round") +
-           geom_point(stroke = 0.5, color = "black") +
-           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-           guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-           facet_wrap(~Kit_set, ncol = 4) +
-           force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"),
-                           cols = unit(c(3, 3, 3, 3), "cm"),
-                           TRUE) +
-           labs(title = d_metric,
-                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
-                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
-           coord_fixed(ratio = aspect_ratio, xlim = x_range, ylim = y_range)  # Force square axes
-
-           ggsave(paste0(directory, "/Weeklong-PCoA/All/", d_metric, "/PCoA-", d_metric, "-all-", sid, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
-      }
+      # g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
+      #      scale_fill_manual(values = colors2plot) +
+      #      geom_path(data = lines_df, aes(group = Subject_ID), color = "gray60", linewidth = 0.6, lineend = "round") +
+      #      geom_point(stroke = 0.5, color = "black") +
+      #      scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+      #      facet_wrap(~Subject_ID, ncol = 5) +
+      #      force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"),
+      #                      cols = unit(c(3, 3, 3, 3), "cm"),
+      #                      TRUE) +
+      #      labs(title = d_metric,
+      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+      #      coord_fixed(ratio = aspect_ratio)  # Force square axes
+      # 
+      # ggsave(paste0(directory, "/Weeklong-PCoA/All/PCoA-", d_metric, "-all-kit-id.pdf"), plot = g, device = "pdf", width = 9, height = 7)
+      # 
+      # for (sid in unique(samdf$Subject_ID)) {
+      # 
+      #   g <- ggplot(ordination_data %>% filter(Subject_ID == sid), aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
+      #      scale_fill_manual(values = colors2plot) +
+      #      geom_path(data = lines_df %>% filter(Subject_ID == sid), aes(group = Subject_ID), color = "gray60", linewidth = 0.6, lineend = "round") +
+      #      geom_point(stroke = 0.5, color = "black") +
+      #      scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+      #      facet_wrap(~Kit_set, ncol = 4) +
+      #      force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"),
+      #                      cols = unit(c(3, 3, 3, 3), "cm"),
+      #                      TRUE) +
+      #      labs(title = d_metric,
+      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+      #      coord_fixed(ratio = aspect_ratio, xlim = x_range, ylim = y_range)  # Force square axes
+      # 
+      #      ggsave(paste0(directory, "/Weeklong-PCoA/All/", d_metric, "/PCoA-", d_metric, "-all-", sid, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
+      # }
 }
 
 ```
