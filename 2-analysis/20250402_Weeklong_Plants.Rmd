@@ -1,0 +1,472 @@
+---
+title: "Plants longitudinal study"
+output: html_notebook
+---
+
+```{r Standard Setup}
+# Configure directories, load libraries and base functions
+source(paste0(here::here(), "/0-config.R"))
+
+directory = paste0(here(), "/3-figures/")
+
+##### FIX THIS LATER ##### 
+sample_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT-Wk/LONGIT-Weeklong_SampleSheet_FINAL.xlsx"
+
+kits <- read_excel(sample_file_path, sheet = 1)
+samples <- read_excel(sample_file_path, sheet = 2)
+##### FIX THIS LATER ##### 
+
+output <- setup_tables_plants(paste0(here(), "/1-data/DADA2-Weeklong-plants/"), '/1-data/Weeklong-meat-plants-sample-info.xlsx')
+ps <- output$ps # phyloseq object
+taxa_order <- output$taxa_order # ASV plot order
+samdf <- output$samdf # sample information
+samdf$Sample <- rownames(samdf)
+
+total_reads <- as.data.frame(sample_sums(ps)) # get total number of reads
+colnames(total_reads) <- "total_reads"
+total_reads$Sample <- rownames(total_reads)
+
+# Add read counts and sample info
+samdf <- samdf %>%
+  left_join(total_reads, by = "Sample") %>%
+  mutate(total_reads = ifelse(is.na(total_reads), 0, total_reads)) %>%
+  left_join(samples, by = "Sample_ID")
+
+# update samdf of phyloseq
+rownames(samdf) <- sub('sample_', '', samdf$Sample) # change row names to be the sequencing name, remove "sample_"
+samdf <- samdf %>%
+  select(-Sample) 
+sample_data(ps) <- sample_data(samdf)
+
+ps <- ps %>% subset_samples(Group %in% c("LONGIT", "Blank"))
+
+#######################################
+# Variables to change
+#######################################
+
+set_ordered_factors <- function(df2plot) {
+  # Set default ordered factors in dataframe
+  df2plot <- df2plot %>%
+      mutate(Region = factor(Region, levels = c("NA", "Saliva", "R1", "R2", "R3", "Stool"), ordered = TRUE)) %>%
+      mutate(Sample_origin = factor(Sample_origin, levels = c("Capscan0", "Capscan1", "Capscan2", "Capscan3", "Capscan3E", "Capscan4", "Capscan4E", "Capscan5", "Capscan5E", "Capscan6", "Capscan6E", "Capscan7", "Capscan8", "CapscanExtra1", "CapscanExtra2", "CapscanExtra3", "ExtraSaliva", "Saliva0", "Saliva1", "Saliva2", "Saliva3", "Saliva3E", "Saliva4", "Saliva4E", "Saliva5", "Saliva5E", "Saliva6", "Saliva6E", "Saliva7", "Saliva8", "Stool0", "Stool1", "Stool2", "Stool3", "Stool3E", "Stool4", "Stool5", "Stool5E", "Stool6", "Stool6E", "Stool7", "Stool8", "StoolExtra1", "StoolExtra2", "StoolNoCapscan"), ordered = TRUE)) %>%
+      mutate(Sample_origin2 = factor(Sample_origin2, levels = c("Cap0", "Cap1", "Cap2", "Cap3", "CapE1", "Cap4", "Cap5", "CapE2", "Cap6", "Cap7", "Cap8", "CapEx1", "CapEx2", "CapEx3", "SalivaX", "Saliva0", "Saliva1", "Saliva2", "Saliva3", "Saliva3E", "Saliva4", "Saliva4E", "Saliva5", "Saliva5E", "Saliva6", "Saliva6E", "Saliva7", "Saliva8", "Stool0", "Stool1", "Stool2", "Stool3", "Stool3E", "Stool4", "Stool5", "Stool5E", "Stool6", "Stool6E", "Stool7", "Stool8", "StoolExtra1", "StoolExtra2", "StoolNoCapscan"), ordered = TRUE)) %>%
+    mutate(Sample_origin3 = factor(Sample_origin3, levels = c("Saliva", "Capscan", "Stool"), ordered = TRUE)) %>%
+    mutate(Kit_set = factor(Kit_set, levels = c("0", "1", "2", "3E", "3", "4E", "4", "5E", "5", "6E", "6", "7", "8", "Extra")))
+  df2plot$total_reads <- factor(df2plot$total_reads)
+  return(df2plot)
+}
+
+colors_pH = c("<5.5" = "#F4C2C2", "5.5" = "#d2c119", "5.8" = "#bdb016", "6" = "#b0a515", "6.2" = "#97971d", "6.4" = "#82881c", "6.6" = "#747a18", "6.8" = "#5c741e", "7" = "#4c681b", "7.2" = "#2e5617", "7.4" = "#354e15", "7.6" = "#00463b", "8.0" = "#102332", "NM" = "grey80")
+
+colors_origin <- c("Saliva" = "#A2FC3CFF", "Capscan" = "#A31301FF", "R1" = "#A31301FF", "R2" = "#D96A57", "R3" = "#EDA192" , "R4" = "#EDA192", "Stool" = "#3E378FFF", "Plasma" = "#FE932AFF", "Nasal" = "#1FC9DDFF")
+
+saliva_colors <- c("Saliva0" = "#A31301FF", "Saliva1" = "#D23105FF", "Saliva2" = "#F05B12FF", "Saliva3E" = "#FE932AFF", "Saliva3" = "#F6C33AFF", "Saliva4E" = "#D3E835FF", "Saliva4" = "#A2FC3CFF", "Saliva5E" = "#5EFC6EFF", "Saliva5" = "#20EAABFF", "Saliva6E" = "#1FC9DDFF", "Saliva6" = "#3E9BFEFF", "Saliva7" = "#466BE3FF",   "Saliva8" = "#3E378FFF")
+
+capscan_colors <- c("Capscan0" = "#A31301FF", "Capscan1" = "#D23105FF", "Capscan2" = "#F05B12FF", "Capscan3E" = "#FE932AFF", "Capscan3" = "#F6C33AFF", "Capscan4E" = "#D3E835FF", "Capscan4" = "#A2FC3CFF", "Capscan5E" = "#5EFC6EFF", "Capscan5" = "#20EAABFF", "Capscan6E" = "#1FC9DDFF", "Capscan6" = "#3E9BFEFF", "Capscan7" = "#466BE3FF",   "Capscan8" = "#3E378FFF")
+
+stool_colors <- c("Stool0" = "#A31301FF", "Stool1" = "#D23105FF", "Stool2" = "#F05B12FF", "Stool3E" = "#FE932AFF", "Stool3" = "#F6C33AFF", "Stool4E" = "#D3E835FF", "Stool4" = "#A2FC3CFF", "Stool5E" = "#5EFC6EFF", "Stool5" = "#20EAABFF", "Stool6E" = "#1FC9DDFF", "Stool6" = "#3E9BFEFF", "Stool7" = "#466BE3FF",   "Stool8" = "#3E378FFF")
+
+kit_colors <- c("0" = "#A31301FF", "1" = "#D23105FF", "2" = "#F05B12FF", "3E" = "#FE932AFF", "3" = "#F6C33AFF", "4E" = "#D3E835FF", "4" = "#A2FC3CFF", "5E" = "#5EFC6EFF", "5" = "#20EAABFF", "6E" = "#1FC9DDFF", "6" = "#3E9BFEFF", "7" = "#466BE3FF",   "8" = "#3E378FFF", Extra = "#CCCCCC")
+
+region_order <- c("Blood", "Saliva", "Nasal", "R1", "R2", "R3", "R4", "Stool")
+
+cutoff_SI <- 0.001 # Supplementary Info ASV cutoff
+cutoff_MT <- 0.01 # Main Text ASV cutoff (to minimize legend)
+```
+
+#######################################
+# Sequencer statistics
+#######################################
+
+```{r Sequencer stats}
+num_zeros <- sum(samdf$total_reads == 0)
+num_samples <- sum(samdf$total_reads >= 0)
+
+g <- ggplot(samdf, aes(x = log10(total_reads), fill = Region)) + 
+  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = colors_origin) +
+  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
+  labs(x = "log10(reads)", y = "Counts", subtitle = paste0(num_zeros, " of ", num_samples, " samples have 0 reads.")) + 
+  ggtitle("Read distribution") +
+  theme_custom_text() +
+  theme(aspect.ratio = 1,
+        legend.text = element_text(size = 6),  # Legend text size
+        legend.key.size = unit(0.3, "cm"))
+
+ggsave(paste0(directory, "Weeklong-Sequencer/Plants-Read-counts-region.pdf"), plot = g, device = "pdf", width = 4, height = 4)
+
+g <- ggplot(samdf, aes(x = log10(total_reads), fill = Region)) + 
+  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
+  facet_wrap(~Subject_ID, ncol = 4) +
+  scale_fill_manual(values = colors_origin) +
+  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
+  labs(x = "log10(reads)", y = "Counts", subtitle = paste0(num_zeros, " of ", num_samples, " samples have 0 reads.")) + 
+  ggtitle("Read distribution") +
+  theme_custom_text() +
+  theme(aspect.ratio = 1,
+        legend.text = element_text(size = 6),  # Legend text size
+        legend.key.size = unit(0.3, "cm"))
+
+ggsave(paste0(directory, "Weeklong-Sequencer/Plants-Read-counts-region-subject.pdf"), plot = g, device = "pdf", width = 5, height = 8)
+
+g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = Region)) + 
+  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = colors_origin) +
+  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
+  labs(x = "log10(reads)", y = "Counts") + 
+  theme_custom_text() +
+  theme(aspect.ratio = 0.5,
+        legend.text = element_text(size = 6),  # Legend text size
+        legend.key.size = unit(0.3, "cm"))
+
+ggsave(paste0(directory, "Weeklong-Sequencer/Plants-Read-counts-capscan.pdf"), plot = g, device = "pdf", width = 5, height = 2)
+
+g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = pH)) + 
+  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = colors_pH) +
+  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
+  labs(x = "log10(reads)", y = "Counts") + 
+  theme_custom_text() +
+  theme(aspect.ratio = 0.5,
+        legend.text = element_text(size = 6),  # Legend text size
+        legend.key.size = unit(0.3, "cm"))
+
+ggsave(paste0(directory, "Weeklong-Sequencer/Plants-Read-counts-capscan-pH.pdf"), plot = g, device = "pdf", width = 5, height = 2)
+
+samdf <- samdf %>%
+  mutate(Prediction = factor(Prediction, levels = c("SI_light", "SI", "SI_dark", "AC", "NA")))
+
+g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = Prediction)) + 
+  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
+  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
+  labs(x = "log10(reads)", y = "Counts") + 
+  theme_custom_text() +
+  theme(aspect.ratio = 0.5,
+        legend.text = element_text(size = 6),  # Legend text size
+        legend.key.size = unit(0.3, "cm"))
+
+ggsave(paste0(directory, "Weeklong-Sequencer/Plants-Read-counts-capscan-prediction.pdf"), plot = g, device = "pdf", width = 5, height = 2)
+
+g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = Prediction, fill = pH)) + 
+  geom_bar(color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = colors_pH) +
+  labs(x = "log10(reads)", y = "Counts") + 
+  theme_custom_text() +
+  theme(aspect.ratio = 0.5,
+        legend.text = element_text(size = 6),  # Legend text size
+        legend.key.size = unit(0.3, "cm"))
+
+```
+
+#######################################
+# Composition 0 read cutoff, highlight <10k reads
+#######################################
+
+```{r Composition - by sample_origin}
+
+### BLANKS
+
+ps2plot <- ps %>% subset_samples(Group == "Blank")
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+  
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
+     geom_bar(aes(x = interaction(total_reads, Sample_no)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     scale_x_discrete(labels = red_if_small_discrete) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     theme_custom_comp() +
+     theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+        
+ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Composition-blank.pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% pull(Sample_no))) + 1, height = 3, limitsize = FALSE)
+
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
+     geom_bar(aes(x = Col), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     #scale_x_discrete(labels = red_if_small_discrete) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     facet_nested(rows = vars(Plate, Row), scales = "free", space = "free") +
+     theme_custom_comp() +
+     theme(axis.text.x = element_text())
+        
+ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Composition-blank-plate-format.pdf"), plot = g, device = "pdf", width = 8, height = 6, limitsize = FALSE)
+
+####
+
+ps2plot <- ps %>% subset_samples(Region == "Saliva")
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+    if (is.na(sid) | sid == "NA" | length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) == 0) {
+      next
+    }
+  
+    g <- ggplot(df2plot %>% filter(Subject_ID == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = total_reads), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_x_discrete(labels = red_if_small_discrete) +
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         facet_nested(cols = vars(Collection_date, Collection_time, Sample_origin2), scales = "free", space = "free") +
+         theme_custom_comp() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+        
+    ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Saliva-collection/Composition-saliva-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) + 1, height = 4)
+}
+
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
+     geom_bar(aes(x = 1), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm")) +
+     guides(fill = guide_legend(ncol = 1, byrow = FALSE)) + # Legend columns, fill legend items by column
+     labs(fill = "Family") + # Change legend label
+     theme_custom_text()
+
+legend <- get_legend(g)
+
+ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Saliva-collection/Composition-saliva-legend.pdf"), plot = legend, device = "pdf", width = 4, height = 4)
+
+#####
+
+ps2plot <- ps %>% subset_samples(Region == "Stool")
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+    if (is.na(sid) | sid == "NA" | length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) == 0) {
+      next
+    }
+  
+   g <- ggplot(df2plot %>% filter(Subject_ID == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = total_reads), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_x_discrete(labels = red_if_small_discrete) + 
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         facet_nested(cols = vars(Collection_date, Collection_time, Sample_origin2), scales = "free", space = "free") +
+         theme_custom_comp() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+         
+    ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Stool-collection/Composition-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) + 1, height = 4)
+}
+
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
+     geom_bar(aes(x = 1), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm")) +
+     guides(fill = guide_legend(ncol = 1, byrow = FALSE)) + # Legend columns, fill legend items by column
+     labs(fill = "Family") + # Change legend label
+     theme_custom_text()
+
+legend <- get_legend(g)
+
+ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Stool-collection/Composition-stool-legend.pdf"), plot = legend, device = "pdf", width = 4, height = 4)
+
+#####
+
+ps2plot <- ps %>% subset_samples(!Region %in% c("Stool", "Saliva"))
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+    if (is.na(sid) | sid == "NA" | length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) == 0) {
+      next
+    }
+  
+    g <- ggplot(df2plot %>% filter(Subject_ID == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(total_reads, Region)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         facet_nested(cols = vars(Collection_date, Collection_time, Sample_origin2), scales = "free", space = "free") +
+         scale_x_discrete(labels = red_if_small_discrete_cap) + 
+         theme_custom_comp() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+    
+    ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Capscan-collection/Composition-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) + 1, height = 4)
+}
+
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
+     geom_bar(aes(x = 1), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm")) +
+     guides(fill = guide_legend(ncol = 1, byrow = FALSE)) + # Legend columns, fill legend items by column
+     labs(fill = "Family") + # Change legend label
+     theme_custom_text()
+
+legend <- get_legend(g)
+
+ggsave(paste0(directory, "/Weeklong-Food/Plants-composition-0p01/Capscan-collection/Composition-capscan-legend.pdf"), plot = legend, device = "pdf", width = 4, height = 4)
+```
+
+#######################################
+# ASV heatmap 10,000 read cutoff
+#######################################
+
+```{r ASV heatmap - by sample_origin}
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+    if (is.na(sid) | sid == "NA") {
+      next
+  }
+
+  
+  ps2plot <- ps %>% subset_samples(Region == "Saliva" 
+                                   & total_reads > 10000
+                                   & Subject_ID == sid)
+  
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_MT)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+
+  g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(Sample_origin2, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+    ggsave(paste0(directory, "/Weeklong-Food/Plants-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+  
+}
+
+####
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+    
+  if (is.na(sid) | sid == "NA") {
+      next
+  }
+
+  
+  ps2plot <- ps %>% subset_samples(!Region %in% c("Saliva", "Stool")
+                                   & total_reads > 10000
+                                   & Subject_ID == sid)
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_MT)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+    g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(Sample_origin2, Region, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+     ggsave(paste0(directory, "/Weeklong-Food/Plants-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+}
+
+####
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+    if (is.na(sid) | sid == "NA" ) {
+      next
+  }
+
+  ps2plot <- ps %>% subset_samples(Region == "Stool" 
+                                   & total_reads > 500
+                                   & Subject_ID == sid)
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_MT)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+  family2_scale <- get_color_mapping(df2plot) # legend colors
+  
+    g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(Sample_origin2, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+     ggsave(paste0(directory, "/Weeklong-Food/Plants-ASV-heatmap-0p01/Stool-collection/ASV-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+}
+
+```
+

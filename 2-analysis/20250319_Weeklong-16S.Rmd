@@ -95,7 +95,7 @@ g <- ggplot(samdf, aes(x = log10(total_reads), fill = Region)) +
         legend.text = element_text(size = 6),  # Legend text size
         legend.key.size = unit(0.3, "cm"))
 
-ggsave(paste0(directory, "Sequencer/Read-counts-region.pdf"), plot = g, device = "pdf", width = 4, height = 4)
+ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-region.pdf"), plot = g, device = "pdf", width = 4, height = 4)
 
 g <- ggplot(samdf, aes(x = log10(total_reads), fill = Region)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
@@ -109,7 +109,7 @@ g <- ggplot(samdf, aes(x = log10(total_reads), fill = Region)) +
         legend.text = element_text(size = 6),  # Legend text size
         legend.key.size = unit(0.3, "cm"))
 
-ggsave(paste0(directory, "Sequencer/Read-counts-region-subject.pdf"), plot = g, device = "pdf", width = 5, height = 8)
+ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-region-subject.pdf"), plot = g, device = "pdf", width = 5, height = 8)
 
 g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = Region)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
@@ -121,7 +121,7 @@ g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_
         legend.text = element_text(size = 6),  # Legend text size
         legend.key.size = unit(0.3, "cm"))
 
-ggsave(paste0(directory, "Sequencer/Read-counts-capscan.pdf"), plot = g, device = "pdf", width = 5, height = 2)
+ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-capscan.pdf"), plot = g, device = "pdf", width = 5, height = 2)
 
 g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = pH)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
@@ -133,7 +133,7 @@ g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_
         legend.text = element_text(size = 6),  # Legend text size
         legend.key.size = unit(0.3, "cm"))
 
-ggsave(paste0(directory, "Sequencer/Read-counts-capscan-pH.pdf"), plot = g, device = "pdf", width = 5, height = 2)
+ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-capscan-pH.pdf"), plot = g, device = "pdf", width = 5, height = 2)
 
 samdf <- samdf %>%
   mutate(Prediction = factor(Prediction, levels = c("SI_light", "SI", "SI_dark", "AC", "NA")))
@@ -147,7 +147,7 @@ g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_
         legend.text = element_text(size = 6),  # Legend text size
         legend.key.size = unit(0.3, "cm"))
 
-ggsave(paste0(directory, "Sequencer/Read-counts-capscan-prediction.pdf"), plot = g, device = "pdf", width = 5, height = 2)
+ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-capscan-prediction.pdf"), plot = g, device = "pdf", width = 5, height = 2)
 
 g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = Prediction, fill = pH)) + 
   geom_bar(color = "black", linewidth = 0.2) +

@@ -1,5 +1,5 @@
 ---
-title: "Example Fig X Final"
+title: "Weeklong longitudinal study"
 output: html_notebook
 ---
 
@@ -13,13 +13,24 @@ source(paste0(here::here(), "/0-config.R"))
 
 ##### FIX THIS LATER ##### 
 sample_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT-Wk/LONGIT-Weeklong_SampleSheet_FINAL.xlsx"
+redcap_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT-Wk/Redcap-export.xlsx"
 ##### FIX THIS LATER ##### 
 
 directory = paste0(here(), "/3-figures/")
 kits <- read_excel(sample_file_path, sheet = 1)
 samples <- read_excel(sample_file_path, sheet = 2)
 panas <- read_excel(sample_file_path, sheet = 3)
+
 participants <- read_excel(paste0(here(), "/1-data/Capscan-weeklong-participants.xlsx"), sheet = 1)
+
+pre_PSS <- read_excel(redcap_file_path, sheet = 3)
+pre_Rome <- read_excel(redcap_file_path, sheet = 4)
+pre_Lifestyle <- read_excel(redcap_file_path, sheet = 5)
+pre_GSRS <- read_excel(redcap_file_path, sheet = 6)
+daily_diet <- read_excel(redcap_file_path, sheet = 7)
+daily_PANAS <- read_excel(redcap_file_path, sheet = 8)
+macronutrients <- read_excel(redcap_file_path, sheet = 9)
+nutrient_type <- read_excel(redcap_file_path, sheet = 10)
 
 duplicate_samples <- c("Missing", "LS1741", "LS1789", "LS1805")
 
@@ -48,7 +59,7 @@ g <- ggplot(participants_counts, aes(x = Gender, y = n_samples)) +
      labs(x = "Gender", y = "Count") +
      theme_custom_text()
 
-ggsave(paste0(directory, "/Study-design/Weeklong-gender-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 1)
+ggsave(paste0(directory, "/Weeklong-Sample-collection/Study-design/Weeklong-gender-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 1)
 
 participants_counts <- participants %>%
   group_by(Race) %>%
@@ -64,7 +75,7 @@ g <- ggplot(participants_counts, aes(x = Race, y = n_samples)) +
      labs(x = "Race", y = "Count") +
      theme_custom_text()
 
-ggsave(paste0(directory, "/Study-design/Weeklong-race-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+ggsave(paste0(directory, "/Weeklong-Sample-collection/Study-design/Weeklong-race-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
 
 avg_age <- mean(participants$Age, na.rm = TRUE)
 
@@ -80,7 +91,7 @@ g <- ggplot(participants, aes(x = Age)) +
      theme(axis.ticks.x = element_blank()) +
      theme_custom_text()
 
-ggsave(paste0(directory, "/Study-design/Weeklong-age-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+ggsave(paste0(directory, "/Weeklong-Sample-collection/Study-design/Weeklong-age-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
 
 ```
 
@@ -90,7 +101,7 @@ ggsave(paste0(directory, "/Study-design/Weeklong-age-distribution.pdf"), plot = 
 
 ```{r Summarize number of samples}
 
-output_dir <- file.path(directory, "Sample-collection", "Sample-breakdown")
+output_dir <- file.path(directory, "Weeklong-Sample-collection", "Sample-breakdown")
 if (!dir.exists(output_dir)) {
   dir.create(output_dir, recursive = TRUE)
 }
@@ -113,10 +124,10 @@ for (sid in unique(meta$Subject_ID)) {
     tab_style(style = cell_text(weight = "bold"), # bold headers
               locations = cells_column_labels(everything())) %>%
     cols_align(align = "left", columns = everything()) %>%
-    gtsave(paste0(directory, "/Sample-collection/Sample-breakdown/Sample-breakdown-", sid, ".pdf"))
+    gtsave(paste0(directory, "/Weeklong-Sample-collection/Sample-breakdown/Sample-breakdown-", sid, ".pdf"))
 }
 
-output_dir <- file.path(directory, "Sample-collection", "Kit-breakdown")
+output_dir <- file.path(directory, "Weeklong-Sample-collection", "Kit-breakdown")
 if (!dir.exists(output_dir)) {
   dir.create(output_dir, recursive = TRUE)
 }
@@ -133,7 +144,7 @@ for (sid in unique(kits$Subject_ID)) {
     tab_style(style = cell_text(weight = "bold"), # bold headers
               locations = cells_column_labels(everything())) %>%
     cols_align(align = "left", columns = everything()) %>%
-    gtsave(paste0(directory, "/Sample-collection/Kit-breakdown/Kit-breakdown-", sid, ".pdf"))
+    gtsave(paste0(directory, "/Weeklong-Sample-collection/Kit-breakdown/Kit-breakdown-", sid, ".pdf"))
 }
 
 meta_counts <- meta %>%
@@ -178,7 +189,7 @@ g <- ggplot(meta_counts, aes(x = Subject_ID, y = Region_grouped, fill = n_sample
       frame.colour = "black",
       frame.linewidth = 0.2))
 
-ggsave(paste0(directory, "Sample-collection/Samples-summary.pdf"), plot = g, device = "pdf", height = 1.5, width = 5)
+ggsave(paste0(directory, "Weeklong-Sample-collection/Samples-summary.pdf"), plot = g, device = "pdf", height = 1.5, width = 5)
 
 
 capsule_counts <- meta %>%
@@ -193,16 +204,18 @@ capsule_counts <- meta %>%
 avg_regions <- round(mean(capsule_counts$n_samples, na.rm = TRUE), 2)
 
 counts <- capsule_counts %>%
-  count(n_samples)
+  count(n_samples, Subject_ID)
 
-g <- ggplot(counts, aes(x = factor(n_samples), y = n)) +
-     geom_bar(stat = "identity", fill = "Blue", color = "black", linewidth = 0.2) +
+g <- ggplot(counts, aes(x = factor(n_samples), y = n, fill = Subject_ID)) +
+     geom_bar(stat = "identity", color = "black", linewidth = 0.2) +
+     scale_fill_manual(values = turbo(21, direction = -1)) +
      theme(axis.ticks.x = element_blank()) +
      labs(x = "Number of regions", y = "Count") +
+     guides(fill = guide_legend(ncol = 4)) +
      theme(axis.ticks.x = element_blank()) +
      theme_custom_text()
 
-ggsave(paste0(directory, "Sample-collection/Capsule-regions-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 1)
+ggsave(paste0(directory, "Weeklong-Sample-collection/Capsule-regions-distribution.pdf"), plot = g, device = "pdf", height = 2, width = 4)
 
 ```
 
@@ -255,10 +268,10 @@ for (sid in unique(meta$Subject_ID)) {
     ) +
     theme_custom_text()
   
-  ggsave(paste0(directory, "/Sample-collection/Timeline-breakdown/Timeline-breakdown-", sid, ".pdf"), plot = g, device = "pdf", height = 0.22*length(meta_fixed$Sample_origin) + 0.4, width = 4)
+  ggsave(paste0(directory, "/Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-", sid, ".pdf"), plot = g, device = "pdf", height = 0.22*length(meta_fixed$Sample_origin) + 0.4, width = 4)
   
   if (sid == "20") {
-      ggsave(paste0(directory, "/Sample-collection/Timeline-breakdown/Timeline-breakdown-", sid, ".pdf"), plot = g, device = "pdf", height = 0.22*length(meta_fixed$Sample_origin) + 0.4, width = 5)
+      ggsave(paste0(directory, "/Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-", sid, ".pdf"), plot = g, device = "pdf", height = 0.22*length(meta_fixed$Sample_origin) + 0.4, width = 5)
   }
 }
 
@@ -293,7 +306,7 @@ g <- ggplot(df2plot %>% filter(Transit_time_h > 0), aes(x = Transit_time_h)) +
   theme(axis.ticks.x = element_blank()) +
   theme_custom_text()
   
-ggsave(paste0(directory, "/Sample-collection/Transit-time-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+ggsave(paste0(directory, "/Weeklong-Sample-collection/Transit-time-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
 
 avg_transit_by_subject <- df2plot %>%
   group_by(Subject_ID) %>%
@@ -314,7 +327,7 @@ g <- ggplot(df2plot, aes(x = Transit_time_h)) +
             inherit.aes = FALSE) +  # important to use only the data in avg_transit_by_subject
   theme_custom_text()
 
-ggsave(paste0(directory,"/Sample-collection/Transit-time-facet-distribution.pdf"), plot = g, device = "pdf", height = 5, width = 5)
+ggsave(paste0(directory,"/Weeklong-Sample-collection/Transit-time-facet-distribution.pdf"), plot = g, device = "pdf", height = 5, width = 5)
 
 ```
 
@@ -353,7 +366,7 @@ g <- ggplot(data_lf, aes(x = Direction, y = Subject_ID, fill = Affect_score, lab
            legend.ticks = element_line(color = "black")) +  # Size of the legend keys (symbol or color box) 
      theme_custom_text()
 
-ggsave(paste0(directory, "PANAS/PANAS-summary.pdf"), plot = g, device = "pdf", width = 6, height = 5)
+ggsave(paste0(directory, "Weeklong-Sample-collection/PANAS-summary.pdf"), plot = g, device = "pdf", width = 6, height = 5)
 
 data_lf <- panas %>%
     pivot_longer(cols = c(Interested, Distressed, Excited, Upset, Strong, Guilty, Scared, Hostile, Enthusiastic, Proud, Irritable, Alert, Ashamed, Inspired, Nervous, Determined, Attentive, Jittery, Active, Afraid), names_to = "Parameter", values_to = "Score", 
@@ -381,7 +394,7 @@ g <- ggplot(data_lf %>% filter(Subject_ID == sid), aes(x = Parameter, y = Day, f
       theme_custom_text()
 
 # Save composition figure
-ggsave(paste0(directory, "/PANAS/Components/PANAS-components-", sid, ".pdf"), plot = g, device = "pdf", width = 3, height = 2)
+ggsave(paste0(directory, "Weeklong-Sample-collection/PANAS-breakdown/PANAS-components-", sid, ".pdf"), plot = g, device = "pdf", width = 3, height = 2)
 }
 
 ```
@@ -412,7 +425,7 @@ g <- ggplot(stool, aes(x = Sample_origin, y = Subject_ID, fill = Bristol_score))
         legend.key.size = unit(0.4, "cm")) +
   theme_custom_text()
 
-ggsave(paste0(directory, "/Sample-collection/Bristol-stool-score-summary.pdf"), plot = g, device = "pdf", height = 4, width = 4)
+ggsave(paste0(directory, "/Weeklong-Sample-collection/Bristol-stool-score-summary.pdf"), plot = g, device = "pdf", height = 4, width = 4)
 
 counts <- stool %>%
   count(Bristol_score)
@@ -427,7 +440,7 @@ g <- ggplot(counts %>% filter(Bristol_score != "NA"), aes(x = factor(Bristol_sco
         legend.position = "none") +
   theme_custom_text()
 
-ggsave(paste0(directory,"/Sample-collection/Bristol-stool-score-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
+ggsave(paste0(directory,"/Weeklong-Sample-collection/Bristol-stool-score-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2)
 ```
 
 #######################################
@@ -456,7 +469,7 @@ g <- ggplot(capscan, aes(x = Region, y = Subject_ID, fill = pH)) +
         legend.key.size = unit(0.4, "cm")) +
   theme_custom_text()
 
-ggsave(paste0(directory,"/Sample-collection/pH-summary.pdf"), plot = g, device = "pdf", height = 4, width = 8)
+ggsave(paste0(directory,"/Weeklong-Sample-collection/pH-summary.pdf"), plot = g, device = "pdf", height = 4, width = 8)
 
 
 counts <- capscan %>%
@@ -471,7 +484,356 @@ g <- ggplot(counts, aes(x = factor(pH), y = n, fill = pH)) +
      theme_custom_text()
       
 
-ggsave(paste0(directory,"/Sample-collection/pH-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2.5)
+ggsave(paste0(directory,"/Weeklong-Sample-collection/pH-distribution.pdf"), plot = g, device = "pdf", height = 1.5, width = 2.5)
 
 ```
 
+#######################################
+# Diet nutrients
+#######################################
+
+```{r diet nutrients}
+
+data_lf <- macronutrients %>%
+  pivot_longer(cols = -c(Date_reformat, Subject_ID), 
+               names_to = "Nutrient", 
+               values_to = "Value", 
+               values_drop_na = FALSE) %>%
+  left_join(nutrient_type, by = "Nutrient") %>%
+  mutate(Daily_amount = as.numeric(ifelse(Daily_amount == "NA", NA, Daily_amount)),
+         Percent_daily = case_when(
+           is.na(Daily_amount) ~ NA_real_,
+           TRUE ~ Value / Daily_amount * 100
+         )) %>%
+  mutate(Percent_daily_capped = ifelse(Percent_daily > 300, 301, Percent_daily))
+
+
+g <- ggplot(data_lf, aes(x = Date_reformat, y = Nutrient, fill = Percent_daily_capped)) + 
+     geom_tile(color = "black", linewidth = 0.2) + 
+     facet_nested(rows = vars(Category), cols = vars(Subject_ID), scales = "free", space = "free", drop = TRUE) +
+     scale_fill_gradientn(
+       colors = c("white", "blue", "#0000cc"),
+       values = scales::rescale(c(0, 3, 3.01)),
+       na.value = "grey90",
+       limits = c(0, 301),
+       breaks = c(0, 100, 200, 300, 301),
+       labels = c("0%", "100%", "200%", "300%", ">300%"))+
+     theme(aspect.ratio = 1,
+           axis.ticks.y = element_blank(),
+           axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+           axis.ticks.x = element_blank(),
+           panel.background = element_blank(),
+           strip.text.y = element_text(angle = 0),
+           legend.text = element_text(size = 10),  # Legend text size
+           legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+           guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                           byrow = TRUE)) + # Fill the legend items by row
+      theme_custom_text()
+
+ggsave(paste0(directory,"/Weeklong-Sample-collection/Nutrient-distribution.pdf"), plot = g, device = "pdf", height = 8, width = 24)
+
+
+for (sid in unique(data_lf$Subject_ID)) {
+  g <- ggplot(data_lf %>% filter(Subject_ID == sid), aes(y = Date_reformat, x = Nutrient, fill = Percent_daily_capped)) + 
+       geom_tile(color = "black", linewidth = 0.2) + 
+       facet_nested(cols = vars(Category), rows = vars(Subject_ID), scales = "free", space = "free", drop = TRUE) +
+       scale_fill_gradientn(
+         colors = c("white", "blue", "#0000cc"),
+         values = scales::rescale(c(0, 3, 3.01)),
+         na.value = "grey90",
+         limits = c(0, 301),
+         breaks = c(0, 100, 200, 300, 301),
+         labels = c("0%", "100%", "200%", "300%", ">300%"))+
+       theme(aspect.ratio = 1,
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+             axis.ticks.x = element_blank(),
+             panel.background = element_blank(),
+             strip.text.y = element_text(angle = 0),
+             legend.text = element_text(size = 10),  # Legend text size
+             legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+             guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                             byrow = TRUE)) + # Fill the legend items by row
+        theme_custom_text()
+  
+    ggsave(paste0(directory,"/Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-", sid, ".pdf"), plot = g, device = "pdf", width = 8, height = 0.1 *length(unique(data_lf$Date_reformat[data_lf$Subject_ID == sid])) + 3)
+}
+
+
+
+```
+
+#######################################
+# Diet log
+#######################################
+
+```{r Summarize diet}
+
+output_dir <- file.path(directory, "Weeklong-Sample-collection", "Sample-breakdown")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+meta <- samples %>%
+    filter(!SEQ %in% c("NA", "N") 
+         & !is.na(SEQ)
+         & !Sample_ID %in% duplicate_samples
+         & Kit_ID != "Unknown")
+
+for (sid in unique(meta$Subject_ID)) {
+  
+  temp <- meta %>% filter(Subject_ID == sid) %>%
+    select(Subject_ID, Sample_ID, Kit_ID, Sample_origin2, Region, Collection_date, Collection_time, Transit_time_h, pH, Bristol_score, Frozen) %>%
+    arrange(Collection_date, Collection_time, Region)
+  
+  # print table to pdf nicely
+  gt(temp) %>%
+    tab_options(table.font.size = px(10)) %>% # fontsize
+    tab_style(style = cell_text(weight = "bold"), # bold headers
+              locations = cells_column_labels(everything())) %>%
+    cols_align(align = "left", columns = everything()) %>%
+    gtsave(paste0(directory, "/Weeklong-Sample-collection/Sample-breakdown/Sample-breakdown-", sid, ".pdf"))
+}
+
+output_dir <- file.path(directory, "Weeklong-Sample-collection", "Kit-breakdown")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+for (sid in unique(kits$Subject_ID)) {
+  
+  temp <- kits %>% filter(Subject_ID == sid) %>%
+    select(Kit_ID, Subject_ID, Timepoint, Ingestion_date, Ingestion_time, Saliva, Cap_R1, Stool) %>%
+    arrange(Timepoint)
+  
+  # print table to pdf nicely
+  gt(temp) %>%
+    tab_options(table.font.size = px(10)) %>% # fontsize
+    tab_style(style = cell_text(weight = "bold"), # bold headers
+              locations = cells_column_labels(everything())) %>%
+    cols_align(align = "left", columns = everything()) %>%
+    gtsave(paste0(directory, "/Weeklong-Sample-collection/Kit-breakdown/Kit-breakdown-", sid, ".pdf"))
+}
+
+meta_counts <- meta %>%
+  
+  # Count samples per region
+  group_by(Subject_ID, Region) %>%
+  summarise(n_samples = n(), .groups = "drop") %>%
+  mutate(Region_grouped = ifelse(Region %in% c("R1", "R2", "R3"), "Regions", Region)) %>%
+  group_by(Subject_ID, Region_grouped) %>%
+  summarise(n_samples = sum(n_samples), .groups = "drop") %>%
+  
+  # Add total_samples and unique_capscan as extra "regions"
+  group_by(Subject_ID) %>%
+  dplyr::bind_rows(
+    summarise(
+      ., 
+      Region_grouped = c("Total", "Devices"),
+      n_samples = c(
+        sum(n_samples),
+        n_distinct(meta$Capscan_ID[meta$Subject_ID == unique(Subject_ID) 
+                                      & !meta$Capscan_ID %in% c("NA", "Missing") & !is.na(meta$Capscan_ID)] )
+      )
+    )
+  ) %>%
+  ungroup() %>%
+  mutate(Region_grouped = factor(Region_grouped, levels = c("Stool", "Regions", "Devices", "Saliva", "Total")))
+
+g <- ggplot(meta_counts, aes(x = Subject_ID, y = Region_grouped, fill = n_samples)) +
+     geom_tile(color = "black") +
+     geom_text(aes(label = n_samples), color = "black", size = 2) +
+     scale_fill_gradient(low = "white", high = "blue") +
+     coord_fixed() + 
+     labs(title = "Samples per subject by region", x = "Subject ID", y = "Region", fill = "Count") +
+     theme_custom_text() +
+     theme(axis.text.x = element_text(),
+          panel.background = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.ticks.x = element_blank(),
+          legend.key.size = unit(0.4, "cm")) +
+      guides(fill = guide_colorbar(
+      ticks.colour = "black",
+      frame.colour = "black",
+      frame.linewidth = 0.2))
+
+ggsave(paste0(directory, "Weeklong-Sample-collection/Samples-summary.pdf"), plot = g, device = "pdf", height = 1.5, width = 5)
+
+
+capsule_counts <- meta %>%
+  filter(Region %in% c("R1", "R2", "R3")) %>%  # Only R1, R2, R3
+  filter(SEQ == "Y") %>%
+  group_by(Subject_ID, Sample_origin) %>%
+  summarise(
+    n_samples = sum(!SEQ %in% c("NA", "N")),  # count rows where SEQ is not "NA"
+    .groups = "drop"
+  )
+
+avg_regions <- round(mean(capsule_counts$n_samples, na.rm = TRUE), 2)
+
+counts <- capsule_counts %>%
+  count(n_samples, Subject_ID)
+
+g <- ggplot(counts, aes(x = factor(n_samples), y = n, fill = Subject_ID)) +
+     geom_bar(stat = "identity", color = "black", linewidth = 0.2) +
+     scale_fill_manual(values = turbo(21, direction = -1)) +
+     theme(axis.ticks.x = element_blank()) +
+     labs(x = "Number of regions", y = "Count") +
+     guides(fill = guide_legend(ncol = 4)) +
+     theme(axis.ticks.x = element_blank()) +
+     theme_custom_text()
+
+ggsave(paste0(directory, "Weeklong-Sample-collection/Capsule-regions-distribution.pdf"), plot = g, device = "pdf", height = 2, width = 4)
+
+```
+
+#######################################
+# PSS
+#######################################
+
+```{r PSS}
+
+data_lf <- pre_PSS %>%
+  select(1:12) %>%
+  pivot_longer(cols = -c(Subject_ID), 
+               names_to = "Parameter", 
+               values_to = "Value", 
+               values_drop_na = FALSE)
+
+# Create separate datasets for PSS_sum and other parameters
+data_pss_sum <- data_lf %>% filter(Parameter == "Score")
+data_other <- data_lf %>% filter(Parameter != "Score")
+
+question_labels <- c(
+  "Q1" = "Q1: been upset because of something unexpected",
+  "Q2" = "Q2: felt unable to control important things",
+  "Q3" = "Q3: felt nervous and 'stressed'",
+  "Q4" = "Q4: felt confident about handling personal problems",
+  "Q5" = "Q5: felt that things were going your way",
+  "Q6" = "Q6: found you could not cope with all things to do",
+  "Q7" = "Q7: been able to control irritations",
+  "Q8" = "Q8: felt that you were on top of things",
+  "Q9" = "Q9: been angered by things outside your control",
+  "Q10" = "Q10: felt difficulties piling up too high"
+)
+
+# Create the plot with two separate scales
+g <- ggplot() + 
+     # First layer: Other parameters (white to blue)
+     geom_tile(data = data_other, 
+               aes(x = Parameter, y = Subject_ID, fill = Value),
+               color = "black", linewidth = 0.2) + 
+     geom_text(data = data_other,
+               aes(x = Parameter, y = Subject_ID, label = Value),
+               size = 2) +
+     scale_fill_gradient(low = "white", high = "blue",
+                        limits = c(0, 4),
+                        breaks = c(0, 1, 2, 3, 4),
+                        labels = c("0-Never", "1-Almost never", "2-Sometimes", 
+                                  "3-Fairly often", "4-Very often"),
+                        name = "Frequency") +
+     guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                             byrow = TRUE)) + # Fill the legend items by row
+     new_scale_fill() +
+     
+     # Second layer: PSS_sum (white to red)
+     geom_tile(data = data_pss_sum, 
+               aes(x = Parameter, y = Subject_ID, fill = Value),
+               color = "black", linewidth = 0.2) + 
+     geom_text(data = data_pss_sum,
+               aes(x = Parameter, y = Subject_ID, label = Value),
+               size = 2) +
+     scale_fill_gradientn(colors = c("white", "yellow", "orange", "red"),
+                         values = scales::rescale(c(0, 13, 26, 40)),
+                         limits = c(0, 40),
+                         breaks = c(6.5, 20, 33),
+                         labels = c("Low (0-13)", "Moderate (14-26)", "High (27-40)"),
+                         name = "Stress Level") +
+     
+     theme(aspect.ratio = 1,
+           axis.ticks.y = element_blank(),
+           axis.ticks.x = element_blank(),
+           panel.background = element_blank(),
+           strip.text.y = element_text(angle = 0),
+           legend.text = element_text(size = 10),
+           legend.key.size = unit(0.4, "cm")) +
+     guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                             byrow = TRUE)) + # Fill the legend items by row
+     theme_custom_text()
+
+ggsave(paste0(directory,"/Weeklong-Sample-collection/PSS-distribution.pdf"), plot = g, device = "pdf", height = 4, width = 6)
+
+
+```
+
+#######################################
+# Rome IV
+#######################################
+
+```{r Rome IV}
+
+data_lf <- pre_Rome %>%
+  select(1:24) %>%
+  pivot_longer(cols = -c(Subject_ID), 
+               names_to = "Parameter", 
+               values_to = "Value", 
+               values_drop_na = FALSE)
+
+g <- ggplot(data = data_lf, aes(x = Parameter, y = Subject_ID, fill = Value)) + 
+     geom_tile(color = "black", linewidth = 0.2) + 
+     scale_fill_manual(values = c("No" = "white", "Yes" = "blue"), na.value = "grey") +
+     theme(aspect.ratio = 1,
+           axis.ticks.y = element_blank(),
+           axis.ticks.x = element_blank(),
+           panel.background = element_blank(),
+           strip.text.y = element_text(angle = 0),
+           legend.text = element_text(size = 10),
+           legend.key.size = unit(0.4, "cm")) +
+     guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                             byrow = TRUE)) + # Fill the legend items by row
+     theme_custom_text()
+
+ggsave(paste0(directory,"/Weeklong-Sample-collection/RomeIV.pdf"), plot = g, device = "pdf", height = 4, width = 6)
+
+
+```
+
+#######################################
+# GSRS-IBS
+#######################################
+
+```{r GSRS-IBS}
+
+data_lf <- pre_GSRS %>%
+  select(1:14) %>%
+  pivot_longer(cols = -c(Subject_ID), 
+               names_to = "Parameter", 
+               values_to = "Value", 
+               values_drop_na = FALSE)
+
+data_lf$Value <- as.numeric(data_lf$Value)
+
+g <- ggplot(data = data_lf, aes(x = Parameter, y = Subject_ID, fill = Value)) + 
+     geom_tile(color = "black", linewidth = 0.2) + 
+     scale_fill_gradient(low = "white", high = "blue", na.value = "grey", 
+                    limits = c(1, 7),
+                    breaks = c(1, 2, 3, 4, 5, 6, 7),
+                    labels = c("1-No discomfort at all", "2-Minor discomfort", 
+                               "3-Mild discomfort", "4-Moderate discomfort", 
+                               "5-Moderately severe discomfort", "6-Severe discomfort", 
+                               "7-Very severe discomfort")) +
+     theme(aspect.ratio = 1,
+           axis.ticks.y = element_blank(),
+           axis.ticks.x = element_blank(),
+           panel.background = element_blank(),
+           strip.text.y = element_text(angle = 0),
+           legend.text = element_text(size = 10),
+           legend.key.size = unit(0.4, "cm")) +
+     guides(fill = guide_legend(ncol = 1,     # Number of columns in the legend
+                             byrow = TRUE)) + # Fill the legend items by row
+     theme_custom_text()
+
+ggsave(paste0(directory,"/Weeklong-Sample-collection/GSRS-IBS.pdf"), plot = g, device = "pdf", height = 4, width = 6)
+
+
+```

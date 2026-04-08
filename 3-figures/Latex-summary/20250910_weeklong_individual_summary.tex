@@ -1,6 +1,6 @@
 % !TEX options=--shell-escape
 \documentclass[10pt]{article}
-\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate,xcolor}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate,enumitem,xcolor}
 \usepackage{listings,minted}
 \usemintedstyle{perldoc}
 \usepackage{caption}
@@ -38,7 +38,7 @@
 } % Sets default 
 
 \def\Name{Beverly Fu}  % Your name
-% \def\SubjectNo{21}
+\def\SubjectNo{21}
 \newcommand{\SubjectNoPad}{%
   \ifnum\SubjectNo<10 0\SubjectNo\else \SubjectNo\fi
 }
@@ -69,7 +69,7 @@ Throughout the study conducted in August 2025, the subject's small intestinal co
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 6.5in]{Study-design/Study-timeline.pdf}
+\includegraphics[width = 6.5in]{Weeklong-Sample-collection/Study-design/Weeklong-Study-timeline.pdf}
 \caption{\textbf{Study timeline.} A test CapScan device (CapScan0) was ingested on Thursday prior to the continuous weeklong study. A fresh stool sample was provided on Tuesday evening or Wednesday morning/afternoon. A subset of subjects also participated in a concurrent exercise study and ingested two additional CapScan devices 3 hours prior to exercise sessions.}
 \label{TransitTime}
 \end{figure}
@@ -84,19 +84,19 @@ Subjects reported various metadata, including capsule ingestion and retrieval ti
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
-    \includegraphics[height=4cm]{Study-design/Weeklong-gender-distribution.pdf}
+    \includegraphics[height=4cm]{Weeklong-Sample-collection/Study-design/Weeklong-gender-distribution.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{0.32\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
-    \includegraphics[height=4cm]{Study-design/Weeklong-age-distribution.pdf}
+    \includegraphics[height=4cm]{Weeklong-Sample-collection/Study-design/Weeklong-age-distribution.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{0.32\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
-    \includegraphics[height=4cm]{Study-design/Weeklong-race-distribution.pdf}
+    \includegraphics[height=4cm]{Weeklong-Sample-collection/Study-design/Weeklong-race-distribution.pdf}
 \end{subfigure}
 \caption{\textbf{Participant stats.} 20 healthy subjects participated in the study. (A) Sex distribution: 10 female and 10 male. (B) Age distribution: range of 22–46 years, mean 31.3 years. (C) Race: The cohort was predominantly Asian.}
 \label{TransitTime}
@@ -111,7 +111,7 @@ Of the 172 devices administered to participants, 159 were recovered (92\% recove
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 5.5in]{Sample-collection/Samples-summary.pdf}
+\includegraphics[width = 5.5in]{Weeklong-Sample-collection/Samples-summary.pdf}
 \caption{\textbf{Per subject sample collection.} Depending on device recovery, number of bowel movements, and CapScan sampling efficiency, subjects generated 23–-40 samples. To calculate the average number of regions per device, divide the "Regions" value by the "Devices" value.}
 \label{SamplesCollected}
 \end{figure}
@@ -125,14 +125,14 @@ CapScan devices were cleaned and sectioned into up to 3 regions based on differe
     \centering
     \caption{}
     \label{fig:capsule_classification}
-    \includegraphics[width=\textwidth]{Sample-collection/Capsule-classfication.png}
+    \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-classfication.png}
 \end{subfigure}
 \begin{subfigure}[t]{0.2\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
     \label{fig:capsule_regions}
-    \includegraphics[width=\textwidth]{Sample-collection/Capsule-regions-distribution.pdf}
+    \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-regions-distribution.pdf}
 \end{subfigure}
 \caption{\textbf{Regions per device.} (A) Visual classification of capsule contents. \emph{``SI-light"} samples were translucent, often pink or green with food particles. \emph{``SI"} samples were typically golden and not too chunky; a subset appeared red. \emph{``SI-dark"} samples were dark but still liquid. \emph{``Ascending colon (AC)"} samples were sludgy and required squeegeeing from devices. (B) Distribution of regions per device across all samples (mean 2.18 regions per device).}
 \label{Capsule_regions}
@@ -147,14 +147,14 @@ Transit time is influenced by numerous factors including diet composition, physi
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 2in]{Sample-collection/Transit-time-distribution.pdf}
+\includegraphics[width = 2in]{Weeklong-Sample-collection/Transit-time-distribution.pdf}
 \caption{\textbf{Summary transit time.} Histogram of transit times in hours of all CapScan devices ingested during the study. Missing devices were not included. Transit times ranged from 12.17--130.97 h (mean 51.9 h = 2.16 days).}
 \label{AllTransit}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 4.8in]{Sample-collection/Transit-time-facet-distribution.pdf}
+\includegraphics[width = 4.8in]{Weeklong-Sample-collection/Transit-time-facet-distribution.pdf}
 \caption{\textbf{Summary transit time broken down by individual.} Same data as in Figure \ref{AllTransit}, broken down by subject.}
 \label{IndividualTransit}
 \end{figure}
@@ -166,14 +166,14 @@ When possible, the pH of each CapScan region was measured. Surprisingly, the pH 
 
 \begin{figure}[H]
 \centering
-\includegraphics[height = 4cm]{Sample-collection/pH-distribution.pdf}
+\includegraphics[height = 4cm]{Weeklong-Sample-collection/pH-distribution.pdf}
 \caption{\textbf{pH distribution.} Sample pH values trended toward the lower end.}
 \label{pH}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 6.5in]{Sample-collection/pH-summary.pdf}
+\includegraphics[width = 6.5in]{Weeklong-Sample-collection/pH-summary.pdf}
 \caption{\textbf{Summary pH.} Heatmap of all CapScan regions by subject, ordered by ingestion order. Samples with pHs presumably lower than 5.5 are marked in red. CapE1 and CapE2 refer to the first and second exercise capsules, respectively.}
 \label{pHSummary}
 \end{figure}
@@ -184,14 +184,14 @@ Stool samples were only collected if a CapScan device was located. Self-reported
 
 \begin{figure}[H]
 \centering
-\includegraphics[height = 4cm]{Sample-collection/Bristol-stool-score-distribution.pdf}
+\includegraphics[height = 4cm]{Weeklong-Sample-collection/Bristol-stool-score-distribution.pdf}
 \caption{\textbf{Bristol Stool Scale distribution.} Bristol stool scores were mostly around 4.}
 \label{BSS}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 4in]{Sample-collection/Bristol-stool-score-summary.pdf}
+\includegraphics[width = 4in]{Weeklong-Sample-collection/Bristol-stool-score-summary.pdf}
 \caption{\textbf{Summary Bristol Stool Scale.} Heatmap of all Bristol Stool scores by subject, ordered by CapScan device.}
 \label{BSSSummary}
 \end{figure}
@@ -200,14 +200,120 @@ Stool samples were only collected if a CapScan device was located. Self-reported
 
 \newpage
 \subsection{Emotional state}
-The Positive and Negative Affect Schedule (PANAS) was administered to assess subjects' emotional state. PANAS is a self-report questionnaire consisting of 20 items that measure positive affect (PA) and negative affect (NA) on a scale from 1 (very slightly or not at all) to 5 (extremely). Subjects rated the extent to which they experienced various emotions during a specified time frame.
+The \textbf{Perceived Stress Scale (PSS)} was administered prior to beginning the study to assess subjective stress levels. This 10-item questionnaire measures the degree to which life situations are perceived as stressful, with scores ranging from 0–-40, where higher scores corresponded to greater stress.
+\\ \\
+The questions were: In the last month, how often have you
+\begin{enumerate}[nosep]
+\item been upset because of something that happened unexpectedly?
+\item felt that you were unable to control the important things in your life?
+\item felt nervous and stressed?
+\item felt confident about your ability to handle your personal problems?
+\item felt that things were going your way?
+\item found that you could not cope with all the things that you had to do?
+\item been able to control irritations in your life?
+\item felt that you were on top of things?
+\item been angered because of things that happened that were outside of your control?
+\item felt difficulties were piling up so high that you could not overcome them?
+\end{enumerate}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 6in]{PANAS/PANAS-summary.pdf}
+\includegraphics[width = 6in]{Weeklong-Sample-collection/PSS-distribution.pdf}
+\caption{\textbf{PANAS score summary.} Heatmap of emotional frequencies by subject and day. Scores for Q4, Q5, Q7,and Q8 were reversed, and all answers were summed to calculate the perceived stress score.}
+\label{PSSSummary}
+\end{figure}
+
+\newpage
+The \textbf{Positive and Negative Affect Schedule (PANAS)} was administered to assess subjects' emotional state. PANAS is a self-report questionnaire consisting of 20 items that measure positive affect (PA) and negative affect (NA) on a scale from 1 (very slightly or not at all) to 5 (extremely). Subjects rated the extent to which they experienced various emotions during a specified time frame.
+\\ \\
+The emotions were:
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+1. Interested & 6. Guilty & 11. Irritable & 16. Determined \\
+2. Distressed & 7. Scared & 12. Alert & 17. Attentive \\
+3. Excited & 8. Hostile & 13. Ashamed & 18. Jittery \\
+4. Upset & 9. Enthusiastic & 14. Inspired & 19. Active \\
+5. Strong & 10. Proud & 15. Nervous & 20. Afraid \\
+\end{tabular}
+\end{table}
+
+Typical positive affect scores range from 10–-50 (mean 33.33 $\pm$ 7.2) and negative affect scores range from 10–-50 (mean 17.4 $\pm$ 6.2)
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6in]{Weeklong-Sample-collection/PANAS-summary.pdf}
 \caption{\textbf{PANAS score summary.} Heatmap of positive affect (interested, excited, strong, enthusiastic, proud, alert, inspired, determined, attentive, active) and negative affect (distressed, upset, guilty, scared, hostile, irritable, ashamed, nervous, jittery, afraid) scores by subject and day.}
 \label{PANASSummary}
 \end{figure}
+
+\newpage
+\subsection{Gastrointestinal questionnaire}
+
+The \textbf{Rome IV criteria} represent the current gold standard for diagnosing functional gastrointestinal disorders (FGIDs). This validated questionnaire assesses the presence and frequency of gastrointestinal symptoms over the past 3 months to classify disorders such as irritable bowel syndrome (IBS), functional constipation, functional diarrhea, and other functional GI conditions. The Rome IV framework uses symptom-based diagnostic criteria that consider symptom frequency, duration, and specific characteristics to categorize patients into distinct diagnostic groups. Subjects completed the Rome IV questionnaire to determine their gastrointestinal health status and to screen for exclusion of functional GI disorders from the healthy cohort.
+\\ \\
+The questions were:
+\begin{enumerate}[nosep]
+\item Have you experienced abdominal pain at least once per week in the past 3 months? 
+\item When you have abdominal pain, do you notice any change in the number of bowel movements you have per day? 
+\item Are your stools more hard or more loose when you have abdominal pain? 
+\item Which best describes your stools on days when you have at least 1 abnormal bowel movement?
+\item Have you had symptoms of constipation for at least 6 months?
+\item Do you usually strain to have a bowel movement?
+\item Are most of your stools lumpy or hard?
+\item Do you often feel like you still have more stool to pass (a sensation of incomplete evacuation) after most bowel movements?
+\item Does a feeling of something physically blocking stool from passing usually occur during bowel movements?
+\item Do you often need to remove trapped stool from your rectum with your fingers, apply pressure in/around your rectum, or use other manual maneuvers to help pass stool?
+\item Do you have fewer than 3 bowel movements per week?
+\item Is it rare for you to have loose stools (outside of using laxatives)?
+\item Have you been experiencing diarrhea for at least 6 months? 
+\item For the past 3 months, have your bowel movements usually been loose or watery without predominant abdominal pain or bothersome bloating?
+\item Have you been experiencing bloating and/or distension for at least 6 months? 
+\item Has your belly been bloated and/or distended at least once a week (on average) in the last 3 months?
+\item For the last 3 months, has bloating and/or distension bothered you the most (of all other possible GI symptoms)?
+\item Over the last 6 months, have you had dealing with bowel symptoms that seemed unrelated to any clear cause or diagnosis? 
+\item Have you had chronic abdominal pain regardless of gut function for 6 months or more?
+\item Has your pain been continuous (non-stop) or nearly continuous?
+\item Does the pain coincide with eating, bowel movements, menstrual cycle, or any other physiological events?    Reply 'No' if 'never' or 'only occasionally'.
+\item Does the pain make it harder for you to live your daily life in any way?
+\item Has your doctor ever mentioned that the pain might be explained by another GI disorder or medical condition?
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6in]{Weeklong-Sample-collection/RomeIV.pdf}
+\caption{\textbf{Rome IV summary.} Summary of responses to Rome IV questions for classifying GI symptoms. NA values are shown in grey.}
+\label{RomeIVSummary}
+\end{figure}
+
+\newpage
+The \textbf{Gastrointestinal Symptom Rating Scale for IBS (GSRS-IBS)} is a 13-item validated questionnaire assessing GI symptom severity across five domains: pain, bloating, constipation, diarrhea, and satiety. Subjects rated symptoms experienced over the past week on a 7-point scale (1 = no discomfort, 7 = very severe discomfort). Higher domain scores indicate greater symptom burden.
+\\ \\
+The questions were: Have you been bothered by
+\begin{enumerate}[nosep]
+\item \textbf{abdominal pain} during the past week?
+\item \textbf{pain or discomfort in your abdomen relieved by a bowel action} during the past week?
+\item a \textbf{feeling of bloating} during the past week?
+\item \textbf{passing gas} during the past week?
+\item \textbf{constipation} (problems emptying the bowel) during the past week?
+\item \textbf{diarrhea} (frequent bowel movements) during the past week?
+\item \textbf{loose bowel movements} during the past week?
+\item \textbf{hard stools} during the past week?
+\item an \textbf{urgent need to have a bowel movement} (need to go to the toilet urgently to empty the bowel) during the past week?
+\item a \textbf{feeling that your bowel was not completely emptied after having a bowel movement} during the past week?
+\item \textbf{feeling full shortly after you have started a meal} during the past week?
+\item \textbf{feeling full even long after you have stopped eating} during the past week?
+\item \textbf{visible swelling of your abdomen} during the past week?  
+\end{enumerate}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6in]{Weeklong-Sample-collection/GSRS-IBS.pdf}
+\caption{\textbf{GSRS-IBS summary.} Summary of responses to GSRS-IBS survey for classifying GI symptoms.}
+\label{GSRS-IBS}
+\end{figure}
+
 
 \newpage
 \subsection{Alpha diversity}
@@ -325,6 +431,21 @@ Principal Coordinates Analysis (PCoA), also known as classical multidimensional 
 
 \newpage
 \section{Subject-specific data}
+\subsection{Food records}
+Subjects used Cronometer, a validated nutrition tracking application, to record detailed dietary intake for at least 3 days during the study period. Cronometer provides comprehensive nutritional analysis of foods consumed, breaking down intake into macronutrient categories including carbohydrates, fats, proteins, vitamins, minerals, and other micronutrients. Nutrient values are reported as percent of recommended daily intake, capped at 300\% to standardize visualization. Some nutrients without established daily intake recommendations, such as added sugars and trans fats, are not included in the percent daily value calculations.
+
+\ifx\pdffilesize{Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-\SubjectNoPad.pdf}\undefined
+  \vspace{1em} Participant \SubjectNo\ did not provide dietary logs.
+\else
+  \begin{figure}[H]
+  \centering
+  \includegraphics[width = 7in]{Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-\SubjectNoPad.pdf}
+  \caption{\textbf{Individual nutrient summary.} Daily consumption of nutrients recorded in the Cronometer app, reported as a percentage of percent recommended daily intake (adult male), capped at 300\%.}
+  \label{Timeline}
+  \end{figure}
+\fi
+
+\newpage
 \subsection{Capscan and tubes}
 
 All CapScan devices collected were cleaned and sectioned. The area closest to the white tip is the most proximal region collected while the area closest to the tape-labeled binder clip is the most distal region. We marked targeted sampling regions and took photos of the final samples collected in the tubes. Note that there is generally great variability in terms of the number of regions, colors, and consistencies.
@@ -334,7 +455,7 @@ All CapScan devices collected were cleaned and sectioned. The area closest to th
 \else
   \begin{figure}[H]
   \centering
-  \includegraphics[width = 5.5in]{Weeklong-Processed-capsules/20250826_Capsule_Weeklong_S\SubjectNo.png}
+  \includegraphics[width = 5.5in]{Weeklong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S\SubjectNo.png}
   \caption{\textbf{Sectioned CapScan devices.} Pictures of cleaned devices and final collection regions.}
   \label{CapscanSamples}
   \end{figure}
@@ -345,12 +466,12 @@ All CapScan devices collected were cleaned and sectioned. The area closest to th
 
 As each CapScan device is RFID chipped, we were able to calculate transit times. Average transit times per subject can be found in Figure \ref{IndividualTransit}.
 
-\ifx\pdffilesize{Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}\undefined
+\ifx\pdffilesize{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}\undefined
   \vspace{1em} Participant \SubjectNo\ did not provide ingestion and collection times.
 \else
   \begin{figure}[H]
   \centering
-  \includegraphics[width = 6in]{Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}
+  \includegraphics[width = 6in]{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}
   \caption{\textbf{Individual CapScan ingestion and collection times.} Timeline of when each CapScan device was in the subject's body throughout the study. The length of each blue bar represents the transit time in hours, which is indicated in white text. If a device was not found in the stool, it is depicted as a transparent bar.}
   \label{Timeline}
   \end{figure}

@@ -35,10 +35,106 @@ library(gt) # pdf tables
 library(ggdendro) # dendrograms
 library(compositions) #clr
 library(patchwork)
+library(ggnewscale)
 
 ##########################
 # Include custom functions
 ##########################
+
+setup_tables_plants <- function(directory, sample_sheet_path) {
+  # Default Setup
+  
+  # import custom family colors
+  sheet_num <- 4
+  colors <- read_excel(paste0(paste0(here(), '/1-data/Family_colors.xlsx')), sheet = sheet_num)
+  colors$Color <- paste0("#", colors$Color)
+  #colors <- colors %>% mutate(fOTU = paste(Kingdom, Phylum, Class, Order, Family, sep=";"))
+  colors <- colors %>% mutate(Genus = factor(Genus, levels = rev(unique(colors$Genus)), ordered = TRUE))
+  
+  # Create phyloseq object that stores:
+  # otu_table <- table of read counts for each ASV
+  # tax_table <- taxonomic assignment of ASVs
+  # sample_data <- metadata for all experiments
+  # phy_tree <- phylogenetic tree from data
+  
+  # setup tables to populate phyloseq object
+  seqtab_nochim <- readRDS(paste0(directory, 'seqtab_all.RDS')) # read in ASV read counts
+  taxa <- read.table(paste0(directory,'feature_data.txt'), header = TRUE, sep = "\t") # read in ASV taxon info
+  taxa <- taxa %>%
+    mutate(Genus = ifelse(is.na(Genus), "NA", Genus)) %>%
+    mutate(Family2 = ifelse(is.na(Genus), "NA", Genus)) %>% # add Family2 name to plot
+    left_join(colors %>% select(Genus, Common_name, Color), by = c("Genus")) %>% # add Family colors 
+    #mutate(Taxon = mapply(generate_taxon, Kingdom, Phylum, Class, Order, Family, Genus, Species)) %>% # add concise taxonomy name to plot
+    mutate(Taxon = Common_name) %>%
+    mutate(fOTU = Common_name) # add fOTU
+  taxa_order <- taxa %>% arrange(match(Genus, colors$Genus)) # arrange taxa based on fOTU order in colors
+  rownames(taxa) <- taxa$Sequence # row names must match species.names
+  taxa <- taxa %>% select(c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "fOTU", "Taxon", "Family2", "Color", "Feature"))
+  taxa <- as.matrix(taxa) # taxa must be matrix
+  
+  phy_tree <- read_tree(paste0(directory,'dsvs_msa.tree')) # read in phylogenetic tree
+  samdf <- read_excel(paste0(here(), sample_sheet_path), sheet = 1) # Read in sample metadata
+  samdf <- as.data.frame(samdf) # convert to dataframe
+  rownames(samdf) <- sub('sample_', '', samdf$Sample) # change row names to be the sequencing name, remove "sample_"
+  samdf <- samdf[2:ncol(samdf)] # remove Sample column
+  
+  # create phyloseq object
+  ps <- phyloseq(otu_table(seqtab_nochim, taxa_are_rows = FALSE), sample_data(samdf), tax_table(taxa), phy_tree(phy_tree))
+  
+  # store DNA sequences in refseq slot of phyloseq object and rename taxa to short taxa names
+  dna <- Biostrings::DNAStringSet(taxa_names(ps))
+  names(dna) <- taxa_names(ps)
+  ps <- merge_phyloseq(ps, dna)
+  taxa_names(ps) <- sprintf("feature_%04d", seq_len(ntaxa(ps)))
+  
+  return(list(ps = ps, taxa_order = taxa_order, samdf = samdf))
+}
+
+setup_tables_meat <- function(directory, sample_sheet_path) {
+  # Default Setup
+  
+  # import custom family colors
+  sheet_num <- 3
+  colors <- read_excel(paste0(paste0(here(), '/1-data/Family_colors.xlsx')), sheet = sheet_num)
+  colors$Color <- paste0("#", colors$Color)
+  colors <- colors %>% mutate(fOTU = paste(Kingdom, Phylum, Class, Order, Family, sep=";"))
+  colors <- colors %>% mutate(fOTU = factor(fOTU, levels = rev(unique(colors$fOTU)), ordered = TRUE))
+  
+  # Create phyloseq object that stores:
+  # otu_table <- table of read counts for each ASV
+  # tax_table <- taxonomic assignment of ASVs
+  # sample_data <- metadata for all experiments
+  # phy_tree <- phylogenetic tree from data
+  
+  # setup tables to populate phyloseq object
+  seqtab_nochim <- readRDS(paste0(directory,'seqtab_all.RDS')) # read in ASV read counts
+  taxa <- read.table(paste0(directory,'feature_data.txt'), header = TRUE, sep = "\t") # read in ASV taxon info
+  taxa <- taxa %>% mutate(fOTU = paste(Kingdom, Phylum, Class, Order, Family, sep=";")) %>% # add fOTU
+    mutate(Taxon = mapply(generate_taxon, Kingdom, Phylum, Class, Order, Family, Genus, Species)) %>% # add concise taxonomy name to plot
+    mutate(Family2 = ifelse(is.na(Family) | Family == "f__", Taxon, Family)) %>% # add Family2 name to plot
+    left_join(colors %>% select(fOTU, Color), by = c("fOTU")) # add Family colors 
+  taxa_order <- taxa %>% arrange(match(fOTU, colors$fOTU)) # arrange taxa based on fOTU order in colors
+  rownames(taxa) <- taxa$Sequence # row names must match species.names
+  taxa <- taxa %>% select(c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "fOTU", "Taxon", "Family2", "Color", "Feature"))
+  taxa <- as.matrix(taxa) # taxa must be matrix
+  
+  phy_tree <- read_tree(paste0(directory,'dsvs_msa.tree')) # read in phylogenetic tree
+  samdf <- read_excel(paste0(here(), sample_sheet_path), sheet = 1) # Read in sample metadata
+  samdf <- as.data.frame(samdf) # convert to dataframe
+  rownames(samdf) <- sub('sample_', '', samdf$Sample) # change row names to be the sequencing name, remove "sample_"
+  samdf <- samdf[2:ncol(samdf)] # remove Sample column
+  
+  # create phyloseq object
+  ps <- phyloseq(otu_table(seqtab_nochim, taxa_are_rows = FALSE), sample_data(samdf), tax_table(taxa), phy_tree(phy_tree))
+  
+  # store DNA sequences in refseq slot of phyloseq object and rename taxa to short taxa names
+  dna <- Biostrings::DNAStringSet(taxa_names(ps))
+  names(dna) <- taxa_names(ps)
+  ps <- merge_phyloseq(ps, dna)
+  taxa_names(ps) <- sprintf("feature_%04d", seq_len(ntaxa(ps)))
+  
+  return(list(ps = ps, taxa_order = taxa_order, samdf = samdf))
+}
 
 setup_tables <- function(directory, sample_sheet_path) {
   # Default Setup
@@ -226,8 +322,7 @@ red_if_small_discrete <- function(values) {
 red_if_small_discrete_cap <- function(values) {
   # option when you want region and total reads
   sapply(values, function(v) {
-    #v_num <- as.numeric(as.character(v))  # convert factor/char to number
-    
+  
     parts <- strsplit(as.character(v), "\\.")[[1]]
     if (length(parts) > 1) {
       v_num <- as.numeric(parts[1])  # get the part after the period
