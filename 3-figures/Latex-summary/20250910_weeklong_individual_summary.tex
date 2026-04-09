@@ -38,7 +38,7 @@
 } % Sets default 
 
 \def\Name{Beverly Fu}  % Your name
-\def\SubjectNo{21}
+% \def\SubjectNo{21}
 \newcommand{\SubjectNoPad}{%
   \ifnum\SubjectNo<10 0\SubjectNo\else \SubjectNo\fi
 }
@@ -65,18 +65,21 @@
 
 \subsection{Study setup}
 
-Throughout the study conducted in August 2025, the subject's small intestinal contents were non-invasively sampled 8 times over one week. An evening sampling procedure was used, in which CapScan devices were ingested 3 hours post-dinner, with a paired saliva sample collected at the time of capsule ingestion. In subsequent bowel movements, CapScan devices were retrieved from stool, and a paired stool sample was collected at the time of capsule retrieval.
+Throughout the study conducted in August 2025, each subject's small intestinal contents were non-invasively sampled 8 times over one week. CapScan devices were ingested 3 hours post-dinner, with a paired saliva sample collected at the time of ingestion. During subsequent bowel movements, CapScan devices were retrieved from stool, and a paired stool sample was collected at the time of retrieval.
+\\ \\
+Subjects reported various metadata including capsule ingestion and retrieval times, food intake, mental health status, and Bristol stool scores.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 6.5in]{Weeklong-Sample-collection/Study-design/Weeklong-Study-timeline.pdf}
-\caption{\textbf{Study timeline.} A test CapScan device (CapScan0) was ingested on Thursday prior to the continuous weeklong study. A fresh stool sample was provided on Tuesday evening or Wednesday morning/afternoon. A subset of subjects also participated in a concurrent exercise study and ingested two additional CapScan devices 3 hours prior to exercise sessions.}
-\label{TransitTime}
+\includegraphics[width=6.5in]{Weeklong-Sample-collection/Study-design/Weeklong-Study-timeline.pdf}
+\caption{\textbf{Study timeline.} A test CapScan device (CapScan0) was ingested on Thursday prior to the weeklong study. A fresh stool sample was provided on Tuesday evening or Wednesday morning/afternoon. A subset of subjects also participated in a concurrent exercise study and ingested two additional CapScan devices 3 hours prior to exercise sessions.}
 \end{figure}
 
-Subjects reported various metadata, including capsule ingestion and retrieval times, food intake, mental health status, and Bristol stool scores.
-
 \subsection{Subject demographics}
+Twenty healthy subjects were recruited to participate in the study. All subjects lived within close proximity to Stanford University to enable provision of fresh samples for culturing and glycerol stock preparation. 
+
+\subsubsection{Basic information}
+We recruited a diverse and balanced cohort with even gender distribution, a range of ages, and varied racial backgrounds.
 
 \begin{figure}[H]
 \centering
@@ -98,159 +101,27 @@ Subjects reported various metadata, including capsule ingestion and retrieval ti
     \caption{}
     \includegraphics[height=4cm]{Weeklong-Sample-collection/Study-design/Weeklong-race-distribution.pdf}
 \end{subfigure}
-\caption{\textbf{Participant stats.} 20 healthy subjects participated in the study. (A) Sex distribution: 10 female and 10 male. (B) Age distribution: range of 22–46 years, mean 31.3 years. (C) Race: The cohort was predominantly Asian.}
-\label{TransitTime}
+\caption{\textbf{Participant demographics.} Twenty healthy subjects participated in the study. (A) Sex distribution: 10 female and 10 male. (B) Age distribution: range of 22–46 years, mean of 31.3 years. (C) Race distribution: the cohort was predominantly Asian.}
 \end{figure}
 
 \newpage
-\section{General data}
+\subsubsection{Subject diets}
 
-\subsection{Sample recovery}
-
-Of the 172 devices administered to participants, 159 were recovered (92\% recovery rate). The vast majority of recovered devices contained sample material (155/159, 97\%), yielding a total of 338 sampled regions.
+Several subjects maintained specific dietary patterns during the study. Notably, Subjects 03, 11, and 20 were vegetarian, and Subject 04 was vegan. Subjects 01 and 10 practiced intermittent fasting based on time-restricted eating.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 5.5in]{Weeklong-Sample-collection/Samples-summary.pdf}
-\caption{\textbf{Per subject sample collection.} Depending on device recovery, number of bowel movements, and CapScan sampling efficiency, subjects generated 23–-40 samples. To calculate the average number of regions per device, divide the "Regions" value by the "Devices" value.}
-\label{SamplesCollected}
-\end{figure}
-
-CapScan devices were cleaned and sectioned into up to 3 regions based on differences in color, viscosity, and air bubble presence. Sample volumes were optimized to enable all downstream analyses 
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}[t]{0.3\textwidth}
-    \captionsetup{justification=raggedright, singlelinecheck=false}
-    \centering
-    \caption{}
-    \label{fig:capsule_classification}
-    \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-classfication.png}
-\end{subfigure}
-\begin{subfigure}[t]{0.2\textwidth}
-    \captionsetup{justification=raggedright, singlelinecheck=false}
-    \centering
-    \caption{}
-    \label{fig:capsule_regions}
-    \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-regions-distribution.pdf}
-\end{subfigure}
-\caption{\textbf{Regions per device.} (A) Visual classification of capsule contents. \emph{``SI-light"} samples were translucent, often pink or green with food particles. \emph{``SI"} samples were typically golden and not too chunky; a subset appeared red. \emph{``SI-dark"} samples were dark but still liquid. \emph{``Ascending colon (AC)"} samples were sludgy and required squeegeeing from devices. (B) Distribution of regions per device across all samples (mean 2.18 regions per device).}
-\label{Capsule_regions}
+\includegraphics[width = 5.5in]{Weeklong-Sample-collection/Lifestyle-diet.pdf}
+\caption{\textbf{Participant diets.} Subjects self-reported their dietary patterns.}
 \end{figure}
 
 \newpage
-\subsection{Transit time}
+\subsection{Gastrointestinal questionnaires}
+To ensure a healthy study population, participants completed two validated surveys: the Rome IV criteria and GSRS-IBS questionnaire.
 
-Gastrointestinal transit time is the duration required for ingested material to pass through the digestive system from ingestion to excretion. As each CapScan device is RFID-chipped, transit times were calculated based on each subject's ingestion and collection records. 
-\\ \\
-Transit time is influenced by numerous factors including diet composition, physical activity, hydration status, gut motility, and individual physiology. Normal small bowel transit time typically ranges from 2--6 hours, while whole gut transit time (mouth to anus) generally ranges from 24–-72 hours in healthy adults.
+\subsubsection{Rome IV criteria}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width = 2in]{Weeklong-Sample-collection/Transit-time-distribution.pdf}
-\caption{\textbf{Summary transit time.} Histogram of transit times in hours of all CapScan devices ingested during the study. Missing devices were not included. Transit times ranged from 12.17--130.97 h (mean 51.9 h = 2.16 days).}
-\label{AllTransit}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = 4.8in]{Weeklong-Sample-collection/Transit-time-facet-distribution.pdf}
-\caption{\textbf{Summary transit time broken down by individual.} Same data as in Figure \ref{AllTransit}, broken down by subject.}
-\label{IndividualTransit}
-\end{figure}
-
-\newpage
-\subsection{pH}
-
-When possible, the pH of each CapScan region was measured. Surprisingly, the pH of many samples was below the limit of detection of our pH strips. When spot-checked with a more sensitive method, the pH values were very low, suggesting that these capsules sampled gastric contents rather than small intestinal contents.
-
-\begin{figure}[H]
-\centering
-\includegraphics[height = 4cm]{Weeklong-Sample-collection/pH-distribution.pdf}
-\caption{\textbf{pH distribution.} Sample pH values trended toward the lower end.}
-\label{pH}
-\end{figure} 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = 6.5in]{Weeklong-Sample-collection/pH-summary.pdf}
-\caption{\textbf{Summary pH.} Heatmap of all CapScan regions by subject, ordered by ingestion order. Samples with pHs presumably lower than 5.5 are marked in red. CapE1 and CapE2 refer to the first and second exercise capsules, respectively.}
-\label{pHSummary}
-\end{figure}
-
-\newpage
-\subsection{Bristol stool scale}
-Stool samples were only collected if a CapScan device was located. Self-reported Bristol Stool Scale (BSS) scores were recorded, indicating stool consistency, and range from 1 (hard lumps) to 7 (entirely liquid).
-
-\begin{figure}[H]
-\centering
-\includegraphics[height = 4cm]{Weeklong-Sample-collection/Bristol-stool-score-distribution.pdf}
-\caption{\textbf{Bristol Stool Scale distribution.} Bristol stool scores were mostly around 4.}
-\label{BSS}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = 4in]{Weeklong-Sample-collection/Bristol-stool-score-summary.pdf}
-\caption{\textbf{Summary Bristol Stool Scale.} Heatmap of all Bristol Stool scores by subject, ordered by CapScan device.}
-\label{BSSSummary}
-\end{figure}
-
-% \subsection{Cell count}
-
-\newpage
-\subsection{Emotional state}
-The \textbf{Perceived Stress Scale (PSS)} was administered prior to beginning the study to assess subjective stress levels. This 10-item questionnaire measures the degree to which life situations are perceived as stressful, with scores ranging from 0–-40, where higher scores corresponded to greater stress.
-\\ \\
-The questions were: In the last month, how often have you
-\begin{enumerate}[nosep]
-\item been upset because of something that happened unexpectedly?
-\item felt that you were unable to control the important things in your life?
-\item felt nervous and stressed?
-\item felt confident about your ability to handle your personal problems?
-\item felt that things were going your way?
-\item found that you could not cope with all the things that you had to do?
-\item been able to control irritations in your life?
-\item felt that you were on top of things?
-\item been angered because of things that happened that were outside of your control?
-\item felt difficulties were piling up so high that you could not overcome them?
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = 6in]{Weeklong-Sample-collection/PSS-distribution.pdf}
-\caption{\textbf{PANAS score summary.} Heatmap of emotional frequencies by subject and day. Scores for Q4, Q5, Q7,and Q8 were reversed, and all answers were summed to calculate the perceived stress score.}
-\label{PSSSummary}
-\end{figure}
-
-\newpage
-The \textbf{Positive and Negative Affect Schedule (PANAS)} was administered to assess subjects' emotional state. PANAS is a self-report questionnaire consisting of 20 items that measure positive affect (PA) and negative affect (NA) on a scale from 1 (very slightly or not at all) to 5 (extremely). Subjects rated the extent to which they experienced various emotions during a specified time frame.
-\\ \\
-The emotions were:
-\begin{table}[h]
-\centering
-\begin{tabular}{llll}
-1. Interested & 6. Guilty & 11. Irritable & 16. Determined \\
-2. Distressed & 7. Scared & 12. Alert & 17. Attentive \\
-3. Excited & 8. Hostile & 13. Ashamed & 18. Jittery \\
-4. Upset & 9. Enthusiastic & 14. Inspired & 19. Active \\
-5. Strong & 10. Proud & 15. Nervous & 20. Afraid \\
-\end{tabular}
-\end{table}
-
-Typical positive affect scores range from 10–-50 (mean 33.33 $\pm$ 7.2) and negative affect scores range from 10–-50 (mean 17.4 $\pm$ 6.2)
-
-\begin{figure}[H]
-\centering
-\includegraphics[width = 6in]{Weeklong-Sample-collection/PANAS-summary.pdf}
-\caption{\textbf{PANAS score summary.} Heatmap of positive affect (interested, excited, strong, enthusiastic, proud, alert, inspired, determined, attentive, active) and negative affect (distressed, upset, guilty, scared, hostile, irritable, ashamed, nervous, jittery, afraid) scores by subject and day.}
-\label{PANASSummary}
-\end{figure}
-
-\newpage
-\subsection{Gastrointestinal questionnaire}
-
-The \textbf{Rome IV criteria} represent the current gold standard for diagnosing functional gastrointestinal disorders (FGIDs). This validated questionnaire assesses the presence and frequency of gastrointestinal symptoms over the past 3 months to classify disorders such as irritable bowel syndrome (IBS), functional constipation, functional diarrhea, and other functional GI conditions. The Rome IV framework uses symptom-based diagnostic criteria that consider symptom frequency, duration, and specific characteristics to categorize patients into distinct diagnostic groups. Subjects completed the Rome IV questionnaire to determine their gastrointestinal health status and to screen for exclusion of functional GI disorders from the healthy cohort.
+The Rome IV criteria represent the current gold standard for diagnosing functional gastrointestinal disorders. This validated questionnaire assesses the presence and frequency of gastrointestinal symptoms over the past 3 months to classify disorders such as irritable bowel syndrome (IBS), functional constipation, functional diarrhea, and other functional GI conditions. The Rome IV framework uses symptom-based diagnostic criteria that consider symptom frequency, duration, and specific characteristics to categorize patients into distinct diagnostic groups. Subjects completed the Rome IV questionnaire to determine their gastrointestinal health status and screen for functional GI disorders.
 \\ \\
 The questions were:
 \begin{enumerate}[nosep]
@@ -283,11 +154,11 @@ The questions were:
 \centering
 \includegraphics[width = 6in]{Weeklong-Sample-collection/RomeIV.pdf}
 \caption{\textbf{Rome IV summary.} Summary of responses to Rome IV questions for classifying GI symptoms. NA values are shown in grey.}
-\label{RomeIVSummary}
 \end{figure}
 
 \newpage
-The \textbf{Gastrointestinal Symptom Rating Scale for IBS (GSRS-IBS)} is a 13-item validated questionnaire assessing GI symptom severity across five domains: pain, bloating, constipation, diarrhea, and satiety. Subjects rated symptoms experienced over the past week on a 7-point scale (1 = no discomfort, 7 = very severe discomfort). Higher domain scores indicate greater symptom burden.
+\subsubsection{GSRS-IBS}
+The Gastrointestinal Symptom Rating Scale for IBS (GSRS-IBS) is a 13-item validated questionnaire assessing GI symptom severity across five domains: pain, bloating, constipation, diarrhea, and satiety. Subjects rated symptoms experienced over the past week on a 7-point scale. Higher domain scores indicate greater symptom burden.
 \\ \\
 The questions were: Have you been bothered by
 \begin{enumerate}[nosep]
@@ -306,17 +177,162 @@ The questions were: Have you been bothered by
 \item \textbf{visible swelling of your abdomen} during the past week?  
 \end{enumerate}
 
-
 \begin{figure}[H]
 \centering
 \includegraphics[width = 6in]{Weeklong-Sample-collection/GSRS-IBS.pdf}
-\caption{\textbf{GSRS-IBS summary.} Summary of responses to GSRS-IBS survey for classifying GI symptoms.}
-\label{GSRS-IBS}
+\caption{\textbf{GSRS-IBS summary.} Summary of responses to GSRS-IBS questionnaire for assessing GI symptom severity.}
 \end{figure}
 
+\newpage
+\section{General data}
+\subsection{Sample collection}
+\subsubsection{Sample recovery}
+
+Of the 172 devices administered to participants, 159 were recovered (92\% recovery rate). The vast majority of recovered devices contained sample material (155/159, 97\%), yielding a total of 338 sampled regions.
+\\ \\
+See Table \ref{IndividualIngestionRecord} for the timing of device ingestion and sample counts, and Figure \ref{IndividualDeviceImages} for images of individual CapScan samples collected.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 5.5in]{Weeklong-Sample-collection/Samples-summary.pdf}
+\caption{\textbf{Per subject sample collection.} Depending on device recovery, number of bowel movements, and CapScan sampling efficiency, subjects generated 23–40 samples. To calculate the average number of regions per device, divide the "Regions" value by the "Devices" value.}
+\end{figure}
+
+CapScan devices were cleaned and sectioned into up to 3 regions based on differences in color, viscosity, and air bubble presence. Sample volumes were optimized to enable all downstream analyses.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.3\textwidth}
+    \captionsetup{justification=raggedright, singlelinecheck=false}
+    \centering
+    \caption{}
+    \label{fig:capsule_classification}
+    \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-classfication.png}
+\end{subfigure}
+\begin{subfigure}[t]{0.5\textwidth}
+    \captionsetup{justification=raggedright, singlelinecheck=false}
+    \centering
+    \caption{}
+    \label{fig:capsule_regions}
+    \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-regions-distribution.pdf}
+\end{subfigure}
+\caption{\textbf{Regions per device.} (A) Visual classification of capsule contents. \emph{``SI-light"} samples were translucent, often pink or green with food particles. \emph{``SI"} samples were typically golden and not overly chunky; a subset appeared red. \emph{``SI-dark"} samples were dark but still liquid. \emph{``Ascending colon (AC)"} samples were sludgy and required squeegeeing from devices. (B) Distribution of regions per device across all samples (mean 2.18 regions per device).}
+\end{figure}
 
 \newpage
-\subsection{Alpha diversity}
+\subsubsection{Transit time}
+
+Gastrointestinal transit time is the duration required for ingested material to pass through the digestive system from ingestion to excretion. As each CapScan device is RFID-chipped, transit times were calculated based on each subject's ingestion and collection records.
+\\ \\
+Transit time is influenced by numerous factors including diet composition, physical activity, hydration status, gut motility, and individual physiology. Normal small bowel transit time typically ranges from 2–6 hours, while whole gut transit time (mouth to anus) generally ranges from 24-–72 hours in healthy adults.
+\\ \\
+See Figure \ref{IndividualTimeline} for individual transit timelines.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 2in]{Weeklong-Sample-collection/Transit-time-distribution.pdf}
+\caption{\textbf{Summary transit time.} Histogram of transit times for all CapScan devices ingested during the study. Missing devices were not included. Transit times ranged from 12.17-–130.97 h (mean 51.9 h = 2.16 days).}
+\label{AllTransit}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 4.25in]{Weeklong-Sample-collection/Transit-time-facet-distribution.pdf}
+\caption{\textbf{Summary transit time broken down by individual.} Same data as in Figure \ref{AllTransit}, broken down by subject.}
+\end{figure}
+
+\newpage
+\subsubsection{pH}
+
+When possible, the pH of each CapScan region was measured. Surprisingly, the pH of many samples was below the detection limit of our pH strips. When spot-checked with a more sensitive method, the pH values were very low, suggesting that these capsules sampled gastric contents rather than small intestinal contents.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height = 4cm]{Weeklong-Sample-collection/pH-distribution.pdf}
+\caption{\textbf{pH distribution.} Sample pH values trended toward the lower end of the scle.}
+\label{pH}
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6.5in]{Weeklong-Sample-collection/pH-summary.pdf}
+\caption{\textbf{Summary pH.} Heatmap of all CapScan regions by subject, ordered by ingestion order. Samples with pH presumably lower than 5.5 are marked in red. CapE1 and CapE2 refer to the first and second exercise capsules, respectively.}
+\end{figure}
+
+\newpage
+\subsubsection{Bristol stool scale}
+Stool samples were only collected if a CapScan device was recovered. Subjects self-reported Bristol Stool Scale (BSS) scores indicating stool consistency, which range from 1 (hard lumps) to 7 (entirely liquid).
+
+\begin{figure}[H]
+\centering
+\includegraphics[height = 4cm]{Weeklong-Sample-collection/Bristol-stool-score-distribution.pdf}
+\caption{\textbf{Bristol Stool Scale distribution.} BBristol stool scores were predominantly around 4.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 4in]{Weeklong-Sample-collection/Bristol-stool-score-summary.pdf}
+\caption{\textbf{Summary Bristol Stool Scale.} Heatmap of all Bristol Stool Scale scores by subject, ordered by CapScan device.}
+\end{figure}
+
+\subsubsection{Cell count}
+
+NOTE: COME BACK TO THIS. NEED CELL COUNT NUMBERS FROM JIAWEI TO REPORT
+
+\newpage
+\subsection{Emotional state}
+To assess potential relationships between psychological factors and gut physiology, subjects reported their emotional and stress states throughout the study.
+
+\subsubsection{PSS}
+The Perceived Stress Scale (PSS) was administered prior to beginning the study to assess subjective stress levels. This 10-item questionnaire measures the degree to which life situations are perceived as stressful, with scores ranging from 0–-40, where higher scores correspond to greater stress.
+\\ \\
+The questions were: In the last month, how often have you
+\begin{enumerate}[nosep]
+\item been upset because of something that happened unexpectedly?
+\item felt that you were unable to control the important things in your life?
+\item felt nervous and stressed?
+\item felt confident about your ability to handle your personal problems?
+\item felt that things were going your way?
+\item found that you could not cope with all the things that you had to do?
+\item been able to control irritations in your life?
+\item felt that you were on top of things?
+\item been angered because of things that happened that were outside of your control?
+\item felt difficulties were piling up so high that you could not overcome them?
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6in]{Weeklong-Sample-collection/PSS-distribution.pdf}
+\caption{\textbf{PANAS score summary.} Heatmap of perceived stress scores by subject and day. Scores for Q4, Q5, Q7, and Q8 were reversed, and all answers were summed to calculate the perceived stress score.}
+\end{figure}
+
+\newpage
+\subsubsection{PANAS}
+The Positive and Negative Affect Schedule (PANAS) was administered to assess subjects' emotional state. PANAS is a self-report questionnaire consisting of 20 items that measure positive affect (PA) and negative affect (NA) on a scale from 1 (very slightly or not at all) to 5 (extremely). Subjects rated the extent to which they experienced various emotions during a specified time frame.
+\\ \\
+The emotions were:
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+1. Interested & 6. Guilty & 11. Irritable & 16. Determined \\
+2. Distressed & 7. Scared & 12. Alert & 17. Attentive \\
+3. Excited & 8. Hostile & 13. Ashamed & 18. Jittery \\
+4. Upset & 9. Enthusiastic & 14. Inspired & 19. Active \\
+5. Strong & 10. Proud & 15. Nervous & 20. Afraid \\
+\end{tabular}
+\end{table}
+
+Typical positive affect scores range from 10–-50 (mean 33.33 $\pm$ 7.2) and negative affect scores range from 10–-50 (mean 17.4 $\pm$ 6.2)
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 6in]{Weeklong-Sample-collection/PANAS-summary.pdf}
+\caption{\textbf{PANAS score summary.} Heatmap of positive affect (interested, excited, strong, enthusiastic, proud, alert, inspired, determined, attentive, active) and negative affect (distressed, upset, guilty, scared, hostile, irritable, ashamed, nervous, jittery, afraid) scores by subject and day.}
+\end{figure}
+
+\newpage
+\subsection{16S sequencing}
+\subsubsection{Alpha diversity}
 
 Shannon diversity is a metric that quantifies microbial community diversity by accounting for both the number of species (richness) and their relative abundances (evenness). It is calculated as:
 
@@ -331,7 +347,7 @@ Typical Shannon diversity ranges vary by body site: saliva samples generally ran
 \begin{figure}[H]
 \centering
 \includegraphics[height = 7cm]{Weeklong-Alpha-diversity/Weeklong-Shannon.pdf}
-\caption{\textbf{Alpha diversity summary.} Shannon diversity index for all samples, stratified by sample type. Mean values: saliva 3.31, CapScan (small intestine) 3.17, stool 3.55.}
+\caption{\textbf{Shannon diversity by sample type.} Shannon diversity index for all samples, stratified by sample type. Mean values: saliva 3.31, CapScan (small intestine) 3.17, stool 3.55.}
 \label{AlphaDivSummary}
 \end{figure}
 
@@ -362,7 +378,7 @@ Typical Shannon diversity ranges vary by body site: saliva samples generally ran
     \caption{}
     \includegraphics[width=\textwidth]{Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf}
 \end{subfigure}
-\caption{\textbf{Alpha diversity of CapScan samples.} Shannon diversity of CapScan samples is influenced by multiple factors. Distribution of Shannon values by (A) capsule region, (B) sample pH, (C) sample appearance classification, and (D) transit time.}
+\caption{\textbf{Shannon diversity of CapScan samples.} Shannon diversity of CapScan samples is influenced by multiple factors. Distribution of Shannon values by (A) capsule region, (B) sample pH, (C) sample appearance classification, and (D) transit time.}
 \end{figure}
 
 \begin{figure}[H]
@@ -372,9 +388,11 @@ Typical Shannon diversity ranges vary by body site: saliva samples generally ran
 \end{figure}
 
 \newpage
-\subsection{Principal coordinate analysis of microbial composition}
+\subsubsection{Principal coordinate analysis of microbial composition}
 
 Principal Coordinates Analysis (PCoA), also known as classical multidimensional scaling, is an ordination method used to visualize similarities or dissimilarities between microbial communities in low-dimensional space. PCoA takes a distance matrix calculated between samples and represents the samples as points in a coordinate system, where samples with similar microbial compositions are positioned closer together.
+\\ \\
+Multiple distance metrics were used to capture different aspects of community structure:
 \begin{itemize}
   \item \textbf{Binary (Jaccard):} Presence/absence-based metric that considers only whether taxa are present or absent, ignoring abundance information. Emphasizes differences in community membership.
 
@@ -389,35 +407,35 @@ Principal Coordinates Analysis (PCoA), also known as classical multidimensional 
 
 \begin{figure}[H]
 \centering
-\begin{subfigure}[b]{0.32\textwidth}
+\begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
     \label{fig:pcoa_binary}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-binary-all.pdf}
 \end{subfigure}
-\begin{subfigure}[b]{0.32\textwidth}
+\begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
     \label{fig:pcoa_bray}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-bray-all.pdf}
 \end{subfigure}
-\begin{subfigure}[b]{0.32\textwidth}
+\begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
     \label{fig:pcoa_canberra}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-canberra-all.pdf}
 \end{subfigure}
-\begin{subfigure}[b]{0.32\textwidth}
+\begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
     \label{fig:pcoa_unifrac}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-unifrac-all.pdf}
 \end{subfigure}
-\begin{subfigure}[b]{0.43\textwidth}
+\begin{subfigure}[b]{0.4\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
     \caption{}
@@ -431,7 +449,69 @@ Principal Coordinates Analysis (PCoA), also known as classical multidimensional 
 
 \newpage
 \section{Subject-specific data}
-\subsection{Food records}
+\subsection{Sample collection}
+
+\subsubsection{Ingestion record}
+\ifx\pdffilesize{Weeklong-Sample-collection/Kit-breakdown/Kit-breakdown-\SubjectNoPad.pdf}\undefined
+  \vspace{1em} Participant \SubjectNo\ did not provide any samples.
+\else
+  \begin{table}[H]
+  \centering
+  \caption{\textbf{Ingestion dates and times for the kits.} Record of sample numbers for each kit per subject.}
+  \includegraphics[width = 6in]{Weeklong-Sample-collection/Kit-breakdown/Kit-breakdown-\SubjectNoPad.pdf}
+  \label{IndividualIngestionRecord}
+  \end{table}
+\fi
+
+\newpage
+\subsubsection{Capscan and tubes}
+
+All CapScan devices collected were cleaned and sectioned. The area closest to the white tip is the most proximal region collected while the area closest to the tape-labeled binder clip is the most distal region. We marked targeted sampling regions and took photos of the final samples collected in the tubes. Note that there is generally great variability in terms of the number of regions, colors, and consistencies.
+
+\ifx\pdffilesize{Weeklong-Processed-capsules/20250826_Capsule_Weeklong_S\SubjectNo.png}\undefined
+  \vspace{1em} Participant \SubjectNo\ did not collect any capsules.
+\else
+  \begin{figure}[H]
+  \centering
+  \includegraphics[width = 5.5in]{Weeklong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S\SubjectNo.png}
+  \caption{\textbf{Sectioned CapScan devices.} Pictures of cleaned devices and final collection regions.}
+  \label{IndividualDeviceImages}
+  \end{figure}
+\fi
+
+\newpage
+\subsubsection{Transit time timeline}
+
+As each CapScan device is RFID chipped, we were able to calculate transit times. Average transit times per subject can be found in Figure \ref{IndividualTransit}.
+
+\ifx\pdffilesize{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}\undefined
+  \vspace{1em} Participant \SubjectNo\ did not provide ingestion and collection times.
+\else
+  \begin{figure}[H]
+  \centering
+  \includegraphics[width = 6in]{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}
+  \caption{\textbf{Individual CapScan ingestion and collection times.} Timeline of when each CapScan device was in the subject's body throughout the study. The length of each blue bar represents the transit time in hours, which is indicated in white text. If a device was not found in the stool, it is depicted as a transparent bar.}
+  \label{IndividualTimeline}
+  \end{figure}
+\fi
+
+
+\newpage
+\subsection{Food}
+\subsubsection{Self-reported diet and exercise}
+
+\ifx\pdffilesize{Weeklong-Sample-collection/Diet-exercise-record/Diet-exercise-record-\SubjectNoPad.pdf}\undefined
+  \vspace{1em} Participant \SubjectNo\ did not provide any samples.
+\else
+  \begin{table}[H]
+  \centering
+  \caption{\textbf{Record of food consumed.} Self reported meals.}
+  \includegraphics[width = 6in]{Weeklong-Sample-collection/Diet-exercise-record/Diet-exercise-record-\SubjectNoPad.pdf}
+  \label{Timeline}
+  \end{table}
+\fi
+
+\subsubsection{Cronometer nutrition log}
 Subjects used Cronometer, a validated nutrition tracking application, to record detailed dietary intake for at least 3 days during the study period. Cronometer provides comprehensive nutritional analysis of foods consumed, breaking down intake into macronutrient categories including carbohydrates, fats, proteins, vitamins, minerals, and other micronutrients. Nutrient values are reported as percent of recommended daily intake, capped at 300\% to standardize visualization. Some nutrients without established daily intake recommendations, such as added sugars and trans fats, are not included in the percent daily value calculations.
 
 \ifx\pdffilesize{Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-\SubjectNoPad.pdf}\undefined
@@ -446,38 +526,52 @@ Subjects used Cronometer, a validated nutrition tracking application, to record 
 \fi
 
 \newpage
-\subsection{Capscan and tubes}
+\subsubsection{FoodSeq}
 
-All CapScan devices collected were cleaned and sectioned. The area closest to the white tip is the most proximal region collected while the area closest to the tape-labeled binder clip is the most distal region. We marked targeted sampling regions and took photos of the final samples collected in the tubes. Note that there is generally great variability in terms of the number of regions, colors, and consistencies.
+FoodSeq is a metabarcoding pipeline developed by the Lawrence David lab that identifies food-derived DNA in biological samples. By targeting taxonomically informative genetic markers from plants and animals, FoodSeq enables high-resolution dietary reconstruction from stool and other sample types, providing an objective complement to self-reported dietary data.
+\\ \\
+\textbf{Plant DNA} was identified by targeting the chloroplast trnL gene, which is highly variable between plant species and allows for taxonomic classification of consumed plant matter.
 
-\ifx\pdffilesize{Weeklong-Processed-capsules/20250826_Capsule_Weeklong_S\SubjectNo.png}\undefined
-  \vspace{1em} Participant \SubjectNo\ did not collect any capsules.
-\else
-  \begin{figure}[H]
-  \centering
-  \includegraphics[width = 5.5in]{Weeklong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S\SubjectNo.png}
-  \caption{\textbf{Sectioned CapScan devices.} Pictures of cleaned devices and final collection regions.}
-  \label{CapscanSamples}
-  \end{figure}
-\fi
+\begin{figure}[H]
+\centering
+\includegraphics[width = 8in]{Weeklong-Food/Plants-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-\SubjectNoPad.pdf}
+\caption{\textbf{Plant ASVs in saliva samples.} Only ASVs detected at $>$1\% relative abundance in at least one sample are shown.}
+\end{figure}
 
-\newpage
-\subsection{Transit time timeline}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 8in]{Weeklong-Food/Plants-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-\SubjectNoPad.pdf}
+\caption{\textbf{Plant ASVs in CapScan samples.} Only ASVs detected at $>$1\% relative abundance in at least one sample are shown.}
+\end{figure}
 
-As each CapScan device is RFID chipped, we were able to calculate transit times. Average transit times per subject can be found in Figure \ref{IndividualTransit}.
+\begin{figure}[H]
+\centering
+\includegraphics[width = 8in]{Weeklong-Food/Plants-ASV-heatmap-0p01/Stool-collection/ASV-stool-\SubjectNoPad.pdf}
+\caption{\textbf{Plant ASVs in stool samples.} Only ASVs detected at $>$1\% relative abundance in at least one sample are shown.}
+\end{figure}
 
-\ifx\pdffilesize{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}\undefined
-  \vspace{1em} Participant \SubjectNo\ did not provide ingestion and collection times.
-\else
-  \begin{figure}[H]
-  \centering
-  \includegraphics[width = 6in]{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}
-  \caption{\textbf{Individual CapScan ingestion and collection times.} Timeline of when each CapScan device was in the subject's body throughout the study. The length of each blue bar represents the transit time in hours, which is indicated in white text. If a device was not found in the stool, it is depicted as a transparent bar.}
-  \label{Timeline}
-  \end{figure}
-\fi
+\textbf{Animal (meat) DNA} was identified by targeting the mitochondrial 12S rRNA gene, enabling detection and classification of consumed meat and animal products.
 
-\newpage
+\begin{figure}[H]
+\centering
+\includegraphics[width = 8in]{Weeklong-Food/Meat-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-\SubjectNoPad.pdf}
+\caption{\textbf{Meat ASVs in saliva samples.} Only ASVs detected at $>$1\% relative abundance in at least one sample are shown.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 8in]{Weeklong-Food/Meat-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-\SubjectNoPad.pdf}
+\caption{\textbf{Meat ASVs in CapScan samples.} Only ASVs detected at $>$1\% relative abundance in at least one sample are shown.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 8in]{Weeklong-Food/Meat-ASV-heatmap-0p01/Stool-collection/ASV-stool-\SubjectNoPad.pdf}
+\caption{\textbf{Meat ASVs in stool samples.} Only ASVs detected at $>$1\% relative abundance in at least one sample are shown.}
+\end{figure}
+
+
+
 \subsection{Cell imaging}
 
 During the weeklong study, subjects attempted to bring in a fresh paired capsule and stool sample that was kept refrigerated at 4 \textdegree C. We processed the samples per usual and prepared glycerol stocks and imaged them to look at overall cell densities and cell morphologies.
@@ -495,6 +589,7 @@ During the weeklong study, subjects attempted to bring in a fresh paired capsule
 
 \newpage
 \subsection{Microbial composition}
+\subsubsection{16S sequencing}
 
 Microbial community composition was characterized through 16S rRNA gene sequencing performed on the Illumina NextSeq platform. Raw sequencing reads were processed using the DADA2 pipeline, which infers exact amplicon sequence variants (ASVs) by modeling and correcting Illumina sequencing errors. Taxonomic assignment was performed against the SILVA ribosomal RNA database. Samples with fewer than 10,000 reads were excluded from downstream analyses to ensure adequate sequencing depth for reliable community characterization.
 
@@ -530,7 +625,7 @@ Microbial community composition was characterized through 16S rRNA gene sequenci
 \end{figure}
 
 \newpage
-\subsection{ASVs heatmap}
+\subsubsection{ASVs heatmap}
 
 \begin{figure}[H]
 \centering

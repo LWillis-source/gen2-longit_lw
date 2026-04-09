@@ -1,11 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.31)  8 APR 2026 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.31)  9 APR 2026 16:49
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**20250910_weeklong_individual_summary.tex
+**\def\SubjectNo{21}\input{20250910_weeklong_individual_summary.tex}
 (./20250910_weeklong_individual_summary.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
@@ -22,20 +20,25 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
+
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen141
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen142
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count196
@@ -85,10 +88,13 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -96,13 +102,17 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
@@ -118,25 +128,32 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen156
 \Gm@layoutvoffset=\dimen157
 \Gm@dimlist=\toks23
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen158
 \Gin@req@width=\dimen159
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/enumerate.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks24
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip53
 \enit@outerparindent=\dimen160
@@ -144,12 +161,15 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box53
 \enit@count@id=\count277
 \enitdp@description=\count278
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
@@ -160,7 +180,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count279
 \lst@gtempboxa=\box54
 \lst@token=\toks26
@@ -173,32 +194,42 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 \lst@newlines=\count283
 \lst@lineno=\count284
 \lst@maxwidth=\dimen164
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 \c@lstnumber=\count285
 \lst@skipnumbers=\count286
 \lst@framebox=\box55
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/fvextra/fvextra.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2023/11/28 v1.6.1 fvextra - extensions and patches for fancyvr
 b
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count287
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \FV@CodeLineNo=\count288
 \FV@InFile=\read2
@@ -206,10 +237,12 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \c@FancyVerbLine=\count289
 \FV@StepNumber=\count290
 \FV@OutFile=\write3
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/upquote/upquote.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/lineno/lineno.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
 \linenopenalty=\count291
 \output=\toks27
@@ -256,48 +289,57 @@ LaTeX Info: Redefining \\ on input line 3180.
 \FV@LineIndentBox=\box61
 \c@FV@BreakBufferDepth=\count315
 \FV@LineWidth=\dimen175
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-runsystem(uname -s > "20250910_weeklong_individual_summary.w18")...executed.
 
-(./20250910_weeklong_individual_summary.w18)
-runsystem(rm -- "20250910_weeklong_individual_summary.w18")...executed.
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
 
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (/usr/loc
-al/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count316
 \xs_countb=\count317
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/framed/framed.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip55
 \fb@frw=\dimen176
 \fb@frh=\dimen177
 \FrameRule=\dimen178
 \FrameSep=\dimen179
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count318
 \float@exts=\toks28
@@ -313,10 +355,25 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks30
 \c@listing=\count321
 )
-runsystem(mkdir -p _minted-20250910_weeklong_individual_summary)...executed.
+runsystem(mkdir -p _minted-20250910_weeklong_individual_summary)...disabled (re
+stricted).
+
+
+
+! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usemintedstyle
+                   {perldoc}
+Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for
+ more information.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen180
@@ -333,24 +390,32 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count323
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count324
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count325
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
@@ -363,14 +428,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 \@linkdim=\dimen188
 \Hy@linkcounter=\count327
 \Hy@pagecounter=\count328
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count329
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -384,14 +451,17 @@ Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
 \c@Hy@tempcnt=\count330
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
 \XeTeXLinkMargin=\dimen189
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
 (/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
@@ -406,6 +476,7 @@ Package hyperref Info: backreferencing OFF on input line 6078.
 Package hyperref Info: Link coloring OFF on input line 6083.
 Package hyperref Info: Link coloring with OCG OFF on input line 6088.
 Package hyperref Info: PDF/A mode OFF on input line 6093.
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
@@ -415,8 +486,10 @@ package with kernel methods
 \c@Hfootnote=\count334
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
@@ -438,18 +511,28 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 31.
 runsystem(command -v pygmentize && touch 20250910_weeklong_individual_summary.a
-ex)...executed.
+ex)...disabled (restricted).
 
-runsystem(rm 20250910_weeklong_individual_summary.aex)...executed.
+
+
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \begin{document}
+                     
+Refer to the installation instructions in the minted documentation for more inf
+ormation.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count337
 \l__pdf_internal_box=\box65
-) (./20250910_weeklong_individual_summary.aux
-
-LaTeX Warning: Label `TransitTime' multiply defined.
-
+)
+(./20250910_weeklong_individual_summary.aux
 
 LaTeX Warning: Label `Timeline' multiply defined.
 
@@ -474,6 +557,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -525,6 +609,7 @@ LaTeX Font Info:    ... okay on input line 55.
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
@@ -534,34 +619,43 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 55.
-(./20250910_weeklong_individual_summary.out) (./20250910_weeklong_individual_su
-mmary.out)
+
+(./20250910_weeklong_individual_summary.out)
+(./20250910_weeklong_individual_summary.out)
 \@outlinefile=\write5
 \openout5 = `20250910_weeklong_individual_summary.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
+
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
 
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./20250910_weeklong_individual_summary.toc)
+)
+(./20250910_weeklong_individual_summary.toc)
 \tf@toc=\write6
 \openout6 = `20250910_weeklong_individual_summary.toc'.
 
-[1
+ [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
+
+ []
+
+
 
 pdfTeX warning: pdflatex (file /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Gith
 ub/gen2-longit/3-figures/Weeklong-Sample-collection/Study-design/Weeklong-Study
 -timeline.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Study-design/Weeklong-Study-timeline.pdf, id=110, 529.197
+ong-Sample-collection/Study-design/Weeklong-Study-timeline.pdf, id=186, 529.197
 05pt x 125.86021pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Study-design/Weeklong-Study-timeline.pdf Graphic fil
@@ -570,10 +664,10 @@ e (type pdf)
 eeklong-Sample-collection/Study-design/Weeklong-Study-timeline.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Study-design/Weeklong-Study-timel
-ine.pdf  used on input line 72.
+ine.pdf  used on input line 74.
 (pdftex.def)             Requested size: 469.75499pt x 111.72331pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Study-design/Weeklong-gender-distribution.pdf, id=111, 72
+ong-Sample-collection/Study-design/Weeklong-gender-distribution.pdf, id=187, 72
 .27pt x 108.405pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Study-design/Weeklong-gender-distribution.pdf Graphi
@@ -582,15 +676,15 @@ c file (type pdf)
 eeklong-Sample-collection/Study-design/Weeklong-gender-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Study-design/Weeklong-gender-dist
-ribution.pdf  used on input line 87.
+ribution.pdf  used on input line 90.
 (pdftex.def)             Requested size: 75.87799pt x 113.81102pt.
 
-Overfull \hbox (5.41762pt too wide) in paragraph at lines 87--88
+Overfull \hbox (5.41762pt too wide) in paragraph at lines 90--91
  [][] 
  []
 
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Study-design/Weeklong-age-distribution.pdf, id=112, 144.5
+ong-Sample-collection/Study-design/Weeklong-age-distribution.pdf, id=188, 144.5
 4pt x 108.405pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Study-design/Weeklong-age-distribution.pdf Graphic f
@@ -599,15 +693,15 @@ ile (type pdf)
 eeklong-Sample-collection/Study-design/Weeklong-age-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Study-design/Weeklong-age-distrib
-ution.pdf  used on input line 93.
+ution.pdf  used on input line 96.
 (pdftex.def)             Requested size: 151.75601pt x 113.81102pt.
 
-Overfull \hbox (1.43098pt too wide) in paragraph at lines 93--94
+Overfull \hbox (1.43098pt too wide) in paragraph at lines 96--97
  [][] 
  []
 
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Study-design/Weeklong-race-distribution.pdf, id=113, 144.
+ong-Sample-collection/Study-design/Weeklong-race-distribution.pdf, id=189, 144.
 54pt x 108.405pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Study-design/Weeklong-race-distribution.pdf Graphic 
@@ -616,10 +710,10 @@ file (type pdf)
 eeklong-Sample-collection/Study-design/Weeklong-race-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Study-design/Weeklong-race-distri
-bution.pdf  used on input line 99.
+bution.pdf  used on input line 102.
 (pdftex.def)             Requested size: 151.75601pt x 113.81102pt.
 
-Overfull \hbox (1.43098pt too wide) in paragraph at lines 99--100
+Overfull \hbox (1.43098pt too wide) in paragraph at lines 102--103
  [][] 
  []
 
@@ -632,17 +726,65 @@ Study-design/Weeklong-age-distribution.pdf> </Users/bfu/Dropbox/Papers/Longitud
 inal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-collection/Study-design/
 Weeklong-race-distribution.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Samples-summary.pdf, id=174, 361.35pt x 108.405pt>
+ong-Sample-collection/Lifestyle-diet.pdf, id=249, 325.215pt x 144.54pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/Lifestyle-diet.pdf Graphic file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/Lifestyle-diet.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Sample-collection/Lifestyle-diet.pdf  used on input
+ line 114.
+(pdftex.def)             Requested size: 397.48499pt x 176.67375pt.
+ [3 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/Lifestyle-diet.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+
+ []
+
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Sample-collection/RomeIV.pdf, id=260, 433.62pt x 289.08pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/RomeIV.pdf Graphic file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/RomeIV.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Sample-collection/RomeIV.pdf  used on input line 15
+5.
+(pdftex.def)             Requested size: 433.62pt x 289.09251pt.
+[4] [5 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figure
+s/Weeklong-Sample-collection/RomeIV.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
+
+ []
+
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Sample-collection/GSRS-IBS.pdf, id=298, 289.08pt x 216.81pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/GSRS-IBS.pdf Graphic file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/GSRS-IBS.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Sample-collection/GSRS-IBS.pdf  used on input line 
+182.
+(pdftex.def)             Requested size: 433.62pt x 325.23073pt.
+[6 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
+eklong-Sample-collection/GSRS-IBS.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
+
+ []
+
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Sample-collection/Samples-summary.pdf, id=325, 361.35pt x 108.405pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Samples-summary.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Sample-collection/Samples-summary.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Samples-summary.pdf  used on inpu
-t line 114.
+t line 197.
 (pdftex.def)             Requested size: 397.48499pt x 119.24585pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Capsule-classfication.png, id=175, 218.4963pt x 347.3778p
+ong-Sample-collection/Capsule-classfication.png, id=326, 218.4963pt x 347.3778p
 t>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Capsule-classfication.png Graphic file (type png)
@@ -650,10 +792,10 @@ Weeklong-Sample-collection/Capsule-classfication.png Graphic file (type png)
 eeklong-Sample-collection/Capsule-classfication.png>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Capsule-classfication.png  used o
-n input line 128.
+n input line 210.
 (pdftex.def)             Requested size: 140.92792pt x 224.06491pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Capsule-regions-distribution.pdf, id=176, 289.08pt x 144.
+ong-Sample-collection/Capsule-regions-distribution.pdf, id=327, 289.08pt x 144.
 54pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Capsule-regions-distribution.pdf Graphic file (type 
@@ -662,20 +804,25 @@ pdf)
 eeklong-Sample-collection/Capsule-regions-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Capsule-regions-distribution.pdf 
- used on input line 135.
-(pdftex.def)             Requested size: 93.94955pt x 46.97493pt.
-[3 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
+ used on input line 217.
+(pdftex.def)             Requested size: 234.87749pt x 117.43845pt.
+[7 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
 eklong-Sample-collection/Samples-summary.pdf> </Users/bfu/Dropbox/Papers/Longit
 udinal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-collection/Capsule-cla
 ssfication.png (PNG copy)> </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/
 gen2-longit/3-figures/Weeklong-Sample-collection/Capsule-regions-distribution.p
 df>]
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
+Underfull \hbox (badness 10000) in paragraph at lines 225--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--230
 
  []
 
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Transit-time-distribution.pdf, id=195, 144.54pt x 108.405
+ong-Sample-collection/Transit-time-distribution.pdf, id=350, 144.54pt x 108.405
 pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Transit-time-distribution.pdf Graphic file (type pdf
@@ -684,10 +831,10 @@ Weeklong-Sample-collection/Transit-time-distribution.pdf Graphic file (type pdf
 eeklong-Sample-collection/Transit-time-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Transit-time-distribution.pdf  us
-ed on input line 150.
+ed on input line 233.
 (pdftex.def)             Requested size: 144.54pt x 108.40968pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Transit-time-facet-distribution.pdf, id=196, 361.35pt x 3
+ong-Sample-collection/Transit-time-facet-distribution.pdf, id=351, 361.35pt x 3
 61.35pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Transit-time-facet-distribution.pdf Graphic file (ty
@@ -696,38 +843,38 @@ pe pdf)
 eeklong-Sample-collection/Transit-time-facet-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Transit-time-facet-distribution.p
-df  used on input line 157.
-(pdftex.def)             Requested size: 346.89621pt x 346.89757pt.
-[4 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
-eklong-Sample-collection/Transit-time-distribution.pdf>] [5 </Users/bfu/Dropbox
-/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-collecti
-on/Transit-time-facet-distribution.pdf>]
+df  used on input line 240.
+(pdftex.def)             Requested size: 307.14749pt x 307.14896pt.
+[8 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
+eklong-Sample-collection/Transit-time-distribution.pdf> </Users/bfu/Dropbox/Pap
+ers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-collection/T
+ransit-time-facet-distribution.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/pH-distribution.pdf, id=219, 180.675pt x 108.405pt>
+ong-Sample-collection/pH-distribution.pdf, id=371, 180.675pt x 108.405pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/pH-distribution.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Sample-collection/pH-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/pH-distribution.pdf  used on inpu
-t line 169.
+t line 251.
 (pdftex.def)             Requested size: 189.69504pt x 113.81102pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/pH-summary.pdf, id=220, 578.16pt x 289.08pt>
+ong-Sample-collection/pH-summary.pdf, id=372, 578.16pt x 289.08pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/pH-summary.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Sample-collection/pH-summary.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/pH-summary.pdf  used on input lin
-e 176.
+e 258.
 (pdftex.def)             Requested size: 469.75499pt x 234.8769pt.
-[6 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
-eklong-Sample-collection/pH-distribution.pdf> </Users/bfu/Dropbox/Papers/Longit
-udinal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-collection/pH-summary.
-pdf>]
+ [9 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/pH-distribution.pdf> </Users/bfu/Dropbox/Papers/Longi
+tudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-collection/pH-summary
+.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Bristol-stool-score-distribution.pdf, id=237, 144.54pt x 
+ong-Sample-collection/Bristol-stool-score-distribution.pdf, id=389, 144.54pt x 
 108.405pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Bristol-stool-score-distribution.pdf Graphic file (t
@@ -736,10 +883,10 @@ ype pdf)
 eeklong-Sample-collection/Bristol-stool-score-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Bristol-stool-score-distribution.
-pdf  used on input line 187.
+pdf  used on input line 268.
 (pdftex.def)             Requested size: 151.75601pt x 113.81102pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Bristol-stool-score-summary.pdf, id=238, 289.08pt x 289.0
+ong-Sample-collection/Bristol-stool-score-summary.pdf, id=390, 289.08pt x 289.0
 8pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Bristol-stool-score-summary.pdf Graphic file (type p
@@ -748,108 +895,70 @@ df)
 eeklong-Sample-collection/Bristol-stool-score-summary.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Bristol-stool-score-summary.pdf  
-used on input line 194.
+used on input line 274.
 (pdftex.def)             Requested size: 289.07999pt x 289.09251pt.
-[7 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
-eklong-Sample-collection/Bristol-stool-score-distribution.pdf> </Users/bfu/Drop
-box/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-colle
-ction/Bristol-stool-score-summary.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 203--206
+ [10 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/Bristol-stool-score-distribution.pdf> </Users/bfu/Dr
+opbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Sample-col
+lection/Bristol-stool-score-summary.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 287--290
 
  []
 
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/PSS-distribution.pdf, id=256, 433.62pt x 289.08pt>
+ong-Sample-collection/PSS-distribution.pdf, id=407, 433.62pt x 289.08pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/PSS-distribution.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Sample-collection/PSS-distribution.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/PSS-distribution.pdf  used on inp
-ut line 221.
+ut line 305.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
-[8 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
-eklong-Sample-collection/PSS-distribution.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 227--240
+[11 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/PSS-distribution.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 311--324
 
  []
 
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/PANAS-summary.pdf, id=277, 433.62pt x 361.35pt>
+ong-Sample-collection/PANAS-summary.pdf, id=429, 433.62pt x 361.35pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/PANAS-summary.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Sample-collection/PANAS-summary.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/PANAS-summary.pdf  used on input 
-line 245.
+line 329.
 (pdftex.def)             Requested size: 433.62pt x 361.36566pt.
-[9 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
-eklong-Sample-collection/PANAS-summary.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 253--256
-
- []
-
-</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/RomeIV.pdf, id=291, 433.62pt x 289.08pt>
-File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
-Weeklong-Sample-collection/RomeIV.pdf Graphic file (type pdf)
-<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Sample-collection/RomeIV.pdf>
-Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
-2-longit/3-figures/Weeklong-Sample-collection/RomeIV.pdf  used on input line 28
-4.
-(pdftex.def)             Requested size: 433.62pt x 289.09251pt.
-[10] [11 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figu
-res/Weeklong-Sample-collection/RomeIV.pdf>]
-Underfull \hbox (badness 1184) in paragraph at lines 290--293
-[]\OT1/cmr/m/n/10 The \OT1/cmr/bx/n/10 Gas-troin-testi-nal Symp-tom Rat-ing Sca
-le for IBS (GSRS-IBS) \OT1/cmr/m/n/10 is a 13-item val-i-dated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--293
-
- []
-
-</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/GSRS-IBS.pdf, id=330, 289.08pt x 216.81pt>
-File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
-Weeklong-Sample-collection/GSRS-IBS.pdf Graphic file (type pdf)
-<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Sample-collection/GSRS-IBS.pdf>
-Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
-2-longit/3-figures/Weeklong-Sample-collection/GSRS-IBS.pdf  used on input line 
-312.
-(pdftex.def)             Requested size: 433.62pt x 325.23073pt.
 [12 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Sample-collection/GSRS-IBS.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 327--330
+eeklong-Sample-collection/PANAS-summary.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 343--346
 
  []
 
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Alpha-diversity/Weeklong-Shannon.pdf, id=354, 180.675pt x 144.54pt>
+ong-Alpha-diversity/Weeklong-Shannon.pdf, id=443, 180.675pt x 144.54pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Alpha-diversity/Weeklong-Shannon.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Alpha-diversity/Weeklong-Shannon.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon.pdf  used on input
- line 333.
+ line 349.
 (pdftex.def)             Requested size: 248.97336pt x 199.16928pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf, id=355, 180.675pt x 72.27pt>
+ong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf, id=444, 180.675pt x 72.27pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf  used 
-on input line 345.
+on input line 361.
 (pdftex.def)             Requested size: 211.3883pt x 84.55553pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Alpha-diversity/Weeklong-Shannon-Capscan-pH.pdf, id=356, 180.675pt x 72.27p
+ong-Alpha-diversity/Weeklong-Shannon-Capscan-pH.pdf, id=445, 180.675pt x 72.27p
 t>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-pH.pdf Graphic file (type pdf
@@ -858,10 +967,10 @@ Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-pH.pdf Graphic file (type pdf
 eeklong-Alpha-diversity/Weeklong-Shannon-Capscan-pH.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-pH.pdf  us
-ed on input line 351.
+ed on input line 367.
 (pdftex.def)             Requested size: 211.3883pt x 84.55553pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Alpha-diversity/Weeklong-Shannon-Capscan-prediction.pdf, id=357, 180.675pt 
+ong-Alpha-diversity/Weeklong-Shannon-Capscan-prediction.pdf, id=446, 180.675pt 
 x 72.27pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-prediction.pdf Graphic file (
@@ -870,10 +979,10 @@ type pdf)
 eeklong-Alpha-diversity/Weeklong-Shannon-Capscan-prediction.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-prediction
-.pdf  used on input line 357.
+.pdf  used on input line 373.
 (pdftex.def)             Requested size: 211.3883pt x 84.55553pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf, id=358, 180.675p
+ong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf, id=447, 180.675p
 t x 72.27pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf Graphic file
@@ -882,79 +991,83 @@ Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf Graphic file
 eeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-ti
-me.pdf  used on input line 363.
+me.pdf  used on input line 379.
 (pdftex.def)             Requested size: 211.3883pt x 84.55553pt.
 [13 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Alpha-diversity/Weeklong-Shannon.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Alpha-diversity/Weeklong-Shannon-subj.pdf, id=376, 361.35pt x 289.08pt>
+ong-Alpha-diversity/Weeklong-Shannon-subj.pdf, id=465, 361.35pt x 289.08pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Alpha-diversity/Weeklong-Shannon-subj.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Alpha-diversity/Weeklong-Shannon-subj.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon-subj.pdf  used on 
-input line 370.
+input line 386.
 (pdftex.def)             Requested size: 433.62pt x 346.89867pt.
-[14 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf> </Users/bfu/Dropbox/Paper
-s/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Alpha-diversity/Weekl
-ong-Shannon-Capscan-pH.pdf> </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github
-/gen2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-predic
-tion.pdf> </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-fig
-ures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf> </User
-s/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Al
-pha-diversity/Weeklong-Shannon-subj.pdf>]
+ [14 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf> </Users/bfu/Dropbox/Pape
+rs/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Alpha-diversity/Week
+long-Shannon-Capscan-pH.pdf> </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Githu
+b/gen2-longit/3-figures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-predi
+ction.pdf> </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-fi
+gures/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf> </Use
+rs/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-A
+lpha-diversity/Weeklong-Shannon-subj.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
+
+ []
+
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-PCoA/All/PCoA-binary-all.pdf, id=410, 216.81pt x 216.81pt>
+ong-PCoA/All/PCoA-binary-all.pdf, id=499, 216.81pt x 216.81pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-PCoA/All/PCoA-binary-all.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-PCoA/All/PCoA-binary-all.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
-2-longit/3-figures/Weeklong-PCoA/All/PCoA-binary-all.pdf  used on input line 39
-7.
-(pdftex.def)             Requested size: 150.32503pt x 150.33348pt.
+2-longit/3-figures/Weeklong-PCoA/All/PCoA-binary-all.pdf  used on input line 41
+5.
+(pdftex.def)             Requested size: 140.92792pt x 140.93474pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-PCoA/All/PCoA-bray-all.pdf, id=411, 216.81pt x 216.81pt>
+ong-PCoA/All/PCoA-bray-all.pdf, id=500, 216.81pt x 216.81pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-PCoA/All/PCoA-bray-all.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-PCoA/All/PCoA-bray-all.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
-2-longit/3-figures/Weeklong-PCoA/All/PCoA-bray-all.pdf  used on input line 404.
+2-longit/3-figures/Weeklong-PCoA/All/PCoA-bray-all.pdf  used on input line 422.
 
-(pdftex.def)             Requested size: 150.32503pt x 150.33348pt.
+(pdftex.def)             Requested size: 140.92792pt x 140.93474pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-PCoA/All/PCoA-canberra-all.pdf, id=412, 216.81pt x 216.81pt>
+ong-PCoA/All/PCoA-canberra-all.pdf, id=501, 216.81pt x 216.81pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-PCoA/All/PCoA-canberra-all.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-PCoA/All/PCoA-canberra-all.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-PCoA/All/PCoA-canberra-all.pdf  used on input line 
-411.
-(pdftex.def)             Requested size: 150.32503pt x 150.33348pt.
+429.
+(pdftex.def)             Requested size: 140.92792pt x 140.93474pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-PCoA/All/PCoA-unifrac-all.pdf, id=413, 216.81pt x 216.81pt>
+ong-PCoA/All/PCoA-unifrac-all.pdf, id=502, 216.81pt x 216.81pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-PCoA/All/PCoA-unifrac-all.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-PCoA/All/PCoA-unifrac-all.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-PCoA/All/PCoA-unifrac-all.pdf  used on input line 4
-18.
-(pdftex.def)             Requested size: 150.32503pt x 150.33348pt.
+36.
+(pdftex.def)             Requested size: 140.92792pt x 140.93474pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-PCoA/All/PCoA-wunifrac-all.pdf, id=414, 289.08pt x 216.81pt>
+ong-PCoA/All/PCoA-wunifrac-all.pdf, id=503, 289.08pt x 216.81pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-PCoA/All/PCoA-wunifrac-all.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-PCoA/All/PCoA-wunifrac-all.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-PCoA/All/PCoA-wunifrac-all.pdf  used on input line 
-425.
-(pdftex.def)             Requested size: 201.9912pt x 151.49136pt.
+443.
+(pdftex.def)             Requested size: 187.89912pt x 140.92482pt.
 [15{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
 c} </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/We
 eklong-PCoA/All/PCoA-binary-all.pdf> </Users/bfu/Dropbox/Papers/Longitudinal-ge
@@ -965,27 +1078,22 @@ en2-longit/3-figures/Weeklong-PCoA/All/PCoA-unifrac-all.pdf> </Users/bfu/Dropbo
 x/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-PCoA/All/PCoA-
 wunifrac-all.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf, id=447, 578.16pt x 28
-1.05pt>
+ong-Sample-collection/Kit-breakdown/Kit-breakdown-21.pdf, id=535, 614.295pt x 3
+04.2567pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
-Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf Graphic file (typ
+Weeklong-Sample-collection/Kit-breakdown/Kit-breakdown-21.pdf Graphic file (typ
 e pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf>
+eeklong-Sample-collection/Kit-breakdown/Kit-breakdown-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
-2-longit/3-figures/Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pd
-f  used on input line 442.
-(pdftex.def)             Requested size: 505.89pt x 245.91814pt.
-
-Overfull \hbox (36.13501pt too wide) in paragraph at lines 442--443
- [][] 
- []
-
-[16 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf>]
+2-longit/3-figures/Weeklong-Sample-collection/Kit-breakdown/Kit-breakdown-21.pd
+f  used on input line 461.
+(pdftex.def)             Requested size: 433.62pt x 214.77026pt.
+ [16 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/Kit-breakdown/Kit-breakdown-21.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
 ong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S21.pn
-g, id=458, 578.16pt x 675.7245pt>
+g, id=607, 578.16pt x 675.7245pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S
 21.png Graphic file (type png)
@@ -994,13 +1102,17 @@ eeklong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S2
 1.png>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Processed-capsule-images/20250826
-_Capsule_Weeklong_S21.png  used on input line 458.
+_Capsule_Weeklong_S21.png  used on input line 476.
 (pdftex.def)             Requested size: 397.48499pt x 464.55945pt.
-[17 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S2
-1.png (PNG copy)>]
+ [17 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/Processed-capsule-images/20250826_Capsule_Weeklong_S
+21.png (PNG copy)>]
+
+LaTeX Warning: Reference `IndividualTransit' on page 18 undefined on input line
+ 485.
+
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Sample-collection/Timeline-breakdown/Timeline-breakdown-21.pdf, id=465, 289
+ong-Sample-collection/Timeline-breakdown/Timeline-breakdown-21.pdf, id=612, 289
 .08pt x 155.58125pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-21.pdf Graphic
@@ -1009,12 +1121,159 @@ Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-21.pdf Graphic
 eeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Sample-collection/Timeline-breakdown/Timeline-break
-down-21.pdf  used on input line 474.
+down-21.pdf  used on input line 492.
 (pdftex.def)             Requested size: 433.62pt x 233.38315pt.
 [18 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-21.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-Cell-count/20250826_Weeklong_Imaging_Subj21.pdf, id=476, 488.37357pt x 965.
+ong-Sample-collection/Diet-exercise-record/Diet-exercise-record-21.pdf, id=623,
+ 614.295pt x 650.43pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/Diet-exercise-record/Diet-exercise-record-21.pdf Gra
+phic file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/Diet-exercise-record/Diet-exercise-record-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Sample-collection/Diet-exercise-record/Diet-exercis
+e-record-21.pdf  used on input line 509.
+(pdftex.def)             Requested size: 433.62pt x 459.12885pt.
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf, id=624, 578.16pt x 28
+1.05pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf Graphic file (typ
+e pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pd
+f  used on input line 522.
+(pdftex.def)             Requested size: 505.89pt x 245.91814pt.
+
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 522--523
+ [][] 
+ []
+
+[19 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/Diet-exercise-record/Diet-exercise-record-21.pdf>]
+[20 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Sample-collection/Nutrient-breakdown/Nutrient-21.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 531--534
+
+ []
+
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Food/Plants-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf, id=743, 7
+22.7pt x 508.90125pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Food/Plants-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf Graph
+ic file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Plants-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Food/Plants-ASV-heatmap-0p01/Saliva-collection/ASV-
+saliva-21.pdf  used on input line 537.
+(pdftex.def)             Requested size: 578.15999pt x 407.12155pt.
+
+Overfull \hbox (108.405pt too wide) in paragraph at lines 537--538
+ [][] 
+ []
+
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Food/Plants-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf, id=744,
+ 722.7pt x 628.3475pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Food/Plants-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf Gra
+phic file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Plants-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Food/Plants-ASV-heatmap-0p01/Capscan-collection/ASV
+-capscan-21.pdf  used on input line 543.
+(pdftex.def)             Requested size: 578.15999pt x 502.67868pt.
+
+Overfull \hbox (108.405pt too wide) in paragraph at lines 543--544
+ [][] 
+ []
+
+[21 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Plants-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf>]
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Food/Plants-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf, id=757, 722
+.7pt x 335.2525pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Food/Plants-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf Graphic
+ file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Plants-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Food/Plants-ASV-heatmap-0p01/Stool-collection/ASV-s
+tool-21.pdf  used on input line 549.
+(pdftex.def)             Requested size: 578.15999pt x 268.20236pt.
+
+Overfull \hbox (108.405pt too wide) in paragraph at lines 549--550
+ [][] 
+ []
+
+[22 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Plants-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf>]
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Food/Meat-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf, id=769, 722
+.7pt x 335.2525pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Food/Meat-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf Graphic
+ file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Meat-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Food/Meat-ASV-heatmap-0p01/Saliva-collection/ASV-sa
+liva-21.pdf  used on input line 557.
+(pdftex.def)             Requested size: 578.15999pt x 268.20236pt.
+
+Overfull \hbox (108.405pt too wide) in paragraph at lines 557--558
+ [][] 
+ []
+
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Food/Meat-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf, id=770, 7
+22.7pt x 357.335pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Food/Meat-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf Graph
+ic file (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Meat-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Food/Meat-ASV-heatmap-0p01/Capscan-collection/ASV-c
+apscan-21.pdf  used on input line 563.
+(pdftex.def)             Requested size: 578.15999pt x 285.86838pt.
+
+Overfull \hbox (108.405pt too wide) in paragraph at lines 563--564
+ [][] 
+ []
+
+[23 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Plants-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf> </Users
+/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Foo
+d/Meat-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf>]
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Food/Meat-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf, id=789, 722.7
+pt x 259.97125pt>
+File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-Food/Meat-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf Graphic f
+ile (type pdf)
+<use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Meat-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf>
+Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
+2-longit/3-figures/Weeklong-Food/Meat-ASV-heatmap-0p01/Stool-collection/ASV-sto
+ol-21.pdf  used on input line 569.
+(pdftex.def)             Requested size: 578.15999pt x 207.97728pt.
+
+Overfull \hbox (108.405pt too wide) in paragraph at lines 569--570
+ [][] 
+ []
+
+</Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
+ong-Cell-count/20250826_Weeklong_Imaging_Subj21.pdf, id=790, 488.37357pt x 965.
 87051pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-Cell-count/20250826_Weeklong_Imaging_Subj21.pdf Graphic file (type pdf
@@ -1023,22 +1282,26 @@ Weeklong-Cell-count/20250826_Weeklong_Imaging_Subj21.pdf Graphic file (type pdf
 eeklong-Cell-count/20250826_Weeklong_Imaging_Subj21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-Cell-count/20250826_Weeklong_Imaging_Subj21.pdf  us
-ed on input line 490.
+ed on input line 584.
 (pdftex.def)             Requested size: 267.39877pt x 528.87234pt.
-[19 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-Cell-count/20250826_Weeklong_Imaging_Subj21.pdf>]
+[24 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-Food/Meat-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf> </Use
+rs/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-F
+ood/Meat-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf>] [25 </Users/bfu/D
+ropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-Cell-coun
+t/20250826_Weeklong_Imaging_Subj21.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-composition-0p01/Composition-all-legend.pdf, id=506, 361.35pt x 180.675pt>
+ong-composition-0p01/Composition-all-legend.pdf, id=838, 361.35pt x 180.675pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-composition-0p01/Composition-all-legend.pdf Graphic file (type pdf)
 <use /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-composition-0p01/Composition-all-legend.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-composition-0p01/Composition-all-legend.pdf  used o
-n input line 503.
+n input line 598.
 (pdftex.def)             Requested size: 433.62pt x 216.81165pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-composition-0p01/Saliva-collection/Composition-saliva-21.pdf, id=507, 361.3
+ong-composition-0p01/Saliva-collection/Composition-saliva-21.pdf, id=839, 361.3
 5pt x 289.08pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-composition-0p01/Saliva-collection/Composition-saliva-21.pdf Graphic f
@@ -1047,10 +1310,10 @@ ile (type pdf)
 eeklong-composition-0p01/Saliva-collection/Composition-saliva-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-composition-0p01/Saliva-collection/Composition-sali
-va-21.pdf  used on input line 514.
+va-21.pdf  used on input line 609.
 (pdftex.def)             Requested size: 231.17499pt x 184.9429pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-composition-0p01/Capscan-collection/Composition-capscan-21.pdf, id=508, 686
+ong-composition-0p01/Capscan-collection/Composition-capscan-21.pdf, id=840, 686
 .565pt x 289.08pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-composition-0p01/Capscan-collection/Composition-capscan-21.pdf Graphic
@@ -1059,10 +1322,10 @@ Weeklong-composition-0p01/Capscan-collection/Composition-capscan-21.pdf Graphic
 eeklong-composition-0p01/Capscan-collection/Composition-capscan-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-composition-0p01/Capscan-collection/Composition-cap
-scan-21.pdf  used on input line 520.
+scan-21.pdf  used on input line 615.
 (pdftex.def)             Requested size: 439.23248pt x 184.9429pt.
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-composition-0p01/Stool-collection/Composition-stool-21.pdf, id=509, 361.35p
+ong-composition-0p01/Stool-collection/Composition-stool-21.pdf, id=841, 361.35p
 t x 289.08pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-composition-0p01/Stool-collection/Composition-stool-21.pdf Graphic fil
@@ -1071,20 +1334,21 @@ e (type pdf)
 eeklong-composition-0p01/Stool-collection/Composition-stool-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-composition-0p01/Stool-collection/Composition-stool
--21.pdf  used on input line 526.
+-21.pdf  used on input line 621.
 (pdftex.def)             Requested size: 231.17499pt x 184.9429pt.
-[20 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-composition-0p01/Composition-all-legend.pdf>]
+ [26 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
+Weeklong-composition-0p01/Composition-all-legend.pdf>]
 Overfull \vbox (9.89867pt too high) has occurred while \output is active []
 
-[21 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+
+[27 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-composition-0p01/Saliva-collection/Composition-saliva-21.pdf> </Users/b
 fu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-compo
 sition-0p01/Capscan-collection/Composition-capscan-21.pdf> </Users/bfu/Dropbox/
 Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-composition-0p01
 /Stool-collection/Composition-stool-21.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf, id=541, 722.7pt x 411
+ong-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf, id=873, 722.7pt x 411
 .5375pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf Graphic file (typ
@@ -1093,15 +1357,15 @@ e pdf)
 eeklong-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pd
-f  used on input line 537.
+f  used on input line 632.
 (pdftex.def)             Requested size: 578.15999pt x 329.23045pt.
 
-Overfull \hbox (108.405pt too wide) in paragraph at lines 537--538
+Overfull \hbox (108.405pt too wide) in paragraph at lines 632--633
  [][] 
  []
 
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf, id=542, 722.7pt x 7
+ong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf, id=874, 722.7pt x 7
 36.7525pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf Graphic file (t
@@ -1110,17 +1374,17 @@ ype pdf)
 eeklong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.
-pdf  used on input line 543.
+pdf  used on input line 638.
 (pdftex.def)             Requested size: 578.15999pt x 589.4028pt.
 
-Overfull \hbox (108.405pt too wide) in paragraph at lines 543--544
+Overfull \hbox (108.405pt too wide) in paragraph at lines 638--639
  [][] 
  []
 
-[22 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+[28 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
 eeklong-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-21.pdf>]
 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weekl
-ong-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf, id=554, 722.7pt x 519.9
+ong-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf, id=886, 722.7pt x 519.9
 425pt>
 File: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/
 Weeklong-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf Graphic file (type 
@@ -1129,37 +1393,41 @@ pdf)
 eeklong-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf>
 Package pdftex.def Info: /Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen
 2-longit/3-figures/Weeklong-ASV-heatmap-0p01/Stool-collection/ASV-stool-21.pdf 
- used on input line 549.
+ used on input line 644.
 (pdftex.def)             Requested size: 578.15999pt x 415.95457pt.
 
-Overfull \hbox (108.405pt too wide) in paragraph at lines 549--550
+Overfull \hbox (108.405pt too wide) in paragraph at lines 644--645
  [][] 
  []
 
-[23 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
-eeklong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf>] [24 </Users/bf
+[29 </Users/bfu/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/W
+eeklong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-21.pdf>] [30 </Users/bf
 u/Dropbox/Papers/Longitudinal-gen2/Github/gen2-longit/3-figures/Weeklong-ASV-he
-atmap-0p01/Stool-collection/ASV-stool-21.pdf>] (./20250910_weeklong_individual_
-summary.aux)
+atmap-0p01/Stool-collection/ASV-stool-21.pdf>]
+(./20250910_weeklong_individual_summary.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 
+
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `20250910_weeklong_individual_summary.out' ha
 s not changed.
-(rerunfilecheck)             Checksum: 58A63581E01679AF948076B41E8D0813;2801.
+(rerunfilecheck)             Checksum: 3657556B50AE692E7BD43E5390B85FBC;4948.
  ) 
 Here is how much of TeX's memory you used:
- 17245 strings out of 474116
- 336397 string characters out of 5743682
- 1940187 words of memory out of 5000000
- 39267 multiletter control sequences out of 15000+600000
+ 17379 strings out of 474116
+ 350739 string characters out of 5743682
+ 1947187 words of memory out of 5000000
+ 39374 multiletter control sequences out of 15000+600000
  568774 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,9n,79p,823b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 81i,9n,82p,783b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1177,11 +1445,11 @@ ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on 20250910_weeklong_individual_summary.pdf (24 pages, 6774020 b
+Output written on 20250910_weeklong_individual_summary.pdf (30 pages, 6915798 b
 ytes).
 PDF statistics:
- 678 PDF objects out of 1000 (max. 8388607)
- 506 compressed objects within 6 object streams
- 120 named destinations out of 1000 (max. 500000)
- 348 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1015 PDF objects out of 1200 (max. 8388607)
+ 669 compressed objects within 7 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 513 words of extra memory for PDF output out of 10000 (max. 10000000)
 

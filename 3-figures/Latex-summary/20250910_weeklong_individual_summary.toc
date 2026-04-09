@@ -1,19 +1,34 @@
 \contentsline {section}{\numberline {1}Study overview}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Study setup}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Subject demographics}{2}{subsection.1.2}%
-\contentsline {section}{\numberline {2}General data}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Sample recovery}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Transit time}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}pH}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Bristol stool scale}{7}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Emotional state}{8}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Gastrointestinal questionnaire}{10}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Alpha diversity}{13}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Principal coordinate analysis of microbial composition}{15}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {1.2.1}Basic information}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Subject diets}{3}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Gastrointestinal questionnaires}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Rome IV criteria}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}GSRS-IBS}{6}{subsubsection.1.3.2}%
+\contentsline {section}{\numberline {2}General data}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Sample collection}{7}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Sample recovery}{7}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Transit time}{8}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}pH}{9}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Bristol stool scale}{10}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Cell count}{10}{subsubsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.2}Emotional state}{11}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}PSS}{11}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}PANAS}{12}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}16S sequencing}{13}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Alpha diversity}{13}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Principal coordinate analysis of microbial composition}{15}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Subject-specific data}{16}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Food records}{16}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Capscan and tubes}{17}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Transit time timeline}{18}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Cell imaging}{19}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Microbial composition}{20}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}ASVs heatmap}{22}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.1}Sample collection}{16}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Ingestion record}{16}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Capscan and tubes}{17}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Transit time timeline}{18}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Food}{19}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Self-reported diet and exercise}{19}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Cronometer nutrition log}{19}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}FoodSeq}{21}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Cell imaging}{24}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Microbial composition}{26}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}16S sequencing}{26}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}ASVs heatmap}{28}{subsubsection.3.4.2}%
