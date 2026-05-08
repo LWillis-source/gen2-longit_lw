@@ -14,13 +14,13 @@ source(paste0(here::here(), "/0-config.R"))
 directory = paste0(here(), "/3-figures/")
 
 ##### FIX THIS LATER ##### 
-sample_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT-Wk/LONGIT-Weeklong_SampleSheet_FINAL.xlsx"
+sample_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT/LONGIT_SampleSheet_FINAL.xlsx"
 
 kits <- read_excel(sample_file_path, sheet = 1)
 samples <- read_excel(sample_file_path, sheet = 2)
 ##### FIX THIS LATER ##### 
 
-output <- setup_tables(paste0(here(), "/1-data/DADA2-Weeklong/"), '/1-data/Capscan-weeklong-sample-info.xlsx')
+output <- setup_tables(paste0(here(), "/1-data/DADA2-couple-starv/"), "/1-data/Couple-sample-info.xlsx")
 ps <- output$ps # phyloseq object
 taxa_order <- output$taxa_order # ASV plot order
 samdf <- output$samdf # sample information
@@ -49,11 +49,14 @@ sample_data(ps) <- sample_data(samdf)
 set_ordered_factors <- function(df2plot) {
   # Set default ordered factors in dataframe
   df2plot <- df2plot %>%
-      mutate(Region = factor(Region, levels = c("NA", "Saliva", "R1", "R2", "R3", "Stool"), ordered = TRUE)) %>%
-      mutate(Sample_origin = factor(Sample_origin, levels = c("Capscan0", "Capscan1", "Capscan2", "Capscan3", "Capscan3E", "Capscan4", "Capscan4E", "Capscan5", "Capscan5E", "Capscan6", "Capscan6E", "Capscan7", "Capscan8", "CapscanExtra1", "CapscanExtra2", "CapscanExtra3", "ExtraSaliva", "Saliva0", "Saliva1", "Saliva2", "Saliva3", "Saliva3E", "Saliva4", "Saliva4E", "Saliva5", "Saliva5E", "Saliva6", "Saliva6E", "Saliva7", "Saliva8", "Stool0", "Stool1", "Stool2", "Stool3", "Stool3E", "Stool4", "Stool5", "Stool5E", "Stool6", "Stool6E", "Stool7", "Stool8", "StoolExtra1", "StoolExtra2", "StoolNoCapscan"), ordered = TRUE)) %>%
-      mutate(Sample_origin2 = factor(Sample_origin2, levels = c("Cap0", "Cap1", "Cap2", "Cap3", "CapE1", "Cap4", "Cap5", "CapE2", "Cap6", "Cap7", "Cap8", "CapEx1", "CapEx2", "CapEx3", "SalivaX", "Saliva0", "Saliva1", "Saliva2", "Saliva3", "Saliva3E", "Saliva4", "Saliva4E", "Saliva5", "Saliva5E", "Saliva6", "Saliva6E", "Saliva7", "Saliva8", "Stool0", "Stool1", "Stool2", "Stool3", "Stool3E", "Stool4", "Stool5", "Stool5E", "Stool6", "Stool6E", "Stool7", "Stool8", "StoolExtra1", "StoolExtra2", "StoolNoCapscan"), ordered = TRUE)) %>%
-    mutate(Sample_origin3 = factor(Sample_origin3, levels = c("Saliva", "Capscan", "Stool"), ordered = TRUE)) %>%
-    mutate(Kit_set = factor(Kit_set, levels = c("0", "1", "2", "3E", "3", "4E", "4", "5E", "5", "6E", "6", "7", "8", "Extra")))
+      mutate(Region = factor(Region, levels = c("NA", "Saliva", "R1", "R2", "R3", "R4", "Stool"), ordered = TRUE)) %>%
+      mutate(Sample_origin2 = factor(Sample_origin2, levels = c("Saliva", "Cap", "Stool"), ordered = TRUE)) %>%
+      mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva", "Cap0", "Cap1", "Cap2", "Cap3", "Cap4", "Cap5", "Cap6", "Cap7", "Cap8", "Stool"), ordered = TRUE)) %>%
+      mutate(Collection_day = factor(Collection_day, levels = c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "unk"), ordered = TRUE)) %>%
+      mutate(Ingestion_day = factor(Ingestion_day, levels = c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "unk"), ordered = TRUE)) %>%
+      mutate(Tip_color = factor(Tip_color, levels = c("White", "Blue", "NA"), ordered = TRUE)) %>%
+      mutate(Diet_ingestion = factor(Diet_ingestion, levels = c("Regular1", "Regular2", "Same_keto", "Regular4", "Regular5_1", "Fasting", "Regular5_2", "Regular6", "Regular7", "Regular8", "Regular9", "Regular10", "Regular11", "Regular12", "Regular13", "Regular14", "Regular15", "Regular16", "Unknown", "NA"), ordered = TRUE)) %>%
+      mutate(Diet_collection = factor(Diet_collection, levels = c("Regular1", "Regular2", "Same_keto", "Regular4", "Regular5_1", "Fasting", "Regular5_2", "Regular6", "Regular7", "Regular8", "Regular9", "Regular10", "Regular11", "Regular12", "Regular13", "Regular14", "Regular15", "Regular16", "Unknown", "NA"), ordered = TRUE))
   df2plot$total_reads <- factor(df2plot$total_reads)
   return(df2plot)
 }
@@ -70,10 +73,17 @@ stool_colors <- c("Stool0" = "#A31301FF", "Stool1" = "#D23105FF", "Stool2" = "#F
 
 kit_colors <- c("0" = "#A31301FF", "1" = "#D23105FF", "2" = "#F05B12FF", "3E" = "#FE932AFF", "3" = "#F6C33AFF", "4E" = "#D3E835FF", "4" = "#A2FC3CFF", "5E" = "#5EFC6EFF", "5" = "#20EAABFF", "6E" = "#1FC9DDFF", "6" = "#3E9BFEFF", "7" = "#466BE3FF",   "8" = "#3E378FFF", Extra = "#CCCCCC")
 
+colors_diet <- c("Regular1" = "#A31301FF", "Regular2" = "#E94D0CFF", Same_keto = "#FEAA33FF", "Regular4" = "#CDEC34FF", "Regular5_1" = "#69FD66FF", "Fasting" = "#18DAC7FF", "Regular5_2" = "#458EFEFF", "Regular6" = "#3E378FFF")
+
+
 region_order <- c("Blood", "Saliva", "Nasal", "R1", "R2", "R3", "R4", "Stool")
 
 cutoff_SI <- 0.001 # Supplementary Info ASV cutoff
 cutoff_MT <- 0.01 # Main Text ASV cutoff (to minimize legend)
+
+#### FILTERS
+
+ps <- ps %>% subset_samples(!No %in% c(497, 385))
 ```
 
 #######################################
@@ -89,74 +99,14 @@ g <- ggplot(samdf, aes(x = log10(total_reads), fill = Region)) +
   scale_fill_manual(values = colors_origin) +
   scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
   labs(x = "log10(reads)", y = "Counts", subtitle = paste0(num_zeros, " of ", num_samples, " samples have 0 reads.")) + 
+  facet_grid(rows = vars(group)) +
   ggtitle("Read distribution") +
   theme_custom_text() +
   theme(aspect.ratio = 1,
         legend.text = element_text(size = 6),  # Legend text size
         legend.key.size = unit(0.3, "cm"))
 
-ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-region.pdf"), plot = g, device = "pdf", width = 4, height = 4)
-
-g <- ggplot(samdf, aes(x = log10(total_reads), fill = Region)) + 
-  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
-  facet_wrap(~Subject_ID, ncol = 4) +
-  scale_fill_manual(values = colors_origin) +
-  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
-  labs(x = "log10(reads)", y = "Counts", subtitle = paste0(num_zeros, " of ", num_samples, " samples have 0 reads.")) + 
-  ggtitle("Read distribution") +
-  theme_custom_text() +
-  theme(aspect.ratio = 1,
-        legend.text = element_text(size = 6),  # Legend text size
-        legend.key.size = unit(0.3, "cm"))
-
-ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-region-subject.pdf"), plot = g, device = "pdf", width = 5, height = 8)
-
-g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = Region)) + 
-  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
-  scale_fill_manual(values = colors_origin) +
-  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
-  labs(x = "log10(reads)", y = "Counts") + 
-  theme_custom_text() +
-  theme(aspect.ratio = 0.5,
-        legend.text = element_text(size = 6),  # Legend text size
-        legend.key.size = unit(0.3, "cm"))
-
-ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-capscan.pdf"), plot = g, device = "pdf", width = 5, height = 2)
-
-g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = pH)) + 
-  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
-  scale_fill_manual(values = colors_pH) +
-  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
-  labs(x = "log10(reads)", y = "Counts") + 
-  theme_custom_text() +
-  theme(aspect.ratio = 0.5,
-        legend.text = element_text(size = 6),  # Legend text size
-        legend.key.size = unit(0.3, "cm"))
-
-ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-capscan-pH.pdf"), plot = g, device = "pdf", width = 5, height = 2)
-
-samdf <- samdf %>%
-  mutate(Prediction = factor(Prediction, levels = c("SI_light", "SI", "SI_dark", "AC", "NA")))
-
-g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = log10(total_reads), fill = Prediction)) + 
-  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
-  scale_x_continuous("log10(reads)", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
-  labs(x = "log10(reads)", y = "Counts") + 
-  theme_custom_text() +
-  theme(aspect.ratio = 0.5,
-        legend.text = element_text(size = 6),  # Legend text size
-        legend.key.size = unit(0.3, "cm"))
-
-ggsave(paste0(directory, "Weeklong-Sequencer/Read-counts-capscan-prediction.pdf"), plot = g, device = "pdf", width = 5, height = 2)
-
-g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = Prediction, fill = pH)) + 
-  geom_bar(color = "black", linewidth = 0.2) +
-  scale_fill_manual(values = colors_pH) +
-  labs(x = "log10(reads)", y = "Counts") + 
-  theme_custom_text() +
-  theme(aspect.ratio = 0.5,
-        legend.text = element_text(size = 6),  # Legend text size
-        legend.key.size = unit(0.3, "cm"))
+ggsave(paste0(directory, "Couple-Sequencer/Read-counts-region.pdf"), plot = g, device = "pdf", width = 4, height = 4)
 
 ```
 
@@ -166,7 +116,8 @@ g <- ggplot(samdf %>% filter (Sample_origin3 == "Capscan"), aes(x = Prediction, 
 
 ```{r Composition - by sample_origin}
 
-ps2plot <- ps %>% subset_samples(Region == "Saliva")
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & Region == "Saliva")
 
 taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
     filter(Abundance > cutoff_MT)
@@ -180,9 +131,13 @@ df2plot <- set_ordered_factors(df2plot) # set ordered factors
   
 family2_scale <- get_color_mapping(df2plot) # legend colors
 
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in unique(samdf$Subject_no)) {
   
-    g <- ggplot(df2plot %>% filter(Subject_ID == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+    if (length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) == 0) {
+      next
+    }
+  
+    g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
          geom_bar(aes(x = total_reads), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
          scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
          scale_x_discrete(labels = red_if_small_discrete) +
@@ -191,7 +146,7 @@ for (sid in unique(samdf$Subject_ID)) {
          theme_custom_comp() +
          theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
         
-    ggsave(paste0(directory, "/Weeklong-composition-0p01/Saliva-collection/Composition-saliva-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) + 1, height = 4)
+    ggsave(paste0(directory, "/Couple-composition-0p01/Saliva-collection/Composition-saliva-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4)
 }
 
 g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
@@ -206,11 +161,12 @@ g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) +
 
 legend <- get_legend(g)
 
-ggsave(paste0(directory, "/Weeklong-composition-0p01/Saliva-collection/Composition-saliva-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 12)
+ggsave(paste0(directory, "/Couple-composition-0p01/Saliva-collection/Composition-saliva-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 12)
 
 #####
 
-ps2plot <- ps %>% subset_samples(Region == "Stool")
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & Region == "Stool")
 
 taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
     filter(Abundance > cutoff_MT)
@@ -224,9 +180,13 @@ df2plot <- set_ordered_factors(df2plot) # set ordered factors
   
 family2_scale <- get_color_mapping(df2plot) # legend colors
 
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in unique(samdf$Subject_no)) {
   
-   g <- ggplot(df2plot %>% filter(Subject_ID == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+    if (length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) == 0) {
+      next
+    }
+  
+   g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
          geom_bar(aes(x = total_reads), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
          scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
          scale_x_discrete(labels = red_if_small_discrete) + 
@@ -235,7 +195,7 @@ for (sid in unique(samdf$Subject_ID)) {
          theme_custom_comp() +
          theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
          
-    ggsave(paste0(directory, "/Weeklong-composition-0p01/Stool-collection/Composition-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) + 1, height = 4)
+    ggsave(paste0(directory, "/Couple-composition-0p01/Stool-collection/Composition-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4)
 }
 
 g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
@@ -250,11 +210,12 @@ g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) +
 
 legend <- get_legend(g)
 
-ggsave(paste0(directory, "/Weeklong-composition-0p01/Stool-collection/Composition-stool-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 5)
+ggsave(paste0(directory, "/Couple-composition-0p01/Stool-collection/Composition-stool-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 5)
 
 #####
 
-ps2plot <- ps %>% subset_samples(!Region %in% c("Stool", "Saliva"))
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & !Region %in% c("Stool", "Saliva"))
 
 taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
     filter(Abundance > cutoff_MT)
@@ -268,18 +229,22 @@ df2plot <- set_ordered_factors(df2plot) # set ordered factors
   
 family2_scale <- get_color_mapping(df2plot) # legend colors
 
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in unique(samdf$Subject_no)) {
   
-    g <- ggplot(df2plot %>% filter(Subject_ID == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+    if (length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) == 0) {
+      next
+    }
+  
+    g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
          geom_bar(aes(x = interaction(total_reads, Region)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
          scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
          scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
-         facet_nested(cols = vars(Collection_date, Collection_time, Sample_origin2), scales = "free", space = "free") +
+         facet_nested(cols = vars(Diet_ingestion, Ingestion_date, Ingestion_time, Sample_origin), scales = "free", space = "free") +
          scale_x_discrete(labels = red_if_small_discrete_cap) + 
          theme_custom_comp() +
          theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
     
-    ggsave(paste0(directory, "/Weeklong-composition-0p01/Capscan-collection/Composition-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) + 1, height = 4)
+    ggsave(paste0(directory, "/Couple-composition-0p01/Capscan-collection/Composition-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4, limitsize = FALSE)
 }
 
 g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
@@ -294,12 +259,13 @@ g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) +
 
 legend <- get_legend(g)
 
-ggsave(paste0(directory, "/Weeklong-composition-0p01/Capscan-collection/Composition-capscan-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 12)
+ggsave(paste0(directory, "/Couple-composition-0p01/Capscan-collection/Composition-capscan-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 12)
 ```
 
 ```{r Composition - Paired cap stool}
 
-ps2plot <- ps %>% subset_samples(Region != "Saliva")
+ps2plot <- ps %>% subset_samples(group = "LONGIT"
+                                 & Region != "Saliva")
 
 taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
     filter(Abundance > cutoff_MT)
@@ -313,30 +279,23 @@ df2plot <- set_ordered_factors(df2plot) # set ordered factors
   
 family2_scale <- get_color_mapping(df2plot) # legend colors
 
-# red_if_small_discrete <- function(values) {
-#   sapply(values, function(v) {
-#     v_num <- as.numeric(as.character(v))  # convert factor/char to number
-#     if (!is.na(v_num) && v_num < 10000) {
-#       paste0("<span style='color:red;'>", v, "</span>")
-#     } else {
-#       v
-#     }
-#   })
-# }
-
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in unique(samdf$Subject_no)) {
   
-    g <- ggplot(df2plot %>% filter(Subject_ID == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+    if (length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) == 0) {
+      next
+    }
+  
+    g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
          #geom_bar(aes(x = total_reads), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
          geom_bar(aes(x = interaction(total_reads, Region)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
          scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
          scale_x_discrete(labels = red_if_small_discrete_cap) +
          scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
-         facet_nested(cols = vars(Collection_date, Collection_time, Sample_origin2), scales = "free", space = "free") +
+         facet_nested(cols = vars(Diet_collection, Collection_date, Collection_time, Sample_origin), scales = "free", space = "free") +
          theme_custom_comp() +
          theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
     
-    ggsave(paste0(directory, "/Weeklong-composition-0p01/Paired-collection/Composition-cap-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_ID == sid) %>% pull(No))) + 1, height = 4)
+    ggsave(paste0(directory, "/Couple-composition-0p01/Paired-collection/Composition-cap-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4, limitsize = FALSE)
 }
 
 g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
@@ -351,60 +310,74 @@ g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) +
 
 legend <- get_legend(g)
 
-ggsave(paste0(directory, "/Weeklong-composition-0p01/Paired-collection/Composition-cap-stool-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 5)
+ggsave(paste0(directory, "/Couple-composition-0p01/Paired-collection/Composition-cap-stool-legend.pdf"), plot = legend, device = "pdf", width = 6, height = 5)
 
 ```
 
-```{r Composition - All by sample_origin - order by kit set}
+```{r Composition - by kit}
 
-ps2plot <- ps
+ps2plot <- ps %>% subset_samples(group == "LONGIT")
 
 taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
     filter(Abundance > cutoff_MT)
   
 ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
-    transform_sample_counts(function(x) x/sum(x)) # renormalize
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
   
 df2plot <- psmelt(ps2plot) # convert to long form
 df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
 df2plot <- set_ordered_factors(df2plot) # set ordered factors
-  
+
 family2_scale <- get_color_mapping(df2plot) # legend colors
 
-for (sample_origin in unique(samdf$Sample_origin3)) {
-
-    g <- ggplot(df2plot %>% filter(Sample_origin3 == sample_origin), aes(x = 1, y = Abundance, fill = Family2)) + 
-         geom_bar(aes(x = interaction(total_reads, Region, Kit_set)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+for (kit in unique(kits$Kit_ID)) {
+  
+  if (is.na(kit) | kit %in% c("LS061")) {
+    next
+  }
+  
+  saliva_ID <- kits$Saliva[kits$Kit_ID == kit]
+  stool_ID <- kits$Stool[kits$Kit_ID == kit]
+  
+  kit2plot <- df2plot %>% filter((Sample_origin2 == "Cap" & Kit_ID == kit) |
+                                 (Sample_ID %in% c(saliva_ID, stool_ID)))
+  
+  subject_no <- kit2plot$Subject_no[1]
+  
+  g <- ggplot(kit2plot %>% filter(Abundance != 0 & !is.na(Abundance)),  aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(total_reads, Region)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) +
          scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
-         scale_x_discrete(labels = red_if_small_discrete_reads_only) +
+         scale_x_discrete(labels = red_if_small_discrete_cap) +
          scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
-         facet_wrap(vars(Subject_ID), scales = "free") +
-         theme_custom_comp() +
-         theme(axis.text.x = element_markdown(angle = 90, hjust = 1),
-               axis.text.y = element_blank())
-        
-    ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 20, height = 12)
+         facet_nested(cols = vars(Subject_no, Collection_date_reformat, Collection_time, Sample_origin2), scales = "free", space = "free") +
+         theme_custom_text() +
+         theme_custom_comp() +  
+         theme(axis.text.x = element_markdown(size = 6))
+
+   ggsave(paste0(directory, "Couple-composition-0p01/Kit-collection/" , subject_no , "/Composition-", kit, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(kit2plot %>% pull(Sample_ID))) + 1, height = 4)
 }
 
-g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
-         geom_bar(aes(x = interaction(total_reads, Region, Kit_set)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
-         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
-         scale_x_discrete(labels = red_if_small_discrete_reads_only) +
-         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
-         theme(legend.text = element_text(size = 5),  # Legend text size
-               legend.key.size = unit(0.2, "cm")) +
-         guides(fill = guide_legend(ncol = 3, byrow = FALSE)) + # Legend columns, fill legend items by column
-         labs(fill = "Family") + # Change legend label
-         theme_custom_text()
-        
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) +
+     geom_bar(aes(x = 1), position = "stack", stat = "identity", color = "black", linewidth = 0.25) +
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm")) +
+     guides(fill = guide_legend(ncol = 4, byrow = FALSE)) + # Legend columns, fill legend items by column
+     labs(fill = "Family") + # Change legend label
+     theme_custom_text()
+
 legend <- get_legend(g)
 
-ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-legend.pdf"), plot = legend, device = "pdf", width = 5, height = 2.5)
+ggsave(paste0(directory, "Couple-composition-0p01/Kit-collection/Legend.pdf"), plot = legend, device = "pdf", width = 6, height = 5)
+
 ```
 
 ```{r Composition - capscan heirarchical clustering}
 
-ps2plot <- ps %>% subset_samples(Sample_origin3 == "Capscan"
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & Subject_no != "Subj3"
+                                 & Sample_origin2 == "Cap"
                                  & total_reads > 10000)
 
 taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
@@ -416,8 +389,6 @@ ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
 df2plot <- psmelt(ps2plot) # convert to long form
 df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
 df2plot <- set_ordered_factors(df2plot) # set ordered factors
-
-
 
 ####
 
@@ -443,12 +414,12 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
     
     # Create annotation data for each sample
     annotation_data <- df2plot %>%
-      select(Sample, Subject_ID, Region, Prediction) %>%
+      select(Sample, Subject_no, Region, Diet_ingestion, Diet_collection) %>%
       distinct() %>%
-      pivot_longer(cols = c(Subject_ID, Region, Prediction), 
+      pivot_longer(cols = c(Subject_no, Region, Diet_ingestion, Diet_collection), 
                    names_to = "Annotation", 
                    values_to = "Value") %>%
-      mutate(Annotation = factor(Annotation, levels = c("Subject_ID", "Region", "Prediction")))
+      mutate(Annotation = factor(Annotation, levels = c("Subject_no", "Region", "Diet_ingestion", "Diet_collection")))
     
     family2_scale <- get_color_mapping(df2plot) # legend colors
     
@@ -461,13 +432,13 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
         axis.ticks.x = element_blank()
       )
     
-    colors_prediction = c("SI_light" = "#F8766D", "SI" = "#A3A500", "SI_dark" = "#00BF7D", "AC" = "#00B0F6", "NA" = "#E76BF3")
-    colors_subject <- setNames(hue_pal()(20), unique(samdf$Subject_ID))
+    #colors_prediction = c("SI_light" = "#F8766D", "SI" = "#A3A500", "SI_dark" = "#00BF7D", "AC" = "#00B0F6", "NA" = "#E76BF3")
+    colors_subject <- setNames(hue_pal()(4), unique(samdf$Subject_no))
     
     # Create annotation plot
     g_annot <- ggplot(annotation_data, aes(x = Sample, y = Annotation, fill = Value)) +
       geom_tile(color = "black", linewidth = 0.2) +
-      scale_fill_manual(values = c(colors_subject, colors_origin, colors_prediction)) +  # Combine your color palettes
+      scale_fill_manual(values = c(colors_subject, colors_origin, colors_diet)) +  # Combine your color palettes
       theme_minimal() +
       theme(
         axis.text.x = element_blank(),
@@ -481,38 +452,8 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
     
     g_combined
     
-    ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-Capscan-clustered-", d_metric, ".pdf"), plot = g_combined, device = "pdf", width = 12, height = 5)
+    ggsave(paste0(directory, "/Couple-composition-0p01/Composition-all-Capscan-clustered-", d_metric, ".pdf"), plot = g_combined, device = "pdf", width = 12, height = 5)
 }
-
-# 
-# g_dend <- ggdendrogram(hc, rotate =  FALSE)
-# 
-# ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-Capscan-clustered.pdf"), plot = g_comp, device = "pdf", width = 12, height = 3)
-# 
-# # ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-Capscan-clustered-dendrogram.pdf"), plot = g_dend, device = "pdf", width = 12, height = 7)
-# 
-# ###
-# 
-# g <- plot(hc, main = "Hierarchical clustering (Canberra distance)")
-# 
-# library(pheatmap)
-# 
-# annotation_colors <- list(
-#   #Subject_ID = setNames(your_subject_colors, unique(samdf$Subject_ID)),  # Replace with your color vector
-#   Region = colors_origin,  # Use your existing colors_origin
-#   Prediction = c("SI_light" = "#F8766D", "SI" = "#A3A500", "SI_dark" = "#00BF7D", "AC" = "#00B0F6", "NA" = "#E76BF3")
-# )
-# 
-# g <- pheatmap(
-#   as.matrix(dist_mat),
-#   clustering_method = "average",
-#   annotation_row = samdf[, c("Subject_ID", "Region", "Prediction")],
-#   annotation_col = samdf[, c("Subject_ID", "Region", "Prediction")],
-#   annotation_colors = annotation_colors
-# )
-# 
-# ggsave(paste0(directory, "/Weeklong-composition-0p01/Composition-all-Capscan-clustered-annotations.pdf"), plot = g, device = "pdf", width = 18, height = 15)
-#  
 
 ```
 
@@ -522,11 +463,12 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
 
 ```{r ASV heatmap - by sample_origin}
 
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in c("Subj1", "Subj2")) {
   
-  ps2plot <- ps %>% subset_samples(Region == "Saliva" 
+  ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                   & Region == "Saliva" 
                                    & total_reads > 10000
-                                   & Subject_ID == sid)
+                                   & Subject_no == sid)
 
   taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
       filter(Abundance > cutoff_MT)
@@ -540,7 +482,7 @@ for (sid in unique(samdf$Subject_ID)) {
   g <- ggplot(df2plot) +
        geom_tile(aes(x = interaction(Sample_origin2, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
        scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
-       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       facet_nested(cols = vars(Diet_collection, Collection_date, Collection_time), space = "free", scales = "free") +
        theme(strip.text.y = element_blank(),
              axis.title.x = element_blank(),
              axis.title.y = element_blank(),
@@ -550,17 +492,18 @@ for (sid in unique(samdf$Subject_ID)) {
              aspect.ratio = 1) +
        theme_custom_text()
     
-    ggsave(paste0(directory, "/Weeklong-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+    ggsave(paste0(directory, "/Couple-ASV-heatmap-0p01/Saliva-collection/ASV-saliva-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
   
 }
 
 ####
 
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in c("Subj1", "Subj2")) {
   
-  ps2plot <- ps %>% subset_samples(!Region %in% c("Saliva", "Stool")
+  ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                   & !Region %in% c("Saliva", "Stool")
                                    & total_reads > 10000
-                                   & Subject_ID == sid)
+                                   & Subject_no == sid)
 
   taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
       filter(Abundance > cutoff_MT)
@@ -574,7 +517,7 @@ for (sid in unique(samdf$Subject_ID)) {
     g <- ggplot(df2plot) +
        geom_tile(aes(x = interaction(Sample_origin2, Region, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
        scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
-       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       facet_nested(cols = vars(Diet_collection, Collection_date, Collection_time), space = "free", scales = "free") +
        theme(strip.text.y = element_blank(),
              axis.title.x = element_blank(),
              axis.title.y = element_blank(),
@@ -584,16 +527,17 @@ for (sid in unique(samdf$Subject_ID)) {
              aspect.ratio = 1) +
        theme_custom_text()
     
-     ggsave(paste0(directory, "/Weeklong-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+     ggsave(paste0(directory, "/Couple-ASV-heatmap-0p01/Capscan-collection/ASV-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
 }
 
 ####
 
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in c("Subj1", "Subj2")) {
   
-  ps2plot <- ps %>% subset_samples(Region == "Stool" 
+  ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                   & Region == "Stool" 
                                    & total_reads > 500
-                                   & Subject_ID == sid)
+                                   & Subject_no == sid)
 
   taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
       filter(Abundance > cutoff_MT)
@@ -610,7 +554,7 @@ for (sid in unique(samdf$Subject_ID)) {
     g <- ggplot(df2plot) +
        geom_tile(aes(x = interaction(Sample_origin2, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
        scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
-       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       facet_nested(cols = vars(Diet_collection, Collection_date, Collection_time), space = "free", scales = "free") +
        theme(strip.text.y = element_blank(),
              axis.title.x = element_blank(),
              axis.title.y = element_blank(),
@@ -620,7 +564,7 @@ for (sid in unique(samdf$Subject_ID)) {
              aspect.ratio = 1) +
        theme_custom_text()
     
-     ggsave(paste0(directory, "/Weeklong-ASV-heatmap-0p01/Stool-collection/ASV-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+     ggsave(paste0(directory, "/Couple-ASV-heatmap-0p01/Stool-collection/ASV-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 20, height = 0.15*(length(unique(df2plot$Feature))+3))
 }
 
 ```
@@ -631,12 +575,13 @@ for (sid in unique(samdf$Subject_ID)) {
 
 ```{r Alpha diversity}
 
-alpha_df <- estimate_richness(ps,
+alpha_df <- estimate_richness(ps %>% subset_samples(group == "LONGIT"),
                               measures = c("Observed", "Shannon", "Simpson"))
 rownames(alpha_df) <- gsub("\\.", "-", rownames(alpha_df))
 alpha_df$sample <- substr(rownames(alpha_df), 2, nchar(rownames(alpha_df)))
 
 df2plot <- samdf %>%
+  filter(group == "LONGIT") %>%
   rownames_to_column("sample") %>%
   left_join(alpha_df, by = "sample") %>%
   mutate(Shannon = replace_na(Shannon, 0)) %>%
@@ -660,7 +605,7 @@ shannon_summary <- df2plot %>%
   )
 
 shannon_means <- df2plot %>%
-  group_by(Sample_origin3) %>%
+  group_by(Sample_origin2) %>%
   summarise(mean_shannon = mean(Shannon, na.rm = TRUE), .groups = "drop")
 
 g <- ggplot(df2plot, aes(x = Shannon, fill = Region)) + 
@@ -673,15 +618,15 @@ g <- ggplot(df2plot, aes(x = Shannon, fill = Region)) +
             inherit.aes = FALSE) +
   scale_fill_manual(values = colors_origin) +
   scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
-  facet_grid(rows = vars(Sample_origin3)) +
+  facet_grid(rows = vars(Sample_origin2)) +
   labs(x = "Shannon diversity", y = "Counts") +
   theme_custom_text() +
   theme(legend.text = element_text(size = 5),  # Legend text size
         legend.key.size = unit(0.2, "cm"))
 
-ggsave(paste0(directory, "/Weeklong-Alpha-diversity/Weeklong-Shannon.pdf"), plot = g, device = "pdf", width = 2.5, height = 2)
+ggsave(paste0(directory, "/Couple-Alpha-diversity/Couple-Shannon.pdf"), plot = g, device = "pdf", width = 2.5, height = 2)
 
-g <- ggplot(df2plot %>% filter(Sample_origin3 == "Capscan"), aes(x = Shannon, fill = Region)) + 
+g <- ggplot(df2plot %>% filter(Sample_origin2 == "Cap"), aes(x = Shannon, fill = Region)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
   scale_fill_manual(values = colors_origin) +
   scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
@@ -691,31 +636,9 @@ g <- ggplot(df2plot %>% filter(Sample_origin3 == "Capscan"), aes(x = Shannon, fi
         legend.key.size = unit(0.2, "cm"),
         aspect.ratio = 0.5)
 
-ggsave(paste0(directory, "/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
+ggsave(paste0(directory, "/Couple-Alpha-diversity/Couple-Shannon-Capscan.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
 
-df2plot <- df2plot %>%
-  mutate(Prediction = factor(Prediction, levels = c("SI_light", "SI", "SI_dark", "AC", "NA")))
-
-g <- ggplot(df2plot %>% filter(Sample_origin3 == "Capscan"), aes(x = Shannon, fill = Prediction)) + 
-  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
-  scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
-  labs(x = "Shannon diversity", y = "Counts") +
-  theme_custom_text() +
-  theme(legend.text = element_text(size = 5),  # Legend text size
-        legend.key.size = unit(0.2, "cm"),
-        aspect.ratio = 0.5)
-
-shannon_summary <- df2plot %>%
-  group_by(Prediction) %>%
-  summarise(
-    mean_shannon = mean(Shannon, na.rm = TRUE),
-    sd_shannon = sd(Shannon, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-ggsave(paste0(directory, "/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-prediction.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
-
-g <- ggplot(df2plot %>% filter(Sample_origin3 == "Capscan"), aes(x = Shannon, fill = pH)) + 
+g <- ggplot(df2plot %>% filter(Sample_origin2 == "Cap"), aes(x = Shannon, fill = factor(pH))) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
   scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
   labs(x = "Shannon diversity", y = "Counts") +
@@ -725,7 +648,7 @@ g <- ggplot(df2plot %>% filter(Sample_origin3 == "Capscan"), aes(x = Shannon, fi
         legend.key.size = unit(0.2, "cm"),
         aspect.ratio = 0.5)
 
-ggsave(paste0(directory, "/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-pH.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
+ggsave(paste0(directory, "/Couple-Alpha-diversity/Couple-Shannon-Capscan-pH.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
 
 df2plot <- df2plot %>%
   mutate(Transit_time_h = as.numeric(Transit_time_h),
@@ -751,7 +674,7 @@ shannon_summary <- df2plot %>%
     .groups = "drop"
   )
 
-g <- ggplot(df2plot %>% filter(Sample_origin3 == "Capscan"), 
+g <- ggplot(df2plot %>% filter(Sample_origin2 == "Cap"), 
             aes(x = Shannon, fill = Transit_time_cat)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
   scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
@@ -762,19 +685,45 @@ g <- ggplot(df2plot %>% filter(Sample_origin3 == "Capscan"),
         legend.key.size = unit(0.2, "cm"),
         aspect.ratio = 0.5)
 
-ggsave(paste0(directory, "/Weeklong-Alpha-diversity/Weeklong-Shannon-Capscan-transit-time.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
+ggsave(paste0(directory, "/Couple-Alpha-diversity/Couple-Shannon-Capscan-transit-time.pdf"), plot = g, device = "pdf", width = 2.5, height = 1.5)
 
-g <- ggplot(df2plot, aes(x = Shannon, fill = Region)) + 
+g <- ggplot(df2plot %>% filter(Subject_no != "Subj3" & Sample_origin2 == "Cap"), aes(x = Shannon, fill = Diet_ingestion)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
-  scale_fill_manual(values = colors_origin) +
+  scale_fill_manual(values = colors_diet) +
   scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
-  facet_wrap(vars(Subject_ID), ncol = 5) +
+ # facet_wrap(vars(Subject_no), ncol = 5) +
   labs(x = "Shannon diversity", y = "Counts") + 
   theme_custom_text() +
   theme(legend.text = element_text(size = 5),  # Legend text size
         legend.key.size = unit(0.2, "cm"))
 
-ggsave(paste0(directory, "/Weeklong-Alpha-diversity/Weeklong-Shannon-subj.pdf"), plot = g, device = "pdf", width = 5, height = 4)
+ggsave(paste0(directory, "/Couple-Alpha-diversity/Couple-Shannon-Capscan-diet-ingestion.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
+
+
+g <- ggplot(df2plot %>% filter(Subject_no != "Subj3" & Sample_origin2 == "Cap"), aes(x = Shannon, fill = Diet_collection)) + 
+  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = colors_diet) +
+  scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
+  #facet_wrap(vars(Subject_no), ncol = 5) +
+  labs(x = "Shannon diversity", y = "Counts") + 
+  theme_custom_text() +
+  theme(legend.text = element_text(size = 5),  # Legend text size
+        legend.key.size = unit(0.2, "cm"))
+
+ggsave(paste0(directory, "/Couple-Alpha-diversity/Couple-Shannon-Capscan-diet-collection.pdf"), plot = g, device = "pdf", width = 2.5, height = 1)
+
+g <- ggplot(df2plot %>% filter(Subject_no != "Subj3"), aes(x = Shannon, fill = Region)) + 
+  geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = colors_origin) +
+  scale_x_continuous("Shannon diversity", limits = c(0, NA), breaks = c(0, 1, 2, 3, 4, 5, 6)) +
+  facet_wrap(vars(Subject_no), ncol = 5) +
+  labs(x = "Shannon diversity", y = "Counts") + 
+  theme_custom_text() +
+  theme(legend.text = element_text(size = 5),  # Legend text size
+        legend.key.size = unit(0.2, "cm"))
+
+ggsave(paste0(directory, "/Couple-Alpha-diversity/Couple-Shannon-subj.pdf"), plot = g, device = "pdf", width = 5, height = 4)
+
 ```
 
 #######################################
@@ -785,9 +734,11 @@ ggsave(paste0(directory, "/Weeklong-Alpha-diversity/Weeklong-Shannon-subj.pdf"),
 
 set.seed(100) # Consistent pcoa
 
-for (region in c("Saliva", "Capscan", "Stool")) {
+for (region in c("Saliva", "Cap", "Stool")) {
     
-    ps2ordinate <- ps %>% subset_samples(Sample_origin3 == region 
+    ps2ordinate <- ps %>% subset_samples(Sample_origin2 == region 
+                                         & group == "LONGIT"
+                                         & Subject_no != "Subj3"
                                          & total_reads > 10000) # Choose which samples you want to ordinate
     otu_table_ps <- otu_table(ps2ordinate)
     
@@ -821,79 +772,47 @@ for (region in c("Saliva", "Capscan", "Stool")) {
         mutate(Region = factor(Region, levels = region_order)) %>%
         arrange(Sample_ID, Region)  # Ensures correct order within Kit_ID
       
-      if (region == "Saliva") {
-        colors2plot <- saliva_colors
-      } 
+      colors2plot <- colors_diet
       
-      if (region == "Stool") {
-        colors2plot <- stool_colors
-      }
-      
-      if (region == "Capscan") {
-        colors2plot <- capscan_colors
-      } 
-      
-      # g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Sample_origin, shape = Region)) +
-      #       scale_fill_manual(values = colors2plot)
+      # if (region == "Saliva") {
+      #   colors2plot <- saliva_colors
+      # } 
       # 
-      #      if (region == "Capscan") {
-      #         g <- g +
-      #           geom_path(data = lines_df, aes(group = Subject_ID), color = "gray60", linewidth = 0.6, lineend = "round")
-      #       }
+      # if (region == "Stool") {
+      #   colors2plot <- stool_colors
+      # }
       # 
-      # g <- g + 
-      #      geom_point(stroke = 0.5, color = "black") +
-      #      scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-      #      facet_wrap(~Subject_ID, ncol = 5) +
-      #      force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"), 
-      #                      cols = unit(c(3, 3, 3, 3), "cm"), 
-      #                      TRUE) +
-      #      labs(title = d_metric,
-      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
-      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
-      #      coord_fixed(ratio = aspect_ratio)  # Force square axes
+      # if (region == "Cap") {
+      #   colors2plot <- capscan_colors
+      # } 
       # 
-      # ggsave(paste0(directory, "/Weeklong-PCoA/", region, "/PCoA-", d_metric, "-", region, "-sample-origin.pdf"), plot = g, device = "pdf", width = 9, height = 7)
-      
-      # g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Subject_ID, shape = Region)) +
-      #      stat_ellipse(aes(color = Subject_ID), type = "norm", level = 0.68, # 1 std dev
-      #          geom = "polygon", alpha = 0.1, show.legend = FALSE) +  # Add ellipses
-      #      geom_point(stroke = 0.5, color = "black") +
-      #      scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-      #      force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"), 
-      #                      cols = unit(c(5, 5, 5, 5), "cm"), 
-      #                      TRUE) +
-      #      labs(title = d_metric,
-      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
-      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
-      #      coord_fixed(ratio = aspect_ratio)  # Force square axes
-      # 
-      # ggsave(paste0(directory, "/Weeklong-PCoA/", region, "/Subject_ID/PCoA-", d_metric, "-", region, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
-    
-      if (region == "Capscan") {
-      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Prediction)) +
-           stat_ellipse(aes(color = Prediction), type = "norm", level = 0.68, # 1 std dev
-               geom = "polygon", alpha = 0.1, show.legend = FALSE) +  # Add ellipses
-           geom_point(stroke = 0.5, color = "black", shape = 21) +
-           #scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Diet_collection, shape = Region)) +
+            scale_fill_manual(values = colors2plot)
+
+           if (region == "Cap") {
+              g <- g +
+                geom_path(data = lines_df, aes(group = Subject_no), color = "gray60", linewidth = 0.6, lineend = "round")
+            }
+
+      g <- g +
+           geom_point(stroke = 0.5, color = "black") +
+           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
            guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-           #facet_grid(vars(Prediction)) +
-           force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"),
-                           cols = unit(c(5, 5, 5, 5), "cm"),
+           facet_wrap(~Subject_no, ncol = 5) +
+           force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"),
+                           cols = unit(c(3, 3, 3, 3), "cm"),
                            TRUE) +
            labs(title = d_metric,
                 x = paste0("PCo1 ", round(var_exp[1],2), "%"),
                 y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
            coord_fixed(ratio = aspect_ratio)  # Force square axes
 
-      ggsave(paste0(directory, "/Weeklong-PCoA/", region, "/SI-prediction/PCoA-", d_metric, "-", region, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
+      ggsave(paste0(directory, "/Couple-PCoA/", region, "/PCoA-", d_metric, "-", region, "-sample-origin.pdf"), plot = g, device = "pdf", width = 9, height = 7)
       
-      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Subject_ID)) +
-           stat_ellipse(aes(color = Subject_ID), type = "norm", level = 0.68, # 1 std dev
+      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Subject_no, shape = Region)) +
+           stat_ellipse(aes(color = Subject_no), type = "norm", level = 0.68, # 1 std dev
                geom = "polygon", alpha = 0.1, show.legend = FALSE) +  # Add ellipses
-           geom_point(stroke = 0.5, color = "black", shape = 21) +
+           geom_point(stroke = 0.5, color = "black") +
            scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
            guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
            force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"),
@@ -904,9 +823,43 @@ for (region in c("Saliva", "Capscan", "Stool")) {
                 y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
            coord_fixed(ratio = aspect_ratio)  # Force square axes
 
-      ggsave(paste0(directory, "/Weeklong-PCoA/", region, "/Subject_ID/PCoA-", d_metric, "-", region, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
-
-      }
+      ggsave(paste0(directory, "/Couple-PCoA/", region, "/Subject_no/PCoA-", d_metric, "-", region, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
+    
+      # if (region == "Cap") {
+      # g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Prediction)) +
+      #      stat_ellipse(aes(color = Prediction), type = "norm", level = 0.68, # 1 std dev
+      #          geom = "polygon", alpha = 0.1, show.legend = FALSE) +  # Add ellipses
+      #      geom_point(stroke = 0.5, color = "black", shape = 21) +
+      #      #scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+      #      #facet_grid(vars(Prediction)) +
+      #      force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"),
+      #                      cols = unit(c(5, 5, 5, 5), "cm"),
+      #                      TRUE) +
+      #      labs(title = d_metric,
+      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+      #      coord_fixed(ratio = aspect_ratio)  # Force square axes
+      # 
+      # ggsave(paste0(directory, "/Couple-PCoA/", region, "/SI-prediction/PCoA-", d_metric, "-", region, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
+      # 
+      # g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Subject_no)) +
+      #      stat_ellipse(aes(color = Subject_no), type = "norm", level = 0.68, # 1 std dev
+      #          geom = "polygon", alpha = 0.1, show.legend = FALSE) +  # Add ellipses
+      #      geom_point(stroke = 0.5, color = "black", shape = 21) +
+      #      scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+      #      force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"),
+      #                      cols = unit(c(5, 5, 5, 5), "cm"),
+      #                      TRUE) +
+      #      labs(title = d_metric,
+      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+      #      coord_fixed(ratio = aspect_ratio)  # Force square axes
+      # 
+      # ggsave(paste0(directory, "/Couple-PCoA/", region, "/Subject_no/PCoA-", d_metric, "-", region, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
+      # 
+      # }
       
     }
 }
@@ -917,7 +870,9 @@ for (region in c("Saliva", "Capscan", "Stool")) {
 
 set.seed(100) # Consistent pcoa
 
-ps2ordinate <- ps %>% subset_samples(total_reads > 10000) # Choose which samples you want to ordinate
+ps2ordinate <- ps %>% subset_samples(group == "LONGIT"
+                                     & Subject_no != "Subj3"
+                                     & total_reads > 10000) # Choose which samples you want to ordinate
 
 otu_table_ps <- otu_table(ps2ordinate)
 
@@ -967,179 +922,25 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
            coord_fixed(ratio = aspect_ratio) + # Force square axes
           theme(legend.position = "null")
       
-      ggsave(paste0(directory, "/Weeklong-PCoA/All/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 3, height = 3)
+      ggsave(paste0(directory, "/Couple-PCoA/All/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 3, height = 3)
       
-      # g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
-      #      scale_fill_manual(values = colors2plot) +
-      #      geom_path(data = lines_df, aes(group = Subject_ID), color = "gray60", linewidth = 0.6, lineend = "round") +
-      #      geom_point(stroke = 0.5, color = "black") +
-      #      scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-      #      facet_wrap(~Subject_ID, ncol = 5) +
-      #      force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"),
-      #                      cols = unit(c(3, 3, 3, 3), "cm"),
-      #                      TRUE) +
-      #      labs(title = d_metric,
-      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
-      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
-      #      coord_fixed(ratio = aspect_ratio)  # Force square axes
-      # 
-      # ggsave(paste0(directory, "/Weeklong-PCoA/All/PCoA-", d_metric, "-all-kit-id.pdf"), plot = g, device = "pdf", width = 9, height = 7)
-      # 
-      # for (sid in unique(samdf$Subject_ID)) {
-      # 
-      #   g <- ggplot(ordination_data %>% filter(Subject_ID == sid), aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
-      #      scale_fill_manual(values = colors2plot) +
-      #      geom_path(data = lines_df %>% filter(Subject_ID == sid), aes(group = Subject_ID), color = "gray60", linewidth = 0.6, lineend = "round") +
-      #      geom_point(stroke = 0.5, color = "black") +
-      #      scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-      #      guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-      #      facet_wrap(~Kit_set, ncol = 4) +
-      #      force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"),
-      #                      cols = unit(c(3, 3, 3, 3), "cm"),
-      #                      TRUE) +
-      #      labs(title = d_metric,
-      #           x = paste0("PCo1 ", round(var_exp[1],2), "%"),
-      #           y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
-      #      coord_fixed(ratio = aspect_ratio, xlim = x_range, ylim = y_range)  # Force square axes
-      # 
-      #      ggsave(paste0(directory, "/Weeklong-PCoA/All/", d_metric, "/PCoA-", d_metric, "-all-", sid, ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
-      # }
-}
-
-```
-
-```{r weird unifrac}
-
-### look into weird unifrac
-
-for (read_filter in c(10000, 20000, 30000, 40000, 50000)) {
-  
-  set.seed(100) # Consistent pcoa
-  
-  ps2ordinate <- ps %>% 
-    subset_samples(total_reads > read_filter) # Choose which samples you want to ordinate
-  
-  otu_table_ps <- otu_table(ps2ordinate)
-  
-  otu_table_ps_clean <- otu_table_ps[rowSums(otu_table_ps) > 0, ] # Remove rows with all zeros (empty OTU rows)
-  otu_table_ps_clean <- otu_table_ps_clean[rowSums(otu_table_ps_clean > 0) >= 3, ] # Remove OTUs present in < 3 samples
-  
-  retained_otus <- taxa_names(otu_table_ps_clean)
-  
-  # Subset all components accordingly
-  ps_clean <- merge_phyloseq(
-    otu_table(otu_table_ps_clean),
-    sample_data(ps),
-    tax_table(ps)[retained_otus, ],
-    phy_tree(ps)
-  )
-  
-  ps_clean <- prune_taxa(retained_otus, ps_clean)
-  
-  d_metric <- "unifrac"
-  
-  pcoa_weighted <- ordinate(ps_clean, method = "MDS", distance = d_metric)
-  ordination_data <- merge(pcoa_weighted$vectors, samdf, by = "row.names")
-  var_exp <- get_evals(pcoa_weighted)$variance_exp # variances
-  
-  x_range <- range(ordination_data$Axis.1)
-  y_range <- range(ordination_data$Axis.2)
-  aspect_ratio <- diff(x_range) / diff(y_range)
-  
-  ordination_data <- set_ordered_factors(ordination_data) # set ordered factors
-  
-  lines_df <- ordination_data %>%
-    filter(Region %in% region_order) %>%
-    mutate(Region = factor(Region, levels = region_order)) %>%
-    arrange(Kit_ID, Region)  # Ensures correct order within Kit_ID
-  
-  colors2plot <- colors_origin
-  
-  g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
-    scale_fill_manual(values = colors2plot) +
-    geom_point(stroke = 0.5, color = "black") +
-    scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-    guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-    force_panelsizes(
-      rows = unit(c(5, 5, 5, 5), "cm"), 
-      cols = unit(c(5, 5, 5, 5), "cm"), 
-      TRUE
-    ) +
-    labs(title = d_metric,
-        x = paste0("PCo1 ", round(var_exp[1], 2), "%"),
-        y = paste0("PCo2 ", round(var_exp[2], 2), "%")) +
-    coord_fixed(ratio = aspect_ratio)  # Force square axes
-  
-  ggsave(paste0(directory, "/Weeklong-PCoA/All/Weird-unifrac/PCoA-", read_filter, "-reads-all.pdf"),plot = g, device = "pdf", width = 5, height = 4)
-  
-}
-
-for (abund in c(0.1, 0.01, 0.001, 0.0001)) {
-  
-  set.seed(100) # Consistent pcoa
-  
-  ps2ordinate <- ps %>% 
-      subset_samples(total_reads > 10000) %>%
-      transform_sample_counts(function(x) {
-        rel_abund <- x / sum(x)           # Calculate relative abundance
-        x[rel_abund < abund] <- 0         # Set to 0 if relative abundance < threshold
-        return(x)  # Return modified counts (not relative abundance)
-      })
-  
-  otu_table_ps <- otu_table(ps2ordinate)
-  
-  otu_table_ps_clean <- otu_table_ps[rowSums(otu_table_ps) > 0, ] # Remove rows with all zeros (empty OTU rows)
-  otu_table_ps_clean <- otu_table_ps_clean[rowSums(otu_table_ps_clean > 0) >= 3, ] # Remove OTUs present in < 3 samples
-  
-  retained_otus <- taxa_names(otu_table_ps_clean)
-  
-  # Subset all components accordingly
-  ps_clean <- merge_phyloseq(
-    otu_table(otu_table_ps_clean),
-    sample_data(ps),
-    tax_table(ps)[retained_otus, ],
-    phy_tree(ps)
-  )
-  
-  ps_clean <- prune_taxa(retained_otus, ps_clean)
-  
-  d_metric <- "unifrac"
-  
-  pcoa_weighted <- ordinate(ps_clean, method = "MDS", distance = d_metric)
-  ordination_data <- merge(pcoa_weighted$vectors, samdf, by = "row.names")
-  var_exp <- get_evals(pcoa_weighted)$variance_exp # variances
-  
-  x_range <- range(ordination_data$Axis.1)
-  y_range <- range(ordination_data$Axis.2)
-  aspect_ratio <- diff(x_range) / diff(y_range)
-  
-  ordination_data <- set_ordered_factors(ordination_data) # set ordered factors
-  
-  lines_df <- ordination_data %>%
-    filter(Region %in% region_order) %>%
-    mutate(Region = factor(Region, levels = region_order)) %>%
-    arrange(Kit_ID, Region)  # Ensures correct order within Kit_ID
-  
-  colors2plot <- colors_origin
-  
-  g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
-    scale_fill_manual(values = colors2plot) +
-    geom_point(stroke = 0.5, color = "black") +
-    scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
-    guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
-    force_panelsizes(
-      rows = unit(c(5, 5, 5, 5), "cm"), 
-      cols = unit(c(5, 5, 5, 5), "cm"), 
-      TRUE
-    ) +
-    labs(title = d_metric,
-        x = paste0("PCo1 ", round(var_exp[1], 2), "%"),
-        y = paste0("PCo2 ", round(var_exp[2], 2), "%")) +
-    coord_fixed(ratio = aspect_ratio)  # Force square axes
-  
-  ggsave(paste0(directory, "/Weeklong-PCoA/All/Weird-unifrac/PCoA-", gsub("\\.", "p", as.character(abund)), "-abundance-all.pdf"),plot = g, device = "pdf", width = 5, height = 4)
-  
+      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Region, shape = Region)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_point(stroke = 0.5, color = "black") +
+           facet_grid(cols = vars(Subject_no)) +
+           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+           guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+           force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"), 
+                           cols = unit(c(5, 5, 5, 5), "cm"), 
+                           TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio) + # Force square axes
+          theme(legend.position = "null")
+      
+      ggsave(paste0(directory, "/Couple-PCoA/All/Subject_no/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 5, height = 3)
+    
 }
 
 ```
@@ -1152,7 +953,9 @@ for (abund in c(0.1, 0.01, 0.001, 0.0001)) {
 
 ps_filtered <- ps %>%
   subset_samples(total_reads > 10000
-                 & Sample_origin3 %in% c("Capscan", "Stool"))
+                 & group == "LONGIT"
+                 & Subject_no != "Subj3"
+                 & Sample_origin2 %in% c("Cap", "Stool"))
 
 paired_distances <- list()
 
@@ -1167,9 +970,9 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
     data.frame() %>%
     rownames_to_column("Sample")
   
-  # Find paired samples (same Kit_ID, different Sample_origin3)
-  capscan_samples <- sample_info %>% filter(Sample_origin3 == "Capscan")
-  stool_samples <- sample_info %>% filter(Sample_origin3 == "Stool")
+  # Find paired samples (same Kit_ID, different Sample_origin2)
+  capscan_samples <- sample_info %>% filter(Sample_origin2 == "Cap")
+  stool_samples <- sample_info %>% filter(Sample_origin2 == "Stool")
   
   # Match by Kit_ID
   paired_results <- capscan_samples %>%
@@ -1179,27 +982,13 @@ for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
       distance = dist_df[Sample_Capscan, Sample_Stool],
       metric = d_metric
     ) %>%
-    select(Kit_ID, Subject_ID_Capscan, Sample_Capscan, Region_Capscan, Prediction_Capscan, Sample_Stool, distance, metric, )
+    select(Kit_ID, Subject_ID_Capscan, Sample_Capscan, Region_Capscan, Sample_Stool, distance, metric, )
   
   paired_distances[[d_metric]] <- paired_results
 }
 
 # Combine all results
 all_paired_distances <- bind_rows(paired_distances)
-all_paired_distances <- all_paired_distances %>%
-  mutate(Prediction_Capscan = factor(Prediction_Capscan, levels = c("SI_light", "SI", "SI_dark", "AC", "NA")))
-
-g <- ggplot(all_paired_distances, aes(x = Prediction_Capscan, y = distance, fill = Prediction_Capscan)) +
-    geom_violin(alpha = 1, linewidth = 0.2) +
-    facet_grid(rows = vars(metric)) +
-    geom_jitter(width = 0.2, alpha = 1, size = 0.1) +
-    labs(title = "Capscan vs Stool Distances by Metric",
-         x = "Distance Metric",
-         y = "Distance") +
-    theme(legend.position = "none") +
-    theme_custom_text()
-
-ggsave(paste0(directory, "/Weeklong-PCoA/Distances-betw-cap-stool-prediction.pdf"), plot = g, device = "pdf", width = 4, height = 5)
 
 g <- ggplot(all_paired_distances, aes(x = Region_Capscan, y = distance, fill = Region_Capscan)) +
     geom_violin(alpha = 1, linewidth = 0.2) +
@@ -1212,20 +1001,7 @@ g <- ggplot(all_paired_distances, aes(x = Region_Capscan, y = distance, fill = R
     theme(legend.position = "none") +
     theme_custom_text()
 
-ggsave(paste0(directory, "/Weeklong-PCoA/Distances-betw-cap-stool-region.pdf"), plot = g, device = "pdf", width = 3, height = 5)
-
-summary_stats <- all_paired_distances %>%
-  group_by(metric, Prediction_Capscan) %>%
-  summarise(
-    mean_dist = mean(distance, na.rm = TRUE),
-    sd_dist = sd(distance, na.rm = TRUE),
-    n = n(),
-    summary = sprintf("%.2f ± %.2f (n=%d)", 
-                     mean(distance, na.rm = TRUE), 
-                     sd(distance, na.rm = TRUE), 
-                     n()),
-    .groups = "drop"
-  )
+ggsave(paste0(directory, "/Couple-PCoA/Distances-betw-cap-stool-region.pdf"), plot = g, device = "pdf", width = 3, height = 5)
 
 summary_stats <- all_paired_distances %>%
   group_by(metric, Region_Capscan) %>%
@@ -1288,7 +1064,7 @@ nonzero_lf <- nonzero_per_sample %>%
 nonzero_lf <- set_ordered_factors(nonzero_lf)
 
 summary_by_origin <- nonzero_lf %>%
-  group_by(Sample_origin3, cutoff) %>%
+  group_by(Sample_origin2, cutoff) %>%
   summarise(
     mean_ASVs = mean(num_ASVs, na.rm = TRUE),
     sd_ASVs = sd(num_ASVs, na.rm = TRUE),
@@ -1312,41 +1088,28 @@ summary_by_region <- nonzero_lf %>%
     .groups = "drop"
   )
 
-# Summary by Prediction and cutoff
-summary_by_prediction <- nonzero_lf %>%
-  group_by(Prediction, cutoff) %>%
-  summarise(
-    mean_ASVs = mean(num_ASVs, na.rm = TRUE),
-    sd_ASVs = sd(num_ASVs, na.rm = TRUE),
-    median_ASVs = median(num_ASVs, na.rm = TRUE),
-    min_ASVs = min(num_ASVs, na.rm = TRUE),
-    max_ASVs = max(num_ASVs, na.rm = TRUE),
-    n = n(),
-    .groups = "drop"
-  )
-
 g <- ggplot(nonzero_lf, aes(x = num_ASVs, fill = Region)) + 
   geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
   scale_fill_manual(values = colors_origin) +
-  facet_grid(rows = vars(Sample_origin3), cols = vars(cutoff)) +
+  facet_grid(rows = vars(Sample_origin2), cols = vars(cutoff)) +
   theme_custom_text() +
   theme(aspect.ratio = 1,
         legend.text = element_text(size = 6),  # Legend text size
         legend.key.size = unit(0.3, "cm"))
 
-ggsave(paste0(directory, "Weeklong-Number-ASVs/Number-ASVs-region.pdf"), plot = g, device = "pdf", width = 4, height = 4)
+ggsave(paste0(directory, "Couple-Number-ASVs/Number-ASVs-region.pdf"), plot = g, device = "pdf", width = 4, height = 4)
 
-for (sid in unique(samdf$Subject_ID)) {
-  g <- ggplot(nonzero_lf %>% filter(sid == Subject_ID), aes(x = num_ASVs, fill = Region)) + 
+for (sid in unique(samdf$Subject_no)) {
+  g <- ggplot(nonzero_lf %>% filter(sid == Subject_no), aes(x = num_ASVs, fill = Region)) + 
       geom_histogram(bins = 25, color = "black", linewidth = 0.2) +
       scale_fill_manual(values = colors_origin) +
-      facet_grid(rows = vars(Sample_origin3), cols = vars(cutoff)) +
+      facet_grid(rows = vars(Sample_origin2), cols = vars(cutoff)) +
       theme_custom_text() +
       theme(aspect.ratio = 1,
             legend.text = element_text(size = 6),  # Legend text size
             legend.key.size = unit(0.3, "cm"))
 
-      ggsave(paste0(directory, "Weeklong-Number-ASVs/Number-ASVs-region-", sid, ".pdf"), plot = g, device = "pdf", width = 4, height = 4)
+      ggsave(paste0(directory, "Couple-Number-ASVs/Number-ASVs-region-", sid, ".pdf"), plot = g, device = "pdf", width = 4, height = 4)
 }
 
 ```
@@ -1356,377 +1119,377 @@ for (sid in unique(samdf$Subject_ID)) {
 #######################################
 
 ```{r Shared number of ASVs}
-
-cutoffs <- c(0.01, 0.001, 0.0001)
-results_list <- list()
-
-for (cutoff in cutoffs) {
-  
-  # Filter and transform phyloseq object
-  ps2plot <- ps %>%
-    subset_samples(total_reads > 10000) %>%
-    transform_sample_counts(function(x) x/sum(x)) %>%
-    filter_taxa(function(x) any(x > cutoff), TRUE)
-  
-  # Get presence/absence of ASVs per sample
-  df <- psmelt(ps2plot) %>%
-    filter(Abundance > cutoff) %>%
-    select(OTU, Sample, Subject_ID, Sample_origin3) %>%
-    distinct()
-  
-  # Get ASVs per individual sample
-  asv_by_sample <- df %>%
-    group_by(Sample, Subject_ID, Sample_origin3) %>%
-    summarise(ASVs = list(unique(OTU)), .groups = "drop")
-  
-  # Compare samples between different subject pairs, within same sample type
-  shared_asvs <- asv_by_sample %>%
-    group_by(Sample_origin3) %>%
-    do({
-      current_data <- .
-      
-      # Get all pairs of subjects (including both directions)
-      subject_pairs <- expand.grid(
-        idx1 = seq_len(nrow(current_data)),
-        idx2 = seq_len(nrow(current_data)),
-        stringsAsFactors = FALSE
-      ) %>%
-        filter(current_data$Subject_ID[idx1] != current_data$Subject_ID[idx2])  # Only different subjects
-      
-      subject_pairs %>%
-        rowwise() %>%
-        mutate(
-          Subject1 = current_data$Subject_ID[idx1],
-          Subject2 = current_data$Subject_ID[idx2],
-          Sample1 = current_data$Sample[idx1],
-          Sample2 = current_data$Sample[idx2],
-          n_shared = length(intersect(
-            current_data$ASVs[[idx1]], 
-            current_data$ASVs[[idx2]]
-          )),
-          n_sample1 = length(current_data$ASVs[[idx1]]),
-          n_sample2 = length(current_data$ASVs[[idx2]])
-        ) %>%
-        select(-idx1, -idx2)
-    }) %>%
-    ungroup() %>%
-    mutate(cutoff = gsub("\\.", "p", gsub("%", "", paste0(cutoff * 100, "%"))))
-  
-  results_list[[length(results_list) + 1]] <- shared_asvs
-}
-
-# Combine all results
-all_results <- bind_rows(results_list)
-
-# Calculate average shared ASVs per subject pair
-summary_by_subject_pair <- all_results %>%
-  group_by(Subject1, Subject2, Sample_origin3, cutoff) %>%
-  summarise(
-    mean_shared = mean(n_shared),
-    sd_shared = sd(n_shared),
-    n_comparisons = n(),
-    .groups = "drop"
-  )
-
-# Overall summary by sample type and cutoff
-overall_summary <- all_results %>%
-  group_by(Sample_origin3, cutoff) %>%
-  summarise(
-    mean_shared = mean(n_shared),
-    median_shared = median(n_shared),
-    sd_shared = sd(n_shared),
-    n_comparisons = n(),
-    .groups = "drop"
-  )
-
-summary_by_subject_pair <- summary_by_subject_pair %>%
-  mutate(Sample_origin3 = factor(Sample_origin3, levels = c("Saliva", "Capscan", "Stool"), ordered = TRUE))
-
-g <- ggplot(summary_by_subject_pair, aes(x = Subject1, y = Subject2, fill = mean_shared)) +
-      geom_tile(color = "black") +
-      facet_grid(Sample_origin3 ~ cutoff) +
-      scale_fill_gradient(low = "white", high = "blue", na.value = "black") +
-      labs(title = "Shared ASVs Between All Subject Pairs",
-           fill = "# Shared\nASVs") +
-      coord_fixed() +  # Makes tiles square
-      theme(axis.text.x = element_text(size = 6),
-            axis.text.y = element_text(size = 6),
-            axis.ticks.x = element_blank(),
-            panel.background = element_blank(),
-            axis.ticks.y = element_blank(),
-            legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
-            legend.ticks = element_line(color = "black")) + # Black ticks
-     theme_custom_text()
-
-ggsave(paste0(directory, "/Weeklong-Shared-ASVs/No/All-subjects.pdf"), plot = g, device = "pdf", width = 10, height = 9)
-
-for (region in unique(samdf$Sample_origin3)) {
-  for (cutoff_val in unique(all_results$cutoff)) {
-    
-    g <- ggplot(summary_by_subject_pair %>% filter(Sample_origin3 == region & cutoff == cutoff_val), aes(x = Subject1, y = Subject2, fill = mean_shared)) +
-      geom_tile(color = "black") +
-      facet_grid(Sample_origin3 ~ cutoff) +
-      scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, NA)) +
-      labs(title = "Shared ASVs Between All Subject Pairs",
-           fill = "# Shared\nASVs") +
-      coord_fixed() +  # Makes tiles square
-      theme(axis.text.x = element_text(size = 6),
-            axis.text.y = element_text(size = 6),
-            axis.ticks.x = element_blank(),
-            panel.background = element_blank(),
-            axis.ticks.y = element_blank(),
-            legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
-            legend.ticks = element_line(color = "black")) + # Black ticks
-     theme_custom_text()
-
-ggsave(paste0(directory, "/Weeklong-Shared-ASVs/No/All-subjects-", region, "-", gsub("\\.", "p", gsub("%", "", cutoff_val)), ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
-    
-  }
-}
+# 
+# cutoffs <- c(0.01, 0.001, 0.0001)
+# results_list <- list()
+# 
+# for (cutoff in cutoffs) {
+#   
+#   # Filter and transform phyloseq object
+#   ps2plot <- ps %>%
+#     subset_samples(total_reads > 10000) %>%
+#     transform_sample_counts(function(x) x/sum(x)) %>%
+#     filter_taxa(function(x) any(x > cutoff), TRUE)
+#   
+#   # Get presence/absence of ASVs per sample
+#   df <- psmelt(ps2plot) %>%
+#     filter(Abundance > cutoff) %>%
+#     select(OTU, Sample, Subject_ID, Sample_origin3) %>%
+#     distinct()
+#   
+#   # Get ASVs per individual sample
+#   asv_by_sample <- df %>%
+#     group_by(Sample, Subject_ID, Sample_origin3) %>%
+#     summarise(ASVs = list(unique(OTU)), .groups = "drop")
+#   
+#   # Compare samples between different subject pairs, within same sample type
+#   shared_asvs <- asv_by_sample %>%
+#     group_by(Sample_origin3) %>%
+#     do({
+#       current_data <- .
+#       
+#       # Get all pairs of subjects (including both directions)
+#       subject_pairs <- expand.grid(
+#         idx1 = seq_len(nrow(current_data)),
+#         idx2 = seq_len(nrow(current_data)),
+#         stringsAsFactors = FALSE
+#       ) %>%
+#         filter(current_data$Subject_ID[idx1] != current_data$Subject_ID[idx2])  # Only different subjects
+#       
+#       subject_pairs %>%
+#         rowwise() %>%
+#         mutate(
+#           Subject1 = current_data$Subject_ID[idx1],
+#           Subject2 = current_data$Subject_ID[idx2],
+#           Sample1 = current_data$Sample[idx1],
+#           Sample2 = current_data$Sample[idx2],
+#           n_shared = length(intersect(
+#             current_data$ASVs[[idx1]], 
+#             current_data$ASVs[[idx2]]
+#           )),
+#           n_sample1 = length(current_data$ASVs[[idx1]]),
+#           n_sample2 = length(current_data$ASVs[[idx2]])
+#         ) %>%
+#         select(-idx1, -idx2)
+#     }) %>%
+#     ungroup() %>%
+#     mutate(cutoff = gsub("\\.", "p", gsub("%", "", paste0(cutoff * 100, "%"))))
+#   
+#   results_list[[length(results_list) + 1]] <- shared_asvs
+# }
+# 
+# # Combine all results
+# all_results <- bind_rows(results_list)
+# 
+# # Calculate average shared ASVs per subject pair
+# summary_by_subject_pair <- all_results %>%
+#   group_by(Subject1, Subject2, Sample_origin3, cutoff) %>%
+#   summarise(
+#     mean_shared = mean(n_shared),
+#     sd_shared = sd(n_shared),
+#     n_comparisons = n(),
+#     .groups = "drop"
+#   )
+# 
+# # Overall summary by sample type and cutoff
+# overall_summary <- all_results %>%
+#   group_by(Sample_origin3, cutoff) %>%
+#   summarise(
+#     mean_shared = mean(n_shared),
+#     median_shared = median(n_shared),
+#     sd_shared = sd(n_shared),
+#     n_comparisons = n(),
+#     .groups = "drop"
+#   )
+# 
+# summary_by_subject_pair <- summary_by_subject_pair %>%
+#   mutate(Sample_origin3 = factor(Sample_origin3, levels = c("Saliva", "Capscan", "Stool"), ordered = TRUE))
+# 
+# g <- ggplot(summary_by_subject_pair, aes(x = Subject1, y = Subject2, fill = mean_shared)) +
+#       geom_tile(color = "black") +
+#       facet_grid(Sample_origin3 ~ cutoff) +
+#       scale_fill_gradient(low = "white", high = "blue", na.value = "black") +
+#       labs(title = "Shared ASVs Between All Subject Pairs",
+#            fill = "# Shared\nASVs") +
+#       coord_fixed() +  # Makes tiles square
+#       theme(axis.text.x = element_text(size = 6),
+#             axis.text.y = element_text(size = 6),
+#             axis.ticks.x = element_blank(),
+#             panel.background = element_blank(),
+#             axis.ticks.y = element_blank(),
+#             legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
+#             legend.ticks = element_line(color = "black")) + # Black ticks
+#      theme_custom_text()
+# 
+# ggsave(paste0(directory, "/Couple-Shared-ASVs/No/All-subjects.pdf"), plot = g, device = "pdf", width = 10, height = 9)
+# 
+# for (region in unique(samdf$Sample_origin3)) {
+#   for (cutoff_val in unique(all_results$cutoff)) {
+#     
+#     g <- ggplot(summary_by_subject_pair %>% filter(Sample_origin3 == region & cutoff == cutoff_val), aes(x = Subject1, y = Subject2, fill = mean_shared)) +
+#       geom_tile(color = "black") +
+#       facet_grid(Sample_origin3 ~ cutoff) +
+#       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, NA)) +
+#       labs(title = "Shared ASVs Between All Subject Pairs",
+#            fill = "# Shared\nASVs") +
+#       coord_fixed() +  # Makes tiles square
+#       theme(axis.text.x = element_text(size = 6),
+#             axis.text.y = element_text(size = 6),
+#             axis.ticks.x = element_blank(),
+#             panel.background = element_blank(),
+#             axis.ticks.y = element_blank(),
+#             legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
+#             legend.ticks = element_line(color = "black")) + # Black ticks
+#      theme_custom_text()
+# 
+# ggsave(paste0(directory, "/Couple-Shared-ASVs/No/All-subjects-", region, "-", gsub("\\.", "p", gsub("%", "", cutoff_val)), ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
+#     
+#   }
+# }
 ```
 
 ```{r Shared abundance of ASVs}
-
-cutoffs <- c(0.01, 0.001, 0.0001)
-results_list <- list()
-
-for (cutoff in cutoffs) {
-  
-  # Filter and transform phyloseq object
-  ps2plot <- ps %>%
-    subset_samples(total_reads > 10000) %>%
-    transform_sample_counts(function(x) x/sum(x))
-  
-  # Get abundance data
-  df <- psmelt(ps2plot) %>%
-    select(OTU, Sample, Subject_ID, Sample_origin3, Abundance)
-  
-  # Identify ASVs present above cutoff per sample
-  asvs_above_cutoff <- df %>%
-    filter(Abundance > cutoff) %>%
-    select(Sample, Subject_ID, Sample_origin3, OTU) %>%
-    distinct()
-  
-  # Get samples grouped by subject and sample type
-  samples_by_subject <- df %>%
-    select(Sample, Subject_ID, Sample_origin3) %>%
-    distinct()
-  
-  # For each subject pair within same sample type
-  shared_abundance <- samples_by_subject %>%
-    group_by(Sample_origin3) %>%
-    do({
-      current_samples <- .
-      
-      # Get all pairs of subjects
-      subject_pairs <- expand.grid(
-        Subject1 = unique(current_samples$Subject_ID),
-        Subject2 = unique(current_samples$Subject_ID),
-        stringsAsFactors = FALSE
-      ) %>%
-        filter(Subject1 != Subject2)
-      
-      subject_pairs %>%
-        rowwise() %>%
-        do({
-          s1 <- .$Subject1
-          s2 <- .$Subject2
-          samp_origin <- current_samples$Sample_origin3[1]
-          
-          # Get samples for each subject
-          samples_s1 <- current_samples %>% filter(Subject_ID == s1) %>% pull(Sample)
-          samples_s2 <- current_samples %>% filter(Subject_ID == s2) %>% pull(Sample)
-          
-          # Get ASVs present above cutoff in Subject1
-          asvs_s1 <- asvs_above_cutoff %>%
-            filter(Sample %in% samples_s1, Sample_origin3 == samp_origin) %>%
-            pull(OTU) %>%
-            unique()
-          
-          # Calculate total abundance of those ASVs in Subject2 samples
-          # (regardless of whether they're above cutoff in Subject2)
-          abundance_in_s2 <- df %>%
-            filter(Sample %in% samples_s2, 
-                   Sample_origin3 == samp_origin,
-                   OTU %in% asvs_s1) %>%
-            group_by(Sample) %>%
-            summarise(total_abundance = sum(Abundance), .groups = "drop")
-          
-          # Calculate average abundance across Subject2 samples
-          avg_abundance <- ifelse(nrow(abundance_in_s2) > 0, 
-                                  mean(abundance_in_s2$total_abundance), 
-                                  0)
-          
-          data.frame(
-            Subject1 = s1,
-            Subject2 = s2,
-            Sample_origin3 = samp_origin,
-            n_asvs_subject1 = length(asvs_s1),
-            avg_abundance_in_subject2 = avg_abundance,
-            n_samples_subject2 = length(samples_s2)
-          )
-        }) %>%
-        ungroup()
-    }) %>%
-    ungroup() %>%
-    mutate(cutoff = gsub("\\.", "p", gsub("%", "", paste0(cutoff * 100, "%"))))
-  
-  results_list[[length(results_list) + 1]] <- shared_abundance
-}
-
-# Combine all results
-all_results <- bind_rows(results_list)
-
-all_results <- all_results %>%
-  mutate(Sample_origin3 = factor(Sample_origin3, levels = c("Saliva", "Capscan", "Stool"), ordered = TRUE))
-
-g <- ggplot(all_results, aes(x = Subject1, y = Subject2, fill = 100*avg_abundance_in_subject2)) +
-      geom_tile(color = "black") +
-      facet_grid(Sample_origin3 ~ cutoff) +
-      scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, 100)) +
-      labs(title = "Percent shared ASVs between all subject pairs",
-           fill = "% Shared\nASVs",
-           x = "ASVs in Subject 1 at X cutoff",
-           y = "% abundance of ASVs in Subject 2") +
-      coord_fixed() +  # Makes tiles square
-      theme(axis.text.x = element_text(size = 6),
-            axis.text.y = element_text(size = 6),
-            axis.ticks.x = element_blank(),
-            panel.background = element_blank(),
-            axis.ticks.y = element_blank(),
-            legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
-            legend.ticks = element_line(color = "black")) + # Black ticks
-     theme_custom_text()
-
-ggsave(paste0(directory, "/Weeklong-Shared-ASVs/Abundance/All-subjects.pdf"), plot = g, device = "pdf", width = 10, height = 9)
-
-for (region in unique(samdf$Sample_origin3)) {
-  for (cutoff_val in unique(all_results$cutoff)) {
-    
-    g <- ggplot(all_results %>% filter(Sample_origin3 == region & cutoff == cutoff_val), aes(x = Subject1, y = Subject2, fill = 100*avg_abundance_in_subject2)) +
-      geom_tile(color = "black") +
-      facet_grid(Sample_origin3 ~ cutoff) +
-      scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, 100)) +
-      labs(title = "Percent shared ASVs between all subject pairs",
-           fill = "% Shared\nASVs",
-           x = "ASVs in Subject 1 at X cutoff",
-           y = "% abundance of ASVs in Subject 2") +
-      coord_fixed() +  # Makes tiles square
-      theme(axis.text.x = element_text(size = 6),
-            axis.text.y = element_text(size = 6),
-            axis.ticks.x = element_blank(),
-            panel.background = element_blank(),
-            axis.ticks.y = element_blank(),
-            legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
-            legend.ticks = element_line(color = "black")) + # Black ticks
-     theme_custom_text()
-
-ggsave(paste0(directory, "/Weeklong-Shared-ASVs/Abundance/All-subjects-", region, "-", gsub("\\.", "p", gsub("%", "", cutoff_val)), ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
-    
-  }
-}
+# 
+# cutoffs <- c(0.01, 0.001, 0.0001)
+# results_list <- list()
+# 
+# for (cutoff in cutoffs) {
+#   
+#   # Filter and transform phyloseq object
+#   ps2plot <- ps %>%
+#     subset_samples(total_reads > 10000) %>%
+#     transform_sample_counts(function(x) x/sum(x))
+#   
+#   # Get abundance data
+#   df <- psmelt(ps2plot) %>%
+#     select(OTU, Sample, Subject_ID, Sample_origin3, Abundance)
+#   
+#   # Identify ASVs present above cutoff per sample
+#   asvs_above_cutoff <- df %>%
+#     filter(Abundance > cutoff) %>%
+#     select(Sample, Subject_ID, Sample_origin3, OTU) %>%
+#     distinct()
+#   
+#   # Get samples grouped by subject and sample type
+#   samples_by_subject <- df %>%
+#     select(Sample, Subject_ID, Sample_origin3) %>%
+#     distinct()
+#   
+#   # For each subject pair within same sample type
+#   shared_abundance <- samples_by_subject %>%
+#     group_by(Sample_origin3) %>%
+#     do({
+#       current_samples <- .
+#       
+#       # Get all pairs of subjects
+#       subject_pairs <- expand.grid(
+#         Subject1 = unique(current_samples$Subject_ID),
+#         Subject2 = unique(current_samples$Subject_ID),
+#         stringsAsFactors = FALSE
+#       ) %>%
+#         filter(Subject1 != Subject2)
+#       
+#       subject_pairs %>%
+#         rowwise() %>%
+#         do({
+#           s1 <- .$Subject1
+#           s2 <- .$Subject2
+#           samp_origin <- current_samples$Sample_origin3[1]
+#           
+#           # Get samples for each subject
+#           samples_s1 <- current_samples %>% filter(Subject_ID == s1) %>% pull(Sample)
+#           samples_s2 <- current_samples %>% filter(Subject_ID == s2) %>% pull(Sample)
+#           
+#           # Get ASVs present above cutoff in Subject1
+#           asvs_s1 <- asvs_above_cutoff %>%
+#             filter(Sample %in% samples_s1, Sample_origin3 == samp_origin) %>%
+#             pull(OTU) %>%
+#             unique()
+#           
+#           # Calculate total abundance of those ASVs in Subject2 samples
+#           # (regardless of whether they're above cutoff in Subject2)
+#           abundance_in_s2 <- df %>%
+#             filter(Sample %in% samples_s2, 
+#                    Sample_origin3 == samp_origin,
+#                    OTU %in% asvs_s1) %>%
+#             group_by(Sample) %>%
+#             summarise(total_abundance = sum(Abundance), .groups = "drop")
+#           
+#           # Calculate average abundance across Subject2 samples
+#           avg_abundance <- ifelse(nrow(abundance_in_s2) > 0, 
+#                                   mean(abundance_in_s2$total_abundance), 
+#                                   0)
+#           
+#           data.frame(
+#             Subject1 = s1,
+#             Subject2 = s2,
+#             Sample_origin3 = samp_origin,
+#             n_asvs_subject1 = length(asvs_s1),
+#             avg_abundance_in_subject2 = avg_abundance,
+#             n_samples_subject2 = length(samples_s2)
+#           )
+#         }) %>%
+#         ungroup()
+#     }) %>%
+#     ungroup() %>%
+#     mutate(cutoff = gsub("\\.", "p", gsub("%", "", paste0(cutoff * 100, "%"))))
+#   
+#   results_list[[length(results_list) + 1]] <- shared_abundance
+# }
+# 
+# # Combine all results
+# all_results <- bind_rows(results_list)
+# 
+# all_results <- all_results %>%
+#   mutate(Sample_origin3 = factor(Sample_origin3, levels = c("Saliva", "Capscan", "Stool"), ordered = TRUE))
+# 
+# g <- ggplot(all_results, aes(x = Subject1, y = Subject2, fill = 100*avg_abundance_in_subject2)) +
+#       geom_tile(color = "black") +
+#       facet_grid(Sample_origin3 ~ cutoff) +
+#       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, 100)) +
+#       labs(title = "Percent shared ASVs between all subject pairs",
+#            fill = "% Shared\nASVs",
+#            x = "ASVs in Subject 1 at X cutoff",
+#            y = "% abundance of ASVs in Subject 2") +
+#       coord_fixed() +  # Makes tiles square
+#       theme(axis.text.x = element_text(size = 6),
+#             axis.text.y = element_text(size = 6),
+#             axis.ticks.x = element_blank(),
+#             panel.background = element_blank(),
+#             axis.ticks.y = element_blank(),
+#             legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
+#             legend.ticks = element_line(color = "black")) + # Black ticks
+#      theme_custom_text()
+# 
+# ggsave(paste0(directory, "/Couple-Shared-ASVs/Abundance/All-subjects.pdf"), plot = g, device = "pdf", width = 10, height = 9)
+# 
+# for (region in unique(samdf$Sample_origin3)) {
+#   for (cutoff_val in unique(all_results$cutoff)) {
+#     
+#     g <- ggplot(all_results %>% filter(Sample_origin3 == region & cutoff == cutoff_val), aes(x = Subject1, y = Subject2, fill = 100*avg_abundance_in_subject2)) +
+#       geom_tile(color = "black") +
+#       facet_grid(Sample_origin3 ~ cutoff) +
+#       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, 100)) +
+#       labs(title = "Percent shared ASVs between all subject pairs",
+#            fill = "% Shared\nASVs",
+#            x = "ASVs in Subject 1 at X cutoff",
+#            y = "% abundance of ASVs in Subject 2") +
+#       coord_fixed() +  # Makes tiles square
+#       theme(axis.text.x = element_text(size = 6),
+#             axis.text.y = element_text(size = 6),
+#             axis.ticks.x = element_blank(),
+#             panel.background = element_blank(),
+#             axis.ticks.y = element_blank(),
+#             legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
+#             legend.ticks = element_line(color = "black")) + # Black ticks
+#      theme_custom_text()
+# 
+# ggsave(paste0(directory, "/Couple-Shared-ASVs/Abundance/All-subjects-", region, "-", gsub("\\.", "p", gsub("%", "", cutoff_val)), ".pdf"), plot = g, device = "pdf", width = 9, height = 7)
+#     
+#   }
+# }
 ```
 
 ```{r Most prevalent ASVs 0p01}
-
-# Get ASVs detectable at >1% for each subject and sample type
-detectable_asvs <- ps %>%
-  subset_samples(total_reads > 10000) %>%
-  transform_sample_counts(function(x) x/sum(x)) %>%  # Convert to relative abundance
-  psmelt() %>%
-  filter(Abundance > cutoff_MT) %>%
-  group_by(Subject_ID, Sample_origin3, Feature) %>%
-  summarise(
-    n_samples_detected = n(),
-    Taxon = first(Taxon),  # Get taxonomy info
-    .groups = "drop"
-  )
-
-# Calculate prevalence (number of subjects with each ASV)
-asv_prevalence <- detectable_asvs %>%
-  group_by(Sample_origin3, Feature, Taxon) %>%
-  summarise(
-    n_subjects = n_distinct(Subject_ID),
-    subjects_list = paste(sort(unique(Subject_ID)), collapse = ", "),
-    mean_samples_detected = mean(n_samples_detected),
-    total_samples = sum(n_samples_detected),
-    .groups = "drop"
-  ) %>%
-  arrange(Sample_origin3, desc(n_subjects), desc(mean_samples_detected))
-
-for (sample_origin in unique(samdf$Sample_origin3)) {
-
-    features_to_keep <- asv_prevalence %>%
-      filter(Sample_origin3 == sample_origin, n_subjects >= 2) %>%
-      pull(Feature)
-    
-   temp_complete <- detectable_asvs %>% 
-    filter(Sample_origin3 == sample_origin,
-           Feature %in% features_to_keep) %>%
-    complete(Subject_ID, nesting(Feature, Taxon), fill = list(n_samples_detected = 0)) %>%
-    left_join(
-      asv_prevalence %>% 
-        filter(Sample_origin3 == sample_origin) %>%
-        select(Feature, Taxon, n_subjects) %>%
-        distinct(),
-      by = c("Feature", "Taxon")
-    )
-
-  mat <- temp_complete %>%
-      mutate(feature_taxon = interaction(Feature, Taxon)) %>%
-      select(Subject_ID, feature_taxon, n_samples_detected) %>%
-      pivot_wider(names_from = Subject_ID, values_from = n_samples_detected, values_fill = 0) %>%
-      column_to_rownames("feature_taxon") %>%
-      as.matrix()
-  
-  # Create pheatmap
-    g <- pheatmap(mat,
-         color = c("black", colorRampPalette(c("white", "blue"))(99)),
-         cluster_rows = TRUE,
-         cluster_cols = TRUE,
-         clustering_distance_rows = "euclidean",
-         clustering_distance_cols = "euclidean",
-         clustering_method = "complete",
-         show_rownames = TRUE,
-         show_colnames = TRUE,
-         fontsize_row = 6,
-         fontsize_col = 6,
-         border_color = "black",
-         angle_col = 0,
-         breaks = c(0, seq(0.01, max(mat), length.out = 99)))
-
-  ggsave(paste0(directory, "/Weeklong-Shared-ASVs/All-subjects-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 8, height = 0.1 * n_distinct(temp_complete$Feature) + 2)
-}
-
-for (sample_origin in unique(samdf$Sample_origin3)) {
-
-  temp_complete <- detectable_asvs %>% 
-    filter(Sample_origin3 == sample_origin, Feature %in% top10_features) %>%
-    complete(Subject_ID, nesting(Feature, Taxon), fill = list(n_samples_detected = NA)) %>%
-    left_join(
-      asv_prevalence %>% 
-        filter(Sample_origin3 == sample_origin) %>%
-        select(Feature, Taxon, n_subjects) %>%
-        distinct(),
-      by = c("Feature", "Taxon")
-    )
-  
-   g <- ggplot(temp_complete) +
-       geom_tile(aes(x = Subject_ID, y = interaction(Feature, Taxon, n_subjects), fill = n_samples_detected),  color = "black") +
-       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, NA)) +
-       theme(strip.text.y = element_blank(),
-             axis.title.x = element_blank(),
-             axis.title.y = element_blank(),
-             axis.ticks.y = element_blank(),
-             axis.text.x = element_text(),
-             axis.ticks.x = element_blank(),
-             #aspect.ratio = 1,
-             legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
-             legend.ticks = element_line(color = "black")) + # Black ticks
-       theme_custom_text()
-  
-   ggsave(paste0(directory, "/Weeklong-Shared-ASVs/All-subjects-", sample_origin, "-top.pdf"), plot = g, device = "pdf", width = 6, height = 0.2 * n_distinct(temp_complete$Feature))
-}
+# 
+# # Get ASVs detectable at >1% for each subject and sample type
+# detectable_asvs <- ps %>%
+#   subset_samples(total_reads > 10000) %>%
+#   transform_sample_counts(function(x) x/sum(x)) %>%  # Convert to relative abundance
+#   psmelt() %>%
+#   filter(Abundance > cutoff_MT) %>%
+#   group_by(Subject_ID, Sample_origin3, Feature) %>%
+#   summarise(
+#     n_samples_detected = n(),
+#     Taxon = first(Taxon),  # Get taxonomy info
+#     .groups = "drop"
+#   )
+# 
+# # Calculate prevalence (number of subjects with each ASV)
+# asv_prevalence <- detectable_asvs %>%
+#   group_by(Sample_origin3, Feature, Taxon) %>%
+#   summarise(
+#     n_subjects = n_distinct(Subject_ID),
+#     subjects_list = paste(sort(unique(Subject_ID)), collapse = ", "),
+#     mean_samples_detected = mean(n_samples_detected),
+#     total_samples = sum(n_samples_detected),
+#     .groups = "drop"
+#   ) %>%
+#   arrange(Sample_origin3, desc(n_subjects), desc(mean_samples_detected))
+# 
+# for (sample_origin in unique(samdf$Sample_origin3)) {
+# 
+#     features_to_keep <- asv_prevalence %>%
+#       filter(Sample_origin3 == sample_origin, n_subjects >= 2) %>%
+#       pull(Feature)
+#     
+#    temp_complete <- detectable_asvs %>% 
+#     filter(Sample_origin3 == sample_origin,
+#            Feature %in% features_to_keep) %>%
+#     complete(Subject_ID, nesting(Feature, Taxon), fill = list(n_samples_detected = 0)) %>%
+#     left_join(
+#       asv_prevalence %>% 
+#         filter(Sample_origin3 == sample_origin) %>%
+#         select(Feature, Taxon, n_subjects) %>%
+#         distinct(),
+#       by = c("Feature", "Taxon")
+#     )
+# 
+#   mat <- temp_complete %>%
+#       mutate(feature_taxon = interaction(Feature, Taxon)) %>%
+#       select(Subject_ID, feature_taxon, n_samples_detected) %>%
+#       pivot_wider(names_from = Subject_ID, values_from = n_samples_detected, values_fill = 0) %>%
+#       column_to_rownames("feature_taxon") %>%
+#       as.matrix()
+#   
+#   # Create pheatmap
+#     g <- pheatmap(mat,
+#          color = c("black", colorRampPalette(c("white", "blue"))(99)),
+#          cluster_rows = TRUE,
+#          cluster_cols = TRUE,
+#          clustering_distance_rows = "euclidean",
+#          clustering_distance_cols = "euclidean",
+#          clustering_method = "complete",
+#          show_rownames = TRUE,
+#          show_colnames = TRUE,
+#          fontsize_row = 6,
+#          fontsize_col = 6,
+#          border_color = "black",
+#          angle_col = 0,
+#          breaks = c(0, seq(0.01, max(mat), length.out = 99)))
+# 
+#   ggsave(paste0(directory, "/Couple-Shared-ASVs/All-subjects-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 8, height = 0.1 * n_distinct(temp_complete$Feature) + 2)
+# }
+# 
+# for (sample_origin in unique(samdf$Sample_origin3)) {
+# 
+#   temp_complete <- detectable_asvs %>% 
+#     filter(Sample_origin3 == sample_origin, Feature %in% top10_features) %>%
+#     complete(Subject_ID, nesting(Feature, Taxon), fill = list(n_samples_detected = NA)) %>%
+#     left_join(
+#       asv_prevalence %>% 
+#         filter(Sample_origin3 == sample_origin) %>%
+#         select(Feature, Taxon, n_subjects) %>%
+#         distinct(),
+#       by = c("Feature", "Taxon")
+#     )
+#   
+#    g <- ggplot(temp_complete) +
+#        geom_tile(aes(x = Subject_ID, y = interaction(Feature, Taxon, n_subjects), fill = n_samples_detected),  color = "black") +
+#        scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(0, NA)) +
+#        theme(strip.text.y = element_blank(),
+#              axis.title.x = element_blank(),
+#              axis.title.y = element_blank(),
+#              axis.ticks.y = element_blank(),
+#              axis.text.x = element_text(),
+#              axis.ticks.x = element_blank(),
+#              #aspect.ratio = 1,
+#              legend.frame = element_rect(color = "black", linewidth = 0.2),  # Black outline
+#              legend.ticks = element_line(color = "black")) + # Black ticks
+#        theme_custom_text()
+#   
+#    ggsave(paste0(directory, "/Couple-Shared-ASVs/All-subjects-", sample_origin, "-top.pdf"), plot = g, device = "pdf", width = 6, height = 0.2 * n_distinct(temp_complete$Feature))
+# }
 ```
 
 #######################################
@@ -1736,9 +1499,9 @@ for (sample_origin in unique(samdf$Sample_origin3)) {
 ```{r ASV fluctuations 0p01 cutoff plot features}
 
 # Make all folders
-for (sample_origin in unique(samdf$Sample_origin3)) {
-  for (sid in unique(samdf$Subject_ID)) {
-    dir.create(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/", sample_origin), 
+for (sample_origin in c("Cap", "Saliva", "Stool")) {
+  for (sid in c("Subj1", "Subj2")) {
+    dir.create(paste0(directory, "/Couple-ASV-Fluctuation-0p01/", sid, "/", sample_origin), 
                recursive = TRUE, 
                showWarnings = FALSE)
   }
@@ -1755,12 +1518,13 @@ ASV_fluctuation <- data.frame(
   stringsAsFactors = FALSE
 )
 
-for (sample_origin in unique(samdf$Sample_origin3)) {
+for (sample_origin in c("Cap", "Saliva", "Stool")) {
   
-  for (sid in unique(samdf$Subject_ID)) {
+  for (sid in c("Subj1", "Subj2")) {
     
-    ps2plot <- ps %>% subset_samples(Subject_ID == sid 
-                                     & Sample_origin3 == sample_origin
+    ps2plot <- ps %>% subset_samples(Subject_no == sid
+                                     & group == "LONGIT"
+                                     & Sample_origin2 == sample_origin
                                      & total_reads > 10000)
     
     stringent_taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
@@ -1775,11 +1539,11 @@ for (sample_origin in unique(samdf$Sample_origin3)) {
     
     # Plot all features in one figure
     
-    g <- ggplot(df2plot, aes(x = interaction(Collection_time, Collection_date_reformat, Sample_ID), y = Abundance, group = Feature)) +
+    g <- ggplot(df2plot, aes(x = interaction(Collection_time, Collection_date_reformat, Region), y = Abundance, group = Feature)) +
       geom_line(color = "black", linewidth = 0.2) +
-      scale_fill_manual(values = kit_colors) +
+      scale_fill_manual(values = colors_diet) +
       scale_y_log10(limits = c(1e-7, 1), labels = trans_format("log10", math_format(10^.x))) +  # set y-axis limits
-      geom_point(aes(fill = Kit_set), size = 1, color = "black", shape = 21) +
+      geom_point(aes(fill = Diet_collection), size = 1, color = "black", shape = 21) +
       facet_wrap(~Feature, ncol = 12) +
       labs(x = "Collection time", y = "Abundance") +
       theme(axis.title.x = element_blank(),
@@ -1790,17 +1554,17 @@ for (sample_origin in unique(samdf$Sample_origin3)) {
       theme_custom_text() +
       theme(axis.text.x = element_blank())
     
-    ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/ASV-fluctuation-", sid, "-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 16, height = 8)
+    ggsave(paste0(directory, "/Couple-ASV-Fluctuation-0p01/", sid, "/ASV-fluctuation-", sid, "-", sample_origin, ".pdf"), plot = g, device = "pdf", width = 16, height = 8)
     
     # Individual features
     for (otu in unique(stringent_taxa2keep$Feature)) {
       df <- df2plot %>% filter(Feature == otu)
       
-      g <- ggplot(df, aes(x = interaction(Collection_time, Collection_date_reformat, Sample_ID), y = Abundance, group = 1)) +
+      g <- ggplot(df, aes(x = interaction(Sample_ID, Collection_time, Collection_date_reformat), y = Abundance, group = 1)) +
         geom_line(color = "black", linewidth = 0.2) +
-        scale_fill_manual(values = kit_colors) +
+        scale_fill_manual(values = colors_diet) +
         scale_y_log10(limits = c(1e-7, 1), labels = trans_format("log10", math_format(10^.x))) +  # set y-axis limits
-        geom_point(aes(fill = Kit_set), size = 1, color = "black", shape = 21) +
+        geom_point(aes(fill = Diet_collection), size = 1, color = "black", shape = 21) +
         labs(title = paste0(otu, ": ", unique(df$Taxon)), x = "Collection time", y = "Abundance") +
         theme(axis.title.x = element_blank(),
               axis.text.x = element_text(angle = 90, hjust = 1), 
@@ -1809,7 +1573,7 @@ for (sample_origin in unique(samdf$Sample_origin3)) {
               legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
         theme_custom_text()
       
-      ggsave(paste0(directory ,"/Weeklong-ASV-Fluctuation-0p01/", sid, "/", sample_origin, "/", sample_origin, "-", otu, ".pdf"), plot = g, device = "pdf", width = 0.3*n_distinct(df$Sample_ID), height = 2) 
+      ggsave(paste0(directory ,"/Couple-ASV-Fluctuation-0p01/", sid, "/", sample_origin, "/", sample_origin, "-", otu, ".pdf"), plot = g, device = "pdf", width = 0.1*n_distinct(df$Sample_ID), height = 2) 
       # Create a row and append it
       new_row <- data.frame(
         Subject = sid,
@@ -1830,9 +1594,9 @@ for (sample_origin in unique(samdf$Sample_origin3)) {
 all_slopes <- data.frame()
 
 ASV_fluctuation <- ASV_fluctuation %>%
-    mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva", "Capscan", "Stool")))
+    mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva", "Cap", "Stool")))
   
-for (sid in unique(samdf$Subject_ID)) {
+for (sid in c("Subj1", "Subj2")) {
   
   # Calculate slopes for each Sample_origin
   slopes <- ASV_fluctuation %>%
@@ -1864,7 +1628,7 @@ for (sid in unique(samdf$Subject_ID)) {
     theme_custom_text() +
     theme(aspect.ratio = 1)
   
-  ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/Taylors-law/Mean-vs-var-", sid, ".pdf"), plot = g, device = "pdf", width = 6, height = 3)
+  ggsave(paste0(directory, "/Couple-ASV-Fluctuation-0p01/Taylors-law/Mean-vs-var-", sid, ".pdf"), plot = g, device = "pdf", width = 6, height = 3)
 }
 
 all_slopes <- all_slopes %>%
@@ -1879,7 +1643,7 @@ g <- ggplot(all_slopes, aes(y = Subject, x = Sample_origin, fill = slope)) +
        theme(legend.frame = element_rect(color = "black", linewidth = 0.2),
              legend.ticks = element_line(color = "black"))
     
-    ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/Fluctuation-slopes-all-subjects.pdf"), plot = g, device = "pdf", width = 2.5, height = 4)
+    ggsave(paste0(directory, "/Couple-ASV-Fluctuation-0p01/Fluctuation-slopes-all-subjects.pdf"), plot = g, device = "pdf", width = 2.5, height = 4)
 
 ```
 
@@ -1981,7 +1745,7 @@ summary_counts <- cor_long_filter %>%
 # create folders
 for (sid in unique(samdf$Subject_ID)) {
   for (sample_origin in unique(samdf$Sample_origin3)) {
-    dir_path <- paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/", sample_origin, "-correlations")
+    dir_path <- paste0(directory, "/Couple-ASV-Fluctuation-0p01/", sid, "/", sample_origin, "-correlations")
 
     # Create all subdirectories recursively
     dir.create(dir_path, recursive = TRUE, showWarnings = FALSE)
@@ -2031,7 +1795,7 @@ for (i in seq_len(nrow(cor_long_filter))) {
         theme_custom_text() +
         theme(legend.position = "null")
   
-  ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0p01/", sid, "/", sample_origin, "-correlations/", sid, "-", sample_origin, "-", f1, "-", f2, ".pdf"), plot = g, device = "pdf", width = 3, height = 3)
+  ggsave(paste0(directory, "/Couple-ASV-Fluctuation-0p01/", sid, "/", sample_origin, "-correlations/", sid, "-", sample_origin, "-", f1, "-", f2, ".pdf"), plot = g, device = "pdf", width = 3, height = 3)
 }
 
 ```
@@ -2185,8 +1949,904 @@ for (i in seq_len(nrow(cor_long_filter))) {
         theme_custom_text() +
         theme(legend.position = "null")
   
-  ggsave(paste0(directory, "/Weeklong-ASV-Fluctuation-0 p01/All/", sample_origin, "-correlations/All-", sample_origin, "-", f1, "-", f2, ".pdf"), plot = g, device = "pdf", width = 3, height = 3)
+  ggsave(paste0(directory, "/Couple-ASV-Fluctuation-0 p01/All/", sample_origin, "-correlations/All-", sample_origin, "-", f1, "-", f2, ".pdf"), plot = g, device = "pdf", width = 3, height = 3)
 }
 
 ```
 
+#######################################
+# Starvation
+#######################################
+
+```{r starvation - composition}
+
+starvation <- samdf %>% filter(group == "Starvation") %>% select(Sample_ID)
+
+ps2plot <- ps %>% subset_samples(Sample_ID %in% starvation$Sample_ID)
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+df2plot <- df2plot %>%
+  mutate(Revival = recode(Revival,
+                          "Yes" = "Revived",
+                          "No" = "Starved",
+                          "NA" = "Input"),
+         Revival = factor(Revival, levels = c("Input", "Starved", "Revived")))
+
+for (sid in c("Subj1", "Subj2")) {
+
+g <- ggplot(df2plot %>% filter(Sample_ID != "BHIS" & Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(total_reads, Revival)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_x_discrete(labels = red_if_small_discrete_cap) +
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         facet_nested(cols = vars(Diet_ingestion, Diet_collection, Collection_date_reformat, Collection_time, Kit_ID, Sample_origin2, Region), scales = "free", space = "free") +
+         theme_custom_comp() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+        
+    ggsave(paste0(directory, "/Couple-Starvation/Starvation-composition-0p01", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4)
+    
+}
+
+```
+
+```{r starvation - ASV heatmap - by sample_origin}
+
+starvation <- samdf %>% filter(group == "Starvation") %>% select(Sample_ID)
+
+####
+
+for (sid in c("Subj1", "Subj2")) {
+  
+  ps2plot <- ps %>% subset_samples(Sample_ID %in% starvation$Sample_ID
+                                   & Sample_origin2 == "Cap"
+                                   & Subject_no == sid
+                                   & total_reads > 5000
+                                   & Sample_ID != "BHIS")
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_MT)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+  df2plot <- df2plot %>%
+  mutate(Revival = recode(Revival,
+                          "Yes" = "Revived",
+                          "No" = "Starved",
+                          "NA" = "Input"),
+         Revival = factor(Revival, levels = c("Input", "Starved", "Revived")))
+  
+    g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(total_reads, Revival), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Diet_ingestion, Diet_collection, Collection_date_reformat, Collection_time, Kit_ID, Sample_origin2, Region), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+     ggsave(paste0(directory, "/Couple-Starvation/ASV-heatmap-0p01-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+}
+
+####
+
+for (sid in c("Subj1", "Subj2")) {
+  
+  ps2plot <- ps %>% subset_samples(Sample_ID %in% starvation$Sample_ID
+                                   & Sample_origin2 == "Stool"
+                                   & Subject_no == sid
+                                   & total_reads > 5000
+                                   & Sample_ID != "BHIS")
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_MT)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+  df2plot <- df2plot %>%
+  mutate(Revival = recode(Revival,
+                          "Yes" = "Revived",
+                          "No" = "Starved",
+                          "NA" = "Input"),
+         Revival = factor(Revival, levels = c("Input", "Starved", "Revived")))
+  
+    g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(total_reads, Revival), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Diet_ingestion, Diet_collection, Collection_date_reformat, Collection_time, Kit_ID, Sample_origin2, Region), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+     ggsave(paste0(directory, "/Couple-Starvation/ASV-heatmap-0p01-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 20, height = 0.15*(length(unique(df2plot$Feature))+3))
+}
+
+```
+
+```{r starvation - pcoa}
+
+starvation <- samdf %>% filter(group == "Starvation") %>% select(Sample_ID)
+
+set.seed(100) # Consistent pcoa
+
+ps2ordinate <- ps %>% subset_samples(Sample_ID %in% starvation$Sample_ID
+                                   & total_reads > 5000
+                                   & Sample_ID != "BHIS") # Choose which samples you want to ordinate
+
+otu_table_ps <- otu_table(ps2ordinate)
+
+otu_table_ps_clean <- otu_table_ps[rowSums(otu_table_ps) > 0, ] # Remove rows with all zeros (empty OTU rows)
+otu_table_ps_clean <- otu_table_ps_clean[rowSums(otu_table_ps_clean > 0) >= 3, ] # Remove OTUs present in < 3 samples
+    
+retained_otus <- taxa_names(otu_table_ps_clean)
+    
+# Subset all components accordingly
+ps_clean <- merge_phyloseq(otu_table(otu_table_ps_clean),
+                           sample_data(ps),
+                           tax_table(ps)[retained_otus, ],
+                           phy_tree(ps))
+    
+ps_clean <- prune_taxa(retained_otus, ps_clean)
+    
+for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
+    
+      pcoa_weighted <- ordinate(ps_clean, method = "MDS", distance = d_metric)
+      ordination_data <- merge(pcoa_weighted$vectors, samdf, by = "row.names")
+      var_exp <- get_evals(pcoa_weighted)$variance_exp # variances
+  
+      x_range <- range(ordination_data$Axis.1)
+      y_range <- range(ordination_data$Axis.2)
+      aspect_ratio <- diff(x_range) / diff(y_range)
+      
+      ordination_data <- set_ordered_factors(ordination_data) # set ordered factors
+      
+      ordination_data <- ordination_data %>%
+          mutate(Revival = recode(Revival,
+                          "Yes" = "Revived",
+                          "No" = "Starved",
+                          "NA" = "Input"),
+         Revival = factor(Revival, levels = c("Input", "Starved", "Revived"))) %>%
+         arrange(Sample_ID, Revival)
+      
+      # lines_df <- ordination_data %>%
+      #   filter(Region %in% region_order) %>%
+      #   mutate(Region = factor(Region, levels = region_order)) %>%
+      #   arrange(Kit_ID, Region)  # Ensures correct order within Kit_ID
+      
+      colors2plot <- turbo(length(unique(ordination_data$Sample_ID)), begin = 0.05, end = 0.95, direction = -1) # Define colors
+      
+       g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Sample_ID, shape = Revival)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_point(stroke = 0.5, color = "black") +
+           geom_line(aes(group = Sample_ID), color = "gray50", alpha = 0.5) +
+           scale_shape_manual(values = c("Input" = 21, "Starved" = 22, "Revived" = 23)) +
+           guides(fill = "none") +
+           force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"), 
+                           cols = unit(c(5, 5, 5, 5), "cm"), 
+                           TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio)  # Force square axes
+         # theme(legend.position = "null")
+      
+      ggsave(paste0(directory, "/Couple-Starvation/PCoA/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 6, height = 3)
+      
+      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Sample_ID, shape = Revival)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_point(stroke = 0.5, color = "black") +
+           geom_line(aes(group = Sample_ID), color = "gray50", alpha = 0.5) +
+           facet_grid(cols = vars(Subject_no)) +
+           scale_shape_manual(values = c("Input" = 21, "Starved" = 22, "Revived" = 23)) +
+           guides(fill = "none") +
+           force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"), 
+                           cols = unit(c(5, 5, 5, 5), "cm"), 
+                           TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio) # Force square axes
+        #  theme(legend.position = "null")
+      
+      ggsave(paste0(directory, "/Couple-Starvation/PCoA/Subject_no/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 8, height = 3)
+      
+      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Sample_ID, shape = Revival)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_point(stroke = 0.5, color = "black") +
+           geom_line(aes(group = Sample_ID), color = "gray50", alpha = 0.5) +
+           facet_wrap(vars(Sample_ID)) +
+           scale_shape_manual(values = c("Input" = 21, "Starved" = 22, "Revived" = 23)) +
+           guides(fill = "none") +
+           force_panelsizes(rows =  unit(c(3, 3, 3, 3), "cm"), 
+                           cols = unit(c(3, 3, 3, 3), "cm"), 
+                           TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio)  # Force square axes
+        #  theme(legend.position = "null")
+      
+      ggsave(paste0(directory, "/Couple-Starvation/PCoA/Sample_ID/PCoA-", d_metric, "-all.pdf"), plot = g, device = "pdf", width = 16, height = 12)
+    
+}
+```
+
+#######################################
+# Exploring pcoa space
+#######################################
+
+```{r Composition}
+
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & Region == "Stool"
+                                 & total_reads > 10000
+                                 & Collection_week %in% c("1", "2", "3", "4", "5", "6"))
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+
+df2plot <- df2plot %>%
+  mutate(
+    # Parse YYMMDD format (e.g., "240908" -> 2024-09-08)
+    date_parsed = as.Date(Collection_date, format = "%y%m%d"),
+    # Parse HH:MM format (e.g., "05:09")
+    time_parsed = Collection_time,
+    # Combine into datetime
+    datetime = as.POSIXct(paste(date_parsed, time_parsed), 
+                          format = "%Y-%m-%d %H:%M"),
+    # Calculate days from baseline (first sample)
+    timeline = as.numeric(difftime(datetime, min(datetime, na.rm = TRUE), units = "days"))
+  )
+
+
+#df2plot %>% filter(Feature == "feature_0001") %>% select(Collection_date, Collection_time, timeline)
+
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in c("Subj1", "Subj2")) {
+  
+     df_subj <- df2plot %>% filter(Subject_no == sid)
+  
+  if (nrow(df_subj) == 0) {
+    next
+  }
+#    g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+#          geom_bar(aes(x = interaction(Region, Sample_ID)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+#          scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+#         # scale_x_discrete(labels = red_if_small_discrete) + 
+#          scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+#          facet_nested(cols = vars(Diet_collection, Running_collection_day, Sample_origin2), scales = "free", space = "free") +
+#          theme_custom_comp() +
+#          theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+#          
+#     
+g <- ggplot(df_subj, aes(x = timeline, y = Abundance, fill = Family2)) + 
+    geom_area(position = "fill", color = "black", linewidth = 0.1) +
+    # Add vertical lines at actual sampling points
+    geom_vline(data = df_subj %>% 
+                 distinct(timeline, Sample_origin2, Running_collection_day),
+               aes(xintercept = timeline),
+               linetype = "dashed", alpha = 0.3, color = "gray30") +
+    # Add points at sampling times
+    geom_point(data = df_subj %>% 
+                 group_by(timeline, Sample_origin2) %>% 
+                 summarise(y_pos = 1.02, .groups = "drop"),
+               aes(x = timeline, y = y_pos, shape = Sample_origin2),
+               inherit.aes = FALSE, size = 2) +
+    scale_y_continuous("Relative Abundance", 
+                       breaks = c(0.00, 0.25, 0.50, 0.75, 1.00),
+                       limits = c(0, 1.05),
+                       expand = c(0, 0)) +
+    scale_x_continuous("Days", expand = c(0.01, 0)) +
+    scale_fill_manual(values = family2_scale$values, 
+                     breaks = family2_scale$breaks, 
+                     labels = family2_scale$labels) +
+    # Optional: facet by diet if there are diet changes
+   # facet_wrap(~Diet_collection, ncol = 1, scales = "free_x") +
+    theme_custom_comp() +
+    theme(
+      panel.spacing = unit(0.5, "lines"),
+      legend.position = "none"
+    )
+
+ggsave(paste0(directory, "/Couple-PCoA-exploration/Composition-timeline/Composition-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4)
+# }
+}
+  
+#####
+
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & !Region %in% c("Stool", "Saliva")
+                                 & Ingestion_week %in% c("1", "2", "3", "4", "5", "6")
+                                 & total_reads > 10000)
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in c("Subj1", "Subj2")) {
+  
+    if (length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) == 0) {
+      next
+    }
+  
+    g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(Region, Kit_ID)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         facet_nested(cols = vars(Diet_ingestion, Running_ingestion_day, Sample_origin), scales = "free", space = "free") +
+         #scale_x_discrete(labels = red_if_small_discrete_cap) + 
+         theme_custom_comp() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+    
+    ggsave(paste0(directory, "/Couple-PCoA-exploration/Composition/Composition-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4, limitsize = FALSE)
+}
+
+```
+
+```{r Composition - by sample_origin}
+
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & Region == "Stool"
+                                 & total_reads > 10000
+                                 & Collection_week %in% c("1", "2", "3", "4", "5", "6"))
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in c("Subj1", "Subj2")) {
+  
+    if (length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) == 0) {
+      next
+    }
+  
+   g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(Region, Sample_ID)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+        # scale_x_discrete(labels = red_if_small_discrete) + 
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         facet_nested(cols = vars(Diet_collection, Running_collection_day, Sample_origin2), scales = "free", space = "free") +
+         theme_custom_comp() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+         
+    ggsave(paste0(directory, "/Couple-PCoA-exploration/Composition/Composition-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4)
+}
+
+#####
+
+ps2plot <- ps %>% subset_samples(group == "LONGIT"
+                                 & !Region %in% c("Stool", "Saliva")
+                                 & Ingestion_week %in% c("1", "2", "3", "4", "5", "6")
+                                 & total_reads > 10000)
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT)
+  
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in c("Subj1", "Subj2")) {
+  
+    if (length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) == 0) {
+      next
+    }
+  
+    g <- ggplot(df2plot %>% filter(Subject_no == sid), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(Region, Kit_ID)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         facet_nested(cols = vars(Diet_ingestion, Running_ingestion_day, Sample_origin), scales = "free", space = "free") +
+         #scale_x_discrete(labels = red_if_small_discrete_cap) + 
+         theme_custom_comp() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+    
+    ggsave(paste0(directory, "/Couple-PCoA-exploration/Composition/Composition-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 0.5*length(unique(df2plot %>% filter(Subject_no == sid) %>% pull(Sample_ID))) + 1, height = 4, limitsize = FALSE)
+}
+
+```
+
+```{r pcoa all metrics cap}
+set.seed(100) # Consistent pcoa
+
+for (sid in c("Subj1", "Subj2")) {
+    
+    ps2ordinate <- ps %>% subset_samples(Sample_origin2 == "Cap" 
+                                         & group == "LONGIT"
+                                         & Subject_no == sid
+                                         & Ingestion_week %in% c("1", "2", "3", "4", "5", "6")
+                                         & total_reads > 10000)
+    otu_table_ps <- otu_table(ps2ordinate)
+    
+    otu_table_ps_clean <- otu_table_ps[rowSums(otu_table_ps) > 0, ]
+    otu_table_ps_clean <- otu_table_ps_clean[rowSums(otu_table_ps_clean > 0) >= 3, ]
+    
+    retained_otus <- taxa_names(otu_table_ps_clean)
+    
+    ps_clean <- merge_phyloseq(otu_table(otu_table_ps_clean),
+                               sample_data(ps),
+                               tax_table(ps)[retained_otus, ],
+                               phy_tree(ps))
+    
+    ps_clean <- prune_taxa(retained_otus, ps_clean)
+    
+    # Initialize list to store all ordination data
+    all_ordination_data <- list()
+    all_centroid_data <- list()
+    var_exp_list <- list()
+    
+    for (d_metric in c("bray", "binary", "canberra", "unifrac", "wunifrac")) {
+    
+      pcoa_weighted <- ordinate(ps_clean, method = "MDS", distance = d_metric)
+      ordination_data <- merge(pcoa_weighted$vectors, samdf, by = "row.names")
+      var_exp <- get_evals(pcoa_weighted)$variance_exp
+      
+      ordination_data <- set_ordered_factors(ordination_data)
+      ordination_data$d_metric <- d_metric  # Add metric column
+      
+      # Store variance explained
+      var_exp_list[[d_metric]] <- data.frame(
+        d_metric = d_metric,
+        PCo1_var = round(var_exp[1], 2),
+        PCo2_var = round(var_exp[2], 2)
+      )
+      
+      # Calculate centroids
+      centroid_per_kit <- ordination_data %>%
+        group_by(Kit_ID, Diet_ingestion, Subject_no, d_metric) %>%
+        summarise(centroid_x = mean(Axis.1, na.rm = TRUE),
+                  centroid_y = mean(Axis.2, na.rm = TRUE),
+                  .groups = 'drop')
+      
+      all_ordination_data[[d_metric]] <- ordination_data
+      all_centroid_data[[d_metric]] <- centroid_per_kit
+    }
+    
+    # Combine all data
+    combined_ordination <- bind_rows(all_ordination_data)
+    combined_centroids <- bind_rows(all_centroid_data)
+    var_exp_df <- bind_rows(var_exp_list)
+    
+    # Create factor with proper ordering
+    combined_ordination$d_metric <- factor(combined_ordination$d_metric, 
+                                           levels = c("binary", "bray", "canberra", "unifrac", "wunifrac"))
+    combined_centroids$d_metric <- factor(combined_centroids$d_metric, 
+                                         levels = c("binary", "bray", "canberra", "unifrac", "wunifrac"))
+    
+    colors2plot <- colors_diet
+    
+    # Plot 1: All samples, no faceting by Kit
+    g <- ggplot(combined_ordination, aes(x = Axis.1, y = Axis.2, fill = Diet_ingestion, shape = Region)) +
+         scale_fill_manual(values = colors2plot) +
+         geom_polygon(aes(group = Kit_ID, fill = Diet_ingestion), color = "black", alpha = 0.5, show.legend = FALSE, linewidth = 0.2) +
+         geom_point(stroke = 0.2, color = "black") +
+         scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+         guides(fill = guide_legend(override.aes = list(shape = 21))) +
+         facet_grid(cols = vars(d_metric), scales = "free") +
+         force_panelsizes(rows =  unit(c(4, 4, 4, 4), "cm"),
+                           cols = unit(c(4, 4, 4, 4), "cm"), TRUE) +
+         geom_text(data = var_exp_df, 
+                   aes(x = Inf, y = Inf, label = paste0("PCo1: ", PCo1_var, "%\nPCo2: ", PCo2_var, "%")),
+                   hjust = 1.1, vjust = 1.5, size = 2, inherit.aes = FALSE) +
+         labs(x = "PCo1", y = "PCo2") +
+         theme_custom_text()
+
+    ggsave(paste0(directory, "/Couple-PCoA-exploration/PCoA-all-metrics-", sid, "-capscan-ingestion-diet.pdf"), 
+           plot = g, device = "pdf", width = 12, height = 4)
+    
+    # Plot 2: Centroids
+    g <- ggplot(combined_centroids, aes(x = centroid_x, y = centroid_y, fill = Diet_ingestion)) +
+         scale_fill_manual(values = colors_diet) +
+         geom_path(aes(group = Subject_no), color = "gray60", linewidth = 0.4, lineend = "round") +
+         geom_point(shape = 21, size = 2, stroke = 0.2, color = "black") +
+         facet_grid(cols = vars(d_metric), scales = "free") +
+         force_panelsizes(rows =  unit(c(4, 4, 4, 4), "cm"),
+                           cols = unit(c(4, 4, 4, 4), "cm"), TRUE) +
+         geom_text(data = var_exp_df, 
+                   aes(x = Inf, y = Inf, label = paste0("PCo1: ", PCo1_var, "%\nPCo2: ", PCo2_var, "%")),
+                   hjust = 1.1, vjust = 1.5, size = 2, inherit.aes = FALSE) +
+         labs(x = "PCo1", y = "PCo2") +
+         theme_custom_text()
+    
+     ggsave(paste0(directory, "/Couple-PCoA-exploration/PCoA-all-metrics-", sid, "-capscan-ingestion-diet-centroid.pdf"), 
+           plot = g, device = "pdf", width = 12, height = 3)
+     
+     ## Running windows
+
+    window_sizes = c(1, 2, 3, 4, 5)
+
+    for (wsize in window_sizes) {
+      running_centroids <- calculate_rolling_centroids(combined_ordination, window_size = wsize, sample_origin = "Cap")
+    
+    g <- ggplot(running_centroids, aes(x = centroid_x, y = centroid_y, fill = Diet_ingestion)) +
+      scale_fill_manual(values = colors_diet) +
+      geom_path(aes(group = Subject_no, color = Diet_ingestion), linewidth = 0.5) +
+      geom_point(shape = 21, size = 2, stroke = 0.5, color = "black") +
+      facet_grid(cols = vars(d_metric), scales = "free") +
+      force_panelsizes(rows =  unit(c(4, 4, 4, 4), "cm"),
+                           cols = unit(c(4, 4, 4, 4), "cm"), TRUE) +
+      geom_text(aes(label = paste0(window_start, "-", window_end)), 
+                size = 2, nudge_y = 0.01, check_overlap = TRUE) +
+      scale_color_manual(values = colors_diet) +
+      
+      labs(title = paste0(sid, " - Running ", wsize, "-Day centroids"), x = "PCo1", y = "PCo2") +
+      theme_custom_text()
+    
+    ggsave(paste0(directory, "/Couple-PCoA-exploration/Rolling-window/", sid, "-capscan-ingestion-diet-centroid-window-size-", wsize, ".pdf"), plot = g, device = "pdf", width = 12, height = 3)
+
+}
+}
+```
+
+```{r PCoA exploration - cap}
+
+set.seed(100) # Consistent pcoa
+
+for (sid in c("Subj1", "Subj2")) {
+    
+    ps2ordinate <- ps %>% subset_samples(Sample_origin2 == "Cap" 
+                                         & group == "LONGIT"
+                                         & Subject_no == sid
+                                         & Ingestion_week %in% c("1", "2", "3", "4", "5", "6")
+                                         & total_reads > 10000) # Choose which samples you want to ordinate
+    otu_table_ps <- otu_table(ps2ordinate)
+    
+    otu_table_ps_clean <- otu_table_ps[rowSums(otu_table_ps) > 0, ] # Remove rows with all zeros (empty OTU rows)
+    otu_table_ps_clean <- otu_table_ps_clean[rowSums(otu_table_ps_clean > 0) >= 3, ] # Remove OTUs present in < 3 samples
+    
+    retained_otus <- taxa_names(otu_table_ps_clean)
+    
+    # Subset all components accordingly
+    ps_clean <- merge_phyloseq(otu_table(otu_table_ps_clean),
+                               sample_data(ps),
+                               tax_table(ps)[retained_otus, ],
+                               phy_tree(ps))
+    
+    ps_clean <- prune_taxa(retained_otus, ps_clean)
+    
+    for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
+    
+      pcoa_weighted <- ordinate(ps_clean, method = "MDS", distance = d_metric)
+      ordination_data <- merge(pcoa_weighted$vectors, samdf, by = "row.names")
+      var_exp <- get_evals(pcoa_weighted)$variance_exp # variances
+  
+      x_range <- range(ordination_data$Axis.1)
+      y_range <- range(ordination_data$Axis.2)
+      aspect_ratio <- diff(x_range) / diff(y_range)
+      
+      ordination_data <- set_ordered_factors(ordination_data) # set ordered factors
+      
+      lines_df <- ordination_data %>%
+        filter(Region %in% region_order) %>%
+        mutate(Region = factor(Region, levels = region_order)) %>%
+        arrange(Sample_ID, Region)  # Ensures correct order within Kit_ID
+      
+      colors2plot <- colors_diet
+     
+      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Diet_ingestion, shape = Region)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_polygon(aes(group = Kit_ID, fill = Diet_ingestion), color = "black", alpha = 0.5, show.legend = FALSE, linewidth = 0.5) +
+           geom_point(stroke = 0.5, color = "black") +
+           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+           guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+           #facet_wrap(~Kit_ID, ncol = 5) +
+           force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"),
+                           cols = unit(c(5, 5, 5, 5), "cm"), TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio)  # Force square axes
+
+      ggsave(paste0(directory, "/Couple-PCoA-exploration/", sid, "/Cap/PCoA-", d_metric, "-", sid, "-", "capscan-ingestion-diet.pdf"), plot = g, device = "pdf", width = 5, height = 7)
+      
+       g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Diet_ingestion, shape = Region)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_polygon(aes(group = Kit_ID, fill = Diet_ingestion), color = "black", alpha = 0.5, show.legend = FALSE, linewidth = 0.5) +
+           geom_point(stroke = 0.5, color = "black") +
+           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+           guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+           facet_wrap(~Kit_ID, ncol = 8) +
+           force_panelsizes(rows =  unit(c(2, 2, 2, 2), "cm"),
+                           cols = unit(c(2, 2, 2, 2), "cm"), TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio)  # Force square axes
+
+      ggsave(paste0(directory, "/Couple-PCoA-exploration/", sid, "/Cap/PCoA-", d_metric, "-", sid, "-", "capscan-ingestion-diet-kit.pdf"), plot = g, device = "pdf", width = 9, height = 8)
+    
+      centroid_per_kit <- ordination_data %>%
+        group_by(Kit_ID, Diet_ingestion, Subject_no) %>%
+        summarise(centroid_x = mean(Axis.1, na.rm = TRUE),
+                  centroid_y = mean(Axis.2, na.rm = TRUE),
+                  .groups = 'drop')
+      
+      g <- ggplot(centroid_per_kit, aes(x = centroid_x, y = centroid_y, fill = Diet_ingestion)) +
+           scale_fill_manual(values = colors_diet) +  # Assuming you have this defined
+           geom_path(aes(group = Subject_no), color = "gray60", linewidth = 0.6, lineend = "round") +
+           geom_point(shape = 21, size = 3, stroke = 0.5, color = "black") +
+           facet_wrap(~Subject_no, ncol = 5) +
+           force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"),
+                           cols = unit(c(5, 5, 5, 5), "cm"), TRUE) +
+           labs(title = paste0(d_metric, "-centroid-kit"),
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio)
+      
+      ggsave(paste0(directory, "/Couple-PCoA-exploration/", sid, "/Cap/PCoA-", d_metric, "-", sid, "-", "capscan-ingestion-diet-centroid.pdf"), plot = g, device = "pdf", width = 9, height = 8)
+      
+    }
+}
+
+```
+
+```{r pcoa all metrics stool}
+set.seed(100) # Consistent pcoa
+
+for (sid in c("Subj1", "Subj2")) {
+    
+    ps2ordinate <- ps %>% subset_samples(Sample_origin2 == "Stool" 
+                                         & group == "LONGIT"
+                                         & Subject_no == sid
+                                         & Collection_week %in% c("1", "2", "3", "4", "5", "6")
+                                         & total_reads > 10000)
+    otu_table_ps <- otu_table(ps2ordinate)
+    
+    otu_table_ps_clean <- otu_table_ps[rowSums(otu_table_ps) > 0, ]
+    otu_table_ps_clean <- otu_table_ps_clean[rowSums(otu_table_ps_clean > 0) >= 3, ]
+    
+    retained_otus <- taxa_names(otu_table_ps_clean)
+    
+    ps_clean <- merge_phyloseq(otu_table(otu_table_ps_clean),
+                               sample_data(ps),
+                               tax_table(ps)[retained_otus, ],
+                               phy_tree(ps))
+    
+    ps_clean <- prune_taxa(retained_otus, ps_clean)
+    
+    # Initialize list to store all ordination data
+    all_ordination_data <- list()
+    all_centroid_data <- list()
+    var_exp_list <- list()
+    
+    for (d_metric in c("binary", "bray", "canberra", "unifrac", "wunifrac")) {
+    
+      pcoa_weighted <- ordinate(ps_clean, method = "MDS", distance = d_metric)
+      ordination_data <- merge(pcoa_weighted$vectors, samdf, by = "row.names")
+      var_exp <- get_evals(pcoa_weighted)$variance_exp
+      
+      ordination_data <- set_ordered_factors(ordination_data)
+      ordination_data$d_metric <- d_metric  # Add metric column
+      
+      # Store variance explained
+      var_exp_list[[d_metric]] <- data.frame(
+        d_metric = d_metric,
+        PCo1_var = round(var_exp[1], 2),
+        PCo2_var = round(var_exp[2], 2)
+      )
+      
+      # Calculate centroids
+      centroid_per_kit <- ordination_data %>%
+        group_by(Kit_ID, Diet_collection, Subject_no, d_metric) %>%
+        summarise(centroid_x = mean(Axis.1, na.rm = TRUE),
+                  centroid_y = mean(Axis.2, na.rm = TRUE),
+                  .groups = 'drop')
+      
+      all_ordination_data[[d_metric]] <- ordination_data
+      all_centroid_data[[d_metric]] <- centroid_per_kit
+    }
+    
+    # Combine all data
+    combined_ordination <- bind_rows(all_ordination_data)
+    combined_centroids <- bind_rows(all_centroid_data)
+    var_exp_df <- bind_rows(var_exp_list)
+    
+    # Create factor with proper ordering
+        combined_ordination$d_metric <- factor(combined_ordination$d_metric, 
+                                           levels = c("binary", "bray", "canberra", "unifrac", "wunifrac"))
+    combined_centroids$d_metric <- factor(combined_centroids$d_metric, 
+                                         levels = c("binary", "bray", "canberra", "unifrac", "wunifrac"))
+    colors2plot <- colors_diet
+    
+    # Plot 1: All samples, no faceting by Kit
+    g <- ggplot(combined_ordination, aes(x = Axis.1, y = Axis.2, fill = Diet_collection, shape = Region)) +
+         scale_fill_manual(values = colors2plot) +
+         geom_polygon(aes(group = Kit_ID, fill = Diet_collection), color = "black", alpha = 0.5, show.legend = FALSE, linewidth = 0.2) +
+         geom_point(stroke = 0.2, color = "black") +
+         scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+         guides(fill = guide_legend(override.aes = list(shape = 21))) +
+         facet_grid(cols = vars(d_metric), scales = "free") +
+         force_panelsizes(rows =  unit(c(4, 4, 4, 4), "cm"),
+                           cols = unit(c(4, 4, 4, 4), "cm"), TRUE) +
+         geom_text(data = var_exp_df, 
+                   aes(x = Inf, y = Inf, label = paste0("PCo1: ", PCo1_var, "%\nPCo2: ", PCo2_var, "%")),
+                   hjust = 1.1, vjust = 1.5, size = 2, inherit.aes = FALSE) +
+         labs(x = "PCo1", y = "PCo2") +
+         theme_custom_text()
+
+    ggsave(paste0(directory, "/Couple-PCoA-exploration/PCoA-all-metrics-", sid, "-stool-collection-diet.pdf"), 
+           plot = g, device = "pdf", width = 12, height = 4)
+    
+    # Plot 2: Centroids
+    g <- ggplot(combined_centroids, aes(x = centroid_x, y = centroid_y, fill = Diet_collection)) +
+         scale_fill_manual(values = colors_diet) +
+         geom_path(aes(group = Subject_no), color = "gray60", linewidth = 0.4, lineend = "round") +
+         geom_point(shape = 21, size = 2, stroke = 0.2, color = "black") +
+         facet_grid(cols = vars(d_metric), scales = "free") +
+         force_panelsizes(rows =  unit(c(4, 4, 4, 4), "cm"),
+                           cols = unit(c(4, 4, 4, 4), "cm"), TRUE) +
+         geom_text(data = var_exp_df, 
+                   aes(x = Inf, y = Inf, label = paste0("PCo1: ", PCo1_var, "%\nPCo2: ", PCo2_var, "%")),
+                   hjust = 1.1, vjust = 1.5, size = 2, inherit.aes = FALSE) +
+         labs(x = "PCo1", y = "PCo2") +
+         theme_custom_text()
+    
+     ggsave(paste0(directory, "/Couple-PCoA-exploration/PCoA-all-metrics-", sid, "-stool-collection-diet-centroid.pdf"), 
+           plot = g, device = "pdf", width = 12, height = 3)
+     
+     # Rolling window
+     window_sizes = c(1, 2, 3, 4, 5)
+
+    for (wsize in window_sizes) {
+      running_centroids <- calculate_rolling_centroids(combined_ordination, window_size = wsize, sample_origin = "Stool")
+    
+    g <- ggplot(running_centroids, aes(x = centroid_x, y = centroid_y, fill = Diet_collection)) +
+      scale_fill_manual(values = colors_diet) +
+      geom_path(aes(group = Subject_no, color = Diet_collection), linewidth = 0.5) +
+      geom_point(shape = 21, size = 2, stroke = 0.5, color = "black") +
+      facet_grid(cols = vars(d_metric), scales = "free") +
+      force_panelsizes(rows =  unit(c(4, 4, 4, 4), "cm"),
+                           cols = unit(c(4, 4, 4, 4), "cm"), TRUE) +
+      geom_text(aes(label = paste0(window_start, "-", window_end)), 
+                size = 2, nudge_y = 0.01, check_overlap = TRUE) +
+      scale_color_manual(values = colors_diet) +
+      
+      labs(title = paste0(sid, " - Running ", wsize, "-Day centroids"), x = "PCo1", y = "PCo2") +
+      theme_custom_text()
+    
+    ggsave(paste0(directory, "/Couple-PCoA-exploration/Rolling-window/", sid, "-stool-collection-diet-centroid-window-size-", wsize, ".pdf"), plot = g, device = "pdf", width = 12, height = 3)
+
+  }
+
+}
+```
+
+```{r PCoA exploration - stool}
+
+set.seed(100) # Consistent pcoa
+
+for (sid in c("Subj1", "Subj2")) {
+    
+    ps2ordinate <- ps %>% subset_samples(Sample_origin2 == "Stool" 
+                                         & group == "LONGIT"
+                                         & Subject_no == sid
+                                         & Collection_week %in% c("1", "2", "3", "4", "5", "6")
+                                         & total_reads > 10000) # Choose which samples you want to ordinate
+    otu_table_ps <- otu_table(ps2ordinate)
+    
+    otu_table_ps_clean <- otu_table_ps[rowSums(otu_table_ps) > 0, ] # Remove rows with all zeros (empty OTU rows)
+    otu_table_ps_clean <- otu_table_ps_clean[rowSums(otu_table_ps_clean > 0) >= 3, ] # Remove OTUs present in < 3 samples
+    
+    retained_otus <- taxa_names(otu_table_ps_clean)
+    
+    # Subset all components accordingly
+    ps_clean <- merge_phyloseq(otu_table(otu_table_ps_clean),
+                               sample_data(ps),
+                               tax_table(ps)[retained_otus, ],
+                               phy_tree(ps))
+    
+    ps_clean <- prune_taxa(retained_otus, ps_clean)
+    
+    for (d_metric in c("wunifrac", "unifrac", "bray", "canberra", "binary")) {
+    
+      pcoa_weighted <- ordinate(ps_clean, method = "MDS", distance = d_metric)
+      ordination_data <- merge(pcoa_weighted$vectors, samdf, by = "row.names")
+      var_exp <- get_evals(pcoa_weighted)$variance_exp # variances
+  
+      x_range <- range(ordination_data$Axis.1)
+      y_range <- range(ordination_data$Axis.2)
+      aspect_ratio <- diff(x_range) / diff(y_range)
+      
+      ordination_data <- set_ordered_factors(ordination_data) # set ordered factors
+      
+      lines_df <- ordination_data %>%
+        filter(Region %in% region_order) %>%
+        mutate(Region = factor(Region, levels = region_order)) %>%
+        arrange(Sample_ID, Region)  # Ensures correct order within Kit_ID
+      
+      colors2plot <- colors_diet
+     
+      g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Diet_collection, shape = Region)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_polygon(aes(group = Collection_date_reformat, fill = Diet_collection), color = "black", alpha = 0.5, show.legend = FALSE, linewidth = 0.5) +
+           geom_point(stroke = 0.5, color = "black") +
+           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+           guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+           #facet_wrap(~Kit_ID, ncol = 5) +
+           force_panelsizes(rows =  unit(c(5, 5, 5, 5), "cm"),
+                           cols = unit(c(5, 5, 5, 5), "cm"), TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio)  # Force square axes
+
+      ggsave(paste0(directory, "/Couple-PCoA-exploration/", sid, "/Stool/PCoA-", d_metric, "-", sid, "-", "stool-collection-diet.pdf"), plot = g, device = "pdf", width = 5, height = 7)
+      
+       g <- ggplot(ordination_data, aes(x = Axis.1, y = Axis.2, fill = Diet_collection, shape = Region)) +
+           scale_fill_manual(values = colors2plot) +
+           geom_polygon(aes(group = Collection_date_reformat, fill = Diet_collection), color = "black", alpha = 0.5, show.legend = FALSE, linewidth = 0.5) +
+           geom_point(stroke = 0.5, color = "black") +
+           scale_shape_manual(values = c("R1" = 21, "R2" = 22, "R3" = 23, "R4" = 24, "Saliva" = 21, "Stool" = 21)) +
+           guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+           facet_wrap(~Collection_date_reformat, ncol = 8) +
+           force_panelsizes(rows =  unit(c(2, 2, 2, 2), "cm"),
+                           cols = unit(c(2, 2, 2, 2), "cm"), TRUE) +
+           labs(title = d_metric,
+                x = paste0("PCo1 ", round(var_exp[1],2), "%"),
+                y = paste0("PCo2 ", round(var_exp[2],2), "%")) +
+           coord_fixed(ratio = aspect_ratio)  # Force square axes
+
+      ggsave(paste0(directory, "/Couple-PCoA-exploration/", sid, "/Stool/PCoA-", d_metric, "-", sid, "-", "stool-collection-diet-collection-date.pdf"), plot = g, device = "pdf", width = 9, height = 8)
+  
+      
+    }
+}
+
+```

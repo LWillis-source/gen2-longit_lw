@@ -20,7 +20,7 @@ kits <- read_excel(sample_file_path, sheet = 1)
 samples <- read_excel(sample_file_path, sheet = 2)
 ##### FIX THIS LATER ##### 
 
-output <- setup_tables(paste0(here(), "/1-data/DADA2-Weeklong/"), '/1-data/Capscan-weeklong-sample-info.xlsx')
+output <- setup_tables(paste0(here(), "/1-data/DADA2-Weeklong/"), '/1-data/Weeklong-sample-info.xlsx')
 ps <- output$ps # phyloseq object
 taxa_order <- output$taxa_order # ASV plot order
 samdf <- output$samdf # sample information

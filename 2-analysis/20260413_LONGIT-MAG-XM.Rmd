@@ -1,0 +1,554 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r Standard Setup}
+# Configure directories, load libraries and base functions
+source(paste0(here::here(), "/0-config.R"))
+
+directory = paste0(here(), "/3-figures/")
+
+sample_file_path <- paste0(here(), "/1-data/Couple-MGX.xlsx")
+
+# START metaphlan SETUP
+output <- setup_metaphlan(paste0(here(), "/1-data/Couple-MGX.xlsx"))
+ps <- output$ps # phyloseq object
+taxa_order <- output$taxa_order # ASV plot order
+samdf <- output$samdf # sample information
+samdf$Sample <- rownames(samdf)
+
+set_ordered_factors <- function(df2plot) {
+  # Set default ordered factors in dataframe
+  df2plot <- df2plot %>%
+    mutate(Sample_origin2 = factor(Sample_origin2, levels = c("blood", "nasal", "saliva", "capscan", "stool", "stool-deep"), ordered = TRUE))
+  return(df2plot)
+}
+# END metaphlan SETUP
+
+cutoff_SI <- 0.001 # Supplementary Info ASV cutoff
+cutoff_MT <- 0.01 # Main Text ASV cutoff (to minimize legend)
+
+humann <- read_excel(sample_file_path, sheet = 5)
+pfam_meta <- read_excel(sample_file_path, sheet = 6)
+unfiltered <- read_excel(sample_file_path, sheet = 7)
+colors <- read_excel(paste0(paste0(here(), '/1-data/Family_colors.xlsx')), sheet = 6)
+
+# add number of bins per sample
+unfiltered <- unfiltered %>% 
+  group_by(Subject_ID, Sample_origin, Diet_collection) %>%
+  mutate(Num_bins = n()) %>%
+  ungroup()
+
+# set ordered factors
+
+unfiltered <- unfiltered %>% 
+  mutate(Sample_origin = factor(Sample_origin, levels = c("saliva", "capscan", "stool"), ordered = TRUE)) %>%
+  mutate(Diet_collection = factor(Diet_collection, levels = c("Regular1", "Regular2", "Same_keto", "Regular4", "Regular5_1", "Fasting", "Regular5_2", "Regular6"))) %>%
+  mutate(checkm_score = as.numeric(checkm_score)) %>%
+  left_join(colors, by = "Family") %>%
+  mutate(Color = paste0("#", Color))
+
+colors_origin <- c("saliva" = "#A2FC3CFF", "capscan" = "#A31301FF", "R1" = "#A31301FF", "R2" = "#D96A57", "R3" = "#EDA192" , "R4" = "#EDA192", "stool" = "#3E378FFF", "stool-deep" = "#000000", "plasma" = "#FE932AFF", "nasal" = "#1FC9DDFF")
+
+colors_diet <- c("Regular1" = "#A31301FF", "Regular2" = "#E94D0CFF", Same_keto = "#FEAA33FF", "Regular4" = "#CDEC34FF", "Regular5_1" = "#69FD66FF", "Fasting" = "#18DAC7FF", "Regular5_2" = "#458EFEFF", "Regular6" = "#3E378FFF")
+```
+
+```{r total reads human contamination}
+
+g <- ggplot(samdf %>% filter(Subject_ID %in% c("Subj1", "Subj2")), aes(x = mapped_rate_pct, fill = Sample_origin2, alpha = Seq_depth)) + 
+      geom_histogram(color = "black", linewidth = 0.25, bins = 30) +
+      facet_nested(cols = vars(Sample_origin2), rows = vars(Subject_ID), scales = "free", space = "fixed") +
+      scale_fill_manual(values = colors_origin) +
+      theme_custom_comp() +
+      theme_custom_text() +
+      theme(axis.text.x = element_text(),
+            legend.position = "right",
+            axis.title.x = element_text(),
+            legend.text = element_text(size = 5),  # Legend text size
+            legend.key.size = unit(0.2, "cm")) 
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-percent-human.pdf"), plot = g, device = "pdf", width = 4, height = 3)
+
+g <- ggplot(samdf %>% filter(Subject_ID %in% c("Subj1", "Subj2")), aes(x = log10(clean_reads), fill = Sample_origin2, alpha = Seq_depth)) + 
+      geom_histogram(color = "black", linewidth = 0.25, bins = 30) +
+      facet_nested(cols = vars(Sample_origin2), rows = vars(Subject_ID), scales = "free", space = "fixed") +
+      scale_fill_manual(values = colors_origin) +
+      theme_custom_comp() +
+      theme_custom_text() +
+      theme(axis.text.x = element_text(),
+            legend.position = "right",
+            axis.title.x = element_text(),
+            legend.text = element_text(size = 5),  # Legend text size
+            legend.key.size = unit(0.2, "cm")) 
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-clean-reads.pdf"), plot = g, device = "pdf", width = 4, height = 3)
+
+```
+
+```{r metaphlan composition - shallow only}
+
+ps2plot <- ps %>% subset_samples(Seq_depth == "shallow")
+
+taxa2keep <- psmelt(ps %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT) 
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+for (sid in unique(samdf$Subject_ID)) {
+    
+  for (origin in unique(samdf$Sample_origin2)) {
+    
+    if (nrow(df2plot %>% filter(Subject_ID == sid & Sample_origin2 == origin)) == 0) {
+      next
+    }
+
+    g <- ggplot(df2plot %>% filter(Subject_ID == sid & Sample_origin2 == origin), aes(x = 1, y = Abundance, fill = Family2)) + 
+         geom_bar(aes(x = interaction(clean_reads, Sample_ID)), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+         scale_x_discrete(labels = red_if_small_discrete_mgx) +
+         scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+         scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+         theme_custom_comp() +
+         theme_custom_text() +
+         theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+    
+    ggsave(paste0(directory, "/Couple-MGX/Metaphlan-0p01/", sid, "-", origin, ".pdf"), plot = g, device = "pdf", width = 0.25*length(unique(df2plot %>% filter(Subject_ID == sid & Sample_origin2 == origin) %>% pull(Sample_ID))) + 1, height = 4)
+       }
+  }
+ 
+g <- ggplot(df2plot, aes(x = 1, y = Abundance, fill = Family2)) + 
+     geom_bar(aes(x = 1), position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm")) +
+     guides(fill = guide_legend(ncol = 3, byrow = FALSE)) + # Legend columns, fill legend items by column
+     labs(fill = "Family") + # Change legend label
+     theme_custom_text()
+
+legend <- get_legend(g)
+
+ggsave(paste0(directory, "/Couple-MGX/Metaphlan-0p01/legend-all.pdf"), plot = legend, device = "pdf", width = 6, height = 5)
+
+```
+
+```{r metaphlan composition - compare shallow/deep}
+deep_ids <- samdf %>% 
+  filter(Seq_depth == "deep") %>% 
+  pull(Sample_ID) %>% 
+  unique()
+
+ps2plot <- ps %>% subset_samples(Sample_ID %in% deep_ids)
+
+taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+    filter(Abundance > cutoff_MT) 
+
+ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+    transform_sample_counts(function(x) x/sum(x)) # renomalize
+  
+df2plot <- psmelt(ps2plot) # convert to long form
+df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+df2plot <- set_ordered_factors(df2plot) # set ordered factors
+
+family2_scale <- get_color_mapping(df2plot) # legend colors
+
+g <- ggplot(df2plot, aes(x = Sample_ID, y = Abundance, fill = Family2)) + 
+     geom_bar(position = "stack", stat = "identity", color = "black", linewidth = 0.25) + 
+     facet_nested(rows = vars(Seq_depth), cols = vars(Subject_ID, Sample_origin2), space = "free_x", scales = "free_x") +
+     scale_y_continuous("Relative Abundance", breaks = c(0.00, 0.25, 0.50, 0.75, 1.00)) +
+     scale_fill_manual(values = family2_scale$values, breaks = family2_scale$breaks, labels = family2_scale$labels) +
+     theme_custom_comp() +
+     theme_custom_text() +
+     theme(axis.text.x = element_markdown(angle = 90, hjust = 1))
+
+ggsave(paste0(directory, "/Couple-MGX/Metaphlan-0p01/Deep-seq.pdf"), plot = g, device = "pdf", width = 8, height = 8)
+
+```
+
+```{r MAG ASV heatmap per grouping}
+
+for (sid in unique(samdf$Subject_ID)) {
+    
+   if (sid == "Subj3" | is.na(sid)) next
+    
+  for (origin in unique(samdf$Sample_origin2)) {
+
+   
+    ps2plot <- ps %>% subset_samples(Subject_ID == sid  
+                                     & Sample_origin2 == origin)
+    
+    taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > 0.01)
+    
+    ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep 
+      transform_sample_counts(function(x) x/sum(x)) # renormalize
+    
+    df2plot <- psmelt(ps2plot) # convert to long form
+    df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+    df2plot <- set_ordered_factors(df2plot) # set ordered factors
+        
+    g <- ggplot(df2plot) +
+         geom_tile(aes(x = Sample_ID, y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+         scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+         scale_x_discrete(labels = function(x) sub("\\..*$", "", x)) + 
+         theme(strip.text.y = element_blank(),
+               axis.title.x = element_blank(),
+               axis.title.y = element_blank(),
+               axis.ticks.y = element_blank(),
+               axis.text.x = element_text(angle = 0),
+               axis.ticks.x = element_blank()) +
+         theme_custom_text() +
+         coord_fixed(ratio = 1) +
+         theme(
+              axis.text.x = element_text(angle = 90),
+              legend.frame = element_rect(color = "black", linewidth = 0.5, fill = NA),
+              legend.ticks = element_line(color = "black"),
+              legend.ticks.length = unit(0.2, "cm"))
+    
+    ggsave(paste0(directory, "/Couple-MGX/Metaphlan-ASV-heatmap-0p01/ASV-heatmap-", sid, "-", origin, ".pdf"), plot = g, device = "pdf", width = 0.15*(length(unique(df2plot$Sample_ID))) + 3, height = 0.15*(length(unique(df2plot$Feature)) + 3))
+  }
+}
+
+```
+
+```{r pfam analyses}
+
+humann <- humann %>% column_to_rownames("Sample")
+humann[] <- lapply(humann, as.numeric)
+humann <- humann / rowSums(humann) # renormalize
+
+humann_lf <- humann %>%
+  rownames_to_column("Sample") %>%
+  pivot_longer(cols = -Sample, names_to = "Pfam", values_to = "Abundance")
+
+humann_lf <- merge(humann_lf, samdf, by = "Sample")
+
+#humann_lf <- merge(humann_lf, syn_mice_info, by = "Sample")
+
+humann_lf <- humann_lf %>%
+  group_by(Sample) %>%
+  mutate(Num_pfams = sum(Abundance > 0, na.rm = TRUE)) %>%
+  ungroup()
+
+humann_lf <- humann_lf %>% filter(!Pfam %in% c("UNMAPPED", "UNGROUPED")
+                                 & Num_pfams > 500)
+
+humann_comb <- humann_lf %>%
+  pivot_wider(
+    id_cols   = c(Sample_ID, Subject_ID, Collection_date, Sample_origin, Sample_origin2, Seq_depth, total_reads, mapped_reads, mapped_rate_pct, clean_reads), # keep these as identifiers
+    names_from = Pfam,
+    values_from = Abundance,
+    values_fill = 0 
+  )
+
+# PCA
+
+pca_matrix <- humann_comb %>%
+  select(-Sample_ID, -Subject_ID, -Collection_date, -Sample_origin, -Sample_origin2, -Seq_depth, -total_reads, -mapped_reads, -mapped_rate_pct, -clean_reads) %>%  # keep only numeric columns
+  as.matrix()
+
+res.pca <- prcomp(pca_matrix)
+eig.val <- get_eigenvalue(res.pca) # Eigenvalues
+res.var <- get_pca_var(res.pca) # Results for Variables
+res.ind <- get_pca_ind(res.pca) # Results for individuals
+
+pca.ind.df <- as.data.frame(res.ind$coord) %>%
+  select(Dim.1, Dim.2) %>%
+  cbind(humann_comb[, c("Sample_ID", "Subject_ID", "Collection_date", "Sample_origin", "Sample_origin2", "Seq_depth", "total_reads", "mapped_reads", "mapped_rate_pct", "clean_reads")])
+
+###
+
+x_range <- range(pca.ind.df$Dim.1)
+y_range <- range(pca.ind.df$Dim.2)
+aspect_ratio <- diff(x_range) / diff(y_range) # ratio to make pcoa square
+
+g <- ggplot(pca.ind.df %>% filter(Subject_ID != "Subj3"), aes(y = Dim.2, x = Dim.1, fill = Sample_origin2)) +
+  geom_point(size = 1, shape = 21) + 
+  #scale_shape_manual(values = c("saliva" = 22, "capscan" = 21, "stool" = 23)) +
+  facet_grid(cols = vars(Subject_ID)) +
+  scale_fill_manual(values = colors_origin) +
+  xlab(paste0('PCA1 ', round(eig.val$variance.percent[1], 1), '%')) +
+  ylab(paste0('PCA2 ', round(eig.val$variance.percent[2], 1), '%')) +
+  coord_fixed(ratio = aspect_ratio) # Force square axes
+  #theme(legend.position = "none") 
+
+ggsave(paste0(directory, "/Couple-MGX/HUMAnN/HUMAnN-pfam-origin.pdf"), plot = g, device = "pdf", width = 7, height = 5)
+
+var.contributions <- as.data.frame(res.var$contrib) %>% select(Dim.1, Dim.2)%>% 
+  rownames_to_column("Pfam") %>% 
+  rename(contribution1 = Dim.1, contribution2 = Dim.2)
+
+pca.var.df <- as.data.frame(res.var$coord) %>% select(Dim.1, Dim.2) %>% 
+  rownames_to_column("Pfam") %>% 
+  left_join(pfam_meta, by = 'Pfam') %>% 
+  left_join(var.contributions, by = 'Pfam') %>% 
+  arrange(desc(contribution1))
+
+top.var.contributors <- pca.var.df[1:10, ]
+
+heatmap_data <- top.var.contributors %>%
+  select(Pfam, Dim.1, Dim.2) %>%
+  pivot_longer(cols = c(Dim.1, Dim.2), 
+               names_to = "Dimension", 
+               values_to = "Value")
+```
+
+```{r samples for MAG assembly}
+
+output_dir <- file.path(directory, "Couple-MGX", "MAG-Sample-breakdown")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+df <- filtered %>% select(Subject_ID, Sample_origin, Diet_collection, Num_samples_in_group, Num_clean_reads_in_group, Num_bins)
+
+for (sid in unique(filtered$Subject_ID)) {
+  
+  temp <- df %>% filter(Subject_ID == sid) %>%
+    select(Sample_origin, Diet_collection, Num_samples_in_group, Num_clean_reads_in_group, Num_bins) %>%
+    arrange(Sample_origin, Diet_collection) %>%
+    unique()
+    
+  gt(temp) %>%
+        tab_options(table.font.size = px(10)) %>% # fontsize
+        tab_style(style = cell_text(weight = "bold"), # bold headers
+                  locations = cells_column_labels(everything())) %>%
+        cols_align(align = "left", columns = everything()) %>%
+        gtsave(paste0(directory, "/Couple-MGX/MAG-Sample-breakdown/Sample-breakdown-", sid, ".pdf"))
+}
+```
+
+```{r pass_GUNC CheckM}
+
+df <- unfiltered %>% select(Subject_ID, Sample_origin, Diet_collection, checkm_score, pass_GUNC, Completeness, Contamination) %>%
+  mutate(checkm_pass = checkm_score >= 90)
+
+g <- ggplot(df, aes(x = Diet_collection, y = after_stat(count), fill = checkm_pass, alpha = pass_GUNC)) + 
+      geom_bar(position = "stack", stat = "count", color = "black", linewidth = 0.25) +
+      scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "grey"),
+                        labels = c("TRUE" = "CheckM >= 90", "FALSE" = "CheckM < 90")) +
+      scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0.25),
+                         labels = c("TRUE" = "Pass GUNC", "FALSE" = "Fail GUNC")) +
+      facet_nested(cols = vars(Sample_origin), 
+                   rows = vars(Subject_ID), 
+                   scales = "free", 
+                   space = "free") +
+      theme_custom_comp() +
+      theme_custom_text() +
+      theme(axis.text.x = element_text(angle = 90, hjust = 1),
+            legend.position = "right",
+            legend.text = element_text(size = 5),  # Legend text size
+            legend.key.size = unit(0.2, "cm")) 
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-checkM-90.pdf"), plot = g, device = "pdf", width = 5, height = 4)
+
+df <- unfiltered %>% select(Subject_ID, Sample_origin, Diet_collection, checkm_score, pass_GUNC, Completeness, Contamination) %>%
+  mutate(checkm_pass = checkm_score >= 70)
+
+g <- ggplot(df, aes(x = Diet_collection, y = after_stat(count), fill = checkm_pass, alpha = pass_GUNC)) + 
+      geom_bar(position = "stack", stat = "count", color = "black", linewidth = 0.25) +
+      scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "grey"),
+                        labels = c("TRUE" = "CheckM >= 70", "FALSE" = "CheckM < 70")) +
+      scale_alpha_manual(values = c("TRUE" = 1, "FALSE" = 0.25),
+                         labels = c("TRUE" = "Pass GUNC", "FALSE" = "Fail GUNC")) +
+      facet_nested(cols = vars(Sample_origin), 
+                   rows = vars(Subject_ID), 
+                   scales = "free", 
+                   space = "free") +
+      theme_custom_comp() +
+      theme_custom_text() +
+      theme(axis.text.x = element_text(angle = 90, hjust = 1),
+            legend.position = "right",
+            legend.text = element_text(size = 5),  # Legend text size
+            legend.key.size = unit(0.2, "cm")) 
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-checkM-70.pdf"), plot = g, device = "pdf", width = 5, height = 4)
+```
+
+```{r assembled species}
+
+output_dir <- file.path(directory, "Couple-MGX", "MAG-Species")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+df <- unfiltered %>% 
+  select(Subject_ID, Sample_origin, Diet_collection, Taxonomy, checkm_score, Completeness, Contamination, pass_GUNC) %>%
+  filter(checkm_score >= 70) %>%
+  filter(pass_GUNC == "TRUE")
+
+for (sid in unique(unfiltered$Subject_ID)) {
+  
+  for (origin in unique(unfiltered$Sample_origin)) {
+  
+  temp <- df %>% filter(Subject_ID == sid & Sample_origin == origin) %>%
+    select(Taxonomy, checkm_score, Completeness, Contamination) %>%
+    unique()
+    
+  gt(temp) %>%
+        tab_options(table.font.size = px(10)) %>% # fontsize
+        tab_style(style = cell_text(weight = "bold"), # bold headers
+                  locations = cells_column_labels(everything())) %>%
+        cols_align(align = "left", columns = everything()) %>%
+        gtsave(paste0(directory, "/Couple-MGX/MAG-Species/MAG-Species-", sid, "-", origin, ".pdf"))
+  }
+  
+  temp <- df %>% filter(Subject_ID == sid & Sample_origin == origin) %>%
+    select(Taxonomy) %>%
+    unique()
+    
+  gt(temp) %>%
+        tab_options(table.font.size = px(10)) %>% # fontsize
+        tab_style(style = cell_text(weight = "bold"), # bold headers
+                  locations = cells_column_labels(everything())) %>%
+        cols_align(align = "left", columns = everything()) %>%
+        gtsave(paste0(directory, "/Couple-MGX/MAG-Species/MAG-Species-derep-", sid, "-", origin, ".pdf"))
+  
+}
+```
+
+```{r correlating MAGs and samples}
+
+df <- unfiltered %>% 
+  filter(checkm_score >= 90) %>%
+  select(Subject_ID, Sample_origin, Diet_collection, Num_bins, Num_samples_in_group, Num_clean_reads_in_group, checkm_score)
+
+g <- ggplot(df, aes(x = Num_samples_in_group, y = Num_bins, fill = Diet_collection, shape = Sample_origin)) +
+  geom_point(size = 2) +
+  scale_shape_manual(values = c("saliva" = 22, "capscan" = 21, "stool" = 23)) +
+  scale_fill_manual(values = colors_diet) +
+  facet_grid(cols = vars(Subject_ID)) +
+  guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+  coord_fixed(ratio = 1) +
+  theme(aspect.ratio = 1,
+        legend.text = element_text(size = 10),  # Legend text size
+        legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+  theme_custom_text()
+ 
+ggsave(paste0(directory, "/Couple-MGX/Stats-90checkM/Bins-vs-samples.pdf"), plot = g, device = "pdf", width = 5, height = 3)
+
+g <- ggplot(df, aes(x = log10(Num_clean_reads_in_group), y = Num_bins, fill = Diet_collection, shape = Sample_origin)) +
+  geom_point(size = 2) +
+  scale_shape_manual(values = c("saliva" = 22, "capscan" = 21, "stool" = 23)) +
+  scale_fill_manual(values = colors_diet) +
+  facet_grid(cols = vars(Subject_ID)) +
+  guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+  coord_fixed(ratio = 1) +
+  theme(aspect.ratio = 1,
+        legend.text = element_text(size = 10),  # Legend text size
+        legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+  theme_custom_text()
+ 
+ggsave(paste0(directory, "/Couple-MGX/Stats-90checkM/Bins-vs-reads.pdf"), plot = g, device = "pdf", width = 5, height = 3)
+
+g <- ggplot(df, aes(x = Num_samples_in_group, y = checkm_score, fill = Diet_collection, shape = Sample_origin)) +
+  geom_point(size = 2) +
+  scale_shape_manual(values = c("saliva" = 22, "capscan" = 21, "stool" = 23)) +
+  scale_fill_manual(values = colors_diet) +
+  scale_y_continuous(limits = c(90, 100), breaks = seq(90, 100, by = 2)) +
+  facet_grid(cols = vars(Subject_ID)) +
+  guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+  coord_fixed(ratio = 1) +
+  theme(aspect.ratio = 1,
+        legend.text = element_text(size = 10),  # Legend text size
+        legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+  theme_custom_text()
+ 
+ggsave(paste0(directory, "/Couple-MGX/Stats-90checkM/CheckM-vs-samples.pdf"), plot = g, device = "pdf", width = 5, height = 3)
+
+g <- ggplot(df, aes(x = log10(Num_clean_reads_in_group), y = checkm_score, fill = Diet_collection, shape = Sample_origin)) +
+  geom_point(size = 2) +
+  scale_shape_manual(values = c("saliva" = 22, "capscan" = 21, "stool" = 23)) +
+  scale_y_continuous(limits = c(90, 100), breaks = seq(90, 100, by = 2)) +
+  scale_fill_manual(values = colors_diet) +
+  facet_grid(cols = vars(Subject_ID)) +
+  guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+  coord_fixed(ratio = 1) +
+  theme(aspect.ratio = 1,
+        legend.text = element_text(size = 10),  # Legend text size
+        legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+  theme_custom_text()
+ 
+ggsave(paste0(directory, "/Couple-MGX/Stats-90checkM/CheckM-vs-reads.pdf"), plot = g, device = "pdf", width = 5, height = 3)
+
+g <- ggplot(df, aes(x = Num_bins, y = checkm_score, fill = Diet_collection, shape = Sample_origin)) +
+  geom_point(size = 2) +
+  scale_shape_manual(values = c("saliva" = 22, "capscan" = 21, "stool" = 23)) +
+  scale_y_continuous(limits = c(90, 100), breaks = seq(90, 100, by = 2)) +
+  scale_fill_manual(values = colors_diet) +
+  facet_grid(cols = vars(Subject_ID)) +
+  guides(fill = guide_legend(override.aes = list(shape = 21))) + # Fill legend
+  coord_fixed(ratio = 1) +
+  theme(aspect.ratio = 1,
+        legend.text = element_text(size = 10),  # Legend text size
+        legend.key.size = unit(0.4, "cm")) +  # Size of the legend keys (symbol or color box) 
+  theme_custom_text()
+ 
+ggsave(paste0(directory, "/Couple-MGX/Stats-90checkM/CheckM-vs-Bins.pdf"), plot = g, device = "pdf", width = 5, height = 3)
+
+```
+
+```{r MAG composition per grouping}
+
+df <- unfiltered %>% 
+  filter(checkm_score >= 90) %>%
+  select(Subject_ID, Sample_origin, Diet_collection, Num_bins, Num_samples_in_group, Num_clean_reads_in_group, checkm_score, Family, Color)
+
+g <- ggplot(df, aes(x = Diet_collection, y = after_stat(count), fill = Family)) + 
+      geom_bar(position = "stack", stat = "count", color = "black", linewidth = 0.25) +
+      scale_fill_manual(values = setNames(df$Color, df$Family)) +
+      facet_nested(cols = vars(Sample_origin), rows = vars(Subject_ID), scales = "free", space = "free") +
+      theme_custom_comp() +
+      theme_custom_text() +
+      theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-family-taxon-90checkM.pdf"), plot = g, device = "pdf", width = 5, height = 4)
+
+g <- ggplot(df, aes(x = Diet_collection, y = after_stat(count), fill = Family)) + 
+     geom_bar(position = "stack", stat = "count", color = "black", linewidth = 0.25) +
+     scale_fill_manual(values = setNames(df$Color, df$Family)) +
+     theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm")) +
+     guides(fill = guide_legend(ncol = 1, byrow = FALSE)) + # Legend columns, fill legend items by column
+     labs(fill = "Family") + # Change legend label
+     theme_custom_text()
+
+legend <- get_legend(g)
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-family-taxon-legend-90checkM.pdf"), plot = legend, device = "pdf", width = 5, height = 4)
+
+df <- unfiltered %>% 
+  filter(checkm_score >= 70) %>%
+  select(Subject_ID, Sample_origin, Diet_collection, Num_bins, Num_samples_in_group, Num_clean_reads_in_group, checkm_score, Family, Color)
+
+g <- ggplot(df, aes(x = Diet_collection, y = after_stat(count), fill = Family)) + 
+      geom_bar(position = "stack", stat = "count", color = "black", linewidth = 0.25) +
+      scale_fill_manual(values = setNames(df$Color, df$Family)) +
+      facet_nested(cols = vars(Sample_origin), rows = vars(Subject_ID), scales = "free", space = "free") +
+      theme_custom_comp() +
+      theme_custom_text() +
+      theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-family-taxon-70checkM.pdf"), plot = g, device = "pdf", width = 5, height = 4)
+
+g <- ggplot(df, aes(x = Diet_collection, y = after_stat(count), fill = Family)) + 
+     geom_bar(position = "stack", stat = "count", color = "black", linewidth = 0.25) +
+     scale_fill_manual(values = setNames(df$Color, df$Family)) +
+     theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm")) +
+     guides(fill = guide_legend(ncol = 1, byrow = FALSE)) + # Legend columns, fill legend items by column
+     labs(fill = "Family") + # Change legend label
+     theme_custom_text()
+
+legend <- get_legend(g)
+
+ggsave(paste0(directory, "/Couple-MGX/MAG-family-taxon-legend-70checkM.pdf"), plot = legend, device = "pdf", width = 5, height = 8)
+```
+
+

@@ -41,6 +41,41 @@ library(ggnewscale)
 # Include custom functions
 ##########################
 
+setup_metaphlan <- function(sample_sheet_path) {
+  # Default Setup
+  
+  # import custom family colors
+  colors <- read_excel(sample_sheet_path, sheet = 4)
+  colors$Color <- paste0("#", colors$Color)
+  
+  # setup tables to populate phyloseq object
+  seqtab_nochim <- read_excel(sample_sheet_path, sheet = 2)
+  rownames(seqtab_nochim) <- seqtab_nochim$Feature
+  seqtab_nochim <- seqtab_nochim %>% select(-Feature) %>%
+    mutate(across(everything(), as.numeric))
+  
+  taxa <- read_excel(sample_sheet_path, sheet = 3)
+  taxa <- taxa %>% mutate(fOTU = paste(Kingdom, Phylum, Class, Order, Family, sep = ";")) %>% # add fOTU
+    mutate(Taxon = Species) %>%  #mapply(generate_taxon, Kingdom, Phylum, Class, Order, Family, Genus, Species)) %>% # add concise taxonomy name to plot
+    mutate(Family2 = Family) %>% # add Family2 name to plot
+    left_join(colors %>% select(fOTU, Color), by = c("fOTU")) # add Family colors 
+  taxa_order <- taxa %>% arrange(match(Family, colors$Family)) # arrange taxa based on fOTU order in colors
+  rownames(taxa) <- taxa$Feature # row names must match species.names
+  taxa <- taxa %>% select(c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "fOTU", "Taxon", "Family2", "Color", "Feature"))
+  taxa <- as.matrix(taxa) # taxa must be matrix
+  
+  samdf <- read_excel(sample_sheet_path, sheet = 1)
+  samdf <- as.data.frame(samdf) # convert to dataframe
+  rownames(samdf) <- samdf$Sample # change row names to be the sequencing name, remove "sample_"
+  samdf <- samdf %>% select(-Sample) # remove Sample column
+  
+  # create phyloseq object
+  ps <- phyloseq(otu_table(seqtab_nochim, taxa_are_rows = TRUE), sample_data(samdf), tax_table(taxa))
+  
+  return(list(ps = ps, taxa_order = taxa_order, samdf = samdf))
+}
+
+
 setup_tables_plants <- function(directory, sample_sheet_path) {
   # Default Setup
   
@@ -356,4 +391,80 @@ red_if_small_discrete_reads_only <- function(values) {
       v_num
     }
   })
+}
+
+red_if_small_discrete_mgx <- function(values) {
+  # option when you want region and total reads
+  sapply(values, function(v) {
+    
+    parts <- strsplit(as.character(v), "\\.")[[1]]
+    if (length(parts) > 1) {
+      v_num <- as.numeric(parts[1])  # get the part after the period
+    } else {
+      v_num <- NA
+    }
+    
+    if (!is.na(v_num) && v_num < 700000) {
+      paste0("<span style='color:red;'>", v, "</span>")
+    } else {
+      v
+    }
+  })
+}
+
+calculate_rolling_centroids <- function(data, window_size = 3, sample_origin) {
+  
+  # Determine which day variable to use and diet variable
+  if(sample_origin == "Cap") {
+    day_var <- "Running_ingestion_day"
+    diet_var <- "Diet_ingestion"
+  } else {
+    day_var <- "Running_collection_day"
+    diet_var <- "Diet_collection"
+  }
+  
+  data %>%
+    mutate(day_value = as.numeric(.data[[day_var]])) %>%  # Use .data[[]] for proper column reference
+    arrange(Subject_no, d_metric, day_value) %>%
+    group_by(Subject_no, d_metric) %>%
+    do({
+      df <- .
+      
+      # Get unique days
+      unique_days <- sort(unique(df$day_value))
+      n_days <- length(unique_days)
+      
+      if (n_days < window_size) {
+        data.frame()
+      } else {
+        rolling_data <- map_dfr(1:(n_days - window_size + 1), function(i) {
+          # Get the day range for this window
+          day_range <- unique_days[i:(i + window_size - 1)]
+          window_data <- df %>% filter(day_value >= min(day_range) & day_value <= max(day_range))
+          
+          # Get diet from the lowest day in the window
+          diet_value <- window_data %>% 
+            filter(day_value == min(day_value)) %>% 
+            pull(!!sym(diet_var)) %>% 
+            unique() %>% 
+            first()
+          
+          result <- data.frame(
+            window_start = min(day_range),
+            window_end = max(day_range),
+            centroid_x = mean(window_data$Axis.1, na.rm = TRUE),
+            centroid_y = mean(window_data$Axis.2, na.rm = TRUE),
+            Subject_no = unique(window_data$Subject_no),
+            d_metric = unique(window_data$d_metric),
+            sample_origin = sample_origin
+          )
+          
+          # Add the appropriate diet column
+          result[[diet_var]] <- diet_value
+          result
+        })
+        rolling_data
+      }
+    }) %>%
+    ungroup()
 }

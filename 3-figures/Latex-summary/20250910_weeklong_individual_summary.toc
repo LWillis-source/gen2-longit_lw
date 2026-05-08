@@ -26,8 +26,9 @@
 \contentsline {subsubsection}{\numberline {3.1.3}Transit time timeline}{18}{subsubsection.3.1.3}%
 \contentsline {subsection}{\numberline {3.2}Food}{19}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Self-reported diet and exercise}{19}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Cronometer nutrition log}{19}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}FoodSeq}{21}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2}Cronometer nutrition log}{20}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}PANAS}{21}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}FoodSeq}{22}{subsubsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.3}Cell imaging}{24}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Microbial composition}{26}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}16S sequencing}{26}{subsubsection.3.4.1}%

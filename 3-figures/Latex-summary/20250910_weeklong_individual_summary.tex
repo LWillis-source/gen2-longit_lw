@@ -38,7 +38,7 @@
 } % Sets default 
 
 \def\Name{Beverly Fu}  % Your name
-% \def\SubjectNo{21}
+\def\SubjectNo{21}
 \newcommand{\SubjectNoPad}{%
   \ifnum\SubjectNo<10 0\SubjectNo\else \SubjectNo\fi
 }
@@ -111,7 +111,7 @@ Several subjects maintained specific dietary patterns during the study. Notably,
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 5.5in]{Weeklong-Sample-collection/Lifestyle-diet.pdf}
+\includegraphics[width = 6.5in]{Weeklong-Sample-collection/Lifestyle-diet.pdf}
 \caption{\textbf{Participant diets.} Subjects self-reported their dietary patterns.}
 \end{figure}
 
@@ -205,15 +205,11 @@ CapScan devices were cleaned and sectioned into up to 3 regions based on differe
 \begin{subfigure}[t]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
-    \caption{}
-    \label{fig:capsule_classification}
     \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-classfication.png}
 \end{subfigure}
 \begin{subfigure}[t]{0.5\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
-    \caption{}
-    \label{fig:capsule_regions}
     \includegraphics[width=\textwidth]{Weeklong-Sample-collection/Capsule-regions-distribution.pdf}
 \end{subfigure}
 \caption{\textbf{Regions per device.} (A) Visual classification of capsule contents. \emph{``SI-light"} samples were translucent, often pink or green with food particles. \emph{``SI"} samples were typically golden and not overly chunky; a subset appeared red. \emph{``SI-dark"} samples were dark but still liquid. \emph{``Ascending colon (AC)"} samples were sludgy and required squeegeeing from devices. (B) Distribution of regions per device across all samples (mean 2.18 regions per device).}
@@ -250,7 +246,6 @@ When possible, the pH of each CapScan region was measured. Surprisingly, the pH 
 \centering
 \includegraphics[height = 4cm]{Weeklong-Sample-collection/pH-distribution.pdf}
 \caption{\textbf{pH distribution.} Sample pH values trended toward the lower end of the scle.}
-\label{pH}
 \end{figure} 
 
 \begin{figure}[H]
@@ -322,7 +317,7 @@ The emotions were:
 \end{tabular}
 \end{table}
 
-Typical positive affect scores range from 10–-50 (mean 33.33 $\pm$ 7.2) and negative affect scores range from 10–-50 (mean 17.4 $\pm$ 6.2)
+Typical positive affect scores range from 10–-50 (mean 33.33 $\pm$ 7.2) and negative affect scores range from 10–-50 (mean 17.4 $\pm$ 6.2). See Figure \ref{IndividualPANAS} for a breakdown of values.
 
 \begin{figure}[H]
 \centering
@@ -410,41 +405,30 @@ Multiple distance metrics were used to capture different aspects of community st
 \begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
-    \caption{}
-    \label{fig:pcoa_binary}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-binary-all.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
-    \caption{}
-    \label{fig:pcoa_bray}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-bray-all.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
-    \caption{}
-    \label{fig:pcoa_canberra}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-canberra-all.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{0.3\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
-    \caption{}
-    \label{fig:pcoa_unifrac}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-unifrac-all.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{0.4\textwidth}
     \captionsetup{justification=raggedright, singlelinecheck=false}
     \centering
-    \caption{}
-    \label{fig:pcoa_wunifrac}
     \includegraphics[width=\textwidth]{Weeklong-PCoA/All/PCoA-wunifrac-all.pdf}
 \end{subfigure}
 
 \caption{\textbf{Principal coordinates analysis using multiple distance metrics.} PCoA ordination of all samples using (A) Binary (Jaccard), (B) Bray--Curtis, (C) Canberra, (D) UniFrac, and (E) Weighted UniFrac distance metrics. Samples are colored by sample type.}
-\label{fig:pcoa_all}
 \end{figure}
 
 \newpage
@@ -482,7 +466,7 @@ All CapScan devices collected were cleaned and sectioned. The area closest to th
 \newpage
 \subsubsection{Transit time timeline}
 
-As each CapScan device is RFID chipped, we were able to calculate transit times. Average transit times per subject can be found in Figure \ref{IndividualTransit}.
+As each CapScan device is RFID chipped, we were able to calculate transit times. Average transit times per subject can be found in Figure \ref{AllTransit}.
 
 \ifx\pdffilesize{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}\undefined
   \vspace{1em} Participant \SubjectNo\ did not provide ingestion and collection times.
@@ -491,10 +475,9 @@ As each CapScan device is RFID chipped, we were able to calculate transit times.
   \centering
   \includegraphics[width = 6in]{Weeklong-Sample-collection/Timeline-breakdown/Timeline-breakdown-\SubjectNoPad.pdf}
   \caption{\textbf{Individual CapScan ingestion and collection times.} Timeline of when each CapScan device was in the subject's body throughout the study. The length of each blue bar represents the transit time in hours, which is indicated in white text. If a device was not found in the stool, it is depicted as a transparent bar.}
-  \label{IndividualTimeline}
+  \label{IndividualTransit}
   \end{figure}
 \fi
-
 
 \newpage
 \subsection{Food}
@@ -507,10 +490,10 @@ As each CapScan device is RFID chipped, we were able to calculate transit times.
   \centering
   \caption{\textbf{Record of food consumed.} Self reported meals.}
   \includegraphics[width = 6in]{Weeklong-Sample-collection/Diet-exercise-record/Diet-exercise-record-\SubjectNoPad.pdf}
-  \label{Timeline}
   \end{table}
 \fi
 
+\newpage
 \subsubsection{Cronometer nutrition log}
 Subjects used Cronometer, a validated nutrition tracking application, to record detailed dietary intake for at least 3 days during the study period. Cronometer provides comprehensive nutritional analysis of foods consumed, breaking down intake into macronutrient categories including carbohydrates, fats, proteins, vitamins, minerals, and other micronutrients. Nutrient values are reported as percent of recommended daily intake, capped at 300\% to standardize visualization. Some nutrients without established daily intake recommendations, such as added sugars and trans fats, are not included in the percent daily value calculations.
 
@@ -521,7 +504,22 @@ Subjects used Cronometer, a validated nutrition tracking application, to record 
   \centering
   \includegraphics[width = 7in]{Weeklong-Sample-collection/Nutrient-breakdown/Nutrient-\SubjectNoPad.pdf}
   \caption{\textbf{Individual nutrient summary.} Daily consumption of nutrients recorded in the Cronometer app, reported as a percentage of percent recommended daily intake (adult male), capped at 300\%.}
-  \label{Timeline}
+  \end{figure}
+\fi
+
+\newpage
+\subsubsection{PANAS}
+
+PANAS test was administered every day to the individuals.
+
+\ifx\pdffilesize{Weeklong-Sample-collection/PANAS-breakdown/PANAS-components-\SubjectNoPad.pdf}\undefined
+  \vspace{1em} Participant \SubjectNo\ did not provide dietary logs.
+\else
+  \begin{figure}[H]
+  \centering
+  \includegraphics[width = 5in]{Weeklong-Sample-collection/PANAS-breakdown/PANAS-components-\SubjectNoPad.pdf}
+  \caption{\textbf{Individual PANAS.} Self reported values ranged between 1–-5.}
+  \label{IndividualPANAS}
   \end{figure}
 \fi
 
@@ -583,7 +581,6 @@ During the weeklong study, subjects attempted to bring in a fresh paired capsule
   \centering
   \includegraphics[width = 3.7in]{Weeklong-Cell-count/20250826_Weeklong_Imaging_Subj\SubjectNo.pdf}
   \caption{\textbf{Imaging of fresh sample.} Example frames collected for each capsule region and stool sample. Any sample dilution is indicated. Phase contrast is depicted on the left while live/dead staining (indicated by green or red fluorescence, respectively) is depicted on the right.}
-  \label{CellImaging}
   \end{figure}
 \fi
 
@@ -597,7 +594,6 @@ Microbial community composition was characterized through 16S rRNA gene sequenci
 \centering
 \includegraphics[width = 6in]{Weeklong-composition-0p01/Composition-all-legend.pdf}
 \caption{\textbf{Taxonomic family legend.} Color key for bacterial families shown in microbial composition figures.}
-\label{Legend}
 \end{figure}
 
 \begin{figure}[H]
@@ -621,7 +617,6 @@ Microbial community composition was characterized through 16S rRNA gene sequenci
     \includegraphics[height=6.5cm]{Weeklong-composition-0p01/Stool-collection/Composition-stool-\SubjectNoPad.pdf}
 \end{subfigure}
 \caption{\textbf{Microbial composition.} (A) Saliva sample composition collected at capsule ingestion. (B) CapScan and (C) stool sample composition collected at capsule retrieval. Taxa with relative abundances $>$1\% are shown; all others grouped as "Other." Samples with fewer than 10,000 reads are labeled in red.}
-\label{fig:composition}
 \end{figure}
 
 \newpage

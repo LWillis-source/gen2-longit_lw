@@ -26,6 +26,25 @@ panas <- read_excel(sample_file_path, sheet = 3)
 #samples <- samples %>%
 #   mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva0", "Saliva1", "Saliva2", "Saliva3E", "Saliva3", "Saliva4E", "Saliva4", "Saliva5E", "Saliva5",  "Saliva6E", "Saliva6", "Saliva7", "Saliva8", "ExtraSaliva", "Capscan0", "Capscan1", "Capscan2", "Capscan3E", "Capscan3", "Capscan4E", "Capscan4", "Capscan5E",  "Capscan5", "Capscan6E", "Capscan6", "Capscan7", "Capscan8", "CapscanExtra1", "CapscanExtra2", "CapscanExtra3", "Stool0", "Stool1", "Stool2", "Stool3E", "Stool3", "Stool4E", "Stool4", "Stool5E", "Stool5", "Stool6E", "Stool6", "Stool7", "Stool8", "StoolExtra1", "StoolExtra2", "StoolExtra3"), ordered = TRUE)) %>%
 #   mutate(Sample_origin2 = factor(Sample_origin2, levels = c("Saliva0", "Saliva1", "Saliva2", "SalivaE1", "Saliva3", "Saliva4", "Saliva5",  "SalivaE2", "Saliva6", "Saliva7", "Saliva8", "Cap0", "Cap1", "Cap2", "CapE1", "Cap3", "Cap4", "Cap5", "CapE2", "Cap6", "Cap7", "Cap8", "Stool0", "Stool1", "Stool2", "Stool3E", "Stool3", "Stool4E", "Stool4", "Stool5E", "Stool5", "Stool6E", "Stool6", "Stool7", "Stool8"), ordered = TRUE))
+
+set_ordered_factors <- function(df2plot) {
+  # Set default ordered factors in dataframe
+  df2plot <- df2plot %>%
+      mutate(Region = factor(Region, levels = c("NA", "Saliva", "R1", "R2", "R3", "R4", "Stool"), ordered = TRUE)) %>%
+      mutate(Sample_origin2 = factor(Sample_origin2, levels = c("Saliva", "Cap", "Stool"), ordered = TRUE)) %>%
+      mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva", "Cap0", "Cap1", "Cap2", "Cap3", "Cap4", "Cap5", "Cap6", "Cap7", "Cap8", "Stool"), ordered = TRUE)) %>%
+      mutate(Collection_day = factor(Collection_day, levels = c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "unk"), ordered = TRUE)) %>%
+      mutate(Ingestion_day = factor(Ingestion_day, levels = c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "unk"), ordered = TRUE)) %>%
+      mutate(Tip_color = factor(Tip_color, levels = c("White", "Blue", "NA"), ordered = TRUE)) %>%
+      mutate(Diet_ingestion = factor(Diet_ingestion, levels = c("Regular1", "Regular2", "Same_keto", "Regular4", "Regular5_1", "Fasting", "Regular5_2", "Regular6", "Regular7", "Regular8", "Regular9", "Regular10", "Regular11", "Regular12", "Regular13", "Regular14", "Regular15", "Regular16", "Unknown", "NA"), ordered = TRUE)) %>%
+      mutate(Diet_collection = factor(Diet_collection, levels = c("Regular1", "Regular2", "Same_keto", "Regular4", "Regular5_1", "Fasting", "Regular5_2", "Regular6", "Regular7", "Regular8", "Regular9", "Regular10", "Regular11", "Regular12", "Regular13", "Regular14", "Regular15", "Regular16", "Unknown", "NA"), ordered = TRUE))
+  df2plot$total_reads <- factor(df2plot$total_reads)
+  return(df2plot)
+}
+
+colors_diet <- c("Regular1" = "#A31301FF", "Regular2" = "#E94D0CFF", Same_keto = "#FEAA33FF", "Regular4" = "#CDEC34FF", "Regular5_1" = "#69FD66FF", "Fasting" = "#18DAC7FF", "Regular5_2" = "#458EFEFF", "Regular6" = "#3E378FFF")
+
+
 ```
 
 #######################################
@@ -163,7 +182,36 @@ ggsave(paste0(directory, "Couple-Sample-collection/Capsule-regions-distribution.
 meta <- samples %>%
     filter(Kit_ID != "Unknown")
 
-for (sid in unique(meta$Subject_ID)) {
+df <- meta %>% 
+      filter(Sample_origin2 == "Cap", Ingestion_week %in% c(1, 2, 3, 4, 5, 6)) %>%
+      select(Kit_ID, Ingestion_time, Ingestion_date_reformat, Diet_ingestion, Collection_time, Collection_date_reformat, Diet_collection, Transit_time_h, Subject_no) %>%
+      unique()
+
+df <- df %>%
+    mutate(Diet_ingestion = factor(Diet_ingestion, levels = c("Regular1", "Regular2", "Same_keto", "Regular4", "Regular5_1", "Fasting", "Regular5_2", "Regular6", "Regular7", "Regular8", "Regular9", "Regular10", "Regular11", "Regular12", "Regular13", "Regular14", "Regular15", "Regular16", "Unknown", "NA"), ordered = TRUE))
+    
+df_avg <- df %>%
+  group_by(Subject_no, Diet_ingestion) %>%
+  summarise(avg_transit = mean(Transit_time_h, na.rm = TRUE),
+            .groups = 'drop')
+
+g <- ggplot(df, aes(x = Transit_time_h, fill = Diet_ingestion)) +
+  geom_histogram(bins = 10, color = "black", linewidth = 0.2) +
+  scale_fill_manual(values = colors_diet) +
+  geom_text(data = df_avg, 
+            aes(x = Inf, y = Inf, 
+                label = sprintf("%.1f h", avg_transit)),
+            hjust = 1.1, vjust = 1.5, 
+            size = 2, inherit.aes = FALSE) +
+  facet_grid(rows = vars(Subject_no), cols = vars(Diet_ingestion)) +
+  labs(x = "Transit time (h)", y = "Count") +
+  theme_custom_text() +
+  theme(legend.text = element_text(size = 5),  # Legend text size
+           legend.key.size = unit(0.2, "cm"))
+
+ggsave(paste0(directory, "/Couple-Sample-collection/Timeline-breakdown/Timeline-by-diet-collection.pdf"), plot = g, device = "pdf", height = 3, width = 8)
+
+for (sid in c("1", "2")) {
   
   df <- meta %>% 
       filter(Sample_origin2 == "Cap", Subject_ID == sid, Ingestion_week %in% c(1, 2, 3, 4, 5, 6)) %>%
