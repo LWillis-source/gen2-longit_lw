@@ -36,6 +36,7 @@ library(ggdendro) # dendrograms
 library(compositions) #clr
 library(patchwork)
 library(ggnewscale)
+library(FAVA)
 
 ##########################
 # Include custom functions
@@ -315,6 +316,7 @@ theme_custom_comp <- function() {
     axis.text.x = element_blank(), 
     axis.ticks.x = element_blank(),
     panel.background = element_blank(),
+    axis.text.y = element_text(margin = margin(r = 0.5)),
     legend.position = "none", # no legend
   )
 }
@@ -325,10 +327,12 @@ theme_custom_text <- function() {
     legend.text = element_text(size = 6, color = "black"),
     legend.title = element_text(size = 6, color = "black"), 
     axis.text = element_text(size = 6, color = "black"),    
-    axis.title = element_text(size = 6, color = "black"),   
+    axis.title = element_text(size = 7, color = "black"),  
     plot.title = element_text(size = 6, color = "black"),   
     strip.text = element_text(size = 6, color = "black"),
-    plot.subtitle = element_text(size = 6, color = "black")
+    plot.subtitle = element_text(size = 6, color = "black"),
+    axis.ticks = element_line(color = "black", linewidth = 0.25),
+    panel.grid.major = element_line(linewidth = 0.25)
   )
 }
 
@@ -467,4 +471,636 @@ calculate_rolling_centroids <- function(data, window_size = 3, sample_origin) {
       }
     }) %>%
     ungroup()
+}
+
+# barplot_connect_ASV <- function(df_subj, color_scale, flow_alpha = 1, sample_origin) {
+#   
+#   # Prepare the data - aggregate and normalize by timepoint at Feature level
+#   df_bars <- df_subj %>%
+#     group_by(timeline, Feature, Family2) %>%
+#     summarise(Abundance = sum(Abundance), .groups = "drop") %>%
+#     group_by(timeline) %>%
+#     mutate(
+#       rel_abundance = Abundance / sum(Abundance)
+#     ) %>%
+#     ungroup() %>%
+#     arrange(timeline, desc(Family2), Feature) %>%
+#     group_by(timeline) %>%
+#     mutate(
+#       ymax = cumsum(rel_abundance),
+#       ymin = ymax - rel_abundance
+#     ) %>%
+#     ungroup()
+#   
+#   timepoints <- sort(unique(df_bars$timeline))
+#   
+#   # For each Feature, create interpolated data between timepoints where it exists
+#   ribbon_data <- list()
+#   
+#   for (feature in unique(df_bars$Feature)) {
+#     feature_data <- df_bars %>% 
+#       filter(Feature == feature) %>%
+#       arrange(timeline)
+#     
+#     # Only process if feature appears at multiple timepoints
+#     if (nrow(feature_data) > 1) {
+#       # Create fine interpolation between consecutive points where feature exists
+#       expanded_data <- data.frame()
+#       
+#       for (i in 1:(nrow(feature_data) - 1)) {
+#         t_start <- feature_data$timeline[i]
+#         t_end <- feature_data$timeline[i + 1]
+#         
+#         # Check if these are consecutive timepoints or if there's a gap
+#         # Only interpolate if both values are finite
+#         if (is.finite(t_start) && is.finite(t_end) && t_start < t_end) {
+#           # Create interpolation points
+#           t_seq <- seq(t_start, t_end, length.out = 100)
+#           
+#           ymin_seq <- approx(x = c(t_start, t_end),
+#                              y = c(feature_data$ymin[i], feature_data$ymin[i + 1]),
+#                              xout = t_seq)$y
+#           
+#           ymax_seq <- approx(x = c(t_start, t_end),
+#                              y = c(feature_data$ymax[i], feature_data$ymax[i + 1]),
+#                              xout = t_seq)$y
+#           
+#           segment_data <- data.frame(
+#             timeline = t_seq,
+#             ymin = ymin_seq,
+#             ymax = ymax_seq,
+#             Feature = feature,
+#             Family2 = feature_data$Family2[i]
+#           )
+#           
+#           expanded_data <- rbind(expanded_data, segment_data)
+#         }
+#       }
+#       
+#       if (nrow(expanded_data) > 0) {
+#         ribbon_data[[feature]] <- expanded_data
+#       }
+#     }
+#   }
+#   
+#   all_ribbons <- bind_rows(ribbon_data)
+#   
+#   # Create diet annotation data (moved higher)
+#   diet_data <- data.frame(
+#     xmin = c(0, 15, 22, 30, 33),
+#     xmax = c(15, 22, 30, 33, max(timepoints)),
+#     diet = c("Regular", "Keto", "Regular", "Fasting", "Regular"),
+#     color = c("#B3B3B3", "blue", "#B3B3B3", "red", "#B3B3B3")
+#   )
+#   # Every 2 days for x-axis
+#   day_breaks <- seq(0, max(timepoints), by = 2)
+#   
+#   # Create the plot
+#   g <- ggplot() +
+#     # Use geom_ribbon for smooth rendering
+#     geom_ribbon(
+#       data = all_ribbons,
+#       aes(x = timeline, ymin = ymin, ymax = ymax, fill = Family2, group = Feature),
+#       alpha = flow_alpha,
+#       color = "black",
+#       linewidth = 0.05
+#     ) +
+#     # Add box around main plot area (0-1, 0-max(timepoints))
+#     geom_rect(
+#       aes(xmin = 0, xmax = max(timepoints), ymin = 0, ymax = 1),
+#       fill = NA,
+#       color = "black",
+#       linewidth = 0.1
+#     ) +
+#     # Add sampling day points between diet and ribbons
+#     geom_point(
+#       data = data.frame(x = timepoints, y = 1.02),
+#       aes(x = x, y = y),
+#       size = 0.5,
+#       color = "black",
+#       shape = 16
+#     ) +
+#     # Add diet rectangles (higher up)
+#     geom_rect(
+#       data = diet_data,
+#       aes(xmin = xmin, xmax = xmax, ymin = 1.04, ymax = 1.08),
+#       fill = diet_data$color,
+#       alpha = 0.25,
+#       color = "black",
+#       linewidth = 0.1
+#     ) +
+#     # Add white diet labels
+#     geom_text(
+#       data = diet_data,
+#       aes(x = (xmin + xmax) / 2, y = 1.06, label = diet),
+#       size = 2,
+#       color = "black"
+#     ) +
+#     scale_y_continuous(
+#       "Relative Abundance", 
+#       breaks = c(0.00, 0.25, 0.50, 0.75, 1.00),
+#       limits = c(0, 1.10),
+#       expand = c(0, 0)
+#     ) +
+#     scale_x_continuous(
+#       "Days",
+#       breaks = day_breaks,
+#       expand = c(0.01, 0)
+#     ) +
+#     scale_fill_manual(
+#       values = color_scale$values, 
+#       breaks = color_scale$breaks, 
+#       labels = color_scale$labels
+#     ) +
+#     theme_custom_comp() +
+#     theme(
+#       panel.spacing = unit(0.5, "lines"),
+#       legend.position = "none",
+#       axis.text.x = element_text(),
+#       axis.title.x = element_text()
+#     ) +
+#     theme_custom_text()
+#   
+#   return(g)
+# }
+# 
+# barplot_connect_family <- function(df_subj, color_scale, flow_alpha = 1) {
+#   
+#   # Prepare the data - aggregate and normalize by timepoint at Family level
+#   df_bars <- df_subj %>%
+#     group_by(timeline, Family2) %>%
+#     summarise(Abundance = sum(Abundance), .groups = "drop") %>%
+#     group_by(timeline) %>%
+#     mutate(
+#       rel_abundance = Abundance / sum(Abundance)
+#     ) %>%
+#     ungroup() %>%
+#     arrange(timeline, desc(Family2)) %>%
+#     group_by(timeline) %>%
+#     mutate(
+#       ymax = cumsum(rel_abundance),
+#       ymin = ymax - rel_abundance
+#     ) %>%
+#     ungroup()
+#   
+#   timepoints <- sort(unique(df_bars$timeline))
+#   
+#   # For each Family, create interpolated data between timepoints where it exists
+#   ribbon_data <- list()
+#   
+#   for (family in unique(df_bars$Family2)) {
+#     family_data <- df_bars %>% 
+#       filter(Family2 == family) %>%
+#       arrange(timeline)
+#     
+#     # Only process if family appears at multiple timepoints
+#     if (nrow(family_data) > 1) {
+#       # Create fine interpolation between consecutive points where family exists
+#       expanded_data <- data.frame()
+#       
+#       for (i in 1:(nrow(family_data) - 1)) {
+#         t_start <- family_data$timeline[i]
+#         t_end <- family_data$timeline[i + 1]
+#         
+#         # Check if these are consecutive timepoints or if there's a gap
+#         # Only interpolate if both values are finite
+#         if (is.finite(t_start) && is.finite(t_end) && t_start < t_end) {
+#           # Create interpolation points
+#           t_seq <- seq(t_start, t_end, length.out = 100)
+#           
+#           ymin_seq <- approx(x = c(t_start, t_end),
+#                              y = c(family_data$ymin[i], family_data$ymin[i + 1]),
+#                              xout = t_seq)$y
+#           
+#           ymax_seq <- approx(x = c(t_start, t_end),
+#                              y = c(family_data$ymax[i], family_data$ymax[i + 1]),
+#                              xout = t_seq)$y
+#           
+#           segment_data <- data.frame(
+#             timeline = t_seq,
+#             ymin = ymin_seq,
+#             ymax = ymax_seq,
+#             Family2 = family
+#           )
+#           
+#           expanded_data <- rbind(expanded_data, segment_data)
+#         }
+#       }
+#       
+#       if (nrow(expanded_data) > 0) {
+#         ribbon_data[[family]] <- expanded_data
+#       }
+#     }
+#   }
+#   
+#   all_ribbons <- bind_rows(ribbon_data)
+#   
+#   # Create diet annotation data (moved higher)
+#   diet_data <- data.frame(
+#     xmin = c(0, 15, 22, 30, 33),
+#     xmax = c(15, 22, 30, 33, max(timepoints)),
+#     diet = c("Regular", "Keto", "Regular", "Fasting", "Regular"),
+#     color = c("#B3B3B3", "blue", "#B3B3B3", "red", "#B3B3B3")
+#   )
+#   
+#   # Every 2 days for x-axis
+#   day_breaks <- seq(0, max(timepoints), by = 2)
+#   
+#   # Create the plot
+#   g <- ggplot() +
+#     # Use geom_ribbon for smooth rendering
+#     geom_ribbon(
+#       data = all_ribbons,
+#       aes(x = timeline, ymin = ymin, ymax = ymax, fill = Family2, group = Family2),
+#       alpha = flow_alpha,
+#       color = "black",
+#       linewidth = 0.1
+#     ) +
+#     # Add box around main plot area (0-1, 0-max(timepoints))
+#     geom_rect(
+#       aes(xmin = 0, xmax = max(timepoints), ymin = 0, ymax = 1),
+#       fill = NA,
+#       color = "black",
+#       linewidth = 0.1
+#     ) +
+#     # Add sampling day points between diet and ribbons
+#     geom_point(
+#       data = data.frame(x = timepoints, y = 1.02),
+#       aes(x = x, y = y),
+#       size = 0.5,
+#       color = "black",
+#       shape = 16
+#     ) +
+#     # Add diet rectangles (higher up)
+#     geom_rect(
+#       data = diet_data,
+#       aes(xmin = xmin, xmax = xmax, ymin = 1.04, ymax = 1.08),
+#       fill = diet_data$color,
+#       color = "black",
+#       alpha = 0.25,
+#       linewidth = 0.1
+#     ) +
+#     # Add white diet labels
+#     geom_text(
+#       data = diet_data,
+#       aes(x = (xmin + xmax) / 2, y = 1.06, label = diet),
+#       size = 2,
+#       color = "black"
+#     ) +
+#     scale_y_continuous(
+#       "Relative Abundance", 
+#       breaks = c(0.00, 0.25, 0.50, 0.75, 1.00),
+#       limits = c(0, 1.10),
+#       expand = c(0, 0)
+#     ) +
+#     scale_x_continuous(
+#       "Days",
+#       breaks = day_breaks,
+#       expand = c(0.01, 0)
+#     ) +
+#     scale_fill_manual(
+#       values = color_scale$values, 
+#       breaks = color_scale$breaks, 
+#       labels = color_scale$labels
+#     ) +
+#     theme_custom_comp() +
+#     theme(
+#       panel.spacing = unit(0.5, "lines"),
+#       legend.position = "none",
+#       axis.text.x = element_text(),
+#       axis.title.x = element_text()
+#     ) +
+#     theme_custom_text()
+#   
+#   return(g)
+# }
+
+barplot_connect_ASV <- function(df_subj, color_scale, flow_alpha = 1, sample_origin) {
+  
+  # Select appropriate timeline column based on sample_origin
+  timeline_col <- if (sample_origin == "Stool") {
+    "Collection_timeline"
+  } else if (sample_origin == "Cap") {
+    "Ingestion_timeline"
+  } else {
+    "timeline"  # fallback
+  }
+  
+  # Rename to generic 'timeline' for processing
+  df_subj <- df_subj %>%
+    rename(timeline = !!sym(timeline_col)) %>%
+    mutate(timeline = as.numeric(as.character(timeline)))
+  
+  # Prepare the data - aggregate and normalize by timepoint at Feature level
+  df_bars <- df_subj %>%
+    group_by(timeline, Feature, Family2) %>%
+    summarise(Abundance = sum(Abundance), .groups = "drop") %>%
+    group_by(timeline) %>%
+    mutate(
+      rel_abundance = Abundance / sum(Abundance)
+    ) %>%
+    ungroup() %>%
+    arrange(timeline, desc(Family2), Feature) %>%
+    group_by(timeline) %>%
+    mutate(
+      ymax = cumsum(rel_abundance),
+      ymin = ymax - rel_abundance
+    ) %>%
+    ungroup()
+  
+  timepoints <- sort(unique(df_bars$timeline))
+  
+  # For each Feature, create interpolated data between timepoints where it exists
+  ribbon_data <- list()
+  
+  for (feature in unique(df_bars$Feature)) {
+    feature_data <- df_bars %>% 
+      filter(Feature == feature) %>%
+      arrange(timeline)
+    
+    # Only process if feature appears at multiple timepoints
+    if (nrow(feature_data) > 1) {
+      # Create fine interpolation between consecutive points where feature exists
+      expanded_data <- data.frame()
+      
+      for (i in 1:(nrow(feature_data) - 1)) {
+        t_start <- feature_data$timeline[i]
+        t_end <- feature_data$timeline[i + 1]
+        
+        # Check if these are consecutive timepoints or if there's a gap
+        # Only interpolate if both values are finite
+        if (is.finite(t_start) && is.finite(t_end) && t_start < t_end) {
+          # Create interpolation points
+          t_seq <- seq(t_start, t_end, length.out = 100)
+          
+          ymin_seq <- approx(x = c(t_start, t_end),
+                             y = c(feature_data$ymin[i], feature_data$ymin[i + 1]),
+                             xout = t_seq)$y
+          
+          ymax_seq <- approx(x = c(t_start, t_end),
+                             y = c(feature_data$ymax[i], feature_data$ymax[i + 1]),
+                             xout = t_seq)$y
+          
+          segment_data <- data.frame(
+            timeline = t_seq,
+            ymin = ymin_seq,
+            ymax = ymax_seq,
+            Feature = feature,
+            Family2 = feature_data$Family2[i]
+          )
+          
+          expanded_data <- rbind(expanded_data, segment_data)
+        }
+      }
+      
+      if (nrow(expanded_data) > 0) {
+        ribbon_data[[feature]] <- expanded_data
+      }
+    }
+  }
+  
+  all_ribbons <- bind_rows(ribbon_data)
+  
+  # Create diet annotation data (moved higher)
+  diet_data <- data.frame(
+    xmin = c(0, 15, 22, 30, 33),
+    xmax = c(15, 22, 30, 33, max(timepoints)),
+    diet = c("Regular", "Keto", "Regular", "Fasting", "Regular"),
+    color = c("#B3B3B3", "blue", "#B3B3B3", "red", "#B3B3B3")
+  )
+  # Every 2 days for x-axis
+  day_breaks <- seq(0, max(timepoints), by = 2)
+  
+  # Create the plot
+  g <- ggplot() +
+    # Use geom_ribbon for smooth rendering
+    geom_ribbon(
+      data = all_ribbons,
+      aes(x = timeline, ymin = ymin, ymax = ymax, fill = Family2, group = Feature),
+      alpha = flow_alpha,
+      color = "black",
+      linewidth = 0.05
+    ) +
+    # Add box around main plot area (0-1, 0-max(timepoints))
+    geom_rect(
+      aes(xmin = 0, xmax = max(timepoints), ymin = 0, ymax = 1),
+      fill = NA,
+      color = "black",
+      linewidth = 0.1
+    ) +
+    # Add sampling day points between diet and ribbons
+    geom_point(
+      data = data.frame(x = timepoints, y = 1.02),
+      aes(x = x, y = y),
+      size = 0.5,
+      color = "black",
+      shape = 16
+    ) +
+    # Add diet rectangles (higher up)
+    geom_rect(
+      data = diet_data,
+      aes(xmin = xmin, xmax = xmax, ymin = 1.04, ymax = 1.08),
+      fill = diet_data$color,
+      alpha = 0.25,
+      color = "black",
+      linewidth = 0.1
+    ) +
+    # Add white diet labels
+    geom_text(
+      data = diet_data,
+      aes(x = (xmin + xmax) / 2, y = 1.06, label = diet),
+      size = 2,
+      color = "black"
+    ) +
+    scale_y_continuous(
+      "Relative Abundance", 
+      breaks = c(0.00, 0.25, 0.50, 0.75, 1.00),
+      limits = c(0, 1.10),
+      expand = c(0, 0)
+    ) +
+    scale_x_continuous(
+      "Days",
+      breaks = day_breaks,
+      expand = c(0.01, 0)
+    ) +
+    scale_fill_manual(
+      values = color_scale$values, 
+      breaks = color_scale$breaks, 
+      labels = color_scale$labels
+    ) +
+    theme_custom_comp() +
+    theme(
+      panel.spacing = unit(0.5, "lines"),
+      legend.position = "none",
+      axis.text.x = element_text(),
+      axis.title.x = element_text()
+    ) +
+    theme_custom_text()
+  
+  return(g)
+}
+
+barplot_connect_family <- function(df_subj, color_scale, flow_alpha = 1, sample_origin) {
+  
+  # Select appropriate timeline column based on sample_origin
+  timeline_col <- if (sample_origin == "Stool") {
+    "Collection_timeline"
+  } else if (sample_origin == "Cap") {
+    "Ingestion_timeline"
+  } else {
+    "timeline"  # fallback
+  }
+  
+  # Rename to generic 'timeline' for processing
+  df_subj <- df_subj %>%
+    rename(timeline = !!sym(timeline_col)) %>%
+    mutate(timeline = as.numeric(as.character(timeline)))
+  
+  # Prepare the data - aggregate and normalize by timepoint at Family level
+  df_bars <- df_subj %>%
+    group_by(timeline, Family2) %>%
+    summarise(Abundance = sum(Abundance), .groups = "drop") %>%
+    group_by(timeline) %>%
+    mutate(
+      rel_abundance = Abundance / sum(Abundance)
+    ) %>%
+    ungroup() %>%
+    arrange(timeline, desc(Family2)) %>%
+    group_by(timeline) %>%
+    mutate(
+      ymax = cumsum(rel_abundance),
+      ymin = ymax - rel_abundance
+    ) %>%
+    ungroup()
+  
+  timepoints <- sort(unique(df_bars$timeline))
+  
+  # For each Family, create interpolated data between timepoints where it exists
+  ribbon_data <- list()
+  
+  for (family in unique(df_bars$Family2)) {
+    family_data <- df_bars %>% 
+      filter(Family2 == family) %>%
+      arrange(timeline)
+    
+    # Only process if family appears at multiple timepoints
+    if (nrow(family_data) > 1) {
+      # Create fine interpolation between consecutive points where family exists
+      expanded_data <- data.frame()
+      
+      for (i in 1:(nrow(family_data) - 1)) {
+        t_start <- family_data$timeline[i]
+        t_end <- family_data$timeline[i + 1]
+        
+        # Check if these are consecutive timepoints or if there's a gap
+        # Only interpolate if both values are finite
+        if (is.finite(t_start) && is.finite(t_end) && t_start < t_end) {
+          # Create interpolation points
+          t_seq <- seq(t_start, t_end, length.out = 100)
+          
+          ymin_seq <- approx(x = c(t_start, t_end),
+                             y = c(family_data$ymin[i], family_data$ymin[i + 1]),
+                             xout = t_seq)$y
+          
+          ymax_seq <- approx(x = c(t_start, t_end),
+                             y = c(family_data$ymax[i], family_data$ymax[i + 1]),
+                             xout = t_seq)$y
+          
+          segment_data <- data.frame(
+            timeline = t_seq,
+            ymin = ymin_seq,
+            ymax = ymax_seq,
+            Family2 = family
+          )
+          
+          expanded_data <- rbind(expanded_data, segment_data)
+        }
+      }
+      
+      if (nrow(expanded_data) > 0) {
+        ribbon_data[[family]] <- expanded_data
+      }
+    }
+  }
+  
+  all_ribbons <- bind_rows(ribbon_data)
+  
+  # Create diet annotation data (moved higher)
+  diet_data <- data.frame(
+    xmin = c(0, 15, 22, 30, 33),
+    xmax = c(15, 22, 30, 33, max(timepoints)),
+    diet = c("Regular", "Keto", "Regular", "Fasting", "Regular"),
+    color = c("#B3B3B3", "blue", "#B3B3B3", "red", "#B3B3B3")
+  )
+  
+  # Every 2 days for x-axis
+  day_breaks <- seq(0, max(timepoints), by = 2)
+  
+  # Create the plot
+  g <- ggplot() +
+    # Use geom_ribbon for smooth rendering
+    geom_ribbon(
+      data = all_ribbons,
+      aes(x = timeline, ymin = ymin, ymax = ymax, fill = Family2, group = Family2),
+      alpha = flow_alpha,
+      color = "black",
+      linewidth = 0.1
+    ) +
+    # Add box around main plot area (0-1, 0-max(timepoints))
+    geom_rect(
+      aes(xmin = 0, xmax = max(timepoints), ymin = 0, ymax = 1),
+      fill = NA,
+      color = "black",
+      linewidth = 0.1
+    ) +
+    # Add sampling day points between diet and ribbons
+    geom_point(
+      data = data.frame(x = timepoints, y = 1.02),
+      aes(x = x, y = y),
+      size = 0.5,
+      color = "black",
+      shape = 16
+    ) +
+    # Add diet rectangles (higher up)
+    geom_rect(
+      data = diet_data,
+      aes(xmin = xmin, xmax = xmax, ymin = 1.04, ymax = 1.08),
+      fill = diet_data$color,
+      color = "black",
+      alpha = 0.25,
+      linewidth = 0.1
+    ) +
+    # Add white diet labels
+    geom_text(
+      data = diet_data,
+      aes(x = (xmin + xmax) / 2, y = 1.06, label = diet),
+      size = 2,
+      color = "black"
+    ) +
+    scale_y_continuous(
+      "Relative Abundance", 
+      breaks = c(0.00, 0.25, 0.50, 0.75, 1.00),
+      limits = c(0, 1.10),
+      expand = c(0, 0)
+    ) +
+    scale_x_continuous(
+      "Days",
+      breaks = day_breaks,
+      expand = c(0.01, 0)
+    ) +
+    scale_fill_manual(
+      values = color_scale$values, 
+      breaks = color_scale$breaks, 
+      labels = color_scale$labels
+    ) +
+    theme_custom_comp() +
+    theme(
+      panel.spacing = unit(0.5, "lines"),
+      legend.position = "none",
+      axis.text.x = element_text(),
+      axis.title.x = element_text()
+    ) +
+    theme_custom_text()
+  
+  return(g)
 }

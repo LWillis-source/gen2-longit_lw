@@ -625,6 +625,111 @@ for (sid in unique(samdf$Subject_ID)) {
 
 ```
 
+```{r ASV heatmap - by sample_origin}
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+  ps2plot <- ps %>% subset_samples(Region == "Saliva" 
+                                   & total_reads > 10000
+                                   & Subject_ID == sid)
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_SI)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+
+  g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(Sample_origin2, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+    ggsave(paste0(directory, "/Weeklong-ASV-heatmap-0p001/Saliva-collection/ASV-saliva-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+  
+}
+
+####
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+  ps2plot <- ps %>% subset_samples(!Region %in% c("Saliva", "Stool")
+                                   & total_reads > 10000
+                                   & Subject_ID == sid)
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_SI)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+  
+    g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(Sample_origin2, Region, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+     ggsave(paste0(directory, "/Weeklong-ASV-heatmap-0p001/Capscan-collection/ASV-capscan-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+}
+
+####
+
+for (sid in unique(samdf$Subject_ID)) {
+  
+  ps2plot <- ps %>% subset_samples(Region == "Stool" 
+                                   & total_reads > 500
+                                   & Subject_ID == sid)
+
+  taxa2keep <- psmelt(ps2plot %>% transform_sample_counts(function(x) x/sum(x))) %>% # convert to relative abundance
+      filter(Abundance > cutoff_SI)
+    
+  ps2plot <- prune_taxa(taxa2keep$OTU, ps2plot) %>%  # keep ASVs in taxa2keep
+      transform_sample_counts(function(x) x/sum(x)) # renomalize
+    
+  df2plot <- psmelt(ps2plot) # convert to long form
+  df2plot <- set_family_order(df2plot, taxa_order) # set Family2 order
+  df2plot <- set_ordered_factors(df2plot) # set ordered factors
+    
+  family2_scale <- get_color_mapping(df2plot) # legend colors
+  
+    g <- ggplot(df2plot) +
+       geom_tile(aes(x = interaction(Sample_origin2, Sample_ID), y = interaction(Feature, Taxon), fill = log10(Abundance))) +
+       scale_fill_gradient(low = "white", high = "blue", na.value = "black", limits = c(-3, 0)) +
+       facet_nested(cols = vars(Collection_date, Collection_time), space = "free", scales = "free") +
+       theme(strip.text.y = element_blank(),
+             axis.title.x = element_blank(),
+             axis.title.y = element_blank(),
+             axis.ticks.y = element_blank(),
+             axis.text.x = element_text(angle = 90),
+             axis.ticks.x = element_blank(),
+             aspect.ratio = 1) +
+       theme_custom_text()
+    
+     ggsave(paste0(directory, "/Weeklong-ASV-heatmap-0p001/Stool-collection/ASV-stool-", sid, ".pdf"), plot = g, device = "pdf", width = 10, height = 0.15*(length(unique(df2plot$Feature))+3))
+}
+
+```
+
 #######################################
 # Alpha diversity
 #######################################

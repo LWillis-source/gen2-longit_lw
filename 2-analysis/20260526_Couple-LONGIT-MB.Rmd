@@ -1,0 +1,40 @@
+---
+title: "Weeklong longitudinal study metabolomics"
+output: html_notebook
+---
+
+The following script includes analysis for XX.
+
+Beverly Fu
+
+```{r Standard Setup}
+# Configure directories, load libraries and base functions
+source(paste0(here::here(), "/0-config.R"))
+
+##### FIX THIS LATER ##### 
+sample_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT-Wk/LONGIT-Weeklong_SampleSheet_FINAL.xlsx"
+redcap_file_path <- "/Users/bfu/Dropbox/Group_projects/Capsule-Gen2-LONGIT-Wk/Redcap-export.xlsx"
+##### FIX THIS LATER ##### 
+
+directory = paste0(here(), "/3-figures/")
+kits <- read_excel(sample_file_path, sheet = 1)
+samples <- read_excel(sample_file_path, sheet = 2)
+panas <- read_excel(sample_file_path, sheet = 3)
+
+participants <- read_excel(paste0(here(), "/1-data/Capscan-weeklong-participants.xlsx"), sheet = 1)
+
+pre_PSS <- read_excel(redcap_file_path, sheet = 3)
+pre_Rome <- read_excel(redcap_file_path, sheet = 4)
+pre_Lifestyle <- read_excel(redcap_file_path, sheet = 5)
+pre_GSRS <- read_excel(redcap_file_path, sheet = 6)
+daily_diet <- read_excel(redcap_file_path, sheet = 7)
+daily_PANAS <- read_excel(redcap_file_path, sheet = 8)
+macronutrients <- read_excel(redcap_file_path, sheet = 9)
+nutrient_type <- read_excel(redcap_file_path, sheet = 10)
+
+duplicate_samples <- c("Missing", "LS1741", "LS1789", "LS1805")
+
+samples <- samples %>%
+   mutate(Sample_origin = factor(Sample_origin, levels = c("Saliva0", "Saliva1", "Saliva2", "Saliva3E", "Saliva3", "Saliva4E", "Saliva4", "Saliva5E", "Saliva5",  "Saliva6E", "Saliva6", "Saliva7", "Saliva8", "ExtraSaliva", "Capscan0", "Capscan1", "Capscan2", "Capscan3E", "Capscan3", "Capscan4E", "Capscan4", "Capscan5E",  "Capscan5", "Capscan6E", "Capscan6", "Capscan7", "Capscan8", "CapscanExtra1", "CapscanExtra2", "CapscanExtra3", "Stool0", "Stool1", "Stool2", "Stool3E", "Stool3", "Stool4E", "Stool4", "Stool5E", "Stool5", "Stool6E", "Stool6", "Stool7", "Stool8", "StoolExtra1", "StoolExtra2", "StoolExtra3"), ordered = TRUE)) %>%
+   mutate(Sample_origin2 = factor(Sample_origin2, levels = c("Saliva0", "Saliva1", "Saliva2", "SalivaE1", "Saliva3", "Saliva4", "Saliva5",  "SalivaE2", "Saliva6", "Saliva7", "Saliva8", "Cap0", "Cap1", "Cap2", "CapE1", "Cap3", "Cap4", "Cap5", "CapE2", "Cap6", "Cap7", "Cap8", "Stool0", "Stool1", "Stool2", "Stool3E", "Stool3", "Stool4E", "Stool4", "Stool5E", "Stool5", "Stool6E", "Stool6", "Stool7", "Stool8"), ordered = TRUE))
+```
