@@ -1,0 +1,1464 @@
+Subject_ID,taxon,ingredients,logged,detected,call,n_stool_samples
+01,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,True,TP,10
+01,Triticum aestivum,wheat,True,True,TP,10
+01,Oryza sativa,"rice, glutinous rice",True,True,TP,10
+01,Solanum,"tomato, potato, eggplant",True,True,TP,10
+01,Gallus gallus,chicken,True,True,TP,10
+01,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",False,True,FP,10
+01,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,10
+01,Sus scrofa,pork,True,False,FN,10
+01,Theobroma,cacao,True,True,TP,10
+01,Allium cepa,onion,True,True,TP,10
+01,Lactuca sativa,lettuce,True,True,TP,10
+01,Daucus carota,carrot,True,True,TP,10
+01,Avena,"oat, granola",False,False,TN,10
+01,Capsicum,"chili pepper, bell pepper",False,True,FP,10
+01,Arachis hypogaea,peanut,True,True,TP,10
+01,Citrus,"lemon, orange, grapefruit, lime",True,True,TP,10
+01,Vaccinium,"blueberry, cranberry",False,False,TN,10
+01,Allium sativum,garlic,True,True,TP,10
+01,Persea americana,avocado,True,True,TP,10
+01,Phaseolus,"green bean, black bean",False,False,TN,10
+01,Musa,"banana, plantain",False,False,TN,10
+01,Mangifera indica,mango,False,True,FP,10
+01,Prunus,"peach, almond, plum, cherry",True,True,TP,10
+01,Brassica rapa et al.,kimchi,False,True,FP,10
+01,Allium,"scallion, leek",True,True,TP,10
+01,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,10
+01,Spinacia,spinach,True,True,TP,10
+01,Salmo salar,salmon,False,False,TN,10
+01,Ovis aries,lamb,True,False,FN,10
+01,Sesamum,sesame,False,False,TN,10
+01,Rubus,"raspberry, blackberry",False,False,TN,10
+01,Apium graveolens,celery,False,False,TN,10
+01,Cicer arietinum,chickpea,False,False,TN,10
+01,Lens culinaris,lentil,False,False,TN,10
+01,Pisum,pea,False,False,TN,10
+01,Thunnus,tuna,False,False,TN,10
+01,Dioscorea,yam,False,False,TN,10
+01,Pistacia vera,pistachio,False,False,TN,10
+01,Anacardium occidentale,cashew,True,True,TP,10
+01,Ovis aries et al.,feta,False,False,TN,10
+01,Ipomoea,sweet potato,False,False,TN,10
+01,Vitis,"grape, raisin",False,True,FP,10
+01,Ocimum basilicum,basil,False,True,FP,10
+01,Salvia hispanica,chia,False,False,TN,10
+01,Ananas comosus,pineapple,False,False,TN,10
+01,Raphanus,"daikon, radish",False,False,TN,10
+01,Vigna radiata,"mung bean, bean sprouts",False,False,TN,10
+01,Meleagris gallopavo,turkey,False,False,TN,10
+01,Cynara,artichoke,False,False,TN,10
+01,Pyrus,asian pear,False,True,FP,10
+01,Anas platyrhynchos,duck,True,False,FN,10
+01,Ficus carica,fig,False,True,FP,10
+01,Actinidia,kiwi,False,False,TN,10
+01,Brassica juncea et al.,mustard,False,True,FP,10
+01,Carya,pecan,False,False,TN,10
+01,Pinus,pine nut,False,False,TN,10
+01,Juglans regia,walnut,False,False,TN,10
+01,Vigna,"urad dal, black-eyed pea",False,False,TN,10
+01,Manihot,cassava,False,False,TN,10
+01,Psidium guajava,guava,False,False,TN,10
+01,Citrus reticulata,mandarin,False,True,FP,10
+01,Abelmoschus esculentus,okra,False,False,TN,10
+01,Chenopodium,quinoa,False,False,TN,10
+01,Asparagus,asparagus,False,True,FP,10
+01,Beta vulgaris,beet,False,False,TN,10
+01,Fagopyrum esculentum,buckwheat,False,False,TN,10
+01,Capparis spinosa,caper,False,False,TN,10
+01,Gadus,cod,False,False,TN,10
+01,Capra hircus,goat cheese,False,False,TN,10
+01,Seriola,hamachi,False,False,TN,10
+01,Nelumbo,lotus root,False,False,TN,10
+01,Macadamia integrifolia,macadamia,False,False,TN,10
+01,Passiflora,passionfruit,False,False,TN,10
+01,Vigna angularis,red bean,False,False,TN,10
+01,Sebastes,rockfish,False,False,TN,10
+01,Anguilla,unagi,False,False,TN,10
+01,Zizania,wild rice,False,False,TN,10
+03,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,6
+03,Triticum aestivum,wheat,True,True,TP,6
+03,Oryza sativa,"rice, glutinous rice",True,True,TP,6
+03,Solanum,"tomato, potato, eggplant",True,True,TP,6
+03,Gallus gallus,chicken,False,True,FP,6
+03,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,6
+03,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,6
+03,Sus scrofa,pork,False,False,TN,6
+03,Theobroma,cacao,True,True,TP,6
+03,Allium cepa,onion,True,False,FN,6
+03,Lactuca sativa,lettuce,True,True,TP,6
+03,Daucus carota,carrot,True,True,TP,6
+03,Avena,"oat, granola",True,True,TP,6
+03,Capsicum,"chili pepper, bell pepper",True,True,TP,6
+03,Arachis hypogaea,peanut,False,True,FP,6
+03,Citrus,"lemon, orange, grapefruit, lime",True,False,FN,6
+03,Vaccinium,"blueberry, cranberry",True,False,FN,6
+03,Allium sativum,garlic,True,False,FN,6
+03,Persea americana,avocado,True,False,FN,6
+03,Phaseolus,"green bean, black bean",True,True,TP,6
+03,Musa,"banana, plantain",False,False,TN,6
+03,Mangifera indica,mango,False,False,TN,6
+03,Prunus,"peach, almond, plum, cherry",True,False,FN,6
+03,Brassica rapa et al.,kimchi,False,True,FP,6
+03,Allium,"scallion, leek",False,True,FP,6
+03,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,6
+03,Spinacia,spinach,True,True,TP,6
+03,Salmo salar,salmon,False,False,TN,6
+03,Ovis aries,lamb,False,False,TN,6
+03,Sesamum,sesame,True,False,FN,6
+03,Rubus,"raspberry, blackberry",True,False,FN,6
+03,Apium graveolens,celery,True,False,FN,6
+03,Cicer arietinum,chickpea,True,True,TP,6
+03,Lens culinaris,lentil,True,False,FN,6
+03,Pisum,pea,True,True,TP,6
+03,Thunnus,tuna,False,False,TN,6
+03,Dioscorea,yam,True,False,FN,6
+03,Pistacia vera,pistachio,False,False,TN,6
+03,Anacardium occidentale,cashew,False,True,FP,6
+03,Ovis aries et al.,feta,True,False,FN,6
+03,Ipomoea,sweet potato,False,False,TN,6
+03,Vitis,"grape, raisin",False,False,TN,6
+03,Ocimum basilicum,basil,False,False,TN,6
+03,Salvia hispanica,chia,False,False,TN,6
+03,Ananas comosus,pineapple,False,False,TN,6
+03,Raphanus,"daikon, radish",True,False,FN,6
+03,Vigna radiata,"mung bean, bean sprouts",False,False,TN,6
+03,Meleagris gallopavo,turkey,False,False,TN,6
+03,Cynara,artichoke,True,False,FN,6
+03,Pyrus,asian pear,False,False,TN,6
+03,Anas platyrhynchos,duck,False,True,FP,6
+03,Ficus carica,fig,False,False,TN,6
+03,Actinidia,kiwi,False,False,TN,6
+03,Brassica juncea et al.,mustard,True,False,FN,6
+03,Carya,pecan,False,False,TN,6
+03,Pinus,pine nut,False,False,TN,6
+03,Juglans regia,walnut,False,False,TN,6
+03,Vigna,"urad dal, black-eyed pea",False,False,TN,6
+03,Manihot,cassava,False,False,TN,6
+03,Psidium guajava,guava,False,False,TN,6
+03,Citrus reticulata,mandarin,True,False,FN,6
+03,Abelmoschus esculentus,okra,False,False,TN,6
+03,Chenopodium,quinoa,False,False,TN,6
+03,Asparagus,asparagus,False,False,TN,6
+03,Beta vulgaris,beet,False,False,TN,6
+03,Fagopyrum esculentum,buckwheat,False,False,TN,6
+03,Capparis spinosa,caper,False,False,TN,6
+03,Gadus,cod,False,False,TN,6
+03,Capra hircus,goat cheese,False,False,TN,6
+03,Seriola,hamachi,False,False,TN,6
+03,Nelumbo,lotus root,False,False,TN,6
+03,Macadamia integrifolia,macadamia,False,False,TN,6
+03,Passiflora,passionfruit,False,False,TN,6
+03,Vigna angularis,red bean,False,False,TN,6
+03,Sebastes,rockfish,False,False,TN,6
+03,Anguilla,unagi,False,False,TN,6
+03,Zizania,wild rice,False,False,TN,6
+04,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",False,False,TN,6
+04,Triticum aestivum,wheat,True,True,TP,6
+04,Oryza sativa,"rice, glutinous rice",True,False,FN,6
+04,Solanum,"tomato, potato, eggplant",True,True,TP,6
+04,Gallus gallus,chicken,False,False,TN,6
+04,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,6
+04,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,6
+04,Sus scrofa,pork,False,False,TN,6
+04,Theobroma,cacao,True,False,FN,6
+04,Allium cepa,onion,True,False,FN,6
+04,Lactuca sativa,lettuce,True,True,TP,6
+04,Daucus carota,carrot,True,True,TP,6
+04,Avena,"oat, granola",False,True,FP,6
+04,Capsicum,"chili pepper, bell pepper",True,True,TP,6
+04,Arachis hypogaea,peanut,True,False,FN,6
+04,Citrus,"lemon, orange, grapefruit, lime",True,True,TP,6
+04,Vaccinium,"blueberry, cranberry",False,False,TN,6
+04,Allium sativum,garlic,True,False,FN,6
+04,Persea americana,avocado,False,False,TN,6
+04,Phaseolus,"green bean, black bean",True,False,FN,6
+04,Musa,"banana, plantain",True,True,TP,6
+04,Mangifera indica,mango,True,False,FN,6
+04,Prunus,"peach, almond, plum, cherry",False,True,FP,6
+04,Brassica rapa et al.,kimchi,False,True,FP,6
+04,Allium,"scallion, leek",True,False,FN,6
+04,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,6
+04,Spinacia,spinach,True,True,TP,6
+04,Salmo salar,salmon,False,False,TN,6
+04,Ovis aries,lamb,False,False,TN,6
+04,Sesamum,sesame,True,False,FN,6
+04,Rubus,"raspberry, blackberry",True,False,FN,6
+04,Apium graveolens,celery,False,True,FP,6
+04,Cicer arietinum,chickpea,True,False,FN,6
+04,Lens culinaris,lentil,True,False,FN,6
+04,Pisum,pea,True,True,TP,6
+04,Thunnus,tuna,False,False,TN,6
+04,Dioscorea,yam,False,False,TN,6
+04,Pistacia vera,pistachio,False,False,TN,6
+04,Anacardium occidentale,cashew,True,False,FN,6
+04,Ovis aries et al.,feta,False,False,TN,6
+04,Ipomoea,sweet potato,True,False,FN,6
+04,Vitis,"grape, raisin",False,False,TN,6
+04,Ocimum basilicum,basil,False,False,TN,6
+04,Salvia hispanica,chia,False,False,TN,6
+04,Ananas comosus,pineapple,False,False,TN,6
+04,Raphanus,"daikon, radish",True,False,FN,6
+04,Vigna radiata,"mung bean, bean sprouts",True,False,FN,6
+04,Meleagris gallopavo,turkey,False,False,TN,6
+04,Cynara,artichoke,False,False,TN,6
+04,Pyrus,asian pear,False,False,TN,6
+04,Anas platyrhynchos,duck,False,False,TN,6
+04,Ficus carica,fig,False,False,TN,6
+04,Actinidia,kiwi,False,False,TN,6
+04,Brassica juncea et al.,mustard,True,True,TP,6
+04,Carya,pecan,True,False,FN,6
+04,Pinus,pine nut,False,False,TN,6
+04,Juglans regia,walnut,False,False,TN,6
+04,Vigna,"urad dal, black-eyed pea",False,False,TN,6
+04,Manihot,cassava,False,False,TN,6
+04,Psidium guajava,guava,False,False,TN,6
+04,Citrus reticulata,mandarin,False,True,FP,6
+04,Abelmoschus esculentus,okra,False,False,TN,6
+04,Chenopodium,quinoa,True,False,FN,6
+04,Asparagus,asparagus,False,False,TN,6
+04,Beta vulgaris,beet,False,False,TN,6
+04,Fagopyrum esculentum,buckwheat,False,False,TN,6
+04,Capparis spinosa,caper,False,False,TN,6
+04,Gadus,cod,False,False,TN,6
+04,Capra hircus,goat cheese,False,False,TN,6
+04,Seriola,hamachi,False,False,TN,6
+04,Nelumbo,lotus root,False,False,TN,6
+04,Macadamia integrifolia,macadamia,False,False,TN,6
+04,Passiflora,passionfruit,False,False,TN,6
+04,Vigna angularis,red bean,False,False,TN,6
+04,Sebastes,rockfish,False,False,TN,6
+04,Anguilla,unagi,False,False,TN,6
+04,Zizania,wild rice,False,False,TN,6
+05,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,7
+05,Triticum aestivum,wheat,True,False,FN,7
+05,Oryza sativa,"rice, glutinous rice",True,True,TP,7
+05,Solanum,"tomato, potato, eggplant",True,True,TP,7
+05,Gallus gallus,chicken,True,False,FN,7
+05,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,7
+05,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,7
+05,Sus scrofa,pork,True,False,FN,7
+05,Theobroma,cacao,True,False,FN,7
+05,Allium cepa,onion,True,False,FN,7
+05,Lactuca sativa,lettuce,True,True,TP,7
+05,Daucus carota,carrot,True,True,TP,7
+05,Avena,"oat, granola",True,False,FN,7
+05,Capsicum,"chili pepper, bell pepper",False,True,FP,7
+05,Arachis hypogaea,peanut,True,True,TP,7
+05,Citrus,"lemon, orange, grapefruit, lime",True,False,FN,7
+05,Vaccinium,"blueberry, cranberry",True,False,FN,7
+05,Allium sativum,garlic,True,True,TP,7
+05,Persea americana,avocado,False,False,TN,7
+05,Phaseolus,"green bean, black bean",True,False,FN,7
+05,Musa,"banana, plantain",False,False,TN,7
+05,Mangifera indica,mango,False,False,TN,7
+05,Prunus,"peach, almond, plum, cherry",True,False,FN,7
+05,Brassica rapa et al.,kimchi,True,True,TP,7
+05,Allium,"scallion, leek",True,True,TP,7
+05,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,7
+05,Spinacia,spinach,False,True,FP,7
+05,Salmo salar,salmon,True,False,FN,7
+05,Ovis aries,lamb,False,False,TN,7
+05,Sesamum,sesame,True,True,TP,7
+05,Rubus,"raspberry, blackberry",True,True,TP,7
+05,Apium graveolens,celery,False,False,TN,7
+05,Cicer arietinum,chickpea,False,False,TN,7
+05,Lens culinaris,lentil,False,False,TN,7
+05,Pisum,pea,False,True,FP,7
+05,Thunnus,tuna,False,False,TN,7
+05,Dioscorea,yam,True,False,FN,7
+05,Pistacia vera,pistachio,False,False,TN,7
+05,Anacardium occidentale,cashew,False,False,TN,7
+05,Ovis aries et al.,feta,False,False,TN,7
+05,Ipomoea,sweet potato,True,False,FN,7
+05,Vitis,"grape, raisin",True,False,FN,7
+05,Ocimum basilicum,basil,False,False,TN,7
+05,Salvia hispanica,chia,False,False,TN,7
+05,Ananas comosus,pineapple,True,False,FN,7
+05,Raphanus,"daikon, radish",True,True,TP,7
+05,Vigna radiata,"mung bean, bean sprouts",False,False,TN,7
+05,Meleagris gallopavo,turkey,False,False,TN,7
+05,Cynara,artichoke,False,False,TN,7
+05,Pyrus,asian pear,False,True,FP,7
+05,Anas platyrhynchos,duck,False,False,TN,7
+05,Ficus carica,fig,False,False,TN,7
+05,Actinidia,kiwi,False,False,TN,7
+05,Brassica juncea et al.,mustard,True,True,TP,7
+05,Carya,pecan,False,False,TN,7
+05,Pinus,pine nut,False,False,TN,7
+05,Juglans regia,walnut,False,False,TN,7
+05,Vigna,"urad dal, black-eyed pea",False,False,TN,7
+05,Manihot,cassava,False,False,TN,7
+05,Psidium guajava,guava,False,False,TN,7
+05,Citrus reticulata,mandarin,False,False,TN,7
+05,Abelmoschus esculentus,okra,False,False,TN,7
+05,Chenopodium,quinoa,False,False,TN,7
+05,Asparagus,asparagus,False,False,TN,7
+05,Beta vulgaris,beet,False,False,TN,7
+05,Fagopyrum esculentum,buckwheat,False,False,TN,7
+05,Capparis spinosa,caper,True,False,FN,7
+05,Gadus,cod,False,False,TN,7
+05,Capra hircus,goat cheese,True,False,FN,7
+05,Seriola,hamachi,False,False,TN,7
+05,Nelumbo,lotus root,False,False,TN,7
+05,Macadamia integrifolia,macadamia,False,False,TN,7
+05,Passiflora,passionfruit,False,False,TN,7
+05,Vigna angularis,red bean,False,False,TN,7
+05,Sebastes,rockfish,False,False,TN,7
+05,Anguilla,unagi,False,False,TN,7
+05,Zizania,wild rice,True,False,FN,7
+06,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,True,TP,7
+06,Triticum aestivum,wheat,True,True,TP,7
+06,Oryza sativa,"rice, glutinous rice",True,False,FN,7
+06,Solanum,"tomato, potato, eggplant",True,True,TP,7
+06,Gallus gallus,chicken,True,True,TP,7
+06,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,7
+06,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,7
+06,Sus scrofa,pork,True,False,FN,7
+06,Theobroma,cacao,True,False,FN,7
+06,Allium cepa,onion,True,False,FN,7
+06,Lactuca sativa,lettuce,False,True,FP,7
+06,Daucus carota,carrot,True,False,FN,7
+06,Avena,"oat, granola",False,True,FP,7
+06,Capsicum,"chili pepper, bell pepper",True,False,FN,7
+06,Arachis hypogaea,peanut,False,False,TN,7
+06,Citrus,"lemon, orange, grapefruit, lime",True,False,FN,7
+06,Vaccinium,"blueberry, cranberry",True,False,FN,7
+06,Allium sativum,garlic,True,True,TP,7
+06,Persea americana,avocado,True,True,TP,7
+06,Phaseolus,"green bean, black bean",True,True,TP,7
+06,Musa,"banana, plantain",True,False,FN,7
+06,Mangifera indica,mango,True,False,FN,7
+06,Prunus,"peach, almond, plum, cherry",False,True,FP,7
+06,Brassica rapa et al.,kimchi,False,True,FP,7
+06,Allium,"scallion, leek",True,True,TP,7
+06,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,True,FP,7
+06,Spinacia,spinach,True,True,TP,7
+06,Salmo salar,salmon,False,False,TN,7
+06,Ovis aries,lamb,True,False,FN,7
+06,Sesamum,sesame,True,False,FN,7
+06,Rubus,"raspberry, blackberry",False,False,TN,7
+06,Apium graveolens,celery,False,False,TN,7
+06,Cicer arietinum,chickpea,False,False,TN,7
+06,Lens culinaris,lentil,True,False,FN,7
+06,Pisum,pea,True,True,TP,7
+06,Thunnus,tuna,True,False,FN,7
+06,Dioscorea,yam,False,False,TN,7
+06,Pistacia vera,pistachio,False,False,TN,7
+06,Anacardium occidentale,cashew,False,False,TN,7
+06,Ovis aries et al.,feta,False,False,TN,7
+06,Ipomoea,sweet potato,True,False,FN,7
+06,Vitis,"grape, raisin",False,True,FP,7
+06,Ocimum basilicum,basil,False,False,TN,7
+06,Salvia hispanica,chia,False,False,TN,7
+06,Ananas comosus,pineapple,False,False,TN,7
+06,Raphanus,"daikon, radish",False,False,TN,7
+06,Vigna radiata,"mung bean, bean sprouts",True,False,FN,7
+06,Meleagris gallopavo,turkey,True,False,FN,7
+06,Cynara,artichoke,False,False,TN,7
+06,Pyrus,asian pear,False,True,FP,7
+06,Anas platyrhynchos,duck,False,False,TN,7
+06,Ficus carica,fig,False,False,TN,7
+06,Actinidia,kiwi,False,False,TN,7
+06,Brassica juncea et al.,mustard,False,True,FP,7
+06,Carya,pecan,False,False,TN,7
+06,Pinus,pine nut,False,False,TN,7
+06,Juglans regia,walnut,False,False,TN,7
+06,Vigna,"urad dal, black-eyed pea",False,False,TN,7
+06,Manihot,cassava,False,False,TN,7
+06,Psidium guajava,guava,True,False,FN,7
+06,Citrus reticulata,mandarin,False,False,TN,7
+06,Abelmoschus esculentus,okra,False,False,TN,7
+06,Chenopodium,quinoa,False,False,TN,7
+06,Asparagus,asparagus,False,False,TN,7
+06,Beta vulgaris,beet,False,False,TN,7
+06,Fagopyrum esculentum,buckwheat,False,False,TN,7
+06,Capparis spinosa,caper,False,False,TN,7
+06,Gadus,cod,False,False,TN,7
+06,Capra hircus,goat cheese,False,False,TN,7
+06,Seriola,hamachi,False,False,TN,7
+06,Nelumbo,lotus root,True,False,FN,7
+06,Macadamia integrifolia,macadamia,True,False,FN,7
+06,Passiflora,passionfruit,False,False,TN,7
+06,Vigna angularis,red bean,False,False,TN,7
+06,Sebastes,rockfish,False,False,TN,7
+06,Anguilla,unagi,False,False,TN,7
+06,Zizania,wild rice,False,False,TN,7
+07,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,9
+07,Triticum aestivum,wheat,True,True,TP,9
+07,Oryza sativa,"rice, glutinous rice",True,True,TP,9
+07,Solanum,"tomato, potato, eggplant",True,True,TP,9
+07,Gallus gallus,chicken,True,False,FN,9
+07,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,9
+07,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,9
+07,Sus scrofa,pork,True,True,TP,9
+07,Theobroma,cacao,True,False,FN,9
+07,Allium cepa,onion,True,True,TP,9
+07,Lactuca sativa,lettuce,False,True,FP,9
+07,Daucus carota,carrot,False,True,FP,9
+07,Avena,"oat, granola",True,True,TP,9
+07,Capsicum,"chili pepper, bell pepper",False,True,FP,9
+07,Arachis hypogaea,peanut,True,False,FN,9
+07,Citrus,"lemon, orange, grapefruit, lime",False,True,FP,9
+07,Vaccinium,"blueberry, cranberry",False,False,TN,9
+07,Allium sativum,garlic,False,True,FP,9
+07,Persea americana,avocado,True,False,FN,9
+07,Phaseolus,"green bean, black bean",True,False,FN,9
+07,Musa,"banana, plantain",True,True,TP,9
+07,Mangifera indica,mango,True,False,FN,9
+07,Prunus,"peach, almond, plum, cherry",False,True,FP,9
+07,Brassica rapa et al.,kimchi,False,True,FP,9
+07,Allium,"scallion, leek",False,True,FP,9
+07,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,False,FN,9
+07,Spinacia,spinach,True,True,TP,9
+07,Salmo salar,salmon,False,False,TN,9
+07,Ovis aries,lamb,True,False,FN,9
+07,Sesamum,sesame,True,False,FN,9
+07,Rubus,"raspberry, blackberry",False,False,TN,9
+07,Apium graveolens,celery,False,False,TN,9
+07,Cicer arietinum,chickpea,False,False,TN,9
+07,Lens culinaris,lentil,True,False,FN,9
+07,Pisum,pea,False,True,FP,9
+07,Thunnus,tuna,True,False,FN,9
+07,Dioscorea,yam,False,False,TN,9
+07,Pistacia vera,pistachio,True,True,TP,9
+07,Anacardium occidentale,cashew,True,False,FN,9
+07,Ovis aries et al.,feta,False,False,TN,9
+07,Ipomoea,sweet potato,False,False,TN,9
+07,Vitis,"grape, raisin",False,False,TN,9
+07,Ocimum basilicum,basil,False,False,TN,9
+07,Salvia hispanica,chia,True,False,FN,9
+07,Ananas comosus,pineapple,True,True,TP,9
+07,Raphanus,"daikon, radish",False,False,TN,9
+07,Vigna radiata,"mung bean, bean sprouts",False,False,TN,9
+07,Meleagris gallopavo,turkey,False,False,TN,9
+07,Cynara,artichoke,False,False,TN,9
+07,Pyrus,asian pear,False,False,TN,9
+07,Anas platyrhynchos,duck,False,False,TN,9
+07,Ficus carica,fig,False,False,TN,9
+07,Actinidia,kiwi,True,False,FN,9
+07,Brassica juncea et al.,mustard,False,True,FP,9
+07,Carya,pecan,False,False,TN,9
+07,Pinus,pine nut,False,False,TN,9
+07,Juglans regia,walnut,False,True,FP,9
+07,Vigna,"urad dal, black-eyed pea",False,False,TN,9
+07,Manihot,cassava,False,False,TN,9
+07,Psidium guajava,guava,False,False,TN,9
+07,Citrus reticulata,mandarin,False,True,FP,9
+07,Abelmoschus esculentus,okra,False,False,TN,9
+07,Chenopodium,quinoa,False,False,TN,9
+07,Asparagus,asparagus,False,False,TN,9
+07,Beta vulgaris,beet,False,False,TN,9
+07,Fagopyrum esculentum,buckwheat,False,False,TN,9
+07,Capparis spinosa,caper,False,False,TN,9
+07,Gadus,cod,False,False,TN,9
+07,Capra hircus,goat cheese,False,False,TN,9
+07,Seriola,hamachi,False,False,TN,9
+07,Nelumbo,lotus root,False,False,TN,9
+07,Macadamia integrifolia,macadamia,False,False,TN,9
+07,Passiflora,passionfruit,False,False,TN,9
+07,Vigna angularis,red bean,False,False,TN,9
+07,Sebastes,rockfish,True,False,FN,9
+07,Anguilla,unagi,False,False,TN,9
+07,Zizania,wild rice,False,False,TN,9
+08,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,True,TP,6
+08,Triticum aestivum,wheat,True,True,TP,6
+08,Oryza sativa,"rice, glutinous rice",True,True,TP,6
+08,Solanum,"tomato, potato, eggplant",True,False,FN,6
+08,Gallus gallus,chicken,True,False,FN,6
+08,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,6
+08,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,False,FN,6
+08,Sus scrofa,pork,False,True,FP,6
+08,Theobroma,cacao,False,False,TN,6
+08,Allium cepa,onion,False,False,TN,6
+08,Lactuca sativa,lettuce,True,False,FN,6
+08,Daucus carota,carrot,False,True,FP,6
+08,Avena,"oat, granola",False,True,FP,6
+08,Capsicum,"chili pepper, bell pepper",True,True,TP,6
+08,Arachis hypogaea,peanut,True,True,TP,6
+08,Citrus,"lemon, orange, grapefruit, lime",False,False,TN,6
+08,Vaccinium,"blueberry, cranberry",False,False,TN,6
+08,Allium sativum,garlic,False,False,TN,6
+08,Persea americana,avocado,False,True,FP,6
+08,Phaseolus,"green bean, black bean",False,False,TN,6
+08,Musa,"banana, plantain",True,True,TP,6
+08,Mangifera indica,mango,False,True,FP,6
+08,Prunus,"peach, almond, plum, cherry",False,False,TN,6
+08,Brassica rapa et al.,kimchi,False,True,FP,6
+08,Allium,"scallion, leek",False,True,FP,6
+08,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,6
+08,Spinacia,spinach,False,True,FP,6
+08,Salmo salar,salmon,True,False,FN,6
+08,Ovis aries,lamb,False,False,TN,6
+08,Sesamum,sesame,False,True,FP,6
+08,Rubus,"raspberry, blackberry",False,False,TN,6
+08,Apium graveolens,celery,False,False,TN,6
+08,Cicer arietinum,chickpea,True,False,FN,6
+08,Lens culinaris,lentil,False,False,TN,6
+08,Pisum,pea,False,True,FP,6
+08,Thunnus,tuna,False,False,TN,6
+08,Dioscorea,yam,False,False,TN,6
+08,Pistacia vera,pistachio,False,True,FP,6
+08,Anacardium occidentale,cashew,False,True,FP,6
+08,Ovis aries et al.,feta,False,False,TN,6
+08,Ipomoea,sweet potato,False,False,TN,6
+08,Vitis,"grape, raisin",False,False,TN,6
+08,Ocimum basilicum,basil,False,False,TN,6
+08,Salvia hispanica,chia,False,False,TN,6
+08,Ananas comosus,pineapple,False,False,TN,6
+08,Raphanus,"daikon, radish",False,False,TN,6
+08,Vigna radiata,"mung bean, bean sprouts",True,True,TP,6
+08,Meleagris gallopavo,turkey,False,False,TN,6
+08,Cynara,artichoke,False,False,TN,6
+08,Pyrus,asian pear,False,True,FP,6
+08,Anas platyrhynchos,duck,False,False,TN,6
+08,Ficus carica,fig,False,False,TN,6
+08,Actinidia,kiwi,False,False,TN,6
+08,Brassica juncea et al.,mustard,False,True,FP,6
+08,Carya,pecan,False,False,TN,6
+08,Pinus,pine nut,False,False,TN,6
+08,Juglans regia,walnut,False,False,TN,6
+08,Vigna,"urad dal, black-eyed pea",False,True,FP,6
+08,Manihot,cassava,False,False,TN,6
+08,Psidium guajava,guava,False,False,TN,6
+08,Citrus reticulata,mandarin,False,False,TN,6
+08,Abelmoschus esculentus,okra,True,False,FN,6
+08,Chenopodium,quinoa,False,False,TN,6
+08,Asparagus,asparagus,False,False,TN,6
+08,Beta vulgaris,beet,False,False,TN,6
+08,Fagopyrum esculentum,buckwheat,False,False,TN,6
+08,Capparis spinosa,caper,False,False,TN,6
+08,Gadus,cod,False,False,TN,6
+08,Capra hircus,goat cheese,False,False,TN,6
+08,Seriola,hamachi,False,False,TN,6
+08,Nelumbo,lotus root,False,False,TN,6
+08,Macadamia integrifolia,macadamia,False,False,TN,6
+08,Passiflora,passionfruit,False,False,TN,6
+08,Vigna angularis,red bean,False,False,TN,6
+08,Sebastes,rockfish,False,False,TN,6
+08,Anguilla,unagi,True,True,TP,6
+08,Zizania,wild rice,False,False,TN,6
+09,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,True,TP,7
+09,Triticum aestivum,wheat,True,True,TP,7
+09,Oryza sativa,"rice, glutinous rice",True,True,TP,7
+09,Solanum,"tomato, potato, eggplant",True,False,FN,7
+09,Gallus gallus,chicken,True,False,FN,7
+09,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,7
+09,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,7
+09,Sus scrofa,pork,False,False,TN,7
+09,Theobroma,cacao,True,False,FN,7
+09,Allium cepa,onion,False,False,TN,7
+09,Lactuca sativa,lettuce,False,False,TN,7
+09,Daucus carota,carrot,True,True,TP,7
+09,Avena,"oat, granola",False,False,TN,7
+09,Capsicum,"chili pepper, bell pepper",True,True,TP,7
+09,Arachis hypogaea,peanut,False,False,TN,7
+09,Citrus,"lemon, orange, grapefruit, lime",False,False,TN,7
+09,Vaccinium,"blueberry, cranberry",True,False,FN,7
+09,Allium sativum,garlic,False,False,TN,7
+09,Persea americana,avocado,True,True,TP,7
+09,Phaseolus,"green bean, black bean",True,True,TP,7
+09,Musa,"banana, plantain",False,False,TN,7
+09,Mangifera indica,mango,True,False,FN,7
+09,Prunus,"peach, almond, plum, cherry",True,False,FN,7
+09,Brassica rapa et al.,kimchi,True,True,TP,7
+09,Allium,"scallion, leek",False,True,FP,7
+09,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,False,FN,7
+09,Spinacia,spinach,False,False,TN,7
+09,Salmo salar,salmon,False,False,TN,7
+09,Ovis aries,lamb,False,False,TN,7
+09,Sesamum,sesame,False,False,TN,7
+09,Rubus,"raspberry, blackberry",False,False,TN,7
+09,Apium graveolens,celery,False,False,TN,7
+09,Cicer arietinum,chickpea,False,False,TN,7
+09,Lens culinaris,lentil,False,False,TN,7
+09,Pisum,pea,True,False,FN,7
+09,Thunnus,tuna,False,False,TN,7
+09,Dioscorea,yam,False,False,TN,7
+09,Pistacia vera,pistachio,False,False,TN,7
+09,Anacardium occidentale,cashew,False,False,TN,7
+09,Ovis aries et al.,feta,False,False,TN,7
+09,Ipomoea,sweet potato,True,False,FN,7
+09,Vitis,"grape, raisin",False,False,TN,7
+09,Ocimum basilicum,basil,True,False,FN,7
+09,Salvia hispanica,chia,False,False,TN,7
+09,Ananas comosus,pineapple,False,False,TN,7
+09,Raphanus,"daikon, radish",False,False,TN,7
+09,Vigna radiata,"mung bean, bean sprouts",False,True,FP,7
+09,Meleagris gallopavo,turkey,False,False,TN,7
+09,Cynara,artichoke,False,False,TN,7
+09,Pyrus,asian pear,True,False,FN,7
+09,Anas platyrhynchos,duck,False,False,TN,7
+09,Ficus carica,fig,False,False,TN,7
+09,Actinidia,kiwi,True,False,FN,7
+09,Brassica juncea et al.,mustard,False,True,FP,7
+09,Carya,pecan,False,False,TN,7
+09,Pinus,pine nut,False,False,TN,7
+09,Juglans regia,walnut,True,False,FN,7
+09,Vigna,"urad dal, black-eyed pea",False,True,FP,7
+09,Manihot,cassava,False,False,TN,7
+09,Psidium guajava,guava,False,False,TN,7
+09,Citrus reticulata,mandarin,False,False,TN,7
+09,Abelmoschus esculentus,okra,False,True,FP,7
+09,Chenopodium,quinoa,False,False,TN,7
+09,Asparagus,asparagus,False,True,FP,7
+09,Beta vulgaris,beet,False,False,TN,7
+09,Fagopyrum esculentum,buckwheat,True,False,FN,7
+09,Capparis spinosa,caper,False,False,TN,7
+09,Gadus,cod,True,False,FN,7
+09,Capra hircus,goat cheese,False,False,TN,7
+09,Seriola,hamachi,False,False,TN,7
+09,Nelumbo,lotus root,False,False,TN,7
+09,Macadamia integrifolia,macadamia,False,False,TN,7
+09,Passiflora,passionfruit,False,False,TN,7
+09,Vigna angularis,red bean,False,False,TN,7
+09,Sebastes,rockfish,False,False,TN,7
+09,Anguilla,unagi,False,False,TN,7
+09,Zizania,wild rice,False,False,TN,7
+10,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,8
+10,Triticum aestivum,wheat,True,True,TP,8
+10,Oryza sativa,"rice, glutinous rice",True,False,FN,8
+10,Solanum,"tomato, potato, eggplant",True,True,TP,8
+10,Gallus gallus,chicken,True,True,TP,8
+10,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",False,True,FP,8
+10,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",False,True,FP,8
+10,Sus scrofa,pork,False,True,FP,8
+10,Theobroma,cacao,False,False,TN,8
+10,Allium cepa,onion,True,False,FN,8
+10,Lactuca sativa,lettuce,False,False,TN,8
+10,Daucus carota,carrot,False,True,FP,8
+10,Avena,"oat, granola",False,False,TN,8
+10,Capsicum,"chili pepper, bell pepper",True,True,TP,8
+10,Arachis hypogaea,peanut,False,True,FP,8
+10,Citrus,"lemon, orange, grapefruit, lime",False,False,TN,8
+10,Vaccinium,"blueberry, cranberry",False,False,TN,8
+10,Allium sativum,garlic,False,True,FP,8
+10,Persea americana,avocado,False,False,TN,8
+10,Phaseolus,"green bean, black bean",False,True,FP,8
+10,Musa,"banana, plantain",False,False,TN,8
+10,Mangifera indica,mango,True,False,FN,8
+10,Prunus,"peach, almond, plum, cherry",True,True,TP,8
+10,Brassica rapa et al.,kimchi,False,True,FP,8
+10,Allium,"scallion, leek",False,True,FP,8
+10,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,8
+10,Spinacia,spinach,False,False,TN,8
+10,Salmo salar,salmon,False,False,TN,8
+10,Ovis aries,lamb,False,False,TN,8
+10,Sesamum,sesame,False,False,TN,8
+10,Rubus,"raspberry, blackberry",False,False,TN,8
+10,Apium graveolens,celery,False,False,TN,8
+10,Cicer arietinum,chickpea,False,False,TN,8
+10,Lens culinaris,lentil,False,False,TN,8
+10,Pisum,pea,False,True,FP,8
+10,Thunnus,tuna,False,False,TN,8
+10,Dioscorea,yam,False,False,TN,8
+10,Pistacia vera,pistachio,False,False,TN,8
+10,Anacardium occidentale,cashew,False,False,TN,8
+10,Ovis aries et al.,feta,False,False,TN,8
+10,Ipomoea,sweet potato,False,False,TN,8
+10,Vitis,"grape, raisin",False,False,TN,8
+10,Ocimum basilicum,basil,False,True,FP,8
+10,Salvia hispanica,chia,False,False,TN,8
+10,Ananas comosus,pineapple,False,False,TN,8
+10,Raphanus,"daikon, radish",False,False,TN,8
+10,Vigna radiata,"mung bean, bean sprouts",False,False,TN,8
+10,Meleagris gallopavo,turkey,False,False,TN,8
+10,Cynara,artichoke,False,False,TN,8
+10,Pyrus,asian pear,False,False,TN,8
+10,Anas platyrhynchos,duck,False,False,TN,8
+10,Ficus carica,fig,False,False,TN,8
+10,Actinidia,kiwi,False,True,FP,8
+10,Brassica juncea et al.,mustard,False,True,FP,8
+10,Carya,pecan,False,False,TN,8
+10,Pinus,pine nut,False,False,TN,8
+10,Juglans regia,walnut,False,False,TN,8
+10,Vigna,"urad dal, black-eyed pea",True,False,FN,8
+10,Manihot,cassava,False,False,TN,8
+10,Psidium guajava,guava,False,False,TN,8
+10,Citrus reticulata,mandarin,False,False,TN,8
+10,Abelmoschus esculentus,okra,False,False,TN,8
+10,Chenopodium,quinoa,False,False,TN,8
+10,Asparagus,asparagus,False,False,TN,8
+10,Beta vulgaris,beet,True,False,FN,8
+10,Fagopyrum esculentum,buckwheat,False,False,TN,8
+10,Capparis spinosa,caper,False,False,TN,8
+10,Gadus,cod,False,False,TN,8
+10,Capra hircus,goat cheese,False,False,TN,8
+10,Seriola,hamachi,False,False,TN,8
+10,Nelumbo,lotus root,False,False,TN,8
+10,Macadamia integrifolia,macadamia,False,False,TN,8
+10,Passiflora,passionfruit,False,False,TN,8
+10,Vigna angularis,red bean,False,False,TN,8
+10,Sebastes,rockfish,False,False,TN,8
+10,Anguilla,unagi,False,False,TN,8
+10,Zizania,wild rice,False,False,TN,8
+12,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,5
+12,Triticum aestivum,wheat,True,False,FN,5
+12,Oryza sativa,"rice, glutinous rice",True,True,TP,5
+12,Solanum,"tomato, potato, eggplant",True,False,FN,5
+12,Gallus gallus,chicken,True,False,FN,5
+12,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,5
+12,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",False,False,TN,5
+12,Sus scrofa,pork,True,False,FN,5
+12,Theobroma,cacao,True,False,FN,5
+12,Allium cepa,onion,False,False,TN,5
+12,Lactuca sativa,lettuce,False,False,TN,5
+12,Daucus carota,carrot,False,False,TN,5
+12,Avena,"oat, granola",False,False,TN,5
+12,Capsicum,"chili pepper, bell pepper",False,True,FP,5
+12,Arachis hypogaea,peanut,False,False,TN,5
+12,Citrus,"lemon, orange, grapefruit, lime",True,True,TP,5
+12,Vaccinium,"blueberry, cranberry",True,False,FN,5
+12,Allium sativum,garlic,True,True,TP,5
+12,Persea americana,avocado,True,False,FN,5
+12,Phaseolus,"green bean, black bean",False,False,TN,5
+12,Musa,"banana, plantain",True,False,FN,5
+12,Mangifera indica,mango,True,True,TP,5
+12,Prunus,"peach, almond, plum, cherry",True,True,TP,5
+12,Brassica rapa et al.,kimchi,True,True,TP,5
+12,Allium,"scallion, leek",False,True,FP,5
+12,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,False,FN,5
+12,Spinacia,spinach,False,False,TN,5
+12,Salmo salar,salmon,False,False,TN,5
+12,Ovis aries,lamb,False,False,TN,5
+12,Sesamum,sesame,False,False,TN,5
+12,Rubus,"raspberry, blackberry",False,False,TN,5
+12,Apium graveolens,celery,False,False,TN,5
+12,Cicer arietinum,chickpea,False,True,FP,5
+12,Lens culinaris,lentil,False,False,TN,5
+12,Pisum,pea,False,False,TN,5
+12,Thunnus,tuna,False,False,TN,5
+12,Dioscorea,yam,False,False,TN,5
+12,Pistacia vera,pistachio,False,False,TN,5
+12,Anacardium occidentale,cashew,False,False,TN,5
+12,Ovis aries et al.,feta,False,False,TN,5
+12,Ipomoea,sweet potato,False,False,TN,5
+12,Vitis,"grape, raisin",False,False,TN,5
+12,Ocimum basilicum,basil,False,False,TN,5
+12,Salvia hispanica,chia,False,False,TN,5
+12,Ananas comosus,pineapple,True,False,FN,5
+12,Raphanus,"daikon, radish",False,False,TN,5
+12,Vigna radiata,"mung bean, bean sprouts",False,True,FP,5
+12,Meleagris gallopavo,turkey,True,False,FN,5
+12,Cynara,artichoke,False,False,TN,5
+12,Pyrus,asian pear,False,False,TN,5
+12,Anas platyrhynchos,duck,False,False,TN,5
+12,Ficus carica,fig,False,False,TN,5
+12,Actinidia,kiwi,False,False,TN,5
+12,Brassica juncea et al.,mustard,False,False,TN,5
+12,Carya,pecan,False,False,TN,5
+12,Pinus,pine nut,False,False,TN,5
+12,Juglans regia,walnut,False,False,TN,5
+12,Vigna,"urad dal, black-eyed pea",False,True,FP,5
+12,Manihot,cassava,False,False,TN,5
+12,Psidium guajava,guava,False,False,TN,5
+12,Citrus reticulata,mandarin,False,True,FP,5
+12,Abelmoschus esculentus,okra,False,False,TN,5
+12,Chenopodium,quinoa,False,False,TN,5
+12,Asparagus,asparagus,False,False,TN,5
+12,Beta vulgaris,beet,False,True,FP,5
+12,Fagopyrum esculentum,buckwheat,False,False,TN,5
+12,Capparis spinosa,caper,False,False,TN,5
+12,Gadus,cod,False,False,TN,5
+12,Capra hircus,goat cheese,False,False,TN,5
+12,Seriola,hamachi,False,False,TN,5
+12,Nelumbo,lotus root,False,False,TN,5
+12,Macadamia integrifolia,macadamia,False,False,TN,5
+12,Passiflora,passionfruit,False,False,TN,5
+12,Vigna angularis,red bean,False,True,FP,5
+12,Sebastes,rockfish,False,False,TN,5
+12,Anguilla,unagi,False,False,TN,5
+12,Zizania,wild rice,False,False,TN,5
+13,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,6
+13,Triticum aestivum,wheat,True,False,FN,6
+13,Oryza sativa,"rice, glutinous rice",True,False,FN,6
+13,Solanum,"tomato, potato, eggplant",True,False,FN,6
+13,Gallus gallus,chicken,True,False,FN,6
+13,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,6
+13,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,False,FN,6
+13,Sus scrofa,pork,True,False,FN,6
+13,Theobroma,cacao,True,False,FN,6
+13,Allium cepa,onion,True,False,FN,6
+13,Lactuca sativa,lettuce,True,True,TP,6
+13,Daucus carota,carrot,True,True,TP,6
+13,Avena,"oat, granola",True,False,FN,6
+13,Capsicum,"chili pepper, bell pepper",True,False,FN,6
+13,Arachis hypogaea,peanut,True,True,TP,6
+13,Citrus,"lemon, orange, grapefruit, lime",True,True,TP,6
+13,Vaccinium,"blueberry, cranberry",False,False,TN,6
+13,Allium sativum,garlic,False,False,TN,6
+13,Persea americana,avocado,True,True,TP,6
+13,Phaseolus,"green bean, black bean",True,False,FN,6
+13,Musa,"banana, plantain",False,False,TN,6
+13,Mangifera indica,mango,False,True,FP,6
+13,Prunus,"peach, almond, plum, cherry",False,False,TN,6
+13,Brassica rapa et al.,kimchi,False,False,TN,6
+13,Allium,"scallion, leek",True,False,FN,6
+13,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,6
+13,Spinacia,spinach,False,False,TN,6
+13,Salmo salar,salmon,True,False,FN,6
+13,Ovis aries,lamb,True,False,FN,6
+13,Sesamum,sesame,True,False,FN,6
+13,Rubus,"raspberry, blackberry",False,False,TN,6
+13,Apium graveolens,celery,False,False,TN,6
+13,Cicer arietinum,chickpea,False,False,TN,6
+13,Lens culinaris,lentil,False,False,TN,6
+13,Pisum,pea,True,True,TP,6
+13,Thunnus,tuna,True,False,FN,6
+13,Dioscorea,yam,False,False,TN,6
+13,Pistacia vera,pistachio,True,False,FN,6
+13,Anacardium occidentale,cashew,False,True,FP,6
+13,Ovis aries et al.,feta,True,False,FN,6
+13,Ipomoea,sweet potato,False,False,TN,6
+13,Vitis,"grape, raisin",True,False,FN,6
+13,Ocimum basilicum,basil,True,False,FN,6
+13,Salvia hispanica,chia,True,False,FN,6
+13,Ananas comosus,pineapple,False,False,TN,6
+13,Raphanus,"daikon, radish",False,False,TN,6
+13,Vigna radiata,"mung bean, bean sprouts",False,False,TN,6
+13,Meleagris gallopavo,turkey,False,False,TN,6
+13,Cynara,artichoke,True,False,FN,6
+13,Pyrus,asian pear,False,True,FP,6
+13,Anas platyrhynchos,duck,False,False,TN,6
+13,Ficus carica,fig,False,False,TN,6
+13,Actinidia,kiwi,False,False,TN,6
+13,Brassica juncea et al.,mustard,False,True,FP,6
+13,Carya,pecan,False,True,FP,6
+13,Pinus,pine nut,False,False,TN,6
+13,Juglans regia,walnut,False,True,FP,6
+13,Vigna,"urad dal, black-eyed pea",False,False,TN,6
+13,Manihot,cassava,True,False,FN,6
+13,Psidium guajava,guava,False,False,TN,6
+13,Citrus reticulata,mandarin,False,True,FP,6
+13,Abelmoschus esculentus,okra,False,False,TN,6
+13,Chenopodium,quinoa,False,False,TN,6
+13,Asparagus,asparagus,True,False,FN,6
+13,Beta vulgaris,beet,False,False,TN,6
+13,Fagopyrum esculentum,buckwheat,False,False,TN,6
+13,Capparis spinosa,caper,False,False,TN,6
+13,Gadus,cod,False,False,TN,6
+13,Capra hircus,goat cheese,False,False,TN,6
+13,Seriola,hamachi,False,False,TN,6
+13,Nelumbo,lotus root,False,False,TN,6
+13,Macadamia integrifolia,macadamia,False,False,TN,6
+13,Passiflora,passionfruit,False,False,TN,6
+13,Vigna angularis,red bean,False,False,TN,6
+13,Sebastes,rockfish,False,False,TN,6
+13,Anguilla,unagi,False,False,TN,6
+13,Zizania,wild rice,False,False,TN,6
+14,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,7
+14,Triticum aestivum,wheat,True,True,TP,7
+14,Oryza sativa,"rice, glutinous rice",True,False,FN,7
+14,Solanum,"tomato, potato, eggplant",True,False,FN,7
+14,Gallus gallus,chicken,True,True,TP,7
+14,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,7
+14,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,False,FN,7
+14,Sus scrofa,pork,True,False,FN,7
+14,Theobroma,cacao,True,False,FN,7
+14,Allium cepa,onion,True,True,TP,7
+14,Lactuca sativa,lettuce,True,True,TP,7
+14,Daucus carota,carrot,True,False,FN,7
+14,Avena,"oat, granola",True,False,FN,7
+14,Capsicum,"chili pepper, bell pepper",True,False,FN,7
+14,Arachis hypogaea,peanut,True,False,FN,7
+14,Citrus,"lemon, orange, grapefruit, lime",False,True,FP,7
+14,Vaccinium,"blueberry, cranberry",True,True,TP,7
+14,Allium sativum,garlic,True,True,TP,7
+14,Persea americana,avocado,False,True,FP,7
+14,Phaseolus,"green bean, black bean",True,False,FN,7
+14,Musa,"banana, plantain",False,False,TN,7
+14,Mangifera indica,mango,False,True,FP,7
+14,Prunus,"peach, almond, plum, cherry",False,True,FP,7
+14,Brassica rapa et al.,kimchi,False,True,FP,7
+14,Allium,"scallion, leek",True,True,TP,7
+14,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,False,FN,7
+14,Spinacia,spinach,False,False,TN,7
+14,Salmo salar,salmon,False,False,TN,7
+14,Ovis aries,lamb,False,False,TN,7
+14,Sesamum,sesame,False,False,TN,7
+14,Rubus,"raspberry, blackberry",False,False,TN,7
+14,Apium graveolens,celery,False,False,TN,7
+14,Cicer arietinum,chickpea,False,False,TN,7
+14,Lens culinaris,lentil,False,False,TN,7
+14,Pisum,pea,False,True,FP,7
+14,Thunnus,tuna,False,False,TN,7
+14,Dioscorea,yam,True,False,FN,7
+14,Pistacia vera,pistachio,False,False,TN,7
+14,Anacardium occidentale,cashew,False,False,TN,7
+14,Ovis aries et al.,feta,False,False,TN,7
+14,Ipomoea,sweet potato,True,False,FN,7
+14,Vitis,"grape, raisin",False,False,TN,7
+14,Ocimum basilicum,basil,False,True,FP,7
+14,Salvia hispanica,chia,False,False,TN,7
+14,Ananas comosus,pineapple,False,False,TN,7
+14,Raphanus,"daikon, radish",False,False,TN,7
+14,Vigna radiata,"mung bean, bean sprouts",False,False,TN,7
+14,Meleagris gallopavo,turkey,True,False,FN,7
+14,Cynara,artichoke,False,False,TN,7
+14,Pyrus,asian pear,False,True,FP,7
+14,Anas platyrhynchos,duck,False,False,TN,7
+14,Ficus carica,fig,False,True,FP,7
+14,Actinidia,kiwi,False,False,TN,7
+14,Brassica juncea et al.,mustard,False,True,FP,7
+14,Carya,pecan,False,False,TN,7
+14,Pinus,pine nut,False,False,TN,7
+14,Juglans regia,walnut,False,False,TN,7
+14,Vigna,"urad dal, black-eyed pea",False,False,TN,7
+14,Manihot,cassava,False,False,TN,7
+14,Psidium guajava,guava,False,False,TN,7
+14,Citrus reticulata,mandarin,True,True,TP,7
+14,Abelmoschus esculentus,okra,False,False,TN,7
+14,Chenopodium,quinoa,False,False,TN,7
+14,Asparagus,asparagus,False,False,TN,7
+14,Beta vulgaris,beet,False,False,TN,7
+14,Fagopyrum esculentum,buckwheat,False,True,FP,7
+14,Capparis spinosa,caper,False,False,TN,7
+14,Gadus,cod,False,False,TN,7
+14,Capra hircus,goat cheese,False,False,TN,7
+14,Seriola,hamachi,False,False,TN,7
+14,Nelumbo,lotus root,False,False,TN,7
+14,Macadamia integrifolia,macadamia,False,False,TN,7
+14,Passiflora,passionfruit,False,False,TN,7
+14,Vigna angularis,red bean,False,False,TN,7
+14,Sebastes,rockfish,False,False,TN,7
+14,Anguilla,unagi,False,False,TN,7
+14,Zizania,wild rice,False,False,TN,7
+15,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,7
+15,Triticum aestivum,wheat,True,True,TP,7
+15,Oryza sativa,"rice, glutinous rice",True,True,TP,7
+15,Solanum,"tomato, potato, eggplant",True,True,TP,7
+15,Gallus gallus,chicken,True,True,TP,7
+15,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",False,True,FP,7
+15,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,7
+15,Sus scrofa,pork,True,False,FN,7
+15,Theobroma,cacao,False,True,FP,7
+15,Allium cepa,onion,True,False,FN,7
+15,Lactuca sativa,lettuce,True,False,FN,7
+15,Daucus carota,carrot,False,False,TN,7
+15,Avena,"oat, granola",True,False,FN,7
+15,Capsicum,"chili pepper, bell pepper",False,True,FP,7
+15,Arachis hypogaea,peanut,False,True,FP,7
+15,Citrus,"lemon, orange, grapefruit, lime",False,True,FP,7
+15,Vaccinium,"blueberry, cranberry",False,False,TN,7
+15,Allium sativum,garlic,False,True,FP,7
+15,Persea americana,avocado,False,True,FP,7
+15,Phaseolus,"green bean, black bean",False,False,TN,7
+15,Musa,"banana, plantain",False,True,FP,7
+15,Mangifera indica,mango,False,True,FP,7
+15,Prunus,"peach, almond, plum, cherry",False,True,FP,7
+15,Brassica rapa et al.,kimchi,False,True,FP,7
+15,Allium,"scallion, leek",False,True,FP,7
+15,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,7
+15,Spinacia,spinach,False,False,TN,7
+15,Salmo salar,salmon,False,False,TN,7
+15,Ovis aries,lamb,True,False,FN,7
+15,Sesamum,sesame,False,True,FP,7
+15,Rubus,"raspberry, blackberry",False,True,FP,7
+15,Apium graveolens,celery,False,False,TN,7
+15,Cicer arietinum,chickpea,True,False,FN,7
+15,Lens culinaris,lentil,True,False,FN,7
+15,Pisum,pea,False,True,FP,7
+15,Thunnus,tuna,False,False,TN,7
+15,Dioscorea,yam,False,False,TN,7
+15,Pistacia vera,pistachio,False,False,TN,7
+15,Anacardium occidentale,cashew,False,False,TN,7
+15,Ovis aries et al.,feta,False,False,TN,7
+15,Ipomoea,sweet potato,False,False,TN,7
+15,Vitis,"grape, raisin",False,False,TN,7
+15,Ocimum basilicum,basil,False,False,TN,7
+15,Salvia hispanica,chia,False,False,TN,7
+15,Ananas comosus,pineapple,False,False,TN,7
+15,Raphanus,"daikon, radish",False,False,TN,7
+15,Vigna radiata,"mung bean, bean sprouts",False,False,TN,7
+15,Meleagris gallopavo,turkey,False,False,TN,7
+15,Cynara,artichoke,False,False,TN,7
+15,Pyrus,asian pear,False,False,TN,7
+15,Anas platyrhynchos,duck,False,False,TN,7
+15,Ficus carica,fig,False,False,TN,7
+15,Actinidia,kiwi,False,False,TN,7
+15,Brassica juncea et al.,mustard,False,True,FP,7
+15,Carya,pecan,False,False,TN,7
+15,Pinus,pine nut,False,False,TN,7
+15,Juglans regia,walnut,False,False,TN,7
+15,Vigna,"urad dal, black-eyed pea",True,False,FN,7
+15,Manihot,cassava,False,False,TN,7
+15,Psidium guajava,guava,False,False,TN,7
+15,Citrus reticulata,mandarin,False,True,FP,7
+15,Abelmoschus esculentus,okra,False,False,TN,7
+15,Chenopodium,quinoa,False,False,TN,7
+15,Asparagus,asparagus,False,False,TN,7
+15,Beta vulgaris,beet,False,False,TN,7
+15,Fagopyrum esculentum,buckwheat,False,False,TN,7
+15,Capparis spinosa,caper,False,False,TN,7
+15,Gadus,cod,False,False,TN,7
+15,Capra hircus,goat cheese,False,False,TN,7
+15,Seriola,hamachi,False,False,TN,7
+15,Nelumbo,lotus root,False,False,TN,7
+15,Macadamia integrifolia,macadamia,False,False,TN,7
+15,Passiflora,passionfruit,False,False,TN,7
+15,Vigna angularis,red bean,False,False,TN,7
+15,Sebastes,rockfish,False,False,TN,7
+15,Anguilla,unagi,False,False,TN,7
+15,Zizania,wild rice,False,False,TN,7
+16,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,6
+16,Triticum aestivum,wheat,True,True,TP,6
+16,Oryza sativa,"rice, glutinous rice",True,False,FN,6
+16,Solanum,"tomato, potato, eggplant",True,True,TP,6
+16,Gallus gallus,chicken,True,True,TP,6
+16,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,6
+16,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,6
+16,Sus scrofa,pork,True,False,FN,6
+16,Theobroma,cacao,False,True,FP,6
+16,Allium cepa,onion,False,False,TN,6
+16,Lactuca sativa,lettuce,True,False,FN,6
+16,Daucus carota,carrot,True,False,FN,6
+16,Avena,"oat, granola",True,True,TP,6
+16,Capsicum,"chili pepper, bell pepper",False,True,FP,6
+16,Arachis hypogaea,peanut,False,True,FP,6
+16,Citrus,"lemon, orange, grapefruit, lime",True,True,TP,6
+16,Vaccinium,"blueberry, cranberry",True,False,FN,6
+16,Allium sativum,garlic,False,True,FP,6
+16,Persea americana,avocado,False,False,TN,6
+16,Phaseolus,"green bean, black bean",True,False,FN,6
+16,Musa,"banana, plantain",True,False,FN,6
+16,Mangifera indica,mango,False,False,TN,6
+16,Prunus,"peach, almond, plum, cherry",True,True,TP,6
+16,Brassica rapa et al.,kimchi,True,True,TP,6
+16,Allium,"scallion, leek",False,True,FP,6
+16,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,False,FN,6
+16,Spinacia,spinach,False,True,FP,6
+16,Salmo salar,salmon,True,False,FN,6
+16,Ovis aries,lamb,False,False,TN,6
+16,Sesamum,sesame,False,False,TN,6
+16,Rubus,"raspberry, blackberry",False,False,TN,6
+16,Apium graveolens,celery,False,False,TN,6
+16,Cicer arietinum,chickpea,True,False,FN,6
+16,Lens culinaris,lentil,False,False,TN,6
+16,Pisum,pea,True,False,FN,6
+16,Thunnus,tuna,False,False,TN,6
+16,Dioscorea,yam,False,False,TN,6
+16,Pistacia vera,pistachio,True,False,FN,6
+16,Anacardium occidentale,cashew,False,False,TN,6
+16,Ovis aries et al.,feta,False,False,TN,6
+16,Ipomoea,sweet potato,False,False,TN,6
+16,Vitis,"grape, raisin",False,False,TN,6
+16,Ocimum basilicum,basil,False,False,TN,6
+16,Salvia hispanica,chia,False,False,TN,6
+16,Ananas comosus,pineapple,False,False,TN,6
+16,Raphanus,"daikon, radish",False,False,TN,6
+16,Vigna radiata,"mung bean, bean sprouts",False,False,TN,6
+16,Meleagris gallopavo,turkey,False,False,TN,6
+16,Cynara,artichoke,False,False,TN,6
+16,Pyrus,asian pear,False,False,TN,6
+16,Anas platyrhynchos,duck,True,False,FN,6
+16,Ficus carica,fig,False,False,TN,6
+16,Actinidia,kiwi,True,False,FN,6
+16,Brassica juncea et al.,mustard,False,True,FP,6
+16,Carya,pecan,False,False,TN,6
+16,Pinus,pine nut,False,False,TN,6
+16,Juglans regia,walnut,False,False,TN,6
+16,Vigna,"urad dal, black-eyed pea",False,False,TN,6
+16,Manihot,cassava,True,False,FN,6
+16,Psidium guajava,guava,True,False,FN,6
+16,Citrus reticulata,mandarin,False,True,FP,6
+16,Abelmoschus esculentus,okra,False,False,TN,6
+16,Chenopodium,quinoa,False,False,TN,6
+16,Asparagus,asparagus,False,False,TN,6
+16,Beta vulgaris,beet,False,False,TN,6
+16,Fagopyrum esculentum,buckwheat,False,False,TN,6
+16,Capparis spinosa,caper,False,False,TN,6
+16,Gadus,cod,False,False,TN,6
+16,Capra hircus,goat cheese,False,False,TN,6
+16,Seriola,hamachi,False,False,TN,6
+16,Nelumbo,lotus root,False,False,TN,6
+16,Macadamia integrifolia,macadamia,False,False,TN,6
+16,Passiflora,passionfruit,False,False,TN,6
+16,Vigna angularis,red bean,False,False,TN,6
+16,Sebastes,rockfish,False,False,TN,6
+16,Anguilla,unagi,False,False,TN,6
+16,Zizania,wild rice,False,False,TN,6
+17,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,7
+17,Triticum aestivum,wheat,True,True,TP,7
+17,Oryza sativa,"rice, glutinous rice",True,False,FN,7
+17,Solanum,"tomato, potato, eggplant",True,True,TP,7
+17,Gallus gallus,chicken,True,True,TP,7
+17,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,7
+17,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,7
+17,Sus scrofa,pork,True,False,FN,7
+17,Theobroma,cacao,True,False,FN,7
+17,Allium cepa,onion,False,False,TN,7
+17,Lactuca sativa,lettuce,False,True,FP,7
+17,Daucus carota,carrot,False,True,FP,7
+17,Avena,"oat, granola",True,False,FN,7
+17,Capsicum,"chili pepper, bell pepper",False,False,TN,7
+17,Arachis hypogaea,peanut,True,False,FN,7
+17,Citrus,"lemon, orange, grapefruit, lime",False,False,TN,7
+17,Vaccinium,"blueberry, cranberry",False,True,FP,7
+17,Allium sativum,garlic,False,False,TN,7
+17,Persea americana,avocado,False,False,TN,7
+17,Phaseolus,"green bean, black bean",False,True,FP,7
+17,Musa,"banana, plantain",False,True,FP,7
+17,Mangifera indica,mango,True,False,FN,7
+17,Prunus,"peach, almond, plum, cherry",False,False,TN,7
+17,Brassica rapa et al.,kimchi,False,True,FP,7
+17,Allium,"scallion, leek",True,True,TP,7
+17,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,False,FN,7
+17,Spinacia,spinach,False,False,TN,7
+17,Salmo salar,salmon,True,False,FN,7
+17,Ovis aries,lamb,True,False,FN,7
+17,Sesamum,sesame,False,False,TN,7
+17,Rubus,"raspberry, blackberry",False,False,TN,7
+17,Apium graveolens,celery,True,False,FN,7
+17,Cicer arietinum,chickpea,False,False,TN,7
+17,Lens culinaris,lentil,False,True,FP,7
+17,Pisum,pea,False,True,FP,7
+17,Thunnus,tuna,False,False,TN,7
+17,Dioscorea,yam,False,False,TN,7
+17,Pistacia vera,pistachio,False,False,TN,7
+17,Anacardium occidentale,cashew,False,True,FP,7
+17,Ovis aries et al.,feta,False,False,TN,7
+17,Ipomoea,sweet potato,False,False,TN,7
+17,Vitis,"grape, raisin",False,False,TN,7
+17,Ocimum basilicum,basil,False,False,TN,7
+17,Salvia hispanica,chia,False,False,TN,7
+17,Ananas comosus,pineapple,False,False,TN,7
+17,Raphanus,"daikon, radish",False,False,TN,7
+17,Vigna radiata,"mung bean, bean sprouts",False,True,FP,7
+17,Meleagris gallopavo,turkey,False,False,TN,7
+17,Cynara,artichoke,False,False,TN,7
+17,Pyrus,asian pear,False,False,TN,7
+17,Anas platyrhynchos,duck,False,False,TN,7
+17,Ficus carica,fig,False,False,TN,7
+17,Actinidia,kiwi,False,False,TN,7
+17,Brassica juncea et al.,mustard,False,False,TN,7
+17,Carya,pecan,False,False,TN,7
+17,Pinus,pine nut,False,False,TN,7
+17,Juglans regia,walnut,False,False,TN,7
+17,Vigna,"urad dal, black-eyed pea",False,True,FP,7
+17,Manihot,cassava,False,False,TN,7
+17,Psidium guajava,guava,False,False,TN,7
+17,Citrus reticulata,mandarin,False,False,TN,7
+17,Abelmoschus esculentus,okra,False,False,TN,7
+17,Chenopodium,quinoa,False,False,TN,7
+17,Asparagus,asparagus,False,False,TN,7
+17,Beta vulgaris,beet,False,False,TN,7
+17,Fagopyrum esculentum,buckwheat,False,False,TN,7
+17,Capparis spinosa,caper,False,False,TN,7
+17,Gadus,cod,False,False,TN,7
+17,Capra hircus,goat cheese,False,False,TN,7
+17,Seriola,hamachi,True,False,FN,7
+17,Nelumbo,lotus root,False,False,TN,7
+17,Macadamia integrifolia,macadamia,False,False,TN,7
+17,Passiflora,passionfruit,False,False,TN,7
+17,Vigna angularis,red bean,False,True,FP,7
+17,Sebastes,rockfish,False,False,TN,7
+17,Anguilla,unagi,False,False,TN,7
+17,Zizania,wild rice,False,False,TN,7
+18,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,True,TP,7
+18,Triticum aestivum,wheat,True,True,TP,7
+18,Oryza sativa,"rice, glutinous rice",True,False,FN,7
+18,Solanum,"tomato, potato, eggplant",True,True,TP,7
+18,Gallus gallus,chicken,True,True,TP,7
+18,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,7
+18,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,False,FN,7
+18,Sus scrofa,pork,True,False,FN,7
+18,Theobroma,cacao,True,False,FN,7
+18,Allium cepa,onion,True,True,TP,7
+18,Lactuca sativa,lettuce,True,True,TP,7
+18,Daucus carota,carrot,True,True,TP,7
+18,Avena,"oat, granola",True,False,FN,7
+18,Capsicum,"chili pepper, bell pepper",False,True,FP,7
+18,Arachis hypogaea,peanut,False,False,TN,7
+18,Citrus,"lemon, orange, grapefruit, lime",False,False,TN,7
+18,Vaccinium,"blueberry, cranberry",False,False,TN,7
+18,Allium sativum,garlic,True,True,TP,7
+18,Persea americana,avocado,True,False,FN,7
+18,Phaseolus,"green bean, black bean",False,False,TN,7
+18,Musa,"banana, plantain",False,True,FP,7
+18,Mangifera indica,mango,False,False,TN,7
+18,Prunus,"peach, almond, plum, cherry",False,True,FP,7
+18,Brassica rapa et al.,kimchi,True,True,TP,7
+18,Allium,"scallion, leek",True,True,TP,7
+18,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,False,FN,7
+18,Spinacia,spinach,False,True,FP,7
+18,Salmo salar,salmon,True,False,FN,7
+18,Ovis aries,lamb,False,False,TN,7
+18,Sesamum,sesame,False,False,TN,7
+18,Rubus,"raspberry, blackberry",False,False,TN,7
+18,Apium graveolens,celery,True,False,FN,7
+18,Cicer arietinum,chickpea,False,True,FP,7
+18,Lens culinaris,lentil,False,False,TN,7
+18,Pisum,pea,False,False,TN,7
+18,Thunnus,tuna,False,False,TN,7
+18,Dioscorea,yam,False,False,TN,7
+18,Pistacia vera,pistachio,False,False,TN,7
+18,Anacardium occidentale,cashew,False,False,TN,7
+18,Ovis aries et al.,feta,False,False,TN,7
+18,Ipomoea,sweet potato,False,False,TN,7
+18,Vitis,"grape, raisin",False,False,TN,7
+18,Ocimum basilicum,basil,False,False,TN,7
+18,Salvia hispanica,chia,False,False,TN,7
+18,Ananas comosus,pineapple,False,False,TN,7
+18,Raphanus,"daikon, radish",True,False,FN,7
+18,Vigna radiata,"mung bean, bean sprouts",False,False,TN,7
+18,Meleagris gallopavo,turkey,False,False,TN,7
+18,Cynara,artichoke,False,False,TN,7
+18,Pyrus,asian pear,False,False,TN,7
+18,Anas platyrhynchos,duck,True,False,FN,7
+18,Ficus carica,fig,False,False,TN,7
+18,Actinidia,kiwi,False,False,TN,7
+18,Brassica juncea et al.,mustard,False,True,FP,7
+18,Carya,pecan,False,False,TN,7
+18,Pinus,pine nut,False,True,FP,7
+18,Juglans regia,walnut,False,False,TN,7
+18,Vigna,"urad dal, black-eyed pea",False,False,TN,7
+18,Manihot,cassava,False,False,TN,7
+18,Psidium guajava,guava,False,False,TN,7
+18,Citrus reticulata,mandarin,False,False,TN,7
+18,Abelmoschus esculentus,okra,True,False,FN,7
+18,Chenopodium,quinoa,False,False,TN,7
+18,Asparagus,asparagus,False,False,TN,7
+18,Beta vulgaris,beet,False,False,TN,7
+18,Fagopyrum esculentum,buckwheat,False,False,TN,7
+18,Capparis spinosa,caper,False,False,TN,7
+18,Gadus,cod,False,False,TN,7
+18,Capra hircus,goat cheese,False,False,TN,7
+18,Seriola,hamachi,False,False,TN,7
+18,Nelumbo,lotus root,False,False,TN,7
+18,Macadamia integrifolia,macadamia,False,False,TN,7
+18,Passiflora,passionfruit,False,False,TN,7
+18,Vigna angularis,red bean,False,False,TN,7
+18,Sebastes,rockfish,False,False,TN,7
+18,Anguilla,unagi,False,True,FP,7
+18,Zizania,wild rice,False,False,TN,7
+19,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,8
+19,Triticum aestivum,wheat,True,True,TP,8
+19,Oryza sativa,"rice, glutinous rice",True,True,TP,8
+19,Solanum,"tomato, potato, eggplant",True,True,TP,8
+19,Gallus gallus,chicken,True,True,TP,8
+19,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",False,True,FP,8
+19,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",False,True,FP,8
+19,Sus scrofa,pork,False,False,TN,8
+19,Theobroma,cacao,False,False,TN,8
+19,Allium cepa,onion,True,False,FN,8
+19,Lactuca sativa,lettuce,False,True,FP,8
+19,Daucus carota,carrot,True,True,TP,8
+19,Avena,"oat, granola",True,True,TP,8
+19,Capsicum,"chili pepper, bell pepper",False,True,FP,8
+19,Arachis hypogaea,peanut,True,False,FN,8
+19,Citrus,"lemon, orange, grapefruit, lime",False,False,TN,8
+19,Vaccinium,"blueberry, cranberry",False,False,TN,8
+19,Allium sativum,garlic,False,True,FP,8
+19,Persea americana,avocado,True,False,FN,8
+19,Phaseolus,"green bean, black bean",False,False,TN,8
+19,Musa,"banana, plantain",True,True,TP,8
+19,Mangifera indica,mango,True,True,TP,8
+19,Prunus,"peach, almond, plum, cherry",True,True,TP,8
+19,Brassica rapa et al.,kimchi,False,True,FP,8
+19,Allium,"scallion, leek",False,True,FP,8
+19,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",False,False,TN,8
+19,Spinacia,spinach,False,False,TN,8
+19,Salmo salar,salmon,True,False,FN,8
+19,Ovis aries,lamb,False,False,TN,8
+19,Sesamum,sesame,True,False,FN,8
+19,Rubus,"raspberry, blackberry",False,False,TN,8
+19,Apium graveolens,celery,True,False,FN,8
+19,Cicer arietinum,chickpea,True,False,FN,8
+19,Lens culinaris,lentil,False,False,TN,8
+19,Pisum,pea,False,True,FP,8
+19,Thunnus,tuna,True,False,FN,8
+19,Dioscorea,yam,False,False,TN,8
+19,Pistacia vera,pistachio,False,False,TN,8
+19,Anacardium occidentale,cashew,False,False,TN,8
+19,Ovis aries et al.,feta,False,False,TN,8
+19,Ipomoea,sweet potato,True,False,FN,8
+19,Vitis,"grape, raisin",False,False,TN,8
+19,Ocimum basilicum,basil,False,False,TN,8
+19,Salvia hispanica,chia,True,False,FN,8
+19,Ananas comosus,pineapple,False,False,TN,8
+19,Raphanus,"daikon, radish",False,False,TN,8
+19,Vigna radiata,"mung bean, bean sprouts",False,False,TN,8
+19,Meleagris gallopavo,turkey,False,False,TN,8
+19,Cynara,artichoke,False,False,TN,8
+19,Pyrus,asian pear,False,True,FP,8
+19,Anas platyrhynchos,duck,False,True,FP,8
+19,Ficus carica,fig,True,False,FN,8
+19,Actinidia,kiwi,False,False,TN,8
+19,Brassica juncea et al.,mustard,False,True,FP,8
+19,Carya,pecan,False,False,TN,8
+19,Pinus,pine nut,False,False,TN,8
+19,Juglans regia,walnut,False,False,TN,8
+19,Vigna,"urad dal, black-eyed pea",False,False,TN,8
+19,Manihot,cassava,False,False,TN,8
+19,Psidium guajava,guava,False,False,TN,8
+19,Citrus reticulata,mandarin,False,False,TN,8
+19,Abelmoschus esculentus,okra,False,False,TN,8
+19,Chenopodium,quinoa,True,False,FN,8
+19,Asparagus,asparagus,False,False,TN,8
+19,Beta vulgaris,beet,False,False,TN,8
+19,Fagopyrum esculentum,buckwheat,False,False,TN,8
+19,Capparis spinosa,caper,False,False,TN,8
+19,Gadus,cod,False,False,TN,8
+19,Capra hircus,goat cheese,False,False,TN,8
+19,Seriola,hamachi,False,False,TN,8
+19,Nelumbo,lotus root,False,False,TN,8
+19,Macadamia integrifolia,macadamia,False,False,TN,8
+19,Passiflora,passionfruit,False,False,TN,8
+19,Vigna angularis,red bean,False,False,TN,8
+19,Sebastes,rockfish,False,False,TN,8
+19,Anguilla,unagi,False,False,TN,8
+19,Zizania,wild rice,False,False,TN,8
+20,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,4
+20,Triticum aestivum,wheat,True,True,TP,4
+20,Oryza sativa,"rice, glutinous rice",True,True,TP,4
+20,Solanum,"tomato, potato, eggplant",True,False,FN,4
+20,Gallus gallus,chicken,False,True,FP,4
+20,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,4
+20,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,4
+20,Sus scrofa,pork,False,False,TN,4
+20,Theobroma,cacao,True,False,FN,4
+20,Allium cepa,onion,True,False,FN,4
+20,Lactuca sativa,lettuce,False,False,TN,4
+20,Daucus carota,carrot,False,True,FP,4
+20,Avena,"oat, granola",True,False,FN,4
+20,Capsicum,"chili pepper, bell pepper",False,True,FP,4
+20,Arachis hypogaea,peanut,False,False,TN,4
+20,Citrus,"lemon, orange, grapefruit, lime",False,False,TN,4
+20,Vaccinium,"blueberry, cranberry",True,False,FN,4
+20,Allium sativum,garlic,False,True,FP,4
+20,Persea americana,avocado,False,True,FP,4
+20,Phaseolus,"green bean, black bean",True,False,FN,4
+20,Musa,"banana, plantain",True,False,FN,4
+20,Mangifera indica,mango,True,False,FN,4
+20,Prunus,"peach, almond, plum, cherry",False,False,TN,4
+20,Brassica rapa et al.,kimchi,False,True,FP,4
+20,Allium,"scallion, leek",False,True,FP,4
+20,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,True,TP,4
+20,Spinacia,spinach,True,True,TP,4
+20,Salmo salar,salmon,False,False,TN,4
+20,Ovis aries,lamb,False,False,TN,4
+20,Sesamum,sesame,False,False,TN,4
+20,Rubus,"raspberry, blackberry",True,False,FN,4
+20,Apium graveolens,celery,False,True,FP,4
+20,Cicer arietinum,chickpea,False,False,TN,4
+20,Lens culinaris,lentil,True,False,FN,4
+20,Pisum,pea,False,False,TN,4
+20,Thunnus,tuna,False,False,TN,4
+20,Dioscorea,yam,False,False,TN,4
+20,Pistacia vera,pistachio,True,False,FN,4
+20,Anacardium occidentale,cashew,True,False,FN,4
+20,Ovis aries et al.,feta,True,False,FN,4
+20,Ipomoea,sweet potato,False,False,TN,4
+20,Vitis,"grape, raisin",True,False,FN,4
+20,Ocimum basilicum,basil,False,False,TN,4
+20,Salvia hispanica,chia,True,False,FN,4
+20,Ananas comosus,pineapple,True,False,FN,4
+20,Raphanus,"daikon, radish",False,False,TN,4
+20,Vigna radiata,"mung bean, bean sprouts",False,False,TN,4
+20,Meleagris gallopavo,turkey,False,False,TN,4
+20,Cynara,artichoke,False,False,TN,4
+20,Pyrus,asian pear,True,False,FN,4
+20,Anas platyrhynchos,duck,False,False,TN,4
+20,Ficus carica,fig,True,False,FN,4
+20,Actinidia,kiwi,False,False,TN,4
+20,Brassica juncea et al.,mustard,False,True,FP,4
+20,Carya,pecan,False,False,TN,4
+20,Pinus,pine nut,False,False,TN,4
+20,Juglans regia,walnut,True,False,FN,4
+20,Vigna,"urad dal, black-eyed pea",False,False,TN,4
+20,Manihot,cassava,False,False,TN,4
+20,Psidium guajava,guava,False,False,TN,4
+20,Citrus reticulata,mandarin,False,False,TN,4
+20,Abelmoschus esculentus,okra,False,False,TN,4
+20,Chenopodium,quinoa,False,False,TN,4
+20,Asparagus,asparagus,False,False,TN,4
+20,Beta vulgaris,beet,False,False,TN,4
+20,Fagopyrum esculentum,buckwheat,False,False,TN,4
+20,Capparis spinosa,caper,False,False,TN,4
+20,Gadus,cod,False,False,TN,4
+20,Capra hircus,goat cheese,False,False,TN,4
+20,Seriola,hamachi,False,False,TN,4
+20,Nelumbo,lotus root,False,False,TN,4
+20,Macadamia integrifolia,macadamia,False,False,TN,4
+20,Passiflora,passionfruit,False,False,TN,4
+20,Vigna angularis,red bean,True,False,FN,4
+20,Sebastes,rockfish,False,False,TN,4
+20,Anguilla,unagi,False,False,TN,4
+20,Zizania,wild rice,False,False,TN,4
+21,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",True,False,FN,8
+21,Triticum aestivum,wheat,True,True,TP,8
+21,Oryza sativa,"rice, glutinous rice",True,True,TP,8
+21,Solanum,"tomato, potato, eggplant",True,False,FN,8
+21,Gallus gallus,chicken,True,False,FN,8
+21,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",True,True,TP,8
+21,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",True,True,TP,8
+21,Sus scrofa,pork,True,False,FN,8
+21,Theobroma,cacao,True,True,TP,8
+21,Allium cepa,onion,True,True,TP,8
+21,Lactuca sativa,lettuce,True,True,TP,8
+21,Daucus carota,carrot,True,True,TP,8
+21,Avena,"oat, granola",True,False,FN,8
+21,Capsicum,"chili pepper, bell pepper",True,True,TP,8
+21,Arachis hypogaea,peanut,False,False,TN,8
+21,Citrus,"lemon, orange, grapefruit, lime",True,False,FN,8
+21,Vaccinium,"blueberry, cranberry",True,False,FN,8
+21,Allium sativum,garlic,True,False,FN,8
+21,Persea americana,avocado,True,True,TP,8
+21,Phaseolus,"green bean, black bean",True,False,FN,8
+21,Musa,"banana, plantain",True,False,FN,8
+21,Mangifera indica,mango,False,True,FP,8
+21,Prunus,"peach, almond, plum, cherry",False,True,FP,8
+21,Brassica rapa et al.,kimchi,True,True,TP,8
+21,Allium,"scallion, leek",True,True,TP,8
+21,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",True,True,TP,8
+21,Spinacia,spinach,False,True,FP,8
+21,Salmo salar,salmon,False,False,TN,8
+21,Ovis aries,lamb,True,False,FN,8
+21,Sesamum,sesame,True,False,FN,8
+21,Rubus,"raspberry, blackberry",True,True,TP,8
+21,Apium graveolens,celery,False,True,FP,8
+21,Cicer arietinum,chickpea,False,False,TN,8
+21,Lens culinaris,lentil,False,False,TN,8
+21,Pisum,pea,False,False,TN,8
+21,Thunnus,tuna,False,False,TN,8
+21,Dioscorea,yam,False,False,TN,8
+21,Pistacia vera,pistachio,True,False,FN,8
+21,Anacardium occidentale,cashew,False,False,TN,8
+21,Ovis aries et al.,feta,True,False,FN,8
+21,Ipomoea,sweet potato,False,False,TN,8
+21,Vitis,"grape, raisin",False,False,TN,8
+21,Ocimum basilicum,basil,True,False,FN,8
+21,Salvia hispanica,chia,False,False,TN,8
+21,Ananas comosus,pineapple,False,False,TN,8
+21,Raphanus,"daikon, radish",True,False,FN,8
+21,Vigna radiata,"mung bean, bean sprouts",False,False,TN,8
+21,Meleagris gallopavo,turkey,False,False,TN,8
+21,Cynara,artichoke,True,False,FN,8
+21,Pyrus,asian pear,False,False,TN,8
+21,Anas platyrhynchos,duck,False,False,TN,8
+21,Ficus carica,fig,False,False,TN,8
+21,Actinidia,kiwi,False,False,TN,8
+21,Brassica juncea et al.,mustard,False,True,FP,8
+21,Carya,pecan,False,False,TN,8
+21,Pinus,pine nut,True,False,FN,8
+21,Juglans regia,walnut,False,False,TN,8
+21,Vigna,"urad dal, black-eyed pea",False,False,TN,8
+21,Manihot,cassava,False,False,TN,8
+21,Psidium guajava,guava,False,False,TN,8
+21,Citrus reticulata,mandarin,False,False,TN,8
+21,Abelmoschus esculentus,okra,False,False,TN,8
+21,Chenopodium,quinoa,False,False,TN,8
+21,Asparagus,asparagus,False,False,TN,8
+21,Beta vulgaris,beet,False,False,TN,8
+21,Fagopyrum esculentum,buckwheat,False,False,TN,8
+21,Capparis spinosa,caper,False,False,TN,8
+21,Gadus,cod,False,False,TN,8
+21,Capra hircus,goat cheese,False,False,TN,8
+21,Seriola,hamachi,False,False,TN,8
+21,Nelumbo,lotus root,False,False,TN,8
+21,Macadamia integrifolia,macadamia,False,False,TN,8
+21,Passiflora,passionfruit,True,False,FN,8
+21,Vigna angularis,red bean,False,False,TN,8
+21,Sebastes,rockfish,False,False,TN,8
+21,Anguilla,unagi,False,False,TN,8
+21,Zizania,wild rice,False,False,TN,8

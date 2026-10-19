@@ -1,0 +1,74 @@
+{
+  "sample_sheet": {
+    "path": "/Users/lisa/Documents/GitHub/gen2_capScan_sanitized00/data/work-in-progress-meta/LONGITWeeklong-samplesheet-FINAL.xlsx",
+    "sha256": "8da2c38411675ea165e96fa06b3cf2c64a93dae42103f8c591ab13fedd9b6629",
+    "size": 55527957,
+    "modified": "2026-10-17T11:12:25"
+  },
+  "daily_diet_coding": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/daily_diet_coding.xlsx",
+    "sha256": "bc1c8859c84a1c29fcab93c0c0d2754f0a1808ec208f51d5cd0756e05abed299",
+    "size": 203360,
+    "modified": "2026-10-18T20:53:23"
+  },
+  "16S_sample_info": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/Weeklong-sample-info.xlsx",
+    "sha256": "78b615ce979e1ba73fbf4d260dceb3fb137bed6ff499335216bfe71a47daa3fa",
+    "size": 187503,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "food_sample_info": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/Weeklong-meat-plants-sample-info.xlsx",
+    "sha256": "bd5a1af6b84907228245c4bf49599eadd9e840094bc7ccf351b66a8345ad95fd",
+    "size": 660551,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "family_colors": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/Family_colors.xlsx",
+    "sha256": "60854cb0279d00fecc948b599593fd1d4cad79028a80326ed6554f07b80f73d2",
+    "size": 53653,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "16S_feature_data": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/DADA2-weeklong/feature_data.txt",
+    "sha256": "cb78f5affcddb0e6b1b7d5c2bd4333810cb96e7dfeb547a41d93c8e0497ef284",
+    "size": 3353028,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "plants_feature_data": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/DADA2-weeklong-plants/feature_data.txt",
+    "sha256": "c1bd9463b13f56bf9ce58ce76f544585795d4ddf8874ffa1fbb7b624170d5bb5",
+    "size": 572472,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "meat_feature_data": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/DADA2-weeklong-meat/feature_data.txt",
+    "sha256": "fd30e39fcb7b9c27017027fe91864401ff8dac2000881474de385996d7e1e129",
+    "size": 448089,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "genus_family_gbif": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/genus_family_gbif.csv",
+    "sha256": "75d7818fa0c7169a92bb7482cbc0fff81d17bc88c479e5c7879a799b900c7064",
+    "size": 2444,
+    "modified": "2026-10-16T18:12:20"
+  },
+  "16S_seqtab_all": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/DADA2-weeklong/seqtab_all.rds",
+    "sha256": "0739be4a5e03683caf3e4cdd75454e46bb259965db3feaaf09507ae958bacad7",
+    "size": 681729,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "plants_seqtab_all": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/DADA2-weeklong-plants/seqtab_all.rds",
+    "sha256": "61f577363d5d0701b59e8c2945f01b712e6310018c47997ce2dde36080bcbc66",
+    "size": 143371,
+    "modified": "2026-10-09T14:07:24"
+  },
+  "meat_seqtab_all": {
+    "path": "/Users/lisa/Documents/GitHub/gen2-longit/1-data/DADA2-weeklong-meat/seqtab_all.rds",
+    "sha256": "af83d779a0a2abb002c98d792a86f458dbe0365217f058828f410cd3beabaed2",
+    "size": 106804,
+    "modified": "2026-10-09T14:07:24"
+  }
+}

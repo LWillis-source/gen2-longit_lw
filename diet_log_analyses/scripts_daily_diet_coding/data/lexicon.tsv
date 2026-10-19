@@ -1,0 +1,227 @@
+acai	Euterpe oleracea	trnL
+agave	Agave spp.	trnL	refined sweetener: little DNA
+almond	Prunus dulcis	trnL	Prunus may not be separable from other Prunus (cherry, peach, plum)
+almond milk	Prunus dulcis	trnL	processed: little DNA
+amaro	mixed botanicals (unspecified)	none	distilled liqueur: no DNA expected
+anchovy	Engraulis spp.	12SV5	often only a minor Caesar-dressing ingredient
+apple	Malus domestica	trnL	may merge with pear (Rosaceae: Maleae)
+artichoke	Cynara cardunculus var. scolymus	trnL
+arugula	Eruca vesicaria	trnL	Brassicaceae: genus-level likely
+asian pear	Pyrus pyrifolia	trnL	may merge with apple/pear
+asparagus	Asparagus officinalis	trnL
+avocado	Persea americana	trnL	Lauraceae: may merge with bay/cinnamon
+balsamic vinegar	Vitis vinifera	trnL	vinegar: little DNA
+bamboo shoot	Bambusoideae (Phyllostachys spp.)	trnL	Poaceae
+banana	Musa acuminata x balbisiana	trnL
+basil	Ocimum basilicum	trnL	Lamiaceae
+bean sprouts	Vigna radiata	trnL
+beans (unspecified)	Phaseolus vulgaris (assumed)	trnL	species assumed: unspecified beans
+beef	Bos taurus	12SV5
+beer	Hordeum vulgare	trnL	filtered: little DNA
+beet	Beta vulgaris	trnL
+bell pepper	Capsicum annuum	trnL
+bergamot	Citrus bergamia	trnL	Earl Grey flavouring: trace
+berries (mixed)	Rubus / Fragaria / Vaccinium (unspecified)	trnL	unspecified
+black bean	Phaseolus vulgaris	trnL
+black pepper	Piper nigrum	trnL
+black soybean	Glycine max	trnL
+black-eyed pea	Vigna unguiculata	trnL
+blackberry	Rubus spp.	trnL	Rosaceae
+blueberry	Vaccinium spp.	trnL
+bok choy	Brassica rapa subsp. chinensis	trnL	Brassicaceae: may merge with other Brassica
+bourbon	Zea mays	trnL	distilled: no DNA expected
+broccoli	Brassica oleracea var. italica	trnL	may merge with other B. oleracea (cabbage, kale, cauliflower)
+broccoli rabe	Brassica rapa	trnL
+brussels sprouts	Brassica oleracea var. gemmifera	trnL	may merge with other B. oleracea
+buckwheat	Fagopyrum esculentum	trnL
+burdock	Arctium lappa	trnL
+butter	Bos taurus	12SV5	milk fat: low DNA
+butternut squash	Cucurbita moschata	trnL
+cabbage	Brassica oleracea var. capitata	trnL	may merge with other B. oleracea
+cacao	Theobroma cacao	trnL
+caper	Capparis spinosa	trnL
+carrot	Daucus carota subsp. sativus	trnL	Apiaceae: may merge with parsley/celery/cumin
+cashew	Anacardium occidentale	trnL
+cassava	Manihot esculenta	trnL
+cauliflower	Brassica oleracea var. botrytis	trnL	may merge with other B. oleracea
+celery	Apium graveolens	trnL	Apiaceae
+chanterelle	Cantharellus cibarius	none	fungus: not amplified by trnL
+cheese	Bos taurus	12SV5	cow's milk assumed
+cherry	Prunus avium	trnL	Prunus
+chia	Salvia hispanica	trnL	Lamiaceae
+chicken	Gallus gallus	12SV5
+chickpea	Cicer arietinum	trnL
+chili pepper	Capsicum annuum	trnL	species may vary (C. frutescens, C. chinense)
+cinnamon	Cinnamomum spp.	trnL	Lauraceae: may merge with avocado/bay
+cod	Gadus morhua	12SV5
+coffee	Coffea arabica	trnL	roasted/brewed: DNA doubtful
+collagen	Bos taurus	12SV5	hydrolysed: low DNA; source assumed bovine
+corn	Zea mays	trnL
+cow milk	Bos taurus	12SV5
+crab	Brachyura (crabs, unspecified)	none	crustacean: not vertebrate
+cranberry	Vaccinium macrocarpon	trnL
+cream	Bos taurus	12SV5
+cream cheese	Bos taurus	12SV5
+cucumber	Cucumis sativus	trnL
+cumin	Cuminum cyminum	trnL	Apiaceae
+curry spices	Curcuma longa; Coriandrum sativum; Cuminum cyminum	trnL	typical blend: composition varies
+daikon	Raphanus sativus	trnL
+diet soda	none (no food DNA)	none	artificial sweeteners/flavours
+dill	Anethum graveolens	trnL	Apiaceae
+duck	Anas platyrhynchos	12SV5
+edamame	Glycine max	trnL
+egg	Gallus gallus	12SV5	egg DNA low (white/yolk); chicken eggs assumed
+eggplant	Solanum melongena	trnL	Solanaceae
+enoki	Flammulina velutipes	none	fungus: not amplified by trnL
+feta	Ovis aries; Capra hircus	12SV5	sheep/goat; US feta may be cow (Bos taurus)
+fig	Ficus carica	trnL
+fish	Actinopterygii (unspecified fish)	12SV5	species unknown
+fruit (unspecified)	unspecified fruit	trnL	unspecified
+garlic	Allium sativum	trnL	Allium may merge with onion/leek
+gelatin	Bos taurus; Sus scrofa	12SV5	source unknown; low DNA
+ginger	Zingiber officinale	trnL
+gluten-free flour	Oryza sativa; Manihot esculenta; Zea mays	trnL	typical blend: composition varies
+glutinous rice	Oryza sativa	trnL
+goat cheese	Capra hircus	12SV5
+grain cereal	Triticum / Zea / Avena / Oryza (unspecified)	trnL	unspecified grains: Poaceae
+grain-free cereal	unknown	trnL	composition unknown
+granola	Avena sativa	trnL	composition varies
+grape	Vitis vinifera	trnL
+grapefruit	Citrus x paradisi	trnL	Citrus may merge
+green bean	Phaseolus vulgaris	trnL
+guava	Psidium guajava	trnL
+hamachi	Seriola quinqueradiata	12SV5	yellowtail; genus Seriola
+herbal liqueur	mixed botanicals (unspecified)	none	distilled liqueur: no DNA expected
+hoisin sauce	Glycine max; Triticum aestivum	trnL	fermented soy/wheat paste
+honey	Apis mellifera	none	insect product; DNA mostly pollen plants
+huel	Avena sativa; Pisum sativum; Linum usitatissimum; Oryza sativa; Cocos nucifera	trnL	from product label (verify)
+ice cream	Bos taurus	12SV5	plus flavour ingredients
+ikea plant balls	Pisum sativum; Avena sativa; Solanum tuberosum; Allium cepa; Malus domestica	trnL	from product label (verify)
+imitation crab	Gadus chalcogrammus	12SV5	surimi from Alaska pollock; plus wheat/starch
+impossible meat	Glycine max; Cocos nucifera; Helianthus annuus; Solanum tuberosum	trnL	heme from yeast Komagataella phaffii (not amplified)
+jam	unspecified fruit	trnL	unspecified
+kale	Brassica oleracea var. sabellica	trnL	may merge with other B. oleracea
+kimchi	Brassica rapa subsp. pekinensis; Raphanus sativus; Allium sativum; Zingiber officinale; Capsicum annuum; Allium fistulosum	trnL	recipe varies; may include fish sauce
+kiwi	Actinidia deliciosa	trnL
+konjac	Amorphophallus konjac	trnL
+lamb	Ovis aries	12SV5
+leek	Allium ampeloprasum	trnL	Allium
+lemon	Citrus limon	trnL	Citrus may merge
+lentil	Lens culinaris	trnL
+lettuce	Lactuca sativa	trnL
+lime	Citrus x aurantiifolia	trnL	Citrus may merge
+limoncello	Citrus limon	none	distilled: no DNA expected
+lotus root	Nelumbo nucifera	trnL
+luffa	Luffa aegyptiaca	trnL	Cucurbitaceae
+lychee	Litchi chinensis	trnL
+macadamia	Macadamia integrifolia	trnL
+mandarin	Citrus reticulata	trnL	Citrus may merge
+mango	Mangifera indica	trnL
+maple syrup	Acer saccharum	trnL	refined sweetener: little DNA
+melon	Cucumis melo	trnL	Cucurbitaceae
+miso	Glycine max	trnL
+mixed vegetables	unspecified vegetables	trnL	unspecified
+mung bean	Vigna radiata	trnL
+mushroom	Agaricus bisporus	none	fungus (species assumed): not amplified by trnL
+mustard	Brassica juncea; Sinapis alba	trnL	Brassicaceae
+napa cabbage	Brassica rapa subsp. pekinensis	trnL	Brassicaceae
+natto	Glycine max	trnL
+nori	Pyropia yezoensis	none	red alga: probably not amplified by trnL (verify)
+nutritional yeast	Saccharomyces cerevisiae	none	fungus
+nuts (unspecified)	unspecified nuts	trnL	unspecified
+oat	Avena sativa	trnL
+oat milk	Avena sativa	trnL	processed: little DNA
+octopus	Octopus vulgaris	none	mollusc: not vertebrate
+okra	Abelmoschus esculentus	trnL
+olive	Olea europaea	trnL
+olive oil	Olea europaea	trnL	refined/pressed oil: low DNA
+onion	Allium cepa	trnL	Allium
+orange	Citrus x sinensis	trnL	Citrus may merge
+oyster mushroom	Pleurotus ostreatus	none	fungus
+paneer	Bos taurus	12SV5	cow's milk assumed (buffalo possible)
+parsley	Petroselinum crispum	trnL	Apiaceae
+passionfruit	Passiflora edulis	trnL
+pea	Pisum sativum	trnL
+pea protein	Pisum sativum	trnL	isolate: low DNA
+peach	Prunus persica	trnL	Prunus; nectarine = same species
+peanut	Arachis hypogaea	trnL
+pecan	Carya illinoinensis	trnL
+pine nut	Pinus spp.	trnL	gymnosperm: check trnL coverage
+pineapple	Ananas comosus	trnL
+pistachio	Pistacia vera	trnL
+plant-based mince	unknown (soy/pea protein)	trnL	composition unknown
+plantain	Musa x paradisiaca	trnL
+plum	Prunus domestica	trnL	Prunus
+pork	Sus scrofa	12SV5
+potato	Solanum tuberosum	trnL
+protein powder	unspecified (whey: Bos taurus; pea: Pisum sativum; soy: Glycine max)	trnL / 12SV5	type unknown
+pumpkin	Cucurbita maxima	trnL	Cucurbita
+pumpkin seed	Cucurbita pepo	trnL	Cucurbita
+quail egg	Coturnix japonica	12SV5
+quinoa	Chenopodium quinoa	trnL
+radish	Raphanus sativus	trnL
+raisin	Vitis vinifera	trnL
+raspberry	Rubus idaeus	trnL	Rosaceae
+red bean	Vigna angularis	trnL
+rice	Oryza sativa	trnL
+rockfish	Sebastes spp.	12SV5
+saffron	Crocus sativus	trnL	trace
+salmon	Salmo salar	12SV5	Atlantic salmon assumed; wild Pacific = Oncorhynchus spp.
+sardine	Sardina pilchardus	12SV5	species unconfirmed
+scallion	Allium fistulosum	trnL	Allium
+scallop	Pectinidae (scallops)	none	mollusc: not vertebrate
+seafood (mixed)	mixed fish/shellfish (unspecified)	12SV5 (fish part only)	unspecified
+seaweed	Undaria pinnatifida (assumed)	none	alga: probably not amplified by trnL
+sesame	Sesamum indicum	trnL
+shellfish	Crustacea/Mollusca (unspecified)	none	invertebrate
+shiitake	Lentinula edodes	none	fungus
+shrimp	Penaeidae (shrimp, unspecified)	none	crustacean: not vertebrate
+soju	Oryza sativa	none	distilled: no DNA expected (base varies)
+soy meat	Glycine max	trnL	textured soy protein
+soy milk	Glycine max	trnL
+soy sauce	Glycine max; Triticum aestivum	trnL	fermented: low DNA
+soybean paste	Glycine max	trnL
+spinach	Spinacia oleracea	trnL
+spirits	mixed distilled spirits (unspecified)	none	distilled: no DNA expected
+squash	Cucurbita pepo	trnL	Cucurbita
+squid	Teuthida (squid)	none	mollusc: not vertebrate
+stone fruit	Prunus spp.	trnL	unspecified
+strawberry	Fragaria x ananassa	trnL	Rosaceae
+sugar	Saccharum officinarum; Beta vulgaris	none	refined sugar: no DNA expected
+supplement	none	none	tablet/pill
+sweet potato	Ipomoea batatas	trnL
+tapioca	Manihot esculenta	trnL	starch: low DNA
+tea	Camellia sinensis	trnL
+teff	Eragrostis tef	trnL	Poaceae
+thousand island dressing	Glycine max (oil); Solanum lycopersicum; Cucumis sativus; Gallus gallus (egg)	trnL	typical recipe: varies
+tofu	Glycine max	trnL
+tofu skin	Glycine max	trnL
+tomato	Solanum lycopersicum	trnL
+trail mix	unspecified nuts / seeds / dried fruit	trnL	composition unknown
+truffle	Tuber spp.	none	fungus
+tuna	Thunnus spp.	12SV5
+turkey	Meleagris gallopavo	12SV5
+turmeric	Curcuma longa	trnL
+unagi	Anguilla japonica	12SV5
+unknown	unknown	unknown	not described in log
+urad dal	Vigna mungo	trnL
+vanilla	Vanilla planifolia	trnL	trace
+veal	Bos taurus	12SV5
+vegan caesar dressing	unspecified plant-based	trnL	composition unknown
+vegan cheese	Cocos nucifera; Anacardium occidentale; Solanum tuberosum	trnL	varies by product
+vegetable oil	Glycine max; Brassica napus; Helianthus annuus	trnL	refined oil: low DNA
+walnut	Juglans regia	trnL
+wasabi	Eutrema japonicum	trnL	often horseradish (Armoracia rusticana) substitute
+watermelon	Citrullus lanatus	trnL
+wheat	Triticum aestivum	trnL	may merge with Poaceae (rye, barley)
+whey	Bos taurus	12SV5	isolate: low DNA
+whiskey	Zea mays; Secale cereale; Hordeum vulgare	none	distilled: no DNA expected
+white fish	Gadidae (cod/haddock/pollock, unspecified)	12SV5
+wild rice	Zizania palustris	trnL
+wine	Vitis vinifera	trnL	filtered: little DNA
+wood ear	Auricularia auricula-judae	none	fungus
+yam	Dioscorea alata	trnL
+yogurt	Bos taurus	12SV5
+zucchini	Cucurbita pepo	trnL	Cucurbita
+coconut	Cocos nucifera	trnL	Arecaceae
+soybean	Glycine max	trnL	

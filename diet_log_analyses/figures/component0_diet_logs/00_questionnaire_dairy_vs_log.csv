@@ -1,0 +1,20 @@
+subject,dairy,dairy_var,Dairy_consumption,answer_rank,within_expected_dairy,within_expected_dairy_var
+01,100.0,100.0,Daily (at least once a day),5,True,True
+04,0.0,0.0,Never,0,True,True
+08,100.0,100.0,Daily (at least once a day),5,True,True
+15,50.0,62.5,4 or more times per week,4,False,True
+14,75.0,75.0,2-4 times per month,2,False,False
+19,60.0,60.0,Daily (at least once a day),5,False,False
+16,70.0,70.0,Daily (at least once a day),5,False,False
+13,100.0,100.0,4 or more times per week,4,True,True
+06,80.0,80.0,Daily (at least once a day),5,False,False
+07,77.8,77.8,Daily (at least once a day),5,False,False
+12,100.0,100.0,Daily (at least once a day),5,True,True
+17,57.1,57.1,2-4 times per month,2,False,False
+10,50.0,50.0,4 or more times per week,4,False,False
+09,66.7,66.7,4 or more times per week,4,True,True
+03,90.0,90.0,4 or more times per week,4,True,True
+20,100.0,100.0,Daily (at least once a day),5,True,True
+05,100.0,100.0,Daily (at least once a day),5,True,True
+21,100.0,100.0,Daily (at least once a day),5,True,True
+18,90.0,90.0,2-3 times per week,3,False,False

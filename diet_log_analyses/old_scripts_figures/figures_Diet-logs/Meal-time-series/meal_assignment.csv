@@ -1,0 +1,59 @@
+Time/meal as logged,meal,rule,entries
+Breakfast,Breakfast,meal word,116
+breakfast,Breakfast,meal word,12
+6:15,Breakfast,clock time 06:15,4
+8am,Breakfast,clock time 08:00,3
+Breakfast 9:45-10:30,Breakfast,meal word,3
+brunch,Breakfast,meal word,3
+7am,Breakfast,clock time 07:00,2
+4:45am,Breakfast,clock time 04:45,1
+6am,Breakfast,clock time 06:00,1
+7:15am,Breakfast,clock time 07:15,1
+7:30,Breakfast,clock time 07:30,1
+7:45am,Breakfast,clock time 07:45,1
+8-8:20,Breakfast,clock time 08:00,1
+9am,Breakfast,clock time 09:00,1
+Dinner,Dinner,meal word,143
+dinner,Dinner,meal word,13
+6:30-7:30 Dinner at Macarena,Dinner,meal word,8
+Dinner at Teleferic Barcelona,Dinner,meal word,7
+6-7:30pm,Dinner,clock time 18:00,6
+Dinner 7-8:30,Dinner,meal word,6
+6:45,Dinner,clock time 18:45,5
+Dinner 6:15-7,Dinner,meal word,5
+10:30-12 Dinner,Dinner,meal word,4
+6pm dinner,Dinner,meal word,4
+6:30pm,Dinner,clock time 18:30,3
+8-9 dinner,Dinner,meal word,2
+Dessert 9-10,Dinner,clock time 21:00,2
+10-10:30,Dinner,clock time 22:00,1
+4pm,Dinner,clock time 16:00,1
+6:30-7:30,Dinner,clock time 18:30,1
+7:30,Dinner,clock time 19:30,1
+Lunch,Lunch,meal word,102
+lunch,Lunch,meal word,32
+1-1:30 Lunch,Lunch,meal word,3
+Lunch (restaurant),Lunch,meal word,3
+11-11:30am,Lunch,clock time 11:00,2
+11am,Lunch,clock time 11:00,2
+12-12:30,Lunch,clock time 12:00,2
+1:30-2,Lunch,clock time 13:30,2
+Lunch 1-2,Lunch,meal word,2
+Wine tasting 11:30-1,Lunch,clock time 11:30,2
+1-1:30,Lunch,clock time 13:00,1
+12:45,Lunch,clock time 12:45,1
+1:15pm,Lunch,clock time 13:15,1
+2pm,Lunch,clock time 14:00,1
+Snacks,not recorded,no meal word or time,19
+Korean food,not recorded,no meal word or time,16
+Snack,not recorded,no meal word or time,15
+bbq,not recorded,no meal word or time,6
+snacks,not recorded,no meal word or time,5
+Drink,not recorded,no meal word or time,4
+After,not recorded,no meal word or time,2
+Dessert,not recorded,no meal word or time,2
+Fruit,not recorded,no meal word or time,2
+Late night snack,not recorded,no meal word or time,2
+desserts,not recorded,no meal word or time,2
+alcohol,not recorded,no meal word or time,1
+snack,not recorded,no meal word or time,1

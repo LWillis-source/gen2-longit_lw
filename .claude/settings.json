@@ -1,0 +1,58 @@
+{
+  "env": {
+    "MPLCONFIGDIR": "/private/tmp/claude-501/matplotlib",
+    "JUPYTER_RUNTIME_DIR": "/private/tmp/claude-501/jupyter-runtime",
+    "IPYTHONDIR": "/private/tmp/claude-501/ipython",
+    "XDG_CACHE_HOME": "/private/tmp/claude-501/cache"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/python3 /Users/lisa/Documents/GitHub/gen2-longit/.claude/hooks/restrict_writes.py"
+          }
+        ]
+      }
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "allowWrite": [
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/scripts",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/figures"
+      ],
+      "denyWrite": [
+        "/Users/lisa/Documents/GitHub/gen2-longit/*.*",
+        "/Users/lisa/Documents/GitHub/gen2-longit/.git",
+        "/Users/lisa/Documents/GitHub/gen2-longit/0-config.R",
+        "/Users/lisa/Documents/GitHub/gen2-longit/1-data",
+        "/Users/lisa/Documents/GitHub/gen2-longit/2-analysis",
+        "/Users/lisa/Documents/GitHub/gen2-longit/2-analysis_python",
+        "/Users/lisa/Documents/GitHub/gen2-longit/3-figures",
+        "/Users/lisa/Documents/GitHub/gen2-longit/3-figures_python",
+        "/Users/lisa/Documents/GitHub/gen2-longit/scripts",
+        "/Users/lisa/Documents/GitHub/gen2-longit/README.md",
+        "/Users/lisa/Documents/GitHub/gen2-longit/CLAUDE.md",
+        "/Users/lisa/Documents/GitHub/gen2-longit/run_all_analyses.sh",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/*.*",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/CLAUDE.md",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/BEST_PRACTICES_CLAUDE.md",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/PROGRESS.md",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/daily_diet_coding.xlsx",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/old_scripts_figures",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/scripts_daily_diet_coding",
+        "/Users/lisa/Documents/GitHub/gen2-longit/diet_log_analyses/__pycache__",
+        "/Users/lisa/Documents/GitHub/gen2_capScan_sanitized00"
+      ]
+    },
+    "network": {
+      "allowLocalBinding": true
+    }
+  }
+}

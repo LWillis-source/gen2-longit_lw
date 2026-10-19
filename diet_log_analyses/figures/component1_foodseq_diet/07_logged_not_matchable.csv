@@ -1,0 +1,256 @@
+subject,ingredient,days,reason
+01,anchovy,1,no matching sequences
+01,apple,2,genus not in run
+01,berries (mixed),1,no matching sequences
+01,bourbon,1,no matching sequences
+01,chanterelle,1,Informative = No (No marker in pipeline)
+01,coconut,1,genus not in run
+01,coffee,9,no matching sequences
+01,corn,2,genus not in run
+01,cucumber,2,genus not in run
+01,ginger,1,genus not in run
+01,herbal liqueur,1,Informative = No (Distilled)
+01,jam,3,Informative = No (Unspecified taxon)
+01,limoncello,1,no matching sequences
+01,melon,1,genus not in run
+01,mixed vegetables,2,Informative = No (Unspecified taxon)
+01,mushroom,2,Informative = No (No marker in pipeline)
+01,octopus,1,Informative = No (No marker in pipeline)
+01,olive oil,2,no matching sequences
+01,scallop,1,Informative = No (No marker in pipeline)
+01,seafood (mixed),1,Informative = No (Unspecified taxon)
+01,shrimp,2,Informative = No (No marker in pipeline)
+01,spirits,5,Informative = No (Distilled)
+01,squash,1,genus not in run
+01,squid,1,Informative = No (No marker in pipeline)
+01,sugar,9,no matching sequences
+01,truffle,1,Informative = No (No marker in pipeline)
+01,whiskey,1,no matching sequences
+01,zucchini,3,genus not in run
+03,acai,2,genus not in run
+03,butternut squash,1,genus not in run
+03,coffee,1,no matching sequences
+03,corn,2,genus not in run
+03,cucumber,3,genus not in run
+03,grain cereal,1,Informative = No (Unspecified taxon)
+03,mushroom,1,Informative = No (No marker in pipeline)
+03,olive,1,genus not in run
+03,protein powder,4,Informative = No (Unspecified taxon)
+03,sugar,8,no matching sequences
+04,agave,1,no matching sequences
+04,apple,6,genus not in run
+04,coffee,6,no matching sequences
+04,corn,5,genus not in run
+04,cucumber,1,genus not in run
+04,fruit (unspecified),4,Informative = No (Unspecified taxon)
+04,ginger,1,genus not in run
+04,maple syrup,1,no matching sequences
+04,mixed vegetables,4,Informative = No (Unspecified taxon)
+04,nori,1,Informative = No (No marker in pipeline)
+04,nutritional yeast,1,Informative = No (No marker in pipeline)
+04,olive oil,1,no matching sequences
+04,strawberry,2,genus not in run
+04,sugar,2,no matching sequences
+04,vegan caesar dressing,3,Informative = No (Unspecified taxon)
+05,anchovy,3,no matching sequences
+05,apple,2,genus not in run
+05,coffee,7,no matching sequences
+05,corn,2,genus not in run
+05,dill,1,genus not in run
+05,ginger,1,genus not in run
+05,honey,7,Informative = No (No marker in pipeline)
+05,mushroom,1,Informative = No (No marker in pipeline)
+05,olive oil,1,no matching sequences
+05,strawberry,1,genus not in run
+05,sugar,6,no matching sequences
+05,white fish,1,no taxon
+06,cinnamon,2,no matching sequences
+06,corn,1,genus not in run
+06,cucumber,2,genus not in run
+06,cumin,1,no matching sequences
+06,enoki,1,Informative = No (No marker in pipeline)
+06,fish,4,Informative = No (Unspecified taxon)
+06,fruit (unspecified),1,Informative = No (Unspecified taxon)
+06,ginger,2,genus not in run
+06,grain cereal,1,Informative = No (Unspecified taxon)
+06,mixed vegetables,2,Informative = No (Unspecified taxon)
+06,mushroom,1,Informative = No (No marker in pipeline)
+06,nori,1,Informative = No (No marker in pipeline)
+06,octopus,1,Informative = No (No marker in pipeline)
+06,pumpkin,1,genus not in run
+06,shrimp,4,Informative = No (No marker in pipeline)
+06,sugar,5,no matching sequences
+06,unknown,2,Informative = No (Unspecified taxon)
+06,watermelon,4,genus not in run
+07,apple,1,genus not in run
+07,coffee,3,no matching sequences
+07,corn,4,genus not in run
+07,grain-free cereal,2,Informative = No (Unspecified taxon)
+07,mixed vegetables,2,Informative = No (Unspecified taxon)
+07,protein powder,1,Informative = No (Unspecified taxon)
+07,shellfish,1,Informative = No (No marker in pipeline)
+07,sugar,4,no matching sequences
+08,coconut,1,genus not in run
+08,coffee,10,no matching sequences
+08,crab,2,Informative = No (No marker in pipeline)
+08,cucumber,1,genus not in run
+08,melon,2,genus not in run
+08,mixed vegetables,1,Informative = No (Unspecified taxon)
+08,olive oil,1,no matching sequences
+08,shrimp,2,Informative = No (No marker in pipeline)
+08,watermelon,2,genus not in run
+09,apple,1,genus not in run
+09,coffee,5,no matching sequences
+09,cucumber,2,genus not in run
+09,fish,1,Informative = No (Unspecified taxon)
+09,grain cereal,1,Informative = No (Unspecified taxon)
+09,mixed vegetables,1,Informative = No (Unspecified taxon)
+09,mushroom,3,Informative = No (No marker in pipeline)
+09,shrimp,1,Informative = No (No marker in pipeline)
+09,squid,1,Informative = No (No marker in pipeline)
+09,strawberry,1,genus not in run
+09,sugar,4,no matching sequences
+09,wasabi,3,no matching sequences
+09,watermelon,2,genus not in run
+10,coconut,2,genus not in run
+10,coffee,3,no matching sequences
+10,diet soda,3,Informative = No (No food DNA)
+10,mushroom,1,Informative = No (No marker in pipeline)
+12,apple,1,genus not in run
+12,berries (mixed),1,no matching sequences
+12,coconut,1,genus not in run
+12,coffee,1,no matching sequences
+12,corn,2,genus not in run
+12,cucumber,1,genus not in run
+12,fish,1,Informative = No (Unspecified taxon)
+12,fruit (unspecified),1,Informative = No (Unspecified taxon)
+12,mixed vegetables,1,Informative = No (Unspecified taxon)
+12,mushroom,1,Informative = No (No marker in pipeline)
+12,nori,2,Informative = No (No marker in pipeline)
+12,nuts (unspecified),1,Informative = No (Unspecified taxon)
+12,strawberry,1,genus not in run
+12,sugar,6,no matching sequences
+12,trail mix,1,Informative = No (Unspecified taxon)
+12,vanilla,1,no matching sequences
+13,arugula,1,genus not in run
+13,berries (mixed),1,no matching sequences
+13,cinnamon,4,no matching sequences
+13,coconut,1,genus not in run
+13,coffee,1,no matching sequences
+13,corn,1,genus not in run
+13,cucumber,4,genus not in run
+13,fruit (unspecified),2,Informative = No (Unspecified taxon)
+13,grain cereal,1,Informative = No (Unspecified taxon)
+13,jam,3,Informative = No (Unspecified taxon)
+13,konjac,1,genus not in run
+13,mixed vegetables,2,Informative = No (Unspecified taxon)
+13,mushroom,2,Informative = No (No marker in pipeline)
+13,nori,1,Informative = No (No marker in pipeline)
+13,olive oil,1,no matching sequences
+13,pumpkin seed,1,genus not in run
+13,seaweed,1,Informative = No (No marker in pipeline)
+13,shrimp,1,Informative = No (No marker in pipeline)
+13,soju,1,no matching sequences
+13,strawberry,1,genus not in run
+13,sugar,7,no matching sequences
+13,watermelon,2,genus not in run
+14,apple,1,genus not in run
+14,corn,1,genus not in run
+14,cucumber,2,genus not in run
+14,fish,2,Informative = No (Unspecified taxon)
+14,grain cereal,3,Informative = No (Unspecified taxon)
+14,luffa,2,genus not in run
+14,mixed vegetables,1,Informative = No (Unspecified taxon)
+14,shrimp,3,Informative = No (No marker in pipeline)
+14,squash,3,genus not in run
+14,sugar,4,no matching sequences
+14,white fish,1,no taxon
+14,wood ear,1,Informative = No (No marker in pipeline)
+15,coffee,4,no matching sequences
+15,corn,1,genus not in run
+15,cucumber,1,genus not in run
+15,mixed vegetables,1,Informative = No (Unspecified taxon)
+15,protein powder,2,Informative = No (Unspecified taxon)
+15,pumpkin seed,1,genus not in run
+16,bamboo shoot,1,genus not in run
+16,coffee,6,no matching sequences
+16,corn,2,genus not in run
+16,fish,2,Informative = No (Unspecified taxon)
+16,grain cereal,1,Informative = No (Unspecified taxon)
+16,luffa,2,genus not in run
+16,melon,1,genus not in run
+16,mixed vegetables,5,Informative = No (Unspecified taxon)
+16,plant-based mince,1,Informative = No (Unspecified taxon)
+16,seafood (mixed),1,Informative = No (Unspecified taxon)
+16,shrimp,4,Informative = No (No marker in pipeline)
+16,sugar,3,no matching sequences
+16,unknown,1,Informative = No (Unspecified taxon)
+16,zucchini,1,genus not in run
+17,apple,1,genus not in run
+17,cucumber,1,genus not in run
+17,fish,1,Informative = No (Unspecified taxon)
+17,nori,2,Informative = No (No marker in pipeline)
+17,nuts (unspecified),3,Informative = No (Unspecified taxon)
+17,octopus,2,Informative = No (No marker in pipeline)
+17,seaweed,4,Informative = No (No marker in pipeline)
+17,sugar,3,no matching sequences
+17,wasabi,1,no matching sequences
+18,anchovy,1,no matching sequences
+18,burdock,1,genus not in run
+18,grain cereal,5,Informative = No (Unspecified taxon)
+18,shrimp,3,Informative = No (No marker in pipeline)
+18,sugar,2,no matching sequences
+19,apple,2,genus not in run
+19,coffee,5,no matching sequences
+19,corn,1,genus not in run
+19,honey,1,Informative = No (No marker in pipeline)
+19,lychee,1,genus not in run
+19,pumpkin,1,genus not in run
+19,sugar,1,no matching sequences
+19,teff,1,genus not in run
+19,unknown,1,Informative = No (Unspecified taxon)
+20,berries (mixed),1,no matching sequences
+20,cinnamon,1,no matching sequences
+20,coffee,5,no matching sequences
+20,ginger,1,genus not in run
+20,honey,6,Informative = No (No marker in pipeline)
+20,maple syrup,1,no matching sequences
+20,mixed vegetables,2,Informative = No (Unspecified taxon)
+20,mushroom,3,Informative = No (No marker in pipeline)
+20,olive,2,genus not in run
+20,protein powder,5,Informative = No (Unspecified taxon)
+20,saffron,2,no matching sequences
+20,shiitake,1,Informative = No (No marker in pipeline)
+20,sugar,8,no matching sequences
+20,supplement,2,Informative = No (No food DNA)
+20,trail mix,3,Informative = No (Unspecified taxon)
+20,unknown,1,Informative = No (Unspecified taxon)
+20,whiskey,1,no matching sequences
+20,zucchini,1,genus not in run
+21,acai,2,genus not in run
+21,apple,1,genus not in run
+21,arugula,1,genus not in run
+21,butternut squash,2,genus not in run
+21,coffee,8,no matching sequences
+21,corn,2,genus not in run
+21,cucumber,7,genus not in run
+21,dill,2,genus not in run
+21,fish,1,Informative = No (Unspecified taxon)
+21,ginger,2,genus not in run
+21,honey,2,Informative = No (No marker in pipeline)
+21,melon,1,genus not in run
+21,mixed vegetables,1,Informative = No (Unspecified taxon)
+21,nori,1,Informative = No (No marker in pipeline)
+21,octopus,1,Informative = No (No marker in pipeline)
+21,olive,2,genus not in run
+21,olive oil,3,no matching sequences
+21,oyster mushroom,1,Informative = No (No marker in pipeline)
+21,parsley,2,genus not in run
+21,pumpkin,1,genus not in run
+21,sardine,2,genus not in run
+21,seafood (mixed),1,Informative = No (Unspecified taxon)
+21,seaweed,1,Informative = No (No marker in pipeline)
+21,squash,1,genus not in run
+21,sugar,5,no matching sequences
+21,supplement,1,Informative = No (No food DNA)
+21,truffle,1,Informative = No (No marker in pipeline)

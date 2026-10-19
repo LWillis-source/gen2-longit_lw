@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diet-log analyses: set-up and practices</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400..700&family=IBM+Plex+Sans:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+  body { margin:0; background:#D9D5CC; font-family:'IBM Plex Sans', Arial, sans-serif; color:#1F2A33; }
+  main { max-width:1400px; margin:0 auto; padding:24px 16px 64px; }
+  .frame { position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.18); background:#F7F5F0; }
+  .slide { position:absolute; top:0; left:0; width:1920px; height:1080px; transform-origin:top left; }
+  .slide section { position:relative; box-sizing:border-box; width:1920px; height:1080px; overflow:hidden; }
+  .slide section * { margin:0; box-sizing:border-box; }
+  .slide ul { padding-left:1.2em; }
+  .slide table { border-collapse:collapse; width:100%; }
+  .slide th, .slide td { padding:0.35em 0.6em; text-align:left; border-bottom:1px solid #DDD8CC; vertical-align:top; }
+  .slide th { font-weight:600; border-bottom:2px solid #1F2A33; }
+  .num { font-size:14px; color:#4A5560; margin:8px 0 4px; }
+  .notes { font-size:15px; color:#3E4A54; background:#F7F5F0; padding:10px 14px; border-radius:8px; margin:0 0 8px; }
+  main > .frame { margin-top:28px; }
+</style></head>
+<body><main>
+<h1 style="font-size:22px;margin:8px 0 0">Diet-log analyses: set-up and practices</h1>
+<p style="font-size:14px;margin:4px 0 0">Copy of the online deck https://claude.ai/artifact/GYNHQKAASxMxhw8AMbxB42, built from its slide files. Speaker notes appear under their slide.</p>
+<div class="frame" id="s1"><div class="slide"><section id="cover" data-transition="fade" style="background:#1F2A33;color:#F2EFE8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<p style="font-size:28px;color:#E09A5F;font-weight:600;letter-spacing:3px;text-transform:uppercase">LONGIT-weeklong · gen2-longit</p>
+<h1 style="font-family:'Source Serif 4', Georgia, serif;font-size:112px;font-weight:600;line-height:1.05">Diet-log analyses<br>with Claude</h1>
+<p style="font-size:36px;color:#C9CED2;line-height:1.4">Part 1: best practices, with sources<br>Part 2: how this project is set up, protected and run</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#9AA3AA">Reference deck · October 2026 · status details live in PROGRESS.md</p>
+
+</section>
+</div></div><p class="num">1 / 37 · cover</p><p class="notes">A deck to come back to: Part 1 summarises BEST_PRACTICES_CLAUDE.md; Part 2 explains the folders, data, instruction files, write protection, reviewer agent and how to run an analysis step.</p><div class="frame" id="s2"><div class="slide"><section id="contents" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">Contents</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Two parts: how to work, and what is where</h2>
+<div style="display:flex;gap:40px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFDF8;padding:40px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:36px;font-weight:600;color:#2F6F6B">Part 1 · Best practices</h3>
+<ul style="font-size:28px;line-height:1.5;color:#3E4A54">
+<li>Plan first; checks that can fail</li>
+<li>Numbers from code; faithful data</li>
+<li>Small steps; look at every figure</li>
+<li>Statistics for diet-microbiome data</li>
+<li>Review, memory, safety, notebooks</li>
+<li>Quick reference and 25 sources</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFDF8;padding:40px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:36px;font-weight:600;color:#B5562A">Part 2 · This project</h3>
+<ul style="font-size:28px;line-height:1.5;color:#3E4A54">
+<li>Three notebooks, folders, data, join path</li>
+<li>Input reports, tests, matching, food taxa</li>
+<li>CLAUDE.md, PROGRESS.md and friends</li>
+<li>Write protection: hook and sandbox</li>
+<li>What is in settings.json</li>
+<li>The reviewer agent</li>
+<li>Workflow, starting a session, running</li>
+</ul>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Source document: diet_log_analyses/BEST_PRACTICES_CLAUDE.md</p>
+</section>
+</div></div><p class="num">2 / 37 · contents</p><div class="frame" id="s3"><div class="slide"><section id="p1" data-transition="fade" style="background:#1F2A33;color:#F2EFE8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<p style="font-size:28px;color:#E09A5F;font-weight:600;letter-spacing:3px;text-transform:uppercase">Part 1</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:96px;font-weight:600;line-height:1.1">Best practices for analyses with Claude</h2>
+<p style="font-size:36px;color:#C9CED2;line-height:1.4;width:1400px">Twelve principles from Anthropic’s Claude Code documentation, reproducible-computing guides, software testing and microbiome statistics. Numbers in brackets refer to the reference slides.</p>
+</section>
+</div></div><p class="num">3 / 37 · p1</p><div class="frame" id="s4"><div class="slide"><section id="plan" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§1 · Plan</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Write the analysis plan before looking at results</h2>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">What the plan fixes</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Exposures, outcomes, sample types, lag window, model, covariates, multiple-testing control, and what result counts as an effect. Later changes become dated deviations.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Why</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Choices made after seeing the data can push false positives far above 5%, even without deliberate fishing [1, 2]. A fixed plan keeps hypothesis testing apart from hypothesis generation [3].</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">With Claude</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Claude drafts, you edit and approve, then it codes. Exploring and planning before implementing avoids solving the wrong problem [4]. Anything outside the plan is labelled exploratory.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [1–4]</p>
+</section>
+</div></div><p class="num">4 / 37 · plan</p><div class="frame" id="s5"><div class="slide"><section id="verify-why" style="background:#EAE6DC;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§2 · Checks that can fail</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:80px;font-weight:600;line-height:1.1;width:1500px">Wrong analysis code rarely crashes. It returns a plausible number.</h2>
+<p style="font-size:32px;line-height:1.45;color:#3E4A54;width:1500px">Without a check it can run, Claude stops when the work <i>looks</i> done; with a pass/fail check it can test and fix its own work [4]. New analyses usually have no reference to compare against (the “oracle problem” [5]), so the checks have to be built, and each expected result is written down before the check runs.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [4, 5]</p>
+</section>
+</div></div><p class="num">5 / 37 · verify-why</p><div class="frame" id="s6"><div class="slide"><section id="verify-checks" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§2 · Checks that can fail</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Eight checks that need no reference script</h2>
+<table style="font-size:24px;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:30%">Check</th><th style="width:60%">What it means</th><th style="width:10%">Src</th></tr>
+<tr><td>1 · Simulated data</td><td>Planted effect must be recovered; with no effect, ~5% of p &lt; 0.05</td><td>[6, 7]</td></tr>
+<tr style="background:#EFEBE2"><td>2 · Second implementation</td><td>Same statistic from another package (adonis2, nlme, statsmodels)</td><td>[8]</td></tr>
+<tr><td>3 · Tiny hand cases</td><td>A few made-up samples, worked out by hand, kept as tests</td><td>[9, 10]</td></tr>
+<tr style="background:#EFEBE2"><td>4 · Properties</td><td>Reordering changes nothing; shuffled exposure removes the effect</td><td>[11, 12]</td></tr>
+<tr><td>5 · Controls</td><td>Effects that must appear; blanks that must stay near-empty</td><td>[13]</td></tr>
+<tr style="background:#EFEBE2"><td>6 · End-to-end traces</td><td>Follow 3–4 random records from raw file to final table by hand</td><td>—</td></tr>
+<tr><td>7 · Independent second look</td><td>Fresh session or subagent reimplements or reviews from the plan</td><td>[4]</td></tr>
+<tr style="background:#EFEBE2"><td>8 · Break it on purpose</td><td>Shuffle labels, shift dates: each check must notice</td><td>[14]</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [4–14]</p>
+</section>
+</div></div><p class="num">6 / 37 · verify-checks</p><div class="frame" id="s7"><div class="slide"><section id="verify-when" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§2 · Checks that can fail</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Which checks, when</h2>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">EVERY ANALYSIS STEP</p>
+<h3 style="font-size:36px;font-weight:600">Checks 4–6</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Properties, controls in the real data, and a by-hand trace of a few samples.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">EACH NEW METHOD, ONCE</p>
+<h3 style="font-size:36px;font-weight:600">Checks 1–3 (+8)</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Simulation, a second implementation, hand cases. Saved as pytest tests that rerun when the code changes.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">RESULTS THAT MATTER</p>
+<h3 style="font-size:36px;font-weight:600">Check 7</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">An independent reimplementation or review for results that conclusions rest on.</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.45;color:#1F2A33;background:#E3EFEE;padding:28px 36px;border-radius:16px">Ask for <b>evidence</b>, not claims: the test output, the command and what it returned [4].</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · source [4]</p>
+</section>
+</div></div><p class="num">7 / 37 · verify-when</p><div class="frame" id="s8"><div class="slide"><section id="code-numbers" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§3 · Numbers from code</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Claude writes and runs the code; the code computes every number</h2>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">The rule</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">No value read off a spreadsheet or plot and reported. No conclusion beyond what the code computed. Each number traceable to the script, cell or table that made it.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Why</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Reproducibility means recording how every result was produced and avoiding manual data handling [10]. A model can lose or misremember details as a long session fills its context [4]; rerun code cannot.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [4, 10]</p>
+</section>
+</div></div><p class="num">8 / 37 · code-numbers</p><div class="frame" id="s9"><div class="slide"><section id="sources" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§4 · Data sources</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Pin down files, versions and joins; read files faithfully</h2>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">State the inputs</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Which files, sheets and versions, and how they join. Raw data stay read-only; everything else is derived by scripts [9, 10].</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Keep tokens intact</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Some readers turn the text <span style="color:#B5562A">“NA”</span> into missing and <span style="color:#B5562A">“01”</span> into 1. Both can carry meaning.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Count every join</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Row counts before and after each join; dropped or duplicated rows are reported, never absorbed.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [9, 10]</p>
+</section>
+</div></div><p class="num">9 / 37 · sources</p><div class="frame" id="s10"><div class="slide"><section id="inputs-steps" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§5–6 · Changes and small steps</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Look for silent changes; build one step at a time</h2>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">§5 When inputs change</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">A changed input fails loudly (a crash) or silently (different numbers, no error). Compare old and new values, find outputs not regenerated and rows that no longer join. Keep every output regenerable from code [10].</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">§6 Small steps, every figure</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Load → describe → one model → one figure, checking each output. Short feedback loops and early correction work best [4]. Plots expose problems that summary numbers hide: Claude opens each figure before describing it.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [4, 10]</p>
+</section>
+</div></div><p class="num">10 / 37 · inputs-steps</p><div class="frame" id="s11"><div class="slide"><section id="stats" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§7 · Statistics</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Guardrails for diet-microbiome data</h2>
+<table style="font-size:24px;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:24%">Issue</th><th style="width:64%">Practice</th><th style="width:12%">Src</th></tr>
+<tr><td>Repeated measures</td><td>Subject random effects or within-subject permutations</td><td>[8]</td></tr>
+<tr style="background:#EFEBE2"><td>Within vs between</td><td>Habitual and daily intake estimated separately</td><td>[15]</td></tr>
+<tr><td>Personal, lagged</td><td>Responses differ by person and span days; lag fixed in advance</td><td>[16, 17]</td></tr>
+<tr style="background:#EFEBE2"><td>Compositional</td><td>CLR / Aitchison; zeros handled; normalisation matters</td><td>[18, 19]</td></tr>
+<tr><td>Method choice</td><td>One pre-specified DA method; others as sensitivity</td><td>[7]</td></tr>
+<tr style="background:#EFEBE2"><td>Confounders</td><td>Depth, handling, stool consistency, sample type, study day</td><td>[20, 21]</td></tr>
+<tr><td>Many tests</td><td>FDR across taxa × exposures; effect sizes with CIs</td><td>[22, 23]</td></tr>
+<tr style="background:#EFEBE2"><td>Small n</td><td>A few pre-specified tests; exploratory ones labelled</td><td>[1, 3]</td></tr>
+<tr><td>Reporting</td><td>STORMS checklist for human microbiome studies</td><td>[21]</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [1, 3, 7, 8, 15–23]</p>
+</section>
+</div></div><p class="num">11 / 37 · stats</p><div class="frame" id="s12"><div class="slide"><section id="review-communicate" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§8–9 · Review and communication</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">A sceptical second pass; say what you mean</h2>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">§8 Review in a fresh context</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">A reviewer in a separate session or subagent sees the work and the criteria, not the reasoning behind it [4]. Ask it for problems that affect correctness or the plan: a reviewer asked to find gaps will always find some, and chasing every one over-engineers [4].</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">§9 Be specific; expect questions</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Name files, constraints and what “done” looks like [4]. Supply what only you know: biology, reviewers’ questions, which result would change a conclusion. Claude asks when a request has two readings, and states the one it chose.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · source [4]</p>
+</section>
+</div></div><p class="num">12 / 37 · review-communicate</p><div class="frame" id="s13"><div class="slide"><section id="memory-safety" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§10–11 · Memory and safety</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Memory in files; nothing that cannot be undone</h2>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">§10 Project memory</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Each new session starts blank. Durable rules go in a short, specific CLAUDE.md, read at every start [4, 24]; plan, decisions and status in a progress file. Start fresh sessions between tasks and after repeated failed corrections [4].</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:36px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">§11 Irreversible actions</h3>
+<p style="font-size:28px;line-height:1.45;color:#3E4A54">Read-only raw data, regenerable outputs, version control and backups [9, 10]. Checkpoints undo Claude’s file edits but not shell commands [4]. Rules that must always hold go in hooks, which are deterministic; CLAUDE.md is advice [4].</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [4, 9, 10, 24]</p>
+</section>
+</div></div><p class="num">13 / 37 · memory-safety</p><div class="frame" id="s14"><div class="slide"><section id="notebooks" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">§12 · Notebooks</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">A notebook counts only if it runs top to bottom</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:32px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Hidden state</h3>
+<p style="font-size:28px;line-height:1.4;color:#3E4A54">Interactive edits can leave results the saved code no longer reproduces [25]. Claude cannot see your kernel, so it reruns the whole notebook before reporting.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:32px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Code in modules</h3>
+<p style="font-size:28px;line-height:1.4;color:#3E4A54">Reusable logic in .py modules; the notebook holds narrative, figures and decisions [25].</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:32px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">One parameters cell</h3>
+<p style="font-size:28px;line-height:1.4;color:#3E4A54">Paths, cut-offs and seeds near the top; record software versions [10, 25].</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:32px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Explain as you go</h3>
+<p style="font-size:28px;line-height:1.4;color:#3E4A54">Each step says why, not only what; every output is labelled so it reads on its own [25].</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · sources [10, 25]</p>
+</section>
+</div></div><p class="num">14 / 37 · notebooks</p><div class="frame" id="s15"><div class="slide"><section id="quickref" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">Quick reference</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Risk → practice</h2>
+<table style="font-size:24px;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:36%">Risk</th><th style="width:48%">Practice</th><th style="width:16%">Section</th></tr>
+<tr><td>Chance findings from many choices</td><td>Pre-specified plan; FDR control</td><td>§1, §7</td></tr>
+<tr style="background:#EFEBE2"><td>Plausible but wrong code</td><td>Checks with expected results stated first</td><td>§2</td></tr>
+<tr><td>Misread or misremembered values</td><td>Every number from code</td><td>§3</td></tr>
+<tr style="background:#EFEBE2"><td>Silent input changes</td><td>Explicit comparisons; regenerable outputs</td><td>§4, §5</td></tr>
+<tr><td>Errors visible only in plots</td><td>Look at every figure</td><td>§6</td></tr>
+<tr style="background:#EFEBE2"><td>Person effects read as diet effects</td><td>Repeated-measures models; within/between split</td><td>§7</td></tr>
+<tr><td>Compositional artefacts</td><td>Log-ratios; method sensitivity</td><td>§7</td></tr>
+<tr style="background:#EFEBE2"><td>Lost context between sessions</td><td>Memory in files</td><td>§10</td></tr>
+<tr><td>Irreversible mistakes</td><td>Read-only inputs, version control, hooks</td><td>§11</td></tr>
+<tr style="background:#EFEBE2"><td>Hidden notebook state</td><td>Run from scratch before reporting</td><td>§12</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 1 · Best practices · BEST_PRACTICES_CLAUDE.md, Quick reference</p>
+</section>
+</div></div><p class="num">15 / 37 · quickref</p><div class="frame" id="s16"><div class="slide"><section id="refs1" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">References · 1–13</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Sources</h2>
+<div data-text style="font-size:24px;line-height:1.4;color:#3E4A54">
+<p>1. Simmons, Nelson, Simonsohn (2011). False-positive psychology. Psychological Science 22:1359–1366</p>
+<p>2. Gelman, Loken (2014). The statistical crisis in science. American Scientist 102:460–465</p>
+<p>3. Nosek et al. (2018). The preregistration revolution. PNAS 115:2600–2606</p>
+<p>4. Anthropic. Best practices for Claude Code. code.claude.com/docs/en/best-practices</p>
+<p>5. Barr et al. (2015). The oracle problem in software testing: a survey. IEEE TSE 41:507–525</p>
+<p>6. Morris, White, Crowther (2019). Using simulation studies to evaluate statistical methods. Stat Med 38:2074–2102</p>
+<p>7. Nearing et al. (2022). Differential abundance methods … across 38 datasets. Nat Commun 13:342</p>
+<p>8. Anderson (2001). Non-parametric multivariate analysis of variance (PERMANOVA). Austral Ecol 26:32–46</p>
+<p>9. Wilson et al. (2017). Good enough practices in scientific computing. PLOS Comput Biol 13:e1005510</p>
+<p>10. Sandve et al. (2013). Ten simple rules for reproducible computational research. PLOS Comput Biol 9:e1003285</p>
+<p>11. Chen et al. (2018). Metamorphic testing: challenges and opportunities. ACM Comput Surv 51:4</p>
+<p>12. Claessen, Hughes (2000). QuickCheck: random testing of Haskell programs. ICFP 2000:268–279</p>
+<p>13. Eisenhofer et al. (2019). Contamination in low microbial biomass studies. Trends Microbiol 27:105–117</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Full references with DOIs: diet_log_analyses/BEST_PRACTICES_CLAUDE.md</p>
+</section>
+</div></div><p class="num">16 / 37 · refs1</p><div class="frame" id="s17"><div class="slide"><section id="refs2" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600;letter-spacing:2px;text-transform:uppercase">References · 14–25</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Sources, continued</h2>
+<div data-text style="font-size:24px;line-height:1.4;color:#3E4A54">
+<p>14. Jia, Harman (2011). An analysis and survey of the development of mutation testing. IEEE TSE 37:649–678</p>
+<p>15. Curran, Bauer (2011). Disaggregation of within- and between-person effects. Annu Rev Psychol 62:583–619</p>
+<p>16. Johnson et al. (2019). Daily sampling reveals personalized diet-microbiome associations. Cell Host Microbe 25:789</p>
+<p>17. David et al. (2014). Diet rapidly and reproducibly alters the human gut microbiome. Nature 505:559–563</p>
+<p>18. Gloor et al. (2017). Microbiome datasets are compositional: and this is not optional. Front Microbiol 8:2224</p>
+<p>19. Weiss et al. (2017). Normalization and differential abundance strategies depend on data. Microbiome 5:27</p>
+<p>20. Knight et al. (2018). Best practices for analysing microbiomes. Nat Rev Microbiol 16:410–422</p>
+<p>21. Mirzayi et al. (2021). Reporting guidelines for human microbiome research: STORMS. Nat Med 27:1885–1892</p>
+<p>22. Benjamini, Hochberg (1995). Controlling the false discovery rate. J R Stat Soc B 57:289–300</p>
+<p>23. Wasserstein, Lazar (2016). The ASA statement on p-values. American Statistician 70:129–133</p>
+<p>24. Anthropic. How Claude remembers your project. code.claude.com/docs/en/memory</p>
+<p>25. Rule et al. (2019). Ten simple rules for … Jupyter Notebooks. PLOS Comput Biol 15:e1007007</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Full references with DOIs: diet_log_analyses/BEST_PRACTICES_CLAUDE.md</p>
+</section>
+</div></div><p class="num">17 / 37 · refs2</p><div class="frame" id="s18"><div class="slide"><section id="p2" data-transition="fade" style="background:#1F2A33;color:#F2EFE8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<p style="font-size:28px;color:#E09A5F;font-weight:600;letter-spacing:3px;text-transform:uppercase">Part 2</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:96px;font-weight:600;line-height:1.1">How this project is set up</h2>
+<p style="font-size:36px;color:#C9CED2;line-height:1.4;width:1400px">The questions, where everything lives, how the data join, the files that steer Claude, the write protection, the reviewer, and how to run an analysis step.</p>
+</section>
+</div></div><p class="num">18 / 37 · p2</p><div class="frame" id="s19"><div class="slide"><section id="project" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">The project</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">LONGIT-weeklong: three notebooks, in this order</h2>
+<div style="display:flex;gap:28px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px"><p style="font-size:24px;color:#B5562A;font-weight:600">COMPONENT 0</p><h3 style="font-size:28px;font-weight:600;line-height:1.25">What is in the diet logs</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Foods logged, live-microbe, fermented, fibrous and dairy foods, agreement with the questionnaire. Descriptive.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px"><p style="font-size:24px;color:#B5562A;font-weight:600">COMPONENT 1 · NOW</p><h3 style="font-size:28px;font-weight:600;line-height:1.25">Is the diet log reflected in food sequencing?</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">trnL (plants) and 12SV5 (meat) DNA in stool, capsules and saliva vs what was logged: recall and precision.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px"><p style="font-size:24px;color:#B5562A;font-weight:600">COMPONENT 2 · NEXT</p><h3 style="font-size:28px;font-weight:600;line-height:1.25">Does diet relate to 16S composition?</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Live-microbe foods and fibre variety as primary exposures; plan written, not run.</p></div>
+</div>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">Notebooks in scripts/ (component0_diet_logs, component1_foodseq_diet, component2_diet_16S); each writes to its own folder in figures/. Subject 11 has no diet log: left out of anything that uses it.</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px"><p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p><p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Food sequencing comes first because it tests whether the diet log is a trustworthy record of what reached the gut; component 2 uses the log as its exposure. The diet-log description is used by both, so it has its own notebook instead of being repeated.</p></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, “Project” · PROGRESS.md, decisions of 19 Oct 2026</p>
+</section>
+</div></div><p class="num">19 / 37 · project</p><div class="frame" id="s20"><div class="slide"><section id="layout" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Where things live</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Folder layout</h2>
+<div style="display:flex;gap:36px">
+<div data-text style="flex:3;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.38;color:#1F2A33;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px">
+<p>gen2-longit/</p>
+<p>&#160;&#160;CLAUDE.md · .claude/ <span style="color:#6B6F73">— repo rules; protection</span></p>
+<p>&#160;&#160;1-data/ <span style="color:#6B6F73">— input data, read-only</span></p>
+<p>&#160;&#160;2-analysis_python/ <span style="color:#6B6F73">— shared modules</span></p>
+<p>&#160;&#160;R originals, 3-figures*/ <span style="color:#6B6F73">— reference</span></p>
+<p>&#160;&#160;diet_log_analyses/</p>
+<p>&#160;&#160;&#160;&#160;CLAUDE.md · PROGRESS.md · BEST_PRACTICES</p>
+<p>&#160;&#160;&#160;&#160;<b>scripts/</b> <span style="color:#2F6F6B">— 3 notebooks, modules, tests (writable)</span></p>
+<p>&#160;&#160;&#160;&#160;<b>figures/</b> <span style="color:#2F6F6B">— a folder per notebook; input reports</span></p>
+<p>&#160;&#160;&#160;&#160;old_scripts_figures/ <span style="color:#6B6F73">— earlier work</span></p>
+<p>&#160;&#160;&#160;&#160;daily_diet_coding.xlsx <span style="color:#6B6F73">— diet logs</span></p>
+</div>
+<div style="flex:2;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#E3EFEE;padding:24px;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">Claude writes only here</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">scripts/, figures/ and PROGRESS.md.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:24px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">Shared code</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">From 2-analysis_python/ via scripts/_paths.py; diet_log.py and food_seq.py hold the project's own reusable code.</p>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Writable and read-only folders are kept apart, so a mistake can only touch outputs that code can regenerate, never data or reference work. Shared code is imported, not copied, so a fix in one place reaches every analysis.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · gen2-longit/CLAUDE.md and diet_log_analyses/CLAUDE.md, “Layout”</p>
+</section>
+</div></div><p class="num">20 / 37 · layout</p><div class="frame" id="s21"><div class="slide"><section id="data" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Data sources · all read-only</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">What the analyses read</h2>
+<table style="font-size:24px;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:20%">Data</th><th style="width:42%">Where</th><th style="width:38%">How</th></tr>
+<tr><td>Sample metadata</td><td>LONGITWeeklong-samplesheet-FINAL.xlsx</td><td>Only via read_sample_sheet()</td></tr>
+<tr style="background:#EFEBE2"><td>Diet logs</td><td>daily_diet_coding.xlsx</td><td>Lexicon: species; live, fermented, fibrous, dairy</td></tr>
+<tr><td>16S</td><td>1-data/DADA2-weeklong/</td><td>seqtab_all.rds + info sheet</td></tr>
+<tr style="background:#EFEBE2"><td>Food (trnL, 12SV5)</td><td>1-data/DADA2-weeklong-plants/, -meat/</td><td>seqtab_all.rds + info sheet</td></tr>
+<tr><td>Plant families</td><td>Lexicon Family column</td><td>GBIF csv: cross-check only</td></tr>
+<tr style="background:#EFEBE2"><td>Questionnaires</td><td>Sample-sheet workbook tabs</td><td>Between-subject only</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">Lexicon changes on 18 Oct (with backups): a Dairy? column added; wheat now fibrous. Every workbook is read with config.read_excel_like_readxl(), which keeps “01” and “NA” as text.</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Each source has one documented way in, so every analysis sees the same, corrected version (e.g. saliva time = ingestion time). Inputs never change under the analyses, so every result traces back to a known version of the data [9, 10].</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, “Data sources”</p>
+</section>
+</div></div><p class="num">21 / 37 · data</p><div class="frame" id="s22"><div class="slide"><section id="inputs" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Input reports and rule tests · workflow step 0</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Know the data before every session</h2>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:30px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:30px;font-weight:600">scripts/profile_inputs.py</h3>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">One report per input in figures/input_profiles/: sheets, columns, every value of short categorical columns, tokens (NR, NM, NA), key uniqueness. joins.md: how well each documented join matches. manifest.json: checksums; changes.md says what changed.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:30px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:30px;font-weight:600">scripts/tests/</h3>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">68 pytest tests: one per CLAUDE.md file or join rule, plus the shared modules against earlier outputs. Breaking the saliva-time or meal rule on purpose makes exactly those tests fail.</p>
+</div>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">If a checksum changed: compare with the report in previous/, classify each difference, rerun the tests, record it in PROGRESS.md, then analyse.</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Claude starts each session knowing nothing about the data. Reports written by code give it an accurate picture without opening large workbooks; the tests show whether the written rules still hold. Checksums catch a changed input before it silently changes a result.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, workflow step 0</p>
+</section>
+</div></div><p class="num">22 / 37 · inputs</p><div class="frame" id="s23"><div class="slide"><section id="joins" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Join path</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">From a logged food to a sequencing read</h2>
+<div style="display:flex;gap:16px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:24px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#2F6F6B">Diet log</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Entry = Day_key + Entry_no; ingredients split on “;”</p>
+</div>
+<p style="font-size:44px;color:#B5562A;font-weight:600">→</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:24px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#2F6F6B">Subject, day</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Diet 1 → “01”; MM-DD dates in 2025</p>
+</div>
+<p style="font-size:44px;color:#B5562A;font-weight:600">→</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:24px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#2F6F6B">Sample</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Lag window before collection, same subject</p>
+</div>
+<p style="font-size:44px;color:#B5562A;font-weight:600">→</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:24px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#2F6F6B">Library</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Info sheet Sample minus “sample_”</p>
+</div>
+<p style="font-size:44px;color:#B5562A;font-weight:600">→</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:24px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#2F6F6B">Taxon</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Lexicon marker → run; species → ASVs</p>
+</div>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">Traps: saliva time = kit ingestion time; “NR” time = unknown, not midnight; plants and meat runs join on Sample_ID, never library name.</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">A wrong join gives plausible numbers, not an error. Every key format and trap is written down, so each join can be checked by row counts; all of them were tested against the data, and joins.md reports their coverage after every input change.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, “Join rules”</p>
+</section>
+</div></div><p class="num">23 / 37 · joins</p><div class="frame" id="s24"><div class="slide"><section id="rules" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Matching rules</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Meals, and which ASVs count for a food</h2>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:30px;font-weight:600">Meal of an entry</h3>
+<ul style="font-size:24px;line-height:1.38;color:#3E4A54">
+<li>Meal word first (breakfast, brunch, lunch, dinner)</li>
+<li>Else first clock time: before 11:00 breakfast, to 15:59 lunch, then dinner</li>
+<li>Bare 1:00–5:59 is pm; other bare times keep the day in time order</li>
+<li>Nothing usable: “not recorded”</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:30px;font-weight:600">ASVs for an ingredient</h3>
+<ul style="font-size:24px;line-height:1.38;color:#3E4A54">
+<li>Species from the lexicon; run from its marker</li>
+<li>Epithet: ASVs with that label + unlabelled ASVs of the genus</li>
+<li>No ASV carries the epithet, spp., hybrids: whole genus</li>
+<li>Slash lists, higher taxa, “unspecified”: undetectable</li>
+<li>Species whose ASVs overlap merge into one food taxon; a recipe (kimchi) joins each of its species</li>
+</ul>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">These rules used to exist only inside old code. A fresh session given only CLAUDE.md got 10 meals and 19 ingredients’ ASV sets wrong. Written out in full, they reproduce the old outputs exactly (58 of 58 meals, 60 of 60 ASV counts) and are now tested.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, “Food entries” and “Ingredients to taxa”</p>
+</section>
+</div></div><p class="num">24 / 37 · rules</p><div class="frame" id="s25"><div class="slide"><section id="foodtaxa" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Food taxa and the naming check · component 1</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">What sequencing can tell apart, and what it cannot find</h2>
+<div style="display:flex;gap:28px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px"><p style="font-size:24px;color:#2F6F6B;font-weight:600">FOOD TAXA</p><h3 style="font-size:28px;font-weight:600;line-height:1.25">Merged by shared sequences</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Milk, cheese and beef are one taxon (Bos taurus); tomato, potato and eggplant one (Solanum). 116 logged foods form 68 taxa.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px"><p style="font-size:24px;color:#2F6F6B;font-weight:600">NAMING CHECK</p><h3 style="font-size:28px;font-weight:600;line-height:1.25">Species first, then genus</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Of 142 informative foods: 64 match the exact species, 25 the genus only, 27 need the congener fallback; 26 find nothing.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px"><p style="font-size:24px;color:#2F6F6B;font-weight:600">YES vs UNCERTAIN</p><h3 style="font-size:28px;font-weight:600;line-height:1.25">Rated before sequencing</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Yes: DNA expected (whole foods). Uncertain: processed, trace or low-DNA (egg, butter, coffee); a miss is not a false negative.</p></div>
+</div>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">24 unmatched plant foods (corn, apple, cucumber, squash, strawberry, ...) have a genus absent from the trnL taxonomy (plus sardine in 12SV5; white fish names no taxon): most likely a reference-database gap, not a naming error.</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px"><p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p><p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Food names in the log and species names in the sequence database come from different worlds. Matching them explicitly, and showing every match, makes naming mistakes and database gaps visible instead of turning them silently into missed foods.</p></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · component1_foodseq_diet, sections 0.2, 0.2b and 0.6 · food_seq.py (tested)</p>
+</section>
+</div></div><p class="num">25 / 37 · foodtaxa</p><div class="frame" id="s26"><div class="slide"><section id="instructions" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Files that steer Claude</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Four documents, each with one job</h2>
+<table style="font-size:24px;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:30%">File</th><th style="width:44%">Holds</th><th style="width:26%">Read</th></tr>
+<tr><td>gen2-longit/CLAUDE.md</td><td>Repo-wide rules: read-only data, Python path</td><td>Every session start</td></tr>
+<tr style="background:#EFEBE2"><td>diet_log_analyses/CLAUDE.md</td><td>Workflow, tests, statistics, data, join rules</td><td>Every session start</td></tr>
+<tr><td>PROGRESS.md</td><td>Status, dated decisions, deviations, questions</td><td>Start; updated at step 9</td></tr>
+<tr style="background:#EFEBE2"><td>BEST_PRACTICES_CLAUDE.md</td><td>The reasons, with 25 sources (Part 1)</td><td>When rules need context</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">Claude Code reads the CLAUDE.md in the start folder and every folder above it: start in diet_log_analyses and both load [24].</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Each session starts with no memory, and CLAUDE.md is the one file read automatically, so durable rules live there. It stays short because long instruction files get ignored [4]. Anything that changes (status, decisions, counts) goes in PROGRESS.md or the reports, so CLAUDE.md never goes stale.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · sources [4, 24]</p>
+</section>
+</div></div><p class="num">26 / 37 · instructions</p><div class="frame" id="s27"><div class="slide"><section id="protection" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Write protection</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Two layers for two ways of writing</h2>
+<div style="display:flex;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:32px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">LAYER 1 · FILE TOOLS</p>
+<h3 style="font-size:32px;font-weight:600">PreToolUse hook</h3>
+<p style="font-size:26px;line-height:1.4;color:#3E4A54">Before every Write, Edit or NotebookEdit, restrict_writes.py checks the path. Outside scripts/, figures/ and PROGRESS.md the edit is cancelled and Claude is told why.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;padding:32px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">LAYER 2 · SHELL COMMANDS</p>
+<h3 style="font-size:32px;font-weight:600">Bash sandbox</h3>
+<p style="font-size:26px;line-height:1.4;color:#3E4A54">Python, Jupyter, cp, rm and every other command run inside an operating-system fence. Writes elsewhere fail with “Operation not permitted”, child processes included.</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">A rule in CLAUDE.md is advice: in a long session it can be forgotten or misread. A hook and the sandbox are enforced by the software every time [4]. Two layers are needed because Claude can write through its own file tools or through any shell command, and each layer covers only one of them.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · .claude/settings.json, .claude/hooks/restrict_writes.py · source [4]</p>
+</section>
+</div></div><p class="num">27 / 37 · protection</p><div class="frame" id="s28"><div class="slide"><section id="sandbox" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">The Bash sandbox</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">A fence around every shell command</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:26px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">What it is</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">macOS sandboxing applied to each command Claude runs and everything it starts.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:26px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">Files</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">Every protected file and folder is write-denied; scripts/, figures/ and a private temp folder stay writable.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:26px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">Network</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">No internet; local ports allowed, which Jupyter kernels need.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#EAE6DC;padding:26px;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">Strict mode</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">A blocked command cannot be retried outside the fence; no sandbox, no start.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#EAE6DC;padding:26px;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">Self-protecting</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">.claude/ settings, hooks and agents are always write-denied.</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Analysis scripts and notebooks run as shell commands and could write anywhere; only an operating-system fence stops a buggy script from overwriting data. Strict mode stops a blocked command from being quietly rerun unprotected, and the fence cannot be loosened from inside.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · code.claude.com/docs/en/sandboxing</p>
+
+</section>
+</div></div><p class="num">28 / 37 · sandbox</p><p class="notes">The sandbox covers shell commands only. Claude’s own file tools (Write, Edit) run outside it, which is why the hook exists as layer 1. Hooks themselves also run outside the sandbox.</p><div class="frame" id="s29"><div class="slide"><section id="settings" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">.claude/settings.json</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Three blocks: env, hooks, sandbox</h2>
+<div style="display:flex;gap:28px">
+<div data-text style="flex:11;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.32;color:#1F2A33;background:#FFFDF8;padding:26px;border:1px solid #DDD8CC;border-radius:16px">
+<p><span style="color:#B5562A">"env"</span>: { matplotlib, Jupyter caches → temp },</p>
+<p><span style="color:#B5562A">"hooks"</span>: { "PreToolUse": [{</p>
+<p>&#160;&#160;"matcher": "Write|Edit|MultiEdit|NotebookEdit",</p>
+<p>&#160;&#160;"command": "python3 …/restrict_writes.py" }] },</p>
+<p><span style="color:#B5562A">"sandbox"</span>: { "enabled": true,</p>
+<p>&#160;&#160;"failIfUnavailable": true,</p>
+<p>&#160;&#160;"allowUnsandboxedCommands": false,</p>
+<p>&#160;&#160;"network": { "allowLocalBinding": true },</p>
+<p>&#160;&#160;"filesystem": { "allowWrite": [scripts, figures],</p>
+<p>&#160;&#160;&#160;&#160;"denyWrite": [ 1-data, CLAUDE.md, … 21 paths ] } }</p>
+</div>
+<div style="flex:8;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#B5562A">env</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Caches go to the sandbox’s temp folder, so notebooks run.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#B5562A">hooks</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Path check before every file-tool write (layer 1).</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600;color:#B5562A">sandbox</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">On, strict; each protected path listed, since a deny beats an allow.</p>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Claude Code reads settings only from the folder a session starts in, so identical copies sit in gen2-longit/.claude/ and diet_log_analyses/.claude/. They live in .claude/, which the sandbox always protects, so only you can change them and Claude cannot loosen its own limits.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · identical copies in gen2-longit/.claude/ and diet_log_analyses/.claude/</p>
+
+</section>
+</div></div><p class="num">29 / 37 · settings</p><p class="notes">To lift the restriction temporarily, edit or rename settings.json yourself and restart Claude Code.</p><div class="frame" id="s30"><div class="slide"><section id="limits" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Write protection · limits</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">What the protection does not do</h2>
+<table style="font-size:24px;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:32%">Limit</th><th style="width:68%">Consequence</th></tr>
+<tr><td>Start folder matters</td><td>Only sessions started in gen2-longit or diet_log_analyses are protected</td></tr>
+<tr style="background:#EFEBE2"><td>One gap</td><td>A shell can create a new extensionless file directly in those two folders</td></tr>
+<tr><td>PROGRESS.md</td><td>Editable with Claude’s Edit tool, not by shell commands</td></tr>
+<tr style="background:#EFEBE2"><td>No git, no internet</td><td>You commit and run pip install yourself</td></tr>
+<tr><td>Shared modules locked</td><td>2-analysis_python/ changes need you to lift the restriction</td></tr>
+<tr style="background:#EFEBE2"><td>Harmless warnings</td><td>“Fontconfig: no writable cache” when figures are drawn</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">When a write is blocked, Claude stops and says what it wanted to write and why; it never works around a block.</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">The limits are written down so nobody assumes more protection than exists. Each is a deliberate trade-off: blocking git, the internet and the shared modules costs some convenience, but means nothing outside the analysis folders changes without you.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · tested 2026-10-17 from both start folders</p>
+</section>
+</div></div><p class="num">30 / 37 · limits</p><div class="frame" id="s31"><div class="slide"><section id="reviewer" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">The reviewer agent</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">A read-only referee with a fresh context</h2>
+<div style="display:flex;gap:28px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">The file</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">.claude/agents/reviewer.md: tools Read, Grep, Glob, Bash, no Write or Edit.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">What it checks</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">Joins, denominators, leakage, repeated measures, FDR, whether checks really passed, over-claiming.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:28px;border:1px solid #DDD8CC;border-radius:16px">
+<h3 style="font-size:28px;font-weight:600">What it returns</h3>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">Problems affecting correctness or the plan, each with evidence; minor points apart.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#1F2A33;padding:26px 30px;border-radius:16px">
+<p style="font-size:24px;color:#E09A5F;font-weight:600">HOW TO CALL IT (WORKFLOW STEP 8)</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#F2EFE8">Use the reviewer subagent on section 2 of scripts/&lt;notebook&gt;.ipynb</p>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">A reviewer that has seen the reasoning tends to accept it; one with a fresh context judges only the evidence [4]. It is read-only so a review cannot change the work it is judging, and asked for serious problems only so reviews do not turn into over-engineering [4].</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · .claude/agents/reviewer.md (both folders) · source [4]</p>
+</section>
+</div></div><p class="num">31 / 37 · reviewer</p><div class="frame" id="s32"><div class="slide"><section id="workflow" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Workflow for each notebook section</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Ten steps; you decide at 1, 7 and 8</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:16px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:20px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">0 · Inputs</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Profile inputs; if changed, diff and retest</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#E3EFEE;padding:20px;border:2px solid #2F6F6B;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">1 · Plan</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">You approve before anything runs</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:20px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">2 · Load, join</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Input versions; row counts each step</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:20px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">3 · Check</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Expected result stated first</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:20px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">4 · Analyse</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Outputs to figures/</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:20px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">5 · Look</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Open every figure</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:20px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">6 · Rerun</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Whole notebook from scratch</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#E3EFEE;padding:20px;border:2px solid #2F6F6B;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">7 · Report</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Numbers with sources; evidence</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#E3EFEE;padding:20px;border:2px solid #2F6F6B;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">8 · Review</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">Reviewer agent; fix, back to 6</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:20px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:26px;font-weight:600">9 · Record</h3>
+<p style="font-size:24px;line-height:1.3;color:#3E4A54">PROGRESS.md</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Each step catches a different kind of error before it reaches a result: changed inputs, wrong joins, broken logic, odd figures, hidden notebook state, over-claiming. The stopping points (shaded) keep the decisions only you can make with you: what to test, what to report, and when a result counts as final.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, “Workflow for each notebook section”</p>
+</section>
+</div></div><p class="num">32 / 37 · workflow</p><div class="frame" id="s33"><div class="slide"><section id="session" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Starting a session</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Coming back to the project</h2>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600">1 · Open in diet_log_analyses/</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Both CLAUDE.md files and the protection load.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600">2 · Check what loaded</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">/status, /sandbox, /hooks.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600">3 · Inputs, then status</h3>
+<p style="font-size:24px;line-height:1.35;color:#3E4A54">Profile the inputs (step 0); read PROGRESS.md.</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#1F2A33;padding:30px;border-radius:16px">
+<p style="font-size:24px;color:#E09A5F;font-weight:600">FIRST PROMPTS THAT WORK</p>
+<p style="font-size:24px;line-height:1.4;color:#F2EFE8">“Run step 0 and tell me if any input changed.”</p>
+<p style="font-size:24px;line-height:1.4;color:#F2EFE8">“Read PROGRESS.md and summarise status and open questions.”</p>
+<p style="font-size:24px;line-height:1.4;color:#F2EFE8">“Draft the plan for the next section. Don’t run anything yet.”</p>
+<p style="font-size:24px;line-height:1.4;color:#F2EFE8">“Use the reviewer subagent on section 2.”</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Rules and protection load only from the start folder, so starting elsewhere silently loses both. A new session remembers nothing, so it catches up from files (input reports, PROGRESS.md), not from memory, and one task per session keeps its context clean [4].</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · source [4]</p>
+</section>
+</div></div><p class="num">33 / 37 · session</p><div class="frame" id="s34"><div class="slide"><section id="running" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Running the analyses</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Commands, from the repository root</h2>
+<table style="font-size:24px;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:26%">Task</th><th style="width:74%">Command (python = /opt/anaconda3/bin/python)</th></tr>
+<tr><td>Profile inputs (step 0)</td><td style="font-family:'JetBrains Mono', 'Courier New', monospace">python diet_log_analyses/scripts/profile_inputs.py</td></tr>
+<tr style="background:#EFEBE2"><td>Test the rules</td><td style="font-family:'JetBrains Mono', 'Courier New', monospace">python -m pytest diet_log_analyses/scripts/tests -q</td></tr>
+<tr><td>Run a notebook (component0/1/2_…)</td><td style="font-family:'JetBrains Mono', 'Courier New', monospace">jupyter nbconvert --to notebook --execute --inplace &lt;nb&gt;</td></tr>
+<tr style="background:#EFEBE2"><td>Run a script</td><td style="font-family:'JetBrains Mono', 'Courier New', monospace">python diet_log_analyses/scripts/&lt;script&gt;.py</td></tr>
+<tr><td>16S/meat/plants figures</td><td style="font-family:'JetBrains Mono', 'Courier New', monospace">bash run_all_analyses.sh (you run it)</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#3E4A54">In code: import _paths first, then the shared modules (config, weeklong_16s, weeklong_food).</p>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Every result is regenerated by a command from the raw inputs, never by hand, so anyone can rerun it and get the same numbers [10, 25]. One Python installation and one path helper mean every script sees the same libraries and the same shared code.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, “Layout and running code” · sources [10, 25]</p>
+</section>
+</div></div><p class="num">34 / 37 · running</p><div class="frame" id="s35"><div class="slide"><section id="gotchas" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">Gotchas in these data</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Things that silently go wrong</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Excel reading</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Plain pd.read_excel turns “01” into 1 and “NA” into missing. Use read_excel_like_readxl().</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px"><h3 style="font-size:27px;font-weight:600">OTU ≠ Feature</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Taxa follow the tree’s tip order, so feature_%04d names differ from feature_data’s Feature.</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Unresolvable foods</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Milk, cheese and beef are all Bos taurus: compare per food taxon, not per ingredient.</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Uncertain foods</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">Egg is Gallus gallus but rated Uncertain: chicken DNA can look “never logged”.</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Reference gaps</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">24 logged plant foods (corn, apple, squash…) have no genus in the trnL taxonomy.</p></div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFDF8;padding:22px;border:1px solid #DDD8CC;border-radius:16px"><h3 style="font-size:27px;font-weight:600">Broad detection</h3><p style="font-size:24px;line-height:1.38;color:#3E4A54">At 0.1%, saliva and some stools carry many taxa; plant DNA is also in blanks.</p></div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px"><p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p><p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Each of these has already produced a wrong or misleading result once without any error message. They are written into CLAUDE.md, PROGRESS.md or the notebooks so that new code handles them on purpose instead of rediscovering them.</p></div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · diet_log_analyses/CLAUDE.md, “Gotchas” · PROGRESS.md, “Known properties of the inputs”</p>
+
+</section>
+</div></div><p class="num">35 / 37 · gotchas</p><p class="notes">Also in Gotchas: food DNA appears in stool about 12 h to 5 days after eating, and one stool sample detects only part of recent intake, so per-sample and per-subject recall are not comparable.</p><div class="frame" id="s36"><div class="slide"><section id="checks" style="background:#F7F5F0;color:#1F2A33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#B5562A;font-weight:600;letter-spacing:2px;text-transform:uppercase">How the instructions were checked · 17–18 Oct 2026</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">CLAUDE.md tested against the data</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:26px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">ONE CHECK PER RULE</p>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">Each file or join rule checked, expected result written first. Failures and gaps led to 12 edits.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:26px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">BLIND REBUILD</p>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">A fresh agent with only CLAUDE.md rebuilt four old tables; the mismatches exposed missing rules.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:26px;border:1px solid #DDD8CC;border-radius:16px">
+<p style="font-size:24px;color:#2F6F6B;font-weight:600">NOW PERMANENT</p>
+<p style="font-size:24px;line-height:1.38;color:#3E4A54">68 pytest tests in scripts/tests/ (rules and modules), all passing; deliberate breaks make the right tests fail.</p>
+</div>
+</div>
+<div style="display:flex;gap:24px;align-items:flex-start;background:#FBEFE6;border-left:6px solid #B5562A;padding:22px 28px;border-radius:12px">
+<p style="font-size:24px;font-weight:600;color:#B5562A;letter-spacing:2px">WHY</p>
+<p style="flex:1;font-size:26px;line-height:1.4;color:#1F2A33">Written rules can be wrong in ways nobody notices until results are off. Testing every rule against the data, and rebuilding old outputs from the text alone, found where CLAUDE.md was wrong or incomplete. Keeping the tests means the rules are checked again whenever an input or CLAUDE.md changes.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B6F73">Part 2 · Set-up · scripts/tests/test_claude_md_rules.py · decisions in PROGRESS.md</p>
+</section>
+</div></div><p class="num">36 / 37 · checks</p><div class="frame" id="s37"><div class="slide"><section id="status" style="background:#1F2A33;color:#F2EFE8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:30px">
+<p style="font-size:24px;color:#E09A5F;font-weight:600;letter-spacing:2px;text-transform:uppercase">Status · as of 19 October 2026</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Component 1 under way; component 2 planned</h2>
+<div style="display:flex;gap:30px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#2A3742;padding:28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Done</h3>
+<ul style="font-size:23px;line-height:1.38;color:#C9CED2"><li>Component 0: diet logs described</li><li>Component 1, section 0: per-subject log vs DNA, naming check, whole-week recall and precision</li><li>Component 2: stool plan written</li><li>Input profiler; 68 passing tests</li></ul></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#2A3742;padding:28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Next</h3>
+<ul style="font-size:23px;line-height:1.38;color:#C9CED2"><li>Component 1 analysis plan: timing curve primary, recall and precision at 12 h–5 d</li><li>Then method tests on simulated data, then stool, capsules, saliva</li></ul></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#2A3742;padding:28px;border-radius:16px"><h3 style="font-size:28px;font-weight:600">Open questions</h3>
+<ul style="font-size:23px;line-height:1.38;color:#C9CED2"><li>Count Uncertain foods (egg) as eaten?</li><li>Foods with no genus in the trnL taxonomy</li><li>LS1888–LS1891: 16S reads, no info-sheet row</li></ul></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#9AA3AA">This slide goes out of date: PROGRESS.md is the current record</p>
+</section>
+</div></div><p class="num">37 / 37 · status</p>
+</main>
+<script>
+  function fit() {
+    document.querySelectorAll('.frame').forEach(f => {
+      f.firstElementChild.style.transform = 'scale(' + (f.clientWidth / 1920) + ')';
+    });
+  }
+  window.addEventListener('resize', fit); fit();
+</script>
+</body></html>

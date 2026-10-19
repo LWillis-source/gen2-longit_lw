@@ -1,0 +1,15 @@
+ingredient,subject_days,days_stated,subjects,entries,days_assumed_only,pct_of_days
+cheese,57,39,16,77,18,34.1
+cacao,45,45,14,57,0,26.9
+yogurt,36,31,11,39,5,21.6
+soy sauce,32,14,15,40,18,19.2
+kimchi,16,16,6,16,0,9.6
+natto,11,11,2,11,0,6.6
+miso,10,10,6,11,0,6.0
+wine,10,10,2,10,0,6.0
+feta,7,4,4,7,3,4.2
+beer,2,2,1,2,0,1.2
+balsamic vinegar,1,1,1,1,0,0.6
+cream cheese,1,1,1,1,0,0.6
+goat cheese,1,1,1,1,0,0.6
+soybean paste,1,0,1,1,1,0.6

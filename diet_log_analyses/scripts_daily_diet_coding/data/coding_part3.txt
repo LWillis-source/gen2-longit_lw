@@ -1,0 +1,605 @@
+## 15|08-11
+|Oatmeal|oat
+|coffee|coffee
+|milk|cow milk
+|pea protein powder|pea protein
+|rice|rice
+|lentils|lentil
+|blackeye peas|black-eyed pea
+|chicken|chicken
+|tomato|tomato
+|onion|onion
+## 15|08-12
+|Oatmeal|oat
+|pea protein|pea protein
+|Chicken|chicken
+|rice|rice
+|cucumbers|cucumber
+|tomato|tomato
+|Lamb|lamb
+|rice|rice
+|falafel|chickpea
+## 15|08-13
+|Oatmeal|oat
+|pea protein|pea protein
+|coffee|coffee
+|rice|rice
+|chicken|chicken
+|vegetables|mixed vegetables
+|pasta|wheat?
+|tomato|tomato
+|cabbage|cabbage
+|chicken|chicken
+## 15|08-14
+|oatmeal|oat
+|pea protein|pea protein
+|coffee|coffee
+|rice|rice
+|lentils|lentil
+|chicken|chicken
+|egg|egg
+|pumpkin seeds|pumpkin seed
+|pasta|wheat?
+|cheese|cheese
+## 15|08-15
+|pasta|wheat?
+|onion|onion
+|oatmeal|oat
+|protein powder|protein powder
+|coffee|coffee
+|chicken|chicken
+|rice|rice
+|lettuce|lettuce
+|cheese|cheese
+|corn|corn
+## 15|08-16
+|oatmeal|oat
+|burrito|wheat?,rice?,beans (unspecified)?,cheese?
+|noodles|wheat?
+## 15|08-17
+|oatmeal|oat
+|bread|wheat?
+|chicken|chicken
+|pork|pork
+|noodles|wheat?
+## 15|08-18
+|Oatmeal|oat
+|protein|protein powder
+|rice|rice
+|lentils|lentil
+|beans|beans (unspecified)
+|chicken|chicken
+|pasta|wheat?
+|cabbage|cabbage
+|tomato|tomato
+## 16|08-10
+Breakfast|whole wheat bread (2 slices)|wheat
+|1 cha siu bao (small)|wheat?,pork
+|1 Boiled egg|egg
+|Coffee with milk|coffee,cow milk
+Lunch|Chicken Teriyaki|chicken,soy sauce,sugar?
+|cooked zucchini|zucchini
+Dinner|Pork|pork
+|potato mash|potato,butter?,cow milk?
+|lettuce salad|lettuce
+|Orange gauva juice one cup|orange,guava
+Fruit|two slices of melon|melon
+|one kiwi|kiwi
+## 16|08-11
+Breakfast|Corn|corn
+|Oatmeal|oat
+|fried egg|egg
+|coffee with milk|coffee,cow milk
+Lunch|Bok choy and cabbage (under)|bok choy,cabbage
+|Meatball|beef?,pork?
+|pork slices|pork
+Dinner|chicken breast|chicken
+|chickpea|chickpea
+|curry cauliflower|cauliflower,curry spices
+|salad|lettuce?
+|plantain|plantain
+## 16|08-12
+Breakfast|Veggie-shrimp dumplings|wheat?,shrimp,mixed vegetables
+|1 boiled egg|egg
+|cherries|cherry
+|coffee+milk|coffee,cow milk
+Lunch|Korean bowl from Greenfish|rice?,unknown
+Dinner|beef|beef
+|Yucca fries|cassava,vegetable oil?
+|green beans|green bean
+|broccoli|broccoli
+|tomatos|tomato
+## 16|08-13
+Breakfast|dumplings|wheat?,pork?,mixed vegetables?
+|1 boiled egg|egg
+|half bun|wheat?
+|veggie and egg porridge|rice?,egg,mixed vegetables
+|6 cherries|cherry
+Lunch|Blend tofu box|tofu,rice?,mixed vegetables?
+|half fried egg|egg
+Dinner|fish|fish
+|some french fries|potato,vegetable oil?
+|meatless meatball|plant-based mince
+|corns and peas|corn,pea
+## 16|08-14
+Breakfast|wonton soup|wheat?,pork?,shrimp?
+|1 boiled egg|egg
+Lunch|chicken/duck|chicken?,duck?
+|sauted sponge gourd|luffa
+Dinner|tofu soup|tofu
+|kimchi|kimchi
+## 16|08-15
+Breakfast|fermented rice cake|rice
+Lunch|eggplant|eggplant
+|beef|beef
+|fried rice|rice,egg?,vegetable oil?
+Dinner|sauted sponge gourd|luffa
+|bamboo beef|beef,bamboo shoot
+|Teppanyaki seafood|seafood (mixed)
+## 16|08-16
+Breakfast|cream bun|wheat?,cream,sugar?
+|oatmeal with milk|oat,cow milk
+|egg|egg
+Lunch|beef stew with tomato|beef,tomato
+|bok choy|bok choy
+Dinner|beef slices|beef
+|beef stew|beef,mixed vegetables?
+|pork ear slices|pork
+|bok choy|bok choy
+## 16|08-17
+Breakfast|shrimp dumplings|wheat?,shrimp
+|1 boiled egg|egg
+|coffee with milk|coffee,cow milk
+lunch|fish|fish
+|hash brown|potato,vegetable oil?
+|curry tofu|tofu,curry spices?
+|scrambled eggs|egg
+|broccoli|broccoli
+|carrot|carrot
+|grapefruit|grapefruit
+## 16|08-18
+Breakfast|shrimp dumplings|wheat?,shrimp
+|bread with pistachio cream|wheat?,pistachio,sugar?
+|1 boiled egg|egg
+|coffee with milk|coffee,cow milk
+Snack|blueberries|blueberry
+Lunch|poke salmon bowl from Green Fish|salmon,rice?,soy sauce?
+Dinner|beef stew|beef,mixed vegetables?
+|eggplants|eggplant
+## 16|08-19
+Breakfast|fermented rice cake|rice
+|Wotou (whole grain)|grain cereal
+|one boiled egg|egg
+|coffee with milk|coffee,cow milk
+lunch|Blend panko tofu bowl (with sausage and all veggies)|tofu,wheat?,pork?,mixed vegetables
+## 17|08-10
+Breakfast|French fries|potato,vegetable oil?
+|raw celery|celery
+|raw peanuts|peanut
+Lunch|Sausage fried rice|pork?,rice,egg?,vegetable oil?
+Dinner|Hamachi sashimi|hamachi
+|white rice|rice
+|soy sauce|soy sauce
+|wasabi|wasabi
+|takoyaki|wheat?,octopus,egg?
+|miso soup|miso,tofu?,seaweed?
+|natto mochi donuts|natto,glutinous rice,wheat?,sugar?
+## 17|08-11
+Breakfast|chocolate nuts bar|cacao,nuts (unspecified)
+Lunch|sausage fried rice with green onions|pork?,rice,egg?,scallion,vegetable oil?
+Snack|cookies|wheat?,sugar?,butter?
+|dried apple|apple
+|Mochi donut|glutinous rice,wheat?,sugar?
+Dinner|Miso soup|miso,tofu?,seaweed?
+|stir fried chicken thigh|chicken
+|stir fried bukchoy|bok choy
+## 17|08-12
+Lunch|Stir fried chicken thigh|chicken
+|white rice|rice
+|stir fried bukchoy|bok choy
+Dinner|Salmon Sashimi|salmon
+|White rice|rice
+|green onions|scallion
+|dried seaweed|nori
+|Natto|natto
+|stir-fried bukchoy|bok choy
+Snack|Gold fish|wheat,cheese
+|Cookie|wheat?,sugar?,butter?
+## 17|08-13
+|Chicken thigh stir fried|chicken
+|White rice|rice
+|Celery sticks|celery
+|sausage|pork?
+|Dried seaweed|nori
+|Miso soup|miso,tofu?,seaweed?
+|chocolate nut bar|cacao,nuts (unspecified)
+## 17|08-14
+|chicken thigh stir fried|chicken
+|white rice|rice
+|Mifen noodles with beef tendon|rice,beef
+|pork buns|wheat?,pork
+## 17|08-15
+|Chicken skewers (Kali)|chicken
+|Roasted lamb (Kali)|lamb
+|Beef sausage (Kali)|beef
+|Cucumber, tomato, cheese salad (Kali)|cucumber,tomato,cheese
+|Rice white (Kali)|rice
+|overnight oats with peanut butter|oat,peanut
+|Ramen with sausage|wheat,pork?
+|Raw celery|celery
+|white rice with natto|rice,natto
+## 17|08-16
+|Chocolate nut bar|cacao,nuts (unspecified)
+|Raw celery|celery
+|sausage|pork?
+|white rice|rice
+|raw octopus|octopus
+|raw fish|fish
+|miso soup|miso,tofu?,seaweed?
+|fried chicken|chicken,wheat?
+|mango mochi ice cream|mango,glutinous rice,ice cream
+|oven broiled broccoli|broccoli
+## 18|08-10
+|Chicken|chicken
+|Hash brown potatoes|potato,vegetable oil?
+|Caesar Salad|lettuce,cheese?,wheat?,egg?,anchovy?
+|Broccoli|broccoli
+|Celery|celery
+|Chicken|chicken
+|Natto|natto
+|White rice|rice
+|Kimchi|kimchi
+|Avocado|avocado
+|Chocolate|cacao,sugar?
+|Scrambled eggs|egg
+## 18|08-11
+|cereal (oat)|oat
+|milk|cow milk
+|brown rice|rice
+|onion|onion
+|carrot|carrot
+|ground beef|beef
+|chicken|chicken
+|avocado|avocado
+|lettuce|lettuce
+|natto|natto
+## 18|08-12
+|cereal (oat)|oat
+|milk|cow milk
+|chicken|chicken
+|brown rice|rice
+|onion|onion
+|burdock root|burdock
+|natto|natto
+|kimchi|kimchi
+|salmon|salmon
+|lettuce|lettuce
+|broccoli|broccoli
+|carrot|carrot
+## 18|08-13
+|Cereal|grain cereal
+|Milk|cow milk
+|Brown rice|rice
+|Shrimp|shrimp
+|Carrot|carrot
+|Cabbage|cabbage
+|Chicken|chicken
+|Avocado|avocado
+|Kimchi|kimchi
+|Natto|natto
+|Kale|kale
+|Tomato|tomato
+## 18|08-14
+|Cereal|grain cereal
+|Milk|cow milk
+|Ground beef|beef
+|Brown rice|rice
+|Carrot|carrot
+|Onion|onion
+|Egg|egg
+|White rice|rice
+|Beef|beef
+|Kale|kale
+|Kimchi|kimchi
+|Avocado|avocado
+## 18|08-15
+|Cereal|grain cereal
+|Milk|cow milk
+|Shrimp|shrimp
+|Egg|egg
+|White rice|rice
+|Carrot|carrot
+|Brown rice|rice
+|Beef|beef
+|Kale|kale
+|Kimchi|kimchi
+|Avocado|avocado
+|Natto|natto
+## 18|08-16
+|Chocolate|cacao,sugar?
+|Milk|cow milk
+|White rice|rice
+|Pork|pork
+|Carrot|carrot
+|Onion|onion
+|Hamburger|beef,wheat?
+|Chow mein|wheat?,cabbage?,onion?,soy sauce?
+|Bok Choy|bok choy
+|Fried rice|rice,egg?,soy sauce?,vegetable oil?
+|Soup dumpling|wheat?,pork?
+## 18|08-17
+|Cereal|grain cereal
+|Milk|cow milk
+|Gyoza|wheat?,pork?,cabbage?,garlic?,scallion?
+|Udon|wheat
+|Peking duck|duck,wheat?
+|Brown rice|rice
+|Natto|natto
+|Egg|egg
+|Cabbage|cabbage
+|Okra|okra
+## 18|08-18
+|White rice|rice
+|Natto|natto
+|Cabbage|cabbage
+|Shrimp|shrimp
+|Carrot|carrot
+|Egg|egg
+|Pork|pork
+|Kimchi|kimchi
+|Broccoli|broccoli
+## 18|08-19
+|Cereal|grain cereal
+|Milk|cow milk
+|Natto|natto
+|White rice|rice
+|Beef|beef
+|Carrot|carrot
+|Cabbage|cabbage
+|Brown rice|rice
+|Kimchi|kimchi
+|Dried radish|radish
+|Avocado|avocado
+|Spring roll|wheat?,cabbage?,carrot?,pork?
+## 19|08-10
+|Plantains|plantain
+|eggs|egg
+|yogurt|yogurt
+|apple|apple
+## 19|08-11
+|teff pancakes|teff,egg?
+|banana|banana
+|tomatoes cherry|tomato
+|Chia pudding|chia
+|chicken soup|chicken,carrot?,celery?,onion?
+## 19|08-12
+|Coffee|coffee
+|milk|cow milk
+|tomato|tomato
+|banana|banana
+|3 mangos|mango
+|apple|apple
+|2 chicken breasts|chicken
+|sweet potato|sweet potato
+|quinoa|quinoa
+## 19|08-13
+|Figs (8)|fig
+|Mango|mango
+|lychee|lychee
+|bean soup|beans (unspecified)
+|pumkin pancakes|pumpkin,wheat?,egg?
+|cheese|cheese
+|egg|egg
+## 19|08-14
+|Toast with butter and honey|wheat?,butter,honey
+|mango|mango
+|figs|fig
+|slamon|salmon
+|almond milk|almond milk
+|cheeseburger|beef,wheat?,cheese
+|fried|unknown
+|latte|coffee,cow milk
+## 19|08-15
+|Chicken soup|chicken,carrot?,celery?,onion?
+|mango|mango
+## 19|08-16
+|Coffee|coffee
+|cheese burger|beef,wheat?,cheese
+|paninni|wheat?
+|waffles|wheat?,egg?,cow milk?
+|coffee|coffee
+## 19|08-17
+|Steak|beef
+|corn|corn
+|avocado|avocado
+|hummus|chickpea,sesame
+|coffee|coffee
+## 19|08-18
+|Thai noodles|rice?,peanut?,egg?
+|peach|peach
+|salmon|salmon
+|rice|rice
+## 19|08-19
+|2 peaches|peach
+|tuna|tuna
+|salmon|salmon
+|eggs|egg
+|chicken|chicken
+|lattee|coffee,cow milk
+|granola bar|oat?,sugar?
+## 20|08-10
+|Pistachio latte|coffee,pistachio,cow milk?
+|borek cheese|wheat?,cheese
+|one piece of olive bread|wheat?,olive
+|a small cube of cheese|cheese
+|1 cup steamed rice|rice
+|braised tofu with mushrooms and bok choy|tofu,mushroom,bok choy
+|a donut|wheat?,sugar?,vegetable oil?
+|two red bean buns|wheat?,red bean,sugar?
+|half a gatorade|sugar
+## 20|08-11
+|yogurt and granola with blueberries and chia seeds|yogurt,oat?,blueberry,chia
+|an electrolyte tablet|supplement
+|a chocolate protein shake|protein powder,cacao
+|rice|rice
+|stir fry with green beans, tofu and mushrooms|green bean,tofu,mushroom
+## 20|08-12
+|A thai tea shortbread cookie|wheat?,tea,butter?,sugar?
+|1 cup plain yogurt with 1 Tbsp honey and ~1/2 cup blueberries|yogurt,honey,blueberry
+|2 thai tea shortbread cookies|wheat?,tea,butter?,sugar?
+|tea with ~1/2 cup oatmilk|tea,oat milk
+|1 cup rice with stir fried mushrooms, tofu, and green beans|rice,mushroom,tofu,green bean
+|5 cashew clusters|cashew,sugar?
+## 20|08-13
+|A banana|banana
+|Greek yogurt|yogurt
+|part of a mango smoothie|mango
+|trail mix|trail mix
+|Trader Joe's cheese crispies|cheese
+|chow mein|wheat?,cabbage?,onion?,soy sauce?
+|rice|rice
+|eggplant and veggie stir fry|eggplant,mixed vegetables
+|fortune cookie|wheat,sugar?
+## 20|08-14
+|Black tea with oat milk|tea,oat milk
+|yogurt with honey and blueberries|yogurt,honey,blueberry
+|trail mix|trail mix
+|a protein shake|protein powder
+|rice pudding|rice,cow milk,sugar?
+|rice with stir fried veggies|rice,mixed vegetables
+|a Rice Krispie treat|rice,sugar?,gelatin?
+|kombucha|tea,sugar?
+## 20|08-15
+|French toast with a little butter and maple syrup|wheat?,egg?,cow milk?,butter,maple syrup
+|two Irish coffees|coffee,whiskey,cream?
+|a mango mousse thing for lab meeting|mango,cream?,sugar?
+|a fried zucchini fritter salad|zucchini,wheat?,egg?,vegetable oil?
+|a shortbread cookie|wheat?,butter?,sugar?
+|a chai latte|tea,cow milk?,cinnamon?,ginger?
+|part of a pita|wheat?
+|paneer tikka masala with rice|paneer,tomato?,cream?,curry spices?,rice
+|1 piece baklava|wheat?,pistachio?,walnut?,honey?,butter?
+## 20|08-16
+|Coffee with oat milk|coffee,oat milk
+|yogurt with blueberries and honey|yogurt,blueberry,honey
+|rice|rice
+|paneer tikka masala|paneer,tomato?,cream?,curry spices?
+|Trader Joe's agrees crunchies|unknown
+|saffron rice pudding|rice,cow milk,saffron,sugar?
+|a chocolate protein shake|protein powder,cacao
+## 20|08-17
+|Pistachio latte|coffee,pistachio,cow milk?
+|cheese/phyllo pastry with honey|cheese,wheat?,honey
+|a few berries/walnuts/grapes|berries (mixed),walnut,grape
+|some baked feta with tomatoes|feta,tomato
+|olives|olive
+|olive bread|wheat?,olive
+|a nuun hydration tablet|supplement
+|dried mango|mango
+|paneer tikka masala with rice|paneer,tomato?,cream?,curry spices?,rice
+|a chocolate protein shake|protein powder,cacao
+## 20|08-18
+|Saffron rice pudding|rice,cow milk,saffron,sugar?
+|coffee with oat milk|coffee,oat milk
+|trail mix|trail mix
+|an Asian pear|asian pear
+|a protein shake|protein powder
+|tepache|pineapple,sugar?
+|Zareen's palak paneer with rice|paneer,spinach,rice
+|Dahl|lentil
+|naan|wheat?,yogurt?
+## 20|08-19
+|yogurt with figs, granola, honey, and chia seeds|yogurt,fig,oat?,honey,chia
+|black tea with oat milk|tea,oat milk
+|blueberries & raspberries|blueberry,raspberry
+|cheddar cheese|cheese
+|a slice of bread|wheat?
+|stir fry with shiitake mushrooms, eggplant, green beans, and tofu over rice|shiitake,eggplant,green bean,tofu,rice
+|tepache|pineapple,sugar?
+|asian pear|asian pear
+## 21|08-10
+|coffee with milk|coffee,cow milk
+|trader joes truffle ravioli with arugula and tomatoes|wheat?,truffle,cheese?,egg?,arugula,tomato
+|pho with beef balls, tripe, lean brisket|rice,beef,onion?,ginger?
+|pancit bihon with green beans|rice,green bean,pork?,carrot?,cabbage?
+|raspberries|raspberry
+## 21|08-11
+|hi-chew candy|sugar,gelatin?
+|acai bowl|acai,banana?,granola?
+|coffee with cup of whole milk|coffee,cow milk
+|pancit bihon with green beans and cherry tomatoes|rice,green bean,tomato,pork?,carrot?,cabbage?
+|rotisserie chicken (breast & thigh)|chicken
+|mediterranean salad|lettuce?,tomato?,cucumber?,olive?,feta?
+## 21|08-12
+|milk with coffee|cow milk,coffee
+|yogurt|yogurt
+|kimbap (teriyaki chicken & chicken katsu)|rice,nori,chicken,soy sauce,wheat?
+|mediterranean salad with tomatoes and artichoke|lettuce?,tomato,artichoke,cucumber?,olive?,feta?
+|dubai chocolate|cacao,pistachio,wheat?,sesame?,sugar?
+|sparkling apple cider vinegar drink|apple
+## 21|08-13
+|milk and coffee|cow milk,coffee
+|dark chocolate covered acai/blueberry|cacao,acai,blueberry,sugar?
+|breakfast sausage|pork?
+|blueberry noosa lemon yogurt|yogurt,blueberry,lemon,honey?
+|kalis beef/lamb gyro meat with pita, rice, cherry tomato, cucumber, red onion, feta cheese, parsley, tzatziki sauce|beef,lamb,wheat?,rice,tomato,cucumber,onion,feta,parsley,yogurt,garlic?
+|sardine|sardine
+|marinara sauce|tomato,onion?,garlic?,basil?
+|butternut squash ravioli|wheat?,butternut squash,egg?,cheese?
+|cabbage|cabbage
+## 21|08-14
+|coffee with milk|coffee,cow milk
+|ciabatta sandwich with 2 eggs, kewpie mayo, pesto spread|wheat?,egg,egg,vegetable oil?,basil,pine nut?,olive oil?,cheese?
+|butternut squash ravioli|wheat?,butternut squash,egg?,cheese?
+|marinara sauce|tomato,onion?,garlic?,basil?
+|cabbage|cabbage
+|sardine|sardine
+|yogurt|yogurt
+|sour pickle|cucumber
+|fish in soup|fish
+|white rice|rice
+## 21|08-15
+|whole milk + coffee|cow milk,coffee
+|noosa yogurt|yogurt,honey?
+|kalis beef/lamb plate (pita, white rice, cucumber, cherry tomato, red onion, feta, parsley, tzatziki)|beef,lamb,wheat?,rice,cucumber,tomato,onion,feta,parsley,yogurt,garlic?
+|chipotle rice bowl (chicken, guacamole, lettuce, fajita vegetable, sour cream, brown rice, tomato salsa, corn)|chicken,avocado,lettuce,bell pepper,onion,cream,rice,tomato,corn
+|1/2 chocolate sprinkles cupcake|wheat?,cacao,sugar?,egg?,butter?
+|decadent passionfruit mousse|passionfruit,cream?,sugar?
+|trader joes vitamin pill|supplement
+|jalapeno kettle potato chips|potato,chili pepper,vegetable oil?
+## 21|08-16
+|whole milk + coffee|cow milk,coffee
+|sandwich (ciabatta, 2 eggs, pesto, kewpie mayo, 1 dill pickle slice)|wheat?,egg,vegetable oil?,basil,pine nut?,olive oil?,cheese?,cucumber,dill
+Korean food|seafood pancake|wheat?,seafood (mixed),egg?,scallion?
+|kimchi|kimchi
+|bok choy|bok choy
+|imitation crab + mayo|imitation crab,egg?,vegetable oil?
+|pickled radish|radish
+|squash|squash
+|quail eggs|quail egg
+|japanese pumpkin|pumpkin
+|cucumber|cucumber
+|miso soup|miso,tofu?,seaweed?
+|spicy octopus bibimbap|octopus,rice,chili pepper,mixed vegetables?,egg?
+|seafood tofu soup|seafood (mixed),tofu,chili pepper?
+|beef|beef
+|oyster mushroom|oyster mushroom
+|lettuce|lettuce
+|ssamjang|miso?,chili pepper?,soybean paste?
+After|melon cake|melon,wheat?,egg?,cream?,sugar?
+|cheese and crackers|cheese,wheat?
+bbq|mac & cheese|wheat?,cheese,cow milk?
+|ribs|pork?
+|chicken breast|chicken
+|bell peppers|bell pepper
+|cauliflower|cauliflower
+|corn|corn
+alcohol|wine/champagne|wine
+## 21|08-17
+|whole milk + coffee|cow milk,coffee
+|sandwich (ciabatta, 2 eggs, pesto, kewpie mayo, dill pickle slice)|wheat?,egg,vegetable oil?,basil,pine nut?,olive oil?,cheese?,cucumber,dill
+|pho|rice,beef?,onion?,ginger?
+|Hanoi pho|rice,beef?,onion?,ginger?
+|Samyang Buldak Carbonara Ramen Cup|wheat,chili pepper?,cheese?,cream?
+|kimchi (added)|kimchi
+|tomato (added)|tomato

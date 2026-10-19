@@ -1,0 +1,181 @@
+species,subject_days,subjects,entries,days_stated
+Bos taurus,136,18,381,126
+Triticum aestivum,132,19,327,31
+Gallus gallus,129,18,230,103
+Oryza sativa,118,19,170,106
+Glycine max,112,17,211,81
+Beta vulgaris,78,17,118,7
+Saccharum officinarum,77,16,117,6
+Coffea arabica,74,15,86,73
+Solanum lycopersicum,70,17,91,49
+Helianthus annuus,51,16,67,7
+Brassica napus,51,16,61,2
+Avena sativa,51,16,57,43
+Sus scrofa,48,14,63,27
+Theobroma cacao,45,14,57,45
+Allium cepa,43,14,55,21
+Lactuca sativa,40,11,42,22
+Capsicum annuum,38,13,48,29
+Allium sativum,35,11,39,26
+Zea mays,31,14,33,27
+Brassica oleracea var. capitata,31,12,36,26
+Solanum tuberosum,31,14,39,28
+Daucus carota subsp. sativus,29,12,30,21
+Allium fistulosum,28,10,31,24
+Cucumis sativus,27,12,30,18
+unspecified vegetables,25,13,30,20
+Zingiber officinale,23,10,25,19
+Arachis hypogaea,22,9,27,18
+Brassica oleracea var. italica,20,10,21,19
+Persea americana,20,10,20,18
+"Penaeidae (shrimp, unspecified)",20,8,21,18
+Phaseolus vulgaris,20,11,22,19
+Vaccinium spp.,19,8,21,19
+Raphanus sativus,18,8,21,18
+Vitis vinifera,18,5,18,18
+Pisum sativum,18,8,18,17
+Curcuma longa,18,8,19,5
+Cuminum cyminum,18,9,19,5
+Malus domestica,18,10,21,18
+Brassica rapa subsp. pekinensis,18,7,18,18
+Camellia sinensis,17,6,21,17
+Coriandrum sativum,17,8,18,4
+Cocos nucifera,17,7,20,15
+Ovis aries,17,9,19,13
+Mangifera indica,17,9,18,17
+Musa acuminata x balbisiana,16,8,16,15
+Apis mellifera,16,4,22,9
+Agaricus bisporus,15,9,17,11
+Salmo salar,15,7,15,15
+Spinacia oleracea,15,6,16,14
+unspecified fruit,14,5,14,13
+Olea europaea,14,8,16,4
+Brassica rapa subsp. chinensis,13,7,15,13
+Triticum / Zea / Avena / Oryza (unspecified),13,7,15,9
+soy: Glycine max),12,4,12,11
+Brassica oleracea var. botrytis,12,9,14,12
+Actinopterygii (unspecified fish),12,7,12,11
+unspecified (whey: Bos taurus,12,4,12,11
+pea: Pisum sativum,12,4,12,11
+Sesamum indicum,12,8,12,5
+Citrus limon,11,7,12,8
+Rubus idaeus,11,5,11,11
+Cucurbita pepo,11,7,12,11
+Anacardium occidentale,10,4,11,9
+Citrus x sinensis,10,5,10,10
+Citrullus lanatus,10,4,10,10
+Brassica oleracea var. sabellica,10,5,10,10
+Lens culinaris,9,6,9,9
+Thunnus spp.,9,4,9,9
+Apium graveolens,9,4,9,5
+Cicer arietinum,9,6,9,9
+Pyropia yezoensis,8,6,8,7
+Capra hircus,8,5,8,5
+Dioscorea alata,8,3,8,8
+Phaseolus vulgaris (assumed),8,7,8,4
+Prunus dulcis,8,4,10,6
+Pistacia vera,7,5,8,6
+Prunus persica,7,3,7,7
+unknown,7,5,7,7
+Cinnamomum spp.,7,3,7,5
+Ipomoea batatas,7,6,7,6
+Fragaria x ananassa,6,5,6,6
+Manihot esculenta,6,3,6,6
+Undaria pinnatifida (assumed),6,3,6,1
+Solanum melongena,6,4,6,6
+Ocimum basilicum,6,3,7,5
+Ananas comosus,5,4,5,5
+mixed distilled spirits (unspecified),5,1,5,4
+Vigna radiata,5,3,5,3
+Salvia hispanica,5,4,5,5
+Cucumis melo,5,4,6,5
+Engraulis spp.,5,3,5,0
+Octopus vulgaris,5,4,5,5
+Meleagris gallopavo,4,3,4,4
+unspecified nuts / seeds / dried fruit,4,2,4,4
+unspecified nuts,4,2,4,4
+Prunus domestica,4,2,4,4
+Rubus / Fragaria / Vaccinium (unspecified),4,4,4,4
+Luffa aegyptiaca,4,2,4,4
+Hordeum vulgare,4,2,4,4
+Eutrema japonicum,4,2,4,1
+Euterpe oleracea,4,2,4,4
+Juglans regia,3,2,3,2
+Linum usitatissimum,3,1,3,3
+Cynara cardunculus var. scolymus,3,3,3,3
+Anethum graveolens,3,2,3,3
+Brassica juncea,3,3,3,2
+Actinidia deliciosa,3,3,3,3
+Anas platyrhynchos,3,3,3,2
+Carya illinoinensis,3,1,3,3
+Pinus spp.,3,1,3,0
+none,3,2,3,3
+Pyrus pyrifolia,3,2,3,2
+Sinapis alba,3,3,3,2
+none (no food DNA),3,1,3,3
+unspecified plant-based,3,1,3,3
+mixed fish/shellfish (unspecified),3,3,4,3
+Ficus carica,3,2,3,3
+Cucurbita moschata,3,2,3,3
+Cucurbita maxima,3,3,3,3
+Vaccinium macrocarpon,2,2,2,2
+Tuber spp.,2,2,2,2
+Vigna mungo,2,1,2,0
+Secale cereale,2,2,2,2
+"Gadidae (cod/haddock/pollock, unspecified)",2,2,2,2
+Eruca vesicaria,2,2,2,2
+Gadus chalcogrammus,2,2,2,2
+Crocus sativus,2,1,2,2
+Psidium guajava,2,2,2,2
+Citrus reticulata,2,2,2,2
+Chenopodium quinoa,2,2,2,2
+"Brachyura (crabs, unspecified)",2,1,2,2
+Citrus x paradisi,2,2,2,2
+Citrus x aurantiifolia,2,2,2,0
+Acer saccharum,2,2,2,2
+Abelmoschus esculentus,2,2,2,2
+Allium ampeloprasum,2,2,2,2
+Prunus avium,2,1,2,2
+Teuthida (squid),2,2,2,2
+Musa x paradisiaca,2,2,2,2
+Petroselinum crispum,2,1,2,2
+Prunus spp.,2,1,2,2
+Sardina pilchardus,2,1,2,2
+Anguilla japonica,1,1,1,1
+Arctium lappa,1,1,1,1
+Amorphophallus konjac,1,1,1,1
+Agave spp.,1,1,1,1
+Brassica oleracea var. gemmifera,1,1,1,1
+Brassica rapa,1,1,1,1
+Citrus bergamia,1,1,1,1
+Cantharellus cibarius,1,1,1,1
+Capparis spinosa,1,1,1,1
+Bambusoideae (Phyllostachys spp.),1,1,1,1
+Auricularia auricula-judae,1,1,1,1
+Asparagus officinalis,1,1,1,1
+Lentinula edodes,1,1,1,1
+Glycine max (oil),1,1,1,1
+Fagopyrum esculentum,1,1,1,0
+Crustacea/Mollusca (unspecified),1,1,1,1
+Coturnix japonica,1,1,1,1
+Eragrostis tef,1,1,1,1
+Gadus morhua,1,1,1,1
+Flammulina velutipes,1,1,1,1
+Macadamia integrifolia,1,1,1,1
+Gallus gallus (egg),1,1,1,1
+Pectinidae (scallops),1,1,1,1
+Passiflora edulis,1,1,1,1
+Nelumbo nucifera,1,1,1,1
+Litchi chinensis,1,1,1,1
+Piper nigrum,1,1,1,1
+Pleurotus ostreatus,1,1,1,1
+Seriola quinqueradiata,1,1,1,1
+Rubus spp.,1,1,1,1
+Sebastes spp.,1,1,1,1
+Saccharomyces cerevisiae,1,1,2,1
+Vigna angularis,1,1,1,1
+Vanilla planifolia,1,1,1,1
+Vigna unguiculata,1,1,1,1
+Zizania palustris,1,1,1,1
+mixed botanicals (unspecified),1,1,1,1
+unknown (soy/pea protein),1,1,1,1

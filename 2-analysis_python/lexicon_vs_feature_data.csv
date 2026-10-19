@@ -1,0 +1,265 @@
+ingredient,species_in_lexicon,marker,match_level_in_expected_file,genus,epithet,n_ASVs,plants_vs_meat
+acai,Euterpe oleracea,trnL,not found,Euterpe,oleracea,0,not found/not found
+agave,Agave spp.,trnL,not found,Agave,,0,not found/not found
+almond,Prunus dulcis,trnL,genus only,Prunus,dulcis,63,genus only/not found
+almond milk,Prunus dulcis,trnL,genus only,Prunus,dulcis,63,genus only/not found
+amaro,mixed botanicals (unspecified),none,not a taxon,,,0,0
+anchovy,Engraulis spp.,12SV5,not found,Engraulis,,0,not found/not found
+apple,Malus domestica,trnL,not found,Malus,domestica,0,not found/not found
+artichoke,Cynara cardunculus var. scolymus,trnL,genus only,Cynara,cardunculus,1,genus only/not found
+arugula,Eruca vesicaria,trnL,not found,Eruca,vesicaria,0,not found/not found
+asian pear,Pyrus pyrifolia,trnL,genus only,Pyrus,pyrifolia,30,genus only/not found
+asparagus,Asparagus officinalis,trnL,genus only,Asparagus,officinalis,4,genus only/not found
+avocado,Persea americana,trnL,genus only,Persea,americana,54,genus only/not found
+balsamic vinegar,Vitis vinifera,trnL,genus only,Vitis,vinifera,22,genus only/not found
+bamboo shoot,Bambusoideae (Phyllostachys spp.),trnL,not found,Bambusoideae,,0,not found/not found
+banana,Musa acuminata x balbisiana,trnL,genus only,Musa,acuminata,55,genus only/not found
+basil,Ocimum basilicum,trnL,species,Ocimum,basilicum,5,species/not found
+bean sprouts,Vigna radiata,trnL,genus only,Vigna,radiata,58,genus only/not found
+beans (unspecified),Phaseolus vulgaris,trnL,genus only,Phaseolus,vulgaris,32,genus only/not found
+beef,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+beer,Hordeum vulgare,trnL,genus only,Hordeum,vulgare,5,genus only/not found
+beet,Beta vulgaris,trnL,species,Beta,vulgaris,2,species/not found
+bell pepper,Capsicum annuum,trnL,genus only,Capsicum,annuum,31,genus only/not found
+bergamot,Citrus bergamia,trnL,genus only,Citrus,bergamia,13,genus only/not found
+berries (mixed),Rubus / Fragaria / Vaccinium (unspecified),trnL,not a taxon,,,0,0
+black bean,Phaseolus vulgaris,trnL,genus only,Phaseolus,vulgaris,32,genus only/not found
+black pepper,Piper nigrum,trnL,species,Piper,nigrum,1,species/not found
+black soybean,Glycine max,trnL,species,Glycine,max,159,species/not found
+black-eyed pea,Vigna unguiculata,trnL,genus only,Vigna,unguiculata,58,genus only/not found
+blackberry,Rubus spp.,trnL,genus only,Rubus,,41,genus only/not found
+blueberry,Vaccinium spp.,trnL,genus only,Vaccinium,,17,genus only/not found
+bok choy,Brassica rapa subsp. chinensis,trnL,species,Brassica,rapa,1,species/not found
+bourbon,Zea mays,trnL,not found,Zea,mays,0,not found/not found
+broccoli,Brassica oleracea var. italica,trnL,species,Brassica,oleracea,2,species/not found
+broccoli rabe,Brassica rapa,trnL,species,Brassica,rapa,1,species/not found
+brussels sprouts,Brassica oleracea var. gemmifera,trnL,species,Brassica,oleracea,2,species/not found
+buckwheat,Fagopyrum esculentum,trnL,species,Fagopyrum,esculentum,1,species/not found
+burdock,Arctium lappa,trnL,not found,Arctium,lappa,0,not found/not found
+butter,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+butternut squash,Cucurbita moschata,trnL,not found,Cucurbita,moschata,0,not found/not found
+cabbage,Brassica oleracea var. capitata,trnL,species,Brassica,oleracea,2,species/not found
+cacao,Theobroma cacao,trnL,genus only,Theobroma,cacao,70,genus only/not found
+caper,Capparis spinosa,trnL,genus only,Capparis,spinosa,8,genus only/not found
+carrot,Daucus carota subsp. sativus,trnL,species,Daucus,carota,47,species/not found
+cashew,Anacardium occidentale,trnL,species,Anacardium,occidentale,34,species/not found
+cassava,Manihot esculenta,trnL,genus only,Manihot,esculenta,1,genus only/not found
+cauliflower,Brassica oleracea var. botrytis,trnL,species,Brassica,oleracea,2,species/not found
+celery,Apium graveolens,trnL,species,Apium,graveolens,26,species/not found
+chanterelle,Cantharellus cibarius,none,not found,Cantharellus,cibarius,0,not found/not found
+cheese,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+cherry,Prunus avium,trnL,genus only,Prunus,avium,63,genus only/not found
+chia,Salvia hispanica,trnL,species,Salvia,hispanica,1,species/not found
+chicken,Gallus gallus,12SV5,species,Gallus,gallus,206,not found/species
+chickpea,Cicer arietinum,trnL,species,Cicer,arietinum,14,species/not found
+chili pepper,Capsicum annuum,trnL,genus only,Capsicum,annuum,31,genus only/not found
+cinnamon,Cinnamomum spp.,trnL,not found,Cinnamomum,,0,not found/not found
+cod,Gadus morhua,12SV5,genus only,Gadus,morhua,1,not found/genus only
+coffee,Coffea arabica,trnL,not found,Coffea,arabica,0,not found/not found
+collagen,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+corn,Zea mays,trnL,not found,Zea,mays,0,not found/not found
+cow milk,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+crab,"Brachyura (crabs, unspecified)",none,not a taxon,,,0,0
+cranberry,Vaccinium macrocarpon,trnL,genus only,Vaccinium,macrocarpon,17,genus only/not found
+cream,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+cream cheese,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+cucumber,Cucumis sativus,trnL,not found,Cucumis,sativus,0,not found/not found
+cumin,Cuminum cyminum,trnL,not found,Cuminum,cyminum,0,not found/not found
+curry spices,Curcuma longa,trnL,genus only,Curcuma,longa,4,genus only/not found
+curry spices,Coriandrum sativum,trnL,species,Coriandrum,sativum,1,species/not found
+curry spices,Cuminum cyminum,trnL,not found,Cuminum,cyminum,0,not found/not found
+daikon,Raphanus sativus,trnL,genus only,Raphanus,sativus,1,genus only/not found
+diet soda,none (no food DNA),none,not a taxon,,,0,0
+dill,Anethum graveolens,trnL,not found,Anethum,graveolens,0,not found/not found
+duck,Anas platyrhynchos,12SV5,species,Anas,platyrhynchos,6,not found/species
+edamame,Glycine max,trnL,species,Glycine,max,159,species/not found
+egg,Gallus gallus,12SV5,species,Gallus,gallus,206,not found/species
+eggplant,Solanum melongena,trnL,genus only,Solanum,melongena,16,genus only/not found
+enoki,Flammulina velutipes,none,not found,Flammulina,velutipes,0,not found/not found
+feta,Ovis aries,12SV5,species,Ovis,aries,16,not found/species
+feta,Capra hircus,12SV5,species,Capra,hircus,1,not found/species
+fig,Ficus carica,trnL,species,Ficus,carica,2,species/not found
+fish,Actinopterygii (unspecified fish),12SV5,not a taxon,,,0,0
+fruit (unspecified),unspecified fruit,trnL,not a taxon,,,0,0
+garlic,Allium sativum,trnL,species,Allium,sativum,20,species/not found
+gelatin,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+gelatin,Sus scrofa,12SV5,species,Sus,scrofa,78,not found/species
+ginger,Zingiber officinale,trnL,not found,Zingiber,officinale,0,not found/not found
+gluten-free flour,Oryza sativa,trnL,species,Oryza,sativa,28,species/not found
+gluten-free flour,Manihot esculenta,trnL,genus only,Manihot,esculenta,1,genus only/not found
+gluten-free flour,Zea mays,trnL,not found,Zea,mays,0,not found/not found
+glutinous rice,Oryza sativa,trnL,species,Oryza,sativa,28,species/not found
+goat cheese,Capra hircus,12SV5,species,Capra,hircus,1,not found/species
+grain cereal,Triticum / Zea / Avena / Oryza (unspecified),trnL,not a taxon,,,0,0
+grain-free cereal,unknown,trnL,not a taxon,,,0,0
+granola,Avena sativa,trnL,genus only,Avena,sativa,69,genus only/not found
+grape,Vitis vinifera,trnL,genus only,Vitis,vinifera,22,genus only/not found
+grapefruit,Citrus x paradisi,trnL,genus only,Citrus,paradisi,13,genus only/not found
+green bean,Phaseolus vulgaris,trnL,genus only,Phaseolus,vulgaris,32,genus only/not found
+guava,Psidium guajava,trnL,species,Psidium,guajava,1,species/not found
+hamachi,Seriola quinqueradiata,12SV5,genus only,Seriola,quinqueradiata,22,not found/genus only
+herbal liqueur,mixed botanicals (unspecified),none,not a taxon,,,0,0
+hoisin sauce,Glycine max,trnL,species,Glycine,max,159,species/not found
+hoisin sauce,Triticum aestivum,trnL,species,Triticum,aestivum,103,species/not found
+honey,Apis mellifera,none,not found,Apis,mellifera,0,not found/not found
+huel,Avena sativa,trnL,genus only,Avena,sativa,69,genus only/not found
+huel,Pisum sativum,trnL,genus only,Pisum,sativum,39,genus only/not found
+huel,Linum usitatissimum,trnL,species,Linum,usitatissimum,5,species/not found
+huel,Oryza sativa,trnL,species,Oryza,sativa,28,species/not found
+huel,Cocos nucifera,trnL,not found,Cocos,nucifera,0,not found/not found
+ice cream,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+ikea plant balls,Pisum sativum,trnL,genus only,Pisum,sativum,39,genus only/not found
+ikea plant balls,Avena sativa,trnL,genus only,Avena,sativa,69,genus only/not found
+ikea plant balls,Solanum tuberosum,trnL,genus only,Solanum,tuberosum,16,genus only/not found
+ikea plant balls,Allium cepa,trnL,species,Allium,cepa,4,species/not found
+ikea plant balls,Malus domestica,trnL,not found,Malus,domestica,0,not found/not found
+imitation crab,Gadus chalcogrammus,12SV5,genus only,Gadus,chalcogrammus,1,not found/genus only
+impossible meat,Glycine max,trnL,species,Glycine,max,159,species/not found
+impossible meat,Cocos nucifera,trnL,not found,Cocos,nucifera,0,not found/not found
+impossible meat,Helianthus annuus,trnL,not found,Helianthus,annuus,0,not found/not found
+impossible meat,Solanum tuberosum,trnL,genus only,Solanum,tuberosum,16,genus only/not found
+jam,unspecified fruit,trnL,not a taxon,,,0,0
+kale,Brassica oleracea var. sabellica,trnL,species,Brassica,oleracea,2,species/not found
+kimchi,Brassica rapa subsp. pekinensis,trnL,species,Brassica,rapa,1,species/not found
+kimchi,Raphanus sativus,trnL,genus only,Raphanus,sativus,1,genus only/not found
+kimchi,Allium sativum,trnL,species,Allium,sativum,20,species/not found
+kimchi,Zingiber officinale,trnL,not found,Zingiber,officinale,0,not found/not found
+kimchi,Capsicum annuum,trnL,genus only,Capsicum,annuum,31,genus only/not found
+kimchi,Allium fistulosum,trnL,genus only,Allium,fistulosum,109,genus only/not found
+kiwi,Actinidia deliciosa,trnL,genus only,Actinidia,deliciosa,5,genus only/not found
+konjac,Amorphophallus konjac,trnL,not found,Amorphophallus,konjac,0,not found/not found
+lamb,Ovis aries,12SV5,species,Ovis,aries,16,not found/species
+leek,Allium ampeloprasum,trnL,genus only,Allium,ampeloprasum,109,genus only/not found
+lemon,Citrus limon,trnL,genus only,Citrus,limon,13,genus only/not found
+lentil,Lens culinaris,trnL,species,Lens,culinaris,20,species/not found
+lettuce,Lactuca sativa,trnL,species,Lactuca,sativa,1,species/not found
+lime,Citrus x aurantiifolia,trnL,genus only,Citrus,aurantiifolia,13,genus only/not found
+limoncello,Citrus limon,none,genus only,Citrus,limon,13,genus only/not found
+lotus root,Nelumbo nucifera,trnL,genus only,Nelumbo,nucifera,1,genus only/not found
+luffa,Luffa aegyptiaca,trnL,not found,Luffa,aegyptiaca,0,not found/not found
+lychee,Litchi chinensis,trnL,not found,Litchi,chinensis,0,not found/not found
+macadamia,Macadamia integrifolia,trnL,species,Macadamia,integrifolia,13,species/not found
+mandarin,Citrus reticulata,trnL,species,Citrus,reticulata,3,species/not found
+mango,Mangifera indica,trnL,species,Mangifera,indica,13,species/not found
+maple syrup,Acer saccharum,trnL,not found,Acer,saccharum,0,not found/not found
+melon,Cucumis melo,trnL,not found,Cucumis,melo,0,not found/not found
+miso,Glycine max,trnL,species,Glycine,max,159,species/not found
+mixed vegetables,unspecified vegetables,trnL,not a taxon,,,0,0
+mung bean,Vigna radiata,trnL,genus only,Vigna,radiata,58,genus only/not found
+mushroom,Agaricus bisporus,none,not found,Agaricus,bisporus,0,not found/not found
+mustard,Brassica juncea,trnL,genus only,Brassica,juncea,109,genus only/not found
+mustard,Sinapis alba,trnL,not found,Sinapis,alba,0,not found/not found
+napa cabbage,Brassica rapa subsp. pekinensis,trnL,species,Brassica,rapa,1,species/not found
+natto,Glycine max,trnL,species,Glycine,max,159,species/not found
+nori,Pyropia yezoensis,none,not found,Pyropia,yezoensis,0,not found/not found
+nutritional yeast,Saccharomyces cerevisiae,none,not found,Saccharomyces,cerevisiae,0,not found/not found
+nuts (unspecified),unspecified nuts,trnL,not a taxon,,,0,0
+oat,Avena sativa,trnL,genus only,Avena,sativa,69,genus only/not found
+oat milk,Avena sativa,trnL,genus only,Avena,sativa,69,genus only/not found
+octopus,Octopus vulgaris,none,not found,Octopus,vulgaris,0,not found/not found
+okra,Abelmoschus esculentus,trnL,species,Abelmoschus,esculentus,12,species/not found
+olive,Olea europaea,trnL,not found,Olea,europaea,0,not found/not found
+olive oil,Olea europaea,trnL,not found,Olea,europaea,0,not found/not found
+onion,Allium cepa,trnL,species,Allium,cepa,4,species/not found
+orange,Citrus x sinensis,trnL,genus only,Citrus,sinensis,13,genus only/not found
+oyster mushroom,Pleurotus ostreatus,none,not found,Pleurotus,ostreatus,0,not found/not found
+paneer,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+parsley,Petroselinum crispum,trnL,not found,Petroselinum,crispum,0,not found/not found
+passionfruit,Passiflora edulis,trnL,genus only,Passiflora,edulis,1,genus only/not found
+pea,Pisum sativum,trnL,genus only,Pisum,sativum,39,genus only/not found
+pea protein,Pisum sativum,trnL,genus only,Pisum,sativum,39,genus only/not found
+peach,Prunus persica,trnL,genus only,Prunus,persica,63,genus only/not found
+peanut,Arachis hypogaea,trnL,species,Arachis,hypogaea,48,species/not found
+pecan,Carya illinoinensis,trnL,genus only,Carya,illinoinensis,13,genus only/not found
+pine nut,Pinus spp.,trnL,genus only,Pinus,,23,genus only/not found
+pineapple,Ananas comosus,trnL,species,Ananas,comosus,1,species/not found
+pistachio,Pistacia vera,trnL,species,Pistacia,vera,18,species/not found
+plant-based mince,unknown (soy/pea protein),trnL,not a taxon,,,0,0
+plantain,Musa x paradisiaca,trnL,genus only,Musa,paradisiaca,55,genus only/not found
+plum,Prunus domestica,trnL,genus only,Prunus,domestica,63,genus only/not found
+pork,Sus scrofa,12SV5,species,Sus,scrofa,78,not found/species
+potato,Solanum tuberosum,trnL,genus only,Solanum,tuberosum,16,genus only/not found
+protein powder,unspecified (whey: Bos taurus,trnL / 12SV5,not a taxon,,,0,0
+protein powder,pea: Pisum sativum,trnL / 12SV5,not a taxon,,,0,0
+protein powder,soy: Glycine max),trnL / 12SV5,not a taxon,,,0,0
+pumpkin,Cucurbita maxima,trnL,not found,Cucurbita,maxima,0,not found/not found
+pumpkin seed,Cucurbita pepo,trnL,not found,Cucurbita,pepo,0,not found/not found
+quail egg,Coturnix japonica,12SV5,species,Coturnix,japonica,1,not found/species
+quinoa,Chenopodium quinoa,trnL,genus only,Chenopodium,quinoa,21,genus only/not found
+radish,Raphanus sativus,trnL,genus only,Raphanus,sativus,1,genus only/not found
+raisin,Vitis vinifera,trnL,genus only,Vitis,vinifera,22,genus only/not found
+raspberry,Rubus idaeus,trnL,genus only,Rubus,idaeus,41,genus only/not found
+red bean,Vigna angularis,trnL,genus only,Vigna,angularis,58,genus only/not found
+rice,Oryza sativa,trnL,species,Oryza,sativa,28,species/not found
+rockfish,Sebastes spp.,12SV5,genus only,Sebastes,,1,not found/genus only
+saffron,Crocus sativus,trnL,not found,Crocus,sativus,0,not found/not found
+salmon,Salmo salar,12SV5,species,Salmo,salar,13,not found/species
+sardine,Sardina pilchardus,12SV5,not found,Sardina,pilchardus,0,not found/not found
+scallion,Allium fistulosum,trnL,genus only,Allium,fistulosum,109,genus only/not found
+scallop,Pectinidae (scallops),none,not a taxon,,,0,0
+seafood (mixed),mixed fish/shellfish (unspecified),12SV5 (fish part only),not a taxon,,,0,0
+seaweed,Undaria pinnatifida,none,not found,Undaria,pinnatifida,0,not found/not found
+sesame,Sesamum indicum,trnL,genus only,Sesamum,indicum,11,genus only/not found
+shellfish,Crustacea/Mollusca (unspecified),none,not a taxon,,,0,0
+shiitake,Lentinula edodes,none,not found,Lentinula,edodes,0,not found/not found
+shrimp,"Penaeidae (shrimp, unspecified)",none,not a taxon,,,0,0
+soju,Oryza sativa,none,species,Oryza,sativa,28,species/not found
+soy meat,Glycine max,trnL,species,Glycine,max,159,species/not found
+soy milk,Glycine max,trnL,species,Glycine,max,159,species/not found
+soy sauce,Glycine max,trnL,species,Glycine,max,159,species/not found
+soy sauce,Triticum aestivum,trnL,species,Triticum,aestivum,103,species/not found
+soybean paste,Glycine max,trnL,species,Glycine,max,159,species/not found
+spinach,Spinacia oleracea,trnL,genus only,Spinacia,oleracea,2,genus only/not found
+spirits,mixed distilled spirits (unspecified),none,not a taxon,,,0,0
+squash,Cucurbita pepo,trnL,not found,Cucurbita,pepo,0,not found/not found
+squid,Teuthida (squid),none,not a taxon,,,0,0
+stone fruit,Prunus spp.,trnL,genus only,Prunus,,63,genus only/not found
+strawberry,Fragaria x ananassa,trnL,not found,Fragaria,ananassa,0,not found/not found
+sugar,Saccharum officinarum,none,not found,Saccharum,officinarum,0,not found/not found
+sugar,Beta vulgaris,none,species,Beta,vulgaris,2,species/not found
+supplement,none,none,not a taxon,,,0,0
+sweet potato,Ipomoea batatas,trnL,genus only,Ipomoea,batatas,4,genus only/not found
+tapioca,Manihot esculenta,trnL,genus only,Manihot,esculenta,1,genus only/not found
+tea,Camellia sinensis,trnL,genus only,Camellia,sinensis,38,genus only/not found
+teff,Eragrostis tef,trnL,not found,Eragrostis,tef,0,not found/not found
+thousand island dressing,Glycine max,trnL,species,Glycine,max,159,species/not found
+thousand island dressing,Solanum lycopersicum,trnL,species,Solanum,lycopersicum,1,species/not found
+thousand island dressing,Cucumis sativus,trnL,not found,Cucumis,sativus,0,not found/not found
+thousand island dressing,Gallus gallus,trnL,not found,Gallus,gallus,0,not found/species
+tofu,Glycine max,trnL,species,Glycine,max,159,species/not found
+tofu skin,Glycine max,trnL,species,Glycine,max,159,species/not found
+tomato,Solanum lycopersicum,trnL,species,Solanum,lycopersicum,1,species/not found
+trail mix,unspecified nuts / seeds / dried fruit,trnL,not a taxon,,,0,0
+truffle,Tuber spp.,none,not found,Tuber,,0,not found/not found
+tuna,Thunnus spp.,12SV5,genus only,Thunnus,,2,not found/genus only
+turkey,Meleagris gallopavo,12SV5,species,Meleagris,gallopavo,21,not found/species
+turmeric,Curcuma longa,trnL,genus only,Curcuma,longa,4,genus only/not found
+unagi,Anguilla japonica,12SV5,genus only,Anguilla,japonica,10,not found/genus only
+unknown,unknown,unknown,not a taxon,,,0,0
+urad dal,Vigna mungo,trnL,genus only,Vigna,mungo,58,genus only/not found
+vanilla,Vanilla planifolia,trnL,not found,Vanilla,planifolia,0,not found/not found
+veal,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+vegan caesar dressing,unspecified plant-based,trnL,not a taxon,,,0,0
+vegan cheese,Cocos nucifera,trnL,not found,Cocos,nucifera,0,not found/not found
+vegan cheese,Anacardium occidentale,trnL,species,Anacardium,occidentale,34,species/not found
+vegan cheese,Solanum tuberosum,trnL,genus only,Solanum,tuberosum,16,genus only/not found
+vegetable oil,Glycine max,trnL,species,Glycine,max,159,species/not found
+vegetable oil,Brassica napus,trnL,species,Brassica,napus,2,species/not found
+vegetable oil,Helianthus annuus,trnL,not found,Helianthus,annuus,0,not found/not found
+walnut,Juglans regia,trnL,species,Juglans,regia,1,species/not found
+wasabi,Eutrema japonicum,trnL,not found,Eutrema,japonicum,0,not found/not found
+watermelon,Citrullus lanatus,trnL,not found,Citrullus,lanatus,0,not found/not found
+wheat,Triticum aestivum,trnL,species,Triticum,aestivum,103,species/not found
+whey,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+whiskey,Zea mays,none,not found,Zea,mays,0,not found/not found
+whiskey,Secale cereale,none,genus only,Secale,cereale,1,genus only/not found
+whiskey,Hordeum vulgare,none,genus only,Hordeum,vulgare,5,genus only/not found
+white fish,"Gadidae (cod/haddock/pollock, unspecified)",12SV5,not a taxon,,,0,0
+wild rice,Zizania palustris,trnL,genus only,Zizania,palustris,1,genus only/not found
+wine,Vitis vinifera,trnL,genus only,Vitis,vinifera,22,genus only/not found
+wood ear,Auricularia auricula-judae,none,not found,Auricularia,auricula,0,not found/not found
+yam,Dioscorea alata,trnL,genus only,Dioscorea,alata,1,genus only/not found
+yogurt,Bos taurus,12SV5,species,Bos,taurus,139,not found/species
+zucchini,Cucurbita pepo,trnL,not found,Cucurbita,pepo,0,not found/not found
+coconut,Cocos nucifera,trnL,not found,Cocos,nucifera,0,not found/not found
+soybean,Glycine max,trnL,species,Glycine,max,159,species/not found

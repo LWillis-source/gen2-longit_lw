@@ -1,0 +1,25 @@
+ingredient,run,lexicon species,status,exact,unlabelled,fallback,whole_genus,compatible,reads,run labels for the genus,food taxon,days_logged
+cow milk,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,81
+chicken,meat,Gallus gallus,exact species,206,0,0,0,206,6404993,Gallus gallus (206),Gallus gallus,75
+cheese,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,57
+beef,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,47
+pork,meat,Sus scrofa,exact species,78,0,0,0,78,769688,Sus scrofa (78),Sus scrofa,46
+yogurt,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,36
+salmon,meat,Salmo salar,exact species,13,0,0,0,13,96163,Salmo salar (13),Salmo salar,15
+ice cream,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,13
+cream,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,12
+lamb,meat,Ovis aries,exact species,16,0,0,0,16,141992,Ovis aries (16),Ovis aries,12
+tuna,meat,Thunnus spp.,whole genus (no single species named),0,0,0,2,2,17462,Thunnus alalunga (1),Thunnus spp.,9
+feta,meat,Ovis aries; Capra hircus,exact species,17,0,0,0,17,141995,Ovis aries (16); Capra hircus (1),"Ovis aries, Capra hircus",7
+paneer,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,4
+turkey,meat,Meleagris gallopavo,exact species,21,0,0,0,21,89390,Meleagris gallopavo (21),Meleagris gallopavo,4
+duck,meat,Anas platyrhynchos,exact species,6,3,0,0,9,57560,Anas platyrhynchos (6),Anas platyrhynchos,3
+sardine,meat,Sardina pilchardus,genus not in run,0,0,0,0,0,0,,,2
+white fish,meat,"Gadidae (cod/haddock/pollock, unspecified)",no taxon,0,0,0,0,0,0,,,2
+cod,meat,Gadus morhua,"genus, unlabelled only",0,1,0,0,1,1844,,Gadus morhua,1
+cream cheese,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,1
+goat cheese,meat,Capra hircus,exact species,1,0,0,0,1,3,Capra hircus (1),Capra hircus,1
+hamachi,meat,Seriola quinqueradiata,"genus, unlabelled only",0,22,0,0,22,455177,,Seriola quinqueradiata,1
+rockfish,meat,Sebastes spp.,whole genus (no single species named),0,0,0,1,1,111,,Sebastes spp.,1
+unagi,meat,Anguilla japonica,"genus, congener fallback",0,0,10,0,10,27394,"Anguilla rostrata (2), Anguilla anguilla (1)",Anguilla japonica,1
+veal,meat,Bos taurus,exact species,139,0,0,0,139,3316881,"Bos taurus (139), Bos grunniens x Bos taurus (1)",Bos taurus,1

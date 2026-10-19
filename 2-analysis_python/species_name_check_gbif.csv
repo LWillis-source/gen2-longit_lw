@@ -1,0 +1,33 @@
+name_in_lexicon,GBIF_status,GBIF_accepted_name,assessment
+Brassica oleracea var. botrytis,SYNONYM,Brassica cretica (GBIF backbone quirk; NCBI/ITIS treat as B. oleracea cultivar group),differs by database
+Brassica oleracea var. capitata,SYNONYM,Brassica oleracea,ok (variety of B. oleracea)
+Brassica oleracea var. gemmifera,SYNONYM,Brassica oleracea,ok
+Brassica oleracea var. italica,SYNONYM,Brassica oleracea,ok
+Brassica oleracea var. sabellica,SYNONYM,Brassica oleracea,ok
+Brassica rapa subsp. chinensis,SYNONYM,Brassica rapa,ok (trnL cannot separate subspecies anyway)
+Brassica rapa subsp. pekinensis,SYNONYM,Brassica rapa,ok
+Cynara cardunculus var. scolymus,SYNONYM,Cynara scolymus,differs by database
+Daucus carota subsp. sativus,no match at rank; returned family Apiaceae,-,inconclusive
+Citrus x aurantiifolia,ACCEPTED,Citrus aurantiifolia,ok
+Citrus x paradisi,SYNONYM,Citrus aurantium (GBIF lumping),differs by database
+Citrus x sinensis,SYNONYM,Citrus aurantium (GBIF lumping),differs by database
+Citrus reticulata,ACCEPTED,Citrus reticulata,ok
+Citrus bergamia,SYNONYM,Citrus limon (GBIF),differs by database
+Musa x paradisiaca,ACCEPTED,Musa paradisiaca,ok
+Musa acuminata x balbisiana,NO MATCH,-,not a database name; my label for the banana hybrid group
+Fragaria x ananassa,ACCEPTED,Fragaria ananassa,ok
+Actinidia deliciosa,SYNONYM,Actinidia chinensis,differs by database
+Eutrema japonicum,ACCEPTED,Eutrema japonicum,ok
+Eruca vesicaria,ACCEPTED,Eruca vesicaria,ok
+Pyrus pyrifolia,ACCEPTED,Pyrus pyrifolia,ok
+Gadus chalcogrammus,ACCEPTED,Gadus chalcogrammus,ok
+Zizania palustris,ACCEPTED,Zizania palustris,ok
+Amorphophallus konjac,ACCEPTED,Amorphophallus konjac,ok
+Allium ampeloprasum,ACCEPTED,Allium ampeloprasum,ok
+Vigna mungo,ACCEPTED,Vigna mungo,ok
+Vigna angularis,ACCEPTED,Vigna angularis,ok
+Vigna radiata,ACCEPTED,Vigna radiata,ok
+Luffa aegyptiaca,ACCEPTED,Luffa aegyptiaca,ok
+Salvia hispanica,ACCEPTED,Salvia hispanica,ok
+Coturnix japonica,ACCEPTED,Coturnix japonica,ok
+Seriola quinqueradiata,ACCEPTED,Seriola quinqueradiata,ok

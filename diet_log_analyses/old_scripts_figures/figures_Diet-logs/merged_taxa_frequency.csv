@@ -1,0 +1,94 @@
+entries,subject_days,subjects,days_stated,days_assumed_only,pct_of_167_days,taxon,level,n_ASVs,ingredients
+274,133,18,122,11,79.6,Bos taurus,species,139,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal"
+286,132,19,20,112,79.0,Triticum aestivum,species,132,wheat
+163,114,19,101,13,68.3,Oryza sativa,species,101,"rice, glutinous rice"
+123,94,19,72,22,56.3,Solanum,genus,16,"tomato, potato, eggplant"
+87,75,16,70,5,44.9,Gallus gallus,species,206,chicken
+109,73,17,64,9,43.7,Brassica,genus,106,"cabbage, broccoli, kimchi, bok choy, cauliflower, kale, mustard, napa cabbage, broccoli rabe, brussels sprouts"
+100,73,18,38,35,43.7,Allium,genus,109,"onion, garlic, kimchi, scallion, leek"
+83,65,15,61,4,38.9,Glycine max,species,159,"tofu, edamame, natto, black soybean, soybean, tofu skin"
+60,46,12,27,19,27.5,Sus scrofa,species,78,pork
+57,45,14,45,0,26.9,Theobroma,genus,70,cacao
+42,40,11,22,18,24.0,Lactuca sativa,species,57,lettuce
+48,38,13,14,24,22.8,Capsicum,genus,31,"chili pepper, kimchi, bell pepper"
+30,29,12,21,8,17.4,Daucus carota,species,47,carrot
+30,29,12,17,12,17.4,Avena,genus,69,"oat, granola"
+29,27,12,18,9,16.2,Cucumis sativus,undetectable,0,cucumber
+27,26,13,22,4,15.6,Zea mays,undetectable,0,corn
+27,24,10,20,4,14.4,Citrus,genus,13,"lemon, orange, grapefruit, lime, mandarin"
+25,23,10,3,20,13.8,Zingiber officinale,undetectable,0,"kimchi, ginger"
+27,22,9,18,4,13.2,Arachis hypogaea,species,48,peanut
+23,21,9,21,0,12.6,Vaccinium,genus,17,"blueberry, cranberry"
+22,20,11,19,1,12.0,Phaseolus,genus,32,"green bean, black bean"
+20,20,10,18,2,12.0,Persea americana,species,54,avocado
+21,18,8,5,13,10.8,Raphanus,genus,1,"kimchi, daikon, radish"
+19,18,10,18,0,10.8,Malus domestica,undetectable,0,apple
+18,18,9,17,1,10.8,Musa,genus,55,"banana, plantain"
+18,17,9,17,0,10.2,Mangifera indica,species,32,mango
+18,17,8,15,2,10.2,Prunus,genus,63,"peach, almond, plum, cherry"
+17,17,9,11,6,10.2,Ovis aries,species,16,"lamb, feta"
+16,15,6,14,1,9.0,Spinacia,genus,2,spinach
+15,15,7,15,0,9.0,Salmo salar,species,13,salmon
+12,12,8,5,7,7.2,Sesamum,genus,11,sesame
+12,11,5,11,0,6.6,Rubus,genus,41,"raspberry, blackberry"
+12,11,7,11,0,6.6,Cucurbita pepo,undetectable,0,"squash, zucchini, pumpkin seed"
+10,10,4,10,0,6.0,Citrullus lanatus,undetectable,0,watermelon
+9,9,4,5,4,5.4,Apium graveolens,species,26,celery
+9,9,6,9,0,5.4,Cicer arietinum,species,14,chickpea
+9,9,6,9,0,5.4,Lens culinaris,species,20,lentil
+9,9,6,8,1,5.4,Pisum,genus,39,pea
+9,9,4,9,0,5.4,Thunnus,genus,2,tuna
+9,9,6,5,4,5.4,Vigna,genus,58,"mung bean, bean sprouts, urad dal, black-eyed pea, red bean"
+8,8,5,1,7,4.8,Capra hircus,species,1,"feta, goat cheese"
+8,8,3,8,0,4.8,Dioscorea,genus,1,yam
+8,7,5,6,1,4.2,Pistacia vera,species,18,pistachio
+7,7,4,7,0,4.2,Anacardium occidentale,species,34,cashew
+7,7,3,7,0,4.2,Vitis,genus,22,"grape, raisin"
+7,7,6,6,1,4.2,Ipomoea,genus,4,sweet potato
+7,6,3,5,1,3.6,Ocimum basilicum,species,6,basil
+7,6,5,5,1,3.6,Cocos nucifera,undetectable,0,coconut
+6,6,5,6,0,3.6,Fragaria spp.,undetectable,0,strawberry
+6,5,4,5,0,3.0,Cucumis melo,undetectable,0,melon
+6,5,3,2,3,3.0,Olea europaea,undetectable,0,olive
+5,5,4,5,0,3.0,Salvia hispanica,species,18,chia
+5,5,4,5,0,3.0,Ananas comosus,species,4,pineapple
+4,4,3,4,0,2.4,Meleagris gallopavo,species,21,turkey
+4,4,2,4,0,2.4,Euterpe oleracea,undetectable,0,acai
+4,4,2,4,0,2.4,Luffa aegyptiaca,undetectable,0,luffa
+3,3,3,3,0,1.8,Cynara,genus,1,artichoke
+3,3,2,2,1,1.8,Pyrus,genus,30,asian pear
+3,3,3,2,1,1.8,Anas platyrhynchos,species,9,duck
+3,3,2,3,0,1.8,Ficus carica,species,6,fig
+3,3,3,3,0,1.8,Actinidia,genus,5,kiwi
+3,3,1,3,0,1.8,Carya,genus,13,pecan
+3,3,1,0,3,1.8,Pinus,genus,23,pine nut
+3,3,2,2,1,1.8,Juglans regia,species,6,walnut
+3,3,2,3,0,1.8,Anethum graveolens,undetectable,0,dill
+3,3,3,3,0,1.8,Cucurbita maxima,undetectable,0,pumpkin
+3,3,2,3,0,1.8,Cucurbita moschata,undetectable,0,butternut squash
+3,3,3,0,3,1.8,Sinapis alba,undetectable,0,mustard
+2,2,2,2,0,1.2,Manihot,genus,1,cassava
+2,2,2,2,0,1.2,Psidium guajava,species,1,guava
+2,2,2,2,0,1.2,Abelmoschus esculentus,species,16,okra
+2,2,2,2,0,1.2,Chenopodium,genus,21,quinoa
+2,2,2,2,0,1.2,Eruca vesicaria,undetectable,0,arugula
+2,2,2,2,0,1.2,Gadidae,undetectable,0,white fish
+2,2,1,2,0,1.2,Petroselinum crispum,undetectable,0,parsley
+2,2,1,2,0,1.2,Sardina pilchardus,undetectable,0,sardine
+1,1,1,1,0,0.6,Asparagus,genus,4,asparagus
+1,1,1,1,0,0.6,Beta vulgaris,species,53,beet
+1,1,1,0,1,0.6,Fagopyrum esculentum,species,5,buckwheat
+1,1,1,1,0,0.6,Capparis spinosa,species,8,caper
+1,1,1,1,0,0.6,Gadus,genus,1,cod
+1,1,1,1,0,0.6,Seriola,genus,22,hamachi
+1,1,1,1,0,0.6,Nelumbo,genus,1,lotus root
+1,1,1,1,0,0.6,Macadamia integrifolia,species,13,macadamia
+1,1,1,1,0,0.6,Passiflora,genus,1,passionfruit
+1,1,1,1,0,0.6,Sebastes,genus,1,rockfish
+1,1,1,1,0,0.6,Anguilla,genus,10,unagi
+1,1,1,1,0,0.6,Zizania,genus,1,wild rice
+1,1,1,1,0,0.6,Amorphophallus konjac,undetectable,0,konjac
+1,1,1,1,0,0.6,Arctium lappa,undetectable,0,burdock
+1,1,1,1,0,0.6,Bambusoideae,undetectable,0,bamboo shoot
+1,1,1,1,0,0.6,Eragrostis tef,undetectable,0,teff
+1,1,1,1,0,0.6,Litchi chinensis,undetectable,0,lychee

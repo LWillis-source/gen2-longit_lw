@@ -1,0 +1,2461 @@
+subject,taxon,panel,date,value
+01,Bos taurus (12SV5),log,07-31,
+01,Bos taurus (12SV5),log,08-01,
+01,Bos taurus (12SV5),log,08-02,
+01,Bos taurus (12SV5),log,08-03,2.0
+01,Bos taurus (12SV5),log,08-04,2.0
+01,Bos taurus (12SV5),log,08-05,2.0
+01,Bos taurus (12SV5),log,08-06,2.0
+01,Bos taurus (12SV5),log,08-07,2.0
+01,Bos taurus (12SV5),log,08-08,2.0
+01,Bos taurus (12SV5),log,08-09,2.0
+01,Bos taurus (12SV5),log,08-10,2.0
+01,Bos taurus (12SV5),log,08-11,2.0
+01,Bos taurus (12SV5),log,08-12,
+01,Bos taurus (12SV5),log,08-13,
+01,Bos taurus (12SV5),log,08-14,
+01,Gallus gallus (12SV5),log,07-31,
+01,Gallus gallus (12SV5),log,08-01,
+01,Gallus gallus (12SV5),log,08-02,
+01,Gallus gallus (12SV5),log,08-03,2.0
+01,Gallus gallus (12SV5),log,08-04,2.0
+01,Gallus gallus (12SV5),log,08-05,2.0
+01,Gallus gallus (12SV5),log,08-06,2.0
+01,Gallus gallus (12SV5),log,08-07,1.0
+01,Gallus gallus (12SV5),log,08-08,4.0
+01,Gallus gallus (12SV5),log,08-09,2.0
+01,Gallus gallus (12SV5),log,08-10,3.0
+01,Gallus gallus (12SV5),log,08-11,4.0
+01,Gallus gallus (12SV5),log,08-12,
+01,Gallus gallus (12SV5),log,08-13,
+01,Gallus gallus (12SV5),log,08-14,
+01,Triticum aestivum (trnL),log,07-31,
+01,Triticum aestivum (trnL),log,08-01,
+01,Triticum aestivum (trnL),log,08-02,
+01,Triticum aestivum (trnL),log,08-03,1.0
+01,Triticum aestivum (trnL),log,08-04,2.0
+01,Triticum aestivum (trnL),log,08-05,1.0
+01,Triticum aestivum (trnL),log,08-06,1.0
+01,Triticum aestivum (trnL),log,08-07,1.0
+01,Triticum aestivum (trnL),log,08-08,1.0
+01,Triticum aestivum (trnL),log,08-09,1.0
+01,Triticum aestivum (trnL),log,08-10,1.0
+01,Triticum aestivum (trnL),log,08-11,1.0
+01,Triticum aestivum (trnL),log,08-12,
+01,Triticum aestivum (trnL),log,08-13,
+01,Triticum aestivum (trnL),log,08-14,
+01,Vitis vinifera (trnL),log,07-31,
+01,Vitis vinifera (trnL),log,08-01,
+01,Vitis vinifera (trnL),log,08-02,
+01,Vitis vinifera (trnL),log,08-03,4.0
+01,Vitis vinifera (trnL),log,08-04,4.0
+01,Vitis vinifera (trnL),log,08-05,4.0
+01,Vitis vinifera (trnL),log,08-06,4.0
+01,Vitis vinifera (trnL),log,08-07,4.0
+01,Vitis vinifera (trnL),log,08-08,4.0
+01,Vitis vinifera (trnL),log,08-09,4.0
+01,Vitis vinifera (trnL),log,08-10,4.0
+01,Vitis vinifera (trnL),log,08-11,4.0
+01,Vitis vinifera (trnL),log,08-12,
+01,Vitis vinifera (trnL),log,08-13,
+01,Vitis vinifera (trnL),log,08-14,
+01,Arachis hypogaea (trnL),log,07-31,
+01,Arachis hypogaea (trnL),log,08-01,
+01,Arachis hypogaea (trnL),log,08-02,
+01,Arachis hypogaea (trnL),log,08-03,2.0
+01,Arachis hypogaea (trnL),log,08-04,2.0
+01,Arachis hypogaea (trnL),log,08-05,2.0
+01,Arachis hypogaea (trnL),log,08-06,2.0
+01,Arachis hypogaea (trnL),log,08-07,2.0
+01,Arachis hypogaea (trnL),log,08-08,2.0
+01,Arachis hypogaea (trnL),log,08-09,0.0
+01,Arachis hypogaea (trnL),log,08-10,2.0
+01,Arachis hypogaea (trnL),log,08-11,2.0
+01,Arachis hypogaea (trnL),log,08-12,
+01,Arachis hypogaea (trnL),log,08-13,
+01,Arachis hypogaea (trnL),log,08-14,
+01,Theobroma cacao (trnL),log,07-31,
+01,Theobroma cacao (trnL),log,08-01,
+01,Theobroma cacao (trnL),log,08-02,
+01,Theobroma cacao (trnL),log,08-03,2.0
+01,Theobroma cacao (trnL),log,08-04,2.0
+01,Theobroma cacao (trnL),log,08-05,2.0
+01,Theobroma cacao (trnL),log,08-06,2.0
+01,Theobroma cacao (trnL),log,08-07,2.0
+01,Theobroma cacao (trnL),log,08-08,2.0
+01,Theobroma cacao (trnL),log,08-09,0.0
+01,Theobroma cacao (trnL),log,08-10,2.0
+01,Theobroma cacao (trnL),log,08-11,2.0
+01,Theobroma cacao (trnL),log,08-12,
+01,Theobroma cacao (trnL),log,08-13,
+01,Theobroma cacao (trnL),log,08-14,
+01,Glycine max (trnL),log,07-31,
+01,Glycine max (trnL),log,08-01,
+01,Glycine max (trnL),log,08-02,
+01,Glycine max (trnL),log,08-03,4.0
+01,Glycine max (trnL),log,08-04,3.0
+01,Glycine max (trnL),log,08-05,4.0
+01,Glycine max (trnL),log,08-06,4.0
+01,Glycine max (trnL),log,08-07,0.0
+01,Glycine max (trnL),log,08-08,4.0
+01,Glycine max (trnL),log,08-09,3.0
+01,Glycine max (trnL),log,08-10,0.0
+01,Glycine max (trnL),log,08-11,3.0
+01,Glycine max (trnL),log,08-12,
+01,Glycine max (trnL),log,08-13,
+01,Glycine max (trnL),log,08-14,
+01,Solanum spp. (trnL),log,07-31,
+01,Solanum spp. (trnL),log,08-01,
+01,Solanum spp. (trnL),log,08-02,
+01,Solanum spp. (trnL),log,08-03,0.0
+01,Solanum spp. (trnL),log,08-04,1.0
+01,Solanum spp. (trnL),log,08-05,0.0
+01,Solanum spp. (trnL),log,08-06,1.0
+01,Solanum spp. (trnL),log,08-07,1.0
+01,Solanum spp. (trnL),log,08-08,1.0
+01,Solanum spp. (trnL),log,08-09,2.0
+01,Solanum spp. (trnL),log,08-10,1.0
+01,Solanum spp. (trnL),log,08-11,2.0
+01,Solanum spp. (trnL),log,08-12,
+01,Solanum spp. (trnL),log,08-13,
+01,Solanum spp. (trnL),log,08-14,
+01,Allium spp. (trnL),log,07-31,
+01,Allium spp. (trnL),log,08-01,
+01,Allium spp. (trnL),log,08-02,
+01,Allium spp. (trnL),log,08-03,2.0
+01,Allium spp. (trnL),log,08-04,2.0
+01,Allium spp. (trnL),log,08-05,0.0
+01,Allium spp. (trnL),log,08-06,2.0
+01,Allium spp. (trnL),log,08-07,0.0
+01,Allium spp. (trnL),log,08-08,1.0
+01,Allium spp. (trnL),log,08-09,2.0
+01,Allium spp. (trnL),log,08-10,0.0
+01,Allium spp. (trnL),log,08-11,2.0
+01,Allium spp. (trnL),log,08-12,
+01,Allium spp. (trnL),log,08-13,
+01,Allium spp. (trnL),log,08-14,
+01,Brassica spp. (trnL),log,07-31,
+01,Brassica spp. (trnL),log,08-01,
+01,Brassica spp. (trnL),log,08-02,
+01,Brassica spp. (trnL),log,08-03,2.0
+01,Brassica spp. (trnL),log,08-04,3.0
+01,Brassica spp. (trnL),log,08-05,2.0
+01,Brassica spp. (trnL),log,08-06,2.0
+01,Brassica spp. (trnL),log,08-07,0.0
+01,Brassica spp. (trnL),log,08-08,0.0
+01,Brassica spp. (trnL),log,08-09,3.0
+01,Brassica spp. (trnL),log,08-10,0.0
+01,Brassica spp. (trnL),log,08-11,2.0
+01,Brassica spp. (trnL),log,08-12,
+01,Brassica spp. (trnL),log,08-13,
+01,Brassica spp. (trnL),log,08-14,
+01,Citrus spp. (trnL),log,07-31,
+01,Citrus spp. (trnL),log,08-01,
+01,Citrus spp. (trnL),log,08-02,
+01,Citrus spp. (trnL),log,08-03,2.0
+01,Citrus spp. (trnL),log,08-04,0.0
+01,Citrus spp. (trnL),log,08-05,1.0
+01,Citrus spp. (trnL),log,08-06,0.0
+01,Citrus spp. (trnL),log,08-07,2.0
+01,Citrus spp. (trnL),log,08-08,0.0
+01,Citrus spp. (trnL),log,08-09,0.0
+01,Citrus spp. (trnL),log,08-10,2.0
+01,Citrus spp. (trnL),log,08-11,1.0
+01,Citrus spp. (trnL),log,08-12,
+01,Citrus spp. (trnL),log,08-13,
+01,Citrus spp. (trnL),log,08-14,
+01,Sus scrofa (12SV5),log,07-31,
+01,Sus scrofa (12SV5),log,08-01,
+01,Sus scrofa (12SV5),log,08-02,
+01,Sus scrofa (12SV5),log,08-03,0.0
+01,Sus scrofa (12SV5),log,08-04,1.0
+01,Sus scrofa (12SV5),log,08-05,0.0
+01,Sus scrofa (12SV5),log,08-06,0.0
+01,Sus scrofa (12SV5),log,08-07,2.0
+01,Sus scrofa (12SV5),log,08-08,1.0
+01,Sus scrofa (12SV5),log,08-09,0.0
+01,Sus scrofa (12SV5),log,08-10,1.0
+01,Sus scrofa (12SV5),log,08-11,2.0
+01,Sus scrofa (12SV5),log,08-12,
+01,Sus scrofa (12SV5),log,08-13,
+01,Sus scrofa (12SV5),log,08-14,
+01,Lactuca sativa (trnL),log,07-31,
+01,Lactuca sativa (trnL),log,08-01,
+01,Lactuca sativa (trnL),log,08-02,
+01,Lactuca sativa (trnL),log,08-03,0.0
+01,Lactuca sativa (trnL),log,08-04,0.0
+01,Lactuca sativa (trnL),log,08-05,0.0
+01,Lactuca sativa (trnL),log,08-06,0.0
+01,Lactuca sativa (trnL),log,08-07,1.0
+01,Lactuca sativa (trnL),log,08-08,1.0
+01,Lactuca sativa (trnL),log,08-09,2.0
+01,Lactuca sativa (trnL),log,08-10,1.0
+01,Lactuca sativa (trnL),log,08-11,0.0
+01,Lactuca sativa (trnL),log,08-12,
+01,Lactuca sativa (trnL),log,08-13,
+01,Lactuca sativa (trnL),log,08-14,
+01,Ovis aries (12SV5),log,07-31,
+01,Ovis aries (12SV5),log,08-01,
+01,Ovis aries (12SV5),log,08-02,
+01,Ovis aries (12SV5),log,08-03,2.0
+01,Ovis aries (12SV5),log,08-04,0.0
+01,Ovis aries (12SV5),log,08-05,0.0
+01,Ovis aries (12SV5),log,08-06,0.0
+01,Ovis aries (12SV5),log,08-07,2.0
+01,Ovis aries (12SV5),log,08-08,2.0
+01,Ovis aries (12SV5),log,08-09,0.0
+01,Ovis aries (12SV5),log,08-10,0.0
+01,Ovis aries (12SV5),log,08-11,2.0
+01,Ovis aries (12SV5),log,08-12,
+01,Ovis aries (12SV5),log,08-13,
+01,Ovis aries (12SV5),log,08-14,
+01,Oryza sativa (trnL),log,07-31,
+01,Oryza sativa (trnL),log,08-01,
+01,Oryza sativa (trnL),log,08-02,
+01,Oryza sativa (trnL),log,08-03,0.0
+01,Oryza sativa (trnL),log,08-04,2.0
+01,Oryza sativa (trnL),log,08-05,2.0
+01,Oryza sativa (trnL),log,08-06,2.0
+01,Oryza sativa (trnL),log,08-07,0.0
+01,Oryza sativa (trnL),log,08-08,0.0
+01,Oryza sativa (trnL),log,08-09,0.0
+01,Oryza sativa (trnL),log,08-10,0.0
+01,Oryza sativa (trnL),log,08-11,0.0
+01,Oryza sativa (trnL),log,08-12,
+01,Oryza sativa (trnL),log,08-13,
+01,Oryza sativa (trnL),log,08-14,
+01,Daucus carota (trnL),log,07-31,
+01,Daucus carota (trnL),log,08-01,
+01,Daucus carota (trnL),log,08-02,
+01,Daucus carota (trnL),log,08-03,1.0
+01,Daucus carota (trnL),log,08-04,0.0
+01,Daucus carota (trnL),log,08-05,0.0
+01,Daucus carota (trnL),log,08-06,1.0
+01,Daucus carota (trnL),log,08-07,0.0
+01,Daucus carota (trnL),log,08-08,0.0
+01,Daucus carota (trnL),log,08-09,0.0
+01,Daucus carota (trnL),log,08-10,0.0
+01,Daucus carota (trnL),log,08-11,0.0
+01,Daucus carota (trnL),log,08-12,
+01,Daucus carota (trnL),log,08-13,
+01,Daucus carota (trnL),log,08-14,
+01,Hordeum vulgare (trnL) †,log,07-31,
+01,Hordeum vulgare (trnL) †,log,08-01,
+01,Hordeum vulgare (trnL) †,log,08-02,
+01,Hordeum vulgare (trnL) †,log,08-03,0.0
+01,Hordeum vulgare (trnL) †,log,08-04,0.0
+01,Hordeum vulgare (trnL) †,log,08-05,0.0
+01,Hordeum vulgare (trnL) †,log,08-06,4.0
+01,Hordeum vulgare (trnL) †,log,08-07,0.0
+01,Hordeum vulgare (trnL) †,log,08-08,4.0
+01,Hordeum vulgare (trnL) †,log,08-09,0.0
+01,Hordeum vulgare (trnL) †,log,08-10,0.0
+01,Hordeum vulgare (trnL) †,log,08-11,0.0
+01,Hordeum vulgare (trnL) †,log,08-12,
+01,Hordeum vulgare (trnL) †,log,08-13,
+01,Hordeum vulgare (trnL) †,log,08-14,
+01,Anacardium occidentale (trnL),log,07-31,
+01,Anacardium occidentale (trnL),log,08-01,
+01,Anacardium occidentale (trnL),log,08-02,
+01,Anacardium occidentale (trnL),log,08-03,0.0
+01,Anacardium occidentale (trnL),log,08-04,0.0
+01,Anacardium occidentale (trnL),log,08-05,2.0
+01,Anacardium occidentale (trnL),log,08-06,0.0
+01,Anacardium occidentale (trnL),log,08-07,0.0
+01,Anacardium occidentale (trnL),log,08-08,0.0
+01,Anacardium occidentale (trnL),log,08-09,0.0
+01,Anacardium occidentale (trnL),log,08-10,0.0
+01,Anacardium occidentale (trnL),log,08-11,0.0
+01,Anacardium occidentale (trnL),log,08-12,
+01,Anacardium occidentale (trnL),log,08-13,
+01,Anacardium occidentale (trnL),log,08-14,
+01,Anas platyrhynchos (12SV5),log,07-31,
+01,Anas platyrhynchos (12SV5),log,08-01,
+01,Anas platyrhynchos (12SV5),log,08-02,
+01,Anas platyrhynchos (12SV5),log,08-03,0.0
+01,Anas platyrhynchos (12SV5),log,08-04,0.0
+01,Anas platyrhynchos (12SV5),log,08-05,0.0
+01,Anas platyrhynchos (12SV5),log,08-06,0.0
+01,Anas platyrhynchos (12SV5),log,08-07,2.0
+01,Anas platyrhynchos (12SV5),log,08-08,0.0
+01,Anas platyrhynchos (12SV5),log,08-09,0.0
+01,Anas platyrhynchos (12SV5),log,08-10,0.0
+01,Anas platyrhynchos (12SV5),log,08-11,0.0
+01,Anas platyrhynchos (12SV5),log,08-12,
+01,Anas platyrhynchos (12SV5),log,08-13,
+01,Anas platyrhynchos (12SV5),log,08-14,
+01,Coriandrum sativum (trnL) †,log,07-31,
+01,Coriandrum sativum (trnL) †,log,08-01,
+01,Coriandrum sativum (trnL) †,log,08-02,
+01,Coriandrum sativum (trnL) †,log,08-03,0.0
+01,Coriandrum sativum (trnL) †,log,08-04,0.0
+01,Coriandrum sativum (trnL) †,log,08-05,0.0
+01,Coriandrum sativum (trnL) †,log,08-06,3.0
+01,Coriandrum sativum (trnL) †,log,08-07,0.0
+01,Coriandrum sativum (trnL) †,log,08-08,0.0
+01,Coriandrum sativum (trnL) †,log,08-09,0.0
+01,Coriandrum sativum (trnL) †,log,08-10,0.0
+01,Coriandrum sativum (trnL) †,log,08-11,0.0
+01,Coriandrum sativum (trnL) †,log,08-12,
+01,Coriandrum sativum (trnL) †,log,08-13,
+01,Coriandrum sativum (trnL) †,log,08-14,
+01,Curcuma longa (trnL) †,log,07-31,
+01,Curcuma longa (trnL) †,log,08-01,
+01,Curcuma longa (trnL) †,log,08-02,
+01,Curcuma longa (trnL) †,log,08-03,0.0
+01,Curcuma longa (trnL) †,log,08-04,0.0
+01,Curcuma longa (trnL) †,log,08-05,0.0
+01,Curcuma longa (trnL) †,log,08-06,3.0
+01,Curcuma longa (trnL) †,log,08-07,0.0
+01,Curcuma longa (trnL) †,log,08-08,0.0
+01,Curcuma longa (trnL) †,log,08-09,0.0
+01,Curcuma longa (trnL) †,log,08-10,0.0
+01,Curcuma longa (trnL) †,log,08-11,0.0
+01,Curcuma longa (trnL) †,log,08-12,
+01,Curcuma longa (trnL) †,log,08-13,
+01,Curcuma longa (trnL) †,log,08-14,
+01,Persea americana (trnL),log,07-31,
+01,Persea americana (trnL),log,08-01,
+01,Persea americana (trnL),log,08-02,
+01,Persea americana (trnL),log,08-03,0.0
+01,Persea americana (trnL),log,08-04,0.0
+01,Persea americana (trnL),log,08-05,0.0
+01,Persea americana (trnL),log,08-06,0.0
+01,Persea americana (trnL),log,08-07,1.0
+01,Persea americana (trnL),log,08-08,0.0
+01,Persea americana (trnL),log,08-09,0.0
+01,Persea americana (trnL),log,08-10,0.0
+01,Persea americana (trnL),log,08-11,0.0
+01,Persea americana (trnL),log,08-12,
+01,Persea americana (trnL),log,08-13,
+01,Persea americana (trnL),log,08-14,
+01,Prunus spp. (trnL),log,07-31,
+01,Prunus spp. (trnL),log,08-01,
+01,Prunus spp. (trnL),log,08-02,
+01,Prunus spp. (trnL),log,08-03,0.0
+01,Prunus spp. (trnL),log,08-04,1.0
+01,Prunus spp. (trnL),log,08-05,0.0
+01,Prunus spp. (trnL),log,08-06,0.0
+01,Prunus spp. (trnL),log,08-07,0.0
+01,Prunus spp. (trnL),log,08-08,0.0
+01,Prunus spp. (trnL),log,08-09,0.0
+01,Prunus spp. (trnL),log,08-10,0.0
+01,Prunus spp. (trnL),log,08-11,0.0
+01,Prunus spp. (trnL),log,08-12,
+01,Prunus spp. (trnL),log,08-13,
+01,Prunus spp. (trnL),log,08-14,
+01,Spinacia oleracea (trnL),log,07-31,
+01,Spinacia oleracea (trnL),log,08-01,
+01,Spinacia oleracea (trnL),log,08-02,
+01,Spinacia oleracea (trnL),log,08-03,0.0
+01,Spinacia oleracea (trnL),log,08-04,0.0
+01,Spinacia oleracea (trnL),log,08-05,2.0
+01,Spinacia oleracea (trnL),log,08-06,0.0
+01,Spinacia oleracea (trnL),log,08-07,0.0
+01,Spinacia oleracea (trnL),log,08-08,0.0
+01,Spinacia oleracea (trnL),log,08-09,0.0
+01,Spinacia oleracea (trnL),log,08-10,0.0
+01,Spinacia oleracea (trnL),log,08-11,0.0
+01,Spinacia oleracea (trnL),log,08-12,
+01,Spinacia oleracea (trnL),log,08-13,
+01,Spinacia oleracea (trnL),log,08-14,
+01,Capsicum annuum (trnL),log,07-31,
+01,Capsicum annuum (trnL),log,08-01,
+01,Capsicum annuum (trnL),log,08-02,
+01,Capsicum annuum (trnL),log,08-03,0.0
+01,Capsicum annuum (trnL),log,08-04,0.0
+01,Capsicum annuum (trnL),log,08-05,0.0
+01,Capsicum annuum (trnL),log,08-06,0.0
+01,Capsicum annuum (trnL),log,08-07,0.0
+01,Capsicum annuum (trnL),log,08-08,0.0
+01,Capsicum annuum (trnL),log,08-09,0.0
+01,Capsicum annuum (trnL),log,08-10,0.0
+01,Capsicum annuum (trnL),log,08-11,0.0
+01,Capsicum annuum (trnL),log,08-12,
+01,Capsicum annuum (trnL),log,08-13,
+01,Capsicum annuum (trnL),log,08-14,
+01,Pisum sativum (trnL),log,07-31,
+01,Pisum sativum (trnL),log,08-01,
+01,Pisum sativum (trnL),log,08-02,
+01,Pisum sativum (trnL),log,08-03,0.0
+01,Pisum sativum (trnL),log,08-04,0.0
+01,Pisum sativum (trnL),log,08-05,0.0
+01,Pisum sativum (trnL),log,08-06,0.0
+01,Pisum sativum (trnL),log,08-07,0.0
+01,Pisum sativum (trnL),log,08-08,0.0
+01,Pisum sativum (trnL),log,08-09,0.0
+01,Pisum sativum (trnL),log,08-10,0.0
+01,Pisum sativum (trnL),log,08-11,0.0
+01,Pisum sativum (trnL),log,08-12,
+01,Pisum sativum (trnL),log,08-13,
+01,Pisum sativum (trnL),log,08-14,
+01,Phaseolus vulgaris (trnL),log,07-31,
+01,Phaseolus vulgaris (trnL),log,08-01,
+01,Phaseolus vulgaris (trnL),log,08-02,
+01,Phaseolus vulgaris (trnL),log,08-03,0.0
+01,Phaseolus vulgaris (trnL),log,08-04,0.0
+01,Phaseolus vulgaris (trnL),log,08-05,0.0
+01,Phaseolus vulgaris (trnL),log,08-06,0.0
+01,Phaseolus vulgaris (trnL),log,08-07,0.0
+01,Phaseolus vulgaris (trnL),log,08-08,0.0
+01,Phaseolus vulgaris (trnL),log,08-09,0.0
+01,Phaseolus vulgaris (trnL),log,08-10,0.0
+01,Phaseolus vulgaris (trnL),log,08-11,0.0
+01,Phaseolus vulgaris (trnL),log,08-12,
+01,Phaseolus vulgaris (trnL),log,08-13,
+01,Phaseolus vulgaris (trnL),log,08-14,
+01,Ocimum basilicum (trnL),log,07-31,
+01,Ocimum basilicum (trnL),log,08-01,
+01,Ocimum basilicum (trnL),log,08-02,
+01,Ocimum basilicum (trnL),log,08-03,0.0
+01,Ocimum basilicum (trnL),log,08-04,0.0
+01,Ocimum basilicum (trnL),log,08-05,0.0
+01,Ocimum basilicum (trnL),log,08-06,0.0
+01,Ocimum basilicum (trnL),log,08-07,0.0
+01,Ocimum basilicum (trnL),log,08-08,0.0
+01,Ocimum basilicum (trnL),log,08-09,0.0
+01,Ocimum basilicum (trnL),log,08-10,0.0
+01,Ocimum basilicum (trnL),log,08-11,0.0
+01,Ocimum basilicum (trnL),log,08-12,
+01,Ocimum basilicum (trnL),log,08-13,
+01,Ocimum basilicum (trnL),log,08-14,
+01,Camellia sinensis (trnL) †,log,07-31,
+01,Camellia sinensis (trnL) †,log,08-01,
+01,Camellia sinensis (trnL) †,log,08-02,
+01,Camellia sinensis (trnL) †,log,08-03,0.0
+01,Camellia sinensis (trnL) †,log,08-04,0.0
+01,Camellia sinensis (trnL) †,log,08-05,0.0
+01,Camellia sinensis (trnL) †,log,08-06,0.0
+01,Camellia sinensis (trnL) †,log,08-07,0.0
+01,Camellia sinensis (trnL) †,log,08-08,0.0
+01,Camellia sinensis (trnL) †,log,08-09,0.0
+01,Camellia sinensis (trnL) †,log,08-10,0.0
+01,Camellia sinensis (trnL) †,log,08-11,0.0
+01,Camellia sinensis (trnL) †,log,08-12,
+01,Camellia sinensis (trnL) †,log,08-13,
+01,Camellia sinensis (trnL) †,log,08-14,
+01,Avena sativa (trnL),log,07-31,
+01,Avena sativa (trnL),log,08-01,
+01,Avena sativa (trnL),log,08-02,
+01,Avena sativa (trnL),log,08-03,0.0
+01,Avena sativa (trnL),log,08-04,0.0
+01,Avena sativa (trnL),log,08-05,0.0
+01,Avena sativa (trnL),log,08-06,0.0
+01,Avena sativa (trnL),log,08-07,0.0
+01,Avena sativa (trnL),log,08-08,0.0
+01,Avena sativa (trnL),log,08-09,0.0
+01,Avena sativa (trnL),log,08-10,0.0
+01,Avena sativa (trnL),log,08-11,0.0
+01,Avena sativa (trnL),log,08-12,
+01,Avena sativa (trnL),log,08-13,
+01,Avena sativa (trnL),log,08-14,
+01,Asparagus officinalis (trnL),log,07-31,
+01,Asparagus officinalis (trnL),log,08-01,
+01,Asparagus officinalis (trnL),log,08-02,
+01,Asparagus officinalis (trnL),log,08-03,0.0
+01,Asparagus officinalis (trnL),log,08-04,0.0
+01,Asparagus officinalis (trnL),log,08-05,0.0
+01,Asparagus officinalis (trnL),log,08-06,0.0
+01,Asparagus officinalis (trnL),log,08-07,0.0
+01,Asparagus officinalis (trnL),log,08-08,0.0
+01,Asparagus officinalis (trnL),log,08-09,0.0
+01,Asparagus officinalis (trnL),log,08-10,0.0
+01,Asparagus officinalis (trnL),log,08-11,0.0
+01,Asparagus officinalis (trnL),log,08-12,
+01,Asparagus officinalis (trnL),log,08-13,
+01,Asparagus officinalis (trnL),log,08-14,
+01,Carya illinoinensis (trnL),log,07-31,
+01,Carya illinoinensis (trnL),log,08-01,
+01,Carya illinoinensis (trnL),log,08-02,
+01,Carya illinoinensis (trnL),log,08-03,0.0
+01,Carya illinoinensis (trnL),log,08-04,0.0
+01,Carya illinoinensis (trnL),log,08-05,0.0
+01,Carya illinoinensis (trnL),log,08-06,0.0
+01,Carya illinoinensis (trnL),log,08-07,0.0
+01,Carya illinoinensis (trnL),log,08-08,0.0
+01,Carya illinoinensis (trnL),log,08-09,0.0
+01,Carya illinoinensis (trnL),log,08-10,0.0
+01,Carya illinoinensis (trnL),log,08-11,0.0
+01,Carya illinoinensis (trnL),log,08-12,
+01,Carya illinoinensis (trnL),log,08-13,
+01,Carya illinoinensis (trnL),log,08-14,
+01,Vaccinium spp. (trnL),log,07-31,
+01,Vaccinium spp. (trnL),log,08-01,
+01,Vaccinium spp. (trnL),log,08-02,
+01,Vaccinium spp. (trnL),log,08-03,0.0
+01,Vaccinium spp. (trnL),log,08-04,0.0
+01,Vaccinium spp. (trnL),log,08-05,0.0
+01,Vaccinium spp. (trnL),log,08-06,0.0
+01,Vaccinium spp. (trnL),log,08-07,0.0
+01,Vaccinium spp. (trnL),log,08-08,0.0
+01,Vaccinium spp. (trnL),log,08-09,0.0
+01,Vaccinium spp. (trnL),log,08-10,0.0
+01,Vaccinium spp. (trnL),log,08-11,0.0
+01,Vaccinium spp. (trnL),log,08-12,
+01,Vaccinium spp. (trnL),log,08-13,
+01,Vaccinium spp. (trnL),log,08-14,
+01,Linum usitatissimum (trnL) †,log,07-31,
+01,Linum usitatissimum (trnL) †,log,08-01,
+01,Linum usitatissimum (trnL) †,log,08-02,
+01,Linum usitatissimum (trnL) †,log,08-03,0.0
+01,Linum usitatissimum (trnL) †,log,08-04,0.0
+01,Linum usitatissimum (trnL) †,log,08-05,0.0
+01,Linum usitatissimum (trnL) †,log,08-06,0.0
+01,Linum usitatissimum (trnL) †,log,08-07,0.0
+01,Linum usitatissimum (trnL) †,log,08-08,0.0
+01,Linum usitatissimum (trnL) †,log,08-09,0.0
+01,Linum usitatissimum (trnL) †,log,08-10,0.0
+01,Linum usitatissimum (trnL) †,log,08-11,0.0
+01,Linum usitatissimum (trnL) †,log,08-12,
+01,Linum usitatissimum (trnL) †,log,08-13,
+01,Linum usitatissimum (trnL) †,log,08-14,
+01,Lens culinaris (trnL),log,07-31,
+01,Lens culinaris (trnL),log,08-01,
+01,Lens culinaris (trnL),log,08-02,
+01,Lens culinaris (trnL),log,08-03,0.0
+01,Lens culinaris (trnL),log,08-04,0.0
+01,Lens culinaris (trnL),log,08-05,0.0
+01,Lens culinaris (trnL),log,08-06,0.0
+01,Lens culinaris (trnL),log,08-07,0.0
+01,Lens culinaris (trnL),log,08-08,0.0
+01,Lens culinaris (trnL),log,08-09,0.0
+01,Lens culinaris (trnL),log,08-10,0.0
+01,Lens culinaris (trnL),log,08-11,0.0
+01,Lens culinaris (trnL),log,08-12,
+01,Lens culinaris (trnL),log,08-13,
+01,Lens culinaris (trnL),log,08-14,
+01,Cynara cardunculus (trnL),log,07-31,
+01,Cynara cardunculus (trnL),log,08-01,
+01,Cynara cardunculus (trnL),log,08-02,
+01,Cynara cardunculus (trnL),log,08-03,0.0
+01,Cynara cardunculus (trnL),log,08-04,0.0
+01,Cynara cardunculus (trnL),log,08-05,0.0
+01,Cynara cardunculus (trnL),log,08-06,0.0
+01,Cynara cardunculus (trnL),log,08-07,0.0
+01,Cynara cardunculus (trnL),log,08-08,0.0
+01,Cynara cardunculus (trnL),log,08-09,0.0
+01,Cynara cardunculus (trnL),log,08-10,0.0
+01,Cynara cardunculus (trnL),log,08-11,0.0
+01,Cynara cardunculus (trnL),log,08-12,
+01,Cynara cardunculus (trnL),log,08-13,
+01,Cynara cardunculus (trnL),log,08-14,
+01,Ficus carica (trnL),log,07-31,
+01,Ficus carica (trnL),log,08-01,
+01,Ficus carica (trnL),log,08-02,
+01,Ficus carica (trnL),log,08-03,0.0
+01,Ficus carica (trnL),log,08-04,0.0
+01,Ficus carica (trnL),log,08-05,0.0
+01,Ficus carica (trnL),log,08-06,0.0
+01,Ficus carica (trnL),log,08-07,0.0
+01,Ficus carica (trnL),log,08-08,0.0
+01,Ficus carica (trnL),log,08-09,0.0
+01,Ficus carica (trnL),log,08-10,0.0
+01,Ficus carica (trnL),log,08-11,0.0
+01,Ficus carica (trnL),log,08-12,
+01,Ficus carica (trnL),log,08-13,
+01,Ficus carica (trnL),log,08-14,
+01,Cicer arietinum (trnL),log,07-31,
+01,Cicer arietinum (trnL),log,08-01,
+01,Cicer arietinum (trnL),log,08-02,
+01,Cicer arietinum (trnL),log,08-03,0.0
+01,Cicer arietinum (trnL),log,08-04,0.0
+01,Cicer arietinum (trnL),log,08-05,0.0
+01,Cicer arietinum (trnL),log,08-06,0.0
+01,Cicer arietinum (trnL),log,08-07,0.0
+01,Cicer arietinum (trnL),log,08-08,0.0
+01,Cicer arietinum (trnL),log,08-09,0.0
+01,Cicer arietinum (trnL),log,08-10,0.0
+01,Cicer arietinum (trnL),log,08-11,0.0
+01,Cicer arietinum (trnL),log,08-12,
+01,Cicer arietinum (trnL),log,08-13,
+01,Cicer arietinum (trnL),log,08-14,
+01,Pyrus pyrifolia (trnL),log,07-31,
+01,Pyrus pyrifolia (trnL),log,08-01,
+01,Pyrus pyrifolia (trnL),log,08-02,
+01,Pyrus pyrifolia (trnL),log,08-03,0.0
+01,Pyrus pyrifolia (trnL),log,08-04,0.0
+01,Pyrus pyrifolia (trnL),log,08-05,0.0
+01,Pyrus pyrifolia (trnL),log,08-06,0.0
+01,Pyrus pyrifolia (trnL),log,08-07,0.0
+01,Pyrus pyrifolia (trnL),log,08-08,0.0
+01,Pyrus pyrifolia (trnL),log,08-09,0.0
+01,Pyrus pyrifolia (trnL),log,08-10,0.0
+01,Pyrus pyrifolia (trnL),log,08-11,0.0
+01,Pyrus pyrifolia (trnL),log,08-12,
+01,Pyrus pyrifolia (trnL),log,08-13,
+01,Pyrus pyrifolia (trnL),log,08-14,
+01,Beta vulgaris (trnL),log,07-31,
+01,Beta vulgaris (trnL),log,08-01,
+01,Beta vulgaris (trnL),log,08-02,
+01,Beta vulgaris (trnL),log,08-03,0.0
+01,Beta vulgaris (trnL),log,08-04,0.0
+01,Beta vulgaris (trnL),log,08-05,0.0
+01,Beta vulgaris (trnL),log,08-06,0.0
+01,Beta vulgaris (trnL),log,08-07,0.0
+01,Beta vulgaris (trnL),log,08-08,0.0
+01,Beta vulgaris (trnL),log,08-09,0.0
+01,Beta vulgaris (trnL),log,08-10,0.0
+01,Beta vulgaris (trnL),log,08-11,0.0
+01,Beta vulgaris (trnL),log,08-12,
+01,Beta vulgaris (trnL),log,08-13,
+01,Beta vulgaris (trnL),log,08-14,
+01,Salvia hispanica (trnL),log,07-31,
+01,Salvia hispanica (trnL),log,08-01,
+01,Salvia hispanica (trnL),log,08-02,
+01,Salvia hispanica (trnL),log,08-03,0.0
+01,Salvia hispanica (trnL),log,08-04,0.0
+01,Salvia hispanica (trnL),log,08-05,0.0
+01,Salvia hispanica (trnL),log,08-06,0.0
+01,Salvia hispanica (trnL),log,08-07,0.0
+01,Salvia hispanica (trnL),log,08-08,0.0
+01,Salvia hispanica (trnL),log,08-09,0.0
+01,Salvia hispanica (trnL),log,08-10,0.0
+01,Salvia hispanica (trnL),log,08-11,0.0
+01,Salvia hispanica (trnL),log,08-12,
+01,Salvia hispanica (trnL),log,08-13,
+01,Salvia hispanica (trnL),log,08-14,
+01,Bos taurus (12SV5),Stool,07-31,
+01,Bos taurus (12SV5),Stool,08-01,
+01,Bos taurus (12SV5),Stool,08-02,
+01,Bos taurus (12SV5),Stool,08-03,0.0
+01,Bos taurus (12SV5),Stool,08-04,
+01,Bos taurus (12SV5),Stool,08-05,
+01,Bos taurus (12SV5),Stool,08-06,1.0
+01,Bos taurus (12SV5),Stool,08-07,
+01,Bos taurus (12SV5),Stool,08-08,0.0
+01,Bos taurus (12SV5),Stool,08-09,2.0
+01,Bos taurus (12SV5),Stool,08-10,
+01,Bos taurus (12SV5),Stool,08-11,2.0
+01,Bos taurus (12SV5),Stool,08-12,
+01,Bos taurus (12SV5),Stool,08-13,
+01,Bos taurus (12SV5),Stool,08-14,0.0
+01,Gallus gallus (12SV5),Stool,07-31,
+01,Gallus gallus (12SV5),Stool,08-01,
+01,Gallus gallus (12SV5),Stool,08-02,
+01,Gallus gallus (12SV5),Stool,08-03,0.0
+01,Gallus gallus (12SV5),Stool,08-04,
+01,Gallus gallus (12SV5),Stool,08-05,
+01,Gallus gallus (12SV5),Stool,08-06,2.0
+01,Gallus gallus (12SV5),Stool,08-07,
+01,Gallus gallus (12SV5),Stool,08-08,1.0
+01,Gallus gallus (12SV5),Stool,08-09,1.0
+01,Gallus gallus (12SV5),Stool,08-10,
+01,Gallus gallus (12SV5),Stool,08-11,2.0
+01,Gallus gallus (12SV5),Stool,08-12,
+01,Gallus gallus (12SV5),Stool,08-13,
+01,Gallus gallus (12SV5),Stool,08-14,0.0
+01,Triticum aestivum (trnL),Stool,07-31,
+01,Triticum aestivum (trnL),Stool,08-01,
+01,Triticum aestivum (trnL),Stool,08-02,
+01,Triticum aestivum (trnL),Stool,08-03,2.0
+01,Triticum aestivum (trnL),Stool,08-04,
+01,Triticum aestivum (trnL),Stool,08-05,
+01,Triticum aestivum (trnL),Stool,08-06,3.0
+01,Triticum aestivum (trnL),Stool,08-07,
+01,Triticum aestivum (trnL),Stool,08-08,3.0
+01,Triticum aestivum (trnL),Stool,08-09,0.0
+01,Triticum aestivum (trnL),Stool,08-10,
+01,Triticum aestivum (trnL),Stool,08-11,2.0
+01,Triticum aestivum (trnL),Stool,08-12,
+01,Triticum aestivum (trnL),Stool,08-13,
+01,Triticum aestivum (trnL),Stool,08-14,2.0
+01,Vitis vinifera (trnL),Stool,07-31,
+01,Vitis vinifera (trnL),Stool,08-01,
+01,Vitis vinifera (trnL),Stool,08-02,
+01,Vitis vinifera (trnL),Stool,08-03,0.0
+01,Vitis vinifera (trnL),Stool,08-04,
+01,Vitis vinifera (trnL),Stool,08-05,
+01,Vitis vinifera (trnL),Stool,08-06,0.0
+01,Vitis vinifera (trnL),Stool,08-07,
+01,Vitis vinifera (trnL),Stool,08-08,0.0
+01,Vitis vinifera (trnL),Stool,08-09,0.0
+01,Vitis vinifera (trnL),Stool,08-10,
+01,Vitis vinifera (trnL),Stool,08-11,0.0
+01,Vitis vinifera (trnL),Stool,08-12,
+01,Vitis vinifera (trnL),Stool,08-13,
+01,Vitis vinifera (trnL),Stool,08-14,0.0
+01,Arachis hypogaea (trnL),Stool,07-31,
+01,Arachis hypogaea (trnL),Stool,08-01,
+01,Arachis hypogaea (trnL),Stool,08-02,
+01,Arachis hypogaea (trnL),Stool,08-03,0.0
+01,Arachis hypogaea (trnL),Stool,08-04,
+01,Arachis hypogaea (trnL),Stool,08-05,
+01,Arachis hypogaea (trnL),Stool,08-06,2.0
+01,Arachis hypogaea (trnL),Stool,08-07,
+01,Arachis hypogaea (trnL),Stool,08-08,0.0
+01,Arachis hypogaea (trnL),Stool,08-09,3.0
+01,Arachis hypogaea (trnL),Stool,08-10,
+01,Arachis hypogaea (trnL),Stool,08-11,0.0
+01,Arachis hypogaea (trnL),Stool,08-12,
+01,Arachis hypogaea (trnL),Stool,08-13,
+01,Arachis hypogaea (trnL),Stool,08-14,0.0
+01,Theobroma cacao (trnL),Stool,07-31,
+01,Theobroma cacao (trnL),Stool,08-01,
+01,Theobroma cacao (trnL),Stool,08-02,
+01,Theobroma cacao (trnL),Stool,08-03,0.0
+01,Theobroma cacao (trnL),Stool,08-04,
+01,Theobroma cacao (trnL),Stool,08-05,
+01,Theobroma cacao (trnL),Stool,08-06,1.0
+01,Theobroma cacao (trnL),Stool,08-07,
+01,Theobroma cacao (trnL),Stool,08-08,0.0
+01,Theobroma cacao (trnL),Stool,08-09,2.0
+01,Theobroma cacao (trnL),Stool,08-10,
+01,Theobroma cacao (trnL),Stool,08-11,3.0
+01,Theobroma cacao (trnL),Stool,08-12,
+01,Theobroma cacao (trnL),Stool,08-13,
+01,Theobroma cacao (trnL),Stool,08-14,0.0
+01,Glycine max (trnL),Stool,07-31,
+01,Glycine max (trnL),Stool,08-01,
+01,Glycine max (trnL),Stool,08-02,
+01,Glycine max (trnL),Stool,08-03,3.0
+01,Glycine max (trnL),Stool,08-04,
+01,Glycine max (trnL),Stool,08-05,
+01,Glycine max (trnL),Stool,08-06,2.0
+01,Glycine max (trnL),Stool,08-07,
+01,Glycine max (trnL),Stool,08-08,2.0
+01,Glycine max (trnL),Stool,08-09,3.0
+01,Glycine max (trnL),Stool,08-10,
+01,Glycine max (trnL),Stool,08-11,2.0
+01,Glycine max (trnL),Stool,08-12,
+01,Glycine max (trnL),Stool,08-13,
+01,Glycine max (trnL),Stool,08-14,3.0
+01,Solanum spp. (trnL),Stool,07-31,
+01,Solanum spp. (trnL),Stool,08-01,
+01,Solanum spp. (trnL),Stool,08-02,
+01,Solanum spp. (trnL),Stool,08-03,0.0
+01,Solanum spp. (trnL),Stool,08-04,
+01,Solanum spp. (trnL),Stool,08-05,
+01,Solanum spp. (trnL),Stool,08-06,0.0
+01,Solanum spp. (trnL),Stool,08-07,
+01,Solanum spp. (trnL),Stool,08-08,0.0
+01,Solanum spp. (trnL),Stool,08-09,0.0
+01,Solanum spp. (trnL),Stool,08-10,
+01,Solanum spp. (trnL),Stool,08-11,0.0
+01,Solanum spp. (trnL),Stool,08-12,
+01,Solanum spp. (trnL),Stool,08-13,
+01,Solanum spp. (trnL),Stool,08-14,0.0
+01,Allium spp. (trnL),Stool,07-31,
+01,Allium spp. (trnL),Stool,08-01,
+01,Allium spp. (trnL),Stool,08-02,
+01,Allium spp. (trnL),Stool,08-03,3.0
+01,Allium spp. (trnL),Stool,08-04,
+01,Allium spp. (trnL),Stool,08-05,
+01,Allium spp. (trnL),Stool,08-06,3.0
+01,Allium spp. (trnL),Stool,08-07,
+01,Allium spp. (trnL),Stool,08-08,0.0
+01,Allium spp. (trnL),Stool,08-09,2.0
+01,Allium spp. (trnL),Stool,08-10,
+01,Allium spp. (trnL),Stool,08-11,2.0
+01,Allium spp. (trnL),Stool,08-12,
+01,Allium spp. (trnL),Stool,08-13,
+01,Allium spp. (trnL),Stool,08-14,0.0
+01,Brassica spp. (trnL),Stool,07-31,
+01,Brassica spp. (trnL),Stool,08-01,
+01,Brassica spp. (trnL),Stool,08-02,
+01,Brassica spp. (trnL),Stool,08-03,3.0
+01,Brassica spp. (trnL),Stool,08-04,
+01,Brassica spp. (trnL),Stool,08-05,
+01,Brassica spp. (trnL),Stool,08-06,1.0
+01,Brassica spp. (trnL),Stool,08-07,
+01,Brassica spp. (trnL),Stool,08-08,0.0
+01,Brassica spp. (trnL),Stool,08-09,2.0
+01,Brassica spp. (trnL),Stool,08-10,
+01,Brassica spp. (trnL),Stool,08-11,2.0
+01,Brassica spp. (trnL),Stool,08-12,
+01,Brassica spp. (trnL),Stool,08-13,
+01,Brassica spp. (trnL),Stool,08-14,0.0
+01,Citrus spp. (trnL),Stool,07-31,
+01,Citrus spp. (trnL),Stool,08-01,
+01,Citrus spp. (trnL),Stool,08-02,
+01,Citrus spp. (trnL),Stool,08-03,0.0
+01,Citrus spp. (trnL),Stool,08-04,
+01,Citrus spp. (trnL),Stool,08-05,
+01,Citrus spp. (trnL),Stool,08-06,0.0
+01,Citrus spp. (trnL),Stool,08-07,
+01,Citrus spp. (trnL),Stool,08-08,0.0
+01,Citrus spp. (trnL),Stool,08-09,0.0
+01,Citrus spp. (trnL),Stool,08-10,
+01,Citrus spp. (trnL),Stool,08-11,2.0
+01,Citrus spp. (trnL),Stool,08-12,
+01,Citrus spp. (trnL),Stool,08-13,
+01,Citrus spp. (trnL),Stool,08-14,0.0
+01,Sus scrofa (12SV5),Stool,07-31,
+01,Sus scrofa (12SV5),Stool,08-01,
+01,Sus scrofa (12SV5),Stool,08-02,
+01,Sus scrofa (12SV5),Stool,08-03,0.0
+01,Sus scrofa (12SV5),Stool,08-04,
+01,Sus scrofa (12SV5),Stool,08-05,
+01,Sus scrofa (12SV5),Stool,08-06,0.0
+01,Sus scrofa (12SV5),Stool,08-07,
+01,Sus scrofa (12SV5),Stool,08-08,0.0
+01,Sus scrofa (12SV5),Stool,08-09,0.0
+01,Sus scrofa (12SV5),Stool,08-10,
+01,Sus scrofa (12SV5),Stool,08-11,0.0
+01,Sus scrofa (12SV5),Stool,08-12,
+01,Sus scrofa (12SV5),Stool,08-13,
+01,Sus scrofa (12SV5),Stool,08-14,0.0
+01,Lactuca sativa (trnL),Stool,07-31,
+01,Lactuca sativa (trnL),Stool,08-01,
+01,Lactuca sativa (trnL),Stool,08-02,
+01,Lactuca sativa (trnL),Stool,08-03,0.0
+01,Lactuca sativa (trnL),Stool,08-04,
+01,Lactuca sativa (trnL),Stool,08-05,
+01,Lactuca sativa (trnL),Stool,08-06,0.0
+01,Lactuca sativa (trnL),Stool,08-07,
+01,Lactuca sativa (trnL),Stool,08-08,0.0
+01,Lactuca sativa (trnL),Stool,08-09,0.0
+01,Lactuca sativa (trnL),Stool,08-10,
+01,Lactuca sativa (trnL),Stool,08-11,0.0
+01,Lactuca sativa (trnL),Stool,08-12,
+01,Lactuca sativa (trnL),Stool,08-13,
+01,Lactuca sativa (trnL),Stool,08-14,0.0
+01,Ovis aries (12SV5),Stool,07-31,
+01,Ovis aries (12SV5),Stool,08-01,
+01,Ovis aries (12SV5),Stool,08-02,
+01,Ovis aries (12SV5),Stool,08-03,0.0
+01,Ovis aries (12SV5),Stool,08-04,
+01,Ovis aries (12SV5),Stool,08-05,
+01,Ovis aries (12SV5),Stool,08-06,0.0
+01,Ovis aries (12SV5),Stool,08-07,
+01,Ovis aries (12SV5),Stool,08-08,0.0
+01,Ovis aries (12SV5),Stool,08-09,0.0
+01,Ovis aries (12SV5),Stool,08-10,
+01,Ovis aries (12SV5),Stool,08-11,0.0
+01,Ovis aries (12SV5),Stool,08-12,
+01,Ovis aries (12SV5),Stool,08-13,
+01,Ovis aries (12SV5),Stool,08-14,0.0
+01,Oryza sativa (trnL),Stool,07-31,
+01,Oryza sativa (trnL),Stool,08-01,
+01,Oryza sativa (trnL),Stool,08-02,
+01,Oryza sativa (trnL),Stool,08-03,0.0
+01,Oryza sativa (trnL),Stool,08-04,
+01,Oryza sativa (trnL),Stool,08-05,
+01,Oryza sativa (trnL),Stool,08-06,2.0
+01,Oryza sativa (trnL),Stool,08-07,
+01,Oryza sativa (trnL),Stool,08-08,0.0
+01,Oryza sativa (trnL),Stool,08-09,2.0
+01,Oryza sativa (trnL),Stool,08-10,
+01,Oryza sativa (trnL),Stool,08-11,2.0
+01,Oryza sativa (trnL),Stool,08-12,
+01,Oryza sativa (trnL),Stool,08-13,
+01,Oryza sativa (trnL),Stool,08-14,0.0
+01,Daucus carota (trnL),Stool,07-31,
+01,Daucus carota (trnL),Stool,08-01,
+01,Daucus carota (trnL),Stool,08-02,
+01,Daucus carota (trnL),Stool,08-03,1.0
+01,Daucus carota (trnL),Stool,08-04,
+01,Daucus carota (trnL),Stool,08-05,
+01,Daucus carota (trnL),Stool,08-06,2.0
+01,Daucus carota (trnL),Stool,08-07,
+01,Daucus carota (trnL),Stool,08-08,0.0
+01,Daucus carota (trnL),Stool,08-09,2.0
+01,Daucus carota (trnL),Stool,08-10,
+01,Daucus carota (trnL),Stool,08-11,2.0
+01,Daucus carota (trnL),Stool,08-12,
+01,Daucus carota (trnL),Stool,08-13,
+01,Daucus carota (trnL),Stool,08-14,0.0
+01,Hordeum vulgare (trnL) †,Stool,07-31,
+01,Hordeum vulgare (trnL) †,Stool,08-01,
+01,Hordeum vulgare (trnL) †,Stool,08-02,
+01,Hordeum vulgare (trnL) †,Stool,08-03,0.0
+01,Hordeum vulgare (trnL) †,Stool,08-04,
+01,Hordeum vulgare (trnL) †,Stool,08-05,
+01,Hordeum vulgare (trnL) †,Stool,08-06,0.0
+01,Hordeum vulgare (trnL) †,Stool,08-07,
+01,Hordeum vulgare (trnL) †,Stool,08-08,0.0
+01,Hordeum vulgare (trnL) †,Stool,08-09,0.0
+01,Hordeum vulgare (trnL) †,Stool,08-10,
+01,Hordeum vulgare (trnL) †,Stool,08-11,1.0
+01,Hordeum vulgare (trnL) †,Stool,08-12,
+01,Hordeum vulgare (trnL) †,Stool,08-13,
+01,Hordeum vulgare (trnL) †,Stool,08-14,0.0
+01,Anacardium occidentale (trnL),Stool,07-31,
+01,Anacardium occidentale (trnL),Stool,08-01,
+01,Anacardium occidentale (trnL),Stool,08-02,
+01,Anacardium occidentale (trnL),Stool,08-03,0.0
+01,Anacardium occidentale (trnL),Stool,08-04,
+01,Anacardium occidentale (trnL),Stool,08-05,
+01,Anacardium occidentale (trnL),Stool,08-06,0.0
+01,Anacardium occidentale (trnL),Stool,08-07,
+01,Anacardium occidentale (trnL),Stool,08-08,0.0
+01,Anacardium occidentale (trnL),Stool,08-09,2.0
+01,Anacardium occidentale (trnL),Stool,08-10,
+01,Anacardium occidentale (trnL),Stool,08-11,2.0
+01,Anacardium occidentale (trnL),Stool,08-12,
+01,Anacardium occidentale (trnL),Stool,08-13,
+01,Anacardium occidentale (trnL),Stool,08-14,0.0
+01,Anas platyrhynchos (12SV5),Stool,07-31,
+01,Anas platyrhynchos (12SV5),Stool,08-01,
+01,Anas platyrhynchos (12SV5),Stool,08-02,
+01,Anas platyrhynchos (12SV5),Stool,08-03,0.0
+01,Anas platyrhynchos (12SV5),Stool,08-04,
+01,Anas platyrhynchos (12SV5),Stool,08-05,
+01,Anas platyrhynchos (12SV5),Stool,08-06,0.0
+01,Anas platyrhynchos (12SV5),Stool,08-07,
+01,Anas platyrhynchos (12SV5),Stool,08-08,0.0
+01,Anas platyrhynchos (12SV5),Stool,08-09,0.0
+01,Anas platyrhynchos (12SV5),Stool,08-10,
+01,Anas platyrhynchos (12SV5),Stool,08-11,0.0
+01,Anas platyrhynchos (12SV5),Stool,08-12,
+01,Anas platyrhynchos (12SV5),Stool,08-13,
+01,Anas platyrhynchos (12SV5),Stool,08-14,0.0
+01,Coriandrum sativum (trnL) †,Stool,07-31,
+01,Coriandrum sativum (trnL) †,Stool,08-01,
+01,Coriandrum sativum (trnL) †,Stool,08-02,
+01,Coriandrum sativum (trnL) †,Stool,08-03,0.0
+01,Coriandrum sativum (trnL) †,Stool,08-04,
+01,Coriandrum sativum (trnL) †,Stool,08-05,
+01,Coriandrum sativum (trnL) †,Stool,08-06,0.0
+01,Coriandrum sativum (trnL) †,Stool,08-07,
+01,Coriandrum sativum (trnL) †,Stool,08-08,0.0
+01,Coriandrum sativum (trnL) †,Stool,08-09,0.0
+01,Coriandrum sativum (trnL) †,Stool,08-10,
+01,Coriandrum sativum (trnL) †,Stool,08-11,0.0
+01,Coriandrum sativum (trnL) †,Stool,08-12,
+01,Coriandrum sativum (trnL) †,Stool,08-13,
+01,Coriandrum sativum (trnL) †,Stool,08-14,0.0
+01,Curcuma longa (trnL) †,Stool,07-31,
+01,Curcuma longa (trnL) †,Stool,08-01,
+01,Curcuma longa (trnL) †,Stool,08-02,
+01,Curcuma longa (trnL) †,Stool,08-03,0.0
+01,Curcuma longa (trnL) †,Stool,08-04,
+01,Curcuma longa (trnL) †,Stool,08-05,
+01,Curcuma longa (trnL) †,Stool,08-06,0.0
+01,Curcuma longa (trnL) †,Stool,08-07,
+01,Curcuma longa (trnL) †,Stool,08-08,0.0
+01,Curcuma longa (trnL) †,Stool,08-09,0.0
+01,Curcuma longa (trnL) †,Stool,08-10,
+01,Curcuma longa (trnL) †,Stool,08-11,0.0
+01,Curcuma longa (trnL) †,Stool,08-12,
+01,Curcuma longa (trnL) †,Stool,08-13,
+01,Curcuma longa (trnL) †,Stool,08-14,0.0
+01,Persea americana (trnL),Stool,07-31,
+01,Persea americana (trnL),Stool,08-01,
+01,Persea americana (trnL),Stool,08-02,
+01,Persea americana (trnL),Stool,08-03,0.0
+01,Persea americana (trnL),Stool,08-04,
+01,Persea americana (trnL),Stool,08-05,
+01,Persea americana (trnL),Stool,08-06,0.0
+01,Persea americana (trnL),Stool,08-07,
+01,Persea americana (trnL),Stool,08-08,2.0
+01,Persea americana (trnL),Stool,08-09,0.0
+01,Persea americana (trnL),Stool,08-10,
+01,Persea americana (trnL),Stool,08-11,0.0
+01,Persea americana (trnL),Stool,08-12,
+01,Persea americana (trnL),Stool,08-13,
+01,Persea americana (trnL),Stool,08-14,0.0
+01,Prunus spp. (trnL),Stool,07-31,
+01,Prunus spp. (trnL),Stool,08-01,
+01,Prunus spp. (trnL),Stool,08-02,
+01,Prunus spp. (trnL),Stool,08-03,1.0
+01,Prunus spp. (trnL),Stool,08-04,
+01,Prunus spp. (trnL),Stool,08-05,
+01,Prunus spp. (trnL),Stool,08-06,0.0
+01,Prunus spp. (trnL),Stool,08-07,
+01,Prunus spp. (trnL),Stool,08-08,1.0
+01,Prunus spp. (trnL),Stool,08-09,0.0
+01,Prunus spp. (trnL),Stool,08-10,
+01,Prunus spp. (trnL),Stool,08-11,3.0
+01,Prunus spp. (trnL),Stool,08-12,
+01,Prunus spp. (trnL),Stool,08-13,
+01,Prunus spp. (trnL),Stool,08-14,3.0
+01,Spinacia oleracea (trnL),Stool,07-31,
+01,Spinacia oleracea (trnL),Stool,08-01,
+01,Spinacia oleracea (trnL),Stool,08-02,
+01,Spinacia oleracea (trnL),Stool,08-03,0.0
+01,Spinacia oleracea (trnL),Stool,08-04,
+01,Spinacia oleracea (trnL),Stool,08-05,
+01,Spinacia oleracea (trnL),Stool,08-06,0.0
+01,Spinacia oleracea (trnL),Stool,08-07,
+01,Spinacia oleracea (trnL),Stool,08-08,0.0
+01,Spinacia oleracea (trnL),Stool,08-09,1.0
+01,Spinacia oleracea (trnL),Stool,08-10,
+01,Spinacia oleracea (trnL),Stool,08-11,2.0
+01,Spinacia oleracea (trnL),Stool,08-12,
+01,Spinacia oleracea (trnL),Stool,08-13,
+01,Spinacia oleracea (trnL),Stool,08-14,2.0
+01,Capsicum annuum (trnL),Stool,07-31,
+01,Capsicum annuum (trnL),Stool,08-01,
+01,Capsicum annuum (trnL),Stool,08-02,
+01,Capsicum annuum (trnL),Stool,08-03,2.0
+01,Capsicum annuum (trnL),Stool,08-04,
+01,Capsicum annuum (trnL),Stool,08-05,
+01,Capsicum annuum (trnL),Stool,08-06,1.0
+01,Capsicum annuum (trnL),Stool,08-07,
+01,Capsicum annuum (trnL),Stool,08-08,0.0
+01,Capsicum annuum (trnL),Stool,08-09,0.0
+01,Capsicum annuum (trnL),Stool,08-10,
+01,Capsicum annuum (trnL),Stool,08-11,1.0
+01,Capsicum annuum (trnL),Stool,08-12,
+01,Capsicum annuum (trnL),Stool,08-13,
+01,Capsicum annuum (trnL),Stool,08-14,2.0
+01,Pisum sativum (trnL),Stool,07-31,
+01,Pisum sativum (trnL),Stool,08-01,
+01,Pisum sativum (trnL),Stool,08-02,
+01,Pisum sativum (trnL),Stool,08-03,0.0
+01,Pisum sativum (trnL),Stool,08-04,
+01,Pisum sativum (trnL),Stool,08-05,
+01,Pisum sativum (trnL),Stool,08-06,1.0
+01,Pisum sativum (trnL),Stool,08-07,
+01,Pisum sativum (trnL),Stool,08-08,0.0
+01,Pisum sativum (trnL),Stool,08-09,0.0
+01,Pisum sativum (trnL),Stool,08-10,
+01,Pisum sativum (trnL),Stool,08-11,0.0
+01,Pisum sativum (trnL),Stool,08-12,
+01,Pisum sativum (trnL),Stool,08-13,
+01,Pisum sativum (trnL),Stool,08-14,0.0
+01,Phaseolus vulgaris (trnL),Stool,07-31,
+01,Phaseolus vulgaris (trnL),Stool,08-01,
+01,Phaseolus vulgaris (trnL),Stool,08-02,
+01,Phaseolus vulgaris (trnL),Stool,08-03,0.0
+01,Phaseolus vulgaris (trnL),Stool,08-04,
+01,Phaseolus vulgaris (trnL),Stool,08-05,
+01,Phaseolus vulgaris (trnL),Stool,08-06,0.0
+01,Phaseolus vulgaris (trnL),Stool,08-07,
+01,Phaseolus vulgaris (trnL),Stool,08-08,0.0
+01,Phaseolus vulgaris (trnL),Stool,08-09,0.0
+01,Phaseolus vulgaris (trnL),Stool,08-10,
+01,Phaseolus vulgaris (trnL),Stool,08-11,0.0
+01,Phaseolus vulgaris (trnL),Stool,08-12,
+01,Phaseolus vulgaris (trnL),Stool,08-13,
+01,Phaseolus vulgaris (trnL),Stool,08-14,0.0
+01,Ocimum basilicum (trnL),Stool,07-31,
+01,Ocimum basilicum (trnL),Stool,08-01,
+01,Ocimum basilicum (trnL),Stool,08-02,
+01,Ocimum basilicum (trnL),Stool,08-03,0.0
+01,Ocimum basilicum (trnL),Stool,08-04,
+01,Ocimum basilicum (trnL),Stool,08-05,
+01,Ocimum basilicum (trnL),Stool,08-06,0.0
+01,Ocimum basilicum (trnL),Stool,08-07,
+01,Ocimum basilicum (trnL),Stool,08-08,0.0
+01,Ocimum basilicum (trnL),Stool,08-09,2.0
+01,Ocimum basilicum (trnL),Stool,08-10,
+01,Ocimum basilicum (trnL),Stool,08-11,0.0
+01,Ocimum basilicum (trnL),Stool,08-12,
+01,Ocimum basilicum (trnL),Stool,08-13,
+01,Ocimum basilicum (trnL),Stool,08-14,0.0
+01,Camellia sinensis (trnL) †,Stool,07-31,
+01,Camellia sinensis (trnL) †,Stool,08-01,
+01,Camellia sinensis (trnL) †,Stool,08-02,
+01,Camellia sinensis (trnL) †,Stool,08-03,0.0
+01,Camellia sinensis (trnL) †,Stool,08-04,
+01,Camellia sinensis (trnL) †,Stool,08-05,
+01,Camellia sinensis (trnL) †,Stool,08-06,0.0
+01,Camellia sinensis (trnL) †,Stool,08-07,
+01,Camellia sinensis (trnL) †,Stool,08-08,0.0
+01,Camellia sinensis (trnL) †,Stool,08-09,0.0
+01,Camellia sinensis (trnL) †,Stool,08-10,
+01,Camellia sinensis (trnL) †,Stool,08-11,0.0
+01,Camellia sinensis (trnL) †,Stool,08-12,
+01,Camellia sinensis (trnL) †,Stool,08-13,
+01,Camellia sinensis (trnL) †,Stool,08-14,0.0
+01,Avena sativa (trnL),Stool,07-31,
+01,Avena sativa (trnL),Stool,08-01,
+01,Avena sativa (trnL),Stool,08-02,
+01,Avena sativa (trnL),Stool,08-03,0.0
+01,Avena sativa (trnL),Stool,08-04,
+01,Avena sativa (trnL),Stool,08-05,
+01,Avena sativa (trnL),Stool,08-06,0.0
+01,Avena sativa (trnL),Stool,08-07,
+01,Avena sativa (trnL),Stool,08-08,0.0
+01,Avena sativa (trnL),Stool,08-09,0.0
+01,Avena sativa (trnL),Stool,08-10,
+01,Avena sativa (trnL),Stool,08-11,0.0
+01,Avena sativa (trnL),Stool,08-12,
+01,Avena sativa (trnL),Stool,08-13,
+01,Avena sativa (trnL),Stool,08-14,0.0
+01,Asparagus officinalis (trnL),Stool,07-31,
+01,Asparagus officinalis (trnL),Stool,08-01,
+01,Asparagus officinalis (trnL),Stool,08-02,
+01,Asparagus officinalis (trnL),Stool,08-03,0.0
+01,Asparagus officinalis (trnL),Stool,08-04,
+01,Asparagus officinalis (trnL),Stool,08-05,
+01,Asparagus officinalis (trnL),Stool,08-06,0.0
+01,Asparagus officinalis (trnL),Stool,08-07,
+01,Asparagus officinalis (trnL),Stool,08-08,0.0
+01,Asparagus officinalis (trnL),Stool,08-09,3.0
+01,Asparagus officinalis (trnL),Stool,08-10,
+01,Asparagus officinalis (trnL),Stool,08-11,1.0
+01,Asparagus officinalis (trnL),Stool,08-12,
+01,Asparagus officinalis (trnL),Stool,08-13,
+01,Asparagus officinalis (trnL),Stool,08-14,0.0
+01,Carya illinoinensis (trnL),Stool,07-31,
+01,Carya illinoinensis (trnL),Stool,08-01,
+01,Carya illinoinensis (trnL),Stool,08-02,
+01,Carya illinoinensis (trnL),Stool,08-03,0.0
+01,Carya illinoinensis (trnL),Stool,08-04,
+01,Carya illinoinensis (trnL),Stool,08-05,
+01,Carya illinoinensis (trnL),Stool,08-06,0.0
+01,Carya illinoinensis (trnL),Stool,08-07,
+01,Carya illinoinensis (trnL),Stool,08-08,0.0
+01,Carya illinoinensis (trnL),Stool,08-09,0.0
+01,Carya illinoinensis (trnL),Stool,08-10,
+01,Carya illinoinensis (trnL),Stool,08-11,0.0
+01,Carya illinoinensis (trnL),Stool,08-12,
+01,Carya illinoinensis (trnL),Stool,08-13,
+01,Carya illinoinensis (trnL),Stool,08-14,0.0
+01,Vaccinium spp. (trnL),Stool,07-31,
+01,Vaccinium spp. (trnL),Stool,08-01,
+01,Vaccinium spp. (trnL),Stool,08-02,
+01,Vaccinium spp. (trnL),Stool,08-03,0.0
+01,Vaccinium spp. (trnL),Stool,08-04,
+01,Vaccinium spp. (trnL),Stool,08-05,
+01,Vaccinium spp. (trnL),Stool,08-06,0.0
+01,Vaccinium spp. (trnL),Stool,08-07,
+01,Vaccinium spp. (trnL),Stool,08-08,0.0
+01,Vaccinium spp. (trnL),Stool,08-09,0.0
+01,Vaccinium spp. (trnL),Stool,08-10,
+01,Vaccinium spp. (trnL),Stool,08-11,0.0
+01,Vaccinium spp. (trnL),Stool,08-12,
+01,Vaccinium spp. (trnL),Stool,08-13,
+01,Vaccinium spp. (trnL),Stool,08-14,0.0
+01,Linum usitatissimum (trnL) †,Stool,07-31,
+01,Linum usitatissimum (trnL) †,Stool,08-01,
+01,Linum usitatissimum (trnL) †,Stool,08-02,
+01,Linum usitatissimum (trnL) †,Stool,08-03,0.0
+01,Linum usitatissimum (trnL) †,Stool,08-04,
+01,Linum usitatissimum (trnL) †,Stool,08-05,
+01,Linum usitatissimum (trnL) †,Stool,08-06,0.0
+01,Linum usitatissimum (trnL) †,Stool,08-07,
+01,Linum usitatissimum (trnL) †,Stool,08-08,1.0
+01,Linum usitatissimum (trnL) †,Stool,08-09,0.0
+01,Linum usitatissimum (trnL) †,Stool,08-10,
+01,Linum usitatissimum (trnL) †,Stool,08-11,0.0
+01,Linum usitatissimum (trnL) †,Stool,08-12,
+01,Linum usitatissimum (trnL) †,Stool,08-13,
+01,Linum usitatissimum (trnL) †,Stool,08-14,0.0
+01,Lens culinaris (trnL),Stool,07-31,
+01,Lens culinaris (trnL),Stool,08-01,
+01,Lens culinaris (trnL),Stool,08-02,
+01,Lens culinaris (trnL),Stool,08-03,0.0
+01,Lens culinaris (trnL),Stool,08-04,
+01,Lens culinaris (trnL),Stool,08-05,
+01,Lens culinaris (trnL),Stool,08-06,1.0
+01,Lens culinaris (trnL),Stool,08-07,
+01,Lens culinaris (trnL),Stool,08-08,0.0
+01,Lens culinaris (trnL),Stool,08-09,0.0
+01,Lens culinaris (trnL),Stool,08-10,
+01,Lens culinaris (trnL),Stool,08-11,0.0
+01,Lens culinaris (trnL),Stool,08-12,
+01,Lens culinaris (trnL),Stool,08-13,
+01,Lens culinaris (trnL),Stool,08-14,0.0
+01,Cynara cardunculus (trnL),Stool,07-31,
+01,Cynara cardunculus (trnL),Stool,08-01,
+01,Cynara cardunculus (trnL),Stool,08-02,
+01,Cynara cardunculus (trnL),Stool,08-03,0.0
+01,Cynara cardunculus (trnL),Stool,08-04,
+01,Cynara cardunculus (trnL),Stool,08-05,
+01,Cynara cardunculus (trnL),Stool,08-06,0.0
+01,Cynara cardunculus (trnL),Stool,08-07,
+01,Cynara cardunculus (trnL),Stool,08-08,0.0
+01,Cynara cardunculus (trnL),Stool,08-09,0.0
+01,Cynara cardunculus (trnL),Stool,08-10,
+01,Cynara cardunculus (trnL),Stool,08-11,0.0
+01,Cynara cardunculus (trnL),Stool,08-12,
+01,Cynara cardunculus (trnL),Stool,08-13,
+01,Cynara cardunculus (trnL),Stool,08-14,0.0
+01,Ficus carica (trnL),Stool,07-31,
+01,Ficus carica (trnL),Stool,08-01,
+01,Ficus carica (trnL),Stool,08-02,
+01,Ficus carica (trnL),Stool,08-03,0.0
+01,Ficus carica (trnL),Stool,08-04,
+01,Ficus carica (trnL),Stool,08-05,
+01,Ficus carica (trnL),Stool,08-06,0.0
+01,Ficus carica (trnL),Stool,08-07,
+01,Ficus carica (trnL),Stool,08-08,3.0
+01,Ficus carica (trnL),Stool,08-09,0.0
+01,Ficus carica (trnL),Stool,08-10,
+01,Ficus carica (trnL),Stool,08-11,0.0
+01,Ficus carica (trnL),Stool,08-12,
+01,Ficus carica (trnL),Stool,08-13,
+01,Ficus carica (trnL),Stool,08-14,0.0
+01,Cicer arietinum (trnL),Stool,07-31,
+01,Cicer arietinum (trnL),Stool,08-01,
+01,Cicer arietinum (trnL),Stool,08-02,
+01,Cicer arietinum (trnL),Stool,08-03,0.0
+01,Cicer arietinum (trnL),Stool,08-04,
+01,Cicer arietinum (trnL),Stool,08-05,
+01,Cicer arietinum (trnL),Stool,08-06,0.0
+01,Cicer arietinum (trnL),Stool,08-07,
+01,Cicer arietinum (trnL),Stool,08-08,0.0
+01,Cicer arietinum (trnL),Stool,08-09,0.0
+01,Cicer arietinum (trnL),Stool,08-10,
+01,Cicer arietinum (trnL),Stool,08-11,0.0
+01,Cicer arietinum (trnL),Stool,08-12,
+01,Cicer arietinum (trnL),Stool,08-13,
+01,Cicer arietinum (trnL),Stool,08-14,0.0
+01,Pyrus pyrifolia (trnL),Stool,07-31,
+01,Pyrus pyrifolia (trnL),Stool,08-01,
+01,Pyrus pyrifolia (trnL),Stool,08-02,
+01,Pyrus pyrifolia (trnL),Stool,08-03,0.0
+01,Pyrus pyrifolia (trnL),Stool,08-04,
+01,Pyrus pyrifolia (trnL),Stool,08-05,
+01,Pyrus pyrifolia (trnL),Stool,08-06,0.0
+01,Pyrus pyrifolia (trnL),Stool,08-07,
+01,Pyrus pyrifolia (trnL),Stool,08-08,0.0
+01,Pyrus pyrifolia (trnL),Stool,08-09,0.0
+01,Pyrus pyrifolia (trnL),Stool,08-10,
+01,Pyrus pyrifolia (trnL),Stool,08-11,0.0
+01,Pyrus pyrifolia (trnL),Stool,08-12,
+01,Pyrus pyrifolia (trnL),Stool,08-13,
+01,Pyrus pyrifolia (trnL),Stool,08-14,0.0
+01,Beta vulgaris (trnL),Stool,07-31,
+01,Beta vulgaris (trnL),Stool,08-01,
+01,Beta vulgaris (trnL),Stool,08-02,
+01,Beta vulgaris (trnL),Stool,08-03,0.0
+01,Beta vulgaris (trnL),Stool,08-04,
+01,Beta vulgaris (trnL),Stool,08-05,
+01,Beta vulgaris (trnL),Stool,08-06,0.0
+01,Beta vulgaris (trnL),Stool,08-07,
+01,Beta vulgaris (trnL),Stool,08-08,0.0
+01,Beta vulgaris (trnL),Stool,08-09,0.0
+01,Beta vulgaris (trnL),Stool,08-10,
+01,Beta vulgaris (trnL),Stool,08-11,1.0
+01,Beta vulgaris (trnL),Stool,08-12,
+01,Beta vulgaris (trnL),Stool,08-13,
+01,Beta vulgaris (trnL),Stool,08-14,0.0
+01,Salvia hispanica (trnL),Stool,07-31,
+01,Salvia hispanica (trnL),Stool,08-01,
+01,Salvia hispanica (trnL),Stool,08-02,
+01,Salvia hispanica (trnL),Stool,08-03,0.0
+01,Salvia hispanica (trnL),Stool,08-04,
+01,Salvia hispanica (trnL),Stool,08-05,
+01,Salvia hispanica (trnL),Stool,08-06,0.0
+01,Salvia hispanica (trnL),Stool,08-07,
+01,Salvia hispanica (trnL),Stool,08-08,0.0
+01,Salvia hispanica (trnL),Stool,08-09,0.0
+01,Salvia hispanica (trnL),Stool,08-10,
+01,Salvia hispanica (trnL),Stool,08-11,0.0
+01,Salvia hispanica (trnL),Stool,08-12,
+01,Salvia hispanica (trnL),Stool,08-13,
+01,Salvia hispanica (trnL),Stool,08-14,0.0
+01,Bos taurus (12SV5),Capsule,07-31,
+01,Bos taurus (12SV5),Capsule,08-01,
+01,Bos taurus (12SV5),Capsule,08-02,
+01,Bos taurus (12SV5),Capsule,08-03,0.0
+01,Bos taurus (12SV5),Capsule,08-04,
+01,Bos taurus (12SV5),Capsule,08-05,
+01,Bos taurus (12SV5),Capsule,08-06,3.0
+01,Bos taurus (12SV5),Capsule,08-07,
+01,Bos taurus (12SV5),Capsule,08-08,2.0
+01,Bos taurus (12SV5),Capsule,08-09,2.0
+01,Bos taurus (12SV5),Capsule,08-10,
+01,Bos taurus (12SV5),Capsule,08-11,
+01,Bos taurus (12SV5),Capsule,08-12,
+01,Bos taurus (12SV5),Capsule,08-13,
+01,Bos taurus (12SV5),Capsule,08-14,3.0
+01,Gallus gallus (12SV5),Capsule,07-31,
+01,Gallus gallus (12SV5),Capsule,08-01,
+01,Gallus gallus (12SV5),Capsule,08-02,
+01,Gallus gallus (12SV5),Capsule,08-03,0.0
+01,Gallus gallus (12SV5),Capsule,08-04,
+01,Gallus gallus (12SV5),Capsule,08-05,
+01,Gallus gallus (12SV5),Capsule,08-06,3.0
+01,Gallus gallus (12SV5),Capsule,08-07,
+01,Gallus gallus (12SV5),Capsule,08-08,3.0
+01,Gallus gallus (12SV5),Capsule,08-09,3.0
+01,Gallus gallus (12SV5),Capsule,08-10,
+01,Gallus gallus (12SV5),Capsule,08-11,
+01,Gallus gallus (12SV5),Capsule,08-12,
+01,Gallus gallus (12SV5),Capsule,08-13,
+01,Gallus gallus (12SV5),Capsule,08-14,0.0
+01,Triticum aestivum (trnL),Capsule,07-31,
+01,Triticum aestivum (trnL),Capsule,08-01,
+01,Triticum aestivum (trnL),Capsule,08-02,
+01,Triticum aestivum (trnL),Capsule,08-03,0.0
+01,Triticum aestivum (trnL),Capsule,08-04,
+01,Triticum aestivum (trnL),Capsule,08-05,
+01,Triticum aestivum (trnL),Capsule,08-06,2.0
+01,Triticum aestivum (trnL),Capsule,08-07,
+01,Triticum aestivum (trnL),Capsule,08-08,2.0
+01,Triticum aestivum (trnL),Capsule,08-09,2.0
+01,Triticum aestivum (trnL),Capsule,08-10,
+01,Triticum aestivum (trnL),Capsule,08-11,
+01,Triticum aestivum (trnL),Capsule,08-12,
+01,Triticum aestivum (trnL),Capsule,08-13,
+01,Triticum aestivum (trnL),Capsule,08-14,2.0
+01,Vitis vinifera (trnL),Capsule,07-31,
+01,Vitis vinifera (trnL),Capsule,08-01,
+01,Vitis vinifera (trnL),Capsule,08-02,
+01,Vitis vinifera (trnL),Capsule,08-03,0.0
+01,Vitis vinifera (trnL),Capsule,08-04,
+01,Vitis vinifera (trnL),Capsule,08-05,
+01,Vitis vinifera (trnL),Capsule,08-06,0.0
+01,Vitis vinifera (trnL),Capsule,08-07,
+01,Vitis vinifera (trnL),Capsule,08-08,0.0
+01,Vitis vinifera (trnL),Capsule,08-09,0.0
+01,Vitis vinifera (trnL),Capsule,08-10,
+01,Vitis vinifera (trnL),Capsule,08-11,
+01,Vitis vinifera (trnL),Capsule,08-12,
+01,Vitis vinifera (trnL),Capsule,08-13,
+01,Vitis vinifera (trnL),Capsule,08-14,0.0
+01,Arachis hypogaea (trnL),Capsule,07-31,
+01,Arachis hypogaea (trnL),Capsule,08-01,
+01,Arachis hypogaea (trnL),Capsule,08-02,
+01,Arachis hypogaea (trnL),Capsule,08-03,2.0
+01,Arachis hypogaea (trnL),Capsule,08-04,
+01,Arachis hypogaea (trnL),Capsule,08-05,
+01,Arachis hypogaea (trnL),Capsule,08-06,2.0
+01,Arachis hypogaea (trnL),Capsule,08-07,
+01,Arachis hypogaea (trnL),Capsule,08-08,1.0
+01,Arachis hypogaea (trnL),Capsule,08-09,2.0
+01,Arachis hypogaea (trnL),Capsule,08-10,
+01,Arachis hypogaea (trnL),Capsule,08-11,
+01,Arachis hypogaea (trnL),Capsule,08-12,
+01,Arachis hypogaea (trnL),Capsule,08-13,
+01,Arachis hypogaea (trnL),Capsule,08-14,2.0
+01,Theobroma cacao (trnL),Capsule,07-31,
+01,Theobroma cacao (trnL),Capsule,08-01,
+01,Theobroma cacao (trnL),Capsule,08-02,
+01,Theobroma cacao (trnL),Capsule,08-03,2.0
+01,Theobroma cacao (trnL),Capsule,08-04,
+01,Theobroma cacao (trnL),Capsule,08-05,
+01,Theobroma cacao (trnL),Capsule,08-06,2.0
+01,Theobroma cacao (trnL),Capsule,08-07,
+01,Theobroma cacao (trnL),Capsule,08-08,3.0
+01,Theobroma cacao (trnL),Capsule,08-09,3.0
+01,Theobroma cacao (trnL),Capsule,08-10,
+01,Theobroma cacao (trnL),Capsule,08-11,
+01,Theobroma cacao (trnL),Capsule,08-12,
+01,Theobroma cacao (trnL),Capsule,08-13,
+01,Theobroma cacao (trnL),Capsule,08-14,3.0
+01,Glycine max (trnL),Capsule,07-31,
+01,Glycine max (trnL),Capsule,08-01,
+01,Glycine max (trnL),Capsule,08-02,
+01,Glycine max (trnL),Capsule,08-03,3.0
+01,Glycine max (trnL),Capsule,08-04,
+01,Glycine max (trnL),Capsule,08-05,
+01,Glycine max (trnL),Capsule,08-06,3.0
+01,Glycine max (trnL),Capsule,08-07,
+01,Glycine max (trnL),Capsule,08-08,2.0
+01,Glycine max (trnL),Capsule,08-09,3.0
+01,Glycine max (trnL),Capsule,08-10,
+01,Glycine max (trnL),Capsule,08-11,
+01,Glycine max (trnL),Capsule,08-12,
+01,Glycine max (trnL),Capsule,08-13,
+01,Glycine max (trnL),Capsule,08-14,3.0
+01,Solanum spp. (trnL),Capsule,07-31,
+01,Solanum spp. (trnL),Capsule,08-01,
+01,Solanum spp. (trnL),Capsule,08-02,
+01,Solanum spp. (trnL),Capsule,08-03,0.0
+01,Solanum spp. (trnL),Capsule,08-04,
+01,Solanum spp. (trnL),Capsule,08-05,
+01,Solanum spp. (trnL),Capsule,08-06,0.0
+01,Solanum spp. (trnL),Capsule,08-07,
+01,Solanum spp. (trnL),Capsule,08-08,0.0
+01,Solanum spp. (trnL),Capsule,08-09,1.0
+01,Solanum spp. (trnL),Capsule,08-10,
+01,Solanum spp. (trnL),Capsule,08-11,
+01,Solanum spp. (trnL),Capsule,08-12,
+01,Solanum spp. (trnL),Capsule,08-13,
+01,Solanum spp. (trnL),Capsule,08-14,2.0
+01,Allium spp. (trnL),Capsule,07-31,
+01,Allium spp. (trnL),Capsule,08-01,
+01,Allium spp. (trnL),Capsule,08-02,
+01,Allium spp. (trnL),Capsule,08-03,2.0
+01,Allium spp. (trnL),Capsule,08-04,
+01,Allium spp. (trnL),Capsule,08-05,
+01,Allium spp. (trnL),Capsule,08-06,0.0
+01,Allium spp. (trnL),Capsule,08-07,
+01,Allium spp. (trnL),Capsule,08-08,2.0
+01,Allium spp. (trnL),Capsule,08-09,1.0
+01,Allium spp. (trnL),Capsule,08-10,
+01,Allium spp. (trnL),Capsule,08-11,
+01,Allium spp. (trnL),Capsule,08-12,
+01,Allium spp. (trnL),Capsule,08-13,
+01,Allium spp. (trnL),Capsule,08-14,0.0
+01,Brassica spp. (trnL),Capsule,07-31,
+01,Brassica spp. (trnL),Capsule,08-01,
+01,Brassica spp. (trnL),Capsule,08-02,
+01,Brassica spp. (trnL),Capsule,08-03,2.0
+01,Brassica spp. (trnL),Capsule,08-04,
+01,Brassica spp. (trnL),Capsule,08-05,
+01,Brassica spp. (trnL),Capsule,08-06,0.0
+01,Brassica spp. (trnL),Capsule,08-07,
+01,Brassica spp. (trnL),Capsule,08-08,2.0
+01,Brassica spp. (trnL),Capsule,08-09,3.0
+01,Brassica spp. (trnL),Capsule,08-10,
+01,Brassica spp. (trnL),Capsule,08-11,
+01,Brassica spp. (trnL),Capsule,08-12,
+01,Brassica spp. (trnL),Capsule,08-13,
+01,Brassica spp. (trnL),Capsule,08-14,2.0
+01,Citrus spp. (trnL),Capsule,07-31,
+01,Citrus spp. (trnL),Capsule,08-01,
+01,Citrus spp. (trnL),Capsule,08-02,
+01,Citrus spp. (trnL),Capsule,08-03,0.0
+01,Citrus spp. (trnL),Capsule,08-04,
+01,Citrus spp. (trnL),Capsule,08-05,
+01,Citrus spp. (trnL),Capsule,08-06,0.0
+01,Citrus spp. (trnL),Capsule,08-07,
+01,Citrus spp. (trnL),Capsule,08-08,0.0
+01,Citrus spp. (trnL),Capsule,08-09,0.0
+01,Citrus spp. (trnL),Capsule,08-10,
+01,Citrus spp. (trnL),Capsule,08-11,
+01,Citrus spp. (trnL),Capsule,08-12,
+01,Citrus spp. (trnL),Capsule,08-13,
+01,Citrus spp. (trnL),Capsule,08-14,0.0
+01,Sus scrofa (12SV5),Capsule,07-31,
+01,Sus scrofa (12SV5),Capsule,08-01,
+01,Sus scrofa (12SV5),Capsule,08-02,
+01,Sus scrofa (12SV5),Capsule,08-03,2.0
+01,Sus scrofa (12SV5),Capsule,08-04,
+01,Sus scrofa (12SV5),Capsule,08-05,
+01,Sus scrofa (12SV5),Capsule,08-06,0.0
+01,Sus scrofa (12SV5),Capsule,08-07,
+01,Sus scrofa (12SV5),Capsule,08-08,0.0
+01,Sus scrofa (12SV5),Capsule,08-09,2.0
+01,Sus scrofa (12SV5),Capsule,08-10,
+01,Sus scrofa (12SV5),Capsule,08-11,
+01,Sus scrofa (12SV5),Capsule,08-12,
+01,Sus scrofa (12SV5),Capsule,08-13,
+01,Sus scrofa (12SV5),Capsule,08-14,0.0
+01,Lactuca sativa (trnL),Capsule,07-31,
+01,Lactuca sativa (trnL),Capsule,08-01,
+01,Lactuca sativa (trnL),Capsule,08-02,
+01,Lactuca sativa (trnL),Capsule,08-03,2.0
+01,Lactuca sativa (trnL),Capsule,08-04,
+01,Lactuca sativa (trnL),Capsule,08-05,
+01,Lactuca sativa (trnL),Capsule,08-06,2.0
+01,Lactuca sativa (trnL),Capsule,08-07,
+01,Lactuca sativa (trnL),Capsule,08-08,2.0
+01,Lactuca sativa (trnL),Capsule,08-09,2.0
+01,Lactuca sativa (trnL),Capsule,08-10,
+01,Lactuca sativa (trnL),Capsule,08-11,
+01,Lactuca sativa (trnL),Capsule,08-12,
+01,Lactuca sativa (trnL),Capsule,08-13,
+01,Lactuca sativa (trnL),Capsule,08-14,1.0
+01,Ovis aries (12SV5),Capsule,07-31,
+01,Ovis aries (12SV5),Capsule,08-01,
+01,Ovis aries (12SV5),Capsule,08-02,
+01,Ovis aries (12SV5),Capsule,08-03,3.0
+01,Ovis aries (12SV5),Capsule,08-04,
+01,Ovis aries (12SV5),Capsule,08-05,
+01,Ovis aries (12SV5),Capsule,08-06,0.0
+01,Ovis aries (12SV5),Capsule,08-07,
+01,Ovis aries (12SV5),Capsule,08-08,0.0
+01,Ovis aries (12SV5),Capsule,08-09,0.0
+01,Ovis aries (12SV5),Capsule,08-10,
+01,Ovis aries (12SV5),Capsule,08-11,
+01,Ovis aries (12SV5),Capsule,08-12,
+01,Ovis aries (12SV5),Capsule,08-13,
+01,Ovis aries (12SV5),Capsule,08-14,3.0
+01,Oryza sativa (trnL),Capsule,07-31,
+01,Oryza sativa (trnL),Capsule,08-01,
+01,Oryza sativa (trnL),Capsule,08-02,
+01,Oryza sativa (trnL),Capsule,08-03,0.0
+01,Oryza sativa (trnL),Capsule,08-04,
+01,Oryza sativa (trnL),Capsule,08-05,
+01,Oryza sativa (trnL),Capsule,08-06,0.0
+01,Oryza sativa (trnL),Capsule,08-07,
+01,Oryza sativa (trnL),Capsule,08-08,2.0
+01,Oryza sativa (trnL),Capsule,08-09,2.0
+01,Oryza sativa (trnL),Capsule,08-10,
+01,Oryza sativa (trnL),Capsule,08-11,
+01,Oryza sativa (trnL),Capsule,08-12,
+01,Oryza sativa (trnL),Capsule,08-13,
+01,Oryza sativa (trnL),Capsule,08-14,0.0
+01,Daucus carota (trnL),Capsule,07-31,
+01,Daucus carota (trnL),Capsule,08-01,
+01,Daucus carota (trnL),Capsule,08-02,
+01,Daucus carota (trnL),Capsule,08-03,2.0
+01,Daucus carota (trnL),Capsule,08-04,
+01,Daucus carota (trnL),Capsule,08-05,
+01,Daucus carota (trnL),Capsule,08-06,2.0
+01,Daucus carota (trnL),Capsule,08-07,
+01,Daucus carota (trnL),Capsule,08-08,2.0
+01,Daucus carota (trnL),Capsule,08-09,3.0
+01,Daucus carota (trnL),Capsule,08-10,
+01,Daucus carota (trnL),Capsule,08-11,
+01,Daucus carota (trnL),Capsule,08-12,
+01,Daucus carota (trnL),Capsule,08-13,
+01,Daucus carota (trnL),Capsule,08-14,1.0
+01,Hordeum vulgare (trnL) †,Capsule,07-31,
+01,Hordeum vulgare (trnL) †,Capsule,08-01,
+01,Hordeum vulgare (trnL) †,Capsule,08-02,
+01,Hordeum vulgare (trnL) †,Capsule,08-03,0.0
+01,Hordeum vulgare (trnL) †,Capsule,08-04,
+01,Hordeum vulgare (trnL) †,Capsule,08-05,
+01,Hordeum vulgare (trnL) †,Capsule,08-06,0.0
+01,Hordeum vulgare (trnL) †,Capsule,08-07,
+01,Hordeum vulgare (trnL) †,Capsule,08-08,0.0
+01,Hordeum vulgare (trnL) †,Capsule,08-09,0.0
+01,Hordeum vulgare (trnL) †,Capsule,08-10,
+01,Hordeum vulgare (trnL) †,Capsule,08-11,
+01,Hordeum vulgare (trnL) †,Capsule,08-12,
+01,Hordeum vulgare (trnL) †,Capsule,08-13,
+01,Hordeum vulgare (trnL) †,Capsule,08-14,0.0
+01,Anacardium occidentale (trnL),Capsule,07-31,
+01,Anacardium occidentale (trnL),Capsule,08-01,
+01,Anacardium occidentale (trnL),Capsule,08-02,
+01,Anacardium occidentale (trnL),Capsule,08-03,0.0
+01,Anacardium occidentale (trnL),Capsule,08-04,
+01,Anacardium occidentale (trnL),Capsule,08-05,
+01,Anacardium occidentale (trnL),Capsule,08-06,0.0
+01,Anacardium occidentale (trnL),Capsule,08-07,
+01,Anacardium occidentale (trnL),Capsule,08-08,2.0
+01,Anacardium occidentale (trnL),Capsule,08-09,2.0
+01,Anacardium occidentale (trnL),Capsule,08-10,
+01,Anacardium occidentale (trnL),Capsule,08-11,
+01,Anacardium occidentale (trnL),Capsule,08-12,
+01,Anacardium occidentale (trnL),Capsule,08-13,
+01,Anacardium occidentale (trnL),Capsule,08-14,0.0
+01,Anas platyrhynchos (12SV5),Capsule,07-31,
+01,Anas platyrhynchos (12SV5),Capsule,08-01,
+01,Anas platyrhynchos (12SV5),Capsule,08-02,
+01,Anas platyrhynchos (12SV5),Capsule,08-03,0.0
+01,Anas platyrhynchos (12SV5),Capsule,08-04,
+01,Anas platyrhynchos (12SV5),Capsule,08-05,
+01,Anas platyrhynchos (12SV5),Capsule,08-06,0.0
+01,Anas platyrhynchos (12SV5),Capsule,08-07,
+01,Anas platyrhynchos (12SV5),Capsule,08-08,0.0
+01,Anas platyrhynchos (12SV5),Capsule,08-09,0.0
+01,Anas platyrhynchos (12SV5),Capsule,08-10,
+01,Anas platyrhynchos (12SV5),Capsule,08-11,
+01,Anas platyrhynchos (12SV5),Capsule,08-12,
+01,Anas platyrhynchos (12SV5),Capsule,08-13,
+01,Anas platyrhynchos (12SV5),Capsule,08-14,0.0
+01,Coriandrum sativum (trnL) †,Capsule,07-31,
+01,Coriandrum sativum (trnL) †,Capsule,08-01,
+01,Coriandrum sativum (trnL) †,Capsule,08-02,
+01,Coriandrum sativum (trnL) †,Capsule,08-03,0.0
+01,Coriandrum sativum (trnL) †,Capsule,08-04,
+01,Coriandrum sativum (trnL) †,Capsule,08-05,
+01,Coriandrum sativum (trnL) †,Capsule,08-06,0.0
+01,Coriandrum sativum (trnL) †,Capsule,08-07,
+01,Coriandrum sativum (trnL) †,Capsule,08-08,0.0
+01,Coriandrum sativum (trnL) †,Capsule,08-09,0.0
+01,Coriandrum sativum (trnL) †,Capsule,08-10,
+01,Coriandrum sativum (trnL) †,Capsule,08-11,
+01,Coriandrum sativum (trnL) †,Capsule,08-12,
+01,Coriandrum sativum (trnL) †,Capsule,08-13,
+01,Coriandrum sativum (trnL) †,Capsule,08-14,0.0
+01,Curcuma longa (trnL) †,Capsule,07-31,
+01,Curcuma longa (trnL) †,Capsule,08-01,
+01,Curcuma longa (trnL) †,Capsule,08-02,
+01,Curcuma longa (trnL) †,Capsule,08-03,0.0
+01,Curcuma longa (trnL) †,Capsule,08-04,
+01,Curcuma longa (trnL) †,Capsule,08-05,
+01,Curcuma longa (trnL) †,Capsule,08-06,0.0
+01,Curcuma longa (trnL) †,Capsule,08-07,
+01,Curcuma longa (trnL) †,Capsule,08-08,0.0
+01,Curcuma longa (trnL) †,Capsule,08-09,0.0
+01,Curcuma longa (trnL) †,Capsule,08-10,
+01,Curcuma longa (trnL) †,Capsule,08-11,
+01,Curcuma longa (trnL) †,Capsule,08-12,
+01,Curcuma longa (trnL) †,Capsule,08-13,
+01,Curcuma longa (trnL) †,Capsule,08-14,0.0
+01,Persea americana (trnL),Capsule,07-31,
+01,Persea americana (trnL),Capsule,08-01,
+01,Persea americana (trnL),Capsule,08-02,
+01,Persea americana (trnL),Capsule,08-03,0.0
+01,Persea americana (trnL),Capsule,08-04,
+01,Persea americana (trnL),Capsule,08-05,
+01,Persea americana (trnL),Capsule,08-06,0.0
+01,Persea americana (trnL),Capsule,08-07,
+01,Persea americana (trnL),Capsule,08-08,0.0
+01,Persea americana (trnL),Capsule,08-09,0.0
+01,Persea americana (trnL),Capsule,08-10,
+01,Persea americana (trnL),Capsule,08-11,
+01,Persea americana (trnL),Capsule,08-12,
+01,Persea americana (trnL),Capsule,08-13,
+01,Persea americana (trnL),Capsule,08-14,0.0
+01,Prunus spp. (trnL),Capsule,07-31,
+01,Prunus spp. (trnL),Capsule,08-01,
+01,Prunus spp. (trnL),Capsule,08-02,
+01,Prunus spp. (trnL),Capsule,08-03,2.0
+01,Prunus spp. (trnL),Capsule,08-04,
+01,Prunus spp. (trnL),Capsule,08-05,
+01,Prunus spp. (trnL),Capsule,08-06,2.0
+01,Prunus spp. (trnL),Capsule,08-07,
+01,Prunus spp. (trnL),Capsule,08-08,1.0
+01,Prunus spp. (trnL),Capsule,08-09,0.0
+01,Prunus spp. (trnL),Capsule,08-10,
+01,Prunus spp. (trnL),Capsule,08-11,
+01,Prunus spp. (trnL),Capsule,08-12,
+01,Prunus spp. (trnL),Capsule,08-13,
+01,Prunus spp. (trnL),Capsule,08-14,0.0
+01,Spinacia oleracea (trnL),Capsule,07-31,
+01,Spinacia oleracea (trnL),Capsule,08-01,
+01,Spinacia oleracea (trnL),Capsule,08-02,
+01,Spinacia oleracea (trnL),Capsule,08-03,0.0
+01,Spinacia oleracea (trnL),Capsule,08-04,
+01,Spinacia oleracea (trnL),Capsule,08-05,
+01,Spinacia oleracea (trnL),Capsule,08-06,0.0
+01,Spinacia oleracea (trnL),Capsule,08-07,
+01,Spinacia oleracea (trnL),Capsule,08-08,3.0
+01,Spinacia oleracea (trnL),Capsule,08-09,3.0
+01,Spinacia oleracea (trnL),Capsule,08-10,
+01,Spinacia oleracea (trnL),Capsule,08-11,
+01,Spinacia oleracea (trnL),Capsule,08-12,
+01,Spinacia oleracea (trnL),Capsule,08-13,
+01,Spinacia oleracea (trnL),Capsule,08-14,0.0
+01,Capsicum annuum (trnL),Capsule,07-31,
+01,Capsicum annuum (trnL),Capsule,08-01,
+01,Capsicum annuum (trnL),Capsule,08-02,
+01,Capsicum annuum (trnL),Capsule,08-03,0.0
+01,Capsicum annuum (trnL),Capsule,08-04,
+01,Capsicum annuum (trnL),Capsule,08-05,
+01,Capsicum annuum (trnL),Capsule,08-06,0.0
+01,Capsicum annuum (trnL),Capsule,08-07,
+01,Capsicum annuum (trnL),Capsule,08-08,1.0
+01,Capsicum annuum (trnL),Capsule,08-09,2.0
+01,Capsicum annuum (trnL),Capsule,08-10,
+01,Capsicum annuum (trnL),Capsule,08-11,
+01,Capsicum annuum (trnL),Capsule,08-12,
+01,Capsicum annuum (trnL),Capsule,08-13,
+01,Capsicum annuum (trnL),Capsule,08-14,0.0
+01,Pisum sativum (trnL),Capsule,07-31,
+01,Pisum sativum (trnL),Capsule,08-01,
+01,Pisum sativum (trnL),Capsule,08-02,
+01,Pisum sativum (trnL),Capsule,08-03,3.0
+01,Pisum sativum (trnL),Capsule,08-04,
+01,Pisum sativum (trnL),Capsule,08-05,
+01,Pisum sativum (trnL),Capsule,08-06,2.0
+01,Pisum sativum (trnL),Capsule,08-07,
+01,Pisum sativum (trnL),Capsule,08-08,0.0
+01,Pisum sativum (trnL),Capsule,08-09,0.0
+01,Pisum sativum (trnL),Capsule,08-10,
+01,Pisum sativum (trnL),Capsule,08-11,
+01,Pisum sativum (trnL),Capsule,08-12,
+01,Pisum sativum (trnL),Capsule,08-13,
+01,Pisum sativum (trnL),Capsule,08-14,2.0
+01,Phaseolus vulgaris (trnL),Capsule,07-31,
+01,Phaseolus vulgaris (trnL),Capsule,08-01,
+01,Phaseolus vulgaris (trnL),Capsule,08-02,
+01,Phaseolus vulgaris (trnL),Capsule,08-03,2.0
+01,Phaseolus vulgaris (trnL),Capsule,08-04,
+01,Phaseolus vulgaris (trnL),Capsule,08-05,
+01,Phaseolus vulgaris (trnL),Capsule,08-06,0.0
+01,Phaseolus vulgaris (trnL),Capsule,08-07,
+01,Phaseolus vulgaris (trnL),Capsule,08-08,1.0
+01,Phaseolus vulgaris (trnL),Capsule,08-09,0.0
+01,Phaseolus vulgaris (trnL),Capsule,08-10,
+01,Phaseolus vulgaris (trnL),Capsule,08-11,
+01,Phaseolus vulgaris (trnL),Capsule,08-12,
+01,Phaseolus vulgaris (trnL),Capsule,08-13,
+01,Phaseolus vulgaris (trnL),Capsule,08-14,2.0
+01,Ocimum basilicum (trnL),Capsule,07-31,
+01,Ocimum basilicum (trnL),Capsule,08-01,
+01,Ocimum basilicum (trnL),Capsule,08-02,
+01,Ocimum basilicum (trnL),Capsule,08-03,0.0
+01,Ocimum basilicum (trnL),Capsule,08-04,
+01,Ocimum basilicum (trnL),Capsule,08-05,
+01,Ocimum basilicum (trnL),Capsule,08-06,0.0
+01,Ocimum basilicum (trnL),Capsule,08-07,
+01,Ocimum basilicum (trnL),Capsule,08-08,0.0
+01,Ocimum basilicum (trnL),Capsule,08-09,0.0
+01,Ocimum basilicum (trnL),Capsule,08-10,
+01,Ocimum basilicum (trnL),Capsule,08-11,
+01,Ocimum basilicum (trnL),Capsule,08-12,
+01,Ocimum basilicum (trnL),Capsule,08-13,
+01,Ocimum basilicum (trnL),Capsule,08-14,0.0
+01,Camellia sinensis (trnL) †,Capsule,07-31,
+01,Camellia sinensis (trnL) †,Capsule,08-01,
+01,Camellia sinensis (trnL) †,Capsule,08-02,
+01,Camellia sinensis (trnL) †,Capsule,08-03,0.0
+01,Camellia sinensis (trnL) †,Capsule,08-04,
+01,Camellia sinensis (trnL) †,Capsule,08-05,
+01,Camellia sinensis (trnL) †,Capsule,08-06,0.0
+01,Camellia sinensis (trnL) †,Capsule,08-07,
+01,Camellia sinensis (trnL) †,Capsule,08-08,2.0
+01,Camellia sinensis (trnL) †,Capsule,08-09,0.0
+01,Camellia sinensis (trnL) †,Capsule,08-10,
+01,Camellia sinensis (trnL) †,Capsule,08-11,
+01,Camellia sinensis (trnL) †,Capsule,08-12,
+01,Camellia sinensis (trnL) †,Capsule,08-13,
+01,Camellia sinensis (trnL) †,Capsule,08-14,0.0
+01,Avena sativa (trnL),Capsule,07-31,
+01,Avena sativa (trnL),Capsule,08-01,
+01,Avena sativa (trnL),Capsule,08-02,
+01,Avena sativa (trnL),Capsule,08-03,0.0
+01,Avena sativa (trnL),Capsule,08-04,
+01,Avena sativa (trnL),Capsule,08-05,
+01,Avena sativa (trnL),Capsule,08-06,0.0
+01,Avena sativa (trnL),Capsule,08-07,
+01,Avena sativa (trnL),Capsule,08-08,0.0
+01,Avena sativa (trnL),Capsule,08-09,0.0
+01,Avena sativa (trnL),Capsule,08-10,
+01,Avena sativa (trnL),Capsule,08-11,
+01,Avena sativa (trnL),Capsule,08-12,
+01,Avena sativa (trnL),Capsule,08-13,
+01,Avena sativa (trnL),Capsule,08-14,0.0
+01,Asparagus officinalis (trnL),Capsule,07-31,
+01,Asparagus officinalis (trnL),Capsule,08-01,
+01,Asparagus officinalis (trnL),Capsule,08-02,
+01,Asparagus officinalis (trnL),Capsule,08-03,0.0
+01,Asparagus officinalis (trnL),Capsule,08-04,
+01,Asparagus officinalis (trnL),Capsule,08-05,
+01,Asparagus officinalis (trnL),Capsule,08-06,0.0
+01,Asparagus officinalis (trnL),Capsule,08-07,
+01,Asparagus officinalis (trnL),Capsule,08-08,0.0
+01,Asparagus officinalis (trnL),Capsule,08-09,0.0
+01,Asparagus officinalis (trnL),Capsule,08-10,
+01,Asparagus officinalis (trnL),Capsule,08-11,
+01,Asparagus officinalis (trnL),Capsule,08-12,
+01,Asparagus officinalis (trnL),Capsule,08-13,
+01,Asparagus officinalis (trnL),Capsule,08-14,0.0
+01,Carya illinoinensis (trnL),Capsule,07-31,
+01,Carya illinoinensis (trnL),Capsule,08-01,
+01,Carya illinoinensis (trnL),Capsule,08-02,
+01,Carya illinoinensis (trnL),Capsule,08-03,0.0
+01,Carya illinoinensis (trnL),Capsule,08-04,
+01,Carya illinoinensis (trnL),Capsule,08-05,
+01,Carya illinoinensis (trnL),Capsule,08-06,0.0
+01,Carya illinoinensis (trnL),Capsule,08-07,
+01,Carya illinoinensis (trnL),Capsule,08-08,1.0
+01,Carya illinoinensis (trnL),Capsule,08-09,0.0
+01,Carya illinoinensis (trnL),Capsule,08-10,
+01,Carya illinoinensis (trnL),Capsule,08-11,
+01,Carya illinoinensis (trnL),Capsule,08-12,
+01,Carya illinoinensis (trnL),Capsule,08-13,
+01,Carya illinoinensis (trnL),Capsule,08-14,0.0
+01,Vaccinium spp. (trnL),Capsule,07-31,
+01,Vaccinium spp. (trnL),Capsule,08-01,
+01,Vaccinium spp. (trnL),Capsule,08-02,
+01,Vaccinium spp. (trnL),Capsule,08-03,0.0
+01,Vaccinium spp. (trnL),Capsule,08-04,
+01,Vaccinium spp. (trnL),Capsule,08-05,
+01,Vaccinium spp. (trnL),Capsule,08-06,0.0
+01,Vaccinium spp. (trnL),Capsule,08-07,
+01,Vaccinium spp. (trnL),Capsule,08-08,0.0
+01,Vaccinium spp. (trnL),Capsule,08-09,2.0
+01,Vaccinium spp. (trnL),Capsule,08-10,
+01,Vaccinium spp. (trnL),Capsule,08-11,
+01,Vaccinium spp. (trnL),Capsule,08-12,
+01,Vaccinium spp. (trnL),Capsule,08-13,
+01,Vaccinium spp. (trnL),Capsule,08-14,0.0
+01,Linum usitatissimum (trnL) †,Capsule,07-31,
+01,Linum usitatissimum (trnL) †,Capsule,08-01,
+01,Linum usitatissimum (trnL) †,Capsule,08-02,
+01,Linum usitatissimum (trnL) †,Capsule,08-03,0.0
+01,Linum usitatissimum (trnL) †,Capsule,08-04,
+01,Linum usitatissimum (trnL) †,Capsule,08-05,
+01,Linum usitatissimum (trnL) †,Capsule,08-06,0.0
+01,Linum usitatissimum (trnL) †,Capsule,08-07,
+01,Linum usitatissimum (trnL) †,Capsule,08-08,0.0
+01,Linum usitatissimum (trnL) †,Capsule,08-09,1.0
+01,Linum usitatissimum (trnL) †,Capsule,08-10,
+01,Linum usitatissimum (trnL) †,Capsule,08-11,
+01,Linum usitatissimum (trnL) †,Capsule,08-12,
+01,Linum usitatissimum (trnL) †,Capsule,08-13,
+01,Linum usitatissimum (trnL) †,Capsule,08-14,0.0
+01,Lens culinaris (trnL),Capsule,07-31,
+01,Lens culinaris (trnL),Capsule,08-01,
+01,Lens culinaris (trnL),Capsule,08-02,
+01,Lens culinaris (trnL),Capsule,08-03,0.0
+01,Lens culinaris (trnL),Capsule,08-04,
+01,Lens culinaris (trnL),Capsule,08-05,
+01,Lens culinaris (trnL),Capsule,08-06,0.0
+01,Lens culinaris (trnL),Capsule,08-07,
+01,Lens culinaris (trnL),Capsule,08-08,0.0
+01,Lens culinaris (trnL),Capsule,08-09,0.0
+01,Lens culinaris (trnL),Capsule,08-10,
+01,Lens culinaris (trnL),Capsule,08-11,
+01,Lens culinaris (trnL),Capsule,08-12,
+01,Lens culinaris (trnL),Capsule,08-13,
+01,Lens culinaris (trnL),Capsule,08-14,0.0
+01,Cynara cardunculus (trnL),Capsule,07-31,
+01,Cynara cardunculus (trnL),Capsule,08-01,
+01,Cynara cardunculus (trnL),Capsule,08-02,
+01,Cynara cardunculus (trnL),Capsule,08-03,0.0
+01,Cynara cardunculus (trnL),Capsule,08-04,
+01,Cynara cardunculus (trnL),Capsule,08-05,
+01,Cynara cardunculus (trnL),Capsule,08-06,0.0
+01,Cynara cardunculus (trnL),Capsule,08-07,
+01,Cynara cardunculus (trnL),Capsule,08-08,0.0
+01,Cynara cardunculus (trnL),Capsule,08-09,0.0
+01,Cynara cardunculus (trnL),Capsule,08-10,
+01,Cynara cardunculus (trnL),Capsule,08-11,
+01,Cynara cardunculus (trnL),Capsule,08-12,
+01,Cynara cardunculus (trnL),Capsule,08-13,
+01,Cynara cardunculus (trnL),Capsule,08-14,0.0
+01,Ficus carica (trnL),Capsule,07-31,
+01,Ficus carica (trnL),Capsule,08-01,
+01,Ficus carica (trnL),Capsule,08-02,
+01,Ficus carica (trnL),Capsule,08-03,0.0
+01,Ficus carica (trnL),Capsule,08-04,
+01,Ficus carica (trnL),Capsule,08-05,
+01,Ficus carica (trnL),Capsule,08-06,0.0
+01,Ficus carica (trnL),Capsule,08-07,
+01,Ficus carica (trnL),Capsule,08-08,0.0
+01,Ficus carica (trnL),Capsule,08-09,0.0
+01,Ficus carica (trnL),Capsule,08-10,
+01,Ficus carica (trnL),Capsule,08-11,
+01,Ficus carica (trnL),Capsule,08-12,
+01,Ficus carica (trnL),Capsule,08-13,
+01,Ficus carica (trnL),Capsule,08-14,0.0
+01,Cicer arietinum (trnL),Capsule,07-31,
+01,Cicer arietinum (trnL),Capsule,08-01,
+01,Cicer arietinum (trnL),Capsule,08-02,
+01,Cicer arietinum (trnL),Capsule,08-03,0.0
+01,Cicer arietinum (trnL),Capsule,08-04,
+01,Cicer arietinum (trnL),Capsule,08-05,
+01,Cicer arietinum (trnL),Capsule,08-06,0.0
+01,Cicer arietinum (trnL),Capsule,08-07,
+01,Cicer arietinum (trnL),Capsule,08-08,0.0
+01,Cicer arietinum (trnL),Capsule,08-09,0.0
+01,Cicer arietinum (trnL),Capsule,08-10,
+01,Cicer arietinum (trnL),Capsule,08-11,
+01,Cicer arietinum (trnL),Capsule,08-12,
+01,Cicer arietinum (trnL),Capsule,08-13,
+01,Cicer arietinum (trnL),Capsule,08-14,0.0
+01,Pyrus pyrifolia (trnL),Capsule,07-31,
+01,Pyrus pyrifolia (trnL),Capsule,08-01,
+01,Pyrus pyrifolia (trnL),Capsule,08-02,
+01,Pyrus pyrifolia (trnL),Capsule,08-03,0.0
+01,Pyrus pyrifolia (trnL),Capsule,08-04,
+01,Pyrus pyrifolia (trnL),Capsule,08-05,
+01,Pyrus pyrifolia (trnL),Capsule,08-06,0.0
+01,Pyrus pyrifolia (trnL),Capsule,08-07,
+01,Pyrus pyrifolia (trnL),Capsule,08-08,0.0
+01,Pyrus pyrifolia (trnL),Capsule,08-09,0.0
+01,Pyrus pyrifolia (trnL),Capsule,08-10,
+01,Pyrus pyrifolia (trnL),Capsule,08-11,
+01,Pyrus pyrifolia (trnL),Capsule,08-12,
+01,Pyrus pyrifolia (trnL),Capsule,08-13,
+01,Pyrus pyrifolia (trnL),Capsule,08-14,3.0
+01,Beta vulgaris (trnL),Capsule,07-31,
+01,Beta vulgaris (trnL),Capsule,08-01,
+01,Beta vulgaris (trnL),Capsule,08-02,
+01,Beta vulgaris (trnL),Capsule,08-03,0.0
+01,Beta vulgaris (trnL),Capsule,08-04,
+01,Beta vulgaris (trnL),Capsule,08-05,
+01,Beta vulgaris (trnL),Capsule,08-06,0.0
+01,Beta vulgaris (trnL),Capsule,08-07,
+01,Beta vulgaris (trnL),Capsule,08-08,0.0
+01,Beta vulgaris (trnL),Capsule,08-09,0.0
+01,Beta vulgaris (trnL),Capsule,08-10,
+01,Beta vulgaris (trnL),Capsule,08-11,
+01,Beta vulgaris (trnL),Capsule,08-12,
+01,Beta vulgaris (trnL),Capsule,08-13,
+01,Beta vulgaris (trnL),Capsule,08-14,0.0
+01,Salvia hispanica (trnL),Capsule,07-31,
+01,Salvia hispanica (trnL),Capsule,08-01,
+01,Salvia hispanica (trnL),Capsule,08-02,
+01,Salvia hispanica (trnL),Capsule,08-03,0.0
+01,Salvia hispanica (trnL),Capsule,08-04,
+01,Salvia hispanica (trnL),Capsule,08-05,
+01,Salvia hispanica (trnL),Capsule,08-06,0.0
+01,Salvia hispanica (trnL),Capsule,08-07,
+01,Salvia hispanica (trnL),Capsule,08-08,0.0
+01,Salvia hispanica (trnL),Capsule,08-09,0.0
+01,Salvia hispanica (trnL),Capsule,08-10,
+01,Salvia hispanica (trnL),Capsule,08-11,
+01,Salvia hispanica (trnL),Capsule,08-12,
+01,Salvia hispanica (trnL),Capsule,08-13,
+01,Salvia hispanica (trnL),Capsule,08-14,0.0
+01,Bos taurus (12SV5),Saliva,07-31,3.0
+01,Bos taurus (12SV5),Saliva,08-01,
+01,Bos taurus (12SV5),Saliva,08-02,
+01,Bos taurus (12SV5),Saliva,08-03,2.0
+01,Bos taurus (12SV5),Saliva,08-04,1.0
+01,Bos taurus (12SV5),Saliva,08-05,
+01,Bos taurus (12SV5),Saliva,08-06,3.0
+01,Bos taurus (12SV5),Saliva,08-07,
+01,Bos taurus (12SV5),Saliva,08-08,
+01,Bos taurus (12SV5),Saliva,08-09,0.0
+01,Bos taurus (12SV5),Saliva,08-10,
+01,Bos taurus (12SV5),Saliva,08-11,2.0
+01,Bos taurus (12SV5),Saliva,08-12,
+01,Bos taurus (12SV5),Saliva,08-13,
+01,Bos taurus (12SV5),Saliva,08-14,
+01,Gallus gallus (12SV5),Saliva,07-31,0.0
+01,Gallus gallus (12SV5),Saliva,08-01,
+01,Gallus gallus (12SV5),Saliva,08-02,
+01,Gallus gallus (12SV5),Saliva,08-03,2.0
+01,Gallus gallus (12SV5),Saliva,08-04,3.0
+01,Gallus gallus (12SV5),Saliva,08-05,
+01,Gallus gallus (12SV5),Saliva,08-06,0.0
+01,Gallus gallus (12SV5),Saliva,08-07,
+01,Gallus gallus (12SV5),Saliva,08-08,
+01,Gallus gallus (12SV5),Saliva,08-09,0.0
+01,Gallus gallus (12SV5),Saliva,08-10,
+01,Gallus gallus (12SV5),Saliva,08-11,3.0
+01,Gallus gallus (12SV5),Saliva,08-12,
+01,Gallus gallus (12SV5),Saliva,08-13,
+01,Gallus gallus (12SV5),Saliva,08-14,
+01,Triticum aestivum (trnL),Saliva,07-31,0.0
+01,Triticum aestivum (trnL),Saliva,08-01,
+01,Triticum aestivum (trnL),Saliva,08-02,
+01,Triticum aestivum (trnL),Saliva,08-03,1.0
+01,Triticum aestivum (trnL),Saliva,08-04,0.0
+01,Triticum aestivum (trnL),Saliva,08-05,
+01,Triticum aestivum (trnL),Saliva,08-06,1.0
+01,Triticum aestivum (trnL),Saliva,08-07,
+01,Triticum aestivum (trnL),Saliva,08-08,
+01,Triticum aestivum (trnL),Saliva,08-09,2.0
+01,Triticum aestivum (trnL),Saliva,08-10,
+01,Triticum aestivum (trnL),Saliva,08-11,2.0
+01,Triticum aestivum (trnL),Saliva,08-12,
+01,Triticum aestivum (trnL),Saliva,08-13,
+01,Triticum aestivum (trnL),Saliva,08-14,
+01,Vitis vinifera (trnL),Saliva,07-31,0.0
+01,Vitis vinifera (trnL),Saliva,08-01,
+01,Vitis vinifera (trnL),Saliva,08-02,
+01,Vitis vinifera (trnL),Saliva,08-03,1.0
+01,Vitis vinifera (trnL),Saliva,08-04,0.0
+01,Vitis vinifera (trnL),Saliva,08-05,
+01,Vitis vinifera (trnL),Saliva,08-06,0.0
+01,Vitis vinifera (trnL),Saliva,08-07,
+01,Vitis vinifera (trnL),Saliva,08-08,
+01,Vitis vinifera (trnL),Saliva,08-09,0.0
+01,Vitis vinifera (trnL),Saliva,08-10,
+01,Vitis vinifera (trnL),Saliva,08-11,2.0
+01,Vitis vinifera (trnL),Saliva,08-12,
+01,Vitis vinifera (trnL),Saliva,08-13,
+01,Vitis vinifera (trnL),Saliva,08-14,
+01,Arachis hypogaea (trnL),Saliva,07-31,0.0
+01,Arachis hypogaea (trnL),Saliva,08-01,
+01,Arachis hypogaea (trnL),Saliva,08-02,
+01,Arachis hypogaea (trnL),Saliva,08-03,0.0
+01,Arachis hypogaea (trnL),Saliva,08-04,1.0
+01,Arachis hypogaea (trnL),Saliva,08-05,
+01,Arachis hypogaea (trnL),Saliva,08-06,0.0
+01,Arachis hypogaea (trnL),Saliva,08-07,
+01,Arachis hypogaea (trnL),Saliva,08-08,
+01,Arachis hypogaea (trnL),Saliva,08-09,0.0
+01,Arachis hypogaea (trnL),Saliva,08-10,
+01,Arachis hypogaea (trnL),Saliva,08-11,0.0
+01,Arachis hypogaea (trnL),Saliva,08-12,
+01,Arachis hypogaea (trnL),Saliva,08-13,
+01,Arachis hypogaea (trnL),Saliva,08-14,
+01,Theobroma cacao (trnL),Saliva,07-31,2.0
+01,Theobroma cacao (trnL),Saliva,08-01,
+01,Theobroma cacao (trnL),Saliva,08-02,
+01,Theobroma cacao (trnL),Saliva,08-03,2.0
+01,Theobroma cacao (trnL),Saliva,08-04,2.0
+01,Theobroma cacao (trnL),Saliva,08-05,
+01,Theobroma cacao (trnL),Saliva,08-06,0.0
+01,Theobroma cacao (trnL),Saliva,08-07,
+01,Theobroma cacao (trnL),Saliva,08-08,
+01,Theobroma cacao (trnL),Saliva,08-09,1.0
+01,Theobroma cacao (trnL),Saliva,08-10,
+01,Theobroma cacao (trnL),Saliva,08-11,2.0
+01,Theobroma cacao (trnL),Saliva,08-12,
+01,Theobroma cacao (trnL),Saliva,08-13,
+01,Theobroma cacao (trnL),Saliva,08-14,
+01,Glycine max (trnL),Saliva,07-31,2.0
+01,Glycine max (trnL),Saliva,08-01,
+01,Glycine max (trnL),Saliva,08-02,
+01,Glycine max (trnL),Saliva,08-03,3.0
+01,Glycine max (trnL),Saliva,08-04,2.0
+01,Glycine max (trnL),Saliva,08-05,
+01,Glycine max (trnL),Saliva,08-06,2.0
+01,Glycine max (trnL),Saliva,08-07,
+01,Glycine max (trnL),Saliva,08-08,
+01,Glycine max (trnL),Saliva,08-09,2.0
+01,Glycine max (trnL),Saliva,08-10,
+01,Glycine max (trnL),Saliva,08-11,2.0
+01,Glycine max (trnL),Saliva,08-12,
+01,Glycine max (trnL),Saliva,08-13,
+01,Glycine max (trnL),Saliva,08-14,
+01,Solanum spp. (trnL),Saliva,07-31,0.0
+01,Solanum spp. (trnL),Saliva,08-01,
+01,Solanum spp. (trnL),Saliva,08-02,
+01,Solanum spp. (trnL),Saliva,08-03,0.0
+01,Solanum spp. (trnL),Saliva,08-04,2.0
+01,Solanum spp. (trnL),Saliva,08-05,
+01,Solanum spp. (trnL),Saliva,08-06,3.0
+01,Solanum spp. (trnL),Saliva,08-07,
+01,Solanum spp. (trnL),Saliva,08-08,
+01,Solanum spp. (trnL),Saliva,08-09,2.0
+01,Solanum spp. (trnL),Saliva,08-10,
+01,Solanum spp. (trnL),Saliva,08-11,0.0
+01,Solanum spp. (trnL),Saliva,08-12,
+01,Solanum spp. (trnL),Saliva,08-13,
+01,Solanum spp. (trnL),Saliva,08-14,
+01,Allium spp. (trnL),Saliva,07-31,1.0
+01,Allium spp. (trnL),Saliva,08-01,
+01,Allium spp. (trnL),Saliva,08-02,
+01,Allium spp. (trnL),Saliva,08-03,2.0
+01,Allium spp. (trnL),Saliva,08-04,1.0
+01,Allium spp. (trnL),Saliva,08-05,
+01,Allium spp. (trnL),Saliva,08-06,1.0
+01,Allium spp. (trnL),Saliva,08-07,
+01,Allium spp. (trnL),Saliva,08-08,
+01,Allium spp. (trnL),Saliva,08-09,1.0
+01,Allium spp. (trnL),Saliva,08-10,
+01,Allium spp. (trnL),Saliva,08-11,2.0
+01,Allium spp. (trnL),Saliva,08-12,
+01,Allium spp. (trnL),Saliva,08-13,
+01,Allium spp. (trnL),Saliva,08-14,
+01,Brassica spp. (trnL),Saliva,07-31,2.0
+01,Brassica spp. (trnL),Saliva,08-01,
+01,Brassica spp. (trnL),Saliva,08-02,
+01,Brassica spp. (trnL),Saliva,08-03,2.0
+01,Brassica spp. (trnL),Saliva,08-04,1.0
+01,Brassica spp. (trnL),Saliva,08-05,
+01,Brassica spp. (trnL),Saliva,08-06,2.0
+01,Brassica spp. (trnL),Saliva,08-07,
+01,Brassica spp. (trnL),Saliva,08-08,
+01,Brassica spp. (trnL),Saliva,08-09,2.0
+01,Brassica spp. (trnL),Saliva,08-10,
+01,Brassica spp. (trnL),Saliva,08-11,0.0
+01,Brassica spp. (trnL),Saliva,08-12,
+01,Brassica spp. (trnL),Saliva,08-13,
+01,Brassica spp. (trnL),Saliva,08-14,
+01,Citrus spp. (trnL),Saliva,07-31,0.0
+01,Citrus spp. (trnL),Saliva,08-01,
+01,Citrus spp. (trnL),Saliva,08-02,
+01,Citrus spp. (trnL),Saliva,08-03,0.0
+01,Citrus spp. (trnL),Saliva,08-04,0.0
+01,Citrus spp. (trnL),Saliva,08-05,
+01,Citrus spp. (trnL),Saliva,08-06,0.0
+01,Citrus spp. (trnL),Saliva,08-07,
+01,Citrus spp. (trnL),Saliva,08-08,
+01,Citrus spp. (trnL),Saliva,08-09,0.0
+01,Citrus spp. (trnL),Saliva,08-10,
+01,Citrus spp. (trnL),Saliva,08-11,0.0
+01,Citrus spp. (trnL),Saliva,08-12,
+01,Citrus spp. (trnL),Saliva,08-13,
+01,Citrus spp. (trnL),Saliva,08-14,
+01,Sus scrofa (12SV5),Saliva,07-31,2.0
+01,Sus scrofa (12SV5),Saliva,08-01,
+01,Sus scrofa (12SV5),Saliva,08-02,
+01,Sus scrofa (12SV5),Saliva,08-03,0.0
+01,Sus scrofa (12SV5),Saliva,08-04,2.0
+01,Sus scrofa (12SV5),Saliva,08-05,
+01,Sus scrofa (12SV5),Saliva,08-06,0.0
+01,Sus scrofa (12SV5),Saliva,08-07,
+01,Sus scrofa (12SV5),Saliva,08-08,
+01,Sus scrofa (12SV5),Saliva,08-09,0.0
+01,Sus scrofa (12SV5),Saliva,08-10,
+01,Sus scrofa (12SV5),Saliva,08-11,2.0
+01,Sus scrofa (12SV5),Saliva,08-12,
+01,Sus scrofa (12SV5),Saliva,08-13,
+01,Sus scrofa (12SV5),Saliva,08-14,
+01,Lactuca sativa (trnL),Saliva,07-31,3.0
+01,Lactuca sativa (trnL),Saliva,08-01,
+01,Lactuca sativa (trnL),Saliva,08-02,
+01,Lactuca sativa (trnL),Saliva,08-03,3.0
+01,Lactuca sativa (trnL),Saliva,08-04,3.0
+01,Lactuca sativa (trnL),Saliva,08-05,
+01,Lactuca sativa (trnL),Saliva,08-06,3.0
+01,Lactuca sativa (trnL),Saliva,08-07,
+01,Lactuca sativa (trnL),Saliva,08-08,
+01,Lactuca sativa (trnL),Saliva,08-09,2.0
+01,Lactuca sativa (trnL),Saliva,08-10,
+01,Lactuca sativa (trnL),Saliva,08-11,0.0
+01,Lactuca sativa (trnL),Saliva,08-12,
+01,Lactuca sativa (trnL),Saliva,08-13,
+01,Lactuca sativa (trnL),Saliva,08-14,
+01,Ovis aries (12SV5),Saliva,07-31,2.0
+01,Ovis aries (12SV5),Saliva,08-01,
+01,Ovis aries (12SV5),Saliva,08-02,
+01,Ovis aries (12SV5),Saliva,08-03,0.0
+01,Ovis aries (12SV5),Saliva,08-04,0.0
+01,Ovis aries (12SV5),Saliva,08-05,
+01,Ovis aries (12SV5),Saliva,08-06,0.0
+01,Ovis aries (12SV5),Saliva,08-07,
+01,Ovis aries (12SV5),Saliva,08-08,
+01,Ovis aries (12SV5),Saliva,08-09,0.0
+01,Ovis aries (12SV5),Saliva,08-10,
+01,Ovis aries (12SV5),Saliva,08-11,0.0
+01,Ovis aries (12SV5),Saliva,08-12,
+01,Ovis aries (12SV5),Saliva,08-13,
+01,Ovis aries (12SV5),Saliva,08-14,
+01,Oryza sativa (trnL),Saliva,07-31,0.0
+01,Oryza sativa (trnL),Saliva,08-01,
+01,Oryza sativa (trnL),Saliva,08-02,
+01,Oryza sativa (trnL),Saliva,08-03,0.0
+01,Oryza sativa (trnL),Saliva,08-04,1.0
+01,Oryza sativa (trnL),Saliva,08-05,
+01,Oryza sativa (trnL),Saliva,08-06,0.0
+01,Oryza sativa (trnL),Saliva,08-07,
+01,Oryza sativa (trnL),Saliva,08-08,
+01,Oryza sativa (trnL),Saliva,08-09,2.0
+01,Oryza sativa (trnL),Saliva,08-10,
+01,Oryza sativa (trnL),Saliva,08-11,1.0
+01,Oryza sativa (trnL),Saliva,08-12,
+01,Oryza sativa (trnL),Saliva,08-13,
+01,Oryza sativa (trnL),Saliva,08-14,
+01,Daucus carota (trnL),Saliva,07-31,2.0
+01,Daucus carota (trnL),Saliva,08-01,
+01,Daucus carota (trnL),Saliva,08-02,
+01,Daucus carota (trnL),Saliva,08-03,1.0
+01,Daucus carota (trnL),Saliva,08-04,3.0
+01,Daucus carota (trnL),Saliva,08-05,
+01,Daucus carota (trnL),Saliva,08-06,2.0
+01,Daucus carota (trnL),Saliva,08-07,
+01,Daucus carota (trnL),Saliva,08-08,
+01,Daucus carota (trnL),Saliva,08-09,3.0
+01,Daucus carota (trnL),Saliva,08-10,
+01,Daucus carota (trnL),Saliva,08-11,2.0
+01,Daucus carota (trnL),Saliva,08-12,
+01,Daucus carota (trnL),Saliva,08-13,
+01,Daucus carota (trnL),Saliva,08-14,
+01,Hordeum vulgare (trnL) †,Saliva,07-31,0.0
+01,Hordeum vulgare (trnL) †,Saliva,08-01,
+01,Hordeum vulgare (trnL) †,Saliva,08-02,
+01,Hordeum vulgare (trnL) †,Saliva,08-03,0.0
+01,Hordeum vulgare (trnL) †,Saliva,08-04,0.0
+01,Hordeum vulgare (trnL) †,Saliva,08-05,
+01,Hordeum vulgare (trnL) †,Saliva,08-06,0.0
+01,Hordeum vulgare (trnL) †,Saliva,08-07,
+01,Hordeum vulgare (trnL) †,Saliva,08-08,
+01,Hordeum vulgare (trnL) †,Saliva,08-09,0.0
+01,Hordeum vulgare (trnL) †,Saliva,08-10,
+01,Hordeum vulgare (trnL) †,Saliva,08-11,0.0
+01,Hordeum vulgare (trnL) †,Saliva,08-12,
+01,Hordeum vulgare (trnL) †,Saliva,08-13,
+01,Hordeum vulgare (trnL) †,Saliva,08-14,
+01,Anacardium occidentale (trnL),Saliva,07-31,0.0
+01,Anacardium occidentale (trnL),Saliva,08-01,
+01,Anacardium occidentale (trnL),Saliva,08-02,
+01,Anacardium occidentale (trnL),Saliva,08-03,2.0
+01,Anacardium occidentale (trnL),Saliva,08-04,1.0
+01,Anacardium occidentale (trnL),Saliva,08-05,
+01,Anacardium occidentale (trnL),Saliva,08-06,0.0
+01,Anacardium occidentale (trnL),Saliva,08-07,
+01,Anacardium occidentale (trnL),Saliva,08-08,
+01,Anacardium occidentale (trnL),Saliva,08-09,0.0
+01,Anacardium occidentale (trnL),Saliva,08-10,
+01,Anacardium occidentale (trnL),Saliva,08-11,0.0
+01,Anacardium occidentale (trnL),Saliva,08-12,
+01,Anacardium occidentale (trnL),Saliva,08-13,
+01,Anacardium occidentale (trnL),Saliva,08-14,
+01,Anas platyrhynchos (12SV5),Saliva,07-31,0.0
+01,Anas platyrhynchos (12SV5),Saliva,08-01,
+01,Anas platyrhynchos (12SV5),Saliva,08-02,
+01,Anas platyrhynchos (12SV5),Saliva,08-03,0.0
+01,Anas platyrhynchos (12SV5),Saliva,08-04,1.0
+01,Anas platyrhynchos (12SV5),Saliva,08-05,
+01,Anas platyrhynchos (12SV5),Saliva,08-06,0.0
+01,Anas platyrhynchos (12SV5),Saliva,08-07,
+01,Anas platyrhynchos (12SV5),Saliva,08-08,
+01,Anas platyrhynchos (12SV5),Saliva,08-09,0.0
+01,Anas platyrhynchos (12SV5),Saliva,08-10,
+01,Anas platyrhynchos (12SV5),Saliva,08-11,0.0
+01,Anas platyrhynchos (12SV5),Saliva,08-12,
+01,Anas platyrhynchos (12SV5),Saliva,08-13,
+01,Anas platyrhynchos (12SV5),Saliva,08-14,
+01,Coriandrum sativum (trnL) †,Saliva,07-31,0.0
+01,Coriandrum sativum (trnL) †,Saliva,08-01,
+01,Coriandrum sativum (trnL) †,Saliva,08-02,
+01,Coriandrum sativum (trnL) †,Saliva,08-03,0.0
+01,Coriandrum sativum (trnL) †,Saliva,08-04,0.0
+01,Coriandrum sativum (trnL) †,Saliva,08-05,
+01,Coriandrum sativum (trnL) †,Saliva,08-06,0.0
+01,Coriandrum sativum (trnL) †,Saliva,08-07,
+01,Coriandrum sativum (trnL) †,Saliva,08-08,
+01,Coriandrum sativum (trnL) †,Saliva,08-09,0.0
+01,Coriandrum sativum (trnL) †,Saliva,08-10,
+01,Coriandrum sativum (trnL) †,Saliva,08-11,0.0
+01,Coriandrum sativum (trnL) †,Saliva,08-12,
+01,Coriandrum sativum (trnL) †,Saliva,08-13,
+01,Coriandrum sativum (trnL) †,Saliva,08-14,
+01,Curcuma longa (trnL) †,Saliva,07-31,0.0
+01,Curcuma longa (trnL) †,Saliva,08-01,
+01,Curcuma longa (trnL) †,Saliva,08-02,
+01,Curcuma longa (trnL) †,Saliva,08-03,0.0
+01,Curcuma longa (trnL) †,Saliva,08-04,0.0
+01,Curcuma longa (trnL) †,Saliva,08-05,
+01,Curcuma longa (trnL) †,Saliva,08-06,0.0
+01,Curcuma longa (trnL) †,Saliva,08-07,
+01,Curcuma longa (trnL) †,Saliva,08-08,
+01,Curcuma longa (trnL) †,Saliva,08-09,0.0
+01,Curcuma longa (trnL) †,Saliva,08-10,
+01,Curcuma longa (trnL) †,Saliva,08-11,0.0
+01,Curcuma longa (trnL) †,Saliva,08-12,
+01,Curcuma longa (trnL) †,Saliva,08-13,
+01,Curcuma longa (trnL) †,Saliva,08-14,
+01,Persea americana (trnL),Saliva,07-31,0.0
+01,Persea americana (trnL),Saliva,08-01,
+01,Persea americana (trnL),Saliva,08-02,
+01,Persea americana (trnL),Saliva,08-03,0.0
+01,Persea americana (trnL),Saliva,08-04,0.0
+01,Persea americana (trnL),Saliva,08-05,
+01,Persea americana (trnL),Saliva,08-06,2.0
+01,Persea americana (trnL),Saliva,08-07,
+01,Persea americana (trnL),Saliva,08-08,
+01,Persea americana (trnL),Saliva,08-09,0.0
+01,Persea americana (trnL),Saliva,08-10,
+01,Persea americana (trnL),Saliva,08-11,0.0
+01,Persea americana (trnL),Saliva,08-12,
+01,Persea americana (trnL),Saliva,08-13,
+01,Persea americana (trnL),Saliva,08-14,
+01,Prunus spp. (trnL),Saliva,07-31,3.0
+01,Prunus spp. (trnL),Saliva,08-01,
+01,Prunus spp. (trnL),Saliva,08-02,
+01,Prunus spp. (trnL),Saliva,08-03,1.0
+01,Prunus spp. (trnL),Saliva,08-04,0.0
+01,Prunus spp. (trnL),Saliva,08-05,
+01,Prunus spp. (trnL),Saliva,08-06,0.0
+01,Prunus spp. (trnL),Saliva,08-07,
+01,Prunus spp. (trnL),Saliva,08-08,
+01,Prunus spp. (trnL),Saliva,08-09,0.0
+01,Prunus spp. (trnL),Saliva,08-10,
+01,Prunus spp. (trnL),Saliva,08-11,0.0
+01,Prunus spp. (trnL),Saliva,08-12,
+01,Prunus spp. (trnL),Saliva,08-13,
+01,Prunus spp. (trnL),Saliva,08-14,
+01,Spinacia oleracea (trnL),Saliva,07-31,2.0
+01,Spinacia oleracea (trnL),Saliva,08-01,
+01,Spinacia oleracea (trnL),Saliva,08-02,
+01,Spinacia oleracea (trnL),Saliva,08-03,0.0
+01,Spinacia oleracea (trnL),Saliva,08-04,2.0
+01,Spinacia oleracea (trnL),Saliva,08-05,
+01,Spinacia oleracea (trnL),Saliva,08-06,0.0
+01,Spinacia oleracea (trnL),Saliva,08-07,
+01,Spinacia oleracea (trnL),Saliva,08-08,
+01,Spinacia oleracea (trnL),Saliva,08-09,3.0
+01,Spinacia oleracea (trnL),Saliva,08-10,
+01,Spinacia oleracea (trnL),Saliva,08-11,3.0
+01,Spinacia oleracea (trnL),Saliva,08-12,
+01,Spinacia oleracea (trnL),Saliva,08-13,
+01,Spinacia oleracea (trnL),Saliva,08-14,
+01,Capsicum annuum (trnL),Saliva,07-31,2.0
+01,Capsicum annuum (trnL),Saliva,08-01,
+01,Capsicum annuum (trnL),Saliva,08-02,
+01,Capsicum annuum (trnL),Saliva,08-03,0.0
+01,Capsicum annuum (trnL),Saliva,08-04,0.0
+01,Capsicum annuum (trnL),Saliva,08-05,
+01,Capsicum annuum (trnL),Saliva,08-06,3.0
+01,Capsicum annuum (trnL),Saliva,08-07,
+01,Capsicum annuum (trnL),Saliva,08-08,
+01,Capsicum annuum (trnL),Saliva,08-09,2.0
+01,Capsicum annuum (trnL),Saliva,08-10,
+01,Capsicum annuum (trnL),Saliva,08-11,0.0
+01,Capsicum annuum (trnL),Saliva,08-12,
+01,Capsicum annuum (trnL),Saliva,08-13,
+01,Capsicum annuum (trnL),Saliva,08-14,
+01,Pisum sativum (trnL),Saliva,07-31,2.0
+01,Pisum sativum (trnL),Saliva,08-01,
+01,Pisum sativum (trnL),Saliva,08-02,
+01,Pisum sativum (trnL),Saliva,08-03,0.0
+01,Pisum sativum (trnL),Saliva,08-04,1.0
+01,Pisum sativum (trnL),Saliva,08-05,
+01,Pisum sativum (trnL),Saliva,08-06,1.0
+01,Pisum sativum (trnL),Saliva,08-07,
+01,Pisum sativum (trnL),Saliva,08-08,
+01,Pisum sativum (trnL),Saliva,08-09,2.0
+01,Pisum sativum (trnL),Saliva,08-10,
+01,Pisum sativum (trnL),Saliva,08-11,0.0
+01,Pisum sativum (trnL),Saliva,08-12,
+01,Pisum sativum (trnL),Saliva,08-13,
+01,Pisum sativum (trnL),Saliva,08-14,
+01,Phaseolus vulgaris (trnL),Saliva,07-31,2.0
+01,Phaseolus vulgaris (trnL),Saliva,08-01,
+01,Phaseolus vulgaris (trnL),Saliva,08-02,
+01,Phaseolus vulgaris (trnL),Saliva,08-03,1.0
+01,Phaseolus vulgaris (trnL),Saliva,08-04,0.0
+01,Phaseolus vulgaris (trnL),Saliva,08-05,
+01,Phaseolus vulgaris (trnL),Saliva,08-06,1.0
+01,Phaseolus vulgaris (trnL),Saliva,08-07,
+01,Phaseolus vulgaris (trnL),Saliva,08-08,
+01,Phaseolus vulgaris (trnL),Saliva,08-09,0.0
+01,Phaseolus vulgaris (trnL),Saliva,08-10,
+01,Phaseolus vulgaris (trnL),Saliva,08-11,3.0
+01,Phaseolus vulgaris (trnL),Saliva,08-12,
+01,Phaseolus vulgaris (trnL),Saliva,08-13,
+01,Phaseolus vulgaris (trnL),Saliva,08-14,
+01,Ocimum basilicum (trnL),Saliva,07-31,0.0
+01,Ocimum basilicum (trnL),Saliva,08-01,
+01,Ocimum basilicum (trnL),Saliva,08-02,
+01,Ocimum basilicum (trnL),Saliva,08-03,1.0
+01,Ocimum basilicum (trnL),Saliva,08-04,0.0
+01,Ocimum basilicum (trnL),Saliva,08-05,
+01,Ocimum basilicum (trnL),Saliva,08-06,1.0
+01,Ocimum basilicum (trnL),Saliva,08-07,
+01,Ocimum basilicum (trnL),Saliva,08-08,
+01,Ocimum basilicum (trnL),Saliva,08-09,0.0
+01,Ocimum basilicum (trnL),Saliva,08-10,
+01,Ocimum basilicum (trnL),Saliva,08-11,0.0
+01,Ocimum basilicum (trnL),Saliva,08-12,
+01,Ocimum basilicum (trnL),Saliva,08-13,
+01,Ocimum basilicum (trnL),Saliva,08-14,
+01,Camellia sinensis (trnL) †,Saliva,07-31,0.0
+01,Camellia sinensis (trnL) †,Saliva,08-01,
+01,Camellia sinensis (trnL) †,Saliva,08-02,
+01,Camellia sinensis (trnL) †,Saliva,08-03,0.0
+01,Camellia sinensis (trnL) †,Saliva,08-04,0.0
+01,Camellia sinensis (trnL) †,Saliva,08-05,
+01,Camellia sinensis (trnL) †,Saliva,08-06,0.0
+01,Camellia sinensis (trnL) †,Saliva,08-07,
+01,Camellia sinensis (trnL) †,Saliva,08-08,
+01,Camellia sinensis (trnL) †,Saliva,08-09,0.0
+01,Camellia sinensis (trnL) †,Saliva,08-10,
+01,Camellia sinensis (trnL) †,Saliva,08-11,3.0
+01,Camellia sinensis (trnL) †,Saliva,08-12,
+01,Camellia sinensis (trnL) †,Saliva,08-13,
+01,Camellia sinensis (trnL) †,Saliva,08-14,
+01,Avena sativa (trnL),Saliva,07-31,0.0
+01,Avena sativa (trnL),Saliva,08-01,
+01,Avena sativa (trnL),Saliva,08-02,
+01,Avena sativa (trnL),Saliva,08-03,0.0
+01,Avena sativa (trnL),Saliva,08-04,0.0
+01,Avena sativa (trnL),Saliva,08-05,
+01,Avena sativa (trnL),Saliva,08-06,2.0
+01,Avena sativa (trnL),Saliva,08-07,
+01,Avena sativa (trnL),Saliva,08-08,
+01,Avena sativa (trnL),Saliva,08-09,1.0
+01,Avena sativa (trnL),Saliva,08-10,
+01,Avena sativa (trnL),Saliva,08-11,0.0
+01,Avena sativa (trnL),Saliva,08-12,
+01,Avena sativa (trnL),Saliva,08-13,
+01,Avena sativa (trnL),Saliva,08-14,
+01,Asparagus officinalis (trnL),Saliva,07-31,0.0
+01,Asparagus officinalis (trnL),Saliva,08-01,
+01,Asparagus officinalis (trnL),Saliva,08-02,
+01,Asparagus officinalis (trnL),Saliva,08-03,0.0
+01,Asparagus officinalis (trnL),Saliva,08-04,0.0
+01,Asparagus officinalis (trnL),Saliva,08-05,
+01,Asparagus officinalis (trnL),Saliva,08-06,0.0
+01,Asparagus officinalis (trnL),Saliva,08-07,
+01,Asparagus officinalis (trnL),Saliva,08-08,
+01,Asparagus officinalis (trnL),Saliva,08-09,0.0
+01,Asparagus officinalis (trnL),Saliva,08-10,
+01,Asparagus officinalis (trnL),Saliva,08-11,0.0
+01,Asparagus officinalis (trnL),Saliva,08-12,
+01,Asparagus officinalis (trnL),Saliva,08-13,
+01,Asparagus officinalis (trnL),Saliva,08-14,
+01,Carya illinoinensis (trnL),Saliva,07-31,0.0
+01,Carya illinoinensis (trnL),Saliva,08-01,
+01,Carya illinoinensis (trnL),Saliva,08-02,
+01,Carya illinoinensis (trnL),Saliva,08-03,3.0
+01,Carya illinoinensis (trnL),Saliva,08-04,0.0
+01,Carya illinoinensis (trnL),Saliva,08-05,
+01,Carya illinoinensis (trnL),Saliva,08-06,0.0
+01,Carya illinoinensis (trnL),Saliva,08-07,
+01,Carya illinoinensis (trnL),Saliva,08-08,
+01,Carya illinoinensis (trnL),Saliva,08-09,0.0
+01,Carya illinoinensis (trnL),Saliva,08-10,
+01,Carya illinoinensis (trnL),Saliva,08-11,0.0
+01,Carya illinoinensis (trnL),Saliva,08-12,
+01,Carya illinoinensis (trnL),Saliva,08-13,
+01,Carya illinoinensis (trnL),Saliva,08-14,
+01,Vaccinium spp. (trnL),Saliva,07-31,0.0
+01,Vaccinium spp. (trnL),Saliva,08-01,
+01,Vaccinium spp. (trnL),Saliva,08-02,
+01,Vaccinium spp. (trnL),Saliva,08-03,0.0
+01,Vaccinium spp. (trnL),Saliva,08-04,3.0
+01,Vaccinium spp. (trnL),Saliva,08-05,
+01,Vaccinium spp. (trnL),Saliva,08-06,0.0
+01,Vaccinium spp. (trnL),Saliva,08-07,
+01,Vaccinium spp. (trnL),Saliva,08-08,
+01,Vaccinium spp. (trnL),Saliva,08-09,0.0
+01,Vaccinium spp. (trnL),Saliva,08-10,
+01,Vaccinium spp. (trnL),Saliva,08-11,0.0
+01,Vaccinium spp. (trnL),Saliva,08-12,
+01,Vaccinium spp. (trnL),Saliva,08-13,
+01,Vaccinium spp. (trnL),Saliva,08-14,
+01,Linum usitatissimum (trnL) †,Saliva,07-31,0.0
+01,Linum usitatissimum (trnL) †,Saliva,08-01,
+01,Linum usitatissimum (trnL) †,Saliva,08-02,
+01,Linum usitatissimum (trnL) †,Saliva,08-03,0.0
+01,Linum usitatissimum (trnL) †,Saliva,08-04,0.0
+01,Linum usitatissimum (trnL) †,Saliva,08-05,
+01,Linum usitatissimum (trnL) †,Saliva,08-06,0.0
+01,Linum usitatissimum (trnL) †,Saliva,08-07,
+01,Linum usitatissimum (trnL) †,Saliva,08-08,
+01,Linum usitatissimum (trnL) †,Saliva,08-09,0.0
+01,Linum usitatissimum (trnL) †,Saliva,08-10,
+01,Linum usitatissimum (trnL) †,Saliva,08-11,0.0
+01,Linum usitatissimum (trnL) †,Saliva,08-12,
+01,Linum usitatissimum (trnL) †,Saliva,08-13,
+01,Linum usitatissimum (trnL) †,Saliva,08-14,
+01,Lens culinaris (trnL),Saliva,07-31,0.0
+01,Lens culinaris (trnL),Saliva,08-01,
+01,Lens culinaris (trnL),Saliva,08-02,
+01,Lens culinaris (trnL),Saliva,08-03,0.0
+01,Lens culinaris (trnL),Saliva,08-04,0.0
+01,Lens culinaris (trnL),Saliva,08-05,
+01,Lens culinaris (trnL),Saliva,08-06,0.0
+01,Lens culinaris (trnL),Saliva,08-07,
+01,Lens culinaris (trnL),Saliva,08-08,
+01,Lens culinaris (trnL),Saliva,08-09,0.0
+01,Lens culinaris (trnL),Saliva,08-10,
+01,Lens culinaris (trnL),Saliva,08-11,0.0
+01,Lens culinaris (trnL),Saliva,08-12,
+01,Lens culinaris (trnL),Saliva,08-13,
+01,Lens culinaris (trnL),Saliva,08-14,
+01,Cynara cardunculus (trnL),Saliva,07-31,0.0
+01,Cynara cardunculus (trnL),Saliva,08-01,
+01,Cynara cardunculus (trnL),Saliva,08-02,
+01,Cynara cardunculus (trnL),Saliva,08-03,0.0
+01,Cynara cardunculus (trnL),Saliva,08-04,0.0
+01,Cynara cardunculus (trnL),Saliva,08-05,
+01,Cynara cardunculus (trnL),Saliva,08-06,1.0
+01,Cynara cardunculus (trnL),Saliva,08-07,
+01,Cynara cardunculus (trnL),Saliva,08-08,
+01,Cynara cardunculus (trnL),Saliva,08-09,0.0
+01,Cynara cardunculus (trnL),Saliva,08-10,
+01,Cynara cardunculus (trnL),Saliva,08-11,0.0
+01,Cynara cardunculus (trnL),Saliva,08-12,
+01,Cynara cardunculus (trnL),Saliva,08-13,
+01,Cynara cardunculus (trnL),Saliva,08-14,
+01,Ficus carica (trnL),Saliva,07-31,0.0
+01,Ficus carica (trnL),Saliva,08-01,
+01,Ficus carica (trnL),Saliva,08-02,
+01,Ficus carica (trnL),Saliva,08-03,0.0
+01,Ficus carica (trnL),Saliva,08-04,0.0
+01,Ficus carica (trnL),Saliva,08-05,
+01,Ficus carica (trnL),Saliva,08-06,0.0
+01,Ficus carica (trnL),Saliva,08-07,
+01,Ficus carica (trnL),Saliva,08-08,
+01,Ficus carica (trnL),Saliva,08-09,0.0
+01,Ficus carica (trnL),Saliva,08-10,
+01,Ficus carica (trnL),Saliva,08-11,0.0
+01,Ficus carica (trnL),Saliva,08-12,
+01,Ficus carica (trnL),Saliva,08-13,
+01,Ficus carica (trnL),Saliva,08-14,
+01,Cicer arietinum (trnL),Saliva,07-31,0.0
+01,Cicer arietinum (trnL),Saliva,08-01,
+01,Cicer arietinum (trnL),Saliva,08-02,
+01,Cicer arietinum (trnL),Saliva,08-03,0.0
+01,Cicer arietinum (trnL),Saliva,08-04,0.0
+01,Cicer arietinum (trnL),Saliva,08-05,
+01,Cicer arietinum (trnL),Saliva,08-06,1.0
+01,Cicer arietinum (trnL),Saliva,08-07,
+01,Cicer arietinum (trnL),Saliva,08-08,
+01,Cicer arietinum (trnL),Saliva,08-09,0.0
+01,Cicer arietinum (trnL),Saliva,08-10,
+01,Cicer arietinum (trnL),Saliva,08-11,0.0
+01,Cicer arietinum (trnL),Saliva,08-12,
+01,Cicer arietinum (trnL),Saliva,08-13,
+01,Cicer arietinum (trnL),Saliva,08-14,
+01,Pyrus pyrifolia (trnL),Saliva,07-31,0.0
+01,Pyrus pyrifolia (trnL),Saliva,08-01,
+01,Pyrus pyrifolia (trnL),Saliva,08-02,
+01,Pyrus pyrifolia (trnL),Saliva,08-03,0.0
+01,Pyrus pyrifolia (trnL),Saliva,08-04,0.0
+01,Pyrus pyrifolia (trnL),Saliva,08-05,
+01,Pyrus pyrifolia (trnL),Saliva,08-06,0.0
+01,Pyrus pyrifolia (trnL),Saliva,08-07,
+01,Pyrus pyrifolia (trnL),Saliva,08-08,
+01,Pyrus pyrifolia (trnL),Saliva,08-09,0.0
+01,Pyrus pyrifolia (trnL),Saliva,08-10,
+01,Pyrus pyrifolia (trnL),Saliva,08-11,0.0
+01,Pyrus pyrifolia (trnL),Saliva,08-12,
+01,Pyrus pyrifolia (trnL),Saliva,08-13,
+01,Pyrus pyrifolia (trnL),Saliva,08-14,
+01,Beta vulgaris (trnL),Saliva,07-31,0.0
+01,Beta vulgaris (trnL),Saliva,08-01,
+01,Beta vulgaris (trnL),Saliva,08-02,
+01,Beta vulgaris (trnL),Saliva,08-03,0.0
+01,Beta vulgaris (trnL),Saliva,08-04,0.0
+01,Beta vulgaris (trnL),Saliva,08-05,
+01,Beta vulgaris (trnL),Saliva,08-06,0.0
+01,Beta vulgaris (trnL),Saliva,08-07,
+01,Beta vulgaris (trnL),Saliva,08-08,
+01,Beta vulgaris (trnL),Saliva,08-09,0.0
+01,Beta vulgaris (trnL),Saliva,08-10,
+01,Beta vulgaris (trnL),Saliva,08-11,0.0
+01,Beta vulgaris (trnL),Saliva,08-12,
+01,Beta vulgaris (trnL),Saliva,08-13,
+01,Beta vulgaris (trnL),Saliva,08-14,
+01,Salvia hispanica (trnL),Saliva,07-31,0.0
+01,Salvia hispanica (trnL),Saliva,08-01,
+01,Salvia hispanica (trnL),Saliva,08-02,
+01,Salvia hispanica (trnL),Saliva,08-03,0.0
+01,Salvia hispanica (trnL),Saliva,08-04,0.0
+01,Salvia hispanica (trnL),Saliva,08-05,
+01,Salvia hispanica (trnL),Saliva,08-06,3.0
+01,Salvia hispanica (trnL),Saliva,08-07,
+01,Salvia hispanica (trnL),Saliva,08-08,
+01,Salvia hispanica (trnL),Saliva,08-09,0.0
+01,Salvia hispanica (trnL),Saliva,08-10,
+01,Salvia hispanica (trnL),Saliva,08-11,0.0
+01,Salvia hispanica (trnL),Saliva,08-12,
+01,Salvia hispanica (trnL),Saliva,08-13,
+01,Salvia hispanica (trnL),Saliva,08-14,

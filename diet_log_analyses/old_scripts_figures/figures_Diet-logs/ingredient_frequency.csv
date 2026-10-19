@@ -1,0 +1,227 @@
+ing,entries,subject_days,subjects,days_stated,days_assumed_only,pct_of_167_days,informative_for_sequencing,informative_reason_category,excluded_from_plot,label_level
+wheat,286,132,19,20,112,79.0,Yes,Whole or lightly processed food,False,3
+rice,159,114,19,100,14,68.3,Yes,Whole or lightly processed food,False,3
+egg,143,95,18,53,42,56.9,Uncertain,Low DNA,False,3
+cow milk,88,81,15,49,32,48.5,Yes,Whole or lightly processed food,False,3
+sugar,117,77,16,6,71,46.1,Uncertain,Refined / purified,False,3
+chicken,87,75,16,70,5,44.9,Yes,Whole or lightly processed food,False,3
+coffee,86,74,15,73,1,44.3,Uncertain,Processed: DNA reduced,False,0
+tomato,90,70,17,49,21,41.9,Yes,Whole or lightly processed food,False,3
+cheese,77,57,16,39,18,34.1,Yes,Whole or lightly processed food,False,3
+butter,68,52,14,13,39,31.1,Uncertain,Hydrolysed / isolated / fat,False,3
+vegetable oil,61,51,16,2,49,30.5,Uncertain,Refined / purified,False,3
+beef,59,47,14,40,7,28.1,Yes,Whole or lightly processed food,False,3
+pork,60,46,12,27,19,27.5,Yes,Whole or lightly processed food,False,3
+cacao,57,45,14,45,0,26.9,Yes,Whole or lightly processed food,False,2
+tofu,51,45,13,41,4,26.9,Yes,Whole or lightly processed food,False,3
+onion,53,42,14,20,22,25.1,Yes,Whole or lightly processed food,False,3
+lettuce,42,40,11,22,18,24.0,Yes,Whole or lightly processed food,False,3
+yogurt,39,36,11,31,5,21.6,Yes,Whole or lightly processed food,False,3
+soy sauce,40,32,15,14,18,19.2,Uncertain,Processed: DNA reduced,False,3
+cabbage,36,31,12,26,5,18.6,Yes,Whole or lightly processed food,False,3
+carrot,30,29,12,21,8,17.4,Yes,Whole or lightly processed food,False,3
+oat,29,28,11,17,11,16.8,Yes,Whole or lightly processed food,False,2
+cucumber,29,27,12,18,9,16.2,Yes,Whole or lightly processed food,False,0
+corn,27,26,13,22,4,15.6,Yes,Whole or lightly processed food,False,0
+mixed vegetables,30,25,13,20,5,15.0,No,Unspecified taxon,True,0
+potato,27,24,14,22,2,14.4,Yes,Whole or lightly processed food,False,2
+peanut,27,22,9,18,4,13.2,Yes,Whole or lightly processed food,False,3
+oat milk,22,22,5,22,0,13.2,Uncertain,Processed: DNA reduced,False,2
+garlic,23,20,9,11,9,12.0,Yes,Whole or lightly processed food,False,3
+broccoli,21,20,10,19,1,12.0,Yes,Whole or lightly processed food,False,3
+shrimp,21,20,8,18,2,12.0,No,No marker in pipeline,False,0
+avocado,20,20,10,18,2,12.0,Yes,Whole or lightly processed food,False,2
+blueberry,21,19,8,19,0,11.4,Yes,Whole or lightly processed food,False,2
+chili pepper,22,18,9,8,10,10.8,Yes,Whole or lightly processed food,False,2
+apple,19,18,10,18,0,10.8,Yes,Whole or lightly processed food,False,0
+tea,21,17,6,17,0,10.2,Uncertain,Processed: DNA reduced,False,2
+curry spices,18,17,8,4,13,10.2,Uncertain,Trace amount,False,3
+green bean,18,17,9,17,0,10.2,Yes,Whole or lightly processed food,False,2
+mango,18,17,9,17,0,10.2,Yes,Whole or lightly processed food,False,3
+honey,22,16,4,9,7,9.6,No,No marker in pipeline,False,0
+banana,16,16,8,15,1,9.6,Yes,Whole or lightly processed food,False,2
+kimchi,16,16,6,16,0,9.6,Yes,Whole or lightly processed food,False,3
+mushroom,17,15,9,11,4,9.0,No,No marker in pipeline,False,0
+spinach,16,15,6,14,1,9.0,Yes,Whole or lightly processed food,False,2
+salmon,15,15,7,15,0,9.0,Yes,Whole or lightly processed food,False,3
+scallion,15,14,7,9,5,8.4,Yes,Whole or lightly processed food,False,2
+bok choy,15,13,7,13,0,7.8,Yes,Whole or lightly processed food,False,3
+grain cereal,15,13,7,9,4,7.8,No,Unspecified taxon,True,2
+ice cream,13,13,7,13,0,7.8,Yes,Whole or lightly processed food,False,3
+cream,16,12,6,3,9,7.2,Yes,Whole or lightly processed food,False,3
+cauliflower,14,12,9,12,0,7.2,Yes,Whole or lightly processed food,False,3
+edamame,12,12,5,12,0,7.2,Yes,Whole or lightly processed food,False,3
+fish,12,12,7,11,1,7.2,No,Unspecified taxon,True,0
+lamb,12,12,7,11,1,7.2,Yes,Whole or lightly processed food,False,3
+protein powder,12,12,4,11,1,7.2,No,Unspecified taxon,True,0
+sesame,12,12,8,5,7,7.2,Yes,Whole or lightly processed food,False,2
+natto,11,11,2,11,0,6.6,Yes,Whole or lightly processed food,False,3
+raspberry,11,11,5,11,0,6.6,Yes,Whole or lightly processed food,False,2
+lemon,11,10,7,7,3,6.0,Yes,Whole or lightly processed food,False,2
+miso,11,10,6,10,0,6.0,Uncertain,Processed: DNA reduced,False,3
+kale,10,10,5,10,0,6.0,Yes,Whole or lightly processed food,False,3
+orange,10,10,5,10,0,6.0,Yes,Whole or lightly processed food,False,2
+watermelon,10,10,4,10,0,6.0,Yes,Whole or lightly processed food,False,0
+wine,10,10,2,10,0,6.0,Uncertain,Processed: DNA reduced,False,2
+olive oil,10,9,6,2,7,5.4,Uncertain,Processed: DNA reduced,False,0
+celery,9,9,4,5,4,5.4,Yes,Whole or lightly processed food,False,3
+chickpea,9,9,6,9,0,5.4,Yes,Whole or lightly processed food,False,3
+lentil,9,9,6,9,0,5.4,Yes,Whole or lightly processed food,False,3
+pea,9,9,6,8,1,5.4,Yes,Whole or lightly processed food,False,2
+tuna,9,9,4,9,0,5.4,Yes,Whole or lightly processed food,False,2
+bell pepper,10,8,4,8,0,4.8,Yes,Whole or lightly processed food,False,2
+ginger,9,8,6,3,5,4.8,Yes,Whole or lightly processed food,False,0
+beans (unspecified),8,8,7,4,4,4.8,Uncertain,Partly unspecified,True,2
+fruit (unspecified),8,8,4,7,1,4.8,No,Unspecified taxon,True,0
+nori,8,8,6,7,1,4.8,No,No marker in pipeline,False,0
+whey,8,8,3,4,4,4.8,Uncertain,Hydrolysed / isolated / fat,False,3
+yam,8,8,3,8,0,4.8,Yes,Whole or lightly processed food,False,2
+pistachio,8,7,5,6,1,4.2,Yes,Whole or lightly processed food,False,3
+cashew,7,7,4,7,0,4.2,Yes,Whole or lightly processed food,False,3
+cinnamon,7,7,3,5,2,4.2,Uncertain,Trace amount,False,0
+feta,7,7,4,4,3,4.2,Yes,Whole or lightly processed food,False,3
+peach,7,7,3,7,0,4.2,Yes,Whole or lightly processed food,False,2
+sweet potato,7,7,6,6,1,4.2,Yes,Whole or lightly processed food,False,2
+basil,7,6,3,5,1,3.6,Yes,Whole or lightly processed food,False,3
+coconut,7,6,5,5,1,3.6,Yes,Whole or lightly processed food,False,0
+eggplant,6,6,4,6,0,3.6,Yes,Whole or lightly processed food,False,2
+jam,6,6,2,6,0,3.6,No,Unspecified taxon,True,0
+seaweed,6,6,3,1,5,3.6,No,No marker in pipeline,False,0
+strawberry,6,6,5,6,0,3.6,Yes,Whole or lightly processed food,False,0
+impossible meat,6,5,2,5,0,3.0,Uncertain,Composite product,False,3
+melon,6,5,4,5,0,3.0,Yes,Whole or lightly processed food,False,0
+olive,6,5,3,2,3,3.0,Yes,Whole or lightly processed food,False,0
+almond milk,5,5,2,5,0,3.0,Uncertain,Processed: DNA reduced,False,2
+anchovy,5,5,3,0,5,3.0,Uncertain,Trace amount,False,0
+chia,5,5,4,5,0,3.0,Yes,Whole or lightly processed food,False,3
+octopus,5,5,4,5,0,3.0,No,No marker in pipeline,False,0
+pineapple,5,5,4,5,0,3.0,Yes,Whole or lightly processed food,False,3
+spirits,5,5,1,4,1,3.0,No,Distilled,False,0
+squash,5,5,3,5,0,3.0,Yes,Whole or lightly processed food,False,0
+unknown,5,5,4,5,0,3.0,No,Unspecified taxon,True,0
+zucchini,5,5,3,5,0,3.0,Yes,Whole or lightly processed food,False,0
+almond,5,4,3,2,2,2.4,Yes,Whole or lightly processed food,False,2
+acai,4,4,2,4,0,2.4,Yes,Whole or lightly processed food,False,0
+berries (mixed),4,4,4,4,0,2.4,Uncertain,Partly unspecified,True,2
+black bean,4,4,3,3,1,2.4,Yes,Whole or lightly processed food,False,2
+black soybean,4,4,2,4,0,2.4,Yes,Whole or lightly processed food,False,3
+collagen,4,4,1,4,0,2.4,Uncertain,Hydrolysed / isolated / fat,False,3
+glutinous rice,4,4,2,4,0,2.4,Yes,Whole or lightly processed food,False,3
+grape,4,4,2,4,0,2.4,Yes,Whole or lightly processed food,False,2
+luffa,4,4,2,4,0,2.4,Yes,Whole or lightly processed food,False,0
+nuts (unspecified),4,4,2,4,0,2.4,No,Unspecified taxon,True,0
+paneer,4,4,1,4,0,2.4,Yes,Whole or lightly processed food,False,3
+pea protein,4,4,1,4,0,2.4,Uncertain,Hydrolysed / isolated / fat,False,2
+plum,4,4,2,4,0,2.4,Yes,Whole or lightly processed food,False,2
+soy meat,4,4,1,4,0,2.4,Uncertain,Processed: DNA reduced,False,3
+soybean,4,4,2,0,4,2.4,Yes,Whole or lightly processed food,False,3
+trail mix,4,4,2,4,0,2.4,No,Unspecified taxon,True,0
+turkey,4,4,3,4,0,2.4,Yes,Whole or lightly processed food,False,3
+vegan cheese,4,4,1,3,1,2.4,Uncertain,Composite product,False,3
+wasabi,4,4,2,1,3,2.4,Uncertain,Trace amount,False,0
+seafood (mixed),4,3,3,3,0,1.8,No,Unspecified taxon,True,0
+artichoke,3,3,3,3,0,1.8,Yes,Whole or lightly processed food,False,2
+asian pear,3,3,2,2,1,1.8,Yes,Whole or lightly processed food,False,2
+butternut squash,3,3,2,3,0,1.8,Yes,Whole or lightly processed food,False,0
+daikon,3,3,3,3,0,1.8,Yes,Whole or lightly processed food,False,2
+diet soda,3,3,1,3,0,1.8,No,No food DNA,True,0
+dill,3,3,2,3,0,1.8,Yes,Whole or lightly processed food,False,0
+duck,3,3,3,2,1,1.8,Yes,Whole or lightly processed food,False,3
+fig,3,3,2,3,0,1.8,Yes,Whole or lightly processed food,False,3
+gelatin,3,3,3,0,3,1.8,Uncertain,Hydrolysed / isolated / fat,False,3
+gluten-free flour,3,3,1,3,0,1.8,Uncertain,Composite product,False,3
+huel,3,3,1,3,0,1.8,Uncertain,Composite product,False,3
+kiwi,3,3,3,3,0,1.8,Yes,Whole or lightly processed food,False,2
+mung bean,3,3,3,2,1,1.8,Yes,Whole or lightly processed food,False,2
+mustard,3,3,3,2,1,1.8,Yes,Whole or lightly processed food,False,2
+pecan,3,3,1,3,0,1.8,Yes,Whole or lightly processed food,False,2
+pine nut,3,3,1,0,3,1.8,Yes,Whole or lightly processed food,False,2
+pumpkin,3,3,3,3,0,1.8,Yes,Whole or lightly processed food,False,0
+raisin,3,3,1,3,0,1.8,Yes,Whole or lightly processed food,False,2
+soy milk,3,3,2,3,0,1.8,Uncertain,Processed: DNA reduced,False,3
+supplement,3,3,2,3,0,1.8,No,No food DNA,True,0
+vegan caesar dressing,3,3,1,3,0,1.8,No,Unspecified taxon,True,0
+walnut,3,3,2,2,1,1.8,Yes,Whole or lightly processed food,False,3
+arugula,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,0
+bean sprouts,2,2,2,1,1,1.2,Yes,Whole or lightly processed food,False,2
+beer,2,2,1,2,0,1.2,Uncertain,Processed: DNA reduced,False,2
+cassava,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,2
+cherry,2,2,1,2,0,1.2,Yes,Whole or lightly processed food,False,2
+crab,2,2,1,2,0,1.2,No,No marker in pipeline,False,0
+cranberry,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,2
+grain-free cereal,2,2,1,2,0,1.2,No,Unspecified taxon,True,0
+grapefruit,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,2
+guava,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,3
+ikea plant balls,2,2,1,2,0,1.2,Uncertain,Composite product,False,3
+imitation crab,2,2,2,2,0,1.2,Uncertain,Processed: DNA reduced,False,2
+leek,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,2
+lime,2,2,2,0,2,1.2,Yes,Whole or lightly processed food,False,2
+mandarin,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,3
+maple syrup,2,2,2,2,0,1.2,Uncertain,Refined / purified,False,0
+napa cabbage,2,2,1,2,0,1.2,Yes,Whole or lightly processed food,False,3
+okra,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,3
+parsley,2,2,1,2,0,1.2,Yes,Whole or lightly processed food,False,0
+plantain,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,2
+pumpkin seed,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,0
+quinoa,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,2
+radish,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,2
+saffron,2,2,1,2,0,1.2,Uncertain,Trace amount,False,0
+sardine,2,2,1,2,0,1.2,Yes,Whole or lightly processed food,False,0
+squid,2,2,2,2,0,1.2,No,No marker in pipeline,False,0
+stone fruit,2,2,1,2,0,1.2,Uncertain,Partly unspecified,True,2
+tofu skin,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,3
+truffle,2,2,2,2,0,1.2,No,No marker in pipeline,False,0
+urad dal,2,2,1,0,2,1.2,Yes,Whole or lightly processed food,False,2
+whiskey,2,2,2,2,0,1.2,Uncertain,Distilled,False,2
+white fish,2,2,2,2,0,1.2,Yes,Whole or lightly processed food,False,0
+nutritional yeast,2,1,1,1,0,0.6,No,No marker in pipeline,False,0
+agave,1,1,1,1,0,0.6,Uncertain,Refined / purified,False,0
+asparagus,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+balsamic vinegar,1,1,1,1,0,0.6,Uncertain,Processed: DNA reduced,False,2
+bamboo shoot,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,0
+beet,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,3
+bergamot,1,1,1,1,0,0.6,Uncertain,Trace amount,False,2
+black pepper,1,1,1,1,0,0.6,Uncertain,Trace amount,False,3
+black-eyed pea,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+blackberry,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+bourbon,1,1,1,1,0,0.6,Uncertain,Distilled,False,0
+broccoli rabe,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,3
+brussels sprouts,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,3
+buckwheat,1,1,1,0,1,0.6,Yes,Whole or lightly processed food,False,3
+burdock,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,0
+caper,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+chanterelle,1,1,1,1,0,0.6,No,No marker in pipeline,False,0
+cod,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+cream cheese,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,3
+cumin,1,1,1,1,0,0.6,Uncertain,Trace amount,False,0
+enoki,1,1,1,1,0,0.6,No,No marker in pipeline,False,0
+goat cheese,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,3
+granola,1,1,1,0,1,0.6,Yes,Whole or lightly processed food,False,2
+hamachi,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+herbal liqueur,1,1,1,1,0,0.6,No,Distilled,False,0
+hoisin sauce,1,1,1,1,0,0.6,Uncertain,Processed: DNA reduced,False,3
+konjac,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,0
+limoncello,1,1,1,1,0,0.6,Uncertain,Distilled,False,2
+lotus root,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+lychee,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,0
+macadamia,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,3
+oyster mushroom,1,1,1,1,0,0.6,No,No marker in pipeline,False,0
+passionfruit,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+plant-based mince,1,1,1,1,0,0.6,No,Unspecified taxon,True,0
+quail egg,1,1,1,1,0,0.6,Uncertain,Low DNA,False,3
+red bean,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+rockfish,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+scallop,1,1,1,1,0,0.6,No,No marker in pipeline,False,0
+shellfish,1,1,1,1,0,0.6,No,No marker in pipeline,True,0
+shiitake,1,1,1,1,0,0.6,No,No marker in pipeline,False,0
+soju,1,1,1,1,0,0.6,Uncertain,Distilled,False,3
+soybean paste,1,1,1,0,1,0.6,Uncertain,Processed: DNA reduced,False,3
+tapioca,1,1,1,1,0,0.6,Uncertain,Refined / purified,False,2
+teff,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,0
+thousand island dressing,1,1,1,1,0,0.6,Uncertain,Trace amount,False,3
+turmeric,1,1,1,1,0,0.6,Uncertain,Trace amount,False,2
+unagi,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+vanilla,1,1,1,1,0,0.6,Uncertain,Trace amount,False,0
+veal,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,3
+wild rice,1,1,1,1,0,0.6,Yes,Whole or lightly processed food,False,2
+wood ear,1,1,1,1,0,0.6,No,No marker in pipeline,False,0

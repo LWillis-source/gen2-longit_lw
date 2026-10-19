@@ -1,0 +1,143 @@
+ingredient,marker,n_species,best,worst,subject_days,species,best_match,worst_match
+acai,trnL,1,0,0,4,Euterpe oleracea,not found,not found
+almond,trnL,1,2,2,4,Prunus dulcis,genus/family label only,genus/family label only
+apple,trnL,1,0,0,18,Malus domestica,not found,not found
+artichoke,trnL,1,2,2,3,Cynara cardunculus var. scolymus,genus/family label only,genus/family label only
+arugula,trnL,1,0,0,2,Eruca vesicaria,not found,not found
+asian pear,trnL,1,2,2,3,Pyrus pyrifolia,genus/family label only,genus/family label only
+asparagus,trnL,1,2,2,1,Asparagus officinalis,genus/family label only,genus/family label only
+avocado,trnL,1,2,2,20,Persea americana,genus/family label only,genus/family label only
+bamboo shoot,trnL,1,0,0,1,Bambusoideae (Phyllostachys spp.),not found,not found
+banana,trnL,1,2,2,16,Musa acuminata x balbisiana,genus/family label only,genus/family label only
+basil,trnL,1,3,3,6,Ocimum basilicum,species-level label,species-level label
+bean sprouts,trnL,1,2,2,2,Vigna radiata,genus/family label only,genus/family label only
+beef,12SV5,1,3,3,47,Bos taurus,species-level label,species-level label
+beet,trnL,1,3,3,1,Beta vulgaris,species-level label,species-level label
+bell pepper,trnL,1,2,2,8,Capsicum annuum,genus/family label only,genus/family label only
+black bean,trnL,1,2,2,4,Phaseolus vulgaris,genus/family label only,genus/family label only
+black soybean,trnL,1,3,3,4,Glycine max,species-level label,species-level label
+black-eyed pea,trnL,1,2,2,1,Vigna unguiculata,genus/family label only,genus/family label only
+blackberry,trnL,1,2,2,1,Rubus spp.,genus/family label only,genus/family label only
+blueberry,trnL,1,2,2,19,Vaccinium spp.,genus/family label only,genus/family label only
+bok choy,trnL,1,3,3,13,Brassica rapa subsp. chinensis,species-level label,species-level label
+broccoli,trnL,1,3,3,20,Brassica oleracea var. italica,species-level label,species-level label
+broccoli rabe,trnL,1,3,3,1,Brassica rapa,species-level label,species-level label
+brussels sprouts,trnL,1,3,3,1,Brassica oleracea var. gemmifera,species-level label,species-level label
+buckwheat,trnL,1,3,3,1,Fagopyrum esculentum,species-level label,species-level label
+burdock,trnL,1,0,0,1,Arctium lappa,not found,not found
+butternut squash,trnL,1,0,0,3,Cucurbita moschata,not found,not found
+cabbage,trnL,1,3,3,31,Brassica oleracea var. capitata,species-level label,species-level label
+cacao,trnL,1,2,2,45,Theobroma cacao,genus/family label only,genus/family label only
+caper,trnL,1,2,2,1,Capparis spinosa,genus/family label only,genus/family label only
+carrot,trnL,1,3,3,29,Daucus carota subsp. sativus,species-level label,species-level label
+cashew,trnL,1,3,3,7,Anacardium occidentale,species-level label,species-level label
+cassava,trnL,1,2,2,2,Manihot esculenta,genus/family label only,genus/family label only
+cauliflower,trnL,1,3,3,12,Brassica oleracea var. botrytis,species-level label,species-level label
+celery,trnL,1,3,3,9,Apium graveolens,species-level label,species-level label
+cheese,12SV5,1,3,3,57,Bos taurus,species-level label,species-level label
+cherry,trnL,1,2,2,2,Prunus avium,genus/family label only,genus/family label only
+chia,trnL,1,3,3,5,Salvia hispanica,species-level label,species-level label
+chicken,12SV5,1,3,3,75,Gallus gallus,species-level label,species-level label
+chickpea,trnL,1,3,3,9,Cicer arietinum,species-level label,species-level label
+chili pepper,trnL,1,2,2,18,Capsicum annuum,genus/family label only,genus/family label only
+coconut,trnL,1,0,0,6,Cocos nucifera,not found,not found
+cod,12SV5,1,2,2,1,Gadus morhua,genus/family label only,genus/family label only
+corn,trnL,1,0,0,26,Zea mays,not found,not found
+cow milk,12SV5,1,3,3,81,Bos taurus,species-level label,species-level label
+cranberry,trnL,1,2,2,2,Vaccinium macrocarpon,genus/family label only,genus/family label only
+cream,12SV5,1,3,3,12,Bos taurus,species-level label,species-level label
+cream cheese,12SV5,1,3,3,1,Bos taurus,species-level label,species-level label
+cucumber,trnL,1,0,0,27,Cucumis sativus,not found,not found
+daikon,trnL,1,2,2,3,Raphanus sativus,genus/family label only,genus/family label only
+dill,trnL,1,0,0,3,Anethum graveolens,not found,not found
+duck,12SV5,1,3,3,3,Anas platyrhynchos,species-level label,species-level label
+edamame,trnL,1,3,3,12,Glycine max,species-level label,species-level label
+eggplant,trnL,1,2,2,6,Solanum melongena,genus/family label only,genus/family label only
+feta,12SV5,2,3,3,7,Ovis aries; Capra hircus,species-level label,species-level label
+fig,trnL,1,3,3,3,Ficus carica,species-level label,species-level label
+garlic,trnL,1,3,3,20,Allium sativum,species-level label,species-level label
+ginger,trnL,1,0,0,8,Zingiber officinale,not found,not found
+glutinous rice,trnL,1,3,3,4,Oryza sativa,species-level label,species-level label
+goat cheese,12SV5,1,3,3,1,Capra hircus,species-level label,species-level label
+granola,trnL,1,2,2,1,Avena sativa,genus/family label only,genus/family label only
+grape,trnL,1,2,2,4,Vitis vinifera,genus/family label only,genus/family label only
+grapefruit,trnL,1,2,2,2,Citrus x paradisi,genus/family label only,genus/family label only
+green bean,trnL,1,2,2,17,Phaseolus vulgaris,genus/family label only,genus/family label only
+guava,trnL,1,3,3,2,Psidium guajava,species-level label,species-level label
+hamachi,12SV5,1,2,2,1,Seriola quinqueradiata,genus/family label only,genus/family label only
+ice cream,12SV5,1,3,3,13,Bos taurus,species-level label,species-level label
+kale,trnL,1,3,3,10,Brassica oleracea var. sabellica,species-level label,species-level label
+kimchi,trnL,6,3,0,16,Brassica rapa subsp. pekinensis; Raphanus sativus; Allium sativum; Zingiber officinale; Capsicum annuum; Allium fistulosum,species-level label,not found
+kiwi,trnL,1,2,2,3,Actinidia deliciosa,genus/family label only,genus/family label only
+konjac,trnL,1,0,0,1,Amorphophallus konjac,not found,not found
+lamb,12SV5,1,3,3,12,Ovis aries,species-level label,species-level label
+leek,trnL,1,2,2,2,Allium ampeloprasum,genus/family label only,genus/family label only
+lemon,trnL,1,2,2,10,Citrus limon,genus/family label only,genus/family label only
+lentil,trnL,1,3,3,9,Lens culinaris,species-level label,species-level label
+lettuce,trnL,1,3,3,40,Lactuca sativa,species-level label,species-level label
+lime,trnL,1,2,2,2,Citrus x aurantiifolia,genus/family label only,genus/family label only
+lotus root,trnL,1,2,2,1,Nelumbo nucifera,genus/family label only,genus/family label only
+luffa,trnL,1,0,0,4,Luffa aegyptiaca,not found,not found
+lychee,trnL,1,0,0,1,Litchi chinensis,not found,not found
+macadamia,trnL,1,3,3,1,Macadamia integrifolia,species-level label,species-level label
+mandarin,trnL,1,3,3,2,Citrus reticulata,species-level label,species-level label
+mango,trnL,1,3,3,17,Mangifera indica,species-level label,species-level label
+melon,trnL,1,0,0,5,Cucumis melo,not found,not found
+mung bean,trnL,1,2,2,3,Vigna radiata,genus/family label only,genus/family label only
+mustard,trnL,2,2,0,3,Brassica juncea; Sinapis alba,genus/family label only,not found
+napa cabbage,trnL,1,3,3,2,Brassica rapa subsp. pekinensis,species-level label,species-level label
+natto,trnL,1,3,3,11,Glycine max,species-level label,species-level label
+oat,trnL,1,2,2,28,Avena sativa,genus/family label only,genus/family label only
+okra,trnL,1,3,3,2,Abelmoschus esculentus,species-level label,species-level label
+olive,trnL,1,0,0,5,Olea europaea,not found,not found
+onion,trnL,1,3,3,42,Allium cepa,species-level label,species-level label
+orange,trnL,1,2,2,10,Citrus x sinensis,genus/family label only,genus/family label only
+paneer,12SV5,1,3,3,4,Bos taurus,species-level label,species-level label
+parsley,trnL,1,0,0,2,Petroselinum crispum,not found,not found
+passionfruit,trnL,1,2,2,1,Passiflora edulis,genus/family label only,genus/family label only
+pea,trnL,1,2,2,9,Pisum sativum,genus/family label only,genus/family label only
+peach,trnL,1,2,2,7,Prunus persica,genus/family label only,genus/family label only
+peanut,trnL,1,3,3,22,Arachis hypogaea,species-level label,species-level label
+pecan,trnL,1,2,2,3,Carya illinoinensis,genus/family label only,genus/family label only
+pine nut,trnL,1,2,2,3,Pinus spp.,genus/family label only,genus/family label only
+pineapple,trnL,1,3,3,5,Ananas comosus,species-level label,species-level label
+pistachio,trnL,1,3,3,7,Pistacia vera,species-level label,species-level label
+plantain,trnL,1,2,2,2,Musa x paradisiaca,genus/family label only,genus/family label only
+plum,trnL,1,2,2,4,Prunus domestica,genus/family label only,genus/family label only
+pork,12SV5,1,3,3,46,Sus scrofa,species-level label,species-level label
+potato,trnL,1,2,2,24,Solanum tuberosum,genus/family label only,genus/family label only
+pumpkin,trnL,1,0,0,3,Cucurbita maxima,not found,not found
+pumpkin seed,trnL,1,0,0,2,Cucurbita pepo,not found,not found
+quinoa,trnL,1,2,2,2,Chenopodium quinoa,genus/family label only,genus/family label only
+radish,trnL,1,2,2,2,Raphanus sativus,genus/family label only,genus/family label only
+raisin,trnL,1,2,2,3,Vitis vinifera,genus/family label only,genus/family label only
+raspberry,trnL,1,2,2,11,Rubus idaeus,genus/family label only,genus/family label only
+red bean,trnL,1,2,2,1,Vigna angularis,genus/family label only,genus/family label only
+rice,trnL,1,3,3,114,Oryza sativa,species-level label,species-level label
+rockfish,12SV5,1,2,2,1,Sebastes spp.,genus/family label only,genus/family label only
+salmon,12SV5,1,3,3,15,Salmo salar,species-level label,species-level label
+sardine,12SV5,1,0,0,2,Sardina pilchardus,not found,not found
+scallion,trnL,1,2,2,14,Allium fistulosum,genus/family label only,genus/family label only
+sesame,trnL,1,2,2,12,Sesamum indicum,genus/family label only,genus/family label only
+soybean,trnL,1,3,3,4,Glycine max,species-level label,species-level label
+spinach,trnL,1,2,2,15,Spinacia oleracea,genus/family label only,genus/family label only
+squash,trnL,1,0,0,5,Cucurbita pepo,not found,not found
+strawberry,trnL,1,0,0,6,Fragaria x ananassa,not found,not found
+sweet potato,trnL,1,2,2,7,Ipomoea batatas,genus/family label only,genus/family label only
+teff,trnL,1,0,0,1,Eragrostis tef,not found,not found
+tofu,trnL,1,3,3,45,Glycine max,species-level label,species-level label
+tofu skin,trnL,1,3,3,2,Glycine max,species-level label,species-level label
+tomato,trnL,1,3,3,70,Solanum lycopersicum,species-level label,species-level label
+tuna,12SV5,1,2,2,9,Thunnus spp.,genus/family label only,genus/family label only
+turkey,12SV5,1,3,3,4,Meleagris gallopavo,species-level label,species-level label
+unagi,12SV5,1,2,2,1,Anguilla japonica,genus/family label only,genus/family label only
+urad dal,trnL,1,2,2,2,Vigna mungo,genus/family label only,genus/family label only
+veal,12SV5,1,3,3,1,Bos taurus,species-level label,species-level label
+walnut,trnL,1,3,3,3,Juglans regia,species-level label,species-level label
+watermelon,trnL,1,0,0,10,Citrullus lanatus,not found,not found
+wheat,trnL,1,3,3,132,Triticum aestivum,species-level label,species-level label
+white fish,12SV5,1,0,0,2,"Gadidae (cod/haddock/pollock, unspecified)",not found,not found
+wild rice,trnL,1,2,2,1,Zizania palustris,genus/family label only,genus/family label only
+yam,trnL,1,2,2,8,Dioscorea alata,genus/family label only,genus/family label only
+yogurt,12SV5,1,3,3,36,Bos taurus,species-level label,species-level label
+zucchini,trnL,1,0,0,5,Cucurbita pepo,not found,not found

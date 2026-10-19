@@ -1,0 +1,1613 @@
+Subject_ID,Date,meal,ingredient,stated
+1,08-03,Breakfast,cheese,True
+1,08-03,Breakfast,lamb,True
+1,08-03,Breakfast,wheat,False
+1,08-03,Dinner,cheese,True
+1,08-03,Dinner,chicken,True
+1,08-03,Dinner,garlic,True
+1,08-03,Dinner,wheat,False
+1,08-03,Lunch,cabbage,True
+1,08-03,Lunch,cacao,True
+1,08-03,Lunch,carrot,False
+1,08-03,Lunch,cow milk,False
+1,08-03,Lunch,lemon,True
+1,08-03,Lunch,peanut,True
+1,08-03,Lunch,wheat,False
+1,08-03,not recorded,cacao,True
+1,08-03,not recorded,ice cream,True
+1,08-03,not recorded,lemon,True
+1,08-03,not recorded,peanut,True
+1,08-03,not recorded,wheat,False
+1,08-04,Breakfast,cheese,True
+1,08-04,Breakfast,chicken,True
+1,08-04,Breakfast,wheat,False
+1,08-04,Dinner,beef,True
+1,08-04,Dinner,cacao,True
+1,08-04,Dinner,cheese,True
+1,08-04,Dinner,cow milk,False
+1,08-04,Dinner,ice cream,True
+1,08-04,Dinner,peanut,True
+1,08-04,Dinner,pork,False
+1,08-04,Dinner,rice,True
+1,08-04,Dinner,wheat,False
+1,08-04,Lunch,cacao,True
+1,08-04,Lunch,cucumber,False
+1,08-04,Lunch,tomato,False
+1,08-04,Lunch,wheat,True
+1,08-05,Breakfast,cheese,True
+1,08-05,Breakfast,wheat,False
+1,08-05,Dinner,beef,True
+1,08-05,Dinner,cauliflower,True
+1,08-05,Dinner,lemon,False
+1,08-05,Dinner,rice,True
+1,08-05,Dinner,wheat,False
+1,08-05,Lunch,cacao,True
+1,08-05,Lunch,cashew,True
+1,08-05,Lunch,chicken,True
+1,08-05,Lunch,cow milk,False
+1,08-05,Lunch,ginger,True
+1,08-05,Lunch,peanut,True
+1,08-05,Lunch,spinach,True
+1,08-05,Lunch,wheat,False
+1,08-05,not recorded,cacao,True
+1,08-05,not recorded,ice cream,True
+1,08-05,not recorded,wheat,False
+1,08-06,Breakfast,cheese,True
+1,08-06,Breakfast,wheat,False
+1,08-06,Dinner,cabbage,True
+1,08-06,Dinner,cacao,True
+1,08-06,Dinner,carrot,False
+1,08-06,Dinner,cow milk,False
+1,08-06,Dinner,garlic,True
+1,08-06,Dinner,peanut,True
+1,08-06,Dinner,wheat,False
+1,08-06,Lunch,chicken,True
+1,08-06,Lunch,onion,False
+1,08-06,Lunch,rice,True
+1,08-06,Lunch,tomato,False
+1,08-07,Dinner,cacao,True
+1,08-07,Dinner,ice cream,True
+1,08-07,Dinner,lamb,True
+1,08-07,Dinner,pork,True
+1,08-07,Dinner,wheat,False
+1,08-07,Lunch,avocado,False
+1,08-07,Lunch,cacao,True
+1,08-07,Lunch,cheese,False
+1,08-07,Lunch,chicken,False
+1,08-07,Lunch,cow milk,False
+1,08-07,Lunch,lettuce,False
+1,08-07,Lunch,peanut,True
+1,08-07,Lunch,pork,False
+1,08-07,Lunch,tomato,False
+1,08-08,Breakfast,cheese,True
+1,08-08,Breakfast,wheat,False
+1,08-08,Dinner,apple,True
+1,08-08,Dinner,cheese,True
+1,08-08,Dinner,pork,False
+1,08-08,Dinner,tomato,False
+1,08-08,Dinner,wheat,False
+1,08-08,Lunch,cacao,True
+1,08-08,Lunch,cow milk,False
+1,08-08,Lunch,cucumber,False
+1,08-08,Lunch,lamb,True
+1,08-08,Lunch,lettuce,False
+1,08-08,Lunch,onion,False
+1,08-08,Lunch,peanut,True
+1,08-08,Lunch,tomato,False
+1,08-09,Breakfast,cow milk,False
+1,08-09,Breakfast,wheat,False
+1,08-09,Dinner,cheese,True
+1,08-09,Dinner,chicken,True
+1,08-09,Dinner,onion,True
+1,08-09,Dinner,potato,True
+1,08-09,Dinner,wheat,False
+1,08-09,Lunch,apple,True
+1,08-09,Lunch,cheese,False
+1,08-09,Lunch,chicken,True
+1,08-09,Lunch,lettuce,True
+1,08-09,Lunch,wheat,False
+1,08-10,Breakfast,cheese,True
+1,08-10,Breakfast,orange,True
+1,08-10,Breakfast,wheat,False
+1,08-10,Dinner,beef,False
+1,08-10,Dinner,cacao,True
+1,08-10,Dinner,cheese,False
+1,08-10,Dinner,corn,False
+1,08-10,Dinner,cow milk,False
+1,08-10,Dinner,ice cream,True
+1,08-10,Dinner,lettuce,False
+1,08-10,Dinner,peanut,True
+1,08-10,Dinner,pork,False
+1,08-10,Dinner,tomato,False
+1,08-10,Dinner,wheat,False
+1,08-11,Breakfast,cheese,True
+1,08-11,Breakfast,corn,True
+1,08-11,Breakfast,pork,True
+1,08-11,Breakfast,wheat,False
+1,08-11,Dinner,cacao,True
+1,08-11,Dinner,cow milk,False
+1,08-11,Dinner,garlic,True
+1,08-11,Dinner,kale,True
+1,08-11,Dinner,lamb,True
+1,08-11,Dinner,lemon,False
+1,08-11,Dinner,peanut,True
+1,08-11,Dinner,tomato,True
+1,08-11,Dinner,wheat,False
+3,08-03,not recorded,blueberry,True
+3,08-03,not recorded,chickpea,True
+3,08-03,not recorded,cow milk,False
+3,08-03,not recorded,lettuce,False
+3,08-03,not recorded,oat,False
+3,08-03,not recorded,onion,False
+3,08-03,not recorded,potato,True
+3,08-03,not recorded,sesame,False
+3,08-03,not recorded,tomato,False
+3,08-03,not recorded,wheat,False
+3,08-03,not recorded,yogurt,True
+3,08-04,not recorded,blueberry,True
+3,08-04,not recorded,corn,True
+3,08-04,not recorded,kale,True
+3,08-04,not recorded,lentil,True
+3,08-04,not recorded,oat,False
+3,08-04,not recorded,onion,False
+3,08-04,not recorded,tomato,False
+3,08-04,not recorded,wheat,False
+3,08-04,not recorded,yogurt,False
+3,08-05,not recorded,broccoli,True
+3,08-05,not recorded,cabbage,True
+3,08-05,not recorded,carrot,True
+3,08-05,not recorded,chili pepper,True
+3,08-05,not recorded,corn,True
+3,08-05,not recorded,edamame,True
+3,08-05,not recorded,garlic,False
+3,08-05,not recorded,lemon,False
+3,08-05,not recorded,lettuce,True
+3,08-05,not recorded,oat,False
+3,08-05,not recorded,onion,False
+3,08-05,not recorded,rice,True
+3,08-05,not recorded,spinach,True
+3,08-05,not recorded,tofu,True
+3,08-05,not recorded,tomato,True
+3,08-05,not recorded,wheat,False
+3,08-06,not recorded,carrot,False
+3,08-06,not recorded,celery,False
+3,08-06,not recorded,cheese,True
+3,08-06,not recorded,cow milk,False
+3,08-06,not recorded,edamame,True
+3,08-06,not recorded,onion,False
+3,08-06,not recorded,potato,True
+3,08-06,not recorded,rice,True
+3,08-06,not recorded,tofu,True
+3,08-06,not recorded,wheat,False
+3,08-06,not recorded,yam,True
+3,08-07,not recorded,cheese,True
+3,08-07,not recorded,cow milk,True
+3,08-07,not recorded,cucumber,True
+3,08-07,not recorded,rice,True
+3,08-07,not recorded,tofu,True
+3,08-07,not recorded,tomato,False
+3,08-07,not recorded,wheat,False
+3,08-08,not recorded,blueberry,True
+3,08-08,not recorded,cacao,True
+3,08-08,not recorded,chili pepper,True
+3,08-08,not recorded,cucumber,False
+3,08-08,not recorded,feta,False
+3,08-08,not recorded,ice cream,True
+3,08-08,not recorded,lettuce,False
+3,08-08,not recorded,orange,True
+3,08-08,not recorded,raspberry,True
+3,08-08,not recorded,rice,False
+3,08-08,not recorded,tofu,True
+3,08-08,not recorded,tomato,False
+3,08-08,not recorded,yogurt,True
+3,08-09,not recorded,cacao,True
+3,08-09,not recorded,cucumber,False
+3,08-09,not recorded,lettuce,False
+3,08-09,not recorded,orange,True
+3,08-09,not recorded,raspberry,True
+3,08-09,not recorded,tofu,True
+3,08-09,not recorded,tomato,False
+3,08-09,not recorded,wheat,False
+3,08-09,not recorded,yogurt,True
+3,08-10,not recorded,broccoli,True
+3,08-10,not recorded,cabbage,True
+3,08-10,not recorded,cacao,True
+3,08-10,not recorded,celery,False
+3,08-10,not recorded,kale,True
+3,08-10,not recorded,onion,False
+3,08-10,not recorded,rice,True
+3,08-10,not recorded,tofu,True
+3,08-10,not recorded,wheat,False
+3,08-10,not recorded,yogurt,True
+3,08-11,not recorded,avocado,True
+3,08-11,not recorded,broccoli,True
+3,08-11,not recorded,cacao,True
+3,08-11,not recorded,chickpea,True
+3,08-11,not recorded,cow milk,False
+3,08-11,not recorded,onion,False
+3,08-11,not recorded,orange,True
+3,08-11,not recorded,pea,False
+3,08-11,not recorded,potato,False
+3,08-11,not recorded,raspberry,True
+3,08-11,not recorded,rice,True
+3,08-11,not recorded,tofu,True
+3,08-11,not recorded,wheat,False
+3,08-11,not recorded,yogurt,True
+3,08-12,not recorded,cacao,True
+3,08-12,not recorded,carrot,False
+3,08-12,not recorded,chickpea,True
+3,08-12,not recorded,cow milk,False
+3,08-12,not recorded,raspberry,True
+3,08-12,not recorded,rice,True
+3,08-12,not recorded,sesame,False
+3,08-12,not recorded,spinach,True
+3,08-12,not recorded,tofu,True
+3,08-12,not recorded,wheat,False
+3,08-12,not recorded,yogurt,True
+4,08-03,Breakfast,chili pepper,False
+4,08-03,Breakfast,onion,True
+4,08-03,Breakfast,tofu,True
+4,08-03,Breakfast,tomato,False
+4,08-03,Dinner,carrot,True
+4,08-03,Dinner,corn,True
+4,08-03,Dinner,garlic,True
+4,08-03,Dinner,green bean,True
+4,08-03,Dinner,onion,True
+4,08-03,Dinner,spinach,True
+4,08-03,Dinner,tomato,True
+4,08-03,Dinner,wheat,False
+4,08-03,Lunch,lentil,True
+4,08-03,Lunch,wheat,False
+4,08-03,not recorded,apple,True
+4,08-04,Breakfast,apple,True
+4,08-04,Breakfast,scallion,True
+4,08-04,Breakfast,wheat,False
+4,08-04,Dinner,lettuce,False
+4,08-04,Dinner,wheat,True
+4,08-04,Lunch,spinach,True
+4,08-04,Lunch,tomato,True
+4,08-04,Lunch,wheat,False
+4,08-05,Breakfast,raspberry,True
+4,08-05,Breakfast,scallion,True
+4,08-05,Breakfast,wheat,False
+4,08-05,Dinner,lettuce,False
+4,08-05,Dinner,wheat,False
+4,08-05,Lunch,corn,True
+4,08-05,Lunch,potato,True
+4,08-05,Lunch,spinach,True
+4,08-05,Lunch,wheat,True
+4,08-05,not recorded,apple,True
+4,08-05,not recorded,cashew,True
+4,08-06,Breakfast,wheat,True
+4,08-06,Dinner,broccoli,True
+4,08-06,Dinner,chili pepper,True
+4,08-06,Dinner,rice,True
+4,08-06,Dinner,tofu,True
+4,08-06,Lunch,cabbage,True
+4,08-06,Lunch,lettuce,True
+4,08-06,Lunch,onion,True
+4,08-06,Lunch,rice,True
+4,08-06,Lunch,spinach,True
+4,08-06,Lunch,tofu,True
+4,08-06,not recorded,mango,True
+4,08-07,Breakfast,cashew,True
+4,08-07,Breakfast,raspberry,True
+4,08-07,Dinner,broccoli,True
+4,08-07,Dinner,rice,True
+4,08-07,Dinner,tofu,True
+4,08-07,Lunch,corn,False
+4,08-07,Lunch,lettuce,True
+4,08-07,Lunch,rice,True
+4,08-07,Lunch,tomato,False
+4,08-07,Lunch,wheat,False
+4,08-07,not recorded,apple,True
+4,08-07,not recorded,peanut,True
+4,08-08,Breakfast,apple,True
+4,08-08,Breakfast,scallion,True
+4,08-08,Breakfast,wheat,False
+4,08-08,Dinner,cabbage,True
+4,08-08,Dinner,carrot,True
+4,08-08,Dinner,lettuce,True
+4,08-08,Dinner,sweet potato,True
+4,08-08,Dinner,tomato,True
+4,08-08,Lunch,rice,True
+4,08-08,Lunch,spinach,False
+4,08-08,not recorded,cacao,True
+4,08-08,not recorded,cashew,True
+4,08-08,not recorded,ginger,True
+4,08-08,not recorded,lemon,True
+4,08-09,Breakfast,cashew,True
+4,08-09,Breakfast,raspberry,True
+4,08-09,Dinner,chickpea,True
+4,08-09,Dinner,cucumber,True
+4,08-09,Dinner,lemon,True
+4,08-09,Dinner,lettuce,True
+4,08-09,Lunch,broccoli,True
+4,08-09,Lunch,cauliflower,True
+4,08-09,Lunch,corn,True
+4,08-09,Lunch,pea,True
+4,08-09,Lunch,peanut,False
+4,08-09,Lunch,rice,True
+4,08-09,Lunch,tofu,True
+4,08-09,not recorded,wheat,False
+4,08-10,Breakfast,wheat,False
+4,08-10,Dinner,garlic,True
+4,08-10,Dinner,onion,True
+4,08-10,Dinner,spinach,True
+4,08-10,Dinner,tomato,True
+4,08-10,Dinner,wheat,False
+4,08-10,Lunch,chickpea,True
+4,08-10,Lunch,sesame,True
+4,08-10,Lunch,wheat,False
+4,08-10,not recorded,lettuce,False
+4,08-10,not recorded,raspberry,True
+4,08-11,Breakfast,scallion,True
+4,08-11,Breakfast,wheat,False
+4,08-11,Dinner,carrot,True
+4,08-11,Dinner,corn,True
+4,08-11,Dinner,pea,True
+4,08-11,Dinner,wheat,False
+4,08-11,Lunch,spinach,True
+4,08-11,Lunch,tomato,True
+4,08-11,Lunch,wheat,False
+4,08-12,Breakfast,banana,True
+4,08-12,Breakfast,scallion,True
+4,08-12,Breakfast,wheat,False
+4,08-12,Dinner,broccoli,True
+4,08-12,Dinner,rice,True
+4,08-12,Dinner,tofu,True
+4,08-12,Lunch,lettuce,False
+4,08-12,Lunch,wheat,False
+4,08-12,not recorded,apple,True
+5,08-03,not recorded,apple,True
+5,08-03,not recorded,blueberry,True
+5,08-03,not recorded,cheese,True
+5,08-03,not recorded,chicken,True
+5,08-03,not recorded,lettuce,True
+5,08-03,not recorded,oat,False
+5,08-03,not recorded,peanut,False
+5,08-03,not recorded,potato,True
+5,08-03,not recorded,wheat,False
+5,08-03,not recorded,yogurt,True
+5,08-04,not recorded,blueberry,True
+5,08-04,not recorded,cacao,True
+5,08-04,not recorded,chicken,True
+5,08-04,not recorded,cow milk,False
+5,08-04,not recorded,kale,True
+5,08-04,not recorded,oat,False
+5,08-04,not recorded,tomato,True
+5,08-04,not recorded,wheat,False
+5,08-04,not recorded,yam,True
+5,08-04,not recorded,yogurt,True
+5,08-05,not recorded,apple,True
+5,08-05,not recorded,blueberry,True
+5,08-05,not recorded,cacao,True
+5,08-05,not recorded,carrot,True
+5,08-05,not recorded,chicken,True
+5,08-05,not recorded,corn,True
+5,08-05,not recorded,cow milk,False
+5,08-05,not recorded,edamame,True
+5,08-05,not recorded,garlic,True
+5,08-05,not recorded,kale,True
+5,08-05,not recorded,kimchi,True
+5,08-05,not recorded,onion,True
+5,08-05,not recorded,peanut,False
+5,08-05,not recorded,rice,True
+5,08-05,not recorded,scallion,True
+5,08-05,not recorded,sweet potato,True
+5,08-05,not recorded,wheat,False
+5,08-05,not recorded,yogurt,True
+5,08-06,not recorded,blueberry,True
+5,08-06,not recorded,broccoli,True
+5,08-06,not recorded,cacao,True
+5,08-06,not recorded,cauliflower,True
+5,08-06,not recorded,cow milk,False
+5,08-06,not recorded,cream,False
+5,08-06,not recorded,garlic,True
+5,08-06,not recorded,kale,True
+5,08-06,not recorded,lemon,True
+5,08-06,not recorded,salmon,True
+5,08-06,not recorded,wheat,False
+5,08-06,not recorded,yam,True
+5,08-06,not recorded,yogurt,True
+5,08-07,not recorded,beef,False
+5,08-07,not recorded,chicken,True
+5,08-07,not recorded,potato,True
+5,08-07,not recorded,wheat,False
+5,08-07,not recorded,yam,True
+5,08-07,not recorded,yogurt,True
+5,08-08,not recorded,blueberry,True
+5,08-08,not recorded,cabbage,True
+5,08-08,not recorded,cacao,True
+5,08-08,not recorded,cheese,False
+5,08-08,not recorded,cow milk,False
+5,08-08,not recorded,ginger,True
+5,08-08,not recorded,green bean,True
+5,08-08,not recorded,lettuce,True
+5,08-08,not recorded,onion,True
+5,08-08,not recorded,rice,True
+5,08-08,not recorded,salmon,True
+5,08-08,not recorded,sesame,True
+5,08-08,not recorded,wheat,False
+5,08-08,not recorded,yam,True
+5,08-08,not recorded,yogurt,True
+5,08-09,not recorded,beef,True
+5,08-09,not recorded,blueberry,True
+5,08-09,not recorded,corn,True
+5,08-09,not recorded,cream,False
+5,08-09,not recorded,oat,False
+5,08-09,not recorded,onion,False
+5,08-09,not recorded,pork,True
+5,08-09,not recorded,raspberry,True
+5,08-09,not recorded,wheat,True
+5,08-10,not recorded,cacao,True
+5,08-10,not recorded,cheese,False
+5,08-10,not recorded,chicken,True
+5,08-10,not recorded,cow milk,False
+5,08-10,not recorded,lettuce,True
+5,08-10,not recorded,oat,False
+5,08-10,not recorded,wheat,True
+6,08-03,Breakfast,beef,False
+6,08-03,Breakfast,cow milk,True
+6,08-03,Breakfast,pork,False
+6,08-03,Breakfast,rice,False
+6,08-03,Breakfast,wheat,False
+6,08-03,Dinner,cabbage,False
+6,08-03,Dinner,garlic,False
+6,08-03,Dinner,pork,True
+6,08-03,Dinner,scallion,False
+6,08-03,Dinner,watermelon,True
+6,08-03,Dinner,wheat,False
+6,08-03,Lunch,chicken,True
+6,08-03,Lunch,cow milk,False
+6,08-03,Lunch,tomato,False
+6,08-03,Lunch,wheat,False
+6,08-04,Dinner,bell pepper,True
+6,08-04,Dinner,cauliflower,True
+6,08-04,Dinner,chicken,True
+6,08-04,Dinner,onion,True
+6,08-04,Dinner,pork,True
+6,08-04,Dinner,rice,True
+6,08-04,Dinner,watermelon,True
+6,08-04,Lunch,bell pepper,True
+6,08-04,Lunch,cauliflower,True
+6,08-04,Lunch,chicken,True
+6,08-04,Lunch,onion,True
+6,08-04,Lunch,pork,True
+6,08-05,Dinner,blueberry,True
+6,08-05,Dinner,cucumber,True
+6,08-05,Dinner,pork,True
+6,08-05,Dinner,rice,True
+6,08-05,Dinner,tofu,True
+6,08-05,Dinner,watermelon,True
+6,08-05,Dinner,wheat,False
+6,08-05,Lunch,avocado,True
+6,08-05,Lunch,cheese,False
+6,08-05,Lunch,chicken,True
+6,08-05,Lunch,lentil,True
+6,08-05,Lunch,orange,True
+6,08-05,Lunch,rice,True
+6,08-05,Lunch,tomato,False
+6,08-05,Lunch,wheat,False
+6,08-06,Breakfast,banana,True
+6,08-06,Dinner,beef,True
+6,08-06,Dinner,scallion,False
+6,08-06,Dinner,sweet potato,True
+6,08-06,Dinner,wheat,True
+6,08-06,Lunch,beef,True
+6,08-06,Lunch,carrot,True
+6,08-06,Lunch,cream,False
+6,08-06,Lunch,garlic,False
+6,08-06,Lunch,rice,False
+6,08-06,Lunch,sesame,False
+6,08-06,Lunch,spinach,True
+6,08-06,Lunch,tomato,True
+6,08-06,Lunch,wheat,True
+6,08-07,Breakfast,banana,True
+6,08-07,Dinner,cow milk,True
+6,08-07,Dinner,pork,True
+6,08-07,Dinner,wheat,False
+6,08-07,Lunch,cheese,False
+6,08-07,Lunch,chili pepper,False
+6,08-07,Lunch,garlic,False
+6,08-07,Lunch,onion,False
+6,08-07,Lunch,rice,False
+6,08-07,Lunch,sesame,False
+6,08-07,Lunch,tomato,False
+6,08-07,Lunch,wheat,False
+6,08-08,Dinner,beef,True
+6,08-08,Dinner,chili pepper,False
+6,08-08,Dinner,garlic,True
+6,08-08,Dinner,lamb,True
+6,08-08,Dinner,onion,False
+6,08-08,Dinner,pea,True
+6,08-08,Dinner,scallion,False
+6,08-08,Lunch,cheese,True
+6,08-08,Lunch,chicken,True
+6,08-08,Lunch,cow milk,False
+6,08-08,Lunch,green bean,True
+6,08-08,Lunch,rice,False
+6,08-08,Lunch,sesame,False
+6,08-08,Lunch,tomato,False
+6,08-08,Lunch,tuna,True
+6,08-08,Lunch,wheat,False
+6,08-09,Dinner,lemon,True
+6,08-09,Dinner,rice,True
+6,08-09,Dinner,tofu,True
+6,08-09,Lunch,bell pepper,True
+6,08-09,Lunch,carrot,True
+6,08-09,Lunch,cow milk,False
+6,08-09,Lunch,ginger,False
+6,08-09,Lunch,green bean,True
+6,08-09,Lunch,mango,True
+6,08-09,Lunch,onion,True
+6,08-09,Lunch,pork,True
+6,08-09,Lunch,watermelon,True
+6,08-09,Lunch,yogurt,True
+6,08-10,Breakfast,banana,True
+6,08-10,Dinner,beef,False
+6,08-10,Dinner,cucumber,False
+6,08-10,Dinner,lamb,False
+6,08-10,Dinner,onion,False
+6,08-10,Dinner,rice,False
+6,08-10,Dinner,tomato,False
+6,08-10,Dinner,yogurt,False
+6,08-10,Lunch,beef,True
+6,08-10,Lunch,ginger,False
+6,08-10,Lunch,onion,False
+6,08-10,Lunch,rice,True
+6,08-10,not recorded,cacao,True
+6,08-10,not recorded,ice cream,True
+6,08-11,Dinner,beef,True
+6,08-11,Dinner,cabbage,True
+6,08-11,Dinner,rice,True
+6,08-11,Dinner,sweet potato,True
+6,08-11,Lunch,cabbage,False
+6,08-11,Lunch,garlic,True
+6,08-11,Lunch,onion,False
+6,08-11,Lunch,wheat,False
+6,08-12,Dinner,broccoli,False
+6,08-12,Dinner,green bean,True
+6,08-12,Dinner,pork,True
+6,08-12,Dinner,rice,True
+6,08-12,Lunch,corn,True
+6,08-12,Lunch,cow milk,False
+6,08-12,Lunch,garlic,False
+6,08-12,Lunch,mango,True
+6,08-12,Lunch,pork,True
+6,08-12,Lunch,rice,True
+6,08-12,Lunch,tuna,True
+6,08-12,Lunch,wheat,False
+7,08-04,not recorded,cashew,True
+7,08-04,not recorded,corn,False
+7,08-04,not recorded,cow milk,True
+7,08-04,not recorded,lentil,True
+7,08-04,not recorded,mango,True
+7,08-04,not recorded,oat,True
+7,08-04,not recorded,pork,False
+7,08-04,not recorded,potato,True
+7,08-04,not recorded,tomato,True
+7,08-05,not recorded,avocado,True
+7,08-05,not recorded,banana,True
+7,08-05,not recorded,cacao,True
+7,08-05,not recorded,cheese,True
+7,08-05,not recorded,chicken,True
+7,08-05,not recorded,corn,True
+7,08-05,not recorded,cow milk,True
+7,08-05,not recorded,onion,False
+7,08-05,not recorded,pistachio,True
+7,08-05,not recorded,pork,True
+7,08-05,not recorded,rice,True
+7,08-05,not recorded,sesame,False
+7,08-05,not recorded,tomato,True
+7,08-05,not recorded,wheat,False
+7,08-06,not recorded,beef,True
+7,08-06,not recorded,cheese,False
+7,08-06,not recorded,cow milk,False
+7,08-06,not recorded,lamb,True
+7,08-06,not recorded,lentil,True
+7,08-06,not recorded,onion,False
+7,08-06,not recorded,rice,False
+7,08-06,not recorded,tomato,False
+7,08-06,not recorded,wheat,False
+7,08-06,not recorded,yogurt,False
+7,08-07,not recorded,broccoli,True
+7,08-07,not recorded,pork,True
+7,08-07,not recorded,rice,True
+7,08-07,not recorded,sesame,True
+7,08-07,not recorded,tofu,True
+7,08-07,not recorded,tuna,True
+7,08-08,not recorded,beef,True
+7,08-08,not recorded,cheese,False
+7,08-08,not recorded,chicken,True
+7,08-08,not recorded,oat,True
+7,08-08,not recorded,potato,True
+7,08-08,not recorded,spinach,True
+7,08-08,not recorded,tomato,True
+7,08-08,not recorded,wheat,False
+7,08-09,not recorded,rice,True
+7,08-10,not recorded,cacao,True
+7,08-10,not recorded,chicken,False
+7,08-10,not recorded,wheat,False
+7,08-10,not recorded,yogurt,True
+7,08-11,not recorded,cheese,True
+7,08-11,not recorded,corn,True
+7,08-11,not recorded,ice cream,True
+7,08-11,not recorded,spinach,True
+7,08-11,not recorded,tuna,True
+7,08-11,not recorded,wheat,False
+7,08-12,not recorded,apple,True
+7,08-12,not recorded,cacao,True
+7,08-12,not recorded,corn,True
+7,08-12,not recorded,cow milk,True
+7,08-12,not recorded,peanut,True
+7,08-12,not recorded,spinach,True
+7,08-12,not recorded,tuna,True
+7,08-12,not recorded,wheat,False
+8,08-03,Breakfast,cow milk,True
+8,08-03,Breakfast,wheat,False
+8,08-03,Dinner,cow milk,False
+8,08-03,Dinner,wheat,False
+8,08-03,Lunch,rice,True
+8,08-03,Lunch,salmon,True
+8,08-04,Breakfast,cow milk,True
+8,08-04,Breakfast,wheat,False
+8,08-04,Dinner,rice,True
+8,08-04,Dinner,salmon,True
+8,08-04,Lunch,potato,True
+8,08-05,Breakfast,banana,True
+8,08-05,Breakfast,cow milk,True
+8,08-05,Breakfast,peanut,True
+8,08-05,Breakfast,wheat,False
+8,08-05,Dinner,rice,True
+8,08-05,Dinner,tofu,True
+8,08-05,Lunch,chili pepper,False
+8,08-05,Lunch,rice,False
+8,08-05,Lunch,tofu,True
+8,08-06,Breakfast,cow milk,True
+8,08-06,Breakfast,wheat,False
+8,08-06,Dinner,edamame,True
+8,08-06,Dinner,tomato,True
+8,08-06,Dinner,watermelon,True
+8,08-06,Lunch,rice,True
+8,08-07,Breakfast,cow milk,True
+8,08-07,Breakfast,peanut,True
+8,08-07,Breakfast,wheat,False
+8,08-07,Dinner,chickpea,True
+8,08-07,Dinner,tomato,True
+8,08-07,Dinner,watermelon,True
+8,08-07,Lunch,chicken,True
+8,08-07,Lunch,wheat,False
+8,08-08,Breakfast,cow milk,True
+8,08-08,Breakfast,wheat,False
+8,08-08,Dinner,edamame,True
+8,08-08,Dinner,lettuce,False
+8,08-08,Lunch,banana,True
+8,08-08,Lunch,potato,False
+8,08-09,Breakfast,cow milk,True
+8,08-09,Breakfast,peanut,True
+8,08-09,Breakfast,wheat,False
+8,08-09,Dinner,peanut,False
+8,08-09,Dinner,rice,False
+8,08-09,Lunch,beef,True
+8,08-09,Lunch,cheese,True
+8,08-09,Lunch,potato,True
+8,08-09,Lunch,wheat,False
+8,08-10,Breakfast,banana,True
+8,08-10,Breakfast,cow milk,True
+8,08-10,Breakfast,wheat,False
+8,08-10,Dinner,chicken,True
+8,08-10,Dinner,cucumber,True
+8,08-10,Dinner,rice,True
+8,08-10,Dinner,wheat,False
+8,08-10,Lunch,lettuce,False
+8,08-10,Lunch,rice,True
+8,08-10,Lunch,salmon,True
+8,08-11,Breakfast,cow milk,True
+8,08-11,Breakfast,peanut,True
+8,08-11,Breakfast,wheat,False
+8,08-11,Dinner,edamame,True
+8,08-11,Dinner,rice,True
+8,08-12,Breakfast,cow milk,True
+8,08-12,Breakfast,wheat,False
+8,08-12,Dinner,cauliflower,True
+8,08-12,Dinner,rice,True
+8,08-12,Dinner,salmon,True
+8,08-12,Lunch,cauliflower,True
+8,08-12,Lunch,rice,True
+9,08-03,Breakfast,basil,True
+9,08-03,Breakfast,cabbage,True
+9,08-03,Breakfast,carrot,True
+9,08-03,Breakfast,cheese,True
+9,08-03,Breakfast,tomato,True
+9,08-03,Breakfast,wheat,False
+9,08-03,Dinner,bok choy,True
+9,08-03,Dinner,chicken,True
+9,08-03,Dinner,rice,True
+9,08-03,not recorded,pea,True
+9,08-04,Dinner,chicken,True
+9,08-04,Dinner,green bean,True
+9,08-04,Dinner,rice,True
+9,08-04,Lunch,cabbage,True
+9,08-04,Lunch,rice,True
+9,08-04,Lunch,tomato,True
+9,08-04,not recorded,peach,True
+9,08-04,not recorded,yogurt,True
+9,08-05,Breakfast,avocado,True
+9,08-05,Breakfast,tomato,True
+9,08-05,Breakfast,wheat,False
+9,08-05,Dinner,cabbage,True
+9,08-05,Dinner,chicken,True
+9,08-05,Dinner,green bean,True
+9,08-05,Dinner,rice,True
+9,08-05,Dinner,tofu,True
+9,08-05,Lunch,chicken,True
+9,08-05,Lunch,green bean,True
+9,08-05,Lunch,rice,True
+9,08-05,not recorded,pea,True
+9,08-06,Breakfast,avocado,True
+9,08-06,Breakfast,tomato,True
+9,08-06,Breakfast,wheat,False
+9,08-06,Dinner,cucumber,True
+9,08-06,Dinner,tofu,True
+9,08-06,Dinner,tomato,True
+9,08-06,Dinner,wheat,True
+9,08-06,Lunch,chicken,True
+9,08-06,Lunch,green bean,True
+9,08-06,Lunch,peach,True
+9,08-06,Lunch,rice,True
+9,08-06,not recorded,pea,True
+9,08-07,Breakfast,cheese,True
+9,08-07,Breakfast,tomato,True
+9,08-07,Breakfast,wheat,False
+9,08-07,Dinner,cabbage,True
+9,08-07,Dinner,chicken,True
+9,08-07,Dinner,kimchi,True
+9,08-07,Dinner,rice,True
+9,08-07,Dinner,tofu,True
+9,08-07,Lunch,chicken,True
+9,08-07,Lunch,green bean,True
+9,08-07,Lunch,peach,True
+9,08-07,Lunch,rice,True
+9,08-07,not recorded,watermelon,True
+9,08-07,not recorded,wheat,True
+9,08-08,Dinner,cabbage,True
+9,08-08,Dinner,cheese,False
+9,08-08,Dinner,chicken,True
+9,08-08,Dinner,tomato,False
+9,08-08,Dinner,wheat,False
+9,08-08,Lunch,chicken,True
+9,08-08,Lunch,chili pepper,True
+9,08-08,Lunch,cucumber,False
+9,08-08,Lunch,sweet potato,False
+9,08-08,not recorded,cheese,True
+9,08-08,not recorded,cow milk,False
+9,08-08,not recorded,mango,True
+9,08-08,not recorded,wheat,False
+9,08-09,Dinner,beef,True
+9,08-09,Dinner,cabbage,True
+9,08-09,Dinner,kimchi,True
+9,08-09,Dinner,tofu,True
+9,08-09,Lunch,cabbage,True
+9,08-09,Lunch,chicken,True
+9,08-09,Lunch,peach,True
+9,08-09,Lunch,rice,True
+9,08-09,not recorded,cacao,True
+9,08-09,not recorded,ice cream,True
+9,08-09,not recorded,watermelon,True
+9,08-09,not recorded,wheat,False
+9,08-10,Breakfast,wheat,False
+9,08-10,Dinner,cabbage,True
+9,08-10,Dinner,kimchi,True
+9,08-10,Dinner,rice,True
+9,08-10,Dinner,tofu,True
+9,08-10,Lunch,beef,True
+9,08-10,Lunch,bok choy,True
+9,08-10,Lunch,rice,True
+9,08-10,Lunch,tomato,True
+9,08-10,not recorded,beef,True
+9,08-11,Breakfast,avocado,True
+9,08-11,Breakfast,wheat,False
+9,08-11,Dinner,cabbage,True
+9,08-11,Dinner,kimchi,True
+9,08-11,Dinner,rice,True
+9,08-11,Dinner,tofu,True
+9,08-11,Lunch,apple,True
+9,08-11,Lunch,beef,True
+9,08-11,Lunch,bok choy,True
+9,08-11,Lunch,rice,True
+9,08-11,Lunch,tomato,True
+10,08-03,not recorded,chicken,True
+10,08-03,not recorded,potato,True
+10,08-03,not recorded,wheat,False
+10,08-03,not recorded,yogurt,True
+10,08-04,not recorded,chicken,True
+10,08-04,not recorded,chili pepper,False
+10,08-04,not recorded,rice,False
+10,08-05,not recorded,chicken,True
+10,08-05,not recorded,mango,True
+10,08-05,not recorded,onion,True
+10,08-05,not recorded,rice,True
+10,08-06,not recorded,chicken,False
+10,08-06,not recorded,chili pepper,False
+10,08-06,not recorded,mango,True
+10,08-06,not recorded,rice,True
+10,08-06,not recorded,yogurt,False
+12,08-10,not recorded,banana,True
+12,08-10,not recorded,cheese,True
+12,08-10,not recorded,corn,True
+12,08-10,not recorded,cow milk,False
+12,08-10,not recorded,tofu,True
+12,08-10,not recorded,wheat,False
+12,08-11,not recorded,avocado,True
+12,08-11,not recorded,cheese,True
+12,08-11,not recorded,cow milk,False
+12,08-11,not recorded,orange,True
+12,08-11,not recorded,tofu,True
+12,08-11,not recorded,wheat,False
+12,08-12,Breakfast,avocado,True
+12,08-12,Breakfast,blueberry,True
+12,08-12,Breakfast,cow milk,False
+12,08-12,Breakfast,peach,True
+12,08-12,Breakfast,wheat,False
+12,08-12,Dinner,bok choy,True
+12,08-12,Dinner,chicken,True
+12,08-12,Dinner,orange,True
+12,08-12,Dinner,potato,True
+12,08-12,Lunch,beef,True
+12,08-12,Lunch,cheese,False
+12,08-12,Lunch,rice,False
+12,08-12,Lunch,wheat,False
+12,08-13,Breakfast,cow milk,True
+12,08-13,Breakfast,rice,True
+12,08-13,Breakfast,yogurt,True
+12,08-13,Dinner,banana,True
+12,08-13,Dinner,cacao,True
+12,08-13,Dinner,chicken,False
+12,08-13,Dinner,garlic,True
+12,08-13,Dinner,lemon,True
+12,08-13,Dinner,orange,True
+12,08-13,Dinner,potato,True
+12,08-13,Dinner,rice,True
+12,08-13,Dinner,wheat,False
+12,08-13,Lunch,bok choy,True
+12,08-13,Lunch,chicken,False
+12,08-13,Lunch,garlic,True
+12,08-13,Lunch,potato,True
+12,08-13,Lunch,rice,True
+12,08-14,not recorded,bok choy,True
+12,08-14,not recorded,cheese,True
+12,08-14,not recorded,chicken,True
+12,08-14,not recorded,cow milk,True
+12,08-14,not recorded,kimchi,True
+12,08-14,not recorded,orange,True
+12,08-14,not recorded,potato,True
+12,08-14,not recorded,rice,True
+12,08-14,not recorded,yogurt,True
+12,08-15,not recorded,banana,True
+12,08-15,not recorded,chicken,True
+12,08-15,not recorded,mango,True
+12,08-15,not recorded,rice,False
+12,08-15,not recorded,wheat,False
+12,08-15,not recorded,yogurt,True
+12,08-16,not recorded,banana,True
+12,08-16,not recorded,chicken,True
+12,08-16,not recorded,corn,False
+12,08-16,not recorded,rice,True
+12,08-16,not recorded,wheat,False
+12,08-17,Breakfast,apple,True
+12,08-17,Breakfast,chicken,True
+12,08-17,Breakfast,wheat,False
+12,08-17,Dinner,cheese,False
+12,08-17,Dinner,mango,True
+12,08-17,Dinner,wheat,False
+12,08-17,Lunch,avocado,False
+12,08-17,Lunch,cucumber,False
+12,08-17,Lunch,rice,True
+12,08-18,not recorded,avocado,True
+12,08-18,not recorded,cheese,True
+12,08-18,not recorded,cow milk,True
+12,08-18,not recorded,pork,False
+12,08-18,not recorded,wheat,False
+13,08-11,Breakfast,salmon,True
+13,08-11,Dinner,cheese,True
+13,08-11,Dinner,chicken,True
+13,08-11,Dinner,cream,False
+13,08-11,Dinner,cucumber,True
+13,08-11,Dinner,tomato,True
+13,08-11,Dinner,wheat,False
+13,08-11,Lunch,broccoli,True
+13,08-11,Lunch,cauliflower,True
+13,08-11,Lunch,cheese,True
+13,08-11,Lunch,chicken,True
+13,08-11,Lunch,cream,False
+13,08-11,Lunch,green bean,True
+13,08-11,Lunch,lettuce,False
+13,08-11,Lunch,tofu,True
+13,08-11,Lunch,tomato,True
+13,08-11,Lunch,tuna,True
+13,08-11,not recorded,cacao,True
+13,08-11,not recorded,wheat,False
+13,08-12,not recorded,cabbage,True
+13,08-12,not recorded,cacao,True
+13,08-12,not recorded,chicken,True
+13,08-12,not recorded,chili pepper,False
+13,08-12,not recorded,cow milk,False
+13,08-12,not recorded,cucumber,True
+13,08-12,not recorded,edamame,True
+13,08-12,not recorded,kale,True
+13,08-12,not recorded,lettuce,False
+13,08-12,not recorded,rice,True
+13,08-12,not recorded,salmon,True
+13,08-12,not recorded,tofu,True
+13,08-12,not recorded,tomato,True
+13,08-12,not recorded,tuna,True
+13,08-12,not recorded,wheat,False
+13,08-12,not recorded,yogurt,True
+13,08-13,not recorded,basil,True
+13,08-13,not recorded,bell pepper,True
+13,08-13,not recorded,cacao,True
+13,08-13,not recorded,cheese,True
+13,08-13,not recorded,cow milk,False
+13,08-13,not recorded,ice cream,True
+13,08-13,not recorded,lettuce,True
+13,08-13,not recorded,salmon,True
+13,08-13,not recorded,tomato,True
+13,08-13,not recorded,wheat,False
+13,08-14,not recorded,cheese,False
+13,08-14,not recorded,chicken,True
+13,08-14,not recorded,cucumber,True
+13,08-14,not recorded,edamame,True
+13,08-14,not recorded,feta,True
+13,08-14,not recorded,oat,True
+13,08-14,not recorded,tomato,True
+13,08-14,not recorded,tuna,True
+13,08-14,not recorded,watermelon,True
+13,08-14,not recorded,wheat,True
+13,08-15,not recorded,avocado,True
+13,08-15,not recorded,cacao,True
+13,08-15,not recorded,chicken,True
+13,08-15,not recorded,chili pepper,False
+13,08-15,not recorded,corn,True
+13,08-15,not recorded,lettuce,False
+13,08-15,not recorded,oat,True
+13,08-15,not recorded,onion,False
+13,08-15,not recorded,rice,True
+13,08-15,not recorded,tomato,False
+13,08-15,not recorded,wheat,True
+13,08-16,not recorded,beef,True
+13,08-16,not recorded,carrot,True
+13,08-16,not recorded,cheese,True
+13,08-16,not recorded,chicken,True
+13,08-16,not recorded,lamb,True
+13,08-16,not recorded,pork,True
+13,08-16,not recorded,watermelon,True
+13,08-16,not recorded,wheat,False
+13,08-17,not recorded,beef,True
+13,08-17,not recorded,cheese,False
+13,08-17,not recorded,chicken,True
+13,08-17,not recorded,cream,True
+13,08-17,not recorded,ice cream,True
+13,08-17,not recorded,pea,True
+13,08-17,not recorded,peanut,True
+13,08-17,not recorded,pork,True
+13,08-17,not recorded,sesame,True
+13,08-17,not recorded,tofu,True
+13,08-17,not recorded,wheat,False
+13,08-18,not recorded,beef,True
+13,08-18,not recorded,broccoli,True
+13,08-18,not recorded,cacao,True
+13,08-18,not recorded,cauliflower,True
+13,08-18,not recorded,cheese,True
+13,08-18,not recorded,chicken,True
+13,08-18,not recorded,cucumber,True
+13,08-18,not recorded,ice cream,True
+13,08-18,not recorded,lettuce,True
+13,08-18,not recorded,pistachio,True
+13,08-18,not recorded,potato,True
+13,08-18,not recorded,scallion,True
+13,08-18,not recorded,tomato,True
+13,08-18,not recorded,wheat,True
+14,08-10,not recorded,beef,True
+14,08-10,not recorded,cacao,True
+14,08-10,not recorded,chili pepper,False
+14,08-10,not recorded,rice,True
+14,08-10,not recorded,tofu,True
+14,08-10,not recorded,tomato,True
+14,08-10,not recorded,wheat,True
+14,08-10,not recorded,yam,True
+14,08-11,not recorded,cacao,True
+14,08-11,not recorded,chicken,True
+14,08-11,not recorded,corn,True
+14,08-11,not recorded,edamame,True
+14,08-11,not recorded,lettuce,True
+14,08-11,not recorded,pork,True
+14,08-11,not recorded,rice,True
+14,08-11,not recorded,tomato,True
+14,08-11,not recorded,wheat,False
+14,08-12,not recorded,beef,True
+14,08-12,not recorded,bell pepper,True
+14,08-12,not recorded,cacao,True
+14,08-12,not recorded,cauliflower,True
+14,08-12,not recorded,chicken,True
+14,08-12,not recorded,green bean,True
+14,08-12,not recorded,lettuce,True
+14,08-12,not recorded,oat,False
+14,08-12,not recorded,onion,True
+14,08-12,not recorded,peanut,True
+14,08-12,not recorded,pork,True
+14,08-12,not recorded,rice,True
+14,08-12,not recorded,sweet potato,True
+14,08-12,not recorded,tofu,True
+14,08-12,not recorded,tomato,True
+14,08-12,not recorded,wheat,False
+14,08-12,not recorded,yam,True
+14,08-13,not recorded,beef,False
+14,08-13,not recorded,broccoli,True
+14,08-13,not recorded,carrot,True
+14,08-13,not recorded,chicken,True
+14,08-13,not recorded,cucumber,True
+14,08-13,not recorded,edamame,True
+14,08-13,not recorded,garlic,True
+14,08-13,not recorded,lettuce,True
+14,08-13,not recorded,pork,True
+14,08-13,not recorded,potato,True
+14,08-13,not recorded,rice,True
+14,08-13,not recorded,tomato,True
+14,08-13,not recorded,wheat,False
+14,08-14,not recorded,beef,False
+14,08-14,not recorded,blueberry,True
+14,08-14,not recorded,broccoli,True
+14,08-14,not recorded,carrot,True
+14,08-14,not recorded,cauliflower,True
+14,08-14,not recorded,cheese,False
+14,08-14,not recorded,chili pepper,True
+14,08-14,not recorded,cucumber,True
+14,08-14,not recorded,edamame,True
+14,08-14,not recorded,lettuce,True
+14,08-14,not recorded,pork,True
+14,08-14,not recorded,rice,True
+14,08-14,not recorded,tofu,True
+14,08-14,not recorded,tomato,True
+14,08-14,not recorded,wheat,False
+14,08-15,not recorded,apple,True
+14,08-15,not recorded,beef,True
+14,08-15,not recorded,cacao,True
+14,08-15,not recorded,chili pepper,True
+14,08-15,not recorded,pork,True
+14,08-15,not recorded,rice,True
+14,08-15,not recorded,wheat,False
+14,08-15,not recorded,yam,True
+14,08-16,not recorded,beef,True
+14,08-16,not recorded,bell pepper,True
+14,08-16,not recorded,carrot,True
+14,08-16,not recorded,cauliflower,True
+14,08-16,not recorded,cheese,True
+14,08-16,not recorded,edamame,True
+14,08-16,not recorded,onion,True
+14,08-16,not recorded,pork,True
+14,08-16,not recorded,rice,True
+14,08-16,not recorded,tofu,True
+14,08-16,not recorded,wheat,True
+14,08-17,not recorded,beef,True
+14,08-17,not recorded,bell pepper,True
+14,08-17,not recorded,onion,True
+14,08-17,not recorded,pork,True
+14,08-17,not recorded,rice,True
+15,08-11,not recorded,chicken,True
+15,08-11,not recorded,cow milk,True
+15,08-11,not recorded,lentil,True
+15,08-11,not recorded,oat,True
+15,08-11,not recorded,onion,True
+15,08-11,not recorded,rice,True
+15,08-11,not recorded,tomato,True
+15,08-12,not recorded,chicken,True
+15,08-12,not recorded,chickpea,True
+15,08-12,not recorded,cucumber,True
+15,08-12,not recorded,lamb,True
+15,08-12,not recorded,oat,True
+15,08-12,not recorded,rice,True
+15,08-12,not recorded,tomato,True
+15,08-13,not recorded,cabbage,True
+15,08-13,not recorded,chicken,True
+15,08-13,not recorded,oat,True
+15,08-13,not recorded,rice,True
+15,08-13,not recorded,tomato,True
+15,08-13,not recorded,wheat,False
+15,08-14,not recorded,cheese,True
+15,08-14,not recorded,chicken,True
+15,08-14,not recorded,lentil,True
+15,08-14,not recorded,oat,True
+15,08-14,not recorded,rice,True
+15,08-14,not recorded,wheat,False
+15,08-15,not recorded,cheese,True
+15,08-15,not recorded,chicken,True
+15,08-15,not recorded,corn,True
+15,08-15,not recorded,lettuce,True
+15,08-15,not recorded,oat,True
+15,08-15,not recorded,onion,True
+15,08-15,not recorded,rice,True
+15,08-15,not recorded,wheat,False
+15,08-16,not recorded,cheese,False
+15,08-16,not recorded,oat,True
+15,08-16,not recorded,rice,False
+15,08-16,not recorded,wheat,False
+15,08-17,not recorded,chicken,True
+15,08-17,not recorded,oat,True
+15,08-17,not recorded,pork,True
+15,08-17,not recorded,wheat,False
+15,08-18,not recorded,cabbage,True
+15,08-18,not recorded,chicken,True
+15,08-18,not recorded,lentil,True
+15,08-18,not recorded,oat,True
+15,08-18,not recorded,rice,True
+15,08-18,not recorded,tomato,True
+15,08-18,not recorded,wheat,False
+16,08-10,Breakfast,cow milk,True
+16,08-10,Breakfast,pork,True
+16,08-10,Breakfast,wheat,True
+16,08-10,Dinner,cow milk,False
+16,08-10,Dinner,lettuce,True
+16,08-10,Dinner,orange,True
+16,08-10,Dinner,pork,True
+16,08-10,Dinner,potato,True
+16,08-10,Lunch,chicken,True
+16,08-11,Breakfast,corn,True
+16,08-11,Breakfast,cow milk,True
+16,08-11,Breakfast,oat,True
+16,08-11,Dinner,cauliflower,True
+16,08-11,Dinner,chicken,True
+16,08-11,Dinner,chickpea,True
+16,08-11,Dinner,lettuce,False
+16,08-11,Lunch,beef,False
+16,08-11,Lunch,bok choy,True
+16,08-11,Lunch,cabbage,True
+16,08-11,Lunch,pork,True
+16,08-12,Breakfast,cow milk,True
+16,08-12,Breakfast,wheat,False
+16,08-12,Dinner,beef,True
+16,08-12,Dinner,broccoli,True
+16,08-12,Dinner,green bean,True
+16,08-12,Dinner,tomato,True
+16,08-12,Lunch,rice,False
+16,08-13,Breakfast,pork,False
+16,08-13,Breakfast,rice,False
+16,08-13,Breakfast,wheat,False
+16,08-13,Dinner,corn,True
+16,08-13,Dinner,pea,True
+16,08-13,Dinner,potato,True
+16,08-13,Lunch,rice,False
+16,08-13,Lunch,tofu,True
+16,08-14,Breakfast,pork,False
+16,08-14,Breakfast,wheat,False
+16,08-14,Dinner,kimchi,True
+16,08-14,Dinner,tofu,True
+16,08-14,Lunch,chicken,False
+16,08-15,Breakfast,rice,True
+16,08-15,Dinner,beef,True
+16,08-15,Lunch,beef,True
+16,08-15,Lunch,rice,True
+16,08-16,Breakfast,cow milk,True
+16,08-16,Breakfast,cream,True
+16,08-16,Breakfast,oat,True
+16,08-16,Breakfast,wheat,False
+16,08-16,Dinner,beef,True
+16,08-16,Dinner,bok choy,True
+16,08-16,Dinner,pork,True
+16,08-16,Lunch,beef,True
+16,08-16,Lunch,bok choy,True
+16,08-16,Lunch,tomato,True
+16,08-17,Breakfast,cow milk,True
+16,08-17,Breakfast,wheat,False
+16,08-17,Lunch,broccoli,True
+16,08-17,Lunch,carrot,True
+16,08-17,Lunch,potato,True
+16,08-17,Lunch,tofu,True
+16,08-18,Breakfast,cow milk,True
+16,08-18,Breakfast,pistachio,True
+16,08-18,Breakfast,wheat,False
+16,08-18,Dinner,beef,True
+16,08-18,Lunch,rice,False
+16,08-18,Lunch,salmon,True
+16,08-18,not recorded,blueberry,True
+16,08-19,Breakfast,cow milk,True
+16,08-19,Breakfast,rice,True
+16,08-19,Lunch,pork,False
+16,08-19,Lunch,tofu,True
+16,08-19,Lunch,wheat,False
+17,08-10,Breakfast,celery,True
+17,08-10,Breakfast,peanut,True
+17,08-10,Breakfast,potato,True
+17,08-10,Dinner,natto,True
+17,08-10,Dinner,rice,True
+17,08-10,Dinner,tofu,False
+17,08-10,Dinner,wheat,False
+17,08-10,Lunch,pork,False
+17,08-10,Lunch,rice,True
+17,08-11,Breakfast,cacao,True
+17,08-11,Dinner,bok choy,True
+17,08-11,Dinner,chicken,True
+17,08-11,Dinner,tofu,False
+17,08-11,Lunch,pork,False
+17,08-11,Lunch,rice,True
+17,08-11,Lunch,scallion,True
+17,08-11,not recorded,apple,True
+17,08-11,not recorded,wheat,False
+17,08-12,Dinner,bok choy,True
+17,08-12,Dinner,natto,True
+17,08-12,Dinner,rice,True
+17,08-12,Dinner,salmon,True
+17,08-12,Dinner,scallion,True
+17,08-12,Lunch,bok choy,True
+17,08-12,Lunch,chicken,True
+17,08-12,Lunch,rice,True
+17,08-12,not recorded,cheese,True
+17,08-12,not recorded,wheat,True
+17,08-13,not recorded,cacao,True
+17,08-13,not recorded,celery,True
+17,08-13,not recorded,chicken,True
+17,08-13,not recorded,pork,False
+17,08-13,not recorded,rice,True
+17,08-13,not recorded,tofu,False
+17,08-14,not recorded,beef,True
+17,08-14,not recorded,chicken,True
+17,08-14,not recorded,pork,True
+17,08-14,not recorded,rice,True
+17,08-14,not recorded,wheat,False
+17,08-15,not recorded,beef,True
+17,08-15,not recorded,celery,True
+17,08-15,not recorded,cheese,True
+17,08-15,not recorded,chicken,True
+17,08-15,not recorded,cucumber,True
+17,08-15,not recorded,lamb,True
+17,08-15,not recorded,natto,True
+17,08-15,not recorded,oat,True
+17,08-15,not recorded,peanut,True
+17,08-15,not recorded,pork,False
+17,08-15,not recorded,rice,True
+17,08-15,not recorded,tomato,True
+17,08-15,not recorded,wheat,True
+17,08-16,not recorded,broccoli,True
+17,08-16,not recorded,cacao,True
+17,08-16,not recorded,celery,True
+17,08-16,not recorded,chicken,True
+17,08-16,not recorded,ice cream,True
+17,08-16,not recorded,mango,True
+17,08-16,not recorded,pork,False
+17,08-16,not recorded,rice,True
+17,08-16,not recorded,tofu,False
+17,08-16,not recorded,wheat,False
+18,08-10,not recorded,avocado,True
+18,08-10,not recorded,broccoli,True
+18,08-10,not recorded,cacao,True
+18,08-10,not recorded,celery,True
+18,08-10,not recorded,cheese,False
+18,08-10,not recorded,chicken,True
+18,08-10,not recorded,kimchi,True
+18,08-10,not recorded,lettuce,True
+18,08-10,not recorded,natto,True
+18,08-10,not recorded,potato,True
+18,08-10,not recorded,rice,True
+18,08-10,not recorded,wheat,False
+18,08-11,not recorded,avocado,True
+18,08-11,not recorded,beef,True
+18,08-11,not recorded,carrot,True
+18,08-11,not recorded,chicken,True
+18,08-11,not recorded,cow milk,True
+18,08-11,not recorded,lettuce,True
+18,08-11,not recorded,natto,True
+18,08-11,not recorded,oat,True
+18,08-11,not recorded,onion,True
+18,08-11,not recorded,rice,True
+18,08-12,not recorded,broccoli,True
+18,08-12,not recorded,carrot,True
+18,08-12,not recorded,chicken,True
+18,08-12,not recorded,cow milk,True
+18,08-12,not recorded,kimchi,True
+18,08-12,not recorded,lettuce,True
+18,08-12,not recorded,natto,True
+18,08-12,not recorded,oat,True
+18,08-12,not recorded,onion,True
+18,08-12,not recorded,rice,True
+18,08-12,not recorded,salmon,True
+18,08-13,not recorded,avocado,True
+18,08-13,not recorded,cabbage,True
+18,08-13,not recorded,carrot,True
+18,08-13,not recorded,chicken,True
+18,08-13,not recorded,cow milk,True
+18,08-13,not recorded,kale,True
+18,08-13,not recorded,kimchi,True
+18,08-13,not recorded,natto,True
+18,08-13,not recorded,rice,True
+18,08-13,not recorded,tomato,True
+18,08-14,not recorded,avocado,True
+18,08-14,not recorded,beef,True
+18,08-14,not recorded,carrot,True
+18,08-14,not recorded,cow milk,True
+18,08-14,not recorded,kale,True
+18,08-14,not recorded,kimchi,True
+18,08-14,not recorded,onion,True
+18,08-14,not recorded,rice,True
+18,08-15,not recorded,avocado,True
+18,08-15,not recorded,beef,True
+18,08-15,not recorded,carrot,True
+18,08-15,not recorded,cow milk,True
+18,08-15,not recorded,kale,True
+18,08-15,not recorded,kimchi,True
+18,08-15,not recorded,natto,True
+18,08-15,not recorded,rice,True
+18,08-16,not recorded,beef,True
+18,08-16,not recorded,bok choy,True
+18,08-16,not recorded,cabbage,False
+18,08-16,not recorded,cacao,True
+18,08-16,not recorded,carrot,True
+18,08-16,not recorded,cow milk,True
+18,08-16,not recorded,onion,True
+18,08-16,not recorded,pork,True
+18,08-16,not recorded,rice,True
+18,08-16,not recorded,wheat,False
+18,08-17,not recorded,cabbage,True
+18,08-17,not recorded,cow milk,True
+18,08-17,not recorded,garlic,False
+18,08-17,not recorded,natto,True
+18,08-17,not recorded,pork,False
+18,08-17,not recorded,rice,True
+18,08-17,not recorded,scallion,False
+18,08-17,not recorded,wheat,True
+18,08-18,not recorded,broccoli,True
+18,08-18,not recorded,cabbage,True
+18,08-18,not recorded,carrot,True
+18,08-18,not recorded,kimchi,True
+18,08-18,not recorded,natto,True
+18,08-18,not recorded,pork,True
+18,08-18,not recorded,rice,True
+18,08-19,not recorded,avocado,True
+18,08-19,not recorded,beef,True
+18,08-19,not recorded,cabbage,True
+18,08-19,not recorded,carrot,True
+18,08-19,not recorded,cow milk,True
+18,08-19,not recorded,kimchi,True
+18,08-19,not recorded,natto,True
+18,08-19,not recorded,pork,False
+18,08-19,not recorded,rice,True
+18,08-19,not recorded,wheat,False
+19,08-10,not recorded,apple,True
+19,08-10,not recorded,yogurt,True
+19,08-11,not recorded,banana,True
+19,08-11,not recorded,carrot,False
+19,08-11,not recorded,celery,False
+19,08-11,not recorded,chicken,True
+19,08-11,not recorded,onion,False
+19,08-11,not recorded,tomato,True
+19,08-12,not recorded,apple,True
+19,08-12,not recorded,banana,True
+19,08-12,not recorded,chicken,True
+19,08-12,not recorded,cow milk,True
+19,08-12,not recorded,mango,True
+19,08-12,not recorded,sweet potato,True
+19,08-12,not recorded,tomato,True
+19,08-13,not recorded,cheese,True
+19,08-13,not recorded,mango,True
+19,08-13,not recorded,wheat,False
+19,08-14,not recorded,beef,True
+19,08-14,not recorded,cheese,True
+19,08-14,not recorded,cow milk,True
+19,08-14,not recorded,mango,True
+19,08-14,not recorded,salmon,True
+19,08-14,not recorded,wheat,False
+19,08-15,not recorded,carrot,False
+19,08-15,not recorded,celery,False
+19,08-15,not recorded,chicken,True
+19,08-15,not recorded,mango,True
+19,08-15,not recorded,onion,False
+19,08-16,not recorded,beef,True
+19,08-16,not recorded,cheese,True
+19,08-16,not recorded,cow milk,False
+19,08-16,not recorded,wheat,False
+19,08-17,not recorded,avocado,True
+19,08-17,not recorded,beef,True
+19,08-17,not recorded,chickpea,True
+19,08-17,not recorded,corn,True
+19,08-17,not recorded,sesame,True
+19,08-18,not recorded,peach,True
+19,08-18,not recorded,peanut,False
+19,08-18,not recorded,rice,True
+19,08-18,not recorded,salmon,True
+19,08-19,not recorded,chicken,True
+19,08-19,not recorded,cow milk,True
+19,08-19,not recorded,oat,False
+19,08-19,not recorded,peach,True
+19,08-19,not recorded,salmon,True
+19,08-19,not recorded,tuna,True
+20,08-10,not recorded,bok choy,True
+20,08-10,not recorded,cheese,True
+20,08-10,not recorded,cow milk,False
+20,08-10,not recorded,pistachio,True
+20,08-10,not recorded,rice,True
+20,08-10,not recorded,tofu,True
+20,08-10,not recorded,wheat,False
+20,08-11,not recorded,blueberry,True
+20,08-11,not recorded,cacao,True
+20,08-11,not recorded,green bean,True
+20,08-11,not recorded,oat,False
+20,08-11,not recorded,rice,True
+20,08-11,not recorded,tofu,True
+20,08-11,not recorded,yogurt,True
+20,08-12,not recorded,blueberry,True
+20,08-12,not recorded,cashew,True
+20,08-12,not recorded,green bean,True
+20,08-12,not recorded,rice,True
+20,08-12,not recorded,tofu,True
+20,08-12,not recorded,wheat,False
+20,08-12,not recorded,yogurt,True
+20,08-13,not recorded,banana,True
+20,08-13,not recorded,cabbage,False
+20,08-13,not recorded,cheese,True
+20,08-13,not recorded,mango,True
+20,08-13,not recorded,onion,False
+20,08-13,not recorded,rice,True
+20,08-13,not recorded,wheat,True
+20,08-13,not recorded,yogurt,True
+20,08-14,not recorded,blueberry,True
+20,08-14,not recorded,cow milk,True
+20,08-14,not recorded,rice,True
+20,08-14,not recorded,yogurt,True
+20,08-15,not recorded,cow milk,False
+20,08-15,not recorded,cream,False
+20,08-15,not recorded,ginger,False
+20,08-15,not recorded,mango,True
+20,08-15,not recorded,pistachio,False
+20,08-15,not recorded,rice,True
+20,08-15,not recorded,tomato,False
+20,08-15,not recorded,wheat,False
+20,08-16,not recorded,blueberry,True
+20,08-16,not recorded,cacao,True
+20,08-16,not recorded,cow milk,True
+20,08-16,not recorded,cream,False
+20,08-16,not recorded,rice,True
+20,08-16,not recorded,tomato,False
+20,08-16,not recorded,yogurt,True
+20,08-17,not recorded,cacao,True
+20,08-17,not recorded,cheese,True
+20,08-17,not recorded,cow milk,False
+20,08-17,not recorded,cream,False
+20,08-17,not recorded,feta,True
+20,08-17,not recorded,mango,True
+20,08-17,not recorded,pistachio,True
+20,08-17,not recorded,rice,True
+20,08-17,not recorded,tomato,True
+20,08-17,not recorded,wheat,False
+20,08-18,not recorded,cow milk,True
+20,08-18,not recorded,lentil,True
+20,08-18,not recorded,rice,True
+20,08-18,not recorded,spinach,True
+20,08-18,not recorded,wheat,False
+20,08-18,not recorded,yogurt,False
+20,08-19,not recorded,blueberry,True
+20,08-19,not recorded,cheese,True
+20,08-19,not recorded,green bean,True
+20,08-19,not recorded,oat,False
+20,08-19,not recorded,raspberry,True
+20,08-19,not recorded,rice,True
+20,08-19,not recorded,tofu,True
+20,08-19,not recorded,wheat,False
+20,08-19,not recorded,yogurt,True
+21,08-10,not recorded,beef,True
+21,08-10,not recorded,cabbage,False
+21,08-10,not recorded,carrot,False
+21,08-10,not recorded,cheese,False
+21,08-10,not recorded,cow milk,True
+21,08-10,not recorded,ginger,False
+21,08-10,not recorded,green bean,True
+21,08-10,not recorded,onion,False
+21,08-10,not recorded,pork,False
+21,08-10,not recorded,raspberry,True
+21,08-10,not recorded,rice,True
+21,08-10,not recorded,tomato,True
+21,08-10,not recorded,wheat,False
+21,08-11,not recorded,banana,False
+21,08-11,not recorded,cabbage,False
+21,08-11,not recorded,carrot,False
+21,08-11,not recorded,chicken,True
+21,08-11,not recorded,cow milk,True
+21,08-11,not recorded,cucumber,False
+21,08-11,not recorded,feta,False
+21,08-11,not recorded,green bean,True
+21,08-11,not recorded,lettuce,False
+21,08-11,not recorded,pork,False
+21,08-11,not recorded,rice,True
+21,08-11,not recorded,tomato,True
+21,08-12,not recorded,apple,True
+21,08-12,not recorded,cacao,True
+21,08-12,not recorded,chicken,True
+21,08-12,not recorded,cow milk,True
+21,08-12,not recorded,cucumber,False
+21,08-12,not recorded,feta,False
+21,08-12,not recorded,lettuce,False
+21,08-12,not recorded,pistachio,True
+21,08-12,not recorded,rice,True
+21,08-12,not recorded,sesame,False
+21,08-12,not recorded,tomato,True
+21,08-12,not recorded,wheat,False
+21,08-12,not recorded,yogurt,True
+21,08-13,not recorded,basil,False
+21,08-13,not recorded,beef,True
+21,08-13,not recorded,blueberry,True
+21,08-13,not recorded,cabbage,True
+21,08-13,not recorded,cacao,True
+21,08-13,not recorded,cheese,False
+21,08-13,not recorded,cow milk,True
+21,08-13,not recorded,cucumber,True
+21,08-13,not recorded,feta,True
+21,08-13,not recorded,garlic,False
+21,08-13,not recorded,lamb,True
+21,08-13,not recorded,lemon,True
+21,08-13,not recorded,onion,True
+21,08-13,not recorded,pork,False
+21,08-13,not recorded,rice,True
+21,08-13,not recorded,tomato,True
+21,08-13,not recorded,wheat,False
+21,08-13,not recorded,yogurt,True
+21,08-14,not recorded,basil,True
+21,08-14,not recorded,cabbage,True
+21,08-14,not recorded,cheese,False
+21,08-14,not recorded,cow milk,True
+21,08-14,not recorded,cucumber,True
+21,08-14,not recorded,garlic,False
+21,08-14,not recorded,onion,False
+21,08-14,not recorded,rice,True
+21,08-14,not recorded,tomato,True
+21,08-14,not recorded,wheat,False
+21,08-14,not recorded,yogurt,True
+21,08-15,not recorded,avocado,True
+21,08-15,not recorded,beef,True
+21,08-15,not recorded,bell pepper,True
+21,08-15,not recorded,cacao,True
+21,08-15,not recorded,chicken,True
+21,08-15,not recorded,chili pepper,True
+21,08-15,not recorded,corn,True
+21,08-15,not recorded,cow milk,True
+21,08-15,not recorded,cream,True
+21,08-15,not recorded,cucumber,True
+21,08-15,not recorded,feta,True
+21,08-15,not recorded,garlic,False
+21,08-15,not recorded,lamb,True
+21,08-15,not recorded,lettuce,True
+21,08-15,not recorded,onion,True
+21,08-15,not recorded,potato,True
+21,08-15,not recorded,rice,True
+21,08-15,not recorded,tomato,True
+21,08-15,not recorded,wheat,False
+21,08-15,not recorded,yogurt,True
+21,08-16,not recorded,basil,True
+21,08-16,not recorded,beef,True
+21,08-16,not recorded,bell pepper,True
+21,08-16,not recorded,bok choy,True
+21,08-16,not recorded,cauliflower,True
+21,08-16,not recorded,cheese,True
+21,08-16,not recorded,chicken,True
+21,08-16,not recorded,chili pepper,True
+21,08-16,not recorded,corn,True
+21,08-16,not recorded,cow milk,True
+21,08-16,not recorded,cream,False
+21,08-16,not recorded,cucumber,True
+21,08-16,not recorded,kimchi,True
+21,08-16,not recorded,lettuce,True
+21,08-16,not recorded,pork,False
+21,08-16,not recorded,rice,True
+21,08-16,not recorded,scallion,False
+21,08-16,not recorded,tofu,True
+21,08-16,not recorded,wheat,False
+21,08-17,not recorded,basil,True
+21,08-17,not recorded,beef,False
+21,08-17,not recorded,cheese,False
+21,08-17,not recorded,chili pepper,False
+21,08-17,not recorded,cow milk,True
+21,08-17,not recorded,cream,False
+21,08-17,not recorded,cucumber,True
+21,08-17,not recorded,ginger,False
+21,08-17,not recorded,kimchi,True
+21,08-17,not recorded,onion,False
+21,08-17,not recorded,rice,True
+21,08-17,not recorded,tomato,True
+21,08-17,not recorded,wheat,True

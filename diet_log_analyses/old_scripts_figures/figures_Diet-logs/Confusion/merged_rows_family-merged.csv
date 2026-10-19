@@ -1,0 +1,44 @@
+taxon,run,ingredients,n_ASVs,n_exact_species_ASVs
+Poaceae,plants,"wheat, rice, oat, glutinous rice, granola, wild rice",303,131
+Bovidae,meat,"cow milk, cheese, beef, yogurt, ice cream, cream, lamb, feta, paneer, cream cheese, goat cheese, veal",156,156
+Phasianidae,meat,"chicken, turkey",227,227
+Solanaceae,plants,"tomato, potato, chili pepper, kimchi, bell pepper, eggplant",47,9
+Sus scrofa,meat,pork,78,78
+Malvaceae,plants,"cacao, okra",86,12
+Fabaceae,plants,"tofu, peanut, green bean, edamame, natto, chickpea, lentil, pea, black bean, black soybean, soybean, mung bean, bean sprouts, tofu skin, urad dal, black-eyed pea, red bean",370,264
+Allium,plants,"onion, garlic, kimchi, scallion, leek",109,24
+Asteraceae,plants,"lettuce, artichoke",58,9
+Brassicaceae,plants,"cabbage, broccoli, kimchi, bok choy, cauliflower, kale, daikon, mustard, napa cabbage, radish, broccoli rabe, brussels sprouts",107,45
+Apiaceae,plants,"carrot, celery",73,73
+Persea americana,plants,avocado,54,2
+Vaccinium,plants,"blueberry, cranberry",17,0
+Anacardiaceae,plants,"mango, pistachio, cashew",84,65
+Musa,plants,"banana, plantain",55,19
+Amaranthaceae,plants,"spinach, quinoa, beet",76,32
+Salmo salar,meat,salmon,13,13
+Sesamum,plants,sesame,11,0
+Rosaceae,plants,"raspberry, peach, almond, plum, asian pear, cherry, blackberry",134,0
+Citrus,plants,"lemon, orange, grapefruit, lime, mandarin",13,3
+Thunnus,meat,tuna,2,0
+Dioscorea,plants,yam,1,0
+Ipomoea,plants,sweet potato,4,0
+Lamiaceae,plants,"basil, chia",24,6
+Ananas comosus,plants,pineapple,4,4
+Vitis,plants,"grape, raisin",22,0
+Anas platyrhynchos,meat,duck,9,6
+Ficus carica,plants,fig,6,2
+Actinidia,plants,kiwi,5,0
+Juglandaceae,plants,"pecan, walnut",19,1
+Pinus,plants,pine nut,23,0
+Manihot,plants,cassava,1,0
+Psidium guajava,plants,guava,1,1
+Asparagus,plants,asparagus,4,0
+Fagopyrum esculentum,plants,buckwheat,5,4
+Capparis spinosa,plants,caper,8,5
+Gadus,meat,cod,1,0
+Seriola,meat,hamachi,22,0
+Nelumbo,plants,lotus root,1,0
+Macadamia integrifolia,plants,macadamia,13,13
+Passiflora,plants,passionfruit,1,0
+Sebastes,meat,rockfish,1,0
+Anguilla,meat,unagi,10,0

@@ -1,0 +1,69 @@
+taxon,run,ingredients,n_ASVs,n_exact_species_ASVs
+Triticum aestivum,plants,wheat,132,103
+Oryza sativa,plants,"rice, glutinous rice",101,28
+Bos taurus,meat,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",139,139
+Gallus gallus,meat,chicken,206,206
+Solanum,plants,"tomato, potato, eggplant",16,9
+Sus scrofa,meat,pork,78,78
+Theobroma,plants,cacao,70,0
+Glycine max,plants,"tofu, edamame, natto, black soybean, soybean, tofu skin",159,159
+Allium,plants,"onion, garlic, kimchi, scallion, leek",109,24
+Lactuca sativa,plants,lettuce,57,9
+Brassica,plants,"cabbage, broccoli, kimchi, bok choy, cauliflower, kale, mustard, napa cabbage, broccoli rabe, brussels sprouts",106,45
+Daucus carota,plants,carrot,47,47
+Avena,plants,"oat, granola",69,0
+Arachis hypogaea,plants,peanut,48,48
+Persea americana,plants,avocado,54,2
+Vaccinium,plants,"blueberry, cranberry",17,0
+Capsicum,plants,"chili pepper, kimchi, bell pepper",31,0
+Phaseolus,plants,"green bean, black bean",32,0
+Mangifera indica,plants,mango,32,13
+Musa,plants,"banana, plantain",55,19
+Raphanus,plants,"kimchi, daikon, radish",1,0
+Spinacia,plants,spinach,2,0
+Salmo salar,meat,salmon,13,13
+Ovis aries,meat,"lamb, feta",16,16
+Sesamum,plants,sesame,11,0
+Rubus,plants,"raspberry, blackberry",41,0
+Citrus,plants,"lemon, orange, grapefruit, lime, mandarin",13,3
+Apium graveolens,plants,celery,26,26
+Cicer arietinum,plants,chickpea,14,14
+Lens culinaris,plants,lentil,20,20
+Pisum,plants,pea,39,0
+Thunnus,meat,tuna,2,0
+Dioscorea,plants,yam,1,0
+Pistacia vera,plants,pistachio,18,18
+Anacardium occidentale,plants,cashew,34,34
+Capra hircus,meat,"feta, goat cheese",1,1
+Prunus,plants,"peach, almond, plum, cherry",63,0
+Ipomoea,plants,sweet potato,4,0
+Ocimum basilicum,plants,basil,6,5
+Salvia hispanica,plants,chia,18,1
+Ananas comosus,plants,pineapple,4,4
+Vitis,plants,"grape, raisin",22,0
+Meleagris gallopavo,meat,turkey,21,21
+Cynara,plants,artichoke,1,0
+Pyrus,plants,asian pear,30,0
+Anas platyrhynchos,meat,duck,9,6
+Ficus carica,plants,fig,6,2
+Actinidia,plants,kiwi,5,0
+Vigna,plants,"mung bean, bean sprouts, urad dal, black-eyed pea, red bean",58,23
+Carya,plants,pecan,13,0
+Pinus,plants,pine nut,23,0
+Juglans regia,plants,walnut,6,1
+Manihot,plants,cassava,1,0
+Psidium guajava,plants,guava,1,1
+Abelmoschus esculentus,plants,okra,16,12
+Chenopodium,plants,quinoa,21,0
+Asparagus,plants,asparagus,4,0
+Beta vulgaris,plants,beet,53,32
+Fagopyrum esculentum,plants,buckwheat,5,4
+Capparis spinosa,plants,caper,8,5
+Gadus,meat,cod,1,0
+Seriola,meat,hamachi,22,0
+Nelumbo,plants,lotus root,1,0
+Macadamia integrifolia,plants,macadamia,13,13
+Passiflora,plants,passionfruit,1,0
+Sebastes,meat,rockfish,1,0
+Anguilla,meat,unagi,10,0
+Zizania,plants,wild rice,1,0

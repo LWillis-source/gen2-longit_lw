@@ -1,0 +1,61 @@
+ingredient,run,lexicon species,status,exact,unlabelled,fallback,whole_genus,compatible,reads,run labels for the genus,food taxon,days_logged
+wheat,plants,Triticum aestivum,exact species,103,29,0,0,132,7779183,aestivum (103),Triticum aestivum,132
+rice,plants,Oryza sativa,exact species,28,73,0,0,101,6739206,"sativa (28), glaberrima (3), rufipogon (2)",Oryza sativa,114
+tomato,plants,Solanum lycopersicum,exact species,9,7,0,0,16,1675708,"lycopersicum_subsp_var. (8), lycopersicum (1)",Solanum spp.,70
+cacao,plants,Theobroma cacao,"genus, unlabelled only",0,70,0,0,70,3522318,,Theobroma cacao,45
+tofu,plants,Glycine max,exact species,159,0,0,0,159,61217046,max (159),Glycine max,45
+onion,plants,Allium cepa,exact species,4,79,0,0,83,69431,"sativum (20), cepa (4), schoenoprasum (4), tuberosum (2)",Allium spp.,42
+lettuce,plants,Lactuca sativa,exact species,9,48,0,0,57,15839256,"sativa_subsp_var. (8), sativa (1)",Lactuca sativa,40
+cabbage,plants,Brassica oleracea var. capitata,exact species,13,61,0,0,74,7405946,"juncea_subsp_var. (31), oleracea_subsp_var. (11), napus (2), oleracea (2)",Brassica spp.,31
+carrot,plants,Daucus carota subsp. sativus,exact species,47,0,0,0,47,7035208,carota (47),Daucus carota,29
+oat,plants,Avena sativa,"genus, unlabelled only",0,69,0,0,69,3988875,,Avena sativa,28
+cucumber,plants,Cucumis sativus,genus not in run,0,0,0,0,0,0,,,27
+corn,plants,Zea mays,genus not in run,0,0,0,0,0,0,,,26
+potato,plants,Solanum tuberosum,"genus, congener fallback",0,0,16,0,16,1675708,"lycopersicum_subsp_var. (8), lycopersicum (1)",Solanum spp.,24
+peanut,plants,Arachis hypogaea,exact species,48,0,0,0,48,844071,hypogaea (48),Arachis hypogaea,22
+avocado,plants,Persea americana,exact species,2,52,0,0,54,5021480,americana_subsp_var. (2),Persea americana,20
+broccoli,plants,Brassica oleracea var. italica,exact species,13,61,0,0,74,7405946,"juncea_subsp_var. (31), oleracea_subsp_var. (11), napus (2), oleracea (2)",Brassica spp.,20
+garlic,plants,Allium sativum,exact species,20,79,0,0,99,497586,"sativum (20), cepa (4), schoenoprasum (4), tuberosum (2)",Allium spp.,20
+blueberry,plants,Vaccinium spp.,whole genus (no single species named),0,0,0,17,17,4583080,vitis-idaea (7),Vaccinium spp.,19
+apple,plants,Malus domestica,genus not in run,0,0,0,0,0,0,,,18
+chili pepper,plants,Capsicum annuum,"genus, congener fallback",0,0,31,0,31,4085429,baccatum_subsp_var. (29),Capsicum annuum,18
+green bean,plants,Phaseolus vulgaris,"genus, congener fallback",0,0,32,0,32,3032290,"coccineus (2), lunatus (2)",Phaseolus vulgaris,17
+mango,plants,Mangifera indica,exact species,13,19,0,0,32,2614054,"indica (13), foetida (1)",Mangifera indica,17
+banana,plants,Musa acuminata x balbisiana,whole genus (no single species named),0,0,0,55,55,4954944,acuminata_subsp_acuminata (19),Musa spp.,16
+kimchi,plants,Brassica rapa subsp. pekinensis; Raphanus sativus; Allium sativum; Zingiber officinale; Capsicum annuum; Allium fistulosum,exact species,21,141,140,0,203,7535983,"juncea_subsp_var. (31), oleracea_subsp_var. (11), napus (2), oleracea (2); sativum (20), cepa (4), schoenoprasum (4), tuberosum (2); baccatum_subsp_var. (29); sativum (20), cepa (4), schoenoprasum (4), tuberosum (2)","Capsicum annuum, Brassica spp., Raphanus sativus, Allium spp.",16
+spinach,plants,Spinacia oleracea,"genus, congener fallback",0,0,2,0,2,6387695,tetrandra (2),Spinacia oleracea,15
+scallion,plants,Allium fistulosum,"genus, congener fallback",0,0,109,0,109,3206695,"sativum (20), cepa (4), schoenoprasum (4), tuberosum (2)",Allium spp.,14
+bok choy,plants,Brassica rapa subsp. chinensis,exact species,1,61,0,0,62,117542,"juncea_subsp_var. (31), oleracea_subsp_var. (11), napus (2), oleracea (2)",Brassica spp.,13
+cauliflower,plants,Brassica oleracea var. botrytis,exact species,13,61,0,0,74,7405946,"juncea_subsp_var. (31), oleracea_subsp_var. (11), napus (2), oleracea (2)",Brassica spp.,12
+edamame,plants,Glycine max,exact species,159,0,0,0,159,61217046,max (159),Glycine max,12
+sesame,plants,Sesamum indicum,"genus, congener fallback",0,0,11,0,11,952220,alatum (11),Sesamum indicum,12
+natto,plants,Glycine max,exact species,159,0,0,0,159,61217046,max (159),Glycine max,11
+raspberry,plants,Rubus idaeus,"genus, congener fallback",0,0,41,0,41,3865560,amabilis (1),Rubus spp.,11
+kale,plants,Brassica oleracea var. sabellica,exact species,13,61,0,0,74,7405946,"juncea_subsp_var. (31), oleracea_subsp_var. (11), napus (2), oleracea (2)",Brassica spp.,10
+lemon,plants,Citrus limon,"genus, congener fallback",0,0,13,0,13,498215,"australis (4), reticulata (3)",Citrus spp.,10
+orange,plants,Citrus x sinensis,whole genus (no single species named),0,0,0,13,13,498215,"australis (4), reticulata (3)",Citrus spp.,10
+watermelon,plants,Citrullus lanatus,genus not in run,0,0,0,0,0,0,,,10
+celery,plants,Apium graveolens,exact species,26,0,0,0,26,914628,graveolens (26),Apium graveolens,9
+chickpea,plants,Cicer arietinum,exact species,14,0,0,0,14,292716,arietinum (14),Cicer arietinum,9
+lentil,plants,Lens culinaris,exact species,20,0,0,0,20,1266312,culinaris (20),Lens culinaris,9
+pea,plants,Pisum sativum,"genus, unlabelled only",0,39,0,0,39,3406548,,Pisum sativum,9
+bell pepper,plants,Capsicum annuum,"genus, congener fallback",0,0,31,0,31,4085429,baccatum_subsp_var. (29),Capsicum annuum,8
+ginger,plants,Zingiber officinale,genus not in run,0,0,0,0,0,0,,,8
+yam,plants,Dioscorea alata,"genus, unlabelled only",0,1,0,0,1,2742,,Dioscorea alata,8
+cashew,plants,Anacardium occidentale,exact species,34,0,0,0,34,1000133,occidentale (34),Anacardium occidentale,7
+peach,plants,Prunus persica,"genus, congener fallback",0,0,63,0,63,6082166,spinosa (5),Prunus spp.,7
+pistachio,plants,Pistacia vera,exact species,18,0,0,0,18,419585,vera (18),Pistacia vera,7
+sweet potato,plants,Ipomoea batatas,"genus, congener fallback",0,0,4,0,4,166127,alba (1),Ipomoea batatas,7
+basil,plants,Ocimum basilicum,exact species,5,1,0,0,6,1607447,basilicum (5),Ocimum basilicum,6
+coconut,plants,Cocos nucifera,genus not in run,0,0,0,0,0,0,,,6
+eggplant,plants,Solanum melongena,"genus, congener fallback",0,0,16,0,16,1675708,"lycopersicum_subsp_var. (8), lycopersicum (1)",Solanum spp.,6
+strawberry,plants,Fragaria x ananassa,genus not in run,0,0,0,0,0,0,,,6
+chia,plants,Salvia hispanica,exact species,1,17,0,0,18,8343380,"elegans (5), hispanica (1)",Salvia hispanica,5
+melon,plants,Cucumis melo,genus not in run,0,0,0,0,0,0,,,5
+olive,plants,Olea europaea,genus not in run,0,0,0,0,0,0,,,5
+pineapple,plants,Ananas comosus,exact species,4,0,0,0,4,44166,"comosus_subsp_var. (3), comosus (1)",Ananas comosus,5
+squash,plants,Cucurbita pepo,genus not in run,0,0,0,0,0,0,,,5
+zucchini,plants,Cucurbita pepo,genus not in run,0,0,0,0,0,0,,,5
+acai,plants,Euterpe oleracea,genus not in run,0,0,0,0,0,0,,,4
+almond,plants,Prunus dulcis,"genus, congener fallback",0,0,63,0,63,6082166,spinosa (5),Prunus spp.,4
+black bean,plants,Phaseolus vulgaris,"genus, congener fallback",0,0,32,0,32,3032290,"coccineus (2), lunatus (2)",Phaseolus vulgaris,4

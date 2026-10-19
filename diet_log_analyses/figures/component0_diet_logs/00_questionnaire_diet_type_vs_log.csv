@@ -1,0 +1,19 @@
+subject,reported_diet,ingredient,class,subject_days,days_stated,logged_days
+03,Vegetarian,yogurt,Mammalia,7,6,10
+03,Vegetarian,cow milk,Mammalia,5,1,10
+03,Vegetarian,egg,Aves,5,1,10
+03,Vegetarian,butter,Mammalia,3,0,10
+03,Vegetarian,cheese,Mammalia,2,2,10
+03,Vegetarian,feta,Mammalia,1,0,10
+03,Vegetarian,gelatin,Mammalia,1,0,10
+03,Vegetarian,ice cream,Mammalia,1,1,10
+03,Vegetarian,whey,Mammalia,1,0,10
+20,Vegetarian,yogurt,Mammalia,7,6,10
+20,Vegetarian,cow milk,Mammalia,6,3,10
+20,Vegetarian,cheese,Mammalia,4,4,10
+20,Vegetarian,paneer,Mammalia,4,4,10
+20,Vegetarian,cream,Mammalia,3,0,10
+20,Vegetarian,butter,Mammalia,2,1,10
+20,Vegetarian,egg,Aves,1,0,10
+20,Vegetarian,feta,Mammalia,1,1,10
+20,Vegetarian,gelatin,Mammalia,1,0,10

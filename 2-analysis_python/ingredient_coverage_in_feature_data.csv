@@ -1,0 +1,208 @@
+ing,entries,subject_days,subjects,days_stated,days_assumed_only,pct_of_167_days,excluded_from_plot,level,marker,sp
+wheat,286,132,19,20,112,79.0,False,species,trnL,Triticum aestivum
+rice,159,114,19,100,14,68.3,False,species,trnL,Oryza sativa
+egg,143,95,18,53,42,56.9,False,species,12SV5,Gallus gallus
+cow milk,88,81,15,49,32,48.5,False,species,12SV5,Bos taurus
+sugar,117,77,16,6,71,46.1,False,species,none,Saccharum officinarum; Beta vulgaris
+chicken,87,75,16,70,5,44.9,False,species,12SV5,Gallus gallus
+coffee,86,74,15,73,1,44.3,False,not found,trnL,Coffea arabica
+tomato,90,70,17,49,21,41.9,False,species,trnL,Solanum lycopersicum
+cheese,77,57,16,39,18,34.1,False,species,12SV5,Bos taurus
+butter,68,52,14,13,39,31.1,False,species,12SV5,Bos taurus
+vegetable oil,61,51,16,2,49,30.5,False,species,trnL,Glycine max; Brassica napus; Helianthus annuus
+beef,59,47,14,40,7,28.1,False,species,12SV5,Bos taurus
+pork,60,46,12,27,19,27.5,False,species,12SV5,Sus scrofa
+cacao,57,45,14,45,0,26.9,False,genus only,trnL,Theobroma cacao
+tofu,51,45,13,41,4,26.9,False,species,trnL,Glycine max
+onion,53,42,14,20,22,25.1,False,species,trnL,Allium cepa
+lettuce,42,40,11,22,18,24.0,False,species,trnL,Lactuca sativa
+yogurt,39,36,11,31,5,21.6,False,species,12SV5,Bos taurus
+soy sauce,40,32,15,14,18,19.2,False,species,trnL,Glycine max; Triticum aestivum
+cabbage,36,31,12,26,5,18.6,False,species,trnL,Brassica oleracea var. capitata
+carrot,30,29,12,21,8,17.4,False,species,trnL,Daucus carota subsp. sativus
+oat,29,28,11,17,11,16.8,False,genus only,trnL,Avena sativa
+cucumber,29,27,12,18,9,16.2,False,not found,trnL,Cucumis sativus
+corn,27,26,13,22,4,15.6,False,not found,trnL,Zea mays
+potato,27,24,14,22,2,14.4,False,genus only,trnL,Solanum tuberosum
+peanut,27,22,9,18,4,13.2,False,species,trnL,Arachis hypogaea
+oat milk,22,22,5,22,0,13.2,False,genus only,trnL,Avena sativa
+garlic,23,20,9,11,9,12.0,False,species,trnL,Allium sativum
+broccoli,21,20,10,19,1,12.0,False,species,trnL,Brassica oleracea var. italica
+shrimp,21,20,8,18,2,12.0,False,no species / marker none,,
+avocado,20,20,10,18,2,12.0,False,genus only,trnL,Persea americana
+blueberry,21,19,8,19,0,11.4,False,genus only,trnL,Vaccinium spp.
+chili pepper,22,18,9,8,10,10.8,False,genus only,trnL,Capsicum annuum
+apple,19,18,10,18,0,10.8,False,not found,trnL,Malus domestica
+tea,21,17,6,17,0,10.2,False,genus only,trnL,Camellia sinensis
+curry spices,18,17,8,4,13,10.2,False,species,trnL,Curcuma longa; Coriandrum sativum; Cuminum cyminum
+green bean,18,17,9,17,0,10.2,False,genus only,trnL,Phaseolus vulgaris
+mango,18,17,9,17,0,10.2,False,species,trnL,Mangifera indica
+honey,22,16,4,9,7,9.6,False,not found,none,Apis mellifera
+banana,16,16,8,15,1,9.6,False,genus only,trnL,Musa acuminata x balbisiana
+kimchi,16,16,6,16,0,9.6,False,species,trnL,Brassica rapa subsp. pekinensis; Raphanus sativus; Allium sativum; Zingiber officinale; Capsicum annuum; Allium fistulosum
+mushroom,17,15,9,11,4,9.0,False,not found,none,Agaricus bisporus
+spinach,16,15,6,14,1,9.0,False,genus only,trnL,Spinacia oleracea
+salmon,15,15,7,15,0,9.0,False,species,12SV5,Salmo salar
+scallion,15,14,7,9,5,8.4,False,genus only,trnL,Allium fistulosum
+bok choy,15,13,7,13,0,7.8,False,species,trnL,Brassica rapa subsp. chinensis
+ice cream,13,13,7,13,0,7.8,False,species,12SV5,Bos taurus
+cream,16,12,6,3,9,7.2,False,species,12SV5,Bos taurus
+cauliflower,14,12,9,12,0,7.2,False,species,trnL,Brassica oleracea var. botrytis
+edamame,12,12,5,12,0,7.2,False,species,trnL,Glycine max
+lamb,12,12,7,11,1,7.2,False,species,12SV5,Ovis aries
+sesame,12,12,8,5,7,7.2,False,genus only,trnL,Sesamum indicum
+natto,11,11,2,11,0,6.6,False,species,trnL,Glycine max
+raspberry,11,11,5,11,0,6.6,False,genus only,trnL,Rubus idaeus
+lemon,11,10,7,7,3,6.0,False,genus only,trnL,Citrus limon
+miso,11,10,6,10,0,6.0,False,species,trnL,Glycine max
+kale,10,10,5,10,0,6.0,False,species,trnL,Brassica oleracea var. sabellica
+orange,10,10,5,10,0,6.0,False,genus only,trnL,Citrus x sinensis
+watermelon,10,10,4,10,0,6.0,False,not found,trnL,Citrullus lanatus
+wine,10,10,2,10,0,6.0,False,genus only,trnL,Vitis vinifera
+olive oil,10,9,6,2,7,5.4,False,not found,trnL,Olea europaea
+celery,9,9,4,5,4,5.4,False,species,trnL,Apium graveolens
+chickpea,9,9,6,9,0,5.4,False,species,trnL,Cicer arietinum
+lentil,9,9,6,9,0,5.4,False,species,trnL,Lens culinaris
+pea,9,9,6,8,1,5.4,False,genus only,trnL,Pisum sativum
+tuna,9,9,4,9,0,5.4,False,genus only,12SV5,Thunnus spp.
+bell pepper,10,8,4,8,0,4.8,False,genus only,trnL,Capsicum annuum
+ginger,9,8,6,3,5,4.8,False,not found,trnL,Zingiber officinale
+nori,8,8,6,7,1,4.8,False,not found,none,Pyropia yezoensis
+whey,8,8,3,4,4,4.8,False,species,12SV5,Bos taurus
+yam,8,8,3,8,0,4.8,False,genus only,trnL,Dioscorea alata
+pistachio,8,7,5,6,1,4.2,False,species,trnL,Pistacia vera
+cashew,7,7,4,7,0,4.2,False,species,trnL,Anacardium occidentale
+cinnamon,7,7,3,5,2,4.2,False,not found,trnL,Cinnamomum spp.
+feta,7,7,4,4,3,4.2,False,species,12SV5,Ovis aries; Capra hircus
+peach,7,7,3,7,0,4.2,False,genus only,trnL,Prunus persica
+sweet potato,7,7,6,6,1,4.2,False,genus only,trnL,Ipomoea batatas
+basil,7,6,3,5,1,3.6,False,species,trnL,Ocimum basilicum
+coconut,7,6,5,5,1,3.6,False,not found,trnL,Cocos nucifera
+eggplant,6,6,4,6,0,3.6,False,genus only,trnL,Solanum melongena
+seaweed,6,6,3,1,5,3.6,False,not found,none,Undaria pinnatifida
+strawberry,6,6,5,6,0,3.6,False,not found,trnL,Fragaria x ananassa
+impossible meat,6,5,2,5,0,3.0,False,species,trnL,Glycine max; Cocos nucifera; Helianthus annuus; Solanum tuberosum
+melon,6,5,4,5,0,3.0,False,not found,trnL,Cucumis melo
+olive,6,5,3,2,3,3.0,False,not found,trnL,Olea europaea
+almond milk,5,5,2,5,0,3.0,False,genus only,trnL,Prunus dulcis
+anchovy,5,5,3,0,5,3.0,False,not found,12SV5,Engraulis spp.
+chia,5,5,4,5,0,3.0,False,species,trnL,Salvia hispanica
+octopus,5,5,4,5,0,3.0,False,not found,none,Octopus vulgaris
+pineapple,5,5,4,5,0,3.0,False,species,trnL,Ananas comosus
+spirits,5,5,1,4,1,3.0,False,no species / marker none,,
+squash,5,5,3,5,0,3.0,False,not found,trnL,Cucurbita pepo
+zucchini,5,5,3,5,0,3.0,False,not found,trnL,Cucurbita pepo
+almond,5,4,3,2,2,2.4,False,genus only,trnL,Prunus dulcis
+acai,4,4,2,4,0,2.4,False,not found,trnL,Euterpe oleracea
+black bean,4,4,3,3,1,2.4,False,genus only,trnL,Phaseolus vulgaris
+black soybean,4,4,2,4,0,2.4,False,species,trnL,Glycine max
+collagen,4,4,1,4,0,2.4,False,species,12SV5,Bos taurus
+glutinous rice,4,4,2,4,0,2.4,False,species,trnL,Oryza sativa
+grape,4,4,2,4,0,2.4,False,genus only,trnL,Vitis vinifera
+luffa,4,4,2,4,0,2.4,False,not found,trnL,Luffa aegyptiaca
+paneer,4,4,1,4,0,2.4,False,species,12SV5,Bos taurus
+pea protein,4,4,1,4,0,2.4,False,genus only,trnL,Pisum sativum
+plum,4,4,2,4,0,2.4,False,genus only,trnL,Prunus domestica
+soy meat,4,4,1,4,0,2.4,False,species,trnL,Glycine max
+soybean,4,4,2,0,4,2.4,False,species,trnL,Glycine max
+turkey,4,4,3,4,0,2.4,False,species,12SV5,Meleagris gallopavo
+vegan cheese,4,4,1,3,1,2.4,False,species,trnL,Cocos nucifera; Anacardium occidentale; Solanum tuberosum
+wasabi,4,4,2,1,3,2.4,False,not found,trnL,Eutrema japonicum
+artichoke,3,3,3,3,0,1.8,False,genus only,trnL,Cynara cardunculus var. scolymus
+asian pear,3,3,2,2,1,1.8,False,genus only,trnL,Pyrus pyrifolia
+butternut squash,3,3,2,3,0,1.8,False,not found,trnL,Cucurbita moschata
+daikon,3,3,3,3,0,1.8,False,genus only,trnL,Raphanus sativus
+dill,3,3,2,3,0,1.8,False,not found,trnL,Anethum graveolens
+duck,3,3,3,2,1,1.8,False,species,12SV5,Anas platyrhynchos
+fig,3,3,2,3,0,1.8,False,species,trnL,Ficus carica
+gelatin,3,3,3,0,3,1.8,False,species,12SV5,Bos taurus; Sus scrofa
+gluten-free flour,3,3,1,3,0,1.8,False,species,trnL,Oryza sativa; Manihot esculenta; Zea mays
+huel,3,3,1,3,0,1.8,False,species,trnL,Avena sativa; Pisum sativum; Linum usitatissimum; Oryza sativa; Cocos nucifera
+kiwi,3,3,3,3,0,1.8,False,genus only,trnL,Actinidia deliciosa
+mung bean,3,3,3,2,1,1.8,False,genus only,trnL,Vigna radiata
+mustard,3,3,3,2,1,1.8,False,genus only,trnL,Brassica juncea; Sinapis alba
+pecan,3,3,1,3,0,1.8,False,genus only,trnL,Carya illinoinensis
+pine nut,3,3,1,0,3,1.8,False,genus only,trnL,Pinus spp.
+pumpkin,3,3,3,3,0,1.8,False,not found,trnL,Cucurbita maxima
+raisin,3,3,1,3,0,1.8,False,genus only,trnL,Vitis vinifera
+soy milk,3,3,2,3,0,1.8,False,species,trnL,Glycine max
+walnut,3,3,2,2,1,1.8,False,species,trnL,Juglans regia
+arugula,2,2,2,2,0,1.2,False,not found,trnL,Eruca vesicaria
+bean sprouts,2,2,2,1,1,1.2,False,genus only,trnL,Vigna radiata
+beer,2,2,1,2,0,1.2,False,genus only,trnL,Hordeum vulgare
+cassava,2,2,2,2,0,1.2,False,genus only,trnL,Manihot esculenta
+cherry,2,2,1,2,0,1.2,False,genus only,trnL,Prunus avium
+crab,2,2,1,2,0,1.2,False,no species / marker none,,
+cranberry,2,2,2,2,0,1.2,False,genus only,trnL,Vaccinium macrocarpon
+grapefruit,2,2,2,2,0,1.2,False,genus only,trnL,Citrus x paradisi
+guava,2,2,2,2,0,1.2,False,species,trnL,Psidium guajava
+ikea plant balls,2,2,1,2,0,1.2,False,species,trnL,Pisum sativum; Avena sativa; Solanum tuberosum; Allium cepa; Malus domestica
+imitation crab,2,2,2,2,0,1.2,False,genus only,12SV5,Gadus chalcogrammus
+leek,2,2,2,2,0,1.2,False,genus only,trnL,Allium ampeloprasum
+lime,2,2,2,0,2,1.2,False,genus only,trnL,Citrus x aurantiifolia
+mandarin,2,2,2,2,0,1.2,False,species,trnL,Citrus reticulata
+maple syrup,2,2,2,2,0,1.2,False,not found,trnL,Acer saccharum
+napa cabbage,2,2,1,2,0,1.2,False,species,trnL,Brassica rapa subsp. pekinensis
+okra,2,2,2,2,0,1.2,False,species,trnL,Abelmoschus esculentus
+parsley,2,2,1,2,0,1.2,False,not found,trnL,Petroselinum crispum
+plantain,2,2,2,2,0,1.2,False,genus only,trnL,Musa x paradisiaca
+pumpkin seed,2,2,2,2,0,1.2,False,not found,trnL,Cucurbita pepo
+quinoa,2,2,2,2,0,1.2,False,genus only,trnL,Chenopodium quinoa
+radish,2,2,2,2,0,1.2,False,genus only,trnL,Raphanus sativus
+saffron,2,2,1,2,0,1.2,False,not found,trnL,Crocus sativus
+sardine,2,2,1,2,0,1.2,False,not found,12SV5,Sardina pilchardus
+squid,2,2,2,2,0,1.2,False,no species / marker none,,
+tofu skin,2,2,2,2,0,1.2,False,species,trnL,Glycine max
+truffle,2,2,2,2,0,1.2,False,not found,none,Tuber spp.
+urad dal,2,2,1,0,2,1.2,False,genus only,trnL,Vigna mungo
+whiskey,2,2,2,2,0,1.2,False,genus only,none,Zea mays; Secale cereale; Hordeum vulgare
+white fish,2,2,2,2,0,1.2,False,no species / marker none,,
+nutritional yeast,2,1,1,1,0,0.6,False,not found,none,Saccharomyces cerevisiae
+agave,1,1,1,1,0,0.6,False,not found,trnL,Agave spp.
+asparagus,1,1,1,1,0,0.6,False,genus only,trnL,Asparagus officinalis
+balsamic vinegar,1,1,1,1,0,0.6,False,genus only,trnL,Vitis vinifera
+bamboo shoot,1,1,1,1,0,0.6,False,not found,trnL,Bambusoideae (Phyllostachys spp.)
+beet,1,1,1,1,0,0.6,False,species,trnL,Beta vulgaris
+bergamot,1,1,1,1,0,0.6,False,genus only,trnL,Citrus bergamia
+black pepper,1,1,1,1,0,0.6,False,species,trnL,Piper nigrum
+black-eyed pea,1,1,1,1,0,0.6,False,genus only,trnL,Vigna unguiculata
+blackberry,1,1,1,1,0,0.6,False,genus only,trnL,Rubus spp.
+bourbon,1,1,1,1,0,0.6,False,not found,trnL,Zea mays
+broccoli rabe,1,1,1,1,0,0.6,False,species,trnL,Brassica rapa
+brussels sprouts,1,1,1,1,0,0.6,False,species,trnL,Brassica oleracea var. gemmifera
+buckwheat,1,1,1,0,1,0.6,False,species,trnL,Fagopyrum esculentum
+burdock,1,1,1,1,0,0.6,False,not found,trnL,Arctium lappa
+caper,1,1,1,1,0,0.6,False,genus only,trnL,Capparis spinosa
+chanterelle,1,1,1,1,0,0.6,False,not found,none,Cantharellus cibarius
+cod,1,1,1,1,0,0.6,False,genus only,12SV5,Gadus morhua
+cream cheese,1,1,1,1,0,0.6,False,species,12SV5,Bos taurus
+cumin,1,1,1,1,0,0.6,False,not found,trnL,Cuminum cyminum
+enoki,1,1,1,1,0,0.6,False,not found,none,Flammulina velutipes
+goat cheese,1,1,1,1,0,0.6,False,species,12SV5,Capra hircus
+granola,1,1,1,0,1,0.6,False,genus only,trnL,Avena sativa
+hamachi,1,1,1,1,0,0.6,False,genus only,12SV5,Seriola quinqueradiata
+herbal liqueur,1,1,1,1,0,0.6,False,no species / marker none,,
+hoisin sauce,1,1,1,1,0,0.6,False,species,trnL,Glycine max; Triticum aestivum
+konjac,1,1,1,1,0,0.6,False,not found,trnL,Amorphophallus konjac
+limoncello,1,1,1,1,0,0.6,False,genus only,none,Citrus limon
+lotus root,1,1,1,1,0,0.6,False,genus only,trnL,Nelumbo nucifera
+lychee,1,1,1,1,0,0.6,False,not found,trnL,Litchi chinensis
+macadamia,1,1,1,1,0,0.6,False,species,trnL,Macadamia integrifolia
+oyster mushroom,1,1,1,1,0,0.6,False,not found,none,Pleurotus ostreatus
+passionfruit,1,1,1,1,0,0.6,False,genus only,trnL,Passiflora edulis
+quail egg,1,1,1,1,0,0.6,False,species,12SV5,Coturnix japonica
+red bean,1,1,1,1,0,0.6,False,genus only,trnL,Vigna angularis
+rockfish,1,1,1,1,0,0.6,False,genus only,12SV5,Sebastes spp.
+scallop,1,1,1,1,0,0.6,False,no species / marker none,,
+shiitake,1,1,1,1,0,0.6,False,not found,none,Lentinula edodes
+soju,1,1,1,1,0,0.6,False,species,none,Oryza sativa
+soybean paste,1,1,1,0,1,0.6,False,species,trnL,Glycine max
+tapioca,1,1,1,1,0,0.6,False,genus only,trnL,Manihot esculenta
+teff,1,1,1,1,0,0.6,False,not found,trnL,Eragrostis tef
+thousand island dressing,1,1,1,1,0,0.6,False,species,trnL,Glycine max; Solanum lycopersicum; Cucumis sativus; Gallus gallus
+turmeric,1,1,1,1,0,0.6,False,genus only,trnL,Curcuma longa
+unagi,1,1,1,1,0,0.6,False,genus only,12SV5,Anguilla japonica
+vanilla,1,1,1,1,0,0.6,False,not found,trnL,Vanilla planifolia
+veal,1,1,1,1,0,0.6,False,species,12SV5,Bos taurus
+wild rice,1,1,1,1,0,0.6,False,genus only,trnL,Zizania palustris
+wood ear,1,1,1,1,0,0.6,False,not found,none,Auricularia auricula-judae

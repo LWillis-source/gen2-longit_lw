@@ -1,0 +1,102 @@
+group,taxon,members,run,n_compatible_ASVs,n_exact_species_ASVs
+wheat,Triticum aestivum,wheat,plants,132,103
+rice,Oryza sativa,"rice, glutinous rice",plants,101,28
+cow milk,Bos taurus,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",meat,139,139
+chicken,Gallus gallus,chicken,meat,206,206
+tomato,Solanum,"tomato, potato, eggplant",plants,16,9
+pork,Sus scrofa,pork,meat,78,78
+cacao,Theobroma,cacao,plants,70,0
+tofu,Glycine max,"tofu, edamame, natto, black soybean, soybean, tofu skin",plants,159,159
+onion,Allium cepa,onion,plants,83,4
+lettuce,Lactuca sativa,lettuce,plants,57,9
+cabbage,Brassica oleracea,"cabbage, broccoli, cauliflower, kale, brussels sprouts",plants,74,13
+carrot,Daucus carota,carrot,plants,47,47
+oat,Avena,"oat, granola",plants,69,0
+cucumber,Cucumis sativus,cucumber,plants,0,0
+corn,Zea mays,corn,plants,0,0
+peanut,Arachis hypogaea,peanut,plants,48,48
+garlic,Allium sativum,garlic,plants,99,20
+avocado,Persea americana,avocado,plants,54,2
+blueberry,Vaccinium,"blueberry, cranberry",plants,17,0
+chili pepper,Capsicum,"chili pepper, bell pepper",plants,31,0
+apple,Malus domestica,apple,plants,0,0
+green bean,Phaseolus,"green bean, black bean",plants,32,0
+mango,Mangifera indica,mango,plants,32,13
+banana,Musa,"banana, plantain",plants,55,19
+kimchi,Brassica rapa et al.,kimchi,plants,203,21
+spinach,Spinacia,spinach,plants,2,0
+salmon,Salmo salar,salmon,meat,13,13
+scallion,Allium,"scallion, leek",plants,109,0
+bok choy,Brassica rapa,"bok choy, napa cabbage, broccoli rabe",plants,62,1
+lamb,Ovis aries,lamb,meat,16,16
+sesame,Sesamum,sesame,plants,11,0
+raspberry,Rubus,"raspberry, blackberry",plants,41,0
+lemon,Citrus,"lemon, orange, grapefruit, lime",plants,13,0
+watermelon,Citrullus lanatus,watermelon,plants,0,0
+celery,Apium graveolens,celery,plants,26,26
+chickpea,Cicer arietinum,chickpea,plants,14,14
+lentil,Lens culinaris,lentil,plants,20,20
+pea,Pisum,pea,plants,39,0
+tuna,Thunnus,tuna,meat,2,0
+ginger,Zingiber officinale,ginger,plants,0,0
+yam,Dioscorea,yam,plants,1,0
+pistachio,Pistacia vera,pistachio,plants,18,18
+cashew,Anacardium occidentale,cashew,plants,34,34
+feta,Ovis aries et al.,feta,meat,17,17
+peach,Prunus,"peach, almond, plum, cherry",plants,63,0
+sweet potato,Ipomoea,sweet potato,plants,4,0
+basil,Ocimum basilicum,basil,plants,6,5
+coconut,Cocos nucifera,coconut,plants,0,0
+strawberry,Fragaria spp.,strawberry,plants,0,0
+melon,Cucumis melo,melon,plants,0,0
+olive,Olea europaea,olive,plants,0,0
+chia,Salvia hispanica,chia,plants,18,1
+pineapple,Ananas comosus,pineapple,plants,4,4
+squash,Cucurbita pepo,"squash, zucchini, pumpkin seed",plants,0,0
+acai,Euterpe oleracea,acai,plants,0,0
+grape,Vitis,"grape, raisin",plants,22,0
+luffa,Luffa aegyptiaca,luffa,plants,0,0
+turkey,Meleagris gallopavo,turkey,meat,21,21
+artichoke,Cynara,artichoke,plants,1,0
+asian pear,Pyrus,asian pear,plants,30,0
+butternut squash,Cucurbita moschata,butternut squash,plants,0,0
+daikon,Raphanus,"daikon, radish",plants,1,0
+dill,Anethum graveolens,dill,plants,0,0
+duck,Anas platyrhynchos,duck,meat,9,6
+fig,Ficus carica,fig,plants,6,2
+kiwi,Actinidia,kiwi,plants,5,0
+mung bean,Vigna radiata,"mung bean, bean sprouts",plants,56,21
+mustard,Brassica juncea et al.,mustard,plants,92,31
+pecan,Carya,pecan,plants,13,0
+pine nut,Pinus,pine nut,plants,23,0
+pumpkin,Cucurbita maxima,pumpkin,plants,0,0
+walnut,Juglans regia,walnut,plants,6,1
+arugula,Eruca vesicaria,arugula,plants,0,0
+cassava,Manihot,cassava,plants,1,0
+guava,Psidium guajava,guava,plants,1,1
+mandarin,Citrus reticulata,mandarin,plants,9,3
+okra,Abelmoschus esculentus,okra,plants,16,12
+parsley,Petroselinum crispum,parsley,plants,0,0
+quinoa,Chenopodium,quinoa,plants,21,0
+sardine,Sardina pilchardus,sardine,meat,0,0
+urad dal,Vigna,"urad dal, black-eyed pea",plants,58,0
+white fish,Gadidae,white fish,meat,0,0
+asparagus,Asparagus,asparagus,plants,4,0
+bamboo shoot,Bambusoideae,bamboo shoot,plants,0,0
+beet,Beta vulgaris,beet,plants,53,32
+buckwheat,Fagopyrum esculentum,buckwheat,plants,5,4
+burdock,Arctium lappa,burdock,plants,0,0
+caper,Capparis spinosa,caper,plants,8,5
+cod,Gadus,cod,meat,1,0
+goat cheese,Capra hircus,goat cheese,meat,1,1
+hamachi,Seriola,hamachi,meat,22,0
+konjac,Amorphophallus konjac,konjac,plants,0,0
+lotus root,Nelumbo,lotus root,plants,1,0
+lychee,Litchi chinensis,lychee,plants,0,0
+macadamia,Macadamia integrifolia,macadamia,plants,13,13
+passionfruit,Passiflora,passionfruit,plants,1,0
+red bean,Vigna angularis,red bean,plants,37,2
+rockfish,Sebastes,rockfish,meat,1,0
+teff,Eragrostis tef,teff,plants,0,0
+unagi,Anguilla,unagi,meat,10,0
+wild rice,Zizania,wild rice,plants,1,0

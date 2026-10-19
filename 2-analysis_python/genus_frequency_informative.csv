@@ -1,0 +1,90 @@
+genus,entries,subject_days,subjects,days_stated,days_assumed_only,pct_of_167_days,ingredients,ASVs_plants,ASVs_meat,in_feature_data
+Bos,274,133,18,122,11,79.6,"cow milk, cheese, beef, yogurt, ice cream, cream, paneer, cream cheese, veal",0,140,True
+Triticum,286,132,19,20,112,79.0,wheat,132,0,True
+Oryza,163,114,19,101,13,68.3,"rice, glutinous rice",106,0,True
+Solanum,123,94,19,72,22,56.3,"tomato, potato, eggplant",16,0,True
+Gallus,87,75,16,70,5,44.9,chicken,0,206,True
+Brassica,109,73,17,64,9,43.7,"cabbage, broccoli, kimchi, bok choy, cauliflower, kale, mustard, napa cabbage, broccoli rabe, brussels sprouts",109,0,True
+Allium,100,73,18,38,35,43.7,"onion, garlic, kimchi, scallion, leek",109,0,True
+Glycine,83,65,15,61,4,38.9,"tofu, edamame, natto, black soybean, soybean, tofu skin",159,0,True
+Sus,60,46,12,27,19,27.5,pork,0,78,True
+Theobroma,57,45,14,45,0,26.9,cacao,70,0,True
+Lactuca,42,40,11,22,18,24.0,lettuce,57,0,True
+Capsicum,48,38,13,14,24,22.8,"chili pepper, kimchi, bell pepper",31,0,True
+Cucumis,35,30,13,22,8,18.0,"cucumber, melon",0,0,False
+Avena,30,29,12,17,12,17.4,"oat, granola",69,0,True
+Daucus,30,29,12,21,8,17.4,carrot,47,0,True
+Zea,27,26,13,22,4,15.6,corn,0,0,False
+Citrus,27,24,10,20,4,14.4,"lemon, orange, grapefruit, lime, mandarin",13,0,True
+Zingiber,25,23,10,3,20,13.8,"kimchi, ginger",0,0,False
+Arachis,27,22,9,18,4,13.2,peanut,48,0,True
+Vaccinium,23,21,9,21,0,12.6,"blueberry, cranberry",17,0,True
+Phaseolus,22,20,11,19,1,12.0,"green bean, black bean",32,0,True
+Persea,20,20,10,18,2,12.0,avocado,54,0,True
+Raphanus,21,18,8,5,13,10.8,"kimchi, daikon, radish",1,0,True
+Malus,19,18,10,18,0,10.8,apple,0,0,False
+Musa,18,18,9,17,1,10.8,"banana, plantain",55,0,True
+Mangifera,18,17,9,17,0,10.2,mango,33,0,True
+Prunus,18,17,8,15,2,10.2,"peach, almond, plum, cherry",63,0,True
+Ovis,17,17,9,11,6,10.2,"lamb, feta",0,16,True
+Cucurbita,18,16,10,16,0,9.6,"squash, zucchini, butternut squash, pumpkin, pumpkin seed",0,0,False
+Spinacia,16,15,6,14,1,9.0,spinach,2,0,True
+Salmo,15,15,7,15,0,9.0,salmon,0,13,True
+Sesamum,12,12,8,5,7,7.2,sesame,11,0,True
+Rubus,12,11,5,11,0,6.6,"raspberry, blackberry",41,0,True
+Citrullus,10,10,4,10,0,6.0,watermelon,0,0,False
+Apium,9,9,4,5,4,5.4,celery,26,0,True
+Cicer,9,9,6,9,0,5.4,chickpea,14,0,True
+Lens,9,9,6,9,0,5.4,lentil,20,0,True
+Pisum,9,9,6,8,1,5.4,pea,39,0,True
+Thunnus,9,9,4,9,0,5.4,tuna,0,2,True
+Vigna,9,9,6,5,4,5.4,"mung bean, bean sprouts, urad dal, black-eyed pea, red bean",58,0,True
+Capra,8,8,5,1,7,4.8,"feta, goat cheese",0,1,True
+Dioscorea,8,8,3,8,0,4.8,yam,1,0,True
+Pistacia,8,7,5,6,1,4.2,pistachio,18,0,True
+Anacardium,7,7,4,7,0,4.2,cashew,34,0,True
+Ipomoea,7,7,6,6,1,4.2,sweet potato,4,0,True
+Vitis,7,7,3,7,0,4.2,"grape, raisin",22,0,True
+Cocos,7,6,5,5,1,3.6,coconut,0,0,False
+Ocimum,7,6,3,5,1,3.6,basil,6,0,True
+Fragaria,6,6,5,6,0,3.6,strawberry,0,0,False
+Olea,6,5,3,2,3,3.0,olive,0,0,False
+Ananas,5,5,4,5,0,3.0,pineapple,4,0,True
+Salvia,5,5,4,5,0,3.0,chia,23,0,True
+Euterpe,4,4,2,4,0,2.4,acai,0,0,False
+Luffa,4,4,2,4,0,2.4,luffa,0,0,False
+Meleagris,4,4,3,4,0,2.4,turkey,0,21,True
+Actinidia,3,3,3,3,0,1.8,kiwi,5,0,True
+Anas,3,3,3,2,1,1.8,duck,0,9,True
+Anethum,3,3,2,3,0,1.8,dill,0,0,False
+Carya,3,3,1,3,0,1.8,pecan,13,0,True
+Cynara,3,3,3,3,0,1.8,artichoke,1,0,True
+Ficus,3,3,2,3,0,1.8,fig,6,0,True
+Juglans,3,3,2,2,1,1.8,walnut,6,0,True
+Pinus,3,3,1,0,3,1.8,pine nut,23,0,True
+Pyrus,3,3,2,2,1,1.8,asian pear,30,0,True
+Sinapis,3,3,3,0,3,1.8,mustard,0,0,False
+Abelmoschus,2,2,2,2,0,1.2,okra,16,0,True
+Chenopodium,2,2,2,2,0,1.2,quinoa,21,0,True
+Eruca,2,2,2,2,0,1.2,arugula,0,0,False
+Manihot,2,2,2,2,0,1.2,cassava,1,0,True
+Petroselinum,2,2,1,2,0,1.2,parsley,0,0,False
+Psidium,2,2,2,2,0,1.2,guava,1,0,True
+Sardina,2,2,1,2,0,1.2,sardine,0,0,False
+Amorphophallus,1,1,1,1,0,0.6,konjac,0,0,False
+Anguilla,1,1,1,1,0,0.6,unagi,0,10,True
+Arctium,1,1,1,1,0,0.6,burdock,0,0,False
+Asparagus,1,1,1,1,0,0.6,asparagus,4,0,True
+Beta,1,1,1,1,0,0.6,beet,53,0,True
+Capparis,1,1,1,1,0,0.6,caper,8,0,True
+Eragrostis,1,1,1,1,0,0.6,teff,0,0,False
+Fagopyrum,1,1,1,0,1,0.6,buckwheat,5,0,True
+Gadus,1,1,1,1,0,0.6,cod,0,1,True
+Litchi,1,1,1,1,0,0.6,lychee,0,0,False
+Macadamia,1,1,1,1,0,0.6,macadamia,13,0,True
+Nelumbo,1,1,1,1,0,0.6,lotus root,1,0,True
+Passiflora,1,1,1,1,0,0.6,passionfruit,1,0,True
+Phyllostachys,1,1,1,1,0,0.6,bamboo shoot,0,0,False
+Sebastes,1,1,1,1,0,0.6,rockfish,0,1,True
+Seriola,1,1,1,1,0,0.6,hamachi,0,22,True
+Zizania,1,1,1,1,0,0.6,wild rice,1,0,True

@@ -1,0 +1,95 @@
+food,feature,own_label,reads,samples_with_reads,edit_distance_to_anchor,nearest_labelled_relative
+apple,feature_0022,Pyrus,2682662,171,0,(anchor itself)
+apple,feature_0096,Pyrus,79369,8,0,(anchor itself)
+apple,feature_0417,Pyrus,3751,10,0,(anchor itself)
+apple,feature_0484,Prunus,2921,9,2,Pyrus 
+apple,feature_0506,Pyrus,2632,1,0,(anchor itself)
+apple,feature_0531,Pyrus,2412,4,0,(anchor itself)
+apple,feature_0581,Pyrus,2080,6,0,(anchor itself)
+apple,feature_0585,Pyrus,2038,7,0,(anchor itself)
+apple,feature_0660,Prunus,1683,5,2,Pyrus 
+apple,feature_0742,Pyrus,1383,2,0,(anchor itself)
+apple,feature_0786,Pyrus,1258,2,0,(anchor itself)
+apple,feature_0814,Pyrus,1220,1,0,(anchor itself)
+apple,feature_1150,Pyrus,659,2,0,(anchor itself)
+apple,feature_1161,Pyrus,645,1,0,(anchor itself)
+apple,feature_1261,Pyrus,551,1,0,(anchor itself)
+apple,feature_1292,Pyrus,521,3,0,(anchor itself)
+apple,feature_1368,Pyrus,449,1,0,(anchor itself)
+apple,feature_1534,Pyrus,361,1,0,(anchor itself)
+apple,feature_1615,Pyrus,323,1,0,(anchor itself)
+apple,feature_1706,Pyrus,293,1,0,(anchor itself)
+apple,feature_1787,Pyrus,259,1,0,(anchor itself)
+apple,feature_2049,Pyrus,176,1,0,(anchor itself)
+apple,feature_2131,Pyrus,160,1,0,(anchor itself)
+apple,feature_2141,Pyrus,158,1,0,(anchor itself)
+apple,feature_2227,Prunus,140,1,2,Pyrus 
+apple,feature_2233,Pyrus,139,1,0,(anchor itself)
+apple,feature_2239,Pyrus,138,1,0,(anchor itself)
+apple,feature_2375,Pyrus,120,1,0,(anchor itself)
+apple,feature_2381,NA,119,1,1,Pyrus 
+apple,feature_2504,Pyrus,98,1,0,(anchor itself)
+apple,feature_2582,Pyrus,89,1,0,(anchor itself)
+apple,feature_2603,NA,85,1,1,Pyrus 
+apple,feature_2726,Pyrus,73,1,0,(anchor itself)
+apple,feature_2801,NA,64,1,1,Pyrus 
+apple,feature_2870,Pyrus,57,1,0,(anchor itself)
+apple,feature_2873,Pyrus,57,1,0,(anchor itself)
+apple,feature_3077,NA,39,1,2,Pyrus 
+corn,feature_0017,NA,3539549,225,1,Setaria italica
+corn,feature_0127,NA,38757,8,2,Echinochloa crus-galli_subsp_var.
+corn,feature_0131,Sorghum bicolor,34698,15,0,(anchor itself)
+corn,feature_0215,NA,13122,33,2,Setaria italica
+corn,feature_0266,NA,9289,5,1,Coix lacryma-jobi
+corn,feature_0396,NA,4168,5,2,Setaria italica
+corn,feature_0467,NA,3058,5,2,Setaria italica
+corn,feature_0521,NA,2528,1,2,Setaria italica
+corn,feature_0542,NA,2334,4,2,Setaria italica
+corn,feature_0568,NA,2155,4,1,Coix lacryma-jobi
+corn,feature_0600,NA,1983,1,2,Setaria italica
+corn,feature_0618,NA,1901,3,2,Setaria italica
+corn,feature_0622,NA,1885,5,2,Setaria italica
+corn,feature_0644,NA,1758,1,2,Setaria italica
+corn,feature_0695,NA,1554,4,2,Setaria italica
+corn,feature_0706,NA,1511,5,2,Setaria italica
+corn,feature_0735,NA,1411,2,2,Setaria italica
+corn,feature_0753,NA,1349,4,2,Setaria italica
+corn,feature_0768,NA,1300,4,2,Setaria italica
+corn,feature_0785,NA,1260,3,2,Setaria italica
+corn,feature_0891,Setaria italica,1032,1,0,(anchor itself)
+corn,feature_0903,NA,1002,2,2,Setaria italica
+corn,feature_0913,Echinochloa crus-galli_subsp_var.,985,1,0,(anchor itself)
+corn,feature_0919,NA,974,3,2,Setaria italica
+corn,feature_0920,NA,972,2,2,Setaria italica
+corn,feature_0933,NA,952,1,2,Setaria italica
+corn,feature_0984,NA,862,1,2,Setaria italica
+corn,feature_0999,NA,843,1,2,Setaria italica
+corn,feature_1073,NA,736,1,2,Setaria italica
+corn,feature_1075,NA,732,4,2,Setaria italica
+corn,feature_1179,Echinochloa crus-galli_subsp_var.,626,1,0,(anchor itself)
+corn,feature_1188,Phragmites australis,619,2,2,Setaria italica
+corn,feature_1290,NA,522,2,2,Setaria italica
+corn,feature_1360,NA,453,1,2,Setaria italica
+corn,feature_1547,NA,357,1,1,Coix lacryma-jobi
+corn,feature_1649,NA,307,2,2,Setaria italica
+corn,feature_1654,Coix lacryma-jobi,306,1,0,(anchor itself)
+corn,feature_1684,NA,299,1,2,Setaria italica
+corn,feature_1691,NA,297,1,2,Coix lacryma-jobi
+corn,feature_1759,NA,274,2,2,Setaria italica
+corn,feature_1796,NA,256,1,2,Setaria italica
+corn,feature_1802,NA,253,2,2,Setaria italica
+corn,feature_1816,Cenchrus americanus,248,1,2,Setaria italica
+corn,feature_1833,NA,244,2,2,Setaria italica
+corn,feature_1858,Coix lacryma-jobi,236,1,0,(anchor itself)
+corn,feature_1903,NA,223,2,1,Coix lacryma-jobi
+corn,feature_2018,NA,182,1,2,Setaria italica
+corn,feature_2055,NA,173,1,2,Setaria italica
+corn,feature_2132,NA,160,2,2,Setaria italica
+corn,feature_2165,NA,153,1,1,Coix lacryma-jobi
+corn,feature_2209,Sorghum bicolor,144,1,0,(anchor itself)
+corn,feature_2424,NA,112,1,2,Setaria italica
+corn,feature_2467,NA,102,1,1,Echinochloa crus-galli_subsp_var.
+corn,feature_2588,NA,88,1,2,Setaria italica
+corn,feature_2597,NA,86,1,2,Coix lacryma-jobi
+corn,feature_2795,NA,64,1,2,Coix lacryma-jobi
+corn,feature_2825,NA,61,1,2,Setaria italica
